@@ -1,0 +1,2220 @@
+[
+	{
+		"note": "工作台",
+		"pageName": "dashboard",
+		"elements": [
+			{
+				"elementName": "dashboard",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='left-sidebar']//a[1]",
+				"note": "切换到工作台"
+			},
+			{
+				"elementName": "favorites",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='left-sidebar']//a[3]",
+				"note": "切换到我的收藏"
+			},
+			{
+				"elementName": "trash",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='left-sidebar']//a[4]",
+				"note": "切换到回收站"
+			},
+			{
+				"elementName": "dashboard_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='nav-wrap']//div[1]",
+				"note": "工作台-最近更新"
+			},
+			{
+				"elementName": "dashboard_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='nav-wrap']//div[2]",
+				"note": "工作台-最近使用"
+			},
+			{
+				"elementName": "dashboard_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='nav-wrap']//div[3]",
+				"note": "工作台-我创建的"
+			},
+			{
+				"elementName": "dashboard_4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='nav-wrap']//div[4]",
+				"note": "工作台-共享给我的"
+			},
+			{
+				"elementName": "dashboard_update_file",
+				"locateUsing": "className",
+				"locator": "card-content",
+				"note": "工作台-最近更新-文件"
+			},
+			{
+				"elementName": "dashboard_update_time",
+				"locateUsing": "className",
+				"locator": "card-content-update",
+				"note": "工作台-最近更新-更新时间"
+			},
+			{
+				"elementName": "dashboard_update_name",
+				"locateUsing": "className",
+				"locator": "file-title",
+				"note": "工作台-最近更新-文件名"
+			},
+			{
+				"elementName": "dashboard_share_file_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='category-card-container'])[1]",
+				"note": "工作台第一个文件"
+			},
+			{
+				"elementName": "dashboard_share_file_favorites",
+				"locateUsing": "xpath",
+				"locator": "//*[@class='card-content-title']/div[2]/*[name()='svg']",
+				"note": "工作台第一行第一个文件收藏按钮"
+			},
+			{
+				"elementName": "dashboard_share_file_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='category-card-container'])[2]",
+				"note": "工作台第二个文件"
+			},
+			{
+				"elementName": "New_Share_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='share-list-wrapper']//div[2]//div[1]//div[1]//a[1]",
+				"note": "工作台-新的共享-第一个文件"
+			},
+			{
+				"elementName": "dashboard_shareTime_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='card-header']//div[@class='update-time']",
+				"note": "新的共享-大标签-更新时间"
+			},
+			{
+				"elementName": "dashboard_shareTime_unread",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='card-header']//div[@class='unread']",
+				"note": "新的共享-大标签-标记已读"
+			},
+			{
+				"elementName": "dashboard_search_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='search-button']",
+				"note": "桌面搜索按钮"
+			},
+			{
+				"elementName": "dashboard_search_input",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='search-input']",
+				"note": "桌面搜索输入框"
+			},
+			{
+				"elementName": "dashboard_search_result_1",
+				"locateUsing": "xpath",
+				"locator": "//li[@data-test='search-result-item'][1]",
+				"note": "桌面搜索结果第一行"
+			},
+			{
+				"elementName": "confirmJoinCompany",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'确认加入')]",
+				"note": "确认加入企业"
+			},
+			{
+				"elementName": "dashboard_notice",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='header']//div//div[last()-1]/*[name()='svg']",
+				"note": "桌面通知铃铛"
+			},
+			{
+				"elementName": "dashboard_notice_list_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]",
+				"note": "桌面通知铃铛-通知列表中第一个"
+			},
+			{
+				"elementName": "dashboard_notice_list_1_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]//div[3]//button",
+				"note": "桌面通知铃铛-通知列表中第一个-按钮"
+			},
+			{
+				"elementName": "dashboard_notice_list_1_time",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-item'][1]//div[2]",
+				"note": "桌面通知铃铛-通知列表中第一个时间"
+			},
+			{
+				"elementName": "dashboard_notice_list_allNotice",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[1]",
+				"note": "桌面通知铃铛-全部通知"
+			},
+			{
+				"elementName": "dashboard_notice_list_unread",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-container']//div[1]//div[1]//div[2]//span",
+				"note": "桌面通知铃铛-未读"
+			},
+			{
+				"elementName": "dashboard_notice_list_allRead",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='notification-allread']",
+				"note": "桌面通知铃铛-标记全部已读"
+			},
+			{
+				"elementName": "desktop_user_icon",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='header']//div//div//img",
+				"note": "桌面-右上角头像"
+			},
+			{
+				"elementName": "desktop_user_icon_status_L",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='usermenu-container']//ul//li[3]//div//div[1]//span[1]",
+				"note": "桌面-右上角头像-当前账号状态-左边，如高级版，购买企业版"
+			},
+			{
+				"elementName": "desktop_user_icon_status_R",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='usermenu-container']//ul//li[3]//div//div[1]//span[2]",
+				"note": "桌面-右上角头像-当前账号状态-右边，如企业版过期，企业试用中，企业名称等"
+			},
+			{
+				"elementName": "desktop_user_icon_personSetting",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='usermenu-container']//ul//li[contains(text(),'帐号设置')]",
+				"note": "桌面-右上角头像-账号设置"
+			},
+			{
+				"elementName": "desktop_user_icon_companyManagement",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='usermenu-container']//ul//li[6]",
+				"note": "桌面-右上角头像-我的企业/企业管理"
+			}
+		]
+	},
+	{
+		"note": "注册页面",
+		"pageName": "Registered",
+		"elements": [
+			{
+				"note": "昵称",
+				"elementName": "userName",
+				"locateUsing": "name",
+				"locator": "nickname"
+			},
+			{
+				"note": "登录邮箱",
+				"elementName": "userEmail",
+				"locateUsing": "name",
+				"locator": "email"
+			},
+			{
+				"note": "登录手机号",
+				"elementName": "userMobile",
+				"locateUsing": "name",
+				"locator": "mobileWithPrefix"
+			},
+			{
+				"note": "密码",
+				"elementName": "userPwd",
+				"locateUsing": "name",
+				"locator": "password"
+			},
+			{
+				"note": "确认密码",
+				"elementName": "reUserPwd",
+				"locateUsing": "name",
+				"locator": "rePassword"
+			},
+			{
+				"note": "验证码",
+				"elementName": "verifyCode",
+				"locateUsing": "name",
+				"locator": "verifyCode"
+			},
+			{
+				"note": "免费注册",
+				"elementName": "Next",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'免费注册')]"
+			},
+			{
+				"note": "免费注册个人账号",
+				"elementName": "personalRegister",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'免费注册个人帐号')]"
+			},
+			{
+				"note": "邮箱注册",
+				"elementName": "emailRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'邮箱注册')]"
+			},
+			{
+				"note": "手机注册",
+				"elementName": "mobileRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'手机注册')]"
+			},
+			{
+				"note": "微信注册",
+				"elementName": "wechatRegister",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'微信注册')]"
+			}
+			
+		]
+	},
+	{
+		"note": "桌面",
+		"pageName": "desktop",
+		"elements": [
+			{
+				"elementName": "desktop",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='left-sidebar']//a[2]",
+				"note": "切换到我的桌面"
+			},
+			{
+				"elementName": "desktop_new",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='create-file']",
+				"note": "新建文件按钮"
+			},
+			{
+				"elementName": "desktop_import",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='import-file']",
+				"note": "导入"
+			},
+			{
+				"elementName": "desktop_newDoc",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-doc']",
+				"note": "新建文档"
+			},
+			{
+				"elementName": "desktop_newSheet",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-sheet']",
+				"note": "新建表格"
+			},
+			{
+				"elementName": "desktop_newslides",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-slide']",
+				"note": "新建幻灯片"
+			},
+			{
+				"elementName": "desktop_newFolder",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-folder']",
+				"note": "新建文件夹"
+			},
+			{
+				"elementName": "desktop_newFolder_name",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='new-folder-inputbox']",
+				"note": "文件夹命名"
+			},
+			{
+				"elementName": "desktop_newFolder_name_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-footer']//button[1]",
+				"note": "文件夹命名确定,退出共享确认"
+			},
+			{
+				"elementName": "desktop_newFolder_name_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-footer']//button[2]",
+				"note": "文件夹命名取消"
+			},
+			{
+				"elementName": "desktop1_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='tile-inner'])[1]",
+				"note": "平铺模式第一行第一个文件"
+			},
+			{
+				"elementName": "desktop1_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='tile-inner'])[2]",
+				"note": "平铺模式第一行第二个文件"
+			},
+			{
+				"elementName": "desktop1_1_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
+				"note": "平铺模式第一行第一个文件夹"
+			},
+			{
+				"elementName": "desktop1_2_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][2]",
+				"note": "平铺模式第一行第二个文件夹"
+			},
+			{
+				"elementName": "desktop1_3_folder",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][3]",
+				"note": "平铺模式第一行第三个文件夹"
+			},
+			{
+				"elementName": "desktop_list_1_file",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
+				"note": "列表模式第一个文件"
+			},
+			{
+				"elementName": "desktop_list_2_file",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
+				"note": "列表模式第二个文件"
+			},
+						{
+				"elementName": "desktop_list_3_file",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
+				"note": "列表模式第三个文件"
+			},
+			{
+				"elementName": "desktop_set",
+				"locateUsing": "className",
+				"locator": "settings-btn",
+				"note": "hover文件的齿轮"
+			},
+			{
+				"elementName": "desktop_shortcut_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='shortcut-list']//li[1]",
+				"note": "桌面快捷方式第一个"
+			},
+			{
+				"elementName": "desktop_shortcut_Increase",
+				"locateUsing": "xpath",
+				"locator": "//ul[@id='right-sidebar-shortcuts']//li[2]",
+				"note": "添加快捷方式区域"
+			},
+			{
+				"elementName": "desktop_shortcut_Tips",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='tip-text']//li[1]",
+				"note": "添加快捷方式区域提示"
+			},
+			{
+				"elementName": "desktop_orderByUpdate",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-updatetime']",
+				"note": "桌面排序-按更新时间"
+			},
+			{
+				"elementName": "desktop_orderByCreate",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-createtime']",
+				"note": "桌面排序-按创建时间"
+			},
+			{
+				"elementName": "desktop_orderByFile",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-name']",
+				"note": "桌面排序-文件名"
+			},
+			{
+				"elementName": "desktop_orderByOwner",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-owner']",
+				"note": "桌面排序-所有者"
+			},
+			{
+				"elementName": "desktop_orderByFolderUP",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-folder-priority']",
+				"note": "桌面排序-文件夹置顶"
+			},
+			{
+				"elementName": "desktop_orderByDefault",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-default']",
+				"note": "桌面排序-默认"
+			},
+			{
+				"elementName": "desktop_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='actions']//div[1]",
+				"note": "桌面排序"
+			},
+			{
+				"elementName": "desktop_orderHeader_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[1]",
+				"note": "表头文件名排序"
+			},
+			{
+				"elementName": "desktop_orderHeader_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[2]",
+				"note": "表头所有者排序"
+			},
+			{
+				"elementName": "desktop_orderHeader_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='filelist-table-header']//div[3]",
+				"note": "表头时间排序"
+			},
+			{
+				"elementName": "desktop_show_type",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='actions']//div[@data-test='change-table-mode']",
+				"note": "列表平铺模式切换"
+			},
+			{
+				"elementName": "desktop_moveFolder_list_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//ul//li[1]",
+				"note": "移动文件到文件夹，选择列表中第一个文件夹"
+			},
+			{
+				"elementName": "desktop_moveFolder_list_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//ul//li[2]",
+				"note": "移动文件到文件夹，选择列表中第二个文件夹"
+			},
+			{
+				"elementName": "desktop_moveFolder_back_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/*[name()='svg']",
+				"note": "移动文件到文件夹，列表中后退按钮"
+			},
+			{
+				"elementName": "desktop_moveFolder_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[2]//div//button",
+				"note": "移动到测试文件夹"
+			},
+			{
+				"elementName": "desktop1_1_name",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tile-inner']//div//a//div[@class='title']",
+				"note": "平铺模式第一行第一个文件名称"
+			},
+			{
+				"elementName": "desktop_orderByFolderUP_Hook",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='change-table-sort-folder-priority']/following-sibling::div[1]",
+				"note": "桌面排序-文件夹置顶-对钩"
+			},
+			{
+				"elementName": "desktop_position",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list-crumb']/span",
+				"note": "当前桌面所处页面"
+			},
+			{
+				"elementName": "folder_backToDesktop",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list-crumb']//span//a[contains(text(),'我的桌面')]",
+				"note": "文件夹中，点击文件路径返回我的桌面"
+			}
+		]
+	},
+	{
+		"note": "协作者相关",
+		"pageName": "addCollaborator",
+		"elements": [
+			{
+				"elementName": "b_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='adding-collaborators']",
+				"note": "添加协作者按钮"
+			},
+			{
+				"elementName": "b_addCollaborator_close",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//button",
+				"note": "关闭添加协作者弹框"
+			},
+			{
+				"elementName": "b_addCollaborator_back",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]//span",
+				"note": "从协作者列表反馈按钮"
+			},
+			{
+				"elementName": "b_addCollaborator_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//div//div[2]//button",
+				"note": "协作者移除或者降低自己权限时提示弹窗的确定按钮"
+			},
+			{
+				"elementName": "input_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='collaborator-search-inputbox']",
+				"note": "添加协作者邮箱输入框"
+			},
+			{
+				"elementName": "b_addCollaborator_ok",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='added-collaborators']",
+				"note": "确认添加协作者按钮"
+			},
+			{
+				"elementName": "b_addCollaborator_1_list",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div//div",
+				"note": "协作者列表第一个协作者权限下拉框"
+			},
+			{
+				"elementName": "b_addCollaborator_2_list",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//div//div",
+				"note": "协作者列表第二个协作者权限下拉框"
+			},
+			{
+				"elementName": "b_addCollaborator_3_list",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div//div//a",
+				"note": "协作者列表第三个协作者权限下拉框"
+			},
+			{
+				"elementName": "addCollaborator_1_list_userName",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[1]//span[1]//span[1]",
+				"note": "协作者列表第一个协作者用户名"
+			},
+			{
+				"elementName": "addCollaborator_2_list_userName",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[2]//span[1]//span[1]",
+				"note": "协作者列表第二个协作者用户名"
+			},
+			{
+				"elementName": "collaborator_1_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[1]//span)[4]",
+				"note": "协作者列表第一个协作者邮箱"
+			},
+			{
+				"elementName": "collaborator_2_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[2]//span)[4]",
+				"note": "协作者列表第二个协作者邮箱"
+			},
+			{
+				"elementName": "collaborator_3_list_emailOrMobile",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[3]//span)[4]",
+				"note": "协作者列表第三个协作者邮箱"
+			},
+			{
+				"elementName": "list_addCollaborator_1",
+				"locateUsing": "xpath",
+				"locator": "//p[@data-test='collab-control-transfer']",
+				"note": "协作者权限列表--转让所有权"
+			},
+			{
+				"elementName": "list_addCollaborator_changeOwner_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[2]//div//div[1]//div//a",
+				"note": "协作者权限列表--转让所有权列表--选择第一个用户为转让对象按钮"
+			},
+			{
+				"elementName": "list_addCollaborator_4",
+				"locateUsing": "xpath",
+				"locator": "//p[@data-test='collab-control-remove']",
+				"note": "协作者权限列表--移除"
+			},
+			{
+				"elementName": "list_addCollaborator_4_ok",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'确定')]",
+				"note": "协作者权限列表--移除--确认移除"
+			},
+			{
+				"elementName": "addCollaborator_total",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]//p",
+				"note": "协作者人数"
+			},
+			{
+				"elementName": "addCollaborator_company_list",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[2]",
+				"note": "协作者页面切换到企业成员列表"
+			},
+			{
+				"elementName": "addCollaborator_folder_add",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='main']//div[1]//div[2]//div//div[2]//ul//span",
+				"note": "文件夹内右侧(加号)添加协作人按钮"
+			},
+			{
+				"elementName": "addCollaborator_1_add",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tab-content']//div//div//div//div[1]//div[2]//div",
+				"note": "最近协作者列表第一个添加按钮"
+			},
+			{
+                "elementName": "addCollaborator_2_add",
+                "locateUsing": "xpath",
+                "locator": "//div[@class='sm-tab-content']//div//div//div//div[2]//div[2]//div",
+                "note": "最近协作者列表第二个添加按钮"
+             },
+             {
+               "elementName": "addCollaborator_companyList_1_add",
+               "locateUsing": "xpath",
+               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div",
+               "note": "企业协作者列表第一个添加按钮"
+             },
+			{
+				"elementName": "addCollaborator_companyList_2_add",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div",
+				"note": "企业协作者列表第二个添加按钮"
+			},
+			
+			{
+				"elementName": "b_addCollaborator_1_add",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div//a",
+				"note": "搜索显示被添加协作者列表第一个添加按钮"
+			},
+			{
+				"elementName": "Can_edit_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-editable']",
+				"note": "可以编辑王程"
+			},
+			{
+				"elementName": "can_only_comment_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-commentable']",
+				"note": "只能评论"
+			},
+			{
+				"elementName": "can_only_read_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='collab-control-readonly']",
+				"note": "只能阅读"
+			},
+			{
+				"elementName": "Shut_down_sm_modal_close_x",
+				"locateUsing": "className",
+				"locator": "sm-modal-close-x",
+				"note": "关闭添加协作窗口"
+			}
+			
+		]
+	},
+	{
+		"note": "文档，表格，文件夹",
+		"pageName": "doc",
+		"elements": [
+			{
+				"elementName": "b_back",
+				"locateUsing": "className",
+				"locator": "header-back-up",
+				"note": "后退"
+			},
+			{
+				"elementName": "quick_access_point",
+				"locateUsing": "className",
+				"locator": "quick-access-point",
+				"note": "收索&快速打开"
+			},
+			{
+				"elementName": "doc_title_input",
+				"locateUsing": "id",
+				"locator": "ql-title-input",
+				"note": "文档标题编辑"
+			},
+			{
+				"elementName": "Back_to_Desktop",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='qa-ancestor']//div[1]//a[1]",
+				"note": "桌面下的文档或者表格下箭头返回桌面"
+			},
+			{
+				"elementName": "Back_to_Table",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
+				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
+			},
+			{
+				"elementName": "doc_edit",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='ql-container']//div[1]",
+				"note": "文档编辑入口"
+			},
+			{
+				"elementName": "doc_saveStatus",
+				"locateUsing": "xpath",
+				"locator": "//span[@id='save-status']//span[1]",
+				"note": "文档/表格提示同步完成状态"
+			},
+			{
+				"elementName": "doc_notice_user",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='ql-mention-list']//li[@data-type='user']",
+				"note": "@用户，被选列表中内容第一个用户"
+			},
+			{
+				"elementName": "doc_menu",
+				"locateUsing": "className",
+				"locator": "options-icon",
+				"note": "文档编辑页面中右上角 点点点"
+			},
+			{
+				"elementName": "doc_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical operations sm-dropdown-menu-root']//li[contains(text(),'文档信息')]",
+				"note": "文档编辑页面中右上角 点点点-文档信息"
+			},
+			{
+				"elementName": "doc_menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li[@class='sm-dropdown-menu-item operations-noselect operations-red']",
+				"note": "文档编辑页面中右上角 点点点-删除文档"
+			},
+			{
+				"elementName": "doc_menu_delete_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='confirm-dialog-footer dialog-foot']//button[1]",
+				"note": "文档编辑页面中右上角 点点点-删除文档-确定按钮"
+			},
+			{
+				"elementName": "doc_discuss",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='doc-comment-addbtn']",
+				"note": "文档编辑页面中评论按钮"
+			},
+			{
+				"elementName": "doc_discuss_input",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='doc-comment-input']",
+				"note": "文档编辑页面中评论输入框"
+			},
+			{
+				"elementName": "doc_discuss_input_ok",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='doc-comment-btn doc-comment-send btn btn-ok']",
+				"note": "文档编辑页面中评论输入框-确定按钮"
+			},
+			{
+				"elementName": "ql_comment_Comments",
+				"locateUsing": "className",
+				"locator": "ql-comment",
+				"note": "工具栏中发起评论按钮"
+			},
+			{
+				"elementName": "Folder_settings",
+				"locateUsing": "className",
+				"locator": "settings",
+				"note": "文件夹中上方设置按钮"
+			},
+			{
+				"elementName": "Exit_share_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-footer']//button",
+				"note": "管理员删除文档-选择退出共享"
+			},
+			{
+				"elementName": "Collection_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='s-menu-btn-wrap']//div[1]//div[1]",
+				"note": "标题栏收藏按钮"
+			},
+			{
+				"elementName": "End_Discussion",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='doc-comment-header']//a[1]//span[2]",
+				"note": "结束讨论"
+			},
+			{
+				"elementName": "End_Discussion_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='confirm-wrap']//div[1]//div[3]//button[1]",
+				"note": "确定结束讨论"
+			}
+			
+		]
+	},
+	{
+		"note": "企业管理",
+		"pageName": "companyManagement",
+		"elements": [
+			{
+				"elementName": "company_Management",
+				"locateUsing": "xpath",
+				"locator": "//div[@id='left-sidebar']//div//a[2]",
+				"note": "桌面-企业管理入口"
+			},
+			{
+				"elementName": "member_management",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[1]",
+				"note": "企业管理-成员管理"
+			},
+			{
+				"elementName": "company_setting",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[2]",
+				"note": "企业管理-企业设置"
+			},
+			{
+				"elementName": "pay_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='tab-nav']//a[3]",
+				"note": "企业管理-支付与订单"
+			},
+			{
+				"elementName": "button_companyName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[2]//a",
+				"note": "企业设置-企业名称（更改按钮）"
+			},
+			{
+				"elementName": "text_companyName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[2]//div[@class='desc']",
+				"note": "企业设置-企业名称"
+			},
+			{
+				"elementName": "input_companyName",
+				"locateUsing": "xpath",
+				"locator": "//input[@class='sm-form-control ']",
+				"note": "企业设置-企业名称（输入框）"
+			},
+			{
+				"elementName": "invite_member",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[3]//a",
+				"note": "企业设置-谁能邀请新成员进企业"
+			},
+			{
+				"elementName": "invite_member_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[3]",
+				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者"
+			},
+			{
+				"elementName": "invite_member_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者和管理员"
+			},
+			{
+				"elementName": "invite_member_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[1]",
+				"note": "企业设置-谁能邀请新成员进企业-所有企业成员"
+			},
+			{
+				"elementName": "invite_member_OK",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "企业设置-谁能邀请新成员进企业-保存按钮"
+			},
+			{
+				"elementName": "addMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='add-btn']",
+				"note": "成员管理-添加成员按钮"
+			},
+			{
+				"elementName": "message_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "消息确认按钮"
+			},
+			{
+				"elementName": "message_warning",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='shimo-modal-content']",
+				"note": "提示消息"
+			},
+			{
+				"elementName": "address_cppy",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='invitation-panel-foot']//button",
+				"note": "企业设置-添加成员-复制链接按钮"
+			},
+			{
+				"elementName": "setAdmin",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[5]//a",
+				"note": "企业设置-设置管理员"
+			},
+			{
+				"elementName": "setAdmin_ManagerAndCreater",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[1]",
+				"note": "企业设置-设置管理员-管理员和创建者"
+			},
+			{
+				"elementName": "setAdmin_Creater",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-设置管理员-仅创建者"
+			},
+			{
+				"elementName": "button_addCollaborators",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings creator']//div[4]//a",
+				"note": "企业设置-谁能添加外部协作者（更改按钮）"
+			},
+			{
+				"elementName": "addCollaborators_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[2]",
+				"note": "企业设置-谁能添加外部协作者-所有企业成员"
+			},
+			{
+				"elementName": "addCollaborators_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[3]",
+				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员"
+			},
+			{
+				"elementName": "addCollaborators_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='modal-content']//div[4]",
+				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
+			},
+			{
+				"elementName": "transferCompany",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='row creator-only transfer-team']//span",
+				"note": "企业设置-移交企业"
+			},
+			{
+				"elementName": "transferCompany_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-error']",
+				"note": "企业设置-移交企业-移交企业确认按钮"
+			},
+			{
+				"elementName": "memberSearch",
+				"locateUsing": "xpath",
+				"locator": "//input[@class='search-input standard']",
+				"note": "企业设置-成员列表-搜索"
+			},
+			{
+				"elementName": "xpath_banUser_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='shimo-modal-content']//div//div[2]",
+				"note": "企业设置-成员列表-移除成员-禁用"
+			},
+			{
+				"elementName": "xpath_banUser_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='btn btn-ok']",
+				"note": "企业设置-成员列表-移除成员-禁用-确认"
+			},
+			{
+				"elementName": "xpath_userTab_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='member-filter']//a[1]",
+				"note": "企业设置-成员列表"
+			},
+			{
+				"elementName": "xpath_userTab_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='member-filter']//a[3]",
+				"note": "企业设置-禁用成员列表"
+			},
+			{
+				"elementName": "button_exitCompany",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='settings member']//div[8]//a",
+				"note": "企业设置-成员退出企业"
+			},
+			{
+				"elementName": "addmember_copyLink_open",
+				"locateUsing": "className",
+				"locator": "close-invitation-link",
+				"note": "企业设置-打开或者关闭邀请链接"
+			}
+		]
+	},
+	{
+		"note": "登录页面",
+		"pageName": "homePage",
+		"elements": [
+			{
+				"note": "用户名_邮箱",
+				"elementName": "userEmail",
+				"locateUsing": "xpath",
+				"locator": "//input[@name='mobileOrEmail']"
+			},
+			{
+				"note": "密码",
+				"elementName": "userPwd",
+				"locateUsing": "xpath",
+				"locator": "//input[@name='password']"
+			},
+			{
+				"note": "登录按钮",
+				"elementName": "login_submit",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'立即登录')]"
+			}
+		]
+	},
+	{
+		"note": "桌面/工作台-菜单",
+		"pageName": "menu",
+		"elements": [
+			{
+				"elementName": "menu_newPage",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'在新标签页中打开')]",
+				"note": "新标签页中打开"
+			},
+			{
+				"elementName": "menu_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'快捷方式')]",
+				"note": "添加快捷方式"
+			},
+			{
+				"elementName": "menu_collection",
+				"locateUsing": "xpath",
+				"locator": "//li//div[contains(text(),'收藏')]",
+				"note": "添加收藏"
+			},
+			{
+				"elementName": "menu_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//div[@aria-owns='file-menu-collab$Menu']",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "menu_cooperation_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[1]//div",
+				"note": "添加协作者-二级菜单（添加协作者）"
+			},
+			{
+				"elementName": "menu_cooperation_2",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='sm-menu sm-menu-vertical-right  sm-menu-sub']//li[2]",
+				"note": "添加协作者-二级菜单（查看协作者）"
+			},
+			{
+				"elementName": "menu_move",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'移动')]/..",
+				"note": "移动"
+			},
+			{
+				"elementName": "menu_rename",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'重命名')]/..",
+				"note": "重命名"
+			},
+			{
+				"elementName": "menu_creatCopy",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'创建副本')]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "menu_share",
+				"locateUsing": "xpath",
+				"locator": "//div[@aria-owns='file-menu-share$Menu']",
+				"note": "分享"
+			},
+			{
+				"elementName": "menu_share_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@id='file-menu-share$Menu']//li//div",
+				"note": "分享-公开分享"
+			},
+			{
+				"elementName": "menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'删除')]",
+				"note": "删除按钮"
+			},
+			{
+				"elementName": "menu_mute",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'消息')]",
+				"note": "消息免打扰"
+			},
+			{
+				"elementName": "menu_moveToFolder",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'定位到所在文件夹')]",
+				"note": "定位到所在文件夹"
+			},
+			{
+				"elementName": "menu_Recovery",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'恢复文件')]",
+				"note": "恢复文件"
+			},
+			{
+				"elementName": "menu_Completely_removed",
+				"locateUsing": "xpath",
+				"locator": "//li//div//span[contains(text(),'彻底删除')]",
+				"note": "彻底删除"
+			},
+			{
+				"elementName": "menu_Point_Menu",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='file-options-icon']",
+				"note": "工作台-最近使用-第一个文件点点(仅有一个文件时使用)"
+			}
+		]
+	},
+	{
+		"note": "文档/表格编辑页点点点-菜单",
+		"pageName": "file_menu",
+		"elements": [
+			{
+				"elementName": "file_menu_version",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'保存版本')]",
+				"note": "保存版本"
+			},
+			{
+				"elementName": "file_menu_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'快捷方式')]",
+				"note": "添加快捷方式"
+			},
+			{
+				"elementName": "file_menu_collection",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'收藏')]",
+				"note": "添加收藏"
+			},
+			{
+				"elementName": "file_menu_list",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'查看目录')]",
+				"note": "查看目录"
+			},
+			{
+				"elementName": "file_menu_move",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'移动')]",
+				"note": "移动"
+			},
+			{
+				"elementName": "file_menu_history",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'查看历史')]",
+				"note": "重命名"
+			},
+			{
+				"elementName": "file_menu_creatCopy",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'创建副本')]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "file_menu_delete",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'删除')]",
+				"note": "删除按钮"
+			},
+			{
+				"elementName": "file_menu_mute",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'消息')]",
+				"note": "消息免打扰"
+			},
+			{
+				"elementName": "file_menu_help",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(text(),'帮助')]",
+				"note": "帮助"
+			},
+			{
+				"elementName": "file_menu_msg",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(text(),'信息')]",
+				"note": "文档/表格信息"
+			}
+		]
+	},
+	{
+		"note": "PPT_顶部工具栏",
+		"pageName": "ppt_top",
+		"elements": [
+			{
+				"elementName": "add_page",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[1]//div[1]//button[1]",
+				"note": "添加页面"
+			},
+			{
+				"elementName": "down_arrow",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[1]//div[1]//button[2]",
+				"note": "下箭头"
+			},
+			{
+				"elementName": "ppt_revoke",
+				"locateUsing": "xpath",
+				"locator": "//button[@id='sm-slide-undo']",
+				"note": "撤销"
+			},
+			{
+				"elementName": "ppt_redo",
+				"locateUsing": "xpath",
+				"locator": "//button[@id='sm-slide-redo']",
+				"note": "重做"
+			},
+			{
+				"elementName": "add_text",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[1]",
+				"note": "添加文本"
+			},
+			{
+				"elementName": "add_diagram",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[2]",
+				"note": "添加图片"
+			},
+			{
+				"elementName": "add_arrows",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[3]",
+				"note": "添加箭头"
+			},
+			{
+				"elementName": "add_Rectangle",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
+				"note": "添加矩形"
+			},
+			{
+				"elementName": "add_circular",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
+				"note": "添加圆形"
+			},
+			{
+				"elementName": "narrow_trying",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[1]",
+				"note": "减小视图"
+			},
+			{
+				"elementName": "enlarge_trying",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[3]",
+				"note": "放大视图"
+			},
+			{
+				"elementName": "ppt_zoom",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[2]",
+				"note": "视图"
+			}
+		]
+	},
+	{
+		"note": "PPT_左边栏",
+		"pageName": "ppt_left",
+		"elements": [
+			{
+				"elementName": "ppt_page_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='filmstrip']//div[1]//div)[1]",
+				"note": "左边栏第一个页面"
+			},
+			{
+				"elementName": "ppt_page_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[2]",
+				"note": "左边栏第二个页面"
+			},
+			{
+				"elementName": "ppt_page_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[3]",
+				"note": "左边栏第三个页面"
+			},
+			{
+				"elementName": "ppt_page_4",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[4]",
+				"note": "左边栏第四个页面"
+			},
+			{
+				"elementName": "ppt_page_5",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[5]",
+				"note": "左边栏第五个页面"
+			},
+			{
+				"elementName": "ppt_page_6",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[6]",
+				"note": "左边栏第六个页面"
+			},
+			{
+				"elementName": "ppt_page_7",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[7]",
+				"note": "左边栏第七个页面"
+			},
+			{
+				"elementName": "ppt_page_8",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[8]",
+				"note": "左边栏第八个页面"
+			},
+			{
+				"elementName": "ppt_page_9",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[9]",
+				"note": "左边栏第九个页面"
+			},
+			{
+				"elementName": "ppt_page_10",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[10]",
+				"note": "左边栏第十个页面"
+			},
+			{
+				"elementName": "ppt_page_11",
+				"locateUsing": "xpath",
+				"locator": "(//div[contains(@class,'sm-transparency-card')])[11]",
+				"note": "左边栏第十一个页面"
+			}
+		]
+	},		
+	{
+		"note": "PPT_页面",
+		"pageName": "ppt_page",
+		"elements": [
+			{
+				"elementName": "ppt_text",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']",
+				"note": "幻灯片页面(不是很好用，需优化)"
+			},
+			{
+				"elementName": "page_elements_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[1]",
+				"note": "幻灯片页面第一个元素"
+			},
+			{
+				"elementName": "page_elements_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
+				"note": "幻灯片页面第二个元素"
+			},
+			{
+				"elementName": "page_elements_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
+				"note": "幻灯片页面第三个元素"
+			},
+			{
+				"elementName": "page_elements_4",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
+				"note": "幻灯片页面第四个元素"
+			},
+			{
+				"elementName": "page_elements_5",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
+				"note": "幻灯片页面第五个元素"
+			},
+			{
+				"elementName": "smslide_frame_anchor_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[1]",
+				"note": "选中文件后像素点-形状文本右中-图片右上"
+			},
+			{
+				"elementName": "smslide_frame_anchor_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[2]",
+				"note": "选中文件后像素点-形状文本左中-图片右下"
+			},
+			{
+				"elementName": "smslide_frame_anchor_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[3]",
+				"note": "选中文件后像素点-形状文本上中-图片左下"
+			},
+			{
+				"elementName": "smslide_frame_anchor_4",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[4]",
+				"note": "选中文件后像素点-形状文本下中-图片左上"
+			},
+			{
+				"elementName": "smslide_frame_anchor_5",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[5]",
+				"note": "选中文件后像素点-形状右上"
+			},
+			{
+				"elementName": "smslide_frame_anchor_6",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[6]",
+				"note": "选中文件后像素点-形状右下"
+			},
+			{
+				"elementName": "smslide_frame_anchor_7",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[7]",
+				"note": "选中文件后像素点-形状左下"
+			},
+			{
+				"elementName": "smslide_frame_anchor_8",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[8]",
+				"note": "选中文件后像素点-形状左上"
+			},
+			
+			{
+				"elementName": "smslide_ordered_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='1']",
+				"note": "有序列表第1行是否存在"
+			},
+			{
+				"elementName": "smslide_ordered_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='2']",
+				"note": "有序列表第2行是否存在"
+			},
+			{
+				"elementName": "smslide_ordered_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ol[@start='3']",
+				"note": "有序列表第3行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='1']",
+				"note": "无序列表第1行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='2']",
+				"note": "无序列表第2行是否存在"
+			},
+			{
+				"elementName": "smslide_unordered_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']//ul[@start='3']",
+				"note": "无序列表第3行是否存在"
+			},
+			{
+				"elementName": "page_elements_1_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[1]//span",
+				"note": "图片占位符1上传图片按钮"
+			},
+			{
+				"elementName": "page_elements_2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
+				"note": "图片占位符2上传图片按钮"
+			},
+			{
+				"elementName": "page_elements_3_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
+				"note": "图片占位符3上传图片按钮"
+			},
+			{
+				"elementName": "page_elements_4_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
+				"note": "图片占位符4上传图片按钮"
+			},
+			{
+				"elementName": "page_elements_5_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
+				"note": "图片占位符5上传图片按钮"
+			}
+			
+		]
+	},
+	{
+		"note": "PPT_header",
+		"pageName": "PPT_header",
+		"elements": [
+			{
+				"elementName": "ppt_return",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[1]",
+				"note": "幻灯片内返回"
+			},
+			{
+				"elementName": "ppt_down",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"note": "幻灯片内下箭头"
+			},
+			{
+				"elementName": "ppt_plus_sign",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//div[1]",
+				"note": "幻灯片中加号"
+			},
+			{
+				"elementName": "ppt_filename",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//div[2]",
+				"note": "幻灯片标题"
+			},
+			{
+				"elementName": "ppt_collect",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"note": "收藏标签"
+			},
+			{
+				"elementName": "ppt_comment",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//span[1]",
+				"note": "幻灯片讨论"
+			},
+			{
+				"elementName": "ppt_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/button[1]",
+				"note": "播放幻灯片"
+			},
+			{
+				"elementName": "ppt_online_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
+				"note": "在线演示"
+			},
+			{
+				"elementName": "ppt_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "ppt_share",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"note": "分享"
+			},
+			{
+				"elementName": "ppt_dotdotdot",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"note": "左上角点点点"
+			},
+			{
+				"elementName": "ppt_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[1]",
+				"note": "快捷方式设置"
+			},
+			{
+				"elementName": "ppt_news",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[2]",
+				"note": "消息设置"
+			},
+			{
+				"elementName": "ppt_collection",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
+				"note": "收藏&取消收藏"
+			}, 
+			{
+				"elementName": "ppt_move",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[5]",
+				"note": "移动"
+			},
+			{
+				"elementName": "ppt_now_copy",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[6]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "ppt_export",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[7]",
+				"note": "导出"
+			},
+			{
+				"elementName": "ppt_template",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "保存模板"
+			},
+			{
+				"elementName": "ppt_view_history",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"note": "查看历史"
+			},
+			{
+				"elementName": "ppt_Information",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[11]",
+				"note": "幻灯片信息"
+			},
+			{
+				"elementName": "ppt_delete",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
+				"note": "删除"
+			},{
+				"elementName": "ppt_delete_sure",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
+				"note": "确认删除"
+			},{
+				"elementName": "ppt_delete_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
+				"note": "取消删除"
+			}
+		]
+	},
+	{
+		"note": "PPT_幻灯片右边栏",
+		"pageName": "PPT_rightBar",
+		"elements": [
+			{
+				"elementName": "ppt_type",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
+				"note": "样式"
+			},
+			{
+				"elementName": "page_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "页面背景填充"
+			},
+			{
+				"elementName": "page_colour",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "页面颜色选择"
+			},
+			{
+				"elementName": "image_size",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "页面图片尺寸"
+			},
+			{
+				"elementName": "image_chosen",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"note": "页面图片选择"
+			},
+			{
+				"elementName": "style_all_applications",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[2]//button[1]",
+				"note": "页面应用至全部"
+			},
+			{
+				"elementName": "border_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[1]//button[1]",
+				"note": "边框样式"
+			},
+			{
+				"elementName": "border_style_lines",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[2]//button[1]",
+				"note": "边框线样式"
+			},
+			{
+				"elementName": "border_style_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[3]//div[1]//button[1]",
+				"note": "边框线颜色"
+			},
+			{
+				"elementName": "border_style_width",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]",
+				"note": "边框线粗细输入"
+			},
+			{
+				"elementName": "border_style_widths",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[1]",
+				"note": "边框线粗细上箭头"
+			},
+			{
+				"elementName": "border_style_widthx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[2]",
+				"note": "边框线粗细下箭头"
+			},
+			{
+				"elementName": "transparency",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
+				"note": "透明度输入"
+			},
+			{
+				"elementName": "transparencys",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
+				"note": "透明度上箭头"
+			},
+			{
+				"elementName": "transparencyx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
+				"note": "透明度下箭头"
+			},
+			{
+				"elementName": "type_text_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[1]",
+				"note": "文本框样式模板1"
+			},
+			{
+				"elementName": "type_shapes_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
+				"note": "形状样式模板1"
+			},
+			{
+				"elementName": "type_shapes_fill",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "形状填充"
+			},
+			{
+				"elementName": "type_shapes_fillcolor",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "形状填充颜色"
+			},
+			{
+				"elementName": "type_pictures_cut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[1]//button[1]",
+				"note": "剪裁图片"
+			},
+			{
+				"elementName": "type_pictures_replace",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "替换图片"
+			},
+			{
+				"elementName": "type_pictures_proportion",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
+				"note": "图片剪裁比例"
+			},
+			{
+				"elementName": "type_pictures_proportionk",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
+				"note": "输入图片宽"
+			},
+			{
+				"elementName": "type_pictures_proportiong",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
+				"note": "输入图片高"
+			},
+			
+			
+			
+			
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
+				"note": "文本_排列"
+			},
+			{
+				"elementName": "ppt_right_ttf",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"note": "字体"
+			},
+			{
+				"elementName": "ppt_right_ttfa",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"note": "文本_字体下箭头"
+			},
+			{
+				"elementName": "ppt_right_size",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"note": "文本_字号"
+			},
+			{
+				"elementName": "ppt_right_sizea",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"note": "文本_字号下箭头"
+			},
+			{
+				"elementName": "ppt_right_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[1]//button[1]",
+				"note": "文本_颜色"
+			},
+			{
+				"elementName": "ppt_right_colora",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[1]//button[2]",
+				"note": "文本_颜色下箭头"
+			},
+			{
+				"elementName": "ppt_right_laid",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[2]//button[1]",
+				"note": "文本_高亮"
+			},
+			{
+				"elementName": "ppt_right_laida",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[2]//button[2]",
+				"note": "文本_高亮下箭头"
+			},
+			{
+				"elementName": "ppt_right_end",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[3]//button[1]",
+				"note": "文本_背景色"
+			},
+			{
+				"elementName": "ppt_right_enda",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-color']//div[3]//button[2]",
+				"note": "文本_背景色下箭头"
+			},
+			{
+				"elementName": "ppt_right_thickness",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[1]",
+				"note": "文本_加粗"
+			},
+			{
+				"elementName": "ppt_right_italic",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[2]",
+				"note": "文本_斜体"
+			},
+			{
+				"elementName": "ppt_right_underline",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[3]",
+				"note": "文本_下划线"
+			},
+			{
+				"elementName": "ppt_right_of",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-style']//button[4]",
+				"note": "文本_中划线"
+			},
+			{
+				"elementName": "ppt_right_top",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[1]",
+				"note": "文本_顶部对齐"
+			},
+			{
+				"elementName": "ppt_right_middle",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[2]",
+				"note": "文本_垂直中部对齐"
+			},
+			{
+				"elementName": "ppt_right_bottom",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-vertical']//div[1]//button[3]",
+				"note": "文本_底部对齐"
+			},
+			{
+				"elementName": "ppt_right_L",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
+				"note": "文本_左对齐"
+			},
+			{
+				"elementName": "ppt_right_center",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
+				"note": "文本_水平中对齐"
+			},
+			{
+				"elementName": "ppt_right_R",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[3]",
+				"note": "文本_右对齐"
+			},
+			{
+				"elementName": "ppt_right_ends",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[4]",
+				"note": "文本_两端对齐"
+			},
+			{
+				"elementName": "ppt_right_order",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[1]",
+				"note": "文本_有序列表"
+			},
+			{
+				"elementName": "ppt_right_disorder",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
+				"note": "文本_无序列表"
+			},
+			{
+				"elementName": "ppt_right_row1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
+				"note": "文本_行间距输入"
+			},
+			{
+				"elementName": "ppt_right_row2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[2]",
+				"note": "文本_行间距下三角"
+			},
+			{
+				"elementName": "ppt_right_front1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[1]//div[1]",
+				"note": "文本_段前间距输入"
+			},
+			{
+				"elementName": "ppt_right_front2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[1]",
+				"note": "文本_段前间距上箭头"
+			},
+			{
+				"elementName": "ppt_right_front3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[2]",
+				"note": "文本_段前间距下箭头"
+			},
+			{
+				"elementName": "ppt_right_rear1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[1]//div[1]",
+				"note": "文本_段后间距输入"
+			},
+			{
+				"elementName": "ppt_right_rear2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[1]",
+				"note": "文本_段后间距上箭头"
+			},
+			{
+				"elementName": "ppt_right_rear3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[2]",
+				"note": "文本_段后间距下箭头"
+			},
+			{
+				"elementName": "ppt_right_adaptive",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
+				"note": "文本_文本框自适应"
+			},
+			
+			
+			
+			
+			{
+				"elementName": "ppt_theme",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
+				"note": "排列"
+			},
+			{
+				"elementName": "element_setTop",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[1]",
+				"note": "元素置顶"
+			},
+			{
+				"elementName": "element_setThe",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[2]",
+				"note": "元素置底"
+			},
+			{
+				"elementName": "element_moveUp",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[3]",
+				"note": "元素上移一层"
+			},
+			{
+				"elementName": "element_moveDown",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[1]//div[4]",
+				"note": "元素下移一层"
+			},
+			{
+				"elementName": "element_horizontal",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[1]",
+				"note": "水平对齐"
+			},
+			{
+				"elementName": "element_vertically",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-arrangement']//div[2]//button[2]",
+				"note": "垂直对齐"
+			},
+			{
+				"elementName": "element_horizontal_xvalue",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//input[1]",
+				"note": "X位置输入"
+			},
+			{
+				"elementName": "element_horizontal_xvalues",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//button[1]",
+				"note": "X位置上箭头"
+			},
+			{
+				"elementName": "element_horizontal_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//div[1]//div[1]//button[2]",
+				"note": "X位置下箭头"
+			},
+			{
+				"elementName": "element_vertically_xvalue",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//input[1]",
+				"note": "Y位置输入"
+			},
+			{
+				"elementName": "element_vertically_xvalues",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[1]",
+				"note": "Y位置上箭头"
+			},
+			{
+				"elementName": "element_vertically_xvaluex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[2]",
+				"note": "Y位置下箭头"
+			}
+		]
+	},
+	{
+		"note": "幻灯片中右键菜单与列表",
+		"pageName": "ppt_tabulation",
+		"elements": [
+			{
+				"elementName": "cutting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[1]",
+				"note": "剪切"
+			},
+			{
+				"elementName": "replication",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[2]",
+				"note": "复制"
+			},
+			{
+				"elementName": "pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[3]",
+				"note": "粘贴"
+			},
+			{
+				"elementName": "replication_pasting",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[4]",
+				"note": "复制并粘贴"
+			},
+			{
+				"elementName": "right_key_new",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[6]",
+				"note": "新建幻灯片"
+			},
+			{
+				"elementName": "delete_page",
+				"locateUsing": "xpath",
+				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
+				"note": "删除幻灯片"
+			},
+		]
+	},
+	{
+		"note": "个人账号设置页面",
+		"pageName": "profile",
+		"elements": [
+			{
+				"elementName": "mobile_setting",
+				"locateUsing": "xpath",
+				"locator": "//li[@class='m-profile-item m-profile-item-mobileAccount']//span[@class='action-label action-normal']",
+				"note": "绑定手机号按钮"
+			},
+			{
+				"elementName": "mobile_setting_input",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='phone-content']//input",
+				"note": "绑定手机号输入框"
+			},
+			{
+				"elementName": "mobile_setting_getVerifyCode",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='m-verify-code']//button",
+				"note": "绑定手机号，获取验证码按钮"
+			},
+			{
+				"elementName": "mobile_setting_verifyCodeInput",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='m-verify-code']//span//input",
+				"note": "绑定手机号，验证码输入框"
+			},
+			{
+				"elementName": "mobile_setting_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[@class='button btn-submit']",
+				"note": "绑定手机号，确认绑定按钮"
+			},
+			{
+				"elementName": "profile_toast",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='m-toast m-toast-success']",
+				"note": "账号设置页面toast"
+			}
+		]
+	},
+	{
+		"pageName": "--------------------------------------------------------------------",
+		"test":"123123123123123"
+	}
+]

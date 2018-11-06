@@ -1,0 +1,18 @@
+[
+  {
+    "note": "测试链接",
+    "pageName": "URL",
+    "elements": [
+      {
+        "testEnvironment": "release",
+        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-sheet%3Adevelopment%3Blizard-service-sheet-sdk%3Aaccess__lizard&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin",
+        "note": "仅修改 testURL"
+      },
+      {
+        "testEnvironment": "dev",
+        "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-ads&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin",
+        "note": "仅修改 testURL"
+      }
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="shimo" parallel="tests" thread-count="7">
+	<listeners>
+		<listener class-name="testNG.RetryListener"></listener>
+		<listener class-name="testNG.TestListener"></listener>
+	</listeners>
+	<parameter name="browser" value="chrome" />
+	<parameter name="nodeIp" value="http://localhost:4444" />
+	<parameter name="local" value="false" />
+	<test name="test1">
+		<classes>
+			<class name="cases.dashboard.dashboard_own" />
+			<class name="cases.dashboard.dashboard_shared" />
+			<class name="cases.recycle.testRecycleBin" />
+		</classes>
+	</test>
+	<test name="test2">
+		<classes>
+			<class name="cases.dashboard.testDashboard" />
+			<class name="cases.desktop.testNotice" />
+		</classes>
+	</test>
+	<test name="test3">
+		<classes>
+			<class name="cases.desktop.testDesktop" />
+		</classes>
+	</test>
+	<test name="test4">
+		<classes>
+			<class name="cases.management.testCompanyManagement" />
+		</classes>
+	</test>
+	<test name="test5">
+		<classes>
+			<class name="cases.desktop.hovertest" />
+			<class name="cases.desktop.testAlertMute" />
+			<class name="cases.desktop.testDesktopOrderBy" />
+		</classes>
+	</test>
+	<test name="test6">
+		<classes>
+			<class name="cases.dashboard.dashboard_update" />
+			<class name="cases.desktop.testSearch" />
+		</classes>
+	</test>
+	<test name="test7">
+		<classes>
+			<class name="cases.collaborator.testAddCollaborator" />
+			<class name="cases.collaborator.testPermission" />
+		</classes>
+	</test>
+	<test name="test8">
+		<classes>
+			<class name="cases.dashboard.dashboard_used" />
+		</classes>
+	</test>
+	<test name="test9">
+		<classes>
+			<class name="cases.collection.testCollection" />
+			<class name="cases.loginRegistered.login_error" />
+			<class name="cases.loginRegistered.testRegistered" />
+			<class name="cases.docSheet.testMenu_Doc_Sheet" />
+		</classes>
+	</test>
+	<test name="test10">
+		<classes>
+			<class name="cases.desktop.testDesktop_Folder" />
+		</classes>
+	</test>
+	<test name="test11">
+		<classes>
+			<class name="cases.desktop.testDesktop_gear" />
+		</classes>
+	</test>
+	<test name="test12">
+		<classes>
+			<class name="cases.desktop.testDesktop_new" />
+		</classes>
+	</test>
+	<test name="test13">
+		<classes>
+			<class name="cases.management.testCompanyManagement_1" />
+		</classes>
+	</test>
+	<test name="test14">
+		<classes>
+			<class name="cases.collaborator.testAuthorityForAddCollaborator" />
+		</classes>
+	</test>
+	<test name="test15">
+		<classes>
+			<class name="cases.collaborator.testModifyPermissions" />
+		</classes>
+	</test>
+	<test name="test16">
+		<classes>
+			<class name="cases.collaborator.testRemoveCollaborator" />
+		</classes>
+	</test>
+	<test name="test17">
+		<classes>
+			<class name="cases.collaborator.testTransferOwner" />
+		</classes>
+	</test>
+	<test name="test18">
+		<classes>
+			<class name="cases.collaborator.testAuthorityForMoveFile" />
+		</classes>
+	</test>
+	<test name="test19">
+		<classes>
+			<class name="cases.collaborator.testCollaboratorUI" />
+		</classes>
+	</test>
+	<test name="test20">
+		<classes>
+			<class name="cases.profile.testProfile" />
+		</classes>
+	</test>
+</suite>
