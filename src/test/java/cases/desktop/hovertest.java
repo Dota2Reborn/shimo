@@ -177,7 +177,7 @@ public class hovertest extends TestInit {
         driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
 
         String url = driver.getCurrentUrl();
-        assertEquals(url, getURL());
+        assertEquals(url, getURL()+"login");
     }
 
     /**
