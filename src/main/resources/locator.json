@@ -716,8 +716,8 @@
 		"elements": [
 			{
 				"elementName": "b_back",
-				"locateUsing": "className",
-				"locator": "header-back-up",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']/button[1]",
 				"note": "后退"
 			},
 			{
@@ -747,7 +747,7 @@
 			{
 				"elementName": "doc_edit",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='ql-container']//div[1]",
+				"locator": "//div[@id='editor']/div[2]",
 				"note": "文档编辑入口"
 			},
 			{
@@ -759,13 +759,13 @@
 			{
 				"elementName": "doc_notice_user",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='ql-mention-list']//li[@data-type='user']",
+				"locator": "(//li[starts-with(@class,'list-item__')])[1]",
 				"note": "@用户，被选列表中内容第一个用户"
 			},
 			{
 				"elementName": "doc_menu",
-				"locateUsing": "className",
-				"locator": "options-icon",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/button[last()]",
 				"note": "文档编辑页面中右上角 点点点"
 			},
 			{
@@ -777,13 +777,13 @@
 			{
 				"elementName": "doc_menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li[@class='sm-dropdown-menu-item operations-noselect operations-red']",
+				"locator": "//div[@data-test='page-header-menu']/ul/li[last()]",
 				"note": "文档编辑页面中右上角 点点点-删除文档"
 			},
 			{
 				"elementName": "doc_menu_delete_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='confirm-dialog-footer dialog-foot']//button[1]",
+				"locator": "//div[@class='sm-modal-footer']/button[1]",
 				"note": "文档编辑页面中右上角 点点点-删除文档-确定按钮"
 			},
 			{
@@ -1222,7 +1222,7 @@
 			{
 				"elementName": "file_menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'删除')]",
+				"locator": "//li//span[contains(text(),'删除')]",
 				"note": "删除按钮"
 			},
 			{
@@ -1240,7 +1240,7 @@
 			{
 				"elementName": "file_menu_msg",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'信息')]",
+				"locator": "//li/div/span[contains(text(),'信息')]",
 				"note": "文档/表格信息"
 			}
 		]
