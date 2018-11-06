@@ -63,20 +63,6 @@
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                         <!--此处testng.xml即为要运行的testng.xml文件-->
                     </suiteXmlFiles>
-                    <properties>
-                        <!--刚开始这里没有设置默认监听false，所以没有启用reportNG功能。-->
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-
-                        <!--Setting ReportNG listener-->
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
-                        </property>
-
-                    </properties>
                     <workingDirectory>target/</workingDirectory>
                     <forkMode>always</forkMode>
                 </configuration>
