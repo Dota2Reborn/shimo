@@ -789,19 +789,19 @@
 			{
 				"elementName": "doc_discuss",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='doc-comment-addbtn']",
+				"locator": "//i[starts-with(@class,'generator-icon__')]",
 				"note": "文档编辑页面中评论按钮"
 			},
 			{
 				"elementName": "doc_discuss_input",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='doc-comment-input']",
+				"locator": "//div[starts-with(@class,'input__')]",
 				"note": "文档编辑页面中评论输入框"
 			},
 			{
 				"elementName": "doc_discuss_input_ok",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='doc-comment-btn doc-comment-send btn btn-ok']",
+				"locator": "//div[starts-with(@class,'operation__')]/button[1]",
 				"note": "文档编辑页面中评论输入框-确定按钮"
 			},
 			{

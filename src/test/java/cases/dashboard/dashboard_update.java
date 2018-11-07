@@ -89,20 +89,19 @@ public class dashboard_update extends TestInit {
         login("gengxin6@shimo.im", "123123");
         click(dashboard_update_time);
         click(doc_edit);
+        doc_edit.clear();
+        sendKeys(doc_edit,"身体健康");
         click(doc_discuss);
         click(doc_discuss_input);
         sendKeys(doc_discuss_input, "通过");
         click(doc_discuss_input_ok);
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         click(b_back);
         String text1 = getText(dashboard_update_time);
 
         click(dashboard_update_time);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
-        driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
-        driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
-        click(doc_menu_delete_OK);
+        doc_edit.clear();
+        click(b_back);
 
         assertEquals(text1, "刚刚 我 评论：通过");
     }
@@ -130,11 +129,8 @@ public class dashboard_update extends TestInit {
         login("gengxin8@shimo.im", "123123");
         String text1 = getText(dashboard_update_time);
         click(dashboard_update_time);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='doc-comment-text']")));
-        driver.findElement(By.xpath("//div[@class='doc-comment-text']")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='doc-comment-close-icon']")));
-        driver.findElement(By.xpath("//span[@class='doc-comment-close-icon']")).click();
-        click(doc_menu_delete_OK);
+        doc_edit.clear();
+        click(b_back);
         assertEquals(text1, "1 评论刚刚 cc 评论：通过");
 
     }
@@ -181,7 +177,7 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：有一个文件
      */
     @Test
-    public void update8() throws InterruptedException {
+    public void update8() {
         login("gengxin11@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
@@ -210,7 +206,7 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin13有12共享的文件
      */
     @Test
-    public void update9() throws InterruptedException {
+    public void update9() {
         login("gengxin13@shimo.im", "123123");
         click(dashboard_4);
         click(dashboard_update_time);
