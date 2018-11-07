@@ -24,8 +24,8 @@ public class testMenu_Doc_Sheet extends TestInit {
         moveToElement(file_menu_help);
         click(file_menu_msg);
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));
-        Boolean R1 = driver.findElement(By.xpath("//div[@class='confirm-dialog dialog ']")).isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
+        Boolean R1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button")).isDisplayed();
         assertTrue(R1);
 
     }
@@ -46,8 +46,8 @@ public class testMenu_Doc_Sheet extends TestInit {
         moveToElement(file_menu_help);
         click(file_menu_msg);
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn confirm-btn btn-ok']")));
-        Boolean R1 = driver.findElement(By.xpath("//div[@class='confirm-dialog dialog ']")).isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
+        Boolean R1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button")).isDisplayed();
         assertTrue(R1);
 
     }

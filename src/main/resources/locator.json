@@ -722,8 +722,8 @@
 			},
 			{
 				"elementName": "quick_access_point",
-				"locateUsing": "className",
-				"locator": "quick-access-point",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[2]",
 				"note": "收索&快速打开"
 			},
 			{
@@ -741,7 +741,7 @@
 			{
 				"elementName": "Back_to_Table",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-ancestor']//div[2]//a[1]",
+				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[2]/a[1]",
 				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
 			},
 			{
@@ -825,19 +825,19 @@
 			{
 				"elementName": "Collection_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='s-menu-btn-wrap']//div[1]//div[1]",
+				"locator": "//div[@data-test='page-header-left']//button[3]",
 				"note": "标题栏收藏按钮"
 			},
 			{
 				"elementName": "End_Discussion",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='doc-comment-header']//a[1]//span[2]",
+				"locator": "//a[starts-with(@class,'close__')]",
 				"note": "结束讨论"
 			},
 			{
 				"elementName": "End_Discussion_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='confirm-wrap']//div[1]//div[3]//button[1]",
+				"locator": "//div[@class='sm-modal-footer']/button[1]",
 				"note": "确定结束讨论"
 			}
 			
@@ -1228,7 +1228,7 @@
 			{
 				"elementName": "file_menu_mute",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'消息')]",
+				"locator": "//li/div[contains(text(),'消息')]",
 				"note": "消息免打扰"
 			},
 			{
