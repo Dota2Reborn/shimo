@@ -1,4 +1,4 @@
-package testPic;
+package cases.testPic;
 
 import base.TestInit;
 import org.openqa.selenium.JavascriptExecutor;
