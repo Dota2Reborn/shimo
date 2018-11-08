@@ -123,6 +123,8 @@ public class dashboard_update extends TestInit {
 
         login("gengxin8@shimo.im", "123123");
         String text1 = getText(dashboard_update_time);
+        click(dashboard_update_time);
+        click(b_back);
         assertEquals(text1, "1 评论刚刚 cc 评论：通过");
 
     }
