@@ -46,13 +46,13 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-26 账号状态：有一个固定文件
      */
     @Test
-    public void update3() throws InterruptedException {
+    public void update3() {
         login("gengxin3@shimo.im", "123123");
         click(dashboard_update_name);
         click(doc_edit);
         sendKeys(doc_edit, "1");
-        Thread.sleep(1000);
         click(b_back);
+        driver.navigate().refresh();
         String text1 = getText(dashboard_update_time);
         assertEquals(text1, "刚刚 我 更新");
 
@@ -64,13 +64,12 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-26 账号状态：两个账号有一个固定文件
      */
     @Test
-    public void update4() throws InterruptedException {
+    public void update4() {
         login("gengxin5@shimo.im", "123123");
         click(desktop);
         click(desktop1_1);
         click(doc_edit);
         sendKeys(doc_edit, "1");
-        Thread.sleep(1000);
         click(b_back);
         logout();
 
@@ -85,23 +84,19 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-26 账号状态：有一个固定文件
      */
     @Test
-    public void update5() throws InterruptedException {
+    public void update5() {
         login("gengxin6@shimo.im", "123123");
         click(dashboard_update_time);
         click(doc_edit);
         doc_edit.clear();
         sendKeys(doc_edit,"身体健康");
-        click(doc_discuss);
+        click(ql_comment_Comments);
         click(doc_discuss_input);
         sendKeys(doc_discuss_input, "通过");
         click(doc_discuss_input_ok);
-//        Thread.sleep(1000);
         click(b_back);
+        driver.navigate().refresh();
         String text1 = getText(dashboard_update_time);
-
-        click(dashboard_update_time);
-        doc_edit.clear();
-        click(b_back);
 
         assertEquals(text1, "刚刚 我 评论：通过");
     }
@@ -112,25 +107,22 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：两个账号有一个固定文件
      */
     @Test
-    public void update6() throws InterruptedException {
+    public void update6() {
         login("gengxin7@shimo.im", "123123");
         click(desktop);
         click(desktop1_1);
         click(doc_edit);
         doc_edit.clear();
         sendKeys(doc_edit, "哈哈哈哈哈哈哈哈哈哈哈哈哈哈");
-        click(doc_discuss);
+        click(ql_comment_Comments);
         click(doc_discuss_input);
         sendKeys(doc_discuss_input, "通过");
         click(doc_discuss_input_ok);
-        Thread.sleep(1000);
+        click(b_back);
         logout();
 
         login("gengxin8@shimo.im", "123123");
         String text1 = getText(dashboard_update_time);
-        click(dashboard_update_time);
-        doc_edit.clear();
-        click(b_back);
         assertEquals(text1, "1 评论刚刚 cc 评论：通过");
 
     }
@@ -141,13 +133,12 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin10里面有一个9共享的文件
      */
     @Test
-    public void update7() throws InterruptedException {
+    public void update7() {
         login("gengxin10@shimo.im", "123123");
         click(dashboard_4);
         click(dashboard_update_time);
         click(doc_edit);
         sendKeys(doc_edit, "1");
-        Thread.sleep(1000);
         click(b_back);
         click(dashboard_1);
         String text1 = getText(dashboard_update_name);
@@ -248,14 +239,13 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：没有文件
      */
     @Test
-    public void update10() throws InterruptedException {
+    public void update10() {
         login("gengxin14@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "c");
-        Thread.sleep(1000);
         click(doc_menu);
         click(doc_menu_delete);
         click(doc_menu_delete_OK);
@@ -280,12 +270,6 @@ public class dashboard_update extends TestInit {
 
         contextClick(dashboard_update_name);
         click(menu_delete);
-        click(desktop_newFolder_name_ok);
-        Thread.sleep(1000);
-        click(trash);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
-        driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
-        click(menu_Completely_removed);
         click(desktop_newFolder_name_ok);
 
     }

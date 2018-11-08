@@ -135,7 +135,7 @@ public class testNotice extends TestInit {
 		moveToElement(dashboard_notice);
 		click(dashboard_notice_list_1);
 		switchToPage(1);
-		String result = driver.findElement(By.xpath("//div[@id='root']/div/div[2]/div")).getText();
+		String result = getText(By.xpath("//div[@id='root']/div/div[2]/div"));
 		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个 文档");
 	}
 
@@ -154,7 +154,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "lala");
-		click(doc_discuss);
+		click(ql_comment_Comments);
 		sendKeys(doc_discuss_input, "yoyoyo");
 		action.sendKeys(Keys.ENTER);
 		click(doc_discuss_input_ok);

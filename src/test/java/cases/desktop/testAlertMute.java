@@ -38,7 +38,7 @@ public class testAlertMute extends TestInit {
         wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         doc_edit.clear();
         sendKeys(doc_edit, "lala");
-        click(doc_discuss);
+        click(ql_comment_Comments);
         sendKeys(doc_discuss_input, "输入评论收到通知");
         action.sendKeys(Keys.ENTER);
         click(doc_discuss_input_ok);
