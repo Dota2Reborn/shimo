@@ -273,6 +273,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-06
      */
+    //todo 通知中点击加入企业无响应，待开发修复
     @Test(enabled = true)
     public void exitCompany() throws InterruptedException {
         login("panpan@qq.com", "123123");
@@ -299,7 +300,7 @@ public class testCompanyManagement extends TestInit {
         logout();
         login("testQiYe@qq.com", "123123");
 
-        moveToElement(dashboard_notice);
+        click(dashboard_notice);
         click(dashboard_notice_list_1_button);
         click(confirmJoinCompany);
 

@@ -21,7 +21,7 @@ public class hovertest extends TestInit {
     public void hover_person() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         wait.until(ExpectedConditions
                 .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
         String aa = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
@@ -46,15 +46,15 @@ public class hovertest extends TestInit {
         String result6 = driver.findElement(By.xpath(ff)).getText();
         assertEquals(result6, "邀请好友免费获得高级版");
 
-        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]";
+        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
         String result7 = driver.findElement(By.xpath(gg)).getText();
         assertEquals(result7, "下载石墨文档 App");
 
-        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
+        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
         String result8 = driver.findElement(By.xpath(hh)).getText();
         assertEquals(result8, "使用帮助");
 
-        String ii = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]";
+        String ii = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]";
         String result9 = driver.findElement(By.xpath(ii)).getText();
         assertEquals(result9, "退出登录");
 
@@ -70,7 +70,7 @@ public class hovertest extends TestInit {
     public void hover_person1() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_status_R);
 
         switchToPage(1);
@@ -88,7 +88,7 @@ public class hovertest extends TestInit {
     public void hover_person2() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
 
         String url = driver.getCurrentUrl();
@@ -106,7 +106,7 @@ public class hovertest extends TestInit {
     public void hover_person3() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions
                 .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")));
@@ -128,13 +128,13 @@ public class hovertest extends TestInit {
     public void hover_person4() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")).click();
 
-        String aa = "//div[@role='document']//div//div//div//h3";
+        String aa = "//div[@role='document']/div/div/div/h3";
         String text = driver.findElement(By.xpath(aa)).getText();
         assertEquals(text, "扫码下载 石墨文档 App");
 
@@ -150,11 +150,11 @@ public class hovertest extends TestInit {
     public void hover_person5() {
 
         login("autoTesthover@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "help");
@@ -170,11 +170,11 @@ public class hovertest extends TestInit {
     public void hover_person6() {
 
         login("logoutTest@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[last()]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL());
@@ -190,7 +190,7 @@ public class hovertest extends TestInit {
     public void hover_person7() {
 
         login("gaoji1@shimo.im", "123456");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         wait.until(ExpectedConditions
                 .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
         String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
@@ -221,7 +221,7 @@ public class hovertest extends TestInit {
     public void hover_person8() {
 
         login("gaoji1@shimo.im", "123456");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a")));
@@ -245,7 +245,7 @@ public class hovertest extends TestInit {
     public void hover_person9() {
 
         login("gaoji1@shimo.im", "123456");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a[2]")));
@@ -270,7 +270,7 @@ public class hovertest extends TestInit {
 
         login("shiyongtest@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
         Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版试用中");
         Boolean r4 = getText(desktop_user_icon_companyManagement).equals("企业管理");
@@ -291,7 +291,7 @@ public class hovertest extends TestInit {
     public void hover_person11() {
 
         login("pijiu@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         Boolean r1 = getText(desktop_user_icon_status_L).equals("基础版");
         Boolean r2 = getText(desktop_user_icon_status_R).equals("续费或升级到企业版");
 
@@ -308,7 +308,7 @@ public class hovertest extends TestInit {
     public void hover_person12() {
 
         login("shiyongtest@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         Boolean r1 = driver.getCurrentUrl().equals(getURL() + "enterprise/members");
         assertTrue(r1);
@@ -324,7 +324,7 @@ public class hovertest extends TestInit {
     public void hover_person13() {
 
         login("fufei1@shimo.im", "123456");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
 
         String url = driver.getCurrentUrl();
@@ -343,7 +343,7 @@ public class hovertest extends TestInit {
 
         login("fufei1@shimo.im", "123456");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
 
         String url = driver.getCurrentUrl();
@@ -360,7 +360,7 @@ public class hovertest extends TestInit {
     public void hover_person15() {
 
         login("fufei1@shimo.im", "123456");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]")));
@@ -393,7 +393,7 @@ public class hovertest extends TestInit {
     public void hover_person16() {
 
         login("monvzhaijibian@morsin.com", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         Boolean r1 = getText(desktop_user_icon_status_L).equals("购买企业版");
         Boolean r2 = getText(desktop_user_icon_status_R).equals("企业版已过期");
@@ -411,7 +411,7 @@ public class hovertest extends TestInit {
     public void hover_person17() {
 
         login("liuchen@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
 
         Boolean r1 = getText(desktop_user_icon_companyManagement).equals("我的企业");
 

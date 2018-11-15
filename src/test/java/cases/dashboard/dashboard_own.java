@@ -23,7 +23,8 @@ public class dashboard_own extends TestInit {
         driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
                 .click();// hover收藏
         click(favorites);
-        String text = getText(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]"));
+//        String text = getText(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]"));
+        String text = getText(desktop1_1);
         assertEquals(text, "无标题");
 
         click(dashboard);
@@ -76,6 +77,7 @@ public class dashboard_own extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
+        //Todo 等待开发修复新建逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "la");
         click(b_back);
@@ -126,11 +128,12 @@ public class dashboard_own extends TestInit {
 //		click(Shut_down_sm_modal_close_x);
         logout();
         login("own7@shimo.im", "123123");
-        String n = getText(dashboard_shareTime_1);
+        click(dashboard_4);
+        String n = getText(dashboard_update_time);
         String time1 = n.substring(0, 2);
         String m = "刚刚";
         if (time1.equals(m)) {
-            assertEquals(n, "刚刚");
+            assertEquals(n, "刚刚 own6 共享");
             a = true;
         } else if (time1 != m) {
             String time3 = n.substring(0, 8);
@@ -141,7 +144,7 @@ public class dashboard_own extends TestInit {
                 a = true;
             }
         }
-        contextClick(New_Share_1);
+        contextClick(dashboard_update_time);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
         assertTrue(a);

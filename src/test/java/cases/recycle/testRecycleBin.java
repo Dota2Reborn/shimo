@@ -41,6 +41,7 @@ public class testRecycleBin extends TestInit {
      * @author 王继程
      * @Time 2018-03-12
      */
+    //todo 新建逻辑，带开发修复
     @Test(enabled = true)
     public void Completely_removed() throws InterruptedException {
         login("Completely@shimo.im", "123123");

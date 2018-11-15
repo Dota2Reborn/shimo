@@ -27,8 +27,8 @@ public class testDesktop extends TestInit {
         contextClick(desktop1_1);
         click(menu_newPage);
 
-        Set<String> winHandels = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandels);
+        Set<String> winHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(winHandles);
         int n = it.size();
         assertEquals(2, n);
     }
@@ -39,15 +39,19 @@ public class testDesktop extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
+    //Todo 添加快捷方式，快捷方式应该在快捷方式列表中第一行，待开发修复
     @Test
-    public void desktop_doc_setting_2() {
+    public void desktop_doc_setting_2() throws InterruptedException {
         login("autoTest@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
         click(menu_shortcut);
 
         driver.navigate().refresh();
+        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
+        click(desktop_shortcut);
+        Thread.sleep(500);
         String doc_name = getText(desktop1_1);
 
         contextClick(desktop1_1);

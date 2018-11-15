@@ -16,6 +16,7 @@ public class testCollection extends TestInit {
      * @author 王继程
      * @Time 2018-03-12
      */
+    //Todo 当前新建打开新标签，待修复
     @Test(enabled = true)
     public void New_Document() throws InterruptedException {
         login("New_collection@shimo.im", "123123");
@@ -42,6 +43,7 @@ public class testCollection extends TestInit {
      * @author 王继程
      * @Time 2018-03-12
      */
+    //Todo 当前新建打开新标签，待修复
     @Test(enabled = true)
     public void Create_Table() throws InterruptedException {
         login("New_collection@shimo.im", "123123");
@@ -99,7 +101,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-19
      */
     @Test(enabled = true)
-    public void Collection_Sort_1() throws InterruptedException {
+    public void Collection_Sort_1() {
         login("Collection@shimo.im", "123123");
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
@@ -123,7 +125,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-19
      */
     @Test(enabled = true)
-    public void Collection_Sort_2() throws InterruptedException {
+    public void Collection_Sort_2() {
         login("Collection@shimo.im", "123123");
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
@@ -147,7 +149,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-20
      */
     @Test(enabled = true)
-    public void Collection_Sort_3() throws InterruptedException {
+    public void Collection_Sort_3() {
         login("Collection@shimo.im", "123123");
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));

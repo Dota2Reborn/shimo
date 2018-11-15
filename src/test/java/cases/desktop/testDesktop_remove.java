@@ -130,6 +130,7 @@ public class testDesktop_remove extends TestInit {
 		click(desktop);
 		click(desktop_new);
 		click(desktop_newDoc);
+		//Todo 新建逻辑，待开发修复
 		sendKeys(doc_title_input,"自动协作文件");
 		click(b_back);
 		

@@ -62,29 +62,23 @@ public class testPermission extends TestInit {
     @Test(enabled = true)
     public void Add_to2() {
         login("testing_3@test.im", "123123");
-        // desktop.click();
-        // Sort();
         click(desktop);
         // 右键第一个文件
         contextClick(desktop1_1);
         moveToElement(menu_cooperation);
-//		Add("testing_5@test.im");
         sendKeys(input_addCollaborator, "testing_5@test.im");
         click(b_addCollaborator_1_add);
-//		click(list_addCollaborator_4);
         Modify(3, 2);
         click(Shut_down_sm_modal_close_x);
         logout();
         login("testing_5@test.im", "123123");
-        // desktop.click();
         click(desktop);
-        // Sort();
         click(desktop1_1_folder);
 
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+        //Todo 只读情况下，新建按钮应该置灰，待开发修复
         String t = desktop_new.getAttribute("disabled");
         assertEquals(t, "true");
-        // desktop.click();
         click(desktop);
         contextClick(desktop1_1);
         click(menu_delete);

@@ -15,7 +15,7 @@ public class testSearch extends TestInit {
 	 * @Time 2017-12-22
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void searchResult() {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
@@ -37,7 +37,7 @@ public class testSearch extends TestInit {
 	 * @Time 2018-01-09
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void search_move() {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);
@@ -55,7 +55,7 @@ public class testSearch extends TestInit {
 	 * @Time 2018-01-09
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void search_moveAndClick() throws InterruptedException {
 		login("liuchen@shimo.im", "123123");
 		moveToElement(dashboard_search_button);

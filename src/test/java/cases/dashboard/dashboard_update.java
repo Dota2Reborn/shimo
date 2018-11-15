@@ -175,6 +175,7 @@ public class dashboard_update extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
+        //Todo 等开发修复新建文件逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "la");
         click(b_back);
@@ -246,6 +247,7 @@ public class dashboard_update extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
+        //Todo 等开发修复新建文件逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "c");
         click(doc_menu);

@@ -93,7 +93,24 @@ public class TestInit extends elementFile {
         userPwd.clear();
         sendKeys(userPwd, pwd);
         click(login_submit);
+
+        gooiest();
+
         wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+    }
+
+    private void gooiest(){
+
+        try {
+            Thread.sleep(2000);
+            WebElement didi = driver.findElement(By.xpath("//button[@class='sm-button sc-etwtAo vghgh sc-gmeYpB NZjlE sc-1n784rm-0 dZqFcX']"));
+            wait.until(ExpectedConditions.elementToBeClickable(didi));
+            didi.click();
+
+        }catch (Exception e){
+            return;
+        }
+
     }
 
     /**
@@ -336,6 +353,10 @@ public class TestInit extends elementFile {
                 driver.switchTo().alert().accept();
             } else if (element.toString().equals(desktop.toString())
                     || element.toString().equals(favorites.toString())) {
+                if(element.toString().equals(favorites.toString())){
+                    wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+                    dashboard.click();
+                }
                 // 点击我的桌面，我的收藏
                 clickDesktop(element);
             } else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
@@ -414,7 +435,7 @@ public class TestInit extends elementFile {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
-            msg = desktop_order.getText();
+            msg = getText(desktop_order);
             if (msg.equals("更新时间")) {
                 desktop_order.click();
                 wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));

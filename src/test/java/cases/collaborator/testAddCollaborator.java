@@ -251,6 +251,8 @@ public class testAddCollaborator extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
         click(addCollaborator_folder_add);
+        moveToElement(menu_cooperation);
+        click(button_addCollaborator);
 
         sendKeys(input_addCollaborator, "11@cc.ccc");
 
@@ -306,8 +308,9 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-07
      */
-    @Test(enabled = true)
-    public void addCollaborator_fail() throws InterruptedException {
+    //Todo 需求变化，当前非席位企业成员，任何情况下都不能新建
+    @Test(enabled = false)
+    public void addCollaborator_fail() {
         login("autoTest10@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);

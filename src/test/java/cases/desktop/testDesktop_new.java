@@ -87,7 +87,7 @@ public class testDesktop_new extends TestInit {
 
         sendKeys(desktop_newFolder_name, time);
         click(desktop_newFolder_name_ok);
-        click(folder_backToDesktop);
+        click(desktop);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -103,16 +103,17 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_import_doc() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
-        WebElement uploadButton = desktop_import;
+        click(desktop_new);
+//        WebElement uploadButton = desktop_import;
 
         String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_doc.doc").getFile()).getPath();
         System.out.println(url);
-        uploadButton.sendKeys(url);
+        desktop_import.sendKeys(url);
 
         Thread.sleep(2000);
         click(b_back);
@@ -132,7 +133,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_import_docx() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
@@ -160,7 +161,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_import_sheet() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
@@ -186,7 +187,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_import_md() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);

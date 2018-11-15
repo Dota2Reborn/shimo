@@ -69,8 +69,9 @@ public class testDesktop_Folder extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
+    //Todo 待开发修复，加入快捷方式排序问题
     @Test
-    public void desktop_folder_setting_2() {
+    public void desktop_folder_setting_2() throws InterruptedException {
         login("autoTest_Folder@shimo.im", "123123");
         click(desktop);
 
@@ -78,7 +79,10 @@ public class testDesktop_Folder extends TestInit {
         click(menu_shortcut);
 
         driver.navigate().refresh();
+        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
+        click(desktop_shortcut);
+        Thread.sleep(500);
         String doc_name = getText(desktop1_1_folder);
 
         contextClick(desktop1_1_folder);
@@ -134,7 +138,7 @@ public class testDesktop_Folder extends TestInit {
         sendKeys(desktop_newFolder_name, "FFFFF");
         click(desktop_newFolder_name_ok);
         // wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
-        click(folder_backToDesktop);
+        click(desktop);
         contextClick(desktop1_1);
         click(menu_move);
         click(desktop_moveFolder_list_2);
@@ -197,8 +201,8 @@ public class testDesktop_Folder extends TestInit {
         click(desktop_setting);
         click(menu_mute);
 
-        Boolean r1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-right']")).getText().contains("已设置为消息免打扰");
-        Boolean r2 = driver.findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-right']")).getText().contains("已设置为接收消息提醒");
+        Boolean r1 = getText(toast_msg).contains("已设置为消息免打扰");
+        Boolean r2 = getText(toast_msg).contains("已设置为接收消息提醒");
 
         assertTrue(r1 || r2);
     }

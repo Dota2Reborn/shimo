@@ -66,8 +66,8 @@ public class dashboard_shared extends TestInit {
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
-        String text = driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
+        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+        String text = getText(desktop1_1);
         assertEquals(text, "共享");
 
 

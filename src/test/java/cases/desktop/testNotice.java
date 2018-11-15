@@ -32,7 +32,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -60,7 +60,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		wait.until(ExpectedConditions.elementToBeClickable(dashboard_notice_list_1));
 
 		String msg1 = getText(dashboard_notice_list_unread);
@@ -94,7 +94,7 @@ public class testNotice extends TestInit {
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -132,7 +132,7 @@ public class testNotice extends TestInit {
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		click(dashboard_notice_list_1);
 		switchToPage(1);
 		String result = getText(By.xpath("//div[@id='root']/div/div[2]/div"));
@@ -158,13 +158,11 @@ public class testNotice extends TestInit {
 		sendKeys(doc_discuss_input, "yoyoyo");
 		action.sendKeys(Keys.ENTER);
 		click(doc_discuss_input_ok);
-//		wait.until(
-//				ExpectedConditions.textToBe(By.className("doc-comment-input-placeholder"), "按enter发送，shift+enter换行"));
 
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
@@ -195,7 +193,7 @@ public class testNotice extends TestInit {
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
-		moveToElement(dashboard_notice);
+		click(dashboard_notice);
 		click(dashboard_notice_list_unread);
 
 		String result = dashboard_notice_list_unread.getAttribute("data-test");

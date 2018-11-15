@@ -16,7 +16,7 @@ public class testProfile extends TestInit {
     @Test
     public void profile_mobile_1() {
         login("liuchen@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
         sendKeys(mobile_setting_input, "13911658584");
@@ -34,7 +34,7 @@ public class testProfile extends TestInit {
     @Test
     public void profile_mobile_2() {
         login("liuchen@shimo.im", "123123");
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
         sendKeys(mobile_setting_input, "13614641612");

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
+//Todo 未通过，文件夹中新建文档，和从文档返回逻辑有问题，待修复
 public class testAuthorityForMoveFile extends TestInit {
 
     /**
@@ -30,7 +31,7 @@ public class testAuthorityForMoveFile extends TestInit {
         click(desktop_moveFolder_list_2);
         click(desktop_moveFolder_button);
 
-        click(folder_backToDesktop);
+        click(desktop);
         click(desktop1_2_folder);
 
         contextClick(desktop1_1);
@@ -93,7 +94,7 @@ public class testAuthorityForMoveFile extends TestInit {
         click(desktop_moveFolder_list_1);
         click(desktop_moveFolder_button);
 
-        click(folder_backToDesktop);
+        click(desktop);
         click(desktop1_1_folder);
 
         contextClick(desktop1_1);

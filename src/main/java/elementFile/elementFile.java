@@ -68,8 +68,6 @@ public class elementFile {
 	public WebElement desktop_newslides;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_position", noteName = "当前桌面所处页面")
-	public WebElement desktop_position;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
 	public WebElement desktop_import;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name", noteName = "文件夹命名")
@@ -78,6 +76,8 @@ public class elementFile {
 	public WebElement desktop_newFolder_name_cancel;
 	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
 	public WebElement desktop_setting;
+	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut", noteName = "桌面快捷方式入口")
+	public WebElement desktop_shortcut;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1", noteName = "桌面快捷方式第一个")
 	public WebElement desktop_shortcut_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Increase", noteName = "新增桌面快捷方式区域")
@@ -102,8 +102,8 @@ public class elementFile {
 	public WebElement desktop1_1_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP_Hook", noteName = "桌面排序-文件夹置顶-对钩")
 	public WebElement desktop_orderByFolderUP_Hook;
-	@SearchWith(pageName = "desktop", elementName = "folder_backToDesktop", noteName = "文件夹中，点击文件路径返回我的桌面")
-	public WebElement folder_backToDesktop;
+	@SearchWith(pageName = "desktop", elementName = "toast_msg", noteName = "桌面toast提示信息")
+	public WebElement toast_msg;
 
 	/**
 	 * doc
@@ -164,18 +164,12 @@ public class elementFile {
 	public WebElement dashboard_update_file;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_name", noteName = "工作台-最近更新-文件名")
 	public WebElement dashboard_update_name;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_1", noteName = "新的共享-大标签-更新时间")
-	public WebElement dashboard_shareTime_1;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_shareTime_unread", noteName = "新的共享-大标签-标记已读")
-	public WebElement dashboard_shareTime_unread;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_1", noteName = "工作台第一行第一个文件")
 	public WebElement dashboard_share_file_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_favorites", noteName = "工作台第一行第一个文件收藏按钮")
 	public WebElement dashboard_share_file_favorites;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_2", noteName = "工作台第一行第二个文件")
 	public WebElement dashboard_share_file_2;
-	@SearchWith(pageName = "dashboard", elementName = "New_Share_1", noteName = "新的共享第一个")
-	public WebElement New_Share_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_1", noteName = "工作台-最近更新")
 	public WebElement dashboard_1;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_2", noteName = "工作台-最近使用")
@@ -211,15 +205,15 @@ public class elementFile {
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_notice_list_allRead", noteName = "桌面通知铃铛-标记全部已读")
 	public WebElement dashboard_notice_list_allRead;
 	
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon", noteName = "桌面-右上角头像")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon", noteName = "桌面-左上角头像")
 	public WebElement desktop_user_icon;
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement", noteName = "桌面-右上角头像-我的企业")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_companyManagement", noteName = "桌面-左上角头像-我的企业")
 	public WebElement desktop_user_icon_companyManagement;
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_personSetting", noteName = "桌面-右上角头像-账号设置")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_personSetting", noteName = "桌面-左上角头像-账号设置")
 	public WebElement desktop_user_icon_personSetting;
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_L", noteName = "桌面-右上角头像-当前账号状态-左边，如高级版，购买企业版")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_L", noteName = "桌面-左上角头像-当前账号状态-左边，如高级版，购买企业版")
 	public WebElement desktop_user_icon_status_L;
-	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_R", noteName = "桌面-右上角头像-当前账号状态-右边，如企业版过期，企业试用中，企业名称等")
+	@SearchWith(pageName = "dashboard", elementName = "desktop_user_icon_status_R", noteName = "桌面-左上角头像-当前账号状态-右边，如企业版过期，企业试用中，企业名称等")
 	public WebElement desktop_user_icon_status_R;
 	
 	/**
@@ -269,7 +263,7 @@ public class elementFile {
 	public WebElement collaborator_2_list_emailOrMobile;
 	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
 	public WebElement collaborator_3_list_emailOrMobile;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内右侧(加号)添加协作人按钮")
+	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内,文件夹路径上的设置按钮")
 	public WebElement addCollaborator_folder_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
 	public WebElement button_addCollaborator;

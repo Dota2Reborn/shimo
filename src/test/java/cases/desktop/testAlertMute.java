@@ -49,7 +49,7 @@ public class testAlertMute extends TestInit {
 //        doc_discuss_input_ok.click();
         logout();
         login("AlertMute@shimo.im", "123123");
-        moveToElement(dashboard_notice);
+        click(dashboard_notice);
         //String time2 = getText(dashboard_notice_list_1_time);
         wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
         String time2 = dashboard_notice_list_1_time.getText();
@@ -180,7 +180,7 @@ public class testAlertMute extends TestInit {
         click(menu_mute);
         driver.navigate().refresh();
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        Boolean exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]//*[name()='svg']"));
+        Boolean exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
         int i = 0;
 
         if (exist1 == true) {
@@ -188,7 +188,7 @@ public class testAlertMute extends TestInit {
             click(menu_mute);
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]//*[name()='svg']"));
+            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
             i = 1;
             assertFalse(exist2);
 
@@ -197,7 +197,7 @@ public class testAlertMute extends TestInit {
             click(menu_mute);
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]//*[name()='svg']"));
+            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
             i = 2;
             assertTrue(exist2);
         }
@@ -205,7 +205,7 @@ public class testAlertMute extends TestInit {
         click(menu_mute);
         driver.navigate().refresh();
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]//*[name()='svg']"));
+        exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
         if (i == 1) {
             assertTrue(exist1);
         } else if (i == 2) {

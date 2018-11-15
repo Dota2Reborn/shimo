@@ -32,7 +32,7 @@ public class testCompanyManagement_1 extends TestInit {
         logout();
         login("autoTest_company_3@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         click(addMember);
 
@@ -61,7 +61,7 @@ public class testCompanyManagement_1 extends TestInit {
         logout();
         login("autoTest_company_3@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         click(addMember);
         wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -89,7 +89,7 @@ public class testCompanyManagement_1 extends TestInit {
         logout();
         login("autoTest_company_2@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         click(addMember);
         wait.until(ExpectedConditions.elementToBeClickable(message_ok));
@@ -144,7 +144,7 @@ public class testCompanyManagement_1 extends TestInit {
         logout();
         login("autoTest_company_2@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         wait.until(ExpectedConditions.elementToBeClickable(addMember));
 
@@ -169,7 +169,7 @@ public class testCompanyManagement_1 extends TestInit {
         text = driver.findElement(By.xpath(jj)).getText();
         System.out.println(text);
 
-        assertEquals("移除成员", text);
+        assertEquals("设置为席位成员", text);
     }
 
     /**
@@ -191,7 +191,7 @@ public class testCompanyManagement_1 extends TestInit {
         logout();
         login("autoTest_company_2@shimo.im", "123123");
 
-        moveToElement(desktop_user_icon);
+        click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
         wait.until(ExpectedConditions.elementToBeClickable(addMember));
 

@@ -6,43 +6,43 @@
 			{
 				"elementName": "dashboard",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//a[1]",
+				"locator": "//a[starts-with(@class,'light dashboard')]",
 				"note": "切换到工作台"
 			},
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//a[3]",
+				"locator": "//a[starts-with(@class,'favorites')]",
 				"note": "切换到我的收藏"
 			},
 			{
 				"elementName": "trash",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//a[4]",
+				"locator": "//a[starts-with(@class,'light trash')]",
 				"note": "切换到回收站"
 			},
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='nav-wrap']//div[1]",
+				"locator": "//a[starts-with(@class,'updated')]",
 				"note": "工作台-最近更新"
 			},
 			{
 				"elementName": "dashboard_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='nav-wrap']//div[2]",
+				"locator": "//a[starts-with(@class,'used')]",
 				"note": "工作台-最近使用"
 			},
 			{
 				"elementName": "dashboard_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='nav-wrap']//div[3]",
+				"locator": "//a[starts-with(@class,'owned')]",
 				"note": "工作台-我创建的"
 			},
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='nav-wrap']//div[4]",
+				"locator": "//a[starts-with(@class,'shared')]",
 				"note": "工作台-共享给我的"
 			},
 			{
@@ -82,24 +82,6 @@
 				"note": "工作台第二个文件"
 			},
 			{
-				"elementName": "New_Share_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='share-list-wrapper']//div[2]//div[1]//div[1]//a[1]",
-				"note": "工作台-新的共享-第一个文件"
-			},
-			{
-				"elementName": "dashboard_shareTime_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='card-header']//div[@class='update-time']",
-				"note": "新的共享-大标签-更新时间"
-			},
-			{
-				"elementName": "dashboard_shareTime_unread",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='card-header']//div[@class='unread']",
-				"note": "新的共享-大标签-标记已读"
-			},
-			{
 				"elementName": "dashboard_search_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='search-button']",
@@ -126,7 +108,7 @@
 			{
 				"elementName": "dashboard_notice",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='header']//div//div[last()-1]/*[name()='svg']",
+				"locator": "//div[starts-with(@class,'light sm-notification')]",
 				"note": "桌面通知铃铛"
 			},
 			{
@@ -168,8 +150,8 @@
 			{
 				"elementName": "desktop_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='header']//div//div//img",
-				"note": "桌面-右上角头像"
+				"locator": "//div[starts-with(@class,'light sm-user-menu')]",
+				"note": "桌面-左上角头像"
 			},
 			{
 				"elementName": "desktop_user_icon_status_L",
@@ -277,43 +259,43 @@
 			{
 				"elementName": "desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//a[2]",
+				"locator": "//a[starts-with(@class,'light desktop')]",
 				"note": "切换到我的桌面"
 			},
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "//button[@data-test='create-file']",
+				"locator": "//span[contains(text(),'新建')]",
 				"note": "新建文件按钮"
 			},
 			{
 				"elementName": "desktop_import",
 				"locateUsing": "xpath",
-				"locator": "//input[@data-test='import-file']",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-import')]",
 				"note": "导入"
 			},
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-doc']",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_doc')]",
 				"note": "新建文档"
 			},
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-sheet']",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_sheet')]",
 				"note": "新建表格"
 			},
 			{
 				"elementName": "desktop_newslides",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-slide']",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_slide')]",
 				"note": "新建幻灯片"
 			},
 			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-folder']",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_folder')]",
 				"note": "新建文件夹"
 			},
 			{
@@ -337,49 +319,49 @@
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner'])[1]",
+				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='title'])[1]",
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
 				"elementName": "desktop1_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner'])[2]",
+				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='title'])[2]",
 				"note": "平铺模式第一行第二个文件"
 			},
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')]",
+				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][2]",
+				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//div[1]//div[contains(@class,'folder-tile')][3]",
+				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
 				"elementName": "desktop_list_1_file",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[1]//div//a//div[3]//div",
+				"locator": "(//div[@class='finder-grid-row']//div[@class='file-name'])[1]",
 				"note": "列表模式第一个文件"
 			},
 			{
 				"elementName": "desktop_list_2_file",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[2]//div//a//div[3]//div",
+				"locator": "(//div[@class='finder-grid-row']//div[@class='file-name'])[2]",
 				"note": "列表模式第二个文件"
 			},
 						{
 				"elementName": "desktop_list_3_file",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']//li[3]//div//a//div[3]//div",
+				"locator": "(//div[@class='finder-grid-row']//div[@class='file-name'])[3]",
 				"note": "列表模式第三个文件"
 			},
 			{
@@ -387,6 +369,12 @@
 				"locateUsing": "className",
 				"locator": "settings-btn",
 				"note": "hover文件的齿轮"
+			},
+			{
+				"elementName": "desktop_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//span[starts-with(@class,'light shortcut')]",
+				"note": "桌面快捷方式入口"
 			},
 			{
 				"elementName": "desktop_shortcut_1",
@@ -445,7 +433,7 @@
 			{
 				"elementName": "desktop_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='actions']//div[1]",
+				"locator": "//div[@class='actions']/div[1]",
 				"note": "桌面排序"
 			},
 			{
@@ -457,13 +445,13 @@
 			{
 				"elementName": "desktop_orderHeader_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filelist-table-header']//div[2]",
+				"locator": "//div[@id='filelist-table-header']//div[@class='flex-right']//div[1]",
 				"note": "表头所有者排序"
 			},
 			{
 				"elementName": "desktop_orderHeader_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='filelist-table-header']//div[3]",
+				"locator": "//div[@id='filelist-table-header']//div[@class='flex-right']//div[2]",
 				"note": "表头时间排序"
 			},
 			{
@@ -475,13 +463,13 @@
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//ul//li[1]",
+				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[1]",
 				"note": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//ul//li[2]",
+				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[2]",
 				"note": "移动文件到文件夹，选择列表中第二个文件夹"
 			},
 			{
@@ -493,13 +481,13 @@
 			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[2]//div//button",
+				"locator": "//div[@class='sm-modal-body']//button[1]",
 				"note": "移动到测试文件夹"
 			},
 			{
 				"elementName": "desktop1_1_name",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tile-inner']//div//a//div[@class='title']",
+				"locator": "//div[@class='tile-inner is-selectable']//div//a//div[@class='title']",
 				"note": "平铺模式第一行第一个文件名称"
 			},
 			{
@@ -508,18 +496,12 @@
 				"locator": "//span[@data-test='change-table-sort-folder-priority']/following-sibling::div[1]",
 				"note": "桌面排序-文件夹置顶-对钩"
 			},
-			{
-				"elementName": "desktop_position",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='list-crumb']/span",
-				"note": "当前桌面所处页面"
-			},
-			{
-				"elementName": "folder_backToDesktop",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='list-crumb']//span//a[contains(text(),'我的桌面')]",
-				"note": "文件夹中，点击文件路径返回我的桌面"
-			}
+          {
+            "elementName": "toast_msg",
+            "locateUsing": "xpath",
+            "locator": "//div[@class='Toastify__toast-body']",
+            "note": "桌面toast提示信息"
+          }
 		]
 	},
 	{
@@ -648,9 +630,9 @@
 			},
 			{
 				"elementName": "addCollaborator_folder_add",
-				"locateUsing": "xpath",
-				"locator": "//div[@id='main']//div[1]//div[2]//div//div[2]//ul//span",
-				"note": "文件夹内右侧(加号)添加协作人按钮"
+				"locateUsing": "className",
+				"locator": "settings",
+				"note": "文件夹内,文件夹路径上的设置按钮"
 			},
 			{
 				"elementName": "addCollaborator_1_add",
@@ -850,7 +832,7 @@
 			{
 				"elementName": "company_Management",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='left-sidebar']//div//a[2]",
+				"locator": "//a[starts-with(@class,'light enterprise')]",
 				"note": "桌面-企业管理入口"
 			},
 			{
@@ -2168,7 +2150,7 @@
 				"locateUsing": "xpath",
 				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
 				"note": "删除幻灯片"
-			},
+			}
 		]
 	},
 	{

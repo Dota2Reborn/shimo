@@ -47,6 +47,9 @@ public class baseFunc {
 
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
+                option.addArguments("start-maximized");
+                option.addArguments("allow-running-insecure-content");
+                option.addArguments("--test-type");
 //				option.addArguments("--headless");
                 driver = new ChromeDriver(option);
             } else if (os.startsWith("Windows") && browser.equals("firefox")) {
@@ -104,6 +107,10 @@ public class baseFunc {
                 option.setCapability("browserName", "chrome");
                 option.setCapability("version", "70");
                 option.setCapability("plaform", "ANY");
+//                option.addArguments("start-fullscreen");  //全屏
+                option.addArguments("start-maximized");  //浏览器最大化
+                option.addArguments("allow-running-insecure-content");
+                option.addArguments("--test-type");
                 URL remoteAddress = new URL(nodeIp + "/wd/hub");
                 driver = new RemoteWebDriver(remoteAddress, option);
             }

@@ -62,6 +62,7 @@ public class testDashboard extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
+        //Todo 等开发修复新建逻辑
         sendKeys(doc_title_input, time);
         click(b_back);
         click(dashboard_3);
@@ -96,9 +97,6 @@ public class testDashboard extends TestInit {
         logout();
         login("autoTest07@shimo.im", "123123");
 
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard_shareTime_1));
-        moveToElement(dashboard_shareTime_1);
-        click(dashboard_shareTime_unread);
         click(dashboard_4);
         contextClick(dashboard_share_file_1);
         click(menu_delete);
