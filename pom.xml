@@ -68,7 +68,7 @@
                 <version>2.5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>
                         <!--此处testng.xml即为要运行的testng.xml文件-->
                     </suiteXmlFiles>
                     <workingDirectory>target/</workingDirectory>
