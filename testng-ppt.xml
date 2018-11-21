@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="shimo" parallel="tests" thread-count="4">
+	<listeners>
+		<listener class-name="testNG.RetryListener"></listener>
+		<listener class-name="testNG.TestListener"></listener>
+	</listeners>
+	<parameter name="browser" value="chrome" />
+	<parameter name="nodeIp" value="http://localhost:4444" />
+	<parameter name="local" value="false" />
+	<test name="test1">
+		<classes>
+			<class name="cases.ppt.testShapeArrow" />
+			<class name="cases.ppt.testShapeRectangle" />
+			<class name="cases.ppt.testShapeRound" />
+		</classes>
+	</test>
+	<test name="test2">
+		<classes>
+			<class name="cases.ppt.testGlobalOther" />
+		</classes>
+	</test>
+	<test name="test3">
+		<classes>
+			<class name="cases.ppt.testGlobalPage" />
+		</classes>
+	</test>
+</suite>
