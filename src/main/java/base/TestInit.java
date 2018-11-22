@@ -32,14 +32,19 @@ public class TestInit extends elementFile {
 
     }
 
-    @Parameters({"browser", "nodeIp", "local"})
+    @Parameters({"browser", "nodeIp", "local", "testURL"})
     @BeforeClass
-    public void firstMethod(String browser, String nodeIp, String local) throws MalformedURLException {
+    public void firstMethod(String browser, String nodeIp, String local, String testURL) throws MalformedURLException {
+
         test_url = baseURL.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);
-
-        String urlWithCookie = baseURL.getUrlWithCookie();
+        String urlWithCookie;//set cookies
+        if(local.equals("true")){
+            urlWithCookie = baseURL.getUrlWithCookie();
+        }else{
+            urlWithCookie = testURL;
+        }
         if(!urlWithCookie.isEmpty()){
             driver.navigate().to(urlWithCookie);
         }
