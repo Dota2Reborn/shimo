@@ -8,6 +8,7 @@
 	<parameter name="browser" value="${browserName}" />
 	<parameter name="nodeIp" value="http://localhost:4444" />
 	<parameter name="local" value="false" />
+	<parameter name="testURL" value="${testURL}" />
 	<test name="test1">
 		<classes>
 			<class name="cases.dashboard.dashboard_own" />
