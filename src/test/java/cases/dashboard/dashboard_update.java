@@ -175,7 +175,6 @@ public class dashboard_update extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
-        //Todo 等开发修复新建文件逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "la");
         click(b_back);
@@ -247,7 +246,6 @@ public class dashboard_update extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
-        //Todo 等开发修复新建文件逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "c");
         click(doc_menu);
@@ -257,6 +255,7 @@ public class dashboard_update extends TestInit {
         click(trash);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
         driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
+        //todo 回收站存在bug，待修复
         click(menu_Recovery);
         click(dashboard);
 

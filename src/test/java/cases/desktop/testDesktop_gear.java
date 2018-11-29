@@ -50,10 +50,10 @@ public class testDesktop_gear extends TestInit {
         click(menu_shortcut);
 
         driver.navigate().refresh();
-        click(desktop_shortcut);
+//        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
-        click(desktop_shortcut);
-        Thread.sleep(500);
+//        click(desktop_shortcut);
+//        Thread.sleep(500);
         String doc_name = getText(desktop1_1);
 
         contextClick(desktop1_1);

@@ -38,7 +38,7 @@ public class testNotice extends TestInit {
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		String url = driver.getCurrentUrl();
-		assertTrue(url.startsWith(getURL()+"docs/MQHNJBqnsUQUPuYV"));
+		assertTrue(url.startsWith(getURL()+"docs/xYJJ2iz37uAhYVe9"));
 	}
 
 	/**
@@ -178,6 +178,7 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
+	//todo 待小洋添加未读/已读 属性
 	@Test(enabled = true)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");

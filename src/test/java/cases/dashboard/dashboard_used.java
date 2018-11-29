@@ -25,10 +25,9 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
                 .click();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='tile-inner']//div//a//div[2]")));
-        String text = driver.findElement(By.xpath("//div[@class='tile-inner']//div//a//div[2]")).getText();
+        String text = getText(desktop1_1);
         assertEquals(text, "最近使用");
 
         click(dashboard);
@@ -37,7 +36,7 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
                 .click();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
@@ -56,9 +55,7 @@ public class dashboard_used extends TestInit {
         login("zuijin7@shimo.im", "123123");
         click(dashboard_2);
 
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
-        WebElement icon = driver.findElement(By.xpath("//div[@class='file-options-icon']"));
-        icon.click();
+        click(menu_Point_Menu);
         boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
         boolean text2 = getText(menu_mute).equals("消息免打扰");
         boolean text3 = getText(menu_shortcut).equals("添加到快捷方式");

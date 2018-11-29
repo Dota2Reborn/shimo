@@ -121,7 +121,7 @@ public class testDesktop_remove extends TestInit {
 	@Test
 	public void desktop_removeCollaboration() throws InterruptedException {
 		removeCollaboration("cuimingliang@shimo.im");
-		removeCollaboration("joker@shimo.im");
+//		removeCollaboration("joker@shimo.im");
 	}
 	
 	public void removeCollaboration(String authority) throws InterruptedException {

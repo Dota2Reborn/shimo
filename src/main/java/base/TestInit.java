@@ -356,13 +356,12 @@ public class TestInit extends elementFile {
                         .invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
                 element.click();
                 driver.switchTo().alert().accept();
-            } else if (element.toString().equals(desktop.toString())
-                    || element.toString().equals(favorites.toString())) {
-                if(element.toString().equals(favorites.toString())){
-                    wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-                    dashboard.click();
-                }
-                // 点击我的桌面，我的收藏
+            } else if (element.toString().equals(desktop.toString())) {
+//                if(element.toString().equals(favorites.toString())){
+//                    wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+//                    dashboard.click();
+//                }
+                // 点击我的桌面
                 clickDesktop(element);
             } else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
                 // 点击添加协作者

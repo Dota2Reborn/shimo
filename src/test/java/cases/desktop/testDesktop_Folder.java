@@ -78,11 +78,11 @@ public class testDesktop_Folder extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_shortcut);
 
-        driver.navigate().refresh();
-        click(desktop_shortcut);
+//        driver.navigate().refresh();
+//        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
-        click(desktop_shortcut);
-        Thread.sleep(500);
+//        click(desktop_shortcut);
+//        Thread.sleep(500);
         String doc_name = getText(desktop1_1_folder);
 
         contextClick(desktop1_1_folder);

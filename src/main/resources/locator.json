@@ -12,7 +12,7 @@
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'favorites')]",
+				"locator": "//a[starts-with(@class,'light favorites')]",
 				"note": "切换到我的收藏"
 			},
 			{
@@ -24,25 +24,25 @@
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'updated')]",
+				"locator": "//div[@data-test='category-list-wrapper']/div/a[1]",
 				"note": "工作台-最近更新"
 			},
 			{
 				"elementName": "dashboard_2",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'used')]",
+				"locator": "//div[@data-test='category-list-wrapper']/div/a[2]",
 				"note": "工作台-最近使用"
 			},
 			{
 				"elementName": "dashboard_3",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'owned')]",
+				"locator": "//div[@data-test='category-list-wrapper']/div/a[3]",
 				"note": "工作台-我创建的"
 			},
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'shared')]",
+				"locator": "//div[@data-test='category-list-wrapper']/div/a[4]",
 				"note": "工作台-共享给我的"
 			},
 			{
@@ -108,7 +108,7 @@
 			{
 				"elementName": "dashboard_notice",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'light sm-notification')]",
+				"locator": "//div[@data-test='notification-icon']",
 				"note": "桌面通知铃铛"
 			},
 			{
@@ -138,7 +138,7 @@
 			{
 				"elementName": "dashboard_notice_list_unread",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-container']//div[1]//div[1]//div[2]//span",
+				"locator": "//div[@data-test='notification-container']/div/div/div[2]",
 				"note": "桌面通知铃铛-未读"
 			},
 			{
@@ -150,8 +150,8 @@
 			{
 				"elementName": "desktop_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'light sm-user-menu')]",
-				"note": "桌面-左上角头像"
+				"locator": "//img[@data-test='account-icon']",
+				"note": "桌面-右上角头像"
 			},
 			{
 				"elementName": "desktop_user_icon_status_L",
@@ -265,13 +265,13 @@
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "//span[contains(text(),'新建')]",
+				"locator": "//div[@data-test='create-file']//div[@class='btn-index-fix']",
 				"note": "新建文件按钮"
 			},
 			{
 				"elementName": "desktop_import",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-import')]",
+				"locator": "//input[@data-test='import-file']",
 				"note": "导入"
 			},
 			{
@@ -331,19 +331,19 @@
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[1]",
+				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[2]",
+				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='file-icon folder'])[3]",
+				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
@@ -475,7 +475,7 @@
 			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']/*[name()='svg']",
+				"locator": "//span[@class='rc-tree-title']/div",
 				"note": "移动文件到文件夹，列表中后退按钮"
 			},
 			{
@@ -838,19 +838,19 @@
 			{
 				"elementName": "member_management",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[1]",
+				"locator": "//div[@class='tab-nav']//a[2]",
 				"note": "企业管理-成员管理"
 			},
 			{
 				"elementName": "company_setting",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[2]",
+				"locator": "//div[@class='tab-nav']//a[3]",
 				"note": "企业管理-企业设置"
 			},
 			{
 				"elementName": "pay_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[3]",
+				"locator": "//div[@class='tab-nav']//a[1]",
 				"note": "企业管理-支付与订单"
 			},
 			{

@@ -197,11 +197,12 @@ public class testRemoveCollaborator extends TestInit {
 //    }
 
     @Test
-    public void Remove_7() {
+    public void Remove_7() throws InterruptedException {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_2_folder);
         moveToElement(menu_cooperation);
+        Thread.sleep(500);
         String t = b_addCollaborator_3_list.getAttribute("disabled");
         assertEquals(t, "true");
 
