@@ -1,6 +1,7 @@
 package base;
 
 import com.google.common.base.Preconditions;
+import elementFile.ByGenerator;
 import elementFile.CustomFieldDecorator;
 import elementFile.MyElementLocatorFactory;
 import org.apache.commons.lang.StringUtils;
@@ -19,6 +20,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.FieldDecorator;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -42,8 +44,10 @@ public class baseFunc {
             os = System.getProperties().getProperty("os.name");
             Preconditions.checkArgument(StringUtils.isNotEmpty(os), "OS info is missing.");
             if (os.startsWith("Windows") && browser.equals("chrome")) {
+//                System.setProperty("webdriver.chrome.driver",
+//                        "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
                 System.setProperty("webdriver.chrome.driver",
-                        "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+                        new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriver.exe").getFile()).getPath());
 
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
