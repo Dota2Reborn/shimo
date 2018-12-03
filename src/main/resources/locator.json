@@ -277,7 +277,7 @@
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_doc')]",
+				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left')]/li[1]",
 				"note": "新建文档"
 			},
 			{

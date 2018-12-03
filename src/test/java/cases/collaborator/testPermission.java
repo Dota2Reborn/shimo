@@ -17,30 +17,21 @@ public class testPermission extends TestInit {
     @Test(enabled = true)
     public void Add_to1() {
         login("testing_1@test.im", "123123");
-        // desktop.click();
-        // Sort();
         click(desktop);
         // 右键第一个文件
         contextClick(desktop1_1);
         moveToElement(menu_cooperation);
-        // Add("testing_2@test.im");
 
         sendKeys(input_addCollaborator, "testing_6@test.im");
         click(b_addCollaborator_1_add);
-//		click(list_addCollaborator_4);
 
         Modify(2, 2);
         click(Shut_down_sm_modal_close_x);
         logout();
         login("testing_6@test.im", "123123");
-        // wait.until(ExpectedConditions.elementToBeClickable(desktop));
-        // desktop.click();
-        // Sort();
         click(desktop);
         click(desktop1_1_folder);
         click(desktop1_1);
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='ql-container']//div[1]//p")));
-//        driver.findElement(By.xpath("//div[@id='ql-container']//div[1]//p")).click();
         click(doc_edit);
         click(ql_comment_Comments);
         wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input));
@@ -75,10 +66,12 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
 
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        //Todo 只读情况下，新建按钮应该置灰，待开发修复
-        String t = desktop_new.getAttribute("disabled");
+        wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
+        click(desktop_new);
+        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
+        String t = desktop_newDoc.getAttribute("aria-disabled");
         assertEquals(t, "true");
+
         click(desktop);
         contextClick(desktop1_1);
         click(menu_delete);
