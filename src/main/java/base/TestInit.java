@@ -291,7 +291,6 @@ public class TestInit extends elementFile {
         try {
             return element.isDisplayed();
         } catch (NoSuchElementException e) {
-            // TODO
             return false;
         }
     }
@@ -307,7 +306,6 @@ public class TestInit extends elementFile {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             action.contextClick(element).perform();
         } catch (NoSuchElementException e) {
-            // TODO
             System.out.println(element + "is missing");
         }
 
@@ -332,7 +330,6 @@ public class TestInit extends elementFile {
             }
 
         } catch (NoSuchElementException e) {
-            // TODO
             System.out.println(element + "is missing");
         }
 
@@ -376,7 +373,6 @@ public class TestInit extends elementFile {
                 element.click();
             }
         } catch (NoSuchElementException e) {
-            // TODO
             System.out.println(element + "is missing");
             assertTrue(false);
         } catch (ElementClickInterceptedException e) {
@@ -407,7 +403,6 @@ public class TestInit extends elementFile {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
             checkPageIsReady();
@@ -471,7 +466,6 @@ public class TestInit extends elementFile {
             wait.until(ExpectedConditions.visibilityOf(element));
             msg = element.getText();
         } catch (NoSuchElementException e) {
-            // TODO
             System.out.println(element + "is missing");
         }
         return msg;
@@ -489,7 +483,6 @@ public class TestInit extends elementFile {
             wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             msg = driver.findElement(element).getText();
         } catch (NoSuchElementException e) {
-            // TODO
             System.out.println(element + "is missing");
         }
         return msg;
@@ -562,7 +555,6 @@ public class TestInit extends elementFile {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         String className = new Exception().getStackTrace()[1].getMethodName();

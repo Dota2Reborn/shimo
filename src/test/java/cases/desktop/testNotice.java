@@ -178,7 +178,6 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
-	//todo 待小洋添加未读/已读 属性
 	@Test(enabled = true)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");

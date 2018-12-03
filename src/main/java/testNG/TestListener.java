@@ -31,11 +31,9 @@ public class TestListener implements ITestListener {
 	// Following are all the method stubs that you do not have to implement
 
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
 		String className = result.getMethod().getRealClass().toString();
 		if(!className.startsWith("class ui.test")) {
 			TestInit tb = (TestInit) result.getInstance();
@@ -55,14 +53,11 @@ public class TestListener implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
 	}
 
 	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
 	}
 } // ends the class

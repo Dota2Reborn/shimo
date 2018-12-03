@@ -255,7 +255,6 @@ public class dashboard_update extends TestInit {
         click(trash);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
         driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
-        //todo 回收站存在bug，待修复
         click(menu_Recovery);
         click(dashboard);
 

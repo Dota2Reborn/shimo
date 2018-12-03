@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-//Todo 未通过，文件夹中新建文档，和从文档返回逻辑有问题，待修复
 public class testAuthorityForMoveFile extends TestInit {
 
     /**

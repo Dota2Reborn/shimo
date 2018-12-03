@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-//Todo 新建文件不应该打开新的标签，待开发修复
 public class testTransferOwner extends TestInit {
 
     /**

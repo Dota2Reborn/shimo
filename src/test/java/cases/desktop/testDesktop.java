@@ -39,7 +39,6 @@ public class testDesktop extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    //Todo 添加快捷方式，快捷方式应该在快捷方式列表中第一行，待开发修复
     @Test
     public void desktop_doc_setting_2() throws InterruptedException {
         login("autoTest@shimo.im", "123123");

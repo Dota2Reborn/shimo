@@ -69,7 +69,6 @@ public class testDesktop_Folder extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    //Todo 待开发修复，加入快捷方式排序问题
     @Test
     public void desktop_folder_setting_2() throws InterruptedException {
         login("autoTest_Folder@shimo.im", "123123");

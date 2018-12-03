@@ -77,7 +77,6 @@ public class dashboard_own extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
-        //Todo 等待开发修复新建逻辑
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "la");
         click(b_back);

@@ -62,7 +62,6 @@ public class testDashboard extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         String time = getDate();
-        //Todo 等开发修复新建逻辑
         sendKeys(doc_title_input, time);
         click(b_back);
         click(dashboard_3);

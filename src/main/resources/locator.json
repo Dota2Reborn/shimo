@@ -84,7 +84,7 @@
 			{
 				"elementName": "dashboard_search_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='search-button']",
+				"locator": "//div[@class='right']//i",
 				"note": "桌面搜索按钮"
 			},
 			{
@@ -132,13 +132,13 @@
 			{
 				"elementName": "dashboard_notice_list_allNotice",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[1]",
+				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[1]/span",
 				"note": "桌面通知铃铛-全部通知"
 			},
 			{
 				"elementName": "dashboard_notice_list_unread",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-container']/div/div/div[2]",
+				"locator": "//div[@data-test='notification-container']/div/div/div[2]/span",
 				"note": "桌面通知铃铛-未读"
 			},
 			{

@@ -16,7 +16,6 @@ public class testCollection extends TestInit {
      * @author 王继程
      * @Time 2018-03-12
      */
-    //Todo 当前新建打开新标签，待修复
     @Test(enabled = true)
     public void New_Document() throws InterruptedException {
         login("New_collection@shimo.im", "123123");
@@ -43,7 +42,6 @@ public class testCollection extends TestInit {
      * @author 王继程
      * @Time 2018-03-12
      */
-    //Todo 当前新建打开新标签，待修复
     @Test(enabled = true)
     public void Create_Table() throws InterruptedException {
         login("New_collection@shimo.im", "123123");
