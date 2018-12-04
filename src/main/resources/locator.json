@@ -2196,6 +2196,42 @@
 		]
 	},
 	{
+		"note": "协作空间",
+		"pageName": "Collaborative space",
+		"elements": [
+			{
+				"elementName": "b_newSpace",
+				"locateUsing": "xpath",
+				"locator": "//span[@class='icon sm-add-space']",
+				"note": "绑定手机号按钮"
+			},
+            {
+              "elementName": "i_newSpace_inputPaceName",
+              "locateUsing": "xpath",
+              "locator": "//input[@class='name']",
+              "note": "新建协作空间，空间明输入框"
+            },
+            {
+              "elementName": "b_newSpace_next",
+              "locateUsing": "xpath",
+              "locator": "//button[starts-with(@class,'sm-button m-create-ok')]",
+              "note": "新建协作空间，下一步按钮"
+            },
+            {
+              "elementName": "b_newSpace_cancel",
+              "locateUsing": "xpath",
+              "locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
+              "note": "新建协作空间，取消按钮"
+            },
+            {
+              "elementName": "b_collaborativeSpaceList",
+              "locateUsing": "xpath",
+              "locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
+              "note": "新建协作空间，下一步按钮"
+            }
+		]
+	},
+	{
 		"pageName": "--------------------------------------------------------------------",
 		"test":"123123123123123"
 	}
