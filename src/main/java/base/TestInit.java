@@ -411,7 +411,7 @@ public class TestInit extends elementFile {
 
     public void addCollaborator(WebElement element) {
         String msg = getText(element);
-        if (msg.equals("添加")) {
+        if (msg.equals("添加") || msg.equals("邀请")) {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
         } else {
