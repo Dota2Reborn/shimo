@@ -225,8 +225,8 @@ public class dashboard_update extends TestInit {
 
         logout();
         login("gengxin12@shimo.im", "123123");
-        click(dashboard_3);
-        contextClick(dashboard_update_name);
+        click(desktop);
+        contextClick(desktop1_1);
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);

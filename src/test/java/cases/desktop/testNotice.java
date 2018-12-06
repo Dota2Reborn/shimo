@@ -29,6 +29,7 @@ public class testNotice extends TestInit {
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12");
 		click(doc_notice_user);
+		String url1 = driver.getCurrentUrl();
 		click(b_back);
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -37,8 +38,8 @@ public class testNotice extends TestInit {
 
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
-		String url = driver.getCurrentUrl();
-		assertTrue(url.startsWith(getURL()+"docs/xYJJ2iz37uAhYVe9"));
+		String url2 = driver.getCurrentUrl();
+		assertTrue(url1.equalsIgnoreCase(url2));
 	}
 
 	/**
