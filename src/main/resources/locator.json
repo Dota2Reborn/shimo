@@ -1227,6 +1227,154 @@
 			}
 		]
 	},
+
+	{
+		"note": "PPT_header",
+		"pageName": "PPT_header",
+		"elements": [
+			{
+				"elementName": "ppt_return",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']/button[1]",
+				"note": "幻灯片内返回"
+			},
+			{
+				"elementName": "ppt_down",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"note": "幻灯片内下箭头"
+			},
+			{
+				"elementName": "ppt_plus_sign",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']/div[1]",
+				"note": "幻灯片中加号"
+			},
+			{
+				"elementName": "ppt_filename",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//div[2]",
+				"note": "幻灯片标题"
+			},
+			{
+				"elementName": "ppt_collect",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"note": "收藏标签"
+			},
+			{
+				"elementName": "ppt_comment",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/span[1]",
+				"note": "幻灯片讨论"
+			},
+			{
+				"elementName": "ppt_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/button[1]",
+				"note": "播放幻灯片"
+			},
+			{
+				"elementName": "ppt_online_broadcast",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
+				"note": "在线演示"
+			},
+			{
+				"elementName": "ppt_cooperation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "ppt_share",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"note": "分享"
+			},
+			{
+				"elementName": "ppt_dotdotdot",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"note": "左上角点点点"
+			},
+			{
+				"elementName": "ppt_shortcut",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[1]",
+				"note": "快捷方式设置"
+			},
+			{
+				"elementName": "ppt_news",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[2]",
+				"note": "消息设置"
+			},
+			{
+				"elementName": "ppt_collection",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
+				"note": "收藏&取消收藏"
+			},
+			{
+				"elementName": "ppt_move",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[5]",
+				"note": "移动"
+			},
+			{
+				"elementName": "ppt_now_copy",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[6]",
+				"note": "创建副本"
+			},
+			{
+				"elementName": "ppt_export",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[7]",
+				"note": "导出"
+			},
+			{
+				"elementName": "ppt_template",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "保存模板"
+			},
+			{
+				"elementName": "ppt_view_history",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
+				"note": "查看历史"
+			},
+			{
+				"elementName": "ppt_Information",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
+				"note": "幻灯片信息"
+			},
+			{
+				"elementName": "ppt_delete",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
+				"note": "删除"
+			},
+			{
+				"elementName": "ppt_delete_sure",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
+				"note": "确认删除"
+			},
+			{
+				"elementName": "ppt_delete_cancel",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
+				"note": "取消删除"
+			}
+		]
+	},
+
+
+
 	{
 		"note": "PPT_顶部工具栏",
 		"pageName": "ppt_top",
@@ -1268,21 +1416,27 @@
 				"note": "添加图片"
 			},
 			{
-				"elementName": "add_arrows",
+				"elementName": "add_line",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[3]",
+				"note": "添加直线"
+			},
+			{
+				"elementName": "add_arrows",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
 				"note": "添加箭头"
 			},
 			{
 				"elementName": "add_Rectangle",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[4]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
 				"note": "添加矩形"
 			},
 			{
 				"elementName": "add_circular",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[5]",
+				"locator": "//div[@data-test='slide-toolbar']//div[2]//button[6]",
 				"note": "添加圆形"
 			},
 			{
@@ -1302,6 +1456,24 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-toolbar']//div[3]//button[2]",
 				"note": "视图"
+			},
+			{
+				"elementName": "ppt_type",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[1]",
+				"note": "样式&页面样式&组合排列"
+			},
+			{
+				"elementName": "ppt_animation",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[2]",
+				"note": "文本&排列&切换动画"
+			},
+			{
+				"elementName": "ppt_arrange",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[3]",
+				"note": "文本排列"
 			}
 		]
 	},
@@ -1376,7 +1548,7 @@
 				"note": "左边栏第十一个页面"
 			}
 		]
-	},		
+	},
 	{
 		"note": "PPT_页面",
 		"pageName": "ppt_page",
@@ -1390,32 +1562,38 @@
 			{
 				"elementName": "page_elements_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[1]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
 				"note": "幻灯片页面第一个元素"
 			},
 			{
 				"elementName": "page_elements_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[2]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
 				"note": "幻灯片页面第二个元素"
 			},
 			{
 				"elementName": "page_elements_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[3]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
 				"note": "幻灯片页面第三个元素"
 			},
 			{
 				"elementName": "page_elements_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[4]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
 				"note": "幻灯片页面第四个元素"
 			},
 			{
 				"elementName": "page_elements_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[5]",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[6]",
 				"note": "幻灯片页面第五个元素"
+			},
+			{
+				"elementName": "page_elements_6",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='smslide-slide smslide-slide--shadowed']/div)[7]",
+				"note": "幻灯片页面第六个元素"
 			},
 			{
 				"elementName": "smslide_frame_anchor_1",
@@ -1465,7 +1643,7 @@
 				"locator": "(//div[@class='smslide-frame active content-focus']//div[1]//div)[8]",
 				"note": "选中文件后像素点-形状左上"
 			},
-			
+
 			{
 				"elementName": "smslide_ordered_1",
 				"locateUsing": "xpath",
@@ -1505,188 +1683,106 @@
 			{
 				"elementName": "page_elements_1_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[1]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
 				"note": "图片占位符1上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_2_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[2]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
 				"note": "图片占位符2上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_3_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[3]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
 				"note": "图片占位符3上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_4_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[4]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
 				"note": "图片占位符4上传图片按钮"
 			},
 			{
 				"elementName": "page_elements_5_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[5]//span",
+				"locator": "//div[@data-test='viewport']//div[1]//div[1]//div[1]/div[6]//span",
 				"note": "图片占位符5上传图片按钮"
-			}
-			
-		]
-	},
-	{
-		"note": "PPT_header",
-		"pageName": "PPT_header",
-		"elements": [
-			{
-				"elementName": "ppt_return",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[1]",
-				"note": "幻灯片内返回"
 			},
 			{
-				"elementName": "ppt_down",
+				"elementName": "picture_trim",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[2]",
-				"note": "幻灯片内下箭头"
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[1]",
+				"note": "剪裁按钮"
 			},
 			{
-				"elementName": "ppt_plus_sign",
+				"elementName": "picture_replacement",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[1]",
-				"note": "幻灯片中加号"
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[3]",
+				"note": "替换图片"
 			},
 			{
-				"elementName": "ppt_filename",
+				"elementName": "picture_resetting",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[2]",
-				"note": "幻灯片标题"
+				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[4]",
+				"note": "重置"
 			},
 			{
-				"elementName": "ppt_collect",
+				"elementName": "picture_prune1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
-				"note": "收藏标签"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][1]",
+				"note": "图片剪裁左上角"
 			},
 			{
-				"elementName": "ppt_comment",
+				"elementName": "picture_prune2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[1]",
-				"note": "幻灯片讨论"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][2]",
+				"note": "图片剪裁右上角"
 			},
 			{
-				"elementName": "ppt_broadcast",
+				"elementName": "picture_prune3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[1]",
-				"note": "播放幻灯片"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][3]",
+				"note": "图片剪裁右下角"
 			},
 			{
-				"elementName": "ppt_online_broadcast",
+				"elementName": "picture_prune4",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
-				"note": "在线演示"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][4]",
+				"note": "图片剪裁左下角"
 			},
 			{
-				"elementName": "ppt_cooperation",
+				"elementName": "picture_prune5",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[2]",
-				"note": "添加协作者"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][5]",
+				"note": "图片剪裁上边"
 			},
 			{
-				"elementName": "ppt_share",
+				"elementName": "picture_prune6",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
-				"note": "分享"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][6]",
+				"note": "图片剪裁右边"
 			},
 			{
-				"elementName": "ppt_dotdotdot",
+				"elementName": "picture_prune7",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
-				"note": "左上角点点点"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][7]",
+				"note": "图片剪裁下边"
 			},
 			{
-				"elementName": "ppt_shortcut",
+				"elementName": "picture_prune8",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[1]",
-				"note": "快捷方式设置"
-			},
-			{
-				"elementName": "ppt_news",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[2]",
-				"note": "消息设置"
-			},
-			{
-				"elementName": "ppt_collection",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[3]",
-				"note": "收藏&取消收藏"
-			}, 
-			{
-				"elementName": "ppt_move",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[5]",
-				"note": "移动"
-			},
-			{
-				"elementName": "ppt_now_copy",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[6]",
-				"note": "创建副本"
-			},
-			{
-				"elementName": "ppt_export",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[7]",
-				"note": "导出"
-			},
-			{
-				"elementName": "ppt_template",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[9]",
-				"note": "保存模板"
-			},
-			{
-				"elementName": "ppt_view_history",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[10]",
-				"note": "查看历史"
-			},
-			{
-				"elementName": "ppt_Information",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[11]",
-				"note": "幻灯片信息"
-			},
-			{
-				"elementName": "ppt_delete",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[13]",
-				"note": "删除"
-			},{
-				"elementName": "ppt_delete_sure",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-content']//div[3]//button[1]",
-				"note": "确认删除"
-			},{
-				"elementName": "ppt_delete_cancel",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-content']//div[3]//button[2]",
-				"note": "取消删除"
+				"locator": "//div[@class='smslide-viewport-plugin-imageCrop']//div[1]//div[1]/*[name()='svg'][8]",
+				"note": "图片剪裁左边"
 			}
 		]
 	},
+
 	{
-		"note": "PPT_幻灯片右边栏",
-		"pageName": "PPT_rightBar",
+		"note": "PPT_幻灯片选中页面右边栏",
+		"pageName": "PPT_page_rightBar",
 		"elements": [
-			{
-				"elementName": "ppt_type",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[1]",
-				"note": "样式"
-			},
 			{
 				"elementName": "page_style",
 				"locateUsing": "xpath",
@@ -1708,156 +1804,94 @@
 			{
 				"elementName": "image_chosen",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//button[2]",
 				"note": "页面图片选择"
+			},
+			{
+				"elementName": "page_Movie_Play1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[1]",
+				"note": "瞬间切换"
+			},
+			{
+				"elementName": "page_Movie_Play2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[2]",
+				"note": "渐隐渐现"
+			},
+			{
+				"elementName": "page_Movie_Play3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[3]",
+				"note": "左右推移"
+			},
+			{
+				"elementName": "page_Movie_Play4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[4]",
+				"note": "上下推移"
+			},
+			{
+				"elementName": "page_Movie_Play5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[5]",
+				"note": "左右翻页"
+			},
+			{
+				"elementName": "page_Movie_Play6",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']/div[2]/div[6]",
+				"note": "上下翻页"
 			},
 			{
 				"elementName": "style_all_applications",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[2]//button[1]",
-				"note": "页面应用至全部"
-			},
-			{
-				"elementName": "border_style",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[1]//button[1]",
-				"note": "边框样式"
-			},
-			{
-				"elementName": "border_style_lines",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[2]//button[1]",
-				"note": "边框线样式"
-			},
-			{
-				"elementName": "border_style_color",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[3]//div[1]//button[1]",
-				"note": "边框线颜色"
-			},
-			{
-				"elementName": "border_style_width",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]",
-				"note": "边框线粗细输入"
-			},
-			{
-				"elementName": "border_style_widths",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[1]",
-				"note": "边框线粗细上箭头"
-			},
-			{
-				"elementName": "border_style_widthx",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[3]//button[2]",
-				"note": "边框线粗细下箭头"
-			},
-			{
-				"elementName": "transparency",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
-				"note": "透明度输入"
-			},
-			{
-				"elementName": "transparencys",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
-				"note": "透明度上箭头"
-			},
-			{
-				"elementName": "transparencyx",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
-				"note": "透明度下箭头"
-			},
+				"locator": "//div/button[contains(text(),'应用至全部')]",
+				"note": "页面背景&页面切换动画应用至全部"
+			}
+
+		]
+	},
+
+	{
+		"note": "PPT_幻灯片选中文本框右边栏",
+		"pageName": "PPT_textbox_rightBar",
+		"elements": [
 			{
 				"elementName": "type_text_template1",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[1]",
-				"note": "文本框样式模板1"
+				"note": "大标题1"
 			},
 			{
-				"elementName": "type_shapes_template1",
+				"elementName": "type_text_template2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
-				"note": "形状样式模板1"
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[1]//button[2]",
+				"note": "小标题1"
 			},
 			{
-				"elementName": "type_shapes_fill",
+				"elementName": "type_text_template3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
-				"note": "形状填充"
-			},
-			{
-				"elementName": "type_shapes_fillcolor",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
-				"note": "形状填充颜色"
-			},
-			{
-				"elementName": "type_pictures_cut",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[2]//div[1]//div[1]//div[1]//button[1]",
-				"note": "剪裁图片"
-			},
-			{
-				"elementName": "type_pictures_replace",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
-				"note": "替换图片"
-			},
-			{
-				"elementName": "type_pictures_proportion",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
-				"note": "图片剪裁比例"
-			},
-			{
-				"elementName": "type_pictures_proportionk",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[1]//div[1]//div[1]",
-				"note": "输入图片宽"
-			},
-			{
-				"elementName": "type_pictures_proportiong",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[2]//div[2]//div[1]//div[1]",
-				"note": "输入图片高"
-			},
-			
-			
-			
-			
-			{
-				"elementName": "ppt_animation",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
-				"note": "文本_排列"
+				"locator": "//div[@data-test='slide-sidebar-presets']//div[2]//button[1]",
+				"note": "正文1"
 			},
 			{
 				"elementName": "ppt_right_ttf",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]/button[1]",
 				"note": "字体"
 			},
 			{
-				"elementName": "ppt_right_ttfa",
+				"elementName": "ppt_right_inputsize",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[1]",
-				"note": "文本_字体下箭头"
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]//input",
+				"note": "输入文本_字号"
 			},
 			{
 				"elementName": "ppt_right_size",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-font-size']/div[1]/div[1]/div[1]/button[1]",
 				"note": "文本_字号"
-			},
-			{
-				"elementName": "ppt_right_sizea",
-				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[1]//button[2]",
-				"note": "文本_字号下箭头"
 			},
 			{
 				"elementName": "ppt_right_color",
@@ -1940,102 +1974,250 @@
 			{
 				"elementName": "ppt_right_L",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[1]",
 				"note": "文本_左对齐"
 			},
 			{
 				"elementName": "ppt_right_center",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[2]",
 				"note": "文本_水平中对齐"
 			},
 			{
 				"elementName": "ppt_right_R",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[3]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[3]",
 				"note": "文本_右对齐"
 			},
 			{
 				"elementName": "ppt_right_ends",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[4]",
+				"locator": "//div[@data-test='slide-align-vertical']//div[2]//button[4]",
 				"note": "文本_两端对齐"
 			},
 			{
 				"elementName": "ppt_right_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[1]",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[1]",
 				"note": "文本_有序列表"
 			},
 			{
 				"elementName": "ppt_right_disorder",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-align-horizontal']//div[2]//button[2]",
+				"locator": "//div[@data-test='slide-align-horizontal']//div[1]//button[2]",
 				"note": "文本_无序列表"
 			},
 			{
 				"elementName": "ppt_right_row1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
+				"locator": "//div[@data-test='row-spacing']//input",
 				"note": "文本_行间距输入"
 			},
 			{
 				"elementName": "ppt_right_row2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='row-spacing']//div[1]//button[2]",
+				"locator": "//div[@data-test='row-spacing']//div[1]//button[1]",
 				"note": "文本_行间距下三角"
 			},
 			{
 				"elementName": "ppt_right_front1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test='pre-segment-distance']//div[1]//input",
 				"note": "文本_段前间距输入"
 			},
 			{
 				"elementName": "ppt_right_front2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='pre-segment-distance']//button[1]",
 				"note": "文本_段前间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_front3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='pre-segment-distance']//div[1]//div[3]//button[2]",
+				"locator": "//div[@data-test='pre-segment-distance']//button[2]",
 				"note": "文本_段前间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_rear1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[1]//div[1]",
+				"locator": "//div[@data-test='post-segment-distance']//div[1]//input",
 				"note": "文本_段后间距输入"
 			},
 			{
 				"elementName": "ppt_right_rear2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[1]",
+				"locator": "//div[@data-test='post-segment-distance']//button[1]",
 				"note": "文本_段后间距上箭头"
 			},
 			{
 				"elementName": "ppt_right_rear3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='post-segment-distance']//div[1]//div[3]//button[2]",
+				"locator": "//div[@data-test='post-segment-distance']//button[2]",
 				"note": "文本_段后间距下箭头"
 			},
 			{
 				"elementName": "ppt_right_adaptive",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//dev[1]",
+				"locator": "//div[@data-test='slide-font-size']//div[5]//div[1]//div[1]",
 				"note": "文本_文本框自适应"
-			},
-			
-			
-			
-			
+			}
+
+		]
+	},
+
+
+
+	{
+		"note": "PPT_幻灯片选中图片右边栏",
+		"pageName": "PPT_rightBar_images",
+		"elements": [
 			{
-				"elementName": "ppt_theme",
+				"elementName": "type_pictures_cut",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='slide-sidebar']//div[1]//div[1]//button[2]",
-				"note": "排列"
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[1]",
+				"note": "剪裁图片"
+			},
+			{
+				"elementName": "type_pictures_proportion",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']//div[1]//button[1]",
+				"note": "图片剪裁比例"
+			},
+			{
+				"elementName": "type_pictures_proportionk",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']/div[2]/div[1]/div[1]/div[1]/input",
+				"note": "输入图片宽"
+			},
+			{
+				"elementName": "type_pictures_proportiong",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-crop']/div[2]/div[2]/div[1]/div[1]/input",
+				"note": "输入图片高"
+			},
+			{
+				"elementName": "type_pictures_replace",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-image-info']//button[1]",
+				"note": "替换图片"
+			}
+
+		]
+	},
+
+	{
+		"note": "PPT_幻灯片选中形状右边栏",
+		"pageName": "PPT_rightBar_shape",
+		"elements": [
+
+			{
+				"elementName": "type_shapes_template1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[1]",
+				"note": "形状样式模板1"
+			},
+			{
+				"elementName": "type_shapes_template2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[2]",
+				"note": "形状样式模板2"
+			},
+			{
+				"elementName": "type_shapes_template3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-shape-presets']//div[1]//div[2]//div[1]//div[2]//div[3]",
+				"note": "形状样式模板3"
+			},
+			{
+				"elementName": "type_shapes_fill",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",
+				"note": "背景填充"
+			},
+			{
+				"elementName": "type_shapes_fillcolor",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[2]//div[2]",
+				"note": "形状填充颜色"
+			},
+			{
+				"elementName": "line_Endarrow_left",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']//div[1]//div[1]//button[1]",
+				"note": "左端点箭头"
+			},
+			{
+				"elementName": "line_Endarrow_right",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-slide-sidebar-section']//div[1]//div[1]//button[2]",
+				"note": "右端点箭头"
+			}
+
+		]
+	},
+
+	{
+		"note": "PPT_幻灯片通用右边栏",
+		"pageName": "PPT_rightBar_general",
+		"elements": [
+			{
+				"elementName": "border_style",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[1]/button[1]",
+				"note": "边框样式(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_lines",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[2]/button[1]",
+				"note": "边框线样式(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_color",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[3]/div[1]/button[1]",
+				"note": "边框线颜色(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_width",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']/div[4]/div[1]/div[1]/div[1]/input",
+				"note": "边框线粗细输入(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_widths",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]//button[1]",
+				"note": "边框线粗细上箭头(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "border_style_widthx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-border-style']//div[4]//div[1]//div[1]//button[2]",
+				"note": "边框线粗细下箭头(文本框图片圆矩形)"
+			},
+			{
+				"elementName": "transparency_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[1]//div[2]",
+				"note": "透明度无级调节钮(文本框图片形状)"
+			},{
+				"elementName": "transparency",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//input[1]",
+				"note": "透明度输入(文本框图片形状)"
+			},
+			{
+				"elementName": "transparencys",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[1]",
+				"note": "透明度上箭头(文本框图片形状)"
+			},
+			{
+				"elementName": "transparencyx",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-element-opacity']//div[2]//div[2]//div[1]//div[1]//div[1]//button[2]",
+				"note": "透明度下箭头(文本框图片形状)"
 			},
 			{
 				"elementName": "element_setTop",
@@ -2074,6 +2256,18 @@
 				"note": "垂直对齐"
 			},
 			{
+				"elementName": "element_combined",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-grouping']//div[1]//button[1]",
+				"note": "组合"
+			},
+			{
+				"elementName": "element_lift_combined",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-grouping']//div[1]//button[2]",
+				"note": "取消组合"
+			},
+			{
 				"elementName": "element_horizontal_xvalue",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[1]//div[1]//div[1]//input[1]",
@@ -2108,49 +2302,377 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-position']//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//button[2]",
 				"note": "Y位置下箭头"
+			},
+			{
+				"elementName": "element_wide_value",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[1]//div[1]//div[1]//input[1]",
+				"note": "输入宽度"
+			},
+			{
+				"elementName": "element_wide_values",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[1]//div[1]//div[1]//div[1]//div[1]//button[1]",
+				"note": "宽度上箭头微调"
+			},
+			{
+				"elementName": "element_wide_valuex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[1]//div[1]//div[1]//div[1]//div[1]//button[2]",
+				"note": "宽度下箭头微调"
+			},
+			{
+				"elementName": "lock_aspect_ratio",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//span[2]",
+				"note": "锁定宽高比"
+			},
+			{
+				"elementName": "element_high_value",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[2]//div[1]//div[1]//input[1]",
+				"note": "输入高度"
+			},
+			{
+				"elementName": "element_high_values",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[2]//div[1]//div[1]//div[1]//div[1]//button[1]",
+				"note": "高度上箭头微调"
+			},
+			{
+				"elementName": "element_high_valuex",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-position']//div[3]//div[2]//div[1]//div[1]//div[1]//div[1]//button[2]",
+				"note": "高度下箭头微调"
 			}
 		]
 	},
+
 	{
-		"note": "幻灯片中右键菜单与列表",
+		"note": "幻灯片中右键菜单与下拉列表",
 		"pageName": "ppt_tabulation",
 		"elements": [
 			{
+				"elementName": "view_25",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'25%')]",
+				"note": "顶部视图百分比下拉列表_25%"
+			},
+			{
+				"elementName": "view_100",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'100%')]",
+				"note": "顶部视图百分比下拉列表_100%"
+			},
+			{
+				"elementName": "view_400",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'400%')]",
+				"note": "顶部视图百分比下拉列表_400%"
+			},
+			{
+				"elementName": "view_adaptive",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'适应窗口大小')]",
+				"note": "顶部视图百分比下拉列表_适应窗口大小"
+			},
+			{
 				"elementName": "cutting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[1]",
-				"note": "剪切"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[1]",
+				"note": "左边栏右键菜单_剪切"
 			},
 			{
 				"elementName": "replication",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[2]",
-				"note": "复制"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[2]",
+				"note": "左边栏右键菜单_复制"
 			},
 			{
 				"elementName": "pasting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[3]",
-				"note": "粘贴"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[3]",
+				"note": "左边栏右键菜单_粘贴"
 			},
 			{
 				"elementName": "replication_pasting",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[4]",
-				"note": "复制并粘贴"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[4]",
+				"note": "左边栏右键菜单_复制并粘贴"
 			},
 			{
 				"elementName": "right_key_new",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[6]",
-				"note": "新建幻灯片"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[6]",
+				"note": "左边栏右键菜单_新建幻灯片"
 			},
 			{
 				"elementName": "delete_page",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='fixed-context-menu']//ul//li[7]",
-				"note": "删除幻灯片"
+				"locator": "//div[@class='fixed-context-menu']//ul//li[7]",
+				"note": "左边栏右键菜单_删除幻灯片"
+			},
+			{
+				"elementName": "elements_left",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'左对齐')]",
+				"note": "水平左对齐"
+			},
+			{
+				"elementName": "elements_centre_line",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'居中对齐')]",
+				"note": "水平剧中对齐"
+			},
+			{
+				"elementName": "element_sright",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'右对齐')]",
+				"note": "水平右对齐"
+			},
+			{
+				"elementName": "elements_top",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'顶部对齐')]",
+				"note": "垂直顶部对齐"
+			},
+			{
+				"elementName": "elements_centre_vertical",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'居中对齐')]",
+				"note": "垂直居中对齐"
+			},
+			{
+				"elementName": "elements_bottom",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'底部对齐')]",
+				"note": "垂直底部对齐"
+			},
+
+
+			{
+				"elementName": "page_No_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'无填充')]",
+				"note": "幻灯片页面与形状背景填充_无填充"
+			},
+			{
+				"elementName": "page_SolidColor_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'纯色填充')]",
+				"note": "幻灯片页面与形状背景填充_纯色填充"
+			},
+			{
+				"elementName": "page_picture_Fill",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'图片填充')]",
+				"note": "幻灯片页面背景填充_图片填充"
+			},
+			{
+				"elementName": "background_raw",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'原始大小')]",
+				"note": "幻灯片背景图片填充_原始大小"
+			},
+			{
+				"elementName": "background_stretch",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'拉伸')]",
+				"note": "幻灯片背景图片填充_拉伸"
+			},
+			{
+				"elementName": "background_splices",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'拼贴')]",
+				"note": "幻灯片背景图片填充_拼贴"
+			},
+			{
+				"elementName": "background_populate",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'缩放以填充')]",
+				"note": "幻灯片背景图片填充_缩放以填充"
+			},
+			{
+				"elementName": "background_suitable",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'缩放以适合')]",
+				"note": "幻灯片背景图片填充_缩放以适合"
+			},
+			{
+				"elementName": "element_no_border",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'无边框')]",
+				"note": "幻灯片页面元素边框_无边框"
+			},
+			{
+				"elementName": "element_lines_border",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'线条边框')]",
+				"note": "幻灯片页面元素边框_线条边框"
+			},
+			{
+				"elementName": "lines_styles1",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'')][1]",
+				"note": "细线条样式"
+			},
+			{
+				"elementName": "lines_styles2",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'')][2]",
+				"note": "粗线条样式"
+			},
+			{
+				"elementName": "lines_styles3",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'')][3]",
+				"note": "特粗线条样式"
+			},
+			{
+				"elementName": "lines_styles4",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'')][4]",
+				"note": "细虚线条样式"
+			},
+			{
+				"elementName": "lines_styles5",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'')][5]",
+				"note": "粗虚线条样式"
+			},
+			{
+				"elementName": "Trim_per_cent1",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'1:1')]",
+				"note": "图片剪裁比例1:1"
+			},
+			{
+				"elementName": "Trim_per_cent2",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'2:3')]",
+				"note": "图片剪裁比例2:3"
+			},
+			{
+				"elementName": "Trim_per_cent3",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'4:3')]",
+				"note": "图片剪裁比例4:3"
+			},
+			{
+				"elementName": "Trim_per_cent4",
+				"locateUsing": "xpath",
+				"locator": "//div//div/div/ul/li[contains(text(),'16:9')]",
+				"note": "图片剪裁比例16:9"
+			},
+			{
+				"elementName": "text_Fonts1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[1]",
+				"note": "默认字体"
+			},
+			{
+				"elementName": "text_Fonts2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[2]",
+				"note": "宋体"
+			},
+			{
+				"elementName": "text_Fonts3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[3]",
+				"note": "黑体"
+			},
+			{
+				"elementName": "text_Fonts4",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[4]",
+				"note": "微软雅黑"
+			},
+			{
+				"elementName": "text_Fonts5",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-font-dropdown']/ul/li[5]",
+				"note": "仿宋"
+			},
+			{
+				"elementName": "text_size1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[1]",
+				"note": "12px与行间距1"
+			},
+			{
+				"elementName": "text_size2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[2]",
+				"note": "14px与行间距1.15"
+			},
+			{
+				"elementName": "text_size3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[4]",
+				"note": "18px与行间距2"
+			},
+			{
+				"elementName": "text_size4",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[8]",
+				"note": "32px"
+			},
+			{
+				"elementName": "text_size5",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar-row-spacing-dropdown']/ul/li[10]",
+				"note": "40px"
+			},
+			{
+				"elementName": "onlineshown_off",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']/button[1]",
+				"note": "X掉在线演示弹窗"
+			},
+			{
+				"elementName": "onlineshown_Tip",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]/div[1]/div[3]/div[1]",
+				"note": "勾选弹窗提示"
+			},
+			{
+				"elementName": "onlineshown_go",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]//button[1]",
+				"note": "继续"
+			},
+			{
+				"elementName": "onlineshown_lift1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div[1]//button[2]",
+				"note": "取消"
+			},
+			{
+				"elementName": "onlineshown_copy",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[3]/div[1]/span",
+				"note": "复制链接"
+			},
+			{
+				"elementName": "onlineshown_Play",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[1]",
+				"note": "现在播放"
+			},
+			{
+				"elementName": "onlineshown_later",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[2]",
+				"note": "稍后播放"
+			},
+			{
+				"elementName": "onlineshown_close",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[3]",
+				"note": "结束演示"
 			}
+
 		]
 	},
 	{
