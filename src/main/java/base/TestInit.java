@@ -107,7 +107,7 @@ public class TestInit extends elementFile {
     private void gooiest(){
 
         try {
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
             WebElement didi = driver.findElement(By.xpath("//button[@class='sm-button sc-kasBVs icvvrq sc-iSDuPN eDntyh sc-1n784rm-0 bcuuIb']"));
             wait.until(ExpectedConditions.elementToBeClickable(didi));
             didi.click();
