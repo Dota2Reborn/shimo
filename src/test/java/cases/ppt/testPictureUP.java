@@ -419,7 +419,7 @@ public class testPictureUP extends TestInit {
 				System.out.println("==========================");
 				WebElement element = driver.findElement(By.xpath("(//div[@class='smslide-slide smslide-slide--shadowed']/div)["+j+"]"));
 				click(element);
-				click(ppt_theme);
+				click(ppt_animation);
 				String indexBefore = element.getCssValue("z-index");
 				System.out.println("indexBefore="+indexBefore);
 				if (indexBefore.equals("0")) {//当index=0，则上移一层，下移一层，置顶，置底
@@ -475,7 +475,7 @@ public class testPictureUP extends TestInit {
 			for(int j = 1;j < 3;j++) {
 				WebElement element = driver.findElement(By.xpath("(//div[@class='smslide-slide smslide-slide--shadowed']/div)["+j+"]"));
 				click(element);
-				click(ppt_theme);
+				click(ppt_animation);
 				Point location = element.getLocation();
 				System.out.println("location="+location);
 				opacityAndCoord(element_horizontal_xvalue,element_horizontal_xvalues,element_horizontal_xvaluex);
