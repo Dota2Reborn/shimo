@@ -101,6 +101,10 @@ public class elementFile {
 	public WebElement desktop_orderByFolderUP_Hook;
 	@SearchWith(pageName = "desktop", elementName = "toast_msg", noteName = "桌面toast提示信息")
 	public WebElement toast_msg;
+	@SearchWith(pageName = "desktop", elementName = "b_next", noteName = "新注册用户桌面欢迎页面，下一步按钮")
+	public WebElement b_next;
+	@SearchWith(pageName = "desktop", elementName = "b_finish", noteName = "新注册用户桌面欢迎页面，开始使用按钮")
+	public WebElement b_finish;
 
 	/**
 	 * doc
@@ -369,6 +373,8 @@ public class elementFile {
 	public WebElement mobileRegister;
 	@SearchWith(pageName = "Registered", elementName = "wechatRegister", noteName = "微信注册")
 	public WebElement wechatRegister;
+	@SearchWith(pageName = "Registered", elementName = "b_pass", noteName = "绑定手机/邮箱送高级版，跳过按钮")
+	public WebElement b_pass;
 
 	/**
 	 * profile

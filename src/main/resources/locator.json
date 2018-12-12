@@ -248,6 +248,12 @@
 				"elementName": "wechatRegister",
 				"locateUsing": "xpath",
 				"locator": "//div[contains(text(),'微信注册')]"
+			},
+			{
+				"note": "绑定手机/邮箱送高级版，跳过按钮",
+				"elementName": "b_pass",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'跳过')]"
 			}
 			
 		]
@@ -496,12 +502,24 @@
 				"locator": "//span[@data-test='change-table-sort-folder-priority']/following-sibling::div[1]",
 				"note": "桌面排序-文件夹置顶-对钩"
 			},
-          {
-            "elementName": "toast_msg",
-            "locateUsing": "xpath",
-            "locator": "//div[@class='Toastify__toast-body']",
-            "note": "桌面toast提示信息"
-          }
+           {
+				"elementName": "toast_msg",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='Toastify__toast-body']",
+				"note": "桌面toast提示信息"
+           },
+			{
+				"elementName": "b_next",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'下一步')]",
+				"note": "新注册用户桌面欢迎页面，下一步按钮"
+			},
+			{
+				"elementName": "b_finish",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'开始使用')]",
+				"note": "新注册用户桌面欢迎页面，开始使用按钮"
+			}
 		]
 	},
 	{

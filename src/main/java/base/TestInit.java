@@ -139,7 +139,7 @@ public class TestInit extends elementFile {
     /**
      * 注册
      *
-     * @param type 1为手机注册 2为邮箱注册
+     * @param type 1为手机注册 2为邮箱注册 3为手机成功注册
      * @author 王继程
      * @Time 2017-11-21
      */
@@ -152,6 +152,7 @@ public class TestInit extends elementFile {
             sendKeys(userName, name);
             sendKeys(userMobile, user);
             sendKeys(Pwd, pwd);
+            sendKeys(rePwd, repwd);
             sendKeys(verifyCode, "2222");
             click(Next);
         } else if (type == 2) {
@@ -163,6 +164,18 @@ public class TestInit extends elementFile {
             sendKeys(Email, user);
             sendKeys(Pwd, pwd);
             sendKeys(rePwd, repwd);
+            click(Next);
+        }else if (type == 3){
+            driver.navigate().to(test_url + "register");
+            click(personalRegister);
+            click(mobileRegister);
+            sendKeys(userName, name);
+            sendKeys(userMobile, user);
+            WebElement b_verifyCode = driver.findElement(By.xpath("//div[@class='verifyCodeContainer']/button"));
+            click(b_verifyCode);
+            sendKeys(Pwd, pwd);
+            sendKeys(rePwd, repwd);
+            sendKeys(verifyCode, "2222");
             click(Next);
         } else {
             return;
