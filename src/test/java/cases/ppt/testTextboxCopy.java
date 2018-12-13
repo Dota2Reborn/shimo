@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class testTextboxStyleE extends TestInit {//编辑文本框
+public class testTextboxCopy extends TestInit {//编辑文本框
 
 	/**
 	 * 幻灯片中新增模板页面

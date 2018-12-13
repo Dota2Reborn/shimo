@@ -18,7 +18,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	/**
 	 * 在文本框占位符中输入文本检查是否保存
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-24
 	 *
@@ -28,10 +28,9 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		login("textstyle1@shimo.im", "123123");
 		click(desktop_new);
 		click(desktop_newslides);
-		setClipbordContents("在文本占位符输入验证保存");
 		click(page_elements_1);
-		action.sendKeys(Keys.CONTROL, "V").perform();
-		Thread.sleep(1000);
+		action.sendKeys("在文本占位符输入验证保存").build().perform();
+		Thread.sleep(2000);
 		driver.navigate().refresh();// 刷新页面
 		String time = getText(page_elements_1);
 		click(ppt_dotdotdot);
@@ -43,7 +42,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	/**
 	 * 新建文本框中输入文本检查是否保存
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-24
 	 *
@@ -70,9 +69,9 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	/**
 	 * 复制文本内容，选中幻灯片页面粘贴
-	 * 
+	 *
 	 * @author 王继程
-	 * 
+	 *
 	 * @Time 2018-07-24
 	 *
 	 */
@@ -90,8 +89,6 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 			String time = getText(page_elements_1);
 			click(page_elements_1);
 			click(smslide_frame_anchor_1);
-			// Robot robot = new Robot();
-			// robot.keyPress(KeyEvent.VK_DELETE);
 			action.sendKeys(Keys.chord(Keys.DELETE)).perform();
 			assertEquals(time, "复制文本内容直接粘贴是否成功");
 		} else {
@@ -102,14 +99,14 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	/**
 	 * 复制文本框，选中幻灯片页面粘贴
-	 * 
+	 *
 	 * @author 王继程
-	 * 
+	 *
 	 * @Time 2018-07-24
 	 *
 	 */
 	@Test(enabled = true)
-	public void Text_Editing4() throws InterruptedException, AWTException {
+	public void Text_Editing4() throws InterruptedException {
 		login("textstyle4@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -133,7 +130,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 	/**
 	 * 设置文本有序无序列表
-	 * 
+	 *
 	 * @author 王继程
 	 * @throws AWTException
 	 * @Time 2018-07-24
@@ -159,10 +156,45 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		assertTrue(element1 && element2);
 
 	}
+	/**
+	 * 复制有序列表到文本框中
+	 *
+	 * @author 王继程
+	 * @throws AWTException
+	 * @Time 2018-07-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void Text_Editing6() throws InterruptedException, AWTException {
+
+		login("textstyle6@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+		click(page_elements_1);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "a")).build().perform();
+		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
+		click(ppt_page_2);
+		click(page_elements_1);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+		Boolean element1 = doesWebElementExist(smslide_ordered_3);
+		click(ppt_page_1);
+		click(page_elements_2);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "a")).build().perform();
+		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
+		click(ppt_page_3);
+		click(page_elements_1);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+		Boolean element2 = doesWebElementExist(smslide_unordered_3);
+//		click(ppt_dotdotdot);
+//		click(ppt_delete);
+//		click(desktop_newFolder_name_ok);
+		assertTrue(element1 && element2);
+	}
 
 	/**
-	 * 删除文本框中内容，重新输入后刷新是否保存
-	 * 
+	 * 删除文本框中内容，粘贴内容是否保存
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-24
 	 *

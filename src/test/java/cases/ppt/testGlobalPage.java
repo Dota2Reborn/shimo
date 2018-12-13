@@ -11,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 public class testGlobalPage extends TestInit {// 全局页面
 	/**
 	 * 幻灯片中新增模板页面
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-24
 	 *
@@ -36,7 +36,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 
 	/**
 	 * 幻灯片中删除页面后撤销
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-23
 	 *
@@ -56,7 +56,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 
 	/**
 	 * 幻灯片中删除唯一页面
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-23
 	 *
@@ -74,10 +74,49 @@ public class testGlobalPage extends TestInit {// 全局页面
 		Boolean result2 = doesWebElementExist(page_elements_2);
 		assertTrue(result1 && !result2);
 	}
+	/**
+	 * 播放幻灯片
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Play_1() throws InterruptedException {
+		login("Play_1@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_broadcast);
+		WebElement input = driver.findElement(By.xpath("//div[@class='sm-slide-player-slide-viewer']"));
+		String time = getText(input);
+		System.out.println(time);
+
+		action.click().build().perform();
+		time = getText(input);
+		System.out.println(time);
+
+		action.click().build().perform();
+		time = getText(input);
+		System.out.println(time);
+
+		action.click().build().perform();
+		time = getText(input);
+		System.out.println(time);
+
+		action.click().build().perform();
+		time = getText(input);
+		System.out.println(time);
+
+		action.click().build().perform();
+		time = getText(input);
+		System.out.println(time);
+
+	}
+
 
 	/**
 	 * 调整页面排序
-	 * 
+	 *
 	 * @author 王继程
 	 * @Time 2018-07-23 false
 	 */
@@ -89,59 +128,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 		click(ppt_page_1);
 		click(ppt_text);
 		click(ppt_text);
-		//
-		// WebElement template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[1]"));
-		// String time1 = getText(template1);
-		// System.out.println(time1+"aaaaa");
 
-		// template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]"));
-		// 他腹肌标签1包含里面的元素
-		// 那就说明实际上已经取到了是吧，就是不是
-
-		// System.out.println(template1.getText());
-
-		// template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[2]"));
-		//
-		// System.out.println(template1.getText());
-		//// time1 = getText(template1);
-		//// System.out.println(time1+"bbbbbb");
-		// template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[3]"));
-		// time1 = getText(template1);
-		// System.out.println(time1+"cccccc");
-		// template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[4]"));
-		// time1 = getText(template1);
-		// System.out.println(time1+"ddddd");
-		// template1 =
-		// driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div[5]"));
-		// time1 = getText(template1);
-		// System.out.println(time1+"eeeeee");
-		//
-		// List<WebElement> weList =
-		// driver.findElements(By.xpath("//div[@data-test='viewport']//div[1]//div[1]//div[1]//div"));
-		//
-		// System.out.println(weList.size());
-
-		// driver.quit();
-//		click(page_elements_1);
-//		click(page_elements_2);
-//		click(page_elements_3);
-//		click(page_elements_4);
-//		click(page_elements_5);
-//		click(page_elements_1);
-//		click(page_elements_2);
-//		click(page_elements_3);
-//		click(page_elements_4);
-//		click(page_elements_5);
-//		click(page_elements_1);
-//		click(page_elements_2);
-//		click(page_elements_3);
-//		click(page_elements_4);
-//		click(page_elements_5);
 
 
 	}
