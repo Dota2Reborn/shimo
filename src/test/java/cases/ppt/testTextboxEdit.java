@@ -68,7 +68,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 * 复制文本内容，选中幻灯片页面粘贴
+	 *
 	 *
 	 * @author 王继程
 	 *
@@ -81,7 +81,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
-		setClipbordContents("复制文本内容直接粘贴是否成功");
+		//setClipbordContents("复制文本内容直接粘贴是否成功");
 		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
 		Thread.sleep(500);
 		Boolean element = doesWebElementExist(page_elements_1);
@@ -98,7 +98,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 * 复制文本框，选中幻灯片页面粘贴
+	 *
 	 *
 	 * @author 王继程
 	 *
@@ -157,7 +157,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 	/**
-	 * 复制有序列表到文本框中
+	 *
 	 *
 	 * @author 王继程
 	 * @throws AWTException
@@ -193,7 +193,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 * 删除文本框中内容，粘贴内容是否保存
+	 *
 	 *
 	 * @author 王继程
 	 * @Time 2018-07-24
@@ -207,7 +207,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("HHmmss");
 		String time1 = format.format(date);
-		setClipbordContents(time1);
+		//setClipbordContents(time1);
 		click(page_elements_1);
 		for (int i = 1; i < 7; i++) {
 			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
@@ -220,11 +220,6 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 
-	private void setClipbordContents(String texts) {// 写入系统剪贴板
-		StringSelection stringSelection = new StringSelection(texts);
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		clipboard.setContents(stringSelection, null);
 
-	}
 
 }
