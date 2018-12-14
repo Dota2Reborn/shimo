@@ -892,7 +892,7 @@
 			{
 				"elementName": "invite_member",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[3]//a",
+				"locator": "//div[@class='settings creator']//div[4]//a",
 				"note": "企业设置-谁能邀请新成员进企业"
 			},
 			{
@@ -946,7 +946,7 @@
 			{
 				"elementName": "setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[5]//a",
+				"locator": "//div[@class='settings creator']//div[6]//a",
 				"note": "企业设置-设置管理员"
 			},
 			{
@@ -964,7 +964,7 @@
 			{
 				"elementName": "button_addCollaborators",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[4]//a",
+				"locator": "//div[@class='settings creator']//div[5]//a",
 				"note": "企业设置-谁能添加外部协作者（更改按钮）"
 			},
 			{
@@ -1030,7 +1030,7 @@
 			{
 				"elementName": "button_exitCompany",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings member']//div[8]//a",
+				"locator": "//a[@class='action red show']",
 				"note": "企业设置-成员退出企业"
 			},
 			{
