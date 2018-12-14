@@ -107,11 +107,14 @@ public class TestInit extends elementFile {
     private void gooiest(){
 
         try {
+//            Thread.sleep(2000);
 //            WebElement didi = driver.findElement(By.xpath("//button[@class='sm-button sc-kasBVs icvvrq sc-iSDuPN eDntyh sc-1n784rm-0 bcuuIb']"));
 //            wait.until(ExpectedConditions.elementToBeClickable(didi));
 //            didi.click();
-            click(b_next);
-            click(b_finish);
+            wait.until(ExpectedConditions.elementToBeClickable(b_next));
+            b_next.click();
+            wait.until(ExpectedConditions.elementToBeClickable(b_finish));
+            b_finish.click();
 
         }catch (Exception e){
             return;
