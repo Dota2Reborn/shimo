@@ -565,49 +565,49 @@
 			{
 				"elementName": "b_addCollaborator_1_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div//div",
+				"locator": "(//span[@data-test='collab-control-dropmenu'])[1]",
 				"note": "协作者列表第一个协作者权限下拉框"
 			},
 			{
 				"elementName": "b_addCollaborator_2_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[2]//div//div",
+				"locator": "(//span[@data-test='collab-control-dropmenu'])[2]",
 				"note": "协作者列表第二个协作者权限下拉框"
 			},
 			{
 				"elementName": "b_addCollaborator_3_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[3]//div//div//div//a",
+				"locator": "(//span[@data-test='collab-control-dropmenu'])[3]",
 				"note": "协作者列表第三个协作者权限下拉框"
 			},
 			{
 				"elementName": "addCollaborator_1_list_userName",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[1]//span[1]//span[1]",
+				"locator": "(//span[@class='user-name'])[1]",
 				"note": "协作者列表第一个协作者用户名"
 			},
 			{
 				"elementName": "addCollaborator_2_list_userName",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'collab-modal-user-list-wrapper')]//div[1]//div[2]//span[1]//span[1]",
+				"locator": "(//span[@class='user-name'])[2]",
 				"note": "协作者列表第二个协作者用户名"
 			},
 			{
 				"elementName": "collaborator_1_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[1]//span)[4]",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[1]",
 				"note": "协作者列表第一个协作者邮箱"
 			},
 			{
 				"elementName": "collaborator_2_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[2]//span)[4]",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[2]",
 				"note": "协作者列表第二个协作者邮箱"
 			},
 			{
 				"elementName": "collaborator_3_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]//div//div[3]//span)[4]",
+				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[3]",
 				"note": "协作者列表第三个协作者邮箱"
 			},
 			{
@@ -619,7 +619,7 @@
 			{
 				"elementName": "list_addCollaborator_changeOwner_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[2]//div//div[1]//div//a",
+				"locator": "//span[contains(text(),'选择')]",
 				"note": "协作者权限列表--转让所有权列表--选择第一个用户为转让对象按钮"
 			},
 			{
@@ -655,32 +655,32 @@
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-tab-content']//div//div//div//div[1]//div[2]//div",
+				"locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div/span)[1]",
 				"note": "最近协作者列表第一个添加按钮"
 			},
 			{
                 "elementName": "addCollaborator_2_add",
                 "locateUsing": "xpath",
-                "locator": "//div[@class='sm-tab-content']//div//div//div//div[2]//div[2]//div",
+                "locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div/span)[2]",
                 "note": "最近协作者列表第二个添加按钮"
              },
              {
                "elementName": "addCollaborator_companyList_1_add",
                "locateUsing": "xpath",
-               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div",
+               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div//span",
                "note": "企业协作者列表第一个添加按钮"
              },
 			{
 				"elementName": "addCollaborator_companyList_2_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div",
+				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div//span",
 				"note": "企业协作者列表第二个添加按钮"
 			},
 			
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div//div[1]//div//div//a",
+				"locator": "//div[@class='sm-modal-body']/div/div[3]/div/div/div/div/div/div/span",
 				"note": "搜索显示被添加协作者列表第一个添加按钮"
 			},
 			{

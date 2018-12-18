@@ -99,7 +99,7 @@ public class TestInit extends elementFile {
         sendKeys(userPwd, pwd);
         click(login_submit);
 
-        gooiest();//跳过引导页
+//        gooiest();//跳过引导页
 
         wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
