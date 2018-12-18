@@ -57,6 +57,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12");
+		Thread.sleep(1000);
 		click(doc_notice_user);
 		click(b_back);
 		logout();
@@ -189,6 +190,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12");
+		Thread.sleep(1000);
 		click(doc_notice_user);
 
 		click(b_back);

@@ -655,25 +655,25 @@
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div/span)[1]",
+				"locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div)[1]",
 				"note": "最近协作者列表第一个添加按钮"
 			},
 			{
                 "elementName": "addCollaborator_2_add",
                 "locateUsing": "xpath",
-                "locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div/span)[2]",
+                "locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div)[2]",
                 "note": "最近协作者列表第二个添加按钮"
              },
              {
                "elementName": "addCollaborator_companyList_1_add",
                "locateUsing": "xpath",
-               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div//span",
+               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div/div",
                "note": "企业协作者列表第一个添加按钮"
              },
 			{
 				"elementName": "addCollaborator_companyList_2_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div//span",
+				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div/div",
 				"note": "企业协作者列表第二个添加按钮"
 			},
 			

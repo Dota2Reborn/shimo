@@ -214,7 +214,8 @@ public class testCompanyManagement extends TestInit {
         click(company_Management);
         switchToPage(1);
 
-        List<WebElement> elements = driver.findElements(By.className("email"));
+//        List<WebElement> elements = driver.findElements(By.className("email"));
+        List<WebElement> elements = driver.findElements(By.xpath("//div[@class='waterfall-inner']/div[@class='member-row']"));
         int number = elements.size(); // 成员列表
         String kk;
         String pp;
