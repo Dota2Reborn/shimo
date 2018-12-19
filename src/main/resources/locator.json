@@ -680,7 +680,7 @@
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']/div/div[3]/div/div/div/div/div/div/span",
+				"locator": "//div[starts-with(@class,'test-list-row-wrapper')]//div/span",
 				"note": "搜索显示被添加协作者列表第一个添加按钮"
 			},
 			{
