@@ -185,7 +185,7 @@ public class testModifyPermissions extends TestInit {
         contextClick(desktop1_1_folder);
         moveToElement(menu_cooperation);
         Thread.sleep(500);
-        String t = b_addCollaborator_3_list.getAttribute("disabled");
+        String t = b_addCollaborator_3_list_disable.getAttribute("disabled");
         assertEquals(t, "true");
 
     }
