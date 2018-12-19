@@ -577,7 +577,7 @@
 			{
 				"elementName": "b_addCollaborator_3_list",
 				"locateUsing": "xpath",
-				"locator": "(//span[@data-test='collab-control-dropmenu'])[3]",
+				"locator": "(//span[@data-test='collab-control-dropmenu']/parent::*)[3]",
 				"note": "协作者列表第三个协作者权限下拉框"
 			},
 			{
