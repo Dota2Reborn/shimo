@@ -601,19 +601,19 @@
 			{
 				"elementName": "collaborator_1_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[1]",
+				"locator": "(//div[contains(@class,'test-list-row-wrapper')]/span[2])[1]",
 				"note": "协作者列表第一个协作者邮箱"
 			},
 			{
 				"elementName": "collaborator_2_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[2]",
+				"locator": "(//div[contains(@class,'test-list-row-wrapper')]/span[2])[2]",
 				"note": "协作者列表第二个协作者邮箱"
 			},
 			{
 				"elementName": "collaborator_3_list_emailOrMobile",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'collab-modal-user-list-wrapper')]/div/div/div/span[2])[3]",
+				"locator": "(//div[contains(@class,'test-list-row-wrapper')]/span[2])[3]",
 				"note": "协作者列表第三个协作者邮箱"
 			},
 			{
@@ -649,7 +649,7 @@
 			{
 				"elementName": "addCollaborator_company_list",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[3]//div[1]//div[1]//div[2]",
+				"locator": "//div[starts-with(@class,'sm-tab-navtab  ')][contains(text(),'企业成员')]",
 				"note": "协作者页面切换到企业成员列表"
 			},
 			{
@@ -661,13 +661,13 @@
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div)[1]",
+				"locator": "(//div[starts-with(@class,'test-list-row-wrapper')]//div/span)[1]",
 				"note": "最近协作者列表第一个添加按钮"
 			},
 			{
                 "elementName": "addCollaborator_2_add",
                 "locateUsing": "xpath",
-                "locator": "(//div[@class='sm-tab-content']/div/div/div/div/div/div[2]/div)[2]",
+                "locator": "(//div[starts-with(@class,'test-list-row-wrapper')]//div/span)[2]",
                 "note": "最近协作者列表第二个添加按钮"
              },
              {
