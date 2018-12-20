@@ -25,8 +25,8 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 	 *
 	 */
 	@Test(enabled = true)
-	public void Text_Editing9() throws InterruptedException {
-		login("textediting@shimo.im", "123123");
+	public void Text_Copy1() throws InterruptedException {
+		login("textcopy1@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		Date date = new Date();
@@ -53,8 +53,8 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 	 *
 	 */
 	@Test(enabled = true)
-	public void Text_Editing3() throws InterruptedException, AWTException {
-		login("textstyle3@shimo.im", "123123");
+	public void Text_Copy2() throws InterruptedException, AWTException {
+		login("textcopy2@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
@@ -72,15 +72,10 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 			assertTrue(element);
 		}
 	}
-	private void setClipbordContents(String texts) {// 写入系统剪贴板
-		StringSelection stringSelection = new StringSelection(texts);
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		clipboard.setContents(stringSelection, null);
 
-	}
 
 	/**
-	 * 复制文本框，选中幻灯片页面粘贴
+	 * 复制文本框，粘贴到第二页幻灯片
 	 *
 	 * @author 王继程
 	 *
@@ -88,8 +83,8 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 	 *
 	 */
 	@Test(enabled = true)
-	public void Text_Editing4() throws InterruptedException {
-		login("textstyle4@shimo.im", "123123");
+	public void Text_Copy3() throws InterruptedException {
+		login("textcopy3@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
@@ -110,6 +105,39 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 		assertTrue(element);
 
 	}
+	/**
+	 * 复制文本框，粘贴到当前幻灯片页面
+	 *
+	 * @author 王继程
+	 *
+	 * @Time 2018-07-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void Text_Copy4() throws InterruptedException {
+		login("textcopy4@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+		click(page_elements_1);
+		click(smslide_frame_anchor_1);
+		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
+		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+		Thread.sleep(500);
+		driver.navigate().refresh();// 刷新页面
+		Boolean element = doesWebElementExist(page_elements_2);
+		click(page_elements_2);
+		click(smslide_frame_anchor_1);
+		action.sendKeys(Keys.DELETE).perform();
+		assertTrue(element);
 
+	}
+
+	private void setClipbordContents(String texts) {// 写入系统剪贴板
+		StringSelection stringSelection = new StringSelection(texts);
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		clipboard.setContents(stringSelection, null);
+
+	}
 
 }

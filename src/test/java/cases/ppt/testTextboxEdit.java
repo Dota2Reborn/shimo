@@ -68,7 +68,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 *
+	 *文本框中文本删除后，刷新文本框是否正常
 	 *
 	 * @author 王继程
 	 *
