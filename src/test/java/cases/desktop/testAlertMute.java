@@ -101,7 +101,7 @@ public class testAlertMute extends TestInit {
         wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         doc_edit.sendKeys(Keys.CONTROL, 'a' + "编辑文档并保存" + Keys.ENTER);
         click(quick_access_point);
-        click(Back_to_Table);
+        click(Back_to_Dashboard);
         wait.until(ExpectedConditions.elementToBeClickable(dashboard));
         Boolean exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
         int i = 1;

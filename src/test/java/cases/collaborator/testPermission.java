@@ -38,7 +38,7 @@ public class testPermission extends TestInit {
         String M = doc_discuss_input.getAttribute("contenteditable");
         assertEquals(M, "true");
         click(quick_access_point);
-        click(Back_to_Table);
+        click(Back_to_Dashboard);
         contextClick(desktop1_1);
         click(menu_delete);
         click(Exit_share_OK);
