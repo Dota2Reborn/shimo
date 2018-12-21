@@ -741,11 +741,11 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-ancestor']//div[1]//a[1]",
+				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[1]/a[1]",
 				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
-				"elementName": "Back_to_Table",
+				"elementName": "Back_to_Dashboard",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[2]/a[1]",
 				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
@@ -845,6 +845,42 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']/button[1]",
 				"note": "确定结束讨论"
+			},
+			{
+				"elementName": "input_headerSearch",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-input-wrapper ')]/input",
+				"note": "header上的搜索输入框"
+			},
+			{
+				"elementName": "searchList_1",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'qa-highlight ')]/a",
+				"note": "header搜索结果，第一个"
+			},
+          {
+            "elementName": "b_headerCreate",
+            "locateUsing": "xpath",
+            "locator": "//span[@data-test='create-file']",
+            "note": "header创建按钮"
+          },
+			{
+				"elementName": "b_headerCreateDoc",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-doc']",
+				"note": "header创建文档按钮"
+			},
+			{
+				"elementName": "b_headerCreateSheet",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-sheets']",
+				"note": "header创建表格按钮"
+			},
+			{
+				"elementName": "b_headerCreateSlide",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-slide']",
+				"note": "header创建幻灯片按钮"
 			}
 			
 		]

@@ -120,8 +120,8 @@ public class elementFile {
 	public WebElement quick_access_point;
 	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
 	public WebElement Back_to_Desktop;
-	@SearchWith(pageName = "doc", elementName = "Back_to_Table", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回工作台")
-	public WebElement Back_to_Table;
+	@SearchWith(pageName = "doc", elementName = "Back_to_Dashboard", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回工作台")
+	public WebElement Back_to_Dashboard;
 	@SearchWith(pageName = "doc", elementName = "doc_edit", noteName = "文档编辑入口")
 	public WebElement doc_edit;
 	@SearchWith(pageName = "doc", elementName = "doc_notice_user", noteName = "@用户，被选列表中内容第一个用户")
@@ -152,7 +152,24 @@ public class elementFile {
 	public WebElement End_Discussion;
 	@SearchWith(pageName = "doc", elementName = "End_Discussion_OK", noteName = "确定结束讨论")
 	public WebElement End_Discussion_OK;
-
+	/** header上的搜索输入框 */
+	@SearchWith(pageName = "doc", elementName = "input_headerSearch", noteName = "header上的搜索输入框")
+	public WebElement input_headerSearch;
+    /** header搜索结果，第一个 */
+	@SearchWith(pageName = "doc", elementName = "searchList_1")
+	public WebElement searchList_1;
+    /** header创建按钮 */
+    @SearchWith(pageName = "doc", elementName = "b_headerCreate")
+    public WebElement b_headerCreate;
+	/** header创建文档按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_headerCreateDoc")
+	public WebElement b_headerCreateDoc;
+    /** header创建表格按钮 */
+    @SearchWith(pageName = "doc", elementName = "b_headerCreateSheet")
+    public WebElement b_headerCreateSheet;
+    /** header创建幻灯片按钮 */
+    @SearchWith(pageName = "doc", elementName = "b_headerCreateSlide")
+    public WebElement b_headerCreateSlide;
 	/**
 	 * dashboard
 	 * 工作台

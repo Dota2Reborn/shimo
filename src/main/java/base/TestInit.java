@@ -360,7 +360,7 @@ public class TestInit extends elementFile {
      */
     public void click(WebElement element) {
         try {
-            if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Table.toString())
+            if (element.toString().equals(b_back.toString()) || element.toString().equals(Back_to_Dashboard.toString())
                     || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(doc_menu_delete_OK.toString())) {
                 // 离开文档表格编辑页
