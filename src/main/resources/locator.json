@@ -1810,13 +1810,7 @@
 				"elementName": "picture_replacement",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[3]",
-				"note": "替换图片"
-			},
-			{
-				"elementName": "picture_resetting",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='smslide-viewport-plugin-elementToolbar']//div[1]//div[4]",
-				"note": "重置"
+				"note": "替换图片&重置按钮"
 			},
 			{
 				"elementName": "picture_prune1",

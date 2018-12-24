@@ -665,10 +665,8 @@ public class elementFile {
 	public WebElement page_elements_5_1;
 	@SearchWith(pageName = "ppt_page", elementName = "picture_trim", noteName = "剪裁按钮")
 	public WebElement picture_trim;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_replacement", noteName = "替换图片")
+	@SearchWith(pageName = "ppt_page", elementName = "picture_replacement", noteName = "替换图片&重置按钮")
 	public WebElement picture_replacement;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_resetting", noteName = "重置")
-	public WebElement picture_resetting;
 	@SearchWith(pageName = "ppt_page", elementName = "picture_prune1", noteName = "图片剪裁左上角")
 	public WebElement picture_prune1;
 	@SearchWith(pageName = "ppt_page", elementName = "picture_prune2", noteName = "图片剪裁右上角")
