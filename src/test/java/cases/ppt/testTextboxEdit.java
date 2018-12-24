@@ -53,7 +53,6 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		click(desktop);
 		click(desktop1_1);
 		click(add_text);
-		// click(ppt_text);
 		action.moveToElement(ppt_text).click().perform();
 		Thread.sleep(500);
 		action.sendKeys("新建文本框输入").perform();
@@ -68,7 +67,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 *文本框中文本删除后，刷新文本框是否正常
+	 *文本框中文本删除后，刷新文本框编辑是否正常
 	 *
 	 * @author 王继程
 	 *
@@ -80,29 +79,27 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		login("textstyle3@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
-		click(ppt_page_1);
-		//setClipbordContents("复制文本内容直接粘贴是否成功");
-		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
-		Thread.sleep(500);
-		Boolean element = doesWebElementExist(page_elements_1);
-		if (element) {
-			String time = getText(page_elements_1);
-			click(page_elements_1);
-			click(smslide_frame_anchor_1);
-			action.sendKeys(Keys.chord(Keys.DELETE)).perform();
-			assertEquals(time, "复制文本内容直接粘贴是否成功");
-		} else {
-			assertTrue(element);
+		click(page_elements_1);
+		for (int i = 1; i < 5; i++) {
+			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
 		}
+		Thread.sleep(500);
+		driver.navigate().refresh();
+		click(page_elements_1);
+		action.sendKeys("再次验证").build().perform();
+		Thread.sleep(500);
+		driver.navigate().refresh();// 刷新页面
+		String time = getText(page_elements_1);
+		assertEquals(time, "再次验证");
 
 	}
 
 	/**
-	 *
+	 *新建文本框不编辑，切换页面后编辑
 	 *
 	 * @author 王继程
 	 *
-	 * @Time 2018-07-24
+	 * @Time
 	 *
 	 */
 	@Test(enabled = true)
@@ -111,21 +108,21 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		click(desktop);
 		click(desktop1_1);
 		click(ppt_page_1);
-		click(page_elements_1);
-		click(smslide_frame_anchor_1);
-		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
+		click(add_text);
+		action.moveToElement(ppt_text).click().perform();
 		click(ppt_page_2);
-		Thread.sleep(500);
-		// Robot robot = new Robot();
-		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+		click(ppt_page_1);
+		click(page_elements_1);
+		action.sendKeys("编辑文本框").build().perform();
 		Thread.sleep(500);
 		driver.navigate().refresh();// 刷新页面
-		click(ppt_page_2);
-		Boolean element = doesWebElementExist(page_elements_1);
+		String time = getText(page_elements_1);
 		click(page_elements_1);
-		click(smslide_frame_anchor_1);
+		click(smslide_frame_anchor_2);
 		action.sendKeys(Keys.DELETE).perform();
-		assertTrue(element);
+		assertEquals(time, "编辑文本框");
+
+
 
 	}
 	/**
@@ -157,7 +154,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 	/**
-	 *
+	 *设置文本有序列表后换行
 	 *
 	 * @author 王继程
 	 * @throws AWTException
@@ -166,30 +163,17 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	 */
 	@Test(enabled = true)
 	public void Text_Editing6() throws InterruptedException, AWTException {
-
 		login("textstyle6@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
+		click(desktop_new);
+		click(desktop_newslides);
 		click(ppt_page_1);
 		click(page_elements_1);
-		action.sendKeys(Keys.chord(Keys.CONTROL, "a")).build().perform();
-		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
-		click(ppt_page_2);
-		click(page_elements_1);
-		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
-		Boolean element1 = doesWebElementExist(smslide_ordered_3);
-		click(ppt_page_1);
-		click(page_elements_2);
-		action.sendKeys(Keys.chord(Keys.CONTROL, "a")).build().perform();
-		action.sendKeys(Keys.chord(Keys.CONTROL, "c")).build().perform();
-		click(ppt_page_3);
-		click(page_elements_1);
-		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
-		Boolean element2 = doesWebElementExist(smslide_unordered_3);
-//		click(ppt_dotdotdot);
-//		click(ppt_delete);
-//		click(desktop_newFolder_name_ok);
-		assertTrue(element1 && element2);
+		action.sendKeys(Keys.ENTER+"第二行").build().perform();
+		Boolean element1 = doesWebElementExist(smslide_ordered_2);
+		for (int i = 1; i < 5; i++) {
+			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
+		}
+		assertTrue(element1);
 	}
 
 	/**
