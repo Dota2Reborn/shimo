@@ -16,7 +16,7 @@ public class testRecycleBin extends TestInit {
      * @Time 2018-03-12
      */
     @Test(enabled = true)
-    public void New_Document() {
+    public void testRecycleBin_1() {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
         Sort();
