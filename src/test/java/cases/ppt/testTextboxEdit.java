@@ -67,7 +67,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	}
 
 	/**
-	 *文本框中文本删除后，刷新文本框编辑是否正常
+	 *文本框中文本删除后刷新,再编辑文本框是否正常
 	 *
 	 * @author 王继程
 	 *
@@ -126,7 +126,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 	/**
-	 * 设置文本有序无序列表
+	 * 編輯文本，设置文本有序无序列表
 	 *
 	 * @author 王继程
 	 * @throws AWTException
@@ -164,8 +164,8 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	@Test(enabled = true)
 	public void Text_Editing6() throws InterruptedException, AWTException {
 		login("textstyle6@shimo.im", "123123");
-		click(desktop_new);
-		click(desktop_newslides);
+		click(desktop);
+		click(desktop1_1);
 		click(ppt_page_1);
 		click(page_elements_1);
 		action.sendKeys(Keys.ENTER+"第二行").build().perform();
@@ -174,6 +174,69 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
 		}
 		assertTrue(element1);
+	}
+
+	/**
+	 *编辑组合中的文本框
+	 *
+	 * @author 王继程
+	 * @throws AWTException
+	 * @Time 2018-07-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void Text_Editing7() throws InterruptedException, AWTException {
+		login("textstyle7@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+//		String time1 = getText(page_elements_1);
+//		System.out.println(time1);
+		click(page_elements_1);
+		click(page_elements_1);
+		action.sendKeys("输入六个字符").build().perform();
+		Thread.sleep(500);
+		driver.navigate().refresh();// 刷新页面
+		String time = getText(page_elements_1);
+		click(page_elements_1);
+		click(page_elements_1);
+		for (int i = 1; i < 7; i++) {
+			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
+		}
+
+		assertEquals(time, "输入六个字符");
+	}
+
+	/**
+	 *编辑设置过样式的文本框
+	 *
+	 * @author 王继程
+	 * @throws AWTException
+	 * @Time 2018-07-24
+	 *
+	 */
+	@Test(enabled = true)
+	public void Text_Editing8() throws InterruptedException, AWTException {
+		login("textstyle8@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_1);
+		click(page_elements_1);
+//		action.sendKeys("输入文本").build().perform();
+//		Thread.sleep(500);
+//		driver.navigate().refresh();// 刷新页面
+//		String time = getText(page_elements_1);
+		//page_elements_1.getLocation();
+		String a=page_elements_1.getCssValue("font-family");
+		String s=page_elements_1.getAttribute("font-family");
+		System.out.println(a);
+		System.out.println(s);
+//		click(page_elements_1);
+//		for (int i = 1; i < 5; i++) {
+//			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
+//		}
+//
+//		assertEquals(time, "输入文本");
 	}
 
 	/**
