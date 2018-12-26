@@ -86,6 +86,7 @@ public class dashboard_own extends TestInit {
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
+        Thread.sleep(500);
 
         click(b_addCollaborator_1_list);
         click(list_addCollaborator_1);

@@ -20,7 +20,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_1() {
+	public void notice_1() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -28,6 +28,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12");
+		Thread.sleep(1000);
 		click(doc_notice_user);
 		String url1 = driver.getCurrentUrl();
 		click(b_back);
