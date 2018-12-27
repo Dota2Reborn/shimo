@@ -48,12 +48,17 @@ public class dashboard_update extends TestInit {
     @Test
     public void update3() {
         login("gengxin3@shimo.im", "123123");
-        click(dashboard_update_name);
-        click(doc_edit);
-        sendKeys(doc_edit, "1");
+        click(desktop_new);
+        click(desktop_newDoc);
+        String time = getDate();
+        sendKeys(doc_title_input, time);
+        sendKeys(doc_edit, "la");
         click(b_back);
-        driver.navigate().refresh();
+
         String text1 = getText(dashboard_update_time);
+        contextClick(dashboard_share_file_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
         assertEquals(text1, "刚刚 我 更新");
 
     }
