@@ -216,7 +216,7 @@ public class testAddCollaborator extends TestInit {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
 
-        contextClick(desktop1_1_folder);
+        contextClick(desktop1_3_folder);
         moveToElement(menu_cooperation);
         click(b_addCollaborator_1_list);
         click(list_addCollaborator_1);

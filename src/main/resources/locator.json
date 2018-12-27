@@ -858,30 +858,54 @@
 				"locator": "//li[starts-with(@class,'qa-highlight ')]/a",
 				"note": "header搜索结果，第一个"
 			},
-          {
-            "elementName": "b_headerCreate",
-            "locateUsing": "xpath",
-            "locator": "//span[@data-test='create-file']",
-            "note": "header创建按钮"
-          },
-			{
-				"elementName": "b_headerCreateDoc",
-				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-doc']",
-				"note": "header创建文档按钮"
-			},
-			{
-				"elementName": "b_headerCreateSheet",
-				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-sheets']",
-				"note": "header创建表格按钮"
-			},
-			{
-				"elementName": "b_headerCreateSlide",
-				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-slide']",
-				"note": "header创建幻灯片按钮"
-			}
+            {
+              "elementName": "b_headerCreate",
+              "locateUsing": "xpath",
+              "locator": "//span[@data-test='create-file']",
+              "note": "header创建按钮"
+            },
+            {
+                "elementName": "b_headerCreateDoc",
+                "locateUsing": "xpath",
+                "locator": "//span[@data-test='create-file-doc']",
+                "note": "header创建文档按钮"
+            },
+            {
+                "elementName": "b_headerCreateSheet",
+                "locateUsing": "xpath",
+                "locator": "//span[@data-test='create-file-sheets']",
+                "note": "header创建表格按钮"
+            },
+            {
+                "elementName": "b_headerCreateSlide",
+                "locateUsing": "xpath",
+                "locator": "//span[@data-test='create-file-slide']",
+                "note": "header创建幻灯片按钮"
+            },
+            {
+              "elementName": "b_user_icon",
+              "locateUsing": "xpath",
+              "locator": "//div[@data-test='page-header-right']/div[2]/div",
+              "note": "header上用户头像icon"
+            },
+            {
+              "elementName": "b_discord",
+              "locateUsing": "xpath",
+              "locator": "//div[@data-test='page-header-right']/button",
+              "note": "header上讨论按钮"
+            },
+            {
+              "elementName": "b_screenShow",
+              "locateUsing": "xpath",
+              "locator": "//div[@data-test='page-header-right']/button[2]",
+              "note": "header上演示按钮"
+            },
+            {
+              "elementName": "b_demoScreenBack",
+              "locateUsing": "className",
+              "locator": "demo-screen-back",
+              "note": "演示页面，退出演示按钮"
+            }
 			
 		]
 	},

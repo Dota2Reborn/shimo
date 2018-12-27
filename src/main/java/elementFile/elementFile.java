@@ -167,9 +167,21 @@ public class elementFile {
     /** header创建表格按钮 */
     @SearchWith(pageName = "doc", elementName = "b_headerCreateSheet")
     public WebElement b_headerCreateSheet;
-    /** header创建幻灯片按钮 */
-    @SearchWith(pageName = "doc", elementName = "b_headerCreateSlide")
-    public WebElement b_headerCreateSlide;
+	/** header创建幻灯片按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_headerCreateSlide")
+	public WebElement b_headerCreateSlide;
+	/** header上用户头像icon */
+	@SearchWith(pageName = "doc", elementName = "b_user_icon")
+	public WebElement b_user_icon;
+	/** header上讨论按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_discord")
+	public WebElement b_discord;
+	/** header上演示按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_screenShow")
+	public WebElement b_screenShow;
+	/** 演示页面，退出演示按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_demoScreenBack")
+	public WebElement b_demoScreenBack;
 	/**
 	 * dashboard
 	 * 工作台
