@@ -1921,8 +1921,6 @@
 				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[2]/div[1]",
 				"note": "备注内容"
 			},
-
-
 			{
 				"elementName": "page_style",
 				"locateUsing": "xpath",

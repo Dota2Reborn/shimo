@@ -706,8 +706,6 @@ public class elementFile {
     public WebElement Note_disorder;
     @SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_content", noteName = "备注内容")
     public WebElement Note_content;
-
-
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_style", noteName = "背景填充")
 	public WebElement page_style;
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_colour", noteName = "颜色选择")
