@@ -1868,6 +1868,62 @@
 		"pageName": "PPT_page_rightBar",
 		"elements": [
 			{
+				"elementName": "Note_Bright",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]/div[1]/div[1]/div[1]/div[1]//button[1]",
+				"note": "备注高亮颜色"
+			},
+			{
+				"elementName": "Note_Bright_arrow",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']//div[2]/div[1]/div[1]/div[1]/div[1]//button[2]",
+				"note": "备注高亮颜色下箭头"
+			},
+			{
+				"elementName": "Note_bold",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[1]",
+				"note": "备注文本粗体"
+			},
+			{
+				"elementName": "Note_italic",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[2]",
+				"note": "备注文本斜体"
+			},
+			{
+				"elementName": "Note_underscores",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[3]",
+				"note": "备注文本下划线"
+			},
+			{
+				"elementName": "Note_lines",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[4]",
+				"note": "备注文本中划线"
+			},
+			{
+				"elementName": "Note_orderly",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[5]",
+				"note": "备注文本有序列表"
+			},
+			{
+				"elementName": "Note_disorder",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[1]/button[6]",
+				"note": "备注文本中无序列表"
+			},
+			{
+				"elementName": "Note_content",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='slide-sidebar']/div[2]/div[1]/div[1]/div[2]/div[1]",
+				"note": "备注内容"
+			},
+
+
+			{
 				"elementName": "page_style",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar-background-fill']//div[1]//button[1]",

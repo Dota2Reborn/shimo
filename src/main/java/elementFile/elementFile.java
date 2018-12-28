@@ -688,6 +688,26 @@ public class elementFile {
 	 * ppt选中页面右边栏
 	 * PPT_page_rightBar
 	 */
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_Bright", noteName = "备注高亮颜色")
+	public WebElement Note_Bright;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_Bright_arrow", noteName = "备注高亮颜色下箭头")
+	public WebElement Note_Bright_arrow;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_bold", noteName = "备注文本粗体")
+	public WebElement Note_bold;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_italic", noteName = "备注文本斜体")
+	public WebElement Note_italic;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_underscores", noteName = "备注文本下划线")
+	public WebElement Note_underscores;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_lines", noteName = "备注文本中划线")
+	public WebElement Note_lines;
+	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_orderly", noteName = "备注文本中有序列表")
+	public WebElement Note_orderly;
+    @SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_disorder", noteName = "备注文本中无序列表")
+    public WebElement Note_disorder;
+    @SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_content", noteName = "备注内容")
+    public WebElement Note_content;
+
+
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_style", noteName = "背景填充")
 	public WebElement page_style;
 	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_colour", noteName = "颜色选择")
