@@ -1551,13 +1551,13 @@
 				"elementName": "ppt_type",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[1]",
-				"note": "样式&页面样式&组合排列"
+				"note": "样式&备注&组合排列"
 			},
 			{
 				"elementName": "ppt_animation",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='slide-sidebar']/div[1]/div[1]/button[2]",
-				"note": "文本&排列&切换动画"
+				"note": "页面样式&文本&排列&切换动画"
 			},
 			{
 				"elementName": "ppt_arrange",

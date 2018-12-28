@@ -574,9 +574,9 @@ public class elementFile {
 	public WebElement enlarge_trying;
 	@SearchWith(pageName = "ppt_top", elementName = "ppt_zoom", noteName = "缩放视图")
 	public WebElement ppt_zoom;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_type", noteName = "样式&页面样式&组合排列")
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_type", noteName = "样式&备注&组合排列")
 	public WebElement ppt_type;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_animation", noteName = "文本&排列&切换动画")
+	@SearchWith(pageName = "ppt_top", elementName = "ppt_animation", noteName = "页面样式&文本&排列&切换动画")
 	public WebElement ppt_animation;
 	@SearchWith(pageName = "ppt_top", elementName = "ppt_arrange", noteName = "文本排列")
 	public WebElement ppt_arrange;
