@@ -905,7 +905,13 @@
               "locateUsing": "className",
               "locator": "demo-screen-back",
               "note": "演示页面，退出演示按钮"
-            }
+            },
+			{
+				"elementName": "test",
+				"locateUsing": "test",
+				"locator": "demo-screen-back",
+				"note": "test"
+			}
 			
 		]
 	},
