@@ -907,10 +907,16 @@
               "note": "演示页面，退出演示按钮"
             },
 			{
-				"elementName": "test",
-				"locateUsing": "test",
-				"locator": "demo-screen-back",
-				"note": "test"
+				"elementName": "b_collaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/button[3]",
+				"note": "header上协作者按钮"
+			},
+			{
+				"elementName": "input_collaborator",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='collaborator-search-inputbox']",
+				"note": "header上添加协作者邮箱输入框"
 			}
 			
 		]

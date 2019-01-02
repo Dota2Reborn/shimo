@@ -182,6 +182,12 @@ public class elementFile {
 	/** 演示页面，退出演示按钮 */
 	@SearchWith(pageName = "doc", elementName = "b_demoScreenBack")
 	public WebElement b_demoScreenBack;
+	/** header上协作者按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_collaborator")
+	public WebElement b_collaborator;
+	/** header上添加协作者邮箱输入框 */
+	@SearchWith(pageName = "doc", elementName = "input_collaborator")
+	public WebElement input_collaborator;
 	/**
 	 * dashboard
 	 * 工作台
