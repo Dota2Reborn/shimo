@@ -251,6 +251,47 @@ public class elementFile {
 	public WebElement desktop_user_icon_status_R;
 
 	/**
+	 * spaceRightClickMenu
+	 * 协作空间右键菜单
+	 */
+
+	/** 预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_1")
+	public WebElement space_RightMenu_1;
+	/** 上传文件夹(桌面)&移动(多选) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_2")
+	public WebElement space_RightMenu_2;
+	/** 复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3")
+	public WebElement space_RightMenu_3;
+	/** 演示页面，退出演示按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4")
+	public WebElement space_RightMenu_4;
+	/** header上协作者按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_5")
+	public WebElement space_RightMenu_5;
+	/** header上添加协作者邮箱输入框 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_6")
+	public WebElement space_RightMenu_6;
+	/** 演示页面，退出演示按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_7")
+	public WebElement space_RightMenu_7;
+	/** header上协作者按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_8")
+	public WebElement space_RightMenu_8;
+	/** header上添加协作者邮箱输入框 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_9")
+	public WebElement space_RightMenu_9;
+	/** 演示页面，退出演示按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_10")
+	public WebElement space_RightMenu_10;
+	/** header上协作者按钮 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_11")
+	public WebElement space_RightMenu_11;
+
+
+
+	/**
 	 * addCollaborator
 	 * 协作者相关
 	 */
