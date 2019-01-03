@@ -2948,6 +2948,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[2]/div[3]",
 				"note": "协作空间第二行第三个文件"
+			},
+			{
+				"elementName": "space_Preview_video_music",
+				"locateUsing": "xpath",
+				"locator": "//div/video[1]",
+				"note": "音视频预览"
+			},
+			{
+				"elementName": "space_Preview_image",
+				"locateUsing": "xpath",
+				"locator": "//div/img[@class='iv-large-image']",
+				"note": "图片预览"
 			}
 		]
 	},
