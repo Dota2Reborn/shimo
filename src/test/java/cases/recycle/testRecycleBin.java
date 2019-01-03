@@ -16,13 +16,14 @@ public class testRecycleBin extends TestInit {
      * @Time 2018-03-12
      */
     @Test(enabled = true)
-    public void testRecycleBin_1() {
+    public void testRecycleBin_1() throws InterruptedException {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
         Sort();
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
+        Thread.sleep(1000);
         click(trash);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
         String name = getText(desktop1_1);
