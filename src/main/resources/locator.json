@@ -2912,6 +2912,42 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='list']/div[3]/a",
 				"note": "协作空间列表3"
+			},
+			{
+				"elementName": "space_document_1_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[1]/div[1]",
+				"note": "协作空间第一行第一个文件"
+			},
+			{
+				"elementName": "space_listing_1_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[1]/div[2]",
+				"note": "协作空间第一行第二个文件"
+			},
+			{
+				"elementName": "space_listing_1_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[1]/div[3]",
+				"note": "协作空间第一行第三个文件"
+			},
+			{
+				"elementName": "space_document_2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[2]/div[1]",
+				"note": "协作空间第二行第一个文件"
+			},
+			{
+				"elementName": "space_listing_2_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[2]/div[2]",
+				"note": "协作空间第二行第二个文件"
+			},
+			{
+				"elementName": "space_listing_2_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[2]/div[3]",
+				"note": "协作空间第二行第三个文件"
 			}
 		]
 	},
