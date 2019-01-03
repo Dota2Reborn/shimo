@@ -251,6 +251,39 @@ public class elementFile {
 	public WebElement desktop_user_icon_status_R;
 
 	/**
+	 * Collaborative_space
+	 * 协作空间
+	 */
+
+	/** 绑定手机号按钮 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_newSpace")
+	public WebElement b_newSpace;
+	/** 新建协作空间，空间明输入框 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "i_newSpace_inputPaceName")
+	public WebElement i_newSpace_inputPaceName;
+	/** 新建协作空间，下一步按钮 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_newSpace_next")
+	public WebElement b_newSpace_next;
+	/** 新建协作空间，取消按钮 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_newSpace_cancel")
+	public WebElement b_newSpace_cancel;
+	/** 新建协作空间，下一步按钮 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_collaborativeSpaceList")
+	public WebElement b_collaborativeSpaceList;
+	/** 协作空间列表1 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_1")
+	public WebElement space_listing_1;
+	/** 协作空间列表2 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_2")
+	public WebElement space_listing_2;
+	/** 协作空间列表3 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_3")
+	public WebElement space_listing_3;
+
+
+
+
+	/**
 	 * spaceRightClickMenu
 	 * 协作空间右键菜单
 	 */

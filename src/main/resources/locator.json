@@ -2863,7 +2863,7 @@
 	},
 	{
 		"note": "协作空间",
-		"pageName": "Collaborative space",
+		"pageName": "Collaborative_space",
 		"elements": [
 			{
 				"elementName": "b_newSpace",
@@ -2889,12 +2889,30 @@
               "locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
               "note": "新建协作空间，取消按钮"
             },
-            {
-              "elementName": "b_collaborativeSpaceList",
-              "locateUsing": "xpath",
-              "locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
-              "note": "新建协作空间，下一步按钮"
-            }
+			{
+				"elementName": "b_collaborativeSpaceList",
+				"locateUsing": "xpath",
+				"locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
+				"note": "新建协作空间，下一步按钮"
+			},
+			{
+				"elementName": "space_listing_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[1]/a",
+				"note": "协作空间列表1"
+			},
+			{
+				"elementName": "space_listing_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[2]/a",
+				"note": "协作空间列表2"
+			},
+			{
+				"elementName": "space_listing_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[3]/a",
+				"note": "协作空间列表3"
+			}
 		]
 	},
 	{
