@@ -2960,6 +2960,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div/img[@class='iv-large-image']",
 				"note": "图片预览"
+			},
+			{
+				"elementName": "space_Preview_office",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']/div/div/div",
+				"note": "文档表格幻灯片预览"
+			},
+			{
+				"elementName": "space_Preview_txt",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']",
+				"note": "txt文件预览"
 			}
 		]
 	},

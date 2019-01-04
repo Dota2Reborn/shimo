@@ -303,6 +303,12 @@ public class elementFile {
 	/** 图片预览 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_image")
 	public WebElement space_Preview_image;
+	/** 文档表格幻灯片预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_office")
+	public WebElement space_Preview_office;
+	/** 文档表格幻灯片预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_txt")
+	public WebElement space_Preview_txt;
 
 
 
