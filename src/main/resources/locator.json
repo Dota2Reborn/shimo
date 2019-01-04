@@ -775,12 +775,6 @@
 				"note": "文档编辑页面中右上角 点点点"
 			},
 			{
-				"elementName": "doc_menu_msg",
-				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical operations sm-dropdown-menu-root']//li[contains(text(),'文档信息')]",
-				"note": "文档编辑页面中右上角 点点点-文档信息"
-			},
-			{
 				"elementName": "doc_menu_delete",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']/ul/li[last()]",
