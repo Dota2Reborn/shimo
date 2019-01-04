@@ -2914,6 +2914,12 @@
 				"note": "协作空间列表3"
 			},
 			{
+				"elementName": "space_listing_4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[4]/a",
+				"note": "协作空间列表4"
+			},
+			{
 				"elementName": "space_document_1_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[1]/div[1]",
