@@ -295,6 +295,18 @@ public class elementFile {
 	/** 协作空间第二行第三个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_2_3")
 	public WebElement space_document_2_3;
+	/** 音视频预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_video_music")
+	public WebElement space_Preview_video_music;
+	/** 图片预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_image")
+	public WebElement space_Preview_image;
+	/** 文档表格幻灯片预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_office")
+	public WebElement space_Preview_office;
+	/** 文档表格幻灯片预览 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_txt")
+	public WebElement space_Preview_txt;
 
 
 
