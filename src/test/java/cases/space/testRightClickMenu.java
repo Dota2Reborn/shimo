@@ -3,6 +3,8 @@ package cases.space;
 import base.TestInit;
 import org.testng.annotations.Test;
 
+
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -148,15 +150,15 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_word_tab() throws InterruptedException {
-        login("Space_office@shimo.im", "123123");
-        //login("ppt1@shimo.im", "123123");
+        login("Space_tab@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
-        String text = getText(space_Preview_txt);
-        text=text.replace("\n","");
-        assertEquals(text, "我喜欢电影");
+        Thread.sleep(500);
+        driver.close();
+        switchToPage(0);
+        String time = doc_title_input.getAttribute("value");
+        assertEquals(time, "这是文档");
     }
     /**
      * 右键在新标签页中打开excel
@@ -167,15 +169,16 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_excel_tab() throws InterruptedException {
-        login("Space_office@shimo.im", "123123");
-        //login("ppt1@shimo.im", "123123");
+        login("Space_tab@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
         Thread.sleep(1000);
-        String text = getText(space_Preview_txt);
-        text=text.replace("\n","");
-        assertEquals(text, "我喜欢电影");
+        driver.close();
+        switchToPage(0);
+//        click(ppt_filename);
+        String time = ppt_filename.getAttribute("value");
+        assertEquals(time, "这是表格");
     }
     /**
      * 右键在新标签页中打开ppt
@@ -186,15 +189,16 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_ppt_tab() throws InterruptedException {
-        login("Space_office@shimo.im", "123123");
-        //login("ppt1@shimo.im", "123123");
+        login("Space_tab@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
         Thread.sleep(1000);
-        String text = getText(space_Preview_txt);
-        text=text.replace("\n","");
-        assertEquals(text, "我喜欢电影");
+        driver.close();
+        switchToPage(0);
+//        click(ppt_filename);
+        String time = ppt_filename.getAttribute("value");
+        assertEquals(time, "这是ppt");
     }
     /**
      * 右键在新标签页中打开表单
@@ -205,14 +209,15 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_from_tab() throws InterruptedException {
-        login("Space_office@shimo.im", "123123");
-        //login("ppt1@shimo.im", "123123");
+        login("Space_tab@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
         Thread.sleep(1000);
-        String text = getText(space_Preview_txt);
-        text=text.replace("\n","");
-        assertEquals(text, "我喜欢电影");
+        driver.close();
+        switchToPage(0);
+//        click(ppt_filename);
+        String time = ppt_filename.getAttribute("value");
+        assertEquals(time, "这是表单");
     }
 }
