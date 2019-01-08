@@ -488,7 +488,7 @@
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//button[1]",
-				"note": "移动到测试文件夹"
+				"note": "移动到测试文件夹【按钮】"
 			},
 			{
 				"elementName": "desktop1_1_name",
@@ -1258,13 +1258,13 @@
 			{
 				"elementName": "file_menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'快捷方式')]",
+				"locator": "//li/div[contains(text(),'快捷方式')]",
 				"note": "添加快捷方式"
 			},
 			{
 				"elementName": "file_menu_collection",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'收藏')]",
+				"locator": "//li/div[contains(text(),'收藏')]",
 				"note": "添加收藏"
 			},
 			{
@@ -1276,7 +1276,7 @@
 			{
 				"elementName": "file_menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'移动')]",
+				"locator": "//li/div/span[contains(text(),'移动')]",
 				"note": "移动"
 			},
 			{
