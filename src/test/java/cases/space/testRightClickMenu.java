@@ -217,7 +217,6 @@ public class testRightClickMenu extends TestInit {
         Thread.sleep(800);
         driver.close();
         switchToPage(0);
-//        click(ppt_filename);
         String time = doc_header_title.getAttribute("value");
         assertEquals(time, "这是表单");
     }
