@@ -739,6 +739,12 @@
 				"note": "文档标题编辑"
 			},
 			{
+				"elementName": "doc_header_title",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//input",
+				"note": "文档header上标题"
+			},
+			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='qa-file-icon qa-desktop-icon']",

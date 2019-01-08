@@ -116,6 +116,9 @@ public class elementFile {
 	public WebElement doc_title_input;
 	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示同步完成状态")
 	public WebElement doc_saveStatus;
+	/** 文档header上标题 */
+	@SearchWith(pageName = "doc", elementName = "doc_header_title")
+	public WebElement doc_header_title;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point", noteName = "收索&快速打开")
 	public WebElement quick_access_point;
 	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
