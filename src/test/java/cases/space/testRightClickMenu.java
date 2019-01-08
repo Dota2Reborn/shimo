@@ -18,11 +18,11 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_video() throws InterruptedException {
-        //login("Space_video@shimo.im", "123123");
-        login("ppt1@shimo.im", "123123");
-        click(space_listing_3);
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
+        Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_video_music);
         assertTrue(element1);
 
@@ -36,11 +36,11 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_music() throws InterruptedException {
-        //login("Space_music@shimo.im", "123123");
-        login("ppt1@shimo.im", "123123");
-        click(space_listing_2);
+        login("Space_music@shimo.im", "123123");
+        click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
+        Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_video_music);
         assertTrue(element1);
 
@@ -54,12 +54,11 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_image() throws InterruptedException {
-        //login("Space_image@shimo.im", "123123");
-        login("ppt1@shimo.im", "123123");
+        login("Space_image@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_image);
         assertTrue(element1);
 
@@ -77,10 +76,11 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
-        assertEquals(text, "这是一个word文档这是一个word文档这是一个word文档");
+        text=text.substring(0, 10);
+        assertEquals(text, "这是一个word文档");
 
     }
     /**
@@ -96,10 +96,11 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_2);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
-        assertEquals(text, "表格表格表格");
+        text=text.substring(0, 2);
+        assertEquals(text, "表格");
 
 
     }
@@ -116,7 +117,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_3);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
         assertEquals(text, "这是一个幻灯片");
@@ -136,7 +137,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_4);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         String text = getText(space_Preview_txt);
         text=text.replace("\n","");
         assertEquals(text, "我喜欢电影");
@@ -154,7 +155,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(500);
+        Thread.sleep(800);
         driver.close();
         switchToPage(0);
         String time = doc_title_input.getAttribute("value");
@@ -173,7 +174,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_2);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(800);
         driver.close();
         switchToPage(0);
 //        click(ppt_filename);
@@ -193,7 +194,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_3);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(800);
         driver.close();
         switchToPage(0);
 //        click(ppt_filename);
@@ -213,11 +214,12 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_4);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(1000);
+        Thread.sleep(800);
         driver.close();
         switchToPage(0);
 //        click(ppt_filename);
-        String time = ppt_filename.getAttribute("value");
+        String time = doc_header_title.getAttribute("value");
         assertEquals(time, "这是表单");
     }
+
 }
