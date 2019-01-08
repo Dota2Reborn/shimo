@@ -1355,7 +1355,7 @@
 			{
 				"elementName": "ppt_filename",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[2]",
+				"locator": "//div[@data-test='page-header-left']//div[2]/div/input",
 				"note": "幻灯片标题"
 			},
 			{
