@@ -38,5 +38,5 @@ public class testTextboxStyleSet extends TestInit {//文本设置样式
         assertTrue(element1 && element2);
 
     }
-    String a=page_elements_1.getCssValue("font-family");
+    String a=page_elements_1.getCssValue("font-family");//取得字躰
 }
