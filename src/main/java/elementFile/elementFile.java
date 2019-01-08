@@ -168,6 +168,9 @@ public class elementFile {
 	/** header创建幻灯片按钮 */
 	@SearchWith(pageName = "doc", elementName = "b_headerCreateSlide")
 	public WebElement b_headerCreateSlide;
+	/** header模板创建按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_headerCreateTemplate")
+	public WebElement b_headerCreateTemplate;
 	/** header上用户头像icon */
 	@SearchWith(pageName = "doc", elementName = "b_user_icon")
 	public WebElement b_user_icon;
@@ -600,6 +603,9 @@ public class elementFile {
 	public WebElement file_menu_msg;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
 	public WebElement file_menu_help;
+	/** header上保存模板 */
+	@SearchWith(pageName = "file_menu", elementName = "file_menu_template")
+	public WebElement file_menu_template;
 
 
 	/**

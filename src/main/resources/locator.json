@@ -741,7 +741,7 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[1]/a[1]",
+				"locator": "//div[@class='qa-file-icon qa-desktop-icon']",
 				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
@@ -855,7 +855,7 @@
             {
               "elementName": "b_headerCreate",
               "locateUsing": "xpath",
-              "locator": "//span[@data-test='create-file']",
+              "locator": "//button[@data-test='create-file']",
               "note": "header创建按钮"
             },
             {
@@ -876,6 +876,12 @@
                 "locator": "//span[@data-test='create-file-slide']",
                 "note": "header创建幻灯片按钮"
             },
+			{
+				"elementName": "b_headerCreateTemplate",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-template']",
+				"note": "header模板创建按钮"
+			},
             {
               "elementName": "b_user_icon",
               "locateUsing": "xpath",
@@ -1252,7 +1258,7 @@
 			{
 				"elementName": "file_menu_version",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'保存版本')]",
+				"locator": "//li/div/span[contains(text(),'保存版本')]",
 				"note": "保存版本"
 			},
 			{
@@ -1288,7 +1294,7 @@
 			{
 				"elementName": "file_menu_creatCopy",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'创建副本')]",
+				"locator": "//li//span[contains(text(),'创建副本')]",
 				"note": "创建副本"
 			},
 			{
@@ -1296,6 +1302,12 @@
 				"locateUsing": "xpath",
 				"locator": "//li//span[contains(text(),'删除')]",
 				"note": "删除按钮"
+			},
+			{
+				"elementName": "file_menu_template",
+				"locateUsing": "xpath",
+				"locator": "//li//span[contains(text(),'保存模板')]",
+				"note": "保存模板"
 			},
 			{
 				"elementName": "file_menu_mute",
