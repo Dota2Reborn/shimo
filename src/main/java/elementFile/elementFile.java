@@ -277,6 +277,9 @@ public class elementFile {
 	/** 协作空间列表3 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_3")
 	public WebElement space_listing_3;
+	/** 协作空间列表4 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_4")
+	public WebElement space_listing_4;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;

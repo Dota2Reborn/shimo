@@ -57,11 +57,162 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_Preview_image);
-        System.out.println(element1);
         assertTrue(element1);
 
     }
+    /**
+     * word预览
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_W() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        click(space_listing_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_office);
+        text=text.replace("\n","");
+        assertEquals(text, "这是一个word文档这是一个word文档这是一个word文档");
 
+    }
+    /**
+     * excel预览
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_E() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        click(space_listing_2);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_office);
+        text=text.replace("\n","");
+        assertEquals(text, "表格表格表格");
+
+
+    }
+    /**
+     * ppt预览
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_P() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_office);
+        text=text.replace("\n","");
+        assertEquals(text, "这是一个幻灯片");
+
+
+    }
+    /**
+     * 文本预览
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_t() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_txt);
+        text=text.replace("\n","");
+        assertEquals(text, "我喜欢电影");
+    }
+    /**
+     * 右键在新标签页中打开word
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_tab() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        //login("ppt1@shimo.im", "123123");
+        click(space_listing_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_txt);
+        text=text.replace("\n","");
+        assertEquals(text, "我喜欢电影");
+    }
+    /**
+     * 右键在新标签页中打开excel
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_excel_tab() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        //login("ppt1@shimo.im", "123123");
+        click(space_listing_2);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_txt);
+        text=text.replace("\n","");
+        assertEquals(text, "我喜欢电影");
+    }
+    /**
+     * 右键在新标签页中打开ppt
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_ppt_tab() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        //login("ppt1@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_txt);
+        text=text.replace("\n","");
+        assertEquals(text, "我喜欢电影");
+    }
+    /**
+     * 右键在新标签页中打开表单
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_from_tab() throws InterruptedException {
+        login("Space_office@shimo.im", "123123");
+        //login("ppt1@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_1);
+        Thread.sleep(1000);
+        String text = getText(space_Preview_txt);
+        text=text.replace("\n","");
+        assertEquals(text, "我喜欢电影");
+    }
 }
