@@ -305,6 +305,12 @@
 				"note": "新建文件夹"
 			},
 			{
+				"elementName": "desktop_newTemplate",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template ')]",
+				"note": "从模板新建"
+			},
+			{
 				"elementName": "desktop_newFolder_name",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='new-folder-inputbox']",
@@ -321,6 +327,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[2]",
 				"note": "文件夹命名取消"
+			},
+			{
+				"elementName": "desktop_newTemplate_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='file-list']/li[1]",
+				"note": "模板新建-个人模板第一个"
+			},
+			{
+				"elementName": "desktop_template_delete",
+				"locateUsing": "xpath",
+				"locator": "//ul/li/div[contains(text(),'删除')]",
+				"note": "个人模板，右键菜单，删除按钮"
 			},
 			{
 				"elementName": "desktop1_1",

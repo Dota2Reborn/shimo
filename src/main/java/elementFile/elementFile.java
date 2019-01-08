@@ -71,6 +71,17 @@ public class elementFile {
 	public WebElement desktop_newFolder_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel", noteName = "文件夹命名取消")
 	public WebElement desktop_newFolder_name_cancel;
+
+	/** 模板新建-个人模板第一个 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate_1")
+	public WebElement desktop_newTemplate_1;
+	/** 个人模板，右键菜单，删除按钮 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_template_delete")
+	public WebElement desktop_template_delete;
+	/** 从模板新建 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate")
+	public WebElement desktop_newTemplate;
+
 	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
 	public WebElement desktop_setting;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut", noteName = "桌面快捷方式入口")
