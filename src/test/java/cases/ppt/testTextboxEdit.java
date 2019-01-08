@@ -154,7 +154,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 
 	}
 	/**
-	 *设置文本有序列表后换行
+	 *在有序列表换行后编辑
 	 *
 	 * @author 王继程
 	 * @throws AWTException
@@ -231,6 +231,9 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		String s=page_elements_1.getAttribute("font-family");
 		System.out.println(a);
 		System.out.println(s);
+		click(ppt_page_1);
+		String d = getText(Note_content);
+		System.out.println(d);
 //		click(page_elements_1);
 //		for (int i = 1; i < 5; i++) {
 //			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
