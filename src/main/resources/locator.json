@@ -637,7 +637,7 @@
 			{
 				"elementName": "list_addCollaborator_4_ok",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'确定')]",
+				"locator": "//button[contains(text(),'确定移除')]",
 				"note": "协作者权限列表--移除--确认移除"
 			},
 			{
@@ -2875,7 +2875,7 @@
               "elementName": "i_newSpace_inputPaceName",
               "locateUsing": "xpath",
               "locator": "//input[@class='name']",
-              "note": "新建协作空间，空间明输入框"
+              "note": "新建协作空间，空间名输入框"
             },
             {
               "elementName": "b_newSpace_next",
@@ -2896,6 +2896,90 @@
 				"note": "新建协作空间，下一步按钮"
 			},
 			{
+				"elementName": "b_SpaceSetting1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[1]/a/div",
+				"note": "协作空间列表1hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[2]/a/div",
+				"note": "协作空间列表2hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[3]/a/div",
+				"note": "协作空间列表3hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[4]/a/div",
+				"note": "协作空间列表4hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[5]/a/div",
+				"note": "协作空间列表5hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting_collaboration",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-menu-submenu-title']/span[1]",
+				"note": "协作空间hover设置--「协作者」"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting",
+				"locateUsing": "xpath",
+				"locator": "//div/span[1]/span[contains(text(),'设置')]",
+				"note": "协作空间hover设置--「设置」"
+			},
+			{
+				"elementName": "b_SpaceSetting_collaboration_add",
+				"locateUsing": "xpath",
+				"locator": "//div/span[1]/span[contains(text(),'添加协作者')]",
+				"note": "协作空间hover设置「协作者」--添加协作者"
+			},
+			{
+				"elementName": "b_SpaceSetting_collaboration_view",
+				"locateUsing": "xpath",
+				"locator": "//div/span[1]/span[contains(text(),'查看协作者')]",
+				"note": "协作空间hover设置「协作者」-查看协作者"
+			},
+			{
+				"elementName": "b_SpaceSetting_collaboration_department",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/div[3]/div[1]/div[1]/div[3]",
+				"note": "协作空间hover设置「协作者」--添加协作者--部门tab"
+			},
+			{
+				"elementName": "b_SpaceSetting_collaboration_department2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tab-content']/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]",
+				"note": "协作空间hover设置「协作者」--添加协作者--部门第二级第一个button"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_ChangeName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[1]/*[name()='svg']",
+				"note": "协作空间hover设置--「设置」--修改空间名"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_InputName",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/div[1]/button[1]",
+				"note": "协作空间hover设置--「设置」--修改空间名--输入框"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_ok",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[1]/input",
+				"note": "协作空间hover设置--「设置」--确定button
+			},
+			{
 				"elementName": "space_listing_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='list']/div[1]/a",
@@ -2912,6 +2996,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='list']/div[3]/a",
 				"note": "协作空间列表3"
+			},
+			{
+				"elementName": "space_listing_4",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[4]/a",
+				"note": "协作空间列表4"
+			},
+			{
+				"elementName": "space_listing_5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[5]/a",
+				"note": "协作空间列表5"
 			},
 			{
 				"elementName": "space_document_1_1",

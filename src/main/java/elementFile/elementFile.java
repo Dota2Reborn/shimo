@@ -270,6 +270,48 @@ public class elementFile {
 	/** 新建协作空间，下一步按钮 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_collaborativeSpaceList")
 	public WebElement b_collaborativeSpaceList;
+	/** 协作空间列表1hover设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting1")
+	public WebElement b_SpaceSetting1;
+	/** 协作空间列表2hover设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting2")
+	public WebElement b_SpaceSetting2;
+	/** 协作空间列表3hover设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting3")
+	public WebElement b_SpaceSetting3;
+	/** 协作空间列表4hover设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting4")
+	public WebElement b_SpaceSetting4;
+	/** 协作空间列表5hover设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting5")
+	public WebElement b_SpaceSetting5;
+	/** 协作空间hover设置--「协作者」 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration")
+	public WebElement b_SpaceSetting_collaboration;
+	/** 协作空间hover设置--「设置」 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting")
+	public WebElement b_SpaceSetting_setting;
+	/** 协作空间hover设置「协作者」--添加协作者 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_add")
+	public WebElement b_SpaceSetting_collaboration_add;
+	/** 协作空间hover设置「协作者」--查看协作者 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_view")
+	public WebElement b_SpaceSetting_collaboration_view;
+	/** 协作空间hover设置「协作者」-添加协作者--部门tab */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_department")
+	public WebElement b_SpaceSetting_collaboration_department;
+	/** 协作空间hover设置「协作者」--添加协作者--部门第二级第一个button */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_department2_1")
+	public WebElement b_SpaceSetting_collaboration_department2_1;
+	/** 协作空间hover设置--设置」--修改空间名 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangeName")
+	public WebElement b_SpaceSetting_setting_ChangeName;
+	/** 协作空间hover设置--设置」--修改空间名--输入框 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_InputName")
+	public WebElement b_SpaceSetting_setting_InputName;
+	/** 协作空间hover设置--设置」--确定button */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ok")
+	public WebElement b_SpaceSetting_setting_ok;
 	/** 协作空间列表1 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_1")
 	public WebElement space_listing_1;
@@ -279,6 +321,12 @@ public class elementFile {
 	/** 协作空间列表3 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_3")
 	public WebElement space_listing_3;
+	/** 协作空间列表4 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_4")
+	public WebElement space_listing_4;
+	/** 协作空间列表5 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_5")
+	public WebElement space_listing_5;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;
