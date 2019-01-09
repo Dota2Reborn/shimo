@@ -150,7 +150,7 @@
 			{
 				"elementName": "desktop_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//img[@data-test='account-icon']",
+				"locator": "//div[@data-test='account-icon']/img",
 				"note": "桌面-右上角头像"
 			},
 			{
@@ -289,7 +289,7 @@
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_sheet')]",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mosheet ')]",
 				"note": "新建表格"
 			},
 			{
