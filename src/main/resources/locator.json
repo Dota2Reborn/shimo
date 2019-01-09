@@ -958,19 +958,19 @@
 			{
 				"elementName": "member_management",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[2]",
+				"locator": "//div[@class=' sm-tab-container']/div/div[2]",
 				"note": "企业管理-成员管理"
 			},
 			{
 				"elementName": "company_setting",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[3]",
+				"locator": "//div[@class=' sm-tab-container']/div/div[3]",
 				"note": "企业管理-企业设置"
 			},
 			{
 				"elementName": "pay_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tab-nav']//a[1]",
+				"locator": "//div[@class=' sm-tab-container']/div/div[1]",
 				"note": "企业管理-支付与订单"
 			},
 			{

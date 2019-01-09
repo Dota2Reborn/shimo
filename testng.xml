@@ -119,4 +119,14 @@
 			<class name="cases.profile.testProfile" />
 		</classes>
 	</test>
+	<test name="test21">
+		<classes>
+			<class name="cases.docSheet.testDocHeader" />
+		</classes>
+	</test>
+	<test name="test22">
+		<classes>
+			<class name="cases.docSheet.testSheetHeader" />
+	</classes>
+	</test>
 </suite>
