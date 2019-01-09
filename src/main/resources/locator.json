@@ -289,7 +289,7 @@
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_sheet')]",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mosheet ')]",
 				"note": "新建表格"
 			},
 			{
@@ -506,7 +506,7 @@
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//button[1]",
-				"note": "移动到测试文件夹"
+				"note": "移动到测试文件夹【按钮】"
 			},
 			{
 				"elementName": "desktop1_1_name",
@@ -655,7 +655,7 @@
 			{
 				"elementName": "list_addCollaborator_4_ok",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'确定移除')]",
+				"locator": "//button[contains(text(),'确定')]",
 				"note": "协作者权限列表--移除--确认移除"
 			},
 			{
@@ -765,7 +765,7 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[1]/a[1]",
+				"locator": "//div[@class='qa-file-icon qa-desktop-icon']",
 				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
@@ -797,12 +797,6 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-right']/button[last()]",
 				"note": "文档编辑页面中右上角 点点点"
-			},
-			{
-				"elementName": "doc_menu_msg",
-				"locateUsing": "xpath",
-				"locator": "//ul[@class='sm-dropdown-menu sm-dropdown-menu-vertical operations sm-dropdown-menu-root']//li[contains(text(),'文档信息')]",
-				"note": "文档编辑页面中右上角 点点点-文档信息"
 			},
 			{
 				"elementName": "doc_menu_delete",
@@ -885,7 +879,7 @@
             {
               "elementName": "b_headerCreate",
               "locateUsing": "xpath",
-              "locator": "//span[@data-test='create-file']",
+              "locator": "//button[@data-test='create-file']",
               "note": "header创建按钮"
             },
             {
@@ -906,6 +900,12 @@
                 "locator": "//span[@data-test='create-file-slide']",
                 "note": "header创建幻灯片按钮"
             },
+			{
+				"elementName": "b_headerCreateTemplate",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-template']",
+				"note": "header模板创建按钮"
+			},
             {
               "elementName": "b_user_icon",
               "locateUsing": "xpath",
@@ -1282,19 +1282,19 @@
 			{
 				"elementName": "file_menu_version",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'保存版本')]",
+				"locator": "//li/div/span[contains(text(),'保存版本')]",
 				"note": "保存版本"
 			},
 			{
 				"elementName": "file_menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'快捷方式')]",
+				"locator": "//li/div[contains(text(),'快捷方式')]",
 				"note": "添加快捷方式"
 			},
 			{
 				"elementName": "file_menu_collection",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'收藏')]",
+				"locator": "//li/div[contains(text(),'收藏')]",
 				"note": "添加收藏"
 			},
 			{
@@ -1306,7 +1306,7 @@
 			{
 				"elementName": "file_menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'移动')]",
+				"locator": "//li/div/span[contains(text(),'移动')]",
 				"note": "移动"
 			},
 			{
@@ -1318,7 +1318,7 @@
 			{
 				"elementName": "file_menu_creatCopy",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(text(),'创建副本')]",
+				"locator": "//li//span[contains(text(),'创建副本')]",
 				"note": "创建副本"
 			},
 			{
@@ -1379,7 +1379,7 @@
 			{
 				"elementName": "ppt_filename",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//div[2]",
+				"locator": "//div[@data-test='page-header-left']//div[2]/div/input",
 				"note": "幻灯片标题"
 			},
 			{
