@@ -258,8 +258,7 @@ public class dashboard_update extends TestInit {
         click(doc_menu_delete_OK);
 
         click(trash);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='file-icon doc']")));
-        driver.findElement(By.xpath("//div[@class='file-icon doc']")).click();
+        click(desktop1_1);
         click(menu_Recovery);
         click(dashboard);
 

@@ -2,6 +2,7 @@ package cases.docSheet;
 
 import base.TestInit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -121,11 +122,7 @@ public class testDocHeader extends TestInit {
         click(b_user_icon);
 
         String result2 = getText(desktop_user_icon_status_L);
-        assertEquals(result2, "基础版");
-
-        String result3 = getText(desktop_user_icon_status_R);
-        assertEquals(result3, "升级到企业版或高级版");
-
+        assertEquals(result2, "高级版");
     }
 
     /**
@@ -162,5 +159,227 @@ public class testDocHeader extends TestInit {
         click(b_screenShow);
         click(b_demoScreenBack);
         click(b_back);
+    }
+
+    /**
+     * 文档编辑页，header 添加协作者
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_addCollaborator() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+//        Thread.sleep(500);
+        click(b_collaborator);
+        sendKeys(input_collaborator, "test0910@qq.com");
+        click(b_addCollaborator_1_add);
+        click(b_addCollaborator_ok);
+
+        wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
+
+        Boolean r1 = getText(b_collaborator).equals("添加协作者");
+        assertTrue(r1);
+    }
+
+    /**
+     * 文档编辑页，header 添加快捷方式
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_shortcut() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        String b_Msg = getText(file_menu_shortcut);
+        click(file_menu_shortcut);
+        String msg = getText(toast_msg);
+
+        String title = doc_title_input.getAttribute("value");
+        if(b_Msg.equals("添加到快捷方式")){
+            assertEquals(msg, "「"+ title +"」已添加到快捷方式");
+        }else {
+            assertEquals(msg, "「"+ title +"」已从快捷方式移除");
+        }
+
+    }
+
+    /**
+     * 文档编辑页，header 消息免打扰
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_messageMute() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        String b_Msg = getText(file_menu_mute);
+        click(file_menu_mute);
+        String msg = getText(toast_msg);
+        String title = doc_title_input.getAttribute("value");
+        if(b_Msg.equals("接收消息提醒")){
+            assertEquals(msg, "「"+ title + "」已设置为接收消息提醒");
+        }else {
+            assertEquals(msg, "「"+ title + "」已设置为消息免打扰");
+        }
+
+    }
+
+    /**
+     * 文档编辑页，header 收藏
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_collection() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        String b_Msg = getText(file_menu_collection);
+        click(file_menu_collection);
+        String msg = getText(toast_msg);
+        String title = doc_title_input.getAttribute("value");
+        if(b_Msg.equals("收藏")){
+            assertEquals(msg, "「"+ title + "」已收藏");
+        }else {
+            assertEquals(msg, "「"+ title + "」已取消收藏");
+        }
+
+    }
+
+    /**
+     * 文档编辑页，header 移动
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_move() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        click(file_menu_move);
+        click(desktop_moveFolder_back_button);
+        click(desktop_moveFolder_button);
+
+        String msg = getText(toast_msg);
+        assertEquals(msg, "目标文件夹已经存在该文件");
+
+    }
+
+    /**
+     * 文档编辑页，header 创建副本
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_create() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1_folder);
+        click(desktop1_1_folder);
+        click(desktop_new);
+        click(desktop_newDoc);
+        click(doc_menu);
+        click(file_menu_creatCopy);
+        String msg = getText(toast_msg);
+        assertEquals(msg, "副本已保存到「搜索文件夹」文件夹");
+
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
+
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+    }
+
+    /**
+     * 文档编辑页，header 保存模板
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_template() throws InterruptedException {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        click(file_menu_template);
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]")).click();
+        String msg = getText(toast_msg);
+        assertEquals(msg, "模板保存成功。在「新建」-「从模板新建」-「我的模板」中查看");
+
+        click(b_back);
+        click(desktop_new);
+        click(desktop_newTemplate);
+
+        contextClick(desktop_newTemplate_1);
+        click(desktop_template_delete);
+        click(doc_menu_delete_OK);
+    }
+
+    /**
+     * 文档编辑页，header 保存版本
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_saveVersion() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        click(file_menu_version);
+        String msg = getText(toast_msg);
+        assertEquals(msg, "已成功创建版本，无需重复创建");
+    }
+
+    /**
+     * 文档编辑页菜单，点击文档信息
+     *
+     * @author 刘晨
+     * @Time 2018-03-19
+     */
+    @Test(enabled = true)
+    public void doc_msg() {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        moveToElement(file_menu_help);
+        click(file_menu_msg);
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
+        Boolean R1 = driver.findElement(By.xpath("//div[@class='sm-modal-footer']//button")).isDisplayed();
+        assertTrue(R1);
+
     }
 }
