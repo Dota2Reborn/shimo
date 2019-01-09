@@ -150,7 +150,7 @@
 			{
 				"elementName": "desktop_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//img[@data-test='account-icon']",
+				"locator": "//div[@data-test='account-icon']/img",
 				"note": "桌面-右上角头像"
 			},
 			{
@@ -305,6 +305,12 @@
 				"note": "新建文件夹"
 			},
 			{
+				"elementName": "desktop_newTemplate",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template ')]",
+				"note": "从模板新建"
+			},
+			{
 				"elementName": "desktop_newFolder_name",
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='new-folder-inputbox']",
@@ -321,6 +327,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button[2]",
 				"note": "文件夹命名取消"
+			},
+			{
+				"elementName": "desktop_newTemplate_1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='file-list']/li[1]",
+				"note": "模板新建-个人模板第一个"
+			},
+			{
+				"elementName": "desktop_template_delete",
+				"locateUsing": "xpath",
+				"locator": "//ul/li/div[contains(text(),'删除')]",
+				"note": "个人模板，右键菜单，删除按钮"
 			},
 			{
 				"elementName": "desktop1_1",
@@ -737,6 +755,12 @@
 				"locateUsing": "id",
 				"locator": "ql-title-input",
 				"note": "文档标题编辑"
+			},
+			{
+				"elementName": "doc_header_title",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-left']//input",
+				"note": "文档header上标题"
 			},
 			{
 				"elementName": "Back_to_Desktop",
@@ -1302,6 +1326,12 @@
 				"locateUsing": "xpath",
 				"locator": "//li//span[contains(text(),'删除')]",
 				"note": "删除按钮"
+			},
+			{
+				"elementName": "file_menu_template",
+				"locateUsing": "xpath",
+				"locator": "//li//span[contains(text(),'保存模板')]",
+				"note": "保存模板"
 			},
 			{
 				"elementName": "file_menu_mute",
@@ -2977,7 +3007,7 @@
 				"elementName": "b_SpaceSetting_setting_ok",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[1]/input",
-				"note": "协作空间hover设置--「设置」--确定button
+				"note": "协作空间hover设置--「设置」--确定button"
 			},
 			{
 				"elementName": "space_listing_1",

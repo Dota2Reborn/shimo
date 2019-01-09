@@ -71,6 +71,17 @@ public class elementFile {
 	public WebElement desktop_newFolder_name;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel", noteName = "文件夹命名取消")
 	public WebElement desktop_newFolder_name_cancel;
+
+	/** 模板新建-个人模板第一个 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate_1")
+	public WebElement desktop_newTemplate_1;
+	/** 个人模板，右键菜单，删除按钮 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_template_delete")
+	public WebElement desktop_template_delete;
+	/** 从模板新建 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate")
+	public WebElement desktop_newTemplate;
+
 	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
 	public WebElement desktop_setting;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut", noteName = "桌面快捷方式入口")
@@ -116,6 +127,9 @@ public class elementFile {
 	public WebElement doc_title_input;
 	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示同步完成状态")
 	public WebElement doc_saveStatus;
+	/** 文档header上标题 */
+	@SearchWith(pageName = "doc", elementName = "doc_header_title")
+	public WebElement doc_header_title;
 	@SearchWith(pageName = "doc", elementName = "quick_access_point", noteName = "收索&快速打开")
 	public WebElement quick_access_point;
 	@SearchWith(pageName = "doc", elementName = "Back_to_Desktop", noteName = "一级文件夹下的文档或者表格中，下箭头直接返回桌面")
@@ -647,6 +661,9 @@ public class elementFile {
 	public WebElement file_menu_msg;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
 	public WebElement file_menu_help;
+	/** header上保存模板 */
+	@SearchWith(pageName = "file_menu", elementName = "file_menu_template")
+	public WebElement file_menu_template;
 
 
 	/**
