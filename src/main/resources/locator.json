@@ -2899,7 +2899,7 @@
 				"elementName": "b_newSpace",
 				"locateUsing": "xpath",
 				"locator": "//span[@class='icon sm-add-space']",
-				"note": "绑定手机号按钮"
+				"note": "新建按钮"
 			},
             {
               "elementName": "i_newSpace_inputPaceName",
@@ -3000,14 +3000,51 @@
 			{
 				"elementName": "b_SpaceSetting_setting_InputName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']/div[1]/div[1]/button[1]",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[1]/input",
 				"note": "协作空间hover设置--「设置」--修改空间名--输入框"
 			},
 			{
+				"elementName": "b_SpaceSetting_setting_ChangePermission_now",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[2]/span[1]",
+				"note": "协作空间hover设置--「设置」--当前全员权限"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_ChangePermission",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[2]/*[name()='svg']",
+				"note": "协作空间hover设置--「设置」--修改全员权限（笔）"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_ChangePermission_edit",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[2]/label[2]/span",
+				"note": "协作空间hover设置--「设置」--修改全员权限--可编辑"
+			},
+			{
+				"elementName": "b_SpaceSetting_setting_ChangePermission_comment",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[2]/label[3]/span",
+				"note": "协作空间hover设置--「设置」--修改全员权限--只评论"
+			},
+
+			{
 				"elementName": "b_SpaceSetting_setting_ok",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']/div[1]/form[1]/div[1]/input",
+				"locator": "//div[@class='sm-modal-body']/div[1]/div[1]/button[1]",
 				"note": "协作空间hover设置--「设置」--确定button"
+			},
+			{
+				"elementName": "b_SpaceSetting_delete",
+				"locateUsing": "xpath",
+				"locator": "//div/span[1]/span[contains(text(),'删除')]",
+				"note": "协作空间设置--删除"
+			},
+			{
+				"elementName": "b_trash_space_delete",
+				"locateUsing": "xpath",
+				"locator": "//div/span[contains(text(),'查看协作者')]",
+				"note": "回收站协作空间--齿轮--彻底删除"
 			},
 			{
 				"elementName": "space_listing_1",
