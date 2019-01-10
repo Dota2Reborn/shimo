@@ -402,6 +402,24 @@ public class elementFile {
 	/** 文档表格幻灯片预览 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_txt")
 	public WebElement space_Preview_txt;
+	/** 移动文件列表1 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing1")
+	public WebElement space_move_listing1;
+	/** 移动文件列表2 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing2")
+	public WebElement space_move_listing2;
+	/** 移动文件列表3 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing3")
+	public WebElement space_move_listing3;
+	/** 移动文件列表4 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing4")
+	public WebElement space_move_listing4;
+	/** 移动文件列表5 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing5")
+	public WebElement space_move_listing5;
+	/** 移动文件列表8 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing8")
+	public WebElement space_move_listing8;
 
 
 
