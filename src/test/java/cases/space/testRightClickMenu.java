@@ -3,21 +3,18 @@ package cases.space;
 import base.TestInit;
 import org.testng.annotations.Test;
 
-
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class testRightClickMenu extends TestInit {
     /**
-     * 视频预览
+     * 视频预览-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
      *
      */
     @Test(enabled = true)
-    public void Space_video() throws InterruptedException {
+    public void Space_video_preview() throws InterruptedException {
         login("Space_video@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
@@ -27,15 +24,130 @@ public class testRightClickMenu extends TestInit {
         assertTrue(element1);
 
     }
+
     /**
-     * 音频预览
+     * 视频文件创建副本
      *
      * @author 王继程
      * @Time 2018-07-24
      *
      */
     @Test(enabled = true)
-    public void Space_music() throws InterruptedException {
+    public void Space_video_copies() throws InterruptedException {
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_5);
+        Thread.sleep(500);
+        String name = getText(space_document_1_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_10);
+        click(desktop_newFolder_name_ok);
+        Thread.sleep(500);
+        click(trash);
+        contextClick(space_document_1_1);
+        click(menu_Completely_removed);
+        click(desktop_newFolder_name_ok);
+        assertEquals(name, "副本 葫芦娃视频.mp4");
+    }
+    /**
+     * 视频文件重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_video_renaming() throws InterruptedException {
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".mp4";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+    }
+    /**
+     * 视频文件移动
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_video_move() throws InterruptedException {
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_5);
+        String name="";
+        if(doesWebElementExist(space_document_1_1)){
+            contextClick(space_document_1_1);
+            click(space_RightMenu_7);
+            Thread.sleep(500);
+            click(space_move_listing8);
+            click(desktop_moveFolder_button);
+            click(space_listing_8);
+            name = getText(space_document_1_1);
+            name=name.replace("\n"+" ","");
+
+        }else {
+            click(space_listing_8);
+            contextClick(space_document_1_1);
+            click(space_RightMenu_7);
+            Thread.sleep(500);
+            click(space_move_listing5);
+            click(desktop_moveFolder_button);
+            click(space_listing_5);
+            name = getText(space_document_1_1);
+            name=name.replace("\n"+" ","");
+        }
+        assertEquals(name,"葫芦娃视频.mp4");
+    }
+    /**
+     * 视频文件重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_video_delete() throws InterruptedException {
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_7);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_10);
+        click(desktop_newFolder_name_ok);
+        Thread.sleep(500);
+        Boolean element1 = doesWebElementExist(space_document_1_1);
+        click(trash);
+        contextClick(space_document_1_1);
+        click(menu_Recovery);
+        Thread.sleep(500);
+        click(space_listing_7);
+        Boolean element2 = doesWebElementExist(space_document_1_1);
+        assertFalse(element1);
+        assertTrue(element2);
+
+    }
+
+
+
+
+
+    /**
+     * 音频预览-----------------------------------------------------------------------------------------------------
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_music_preview() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
@@ -46,7 +158,116 @@ public class testRightClickMenu extends TestInit {
 
     }
     /**
-     * 图片预览
+     * 音频文件创建副本
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_music_copies() throws InterruptedException {
+        login("Space_music@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_5);
+        Thread.sleep(500);
+        String name = getText(space_document_1_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_10);
+        click(desktop_newFolder_name_ok);
+        Thread.sleep(500);
+        click(trash);
+        contextClick(space_document_1_1);
+        click(menu_Completely_removed);
+        click(desktop_newFolder_name_ok);
+        assertEquals(name, "副本 仅仅歌曲.mp3");
+    }
+    /**
+     * 音频文件重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_music_renaming() throws InterruptedException {
+        login("Space_music@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".mp3";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+    }
+    /**
+     * 音频文件移动
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_music_move() throws InterruptedException {
+        login("Space_music@shimo.im", "123123");
+        click(space_listing_5);
+        String name="";
+        if(doesWebElementExist(space_document_1_1)){
+            contextClick(space_document_1_1);
+            click(space_RightMenu_7);
+            Thread.sleep(500);
+            click(space_move_listing8);
+            click(desktop_moveFolder_button);
+            click(space_listing_8);
+            name = getText(space_document_1_1);
+            name=name.replace("\n"+" ","");
+
+        }else {
+            click(space_listing_8);
+            contextClick(space_document_1_1);
+            click(space_RightMenu_7);
+            Thread.sleep(500);
+            click(space_move_listing5);
+            click(desktop_moveFolder_button);
+            click(space_listing_5);
+            name = getText(space_document_1_1);
+            name=name.replace("\n"+" ","");
+        }
+        assertEquals(name,"仅仅歌曲.mp3");
+    }
+    /**
+     * 音频文件重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_music_delete() throws InterruptedException {
+        login("Space_music@shimo.im", "123123");
+        click(space_listing_7);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_10);
+        click(desktop_newFolder_name_ok);
+        Thread.sleep(500);
+        Boolean element1 = doesWebElementExist(space_document_1_1);
+        click(trash);
+        contextClick(space_document_1_1);
+        click(menu_Recovery);
+        Thread.sleep(500);
+        click(space_listing_7);
+        Boolean element2 = doesWebElementExist(space_document_1_1);
+        assertFalse(element1);
+        assertTrue(element2);
+
+    }
+    /**
+     * 图片预览-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -64,7 +285,7 @@ public class testRightClickMenu extends TestInit {
 
     }
     /**
-     * word预览
+     * word预览-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -142,8 +363,9 @@ public class testRightClickMenu extends TestInit {
         text=text.replace("\n","");
         assertEquals(text, "我喜欢电影");
     }
+
     /**
-     * 右键在新标签页中打开word
+     * 右键在新标签页中打开word-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -162,7 +384,28 @@ public class testRightClickMenu extends TestInit {
         assertEquals(time, "这是文档");
     }
     /**
-     * 右键在新标签页中打开excel
+     * 右键在新标签页中打开word
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate1() throws InterruptedException {
+        login("Space_tab@shimo.im", "123123");
+        click(space_listing_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_3);
+
+        Thread.sleep(800);
+        driver.close();
+        switchToPage(0);
+        Boolean element1 = doesWebElementExist(button_addCollaborator_close);
+        assertTrue(element1);
+    }
+
+    /**
+     * 右键在新标签页中打开excel-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
