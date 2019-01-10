@@ -12,6 +12,34 @@ import static org.testng.Assert.assertTrue;
 public class testDocHeader extends TestInit {
 
     /**
+     * 文档编辑页，header 保存模板
+     *
+     * @author 刘晨
+     * @Time 2018-12-26
+     */
+    @Test(enabled = true)
+    public void doc_template() throws InterruptedException {
+        login("testDocHeader@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop1_1);
+        click(doc_menu);
+        click(file_menu_template);
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]")).click();
+        String msg = getText(toast_msg);
+        assertEquals(msg, "模板保存成功。在「新建」-「从模板新建」-「我的模板」中查看");
+
+//        click(b_back);
+//        click(desktop_new);
+//        click(desktop_newTemplate);
+//
+//        contextClick(desktop_newTemplate_1);
+//        click(desktop_template_delete);
+//        click(doc_menu_delete_OK);
+    }
+
+    /**
      * 文档编辑页，header上搜索，点击搜索结果跳转
      *
      * @author 刘晨
@@ -313,34 +341,6 @@ public class testDocHeader extends TestInit {
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-    }
-
-    /**
-     * 文档编辑页，header 保存模板
-     *
-     * @author 刘晨
-     * @Time 2018-12-26
-     */
-    @Test(enabled = true)
-    public void doc_template() throws InterruptedException {
-        login("testDocHeader@shimo.im", "123123");
-
-        click(desktop);
-        click(desktop1_1);
-        click(doc_menu);
-        click(file_menu_template);
-        Thread.sleep(500);
-        driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]")).click();
-        String msg = getText(toast_msg);
-        assertEquals(msg, "模板保存成功。在「新建」-「从模板新建」-「我的模板」中查看");
-
-        click(b_back);
-        click(desktop_new);
-        click(desktop_newTemplate);
-
-        contextClick(desktop_newTemplate_1);
-        click(desktop_template_delete);
-        click(doc_menu_delete_OK);
     }
 
     /**
