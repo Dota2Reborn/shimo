@@ -342,6 +342,18 @@ public class elementFile {
 	/** 协作空间列表5 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_5")
 	public WebElement space_listing_5;
+	/** 协作空间列表6 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_6")
+	public WebElement space_listing_6;
+	/** 协作空间列表7 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_7")
+	public WebElement space_listing_7;
+	/** 协作空间列表8 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_8")
+	public WebElement space_listing_8;
+	/** 协作空间列表9 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
+	public WebElement space_listing_9;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;

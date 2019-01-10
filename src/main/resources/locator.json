@@ -3040,6 +3040,30 @@
 				"note": "协作空间列表5"
 			},
 			{
+				"elementName": "space_listing_6",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[6]/a",
+				"note": "协作空间列表6"
+			},
+			{
+				"elementName": "space_listing_7",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[7]/a",
+				"note": "协作空间列表7"
+			},
+			{
+				"elementName": "space_listing_8",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[8]/a",
+				"note": "协作空间列表8"
+			},
+			{
+				"elementName": "space_listing_9",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='list']/div[9]/a",
+				"note": "协作空间列表9"
+			},
+			{
 				"elementName": "space_document_1_1",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='ReactVirtualized__Grid__innerScrollContainer']/div[1]/div[1]",
