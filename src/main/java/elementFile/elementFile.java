@@ -360,6 +360,18 @@ public class elementFile {
 	/** 协作空间列表5 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_5")
 	public WebElement space_listing_5;
+	/** 协作空间列表6 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_6")
+	public WebElement space_listing_6;
+	/** 协作空间列表7 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_7")
+	public WebElement space_listing_7;
+	/** 协作空间列表8 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_8")
+	public WebElement space_listing_8;
+	/** 协作空间列表9 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
+	public WebElement space_listing_9;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;
@@ -410,25 +422,25 @@ public class elementFile {
 	/** 演示页面，退出演示按钮 */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4")
 	public WebElement space_RightMenu_4;
-	/** header上协作者按钮 */
+	/** 创建副本(云文件)&文档(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_5")
 	public WebElement space_RightMenu_5;
-	/** header上添加协作者邮箱输入框 */
+	/** 重命名(云文件)&删除(文件夹)&老表格(桌面)&重命名(脑图||表单)&导出(文档表格幻灯片) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_6")
 	public WebElement space_RightMenu_6;
-	/** 演示页面，退出演示按钮 */
+	/** 移动(云文件||脑图表单)&重命名(文档表格幻灯片)&幻灯片(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_7")
 	public WebElement space_RightMenu_7;
-	/** header上协作者按钮 */
+	/** 下载(云文件)&创建副本(脑图表单)&移动(文档表格幻灯片)&思维导图(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_8")
 	public WebElement space_RightMenu_8;
-	/** header上添加协作者邮箱输入框 */
+	/** 创建副本(文档表格幻灯片)&文件夹(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_9")
 	public WebElement space_RightMenu_9;
-	/** 演示页面，退出演示按钮 */
+	/** 删除(云文件||脑图表单) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_10")
 	public WebElement space_RightMenu_10;
-	/** header上协作者按钮 */
+	/** 删除(文档表格幻灯片)&从模板新建(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_11")
 	public WebElement space_RightMenu_11;
 
