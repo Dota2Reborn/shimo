@@ -324,9 +324,27 @@ public class elementFile {
 	/** 协作空间hover设置--设置」--修改空间名--输入框 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_InputName")
 	public WebElement b_SpaceSetting_setting_InputName;
+    /** 协作空间hover设置--设置」--当前全员权限 */
+    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_now")
+    public WebElement b_SpaceSetting_setting_ChangePermission_now;
+    /** 协作空间hover设置--设置」--修改全员权限（笔） */
+    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission")
+    public WebElement b_SpaceSetting_setting_ChangePermission;
+    /** 协作空间hover设置--设置」--修改全员权限--可编辑 */
+    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_edit")
+    public WebElement b_SpaceSetting_setting_ChangePermission_edit;
+    /** 协作空间hover设置--设置」--修改全员权限--只评论 */
+    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_comment")
+    public WebElement b_SpaceSetting_setting_ChangePermission_comment;
 	/** 协作空间hover设置--设置」--确定button */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ok")
 	public WebElement b_SpaceSetting_setting_ok;
+    /** 协作空间设置--删除 */
+    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_delete")
+    public WebElement b_SpaceSetting_delete;
+	/** 回收站协作空间--齿轮--彻底删除 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_trash_space_delete")
+	public WebElement b_trash_space_delete;
 	/** 协作空间列表1 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_1")
 	public WebElement space_listing_1;
