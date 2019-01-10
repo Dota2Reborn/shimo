@@ -27,7 +27,7 @@ public class testNotice extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		sendKeys(doc_edit, "@autoTest12");
+		sendKeys(doc_edit, "@autoTest12@shimo.im");
 		Thread.sleep(1000);
 		click(doc_notice_user);
 		String url1 = driver.getCurrentUrl();
@@ -57,7 +57,7 @@ public class testNotice extends TestInit {
 		click(desktop1_1);
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		sendKeys(doc_edit, "@autoTest12");
+		sendKeys(doc_edit, "@autoTest12@shimo.im");
 		Thread.sleep(1000);
 		click(doc_notice_user);
 		click(b_back);
@@ -190,7 +190,7 @@ public class testNotice extends TestInit {
 
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
-		sendKeys(doc_edit, "@autoTest12");
+		sendKeys(doc_edit, "@autoTest12@shimo.im");
 		Thread.sleep(1000);
 		click(doc_notice_user);
 
