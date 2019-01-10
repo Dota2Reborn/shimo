@@ -3122,6 +3122,42 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-id='view-container']",
 				"note": "txt文件预览"
+			},
+			{
+				"elementName": "space_move_listing1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']/div/div/div",
+				"note": "移动文件列表1"
+			},
+			{
+				"elementName": "space_move_listing2",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']",
+				"note": "txt文件预2"
+			},
+			{
+				"elementName": "space_move_listing3",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']/div/div/div",
+				"note": "移动文件列表3"
+			},
+			{
+				"elementName": "space_move_listing4",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[4]",
+				"note": "移动文件列表4"
+			},
+			{
+				"elementName": "space_move_listing5",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[5]",
+				"note": "移动文件列表5"
+			},
+			{
+				"elementName": "space_move_listing8",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-id='view-container']",
+				"note": "移动文件列表8"
 			}
 		]
 	},
