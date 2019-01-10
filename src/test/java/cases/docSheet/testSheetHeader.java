@@ -290,13 +290,13 @@ public class testSheetHeader extends TestInit {
             String msg = getText(toast_msg);
             assertEquals(msg, "副本已保存到「搜索文件夹」文件夹");
 
-//            click(doc_menu);
-//            click(doc_menu_delete);
-//            click(doc_menu_delete_OK);
-//
-//            contextClick(desktop1_1);
-//            click(menu_delete);
-//            click(desktop_newFolder_name_ok);
+            click(doc_menu);
+            click(doc_menu_delete);
+            click(doc_menu_delete_OK);
+
+            contextClick(desktop1_1);
+            click(menu_delete);
+            click(desktop_newFolder_name_ok);
 
         }
 
@@ -310,12 +310,12 @@ public class testSheetHeader extends TestInit {
         public void sheet_template() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
-            click(desktop_new);
-            click(desktop_newTemplate);
-            contextClick(desktop_newTemplate_1);
-            click(desktop_template_delete);
-            click(doc_menu_delete_OK);
-            click(driver.findElement(By.className("sm-modal-close")));
+//            click(desktop_new);
+//            click(desktop_newTemplate);
+//            contextClick(desktop_newTemplate_1);
+//            click(desktop_template_delete);
+//            click(doc_menu_delete_OK);
+//            click(driver.findElement(By.className("sm-modal-close")));
 
             click(desktop);
             click(desktop1_1);
