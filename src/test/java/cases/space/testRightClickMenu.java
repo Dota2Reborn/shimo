@@ -109,7 +109,7 @@ public class testRightClickMenu extends TestInit {
         assertEquals(name,"葫芦娃视频.mp4");
     }
     /**
-     * 视频文件重命名
+     * 视频文件删除恢复
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -241,7 +241,7 @@ public class testRightClickMenu extends TestInit {
         assertEquals(name,"仅仅歌曲.mp3");
     }
     /**
-     * 音频文件重命名
+     * 音频文件删除恢复
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -362,6 +362,99 @@ public class testRightClickMenu extends TestInit {
         String text = getText(space_Preview_txt);
         text=text.replace("\n","");
         assertEquals(text, "我喜欢电影");
+    }
+    /**
+     * word重命名-----------------------------------------------------------------------------------------------------
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_wRename() throws InterruptedException {
+        login("Space_office1@shimo.im", "123123");
+        click(space_listing_1);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".docx";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+    }
+    /**
+     * excel重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_eRename() throws InterruptedException {
+        login("Space_office1@shimo.im", "123123");
+        click(space_listing_2);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".xlsx";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+
+    }
+    /**
+     * ppt重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_pRename() throws InterruptedException {
+        login("Space_office1@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".pptx";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+
+    }
+    /**
+     * 文本重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_office_tRename() throws InterruptedException {
+        login("Space_office1@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".txt";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
     }
 
     /**
