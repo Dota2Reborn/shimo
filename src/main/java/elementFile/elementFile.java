@@ -437,9 +437,24 @@ public class elementFile {
 	/** 复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3")
 	public WebElement space_RightMenu_3;
-	/** 演示页面，退出演示按钮 */
+	/** 添加协作者 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_1")
+	public WebElement space_RightMenu_3_1;
+	/** 查看协作者 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_2")
+	public WebElement space_RightMenu_3_2;
+	/** 移动(文件夹)&分享(文件) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4")
 	public WebElement space_RightMenu_4;
+	/** 分享开关 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_1")
+	public WebElement space_RightMenu_4_1;
+	/** 复制链接 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_2")
+	public WebElement space_RightMenu_4_2;
+	/** 分享设置 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_3")
+	public WebElement space_RightMenu_4_3;
 	/** 创建副本(云文件)&文档(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_5")
 	public WebElement space_RightMenu_5;
