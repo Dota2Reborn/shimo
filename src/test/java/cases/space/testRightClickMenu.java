@@ -3,6 +3,13 @@ package cases.space;
 import base.TestInit;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
+
 import static org.testng.Assert.*;
 
 public class testRightClickMenu extends TestInit {
@@ -24,7 +31,24 @@ public class testRightClickMenu extends TestInit {
         assertTrue(element1);
 
     }
-
+    /**
+     * 右键分享开关
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_video_copy() throws InterruptedException {
+        login("Space_video@shimo.im", "123123");
+        click(space_listing_2);
+        contextClick(space_document_1_1);
+        Thread.sleep(200);
+        click(space_RightMenu_3);
+        String text = setClipbordContents();
+        String[] tmp = text.split("/");
+        assertEquals(tmp[4], "w9ychrkJtqvHhVPT");
+    }
     /**
      * 视频文件创建副本
      *
@@ -466,7 +490,7 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_word_tab() throws InterruptedException {
-        login("Space_tab@shimo.im", "123123");
+        login("Space_word@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
@@ -477,7 +501,7 @@ public class testRightClickMenu extends TestInit {
         assertEquals(time, "这是文档");
     }
     /**
-     * 右键在新标签页中打开word
+     * 右键添加协作者
      *
      * @author 王继程
      * @Time 2018-07-24
@@ -485,18 +509,116 @@ public class testRightClickMenu extends TestInit {
      */
     @Test(enabled = true)
     public void Space_word_collaborate1() throws InterruptedException {
-        login("Space_tab@shimo.im", "123123");
-        click(space_listing_1);
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_2);
         contextClick(space_document_1_1);
-        click(space_RightMenu_3);
-
         Thread.sleep(800);
-        driver.close();
-        switchToPage(0);
-        Boolean element1 = doesWebElementExist(button_addCollaborator_close);
+        action.clickAndHold(space_RightMenu_3).perform();
+        click(space_RightMenu_3_1);
+        Thread.sleep(500);
+        Boolean element1 = doesWebElementExist(input_addCollaborator);
         assertTrue(element1);
     }
+    /**
+     * 右键查看协作者
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate2() throws InterruptedException {
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_2);
+        contextClick(space_document_1_1);
+        Thread.sleep(800);
+        action.clickAndHold(space_RightMenu_3).perform();
+        click(space_RightMenu_3_2);
+        Thread.sleep(500);
+        String eminl = getText(collaborator_2_list_emailOrMobile);
+        assertEquals(eminl,"wangjich***@shimo.im");
+    }
+    /**
+     * 右键分享开关
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate3() throws InterruptedException {
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        Thread.sleep(500);
+        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4_1);
+        Thread.sleep(200);
 
+    }
+    /**
+     * 右键菜单复制分享链接
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate4() throws InterruptedException {
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        Thread.sleep(800);
+        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4_2);
+        String text = setClipbordContents();
+        String[] tmp = text.split("/");
+        assertEquals(tmp[4], "6rwH3wKv6TGx3qyR");
+
+    }
+    /**
+     * 右键菜单分享设置
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate5() throws InterruptedException {
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_3);
+        contextClick(space_document_1_1);
+        Thread.sleep(500);
+        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4_3);
+        Thread.sleep(500);
+        Boolean element1 = doesWebElementExist(space_cooperation_Popup);
+        assertTrue(element1);
+
+    }
+    /**
+     * 文档重命名
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_word_collaborate6() throws InterruptedException {
+        login("Space_word@shimo.im", "123123");
+        click(space_listing_4);
+        contextClick(space_document_1_1);
+        click(space_RightMenu_6);
+        Thread.sleep(500);
+        String time = getDate();
+        sendKeys(desktop_newFolder_name,time);
+        time = time+".mp3";
+        click(ppt_delete_sure);
+        String name = getText(space_document_1_1);
+        name=name.replace("\n"+" ","");
+        assertEquals(name,time);
+
+    }
     /**
      * 右键在新标签页中打开excel-----------------------------------------------------------------------------------------------------
      *
@@ -557,4 +679,22 @@ public class testRightClickMenu extends TestInit {
         assertEquals(time, "这是表单");
     }
 
+    private String setClipbordContents() {// 写入系统剪贴板
+        String text ="";
+        Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
+        Transferable clipTf = sysClip.getContents(null);//从系统剪切板中获取数据
+        if (clipTf != null){
+
+            if (clipTf.isDataFlavorSupported(DataFlavor.stringFlavor)) {//判断是否为文本类型
+                try {
+                    text = (String) clipTf.getTransferData(DataFlavor.stringFlavor);//从数据中获取文本值
+                } catch (UnsupportedFlavorException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return text;
+    }
 }
