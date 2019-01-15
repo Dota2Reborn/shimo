@@ -420,6 +420,9 @@ public class elementFile {
 	/** 移动文件列表8 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing8")
 	public WebElement space_move_listing8;
+	/** 分享设置弹窗 分享开关 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_cooperation_Popup")
+	public WebElement space_cooperation_Popup;
 
 
 

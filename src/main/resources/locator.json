@@ -3195,6 +3195,12 @@
 				"locateUsing": "xpath",
 				"locator": "//ul[@class='rc-tree']/li[8]",
 				"note": "移动文件列表8"
+			},
+			{
+				"elementName": "space_cooperation_Popup",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div/button",
+				"note": "分享设置弹窗 分享开关"
 			}
 		]
 	},
