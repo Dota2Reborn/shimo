@@ -376,6 +376,9 @@ public class elementFile {
 	/** 协作空间列表9 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
 	public WebElement space_listing_9;
+	/** 协作空间空白处 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_document")
+	public WebElement space_document;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;
@@ -504,6 +507,8 @@ public class elementFile {
 	public WebElement b_addCollaborator_3_list;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list_disable", noteName = "协作者列表第三个协作者权限下拉框是否可以点击")
 	public WebElement b_addCollaborator_3_list_disable;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list_disable", noteName = "协作者列表第一个协作者权限下拉框是否可以点击")
+	public WebElement b_addCollaborator_1_list_disable;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_1", noteName = "协作者权限列表--转让所有权")
 	public WebElement list_addCollaborator_1;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
