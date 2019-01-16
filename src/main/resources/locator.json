@@ -1688,7 +1688,7 @@
 			{
 				"elementName": "ppt_page_11",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'sm-transparency-card')])[11]",
+				"locator": "//div[@data-test='filmstrip']/div[1]/div[11]",
 				"note": "左边栏第十一个页面"
 			}
 		]
