@@ -599,6 +599,12 @@
 				"note": "协作者列表第三个协作者权限下拉框"
 			},
 			{
+				"elementName": "b_addCollaborator_1_list_disable",
+				"locateUsing": "xpath",
+				"locator": "(//span[@data-test='collab-control-dropmenu']/parent::*)[1]",
+				"note": "协作者列表第一个协作者权限下拉框是否可以点击"
+			},
+			{
 				"elementName": "b_addCollaborator_3_list_disable",
 				"locateUsing": "xpath",
 				"locator": "(//span[@data-test='collab-control-dropmenu']/parent::*)[3]",
@@ -2895,6 +2901,12 @@
 		"note": "协作空间",
 		"pageName": "Collaborative_space",
 		"elements": [
+          {
+            "elementName": "Space",
+            "locateUsing": "xpath",
+            "locator": "//span[@class='lable']",
+            "note": "协作空间"
+          },
 			{
 				"elementName": "b_newSpace",
 				"locateUsing": "xpath",
