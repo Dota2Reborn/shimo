@@ -496,6 +496,8 @@ public class elementFile {
 	public WebElement b_addCollaborator_3_list;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list_disable", noteName = "协作者列表第三个协作者权限下拉框是否可以点击")
 	public WebElement b_addCollaborator_3_list_disable;
+	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list_disable", noteName = "协作者列表第一个协作者权限下拉框是否可以点击")
+	public WebElement b_addCollaborator_1_list_disable;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_1", noteName = "协作者权限列表--转让所有权")
 	public WebElement list_addCollaborator_1;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
