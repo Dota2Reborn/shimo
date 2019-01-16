@@ -63,6 +63,10 @@ public class elementFile {
 	public WebElement desktop_newSheet;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newslides", noteName = "新建幻灯片")
 	public WebElement desktop_newslides;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newmindmap", noteName = "新建思维脑图")
+	public WebElement desktop_newmindmap;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newtemplate", noteName = "从模板新建")
+	public WebElement desktop_newtemplate;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
@@ -372,6 +376,9 @@ public class elementFile {
 	/** 协作空间列表9 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
 	public WebElement space_listing_9;
+	/** 协作空间空白处 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_document")
+	public WebElement space_document;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;
@@ -423,6 +430,10 @@ public class elementFile {
 	/** 分享设置弹窗 分享开关 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_cooperation_Popup")
 	public WebElement space_cooperation_Popup;
+	/** 协作空间上方名 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_upname")
+	public WebElement space_upname;
+
 
 
 
@@ -1265,4 +1276,40 @@ public class elementFile {
 	public WebElement onlineshown_later;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_close", noteName = "结束演示")
 	public WebElement onlineshown_close;
+
+	/**
+	 * Template
+	 * 模板
+	 */
+
+	@SearchWith(pageName = "Template", elementName = "my_template", noteName = "我的模板")
+	public WebElement my_template;
+	@SearchWith(pageName = "Template", elementName = "my_template02", noteName = "我的模板第二个")
+	public WebElement my_template02;
+	@SearchWith(pageName = "Template", elementName = "my_template01", noteName = "我的模板第一个")
+	public WebElement my_template01;
+	@SearchWith(pageName = "Template", elementName = "sheet_template", noteName = "表格模板")
+	public WebElement sheet_template;
+	@SearchWith(pageName = "Template", elementName = "sheet_template01", noteName = "表格模板第一个")
+	public WebElement sheet_template01;
+	@SearchWith(pageName = "Template", elementName = "doc_template", noteName = "文档模板")
+	public WebElement doc_template;
+	@SearchWith(pageName = "Template", elementName = "doc_template01", noteName = "文档模板第一个")
+	public WebElement doc_template01;
+
+	/**
+	 * spaceRightButton
+	 * 协作空间右侧按钮
+	 */
+
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_button_new", noteName = "空间右侧新建")
+	public WebElement space_button_new;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_button_import", noteName = "空间右侧上传/导入")
+	public WebElement space_button_import;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadfile", noteName = "上传文件")
+	public WebElement space_uploadfile;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadfolder", noteName = "上传文件夹")
+	public WebElement space_uploadfolder;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_list_import", noteName = "协作空间下拉列表导入")
+	public WebElement space_list_import;
 }
