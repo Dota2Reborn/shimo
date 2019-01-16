@@ -1,9 +1,9 @@
 package cases.ppt;
 
 import base.TestInit;
-import org.openqa.selenium.*;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.*;
 import org.testng.annotations.Test;
 
 import java.awt.*;
