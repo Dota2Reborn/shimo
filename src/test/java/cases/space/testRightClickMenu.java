@@ -1,6 +1,8 @@
 package cases.space;
 
 import base.TestInit;
+import elementFile.ByGenerator;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -8,6 +10,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.File;
 import java.io.IOException;
 
 import static org.testng.Assert.*;
@@ -553,7 +556,11 @@ public class testRightClickMenu extends TestInit {
         Thread.sleep(500);
         action.clickAndHold(space_RightMenu_4).perform();
         click(space_RightMenu_4_1);
-        Thread.sleep(200);
+        String toast1 = getText(toast_msg);
+        click(space_RightMenu_4_1);
+        String toast2 = getText(toast_msg);
+        assertEquals(toast1,"已开启公开分享");
+
 
     }
     /**
@@ -606,13 +613,12 @@ public class testRightClickMenu extends TestInit {
     @Test(enabled = true)
     public void Space_word_collaborate6() throws InterruptedException {
         login("Space_word@shimo.im", "123123");
-        click(space_listing_4);
+        click(space_listing_5);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_7);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
-        time = time+".mp3";
         click(ppt_delete_sure);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
@@ -620,8 +626,8 @@ public class testRightClickMenu extends TestInit {
 
     }
     /**
-     * 右键在新标签页中打开excel-----------------------------------------------------------------------------------------------------
-     *
+     * 右键在新标签页中打开-----------------------------------------------------------------------------------------------------
+     * 右键在新标签页中打开excel
      * @author 王继程
      * @Time 2018-07-24
      *
@@ -655,7 +661,6 @@ public class testRightClickMenu extends TestInit {
         Thread.sleep(800);
         driver.close();
         switchToPage(0);
-//        click(ppt_filename);
         String time = ppt_filename.getAttribute("value");
         assertEquals(time, "这是ppt");
     }
@@ -678,8 +683,45 @@ public class testRightClickMenu extends TestInit {
         String time = doc_header_title.getAttribute("value");
         assertEquals(time, "这是表单");
     }
+    /**
+     * 空白处右键菜单上传文件-----------------------------------------------------------------------------------------------------
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_margin() throws InterruptedException {
+        login("Space_margin@shimo.im", "123123");
+        click(space_listing_1);
+        contextClick(space_document);
+        click(space_RightMenu_1);
 
-    private String setClipbordContents() {// 写入系统剪贴板
+        WebElement uploadButton = desktop_import;
+        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test.mp3").getFile()).getPath();
+        System.out.println(url);
+        uploadButton.sendKeys(url);
+
+        Thread.sleep(2000);
+        click(b_back);
+
+        String msg = getText(desktop1_1);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+        assertEquals(msg, "test_docx");
+    }
+
+
+    /**
+     * 读取系统剪贴板-----------------------------------------------------------------------------------------------------
+     *
+     *
+     *
+     *
+     */
+    private String setClipbordContents() {
         String text ="";
         Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
         Transferable clipTf = sysClip.getContents(null);//从系统剪切板中获取数据
