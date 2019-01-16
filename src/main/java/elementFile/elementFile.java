@@ -273,7 +273,9 @@ public class elementFile {
 	 * Collaborative_space
 	 * 协作空间
 	 */
-
+	/** 协作空间 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "Space")
+	public WebElement Space;
 	/** 绑定手机号按钮 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_newSpace")
 	public WebElement b_newSpace;
