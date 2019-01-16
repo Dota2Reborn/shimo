@@ -154,8 +154,8 @@ public class testRightClickMenu extends TestInit {
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Recovery);
-        Thread.sleep(500);
         click(space_listing_7);
+        Thread.sleep(600);
         Boolean element2 = doesWebElementExist(space_document_1_1);
         assertFalse(element1);
         assertTrue(element2);
