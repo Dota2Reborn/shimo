@@ -792,6 +792,8 @@ public class elementFile {
 	public WebElement ppt_view_history;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_Information", noteName = "幻灯片信息")
 	public WebElement ppt_Information;
+	@SearchWith(pageName = "PPT_header", elementName = "ppt_Shortcut", noteName = "幻灯片快捷键")
+	public WebElement ppt_Shortcut;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
 	public WebElement ppt_delete;
 	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_sure", noteName = "确认删除")

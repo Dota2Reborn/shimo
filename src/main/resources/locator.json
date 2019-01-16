@@ -1497,9 +1497,15 @@
 				"note": "幻灯片信息"
 			},
 			{
-				"elementName": "ppt_delete",
+				"elementName": "ppt_Shortcut",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[12]",
+				"note": "幻灯片快捷键"
+			},
+			{
+				"elementName": "ppt_delete",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-menu']//ul[1]//li[14]",
 				"note": "删除"
 			},
 			{
