@@ -3159,6 +3159,48 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-id='view-container']",
 				"note": "txt文件预览"
+			},
+			{
+				"elementName": "space_move_listing1",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[1]",
+				"note": "移动文件列表1"
+			},
+			{
+				"elementName": "space_move_listing2",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[2]",
+				"note": "txt文件预2"
+			},
+			{
+				"elementName": "space_move_listing3",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[3]",
+				"note": "移动文件列表3"
+			},
+			{
+				"elementName": "space_move_listing4",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[4]",
+				"note": "移动文件列表4"
+			},
+			{
+				"elementName": "space_move_listing5",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[5]",
+				"note": "移动文件列表5"
+			},
+			{
+				"elementName": "space_move_listing8",
+				"locateUsing": "xpath",
+				"locator": "//ul[@class='rc-tree']/li[8]",
+				"note": "移动文件列表8"
+			},
+			{
+				"elementName": "space_cooperation_Popup",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-content']//div/button",
+				"note": "分享设置弹窗 分享开关"
 			}
 		]
 	},
@@ -3185,10 +3227,40 @@
 				"note": "复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选)"
 			},
 			{
+				"elementName": "space_RightMenu_3_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/div/ul/li[3]//li[1]",
+				"note": "添加协作者"
+			},
+			{
+				"elementName": "space_RightMenu_3_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/div/ul/li[3]//li[2]",
+				"note": "查看协作者"
+			},
+			{
 				"elementName": "space_RightMenu_4",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]",
 				"note": "移动(文件夹)&分享(文件)"
+			},
+			{
+				"elementName": "space_RightMenu_4_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[1]",
+				"note": "分享开关"
+			},
+			{
+				"elementName": "space_RightMenu_4_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[2]",
+				"note": "复制链接"
+			},
+			{
+				"elementName": "space_RightMenu_4_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[4]",
+				"note": "分享设置"
 			},
 			{
 				"elementName": "space_RightMenu_5",

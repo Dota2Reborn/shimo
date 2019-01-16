@@ -402,6 +402,27 @@ public class elementFile {
 	/** 文档表格幻灯片预览 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_txt")
 	public WebElement space_Preview_txt;
+	/** 移动文件列表1 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing1")
+	public WebElement space_move_listing1;
+	/** 移动文件列表2 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing2")
+	public WebElement space_move_listing2;
+	/** 移动文件列表3 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing3")
+	public WebElement space_move_listing3;
+	/** 移动文件列表4 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing4")
+	public WebElement space_move_listing4;
+	/** 移动文件列表5 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing5")
+	public WebElement space_move_listing5;
+	/** 移动文件列表8 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_move_listing8")
+	public WebElement space_move_listing8;
+	/** 分享设置弹窗 分享开关 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_cooperation_Popup")
+	public WebElement space_cooperation_Popup;
 
 
 
@@ -419,9 +440,24 @@ public class elementFile {
 	/** 复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3")
 	public WebElement space_RightMenu_3;
-	/** 演示页面，退出演示按钮 */
+	/** 添加协作者 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_1")
+	public WebElement space_RightMenu_3_1;
+	/** 查看协作者 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_2")
+	public WebElement space_RightMenu_3_2;
+	/** 移动(文件夹)&分享(文件) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4")
 	public WebElement space_RightMenu_4;
+	/** 分享开关 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_1")
+	public WebElement space_RightMenu_4_1;
+	/** 复制链接 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_2")
+	public WebElement space_RightMenu_4_2;
+	/** 分享设置 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_3")
+	public WebElement space_RightMenu_4_3;
 	/** 创建副本(云文件)&文档(桌面) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_5")
 	public WebElement space_RightMenu_5;
