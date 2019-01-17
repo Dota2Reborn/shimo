@@ -18,7 +18,7 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-20
          */
         @Test(enabled = true)
-        public void sheet_search() {
+        public void sheet_search() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
@@ -27,6 +27,7 @@ public class testSheetHeader extends TestInit {
             sendKeys(input_headerSearch,"新建测试文件");
             click(searchList_1);
             switchToPage(1);
+            Thread.sleep(1000);
             Boolean r1 = driver.getCurrentUrl().equals(getURL() + "sheet/TThxFn4ZL18GZWjC/MODOC");
             assertTrue(r1);
         }
