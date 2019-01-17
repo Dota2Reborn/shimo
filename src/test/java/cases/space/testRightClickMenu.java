@@ -1,8 +1,6 @@
 package cases.space;
 
 import base.TestInit;
-import elementFile.ByGenerator;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -10,7 +8,6 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.io.File;
 import java.io.IOException;
 
 import static org.testng.Assert.*;
@@ -557,8 +554,8 @@ public class testRightClickMenu extends TestInit {
         action.clickAndHold(space_RightMenu_4).perform();
         click(space_RightMenu_4_1);
         String toast1 = getText(toast_msg);
+        Thread.sleep(300);
         click(space_RightMenu_4_1);
-        String toast2 = getText(toast_msg);
         assertEquals(toast1,"已开启公开分享");
 
 
@@ -684,35 +681,54 @@ public class testRightClickMenu extends TestInit {
         assertEquals(time, "这是表单");
     }
     /**
-     * 空白处右键菜单上传文件-----------------------------------------------------------------------------------------------------
+     * 空白处右键菜单新建文档-----------------------------------------------------------------------------------------------------
      *
      * @author 王继程
      * @Time 2018-07-24
      *
      */
     @Test(enabled = true)
-    public void Space_margin() throws InterruptedException {
+    public void Space_margin1() throws InterruptedException {
         login("Space_margin@shimo.im", "123123");
-        click(space_listing_1);
+        click(space_listing_4);
         contextClick(space_document);
-        click(space_RightMenu_1);
-
-        WebElement uploadButton = desktop_import;
-        String url = new File(ByGenerator.class.getClassLoader().getResource("file/test.mp3").getFile()).getPath();
-        System.out.println(url);
-        uploadButton.sendKeys(url);
-
-        Thread.sleep(2000);
-        click(b_back);
-
-        String msg = getText(desktop1_1);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
-
-        assertEquals(msg, "test_docx");
+        click(space_RightMenu_5);
+        Thread.sleep(600);
+        String time = doc_header_title.getAttribute("value");
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
+        Boolean nu = doesWebElementExist(space_document_1_1);
+        assertEquals(time, "无标题");
+        assertFalse(nu);
     }
-
+    /**
+     * 空白处右键菜单模板新建
+     *
+     * @author 王继程
+     * @Time 2018-07-24
+     *
+     */
+    @Test(enabled = true)
+    public void Space_margin2() throws InterruptedException {
+        login("Space_margin@shimo.im", "123123");
+        click(space_listing_5);
+        contextClick(space_document);
+        click(space_RightMenu_11);
+        Thread.sleep(500);
+        click(doc_template);
+        click(doc_template01);
+        Thread.sleep(1300);
+        driver.close();
+        switchToPage(0);
+        String time = doc_header_title.getAttribute("value");
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
+        Boolean nu = doesWebElementExist(space_document_1_1);
+        assertEquals(time, "项目管理");
+        assertFalse(nu);
+    }
 
     /**
      * 读取系统剪贴板-----------------------------------------------------------------------------------------------------
