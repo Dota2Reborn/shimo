@@ -1706,7 +1706,7 @@
 			{
 				"elementName": "ppt_text",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='smslide-slide smslide-slide--shadowed']",
+				"locator": "//div[@data-test='viewport']/div[1]/div[1]/div[1]",
 				"note": "幻灯片页面(不是很好用，需优化)"
 			},
 			{
