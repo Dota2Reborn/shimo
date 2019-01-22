@@ -159,10 +159,10 @@ public class testRegistered extends TestInit {
 
         click(mobile_setting_confirm);
         Thread.sleep(1000);
-        WebElement b_jiebang = driver.findElement(By.xpath("//span[@class='action-label action-warning']"));
+        WebElement b_jiebang = driver.findElement(By.xpath("//div[@class='row mobile']/span[@class='action danger']"));
         click(b_jiebang);
         Thread.sleep(11000);
-        WebElement b_zhuxiao = driver.findElement(By.xpath("//button[@class='action-btn-ok action-btn-warning']"));
+        WebElement b_zhuxiao = driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]"));
         click(b_zhuxiao);
         Boolean r1 = getText(profile_toast).equals("手机解绑成功");
         System.out.print(getText(profile_toast));

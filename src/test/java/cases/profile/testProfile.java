@@ -20,7 +20,7 @@ public class testProfile extends TestInit {
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
         sendKeys(mobile_setting_input, "13911658584");
-        Boolean r1 = mobile_setting_getVerifyCode.getAttribute("class").equals("button btn-code");
+        Boolean r1 = mobile_setting_getVerifyCode.getAttribute("class").equals("button");
 
         assertTrue(r1);
     }
