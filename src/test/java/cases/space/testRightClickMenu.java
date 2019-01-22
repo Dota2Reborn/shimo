@@ -170,7 +170,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_music_preview() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_1);
@@ -188,7 +188,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_music_copies() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_3);
@@ -213,7 +213,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_music_renaming() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_4);
@@ -236,7 +236,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_music_move() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_5);
@@ -271,7 +271,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_music_delete() throws InterruptedException {
         login("Space_music@shimo.im", "123123");
         click(space_listing_7);
@@ -297,7 +297,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_image() throws InterruptedException {
         login("Space_image@shimo.im", "123123");
         click(space_listing_1);
@@ -417,7 +417,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_office_eRename() throws InterruptedException {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_2);
@@ -441,7 +441,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_office_pRename() throws InterruptedException {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_3);
@@ -465,7 +465,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_office_tRename() throws InterruptedException {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_4);
@@ -629,7 +629,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_excel_tab() throws InterruptedException {
         login("Space_tab@shimo.im", "123123");
         click(space_listing_2);
@@ -649,7 +649,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_ppt_tab() throws InterruptedException {
         login("Space_tab@shimo.im", "123123");
         click(space_listing_3);
@@ -668,7 +668,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_from_tab() throws InterruptedException {
         login("Space_tab@shimo.im", "123123");
         click(space_listing_4);
