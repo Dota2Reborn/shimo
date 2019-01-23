@@ -164,7 +164,7 @@ public class testRegistered extends TestInit {
         Thread.sleep(11000);
         WebElement b_zhuxiao = driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]"));
         click(b_zhuxiao);
-        Boolean r1 = getText(profile_toast).equals("手机解绑成功");
+        Boolean r1 = getText(profile_toast).equals("账号注销成功");
         System.out.print(getText(profile_toast));
         assertTrue(r1);
     }
