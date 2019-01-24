@@ -67,7 +67,7 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
         click(space_RightMenu_10);
         click(desktop_newFolder_name_ok);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Completely_removed);
