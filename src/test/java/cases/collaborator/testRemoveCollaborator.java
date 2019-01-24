@@ -22,6 +22,14 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         moveToElement(menu_cooperation);
+
+        Boolean r1 = doesWebElementExist(b_addCollaborator_2_list);
+
+        if(r1){
+            click(b_addCollaborator_2_list);
+            click(list_addCollaborator_4);
+        }
+
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
