@@ -94,13 +94,14 @@ public class testDesktop extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_doc_setting_6() throws InterruptedException {
+    public void desktop_doc_setting_6() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
         String msg = getText(desktop1_1);
         contextClick(desktop1_1);
         click(menu_move);
+        click(desktop_moveFolder_back_button);
         click(desktop_moveFolder_list_1);
         click(desktop_moveFolder_button);
 

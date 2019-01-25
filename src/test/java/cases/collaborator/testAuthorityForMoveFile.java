@@ -26,6 +26,7 @@ public class testAuthorityForMoveFile extends TestInit {
         contextClick(desktop1_1);
         click(menu_move);
         Thread.sleep(500);
+        click(desktop_moveFolder_back_button);
         click(desktop_moveFolder_list_2);
         click(desktop_moveFolder_button);
 
@@ -86,7 +87,6 @@ public class testAuthorityForMoveFile extends TestInit {
 
         contextClick(desktop1_1);
         click(menu_move);
-        click(desktop_moveFolder_back_button);
         click(desktop_moveFolder_back_button);
         Thread.sleep(500);
         click(desktop_moveFolder_list_1);

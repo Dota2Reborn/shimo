@@ -140,6 +140,7 @@ public class testDesktop_Folder extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         click(menu_move);
+        click(desktop_moveFolder_back_button);
         click(desktop_moveFolder_list_2);
         Thread.sleep(500);
         click(desktop_moveFolder_button);
