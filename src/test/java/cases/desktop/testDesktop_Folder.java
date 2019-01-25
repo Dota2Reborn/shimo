@@ -70,11 +70,19 @@ public class testDesktop_Folder extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_folder_setting_2() throws InterruptedException {
+    public void desktop_folder_setting_2() {
         login("autoTest_Folder@shimo.im", "123123");
         click(desktop);
 
         contextClick(desktop1_1_folder);
+
+        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        if(r1){
+            click(menu_shortcut);
+            moveToElement(desktop1_1);
+            click(desktop_setting);
+        }
+
         click(menu_shortcut);
 
 //        driver.navigate().refresh();

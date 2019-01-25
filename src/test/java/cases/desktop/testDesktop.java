@@ -40,10 +40,18 @@ public class testDesktop extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_doc_setting_2() throws InterruptedException {
+    public void desktop_doc_setting_2() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
+
+        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        if(r1){
+            click(menu_shortcut);
+            moveToElement(desktop1_1);
+            click(desktop_setting);
+        }
+
         click(menu_shortcut);
 
         driver.navigate().refresh();
