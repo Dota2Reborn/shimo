@@ -28,8 +28,8 @@ public class testDesktop_gear extends TestInit {
         click(desktop_setting);
         click(menu_newPage);
 
-        Set<String> winHandels = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandels);
+        Set<String> windowsHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(windowsHandles);
         int n = it.size();
         assertEquals(2, n);
     }
@@ -41,19 +41,24 @@ public class testDesktop_gear extends TestInit {
      * @Time 2018-03-19
      */
     @Test
-    public void desktop_doc_shortcut() throws InterruptedException {
+    public void desktop_doc_shortcut() {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
 
         moveToElement(desktop1_1);
         click(desktop_setting);
+
+        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        if(r1){
+            click(menu_shortcut);
+            moveToElement(desktop1_1);
+            click(desktop_setting);
+        }
+
         click(menu_shortcut);
 
         driver.navigate().refresh();
-//        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
-//        click(desktop_shortcut);
-//        Thread.sleep(500);
         String doc_name = getText(desktop1_1);
 
         contextClick(desktop1_1);
@@ -101,8 +106,6 @@ public class testDesktop_gear extends TestInit {
     public void desktop_doc_rename() {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
-//		click(desktop1_1_folder);
-//		wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
         moveToElement(desktop1_1);
         click(desktop_setting);
         click(menu_rename);
@@ -124,7 +127,7 @@ public class testDesktop_gear extends TestInit {
      * @Time 2018-03-19
      */
     @Test
-    public void desktop_doc_creatCopy() {
+    public void desktop_doc_createCopy() {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
         String msg = getText(desktop1_1);
