@@ -1,6 +1,7 @@
 package cases.collaborator;
 
 import base.TestInit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -164,8 +165,10 @@ public class testAuthorityForAddCollaborator extends TestInit {
         Boolean r2 = menu_move.getAttribute("disabled").equals("true");
 
         moveToElement(menu_share);
-        Boolean r3 = menu_share_1.getAttribute("disabled").equals("true");
+//        Boolean r3 = menu_share_1.getAttribute("disabled").equals("true");
+        click(menu_share_1);
 
+        Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
         wait.until(ExpectedConditions.visibilityOf(menu_cooperation));
         action.moveToElement(menu_cooperation).perform();
         Boolean r4 = menu_cooperation_1.getAttribute("disabled").equals("true");
