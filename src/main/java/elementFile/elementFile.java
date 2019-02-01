@@ -120,6 +120,8 @@ public class elementFile {
 	public WebElement b_next;
 	@SearchWith(pageName = "desktop", elementName = "b_finish", noteName = "新注册用户桌面欢迎页面，开始使用按钮")
 	public WebElement b_finish;
+	@SearchWith(pageName = "desktop", elementName = "Sticker_Face_x", noteName = "贴脸提示 X 按钮")
+	public WebElement Sticker_Face_x;
 
 	/**
 	 * doc
