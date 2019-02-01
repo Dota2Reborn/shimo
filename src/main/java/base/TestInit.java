@@ -100,10 +100,19 @@ public class TestInit extends elementFile {
         click(login_submit);
 
 //        gooiest();//跳过引导页
-
+        Sticker_Face();
         wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
+    private  void Sticker_Face(){
+        try {
+            driver.navigate().refresh();// 刷新页面
+            wait.until(ExpectedConditions.elementToBeClickable(Sticker_Face_x));
+            Sticker_Face_x.click();
 
+        }catch (Exception e){
+            return;
+        }
+    }
     private void gooiest(){
 
         try {
