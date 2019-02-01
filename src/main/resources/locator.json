@@ -549,6 +549,12 @@
 				"locateUsing": "xpath",
 				"locator": "//button[contains(text(),'开始使用')]",
 				"note": "新注册用户桌面欢迎页面，开始使用按钮"
+			},
+			{
+				"elementName": "Sticker_Face_x",
+				"locateUsing": "xpath",
+				"locator": "//span[@class='sm-modal-close-x']",
+				"note": "贴脸提示 X 按钮"
 			}
 		]
 	},
