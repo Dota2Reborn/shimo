@@ -2875,6 +2875,96 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//div[1]/div[4]/button[3]",
 				"note": "结束演示"
+			},
+			{
+				"elementName": "element_ContextMenu_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[1]",
+				"note": "剪切"
+			},
+			{
+				"elementName": "element_ContextMenu_2",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[2]",
+				"note": "复制"
+			},
+			{
+				"elementName": "element_ContextMenu_3",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[3]",
+				"note": "粘贴"
+			},
+			{
+				"elementName": "element_ContextMenu_5",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[5]",
+				"note": "剪裁图片&层级"
+			},
+			{
+				"elementName": "element_ContextMenu_6",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[6]",
+				"note": "替换图片&水平对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_7",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[7]",
+				"note": "重置图片&垂直对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_8",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[8]",
+				"note": "保存图片&分布"
+			},
+			{
+				"elementName": "element_ContextMenu_10",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[10]",
+				"note": "组合&层级"
+			},
+			{
+				"elementName": "element_ContextMenu_11",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[11]",
+				"note": "取消组合&水平对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_12",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[12]",
+				"note": "垂直对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_13",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']/ul/li[13]",
+				"note": "分布"
+			},
+			{
+				"elementName": "element_ContextMenu_1_1",
+				"locateUsing": "xpath",
+				"locator": "//li/ul[1]/li[1]",
+				"note": "至于顶层&左对齐&上对齐&横向对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_1_2",
+				"locateUsing": "xpath",
+				"locator": "//li/ul[1]/li[2]",
+				"note": "上移一层&居中对齐&横向分布"
+			},
+			{
+				"elementName": "element_ContextMenu_1_3",
+				"locateUsing": "xpath",
+				"locator": "//li/ul[1]/li[3]",
+				"note": "下移一层&右对齐&下对齐"
+			},
+			{
+				"elementName": "element_ContextMenu_1_4",
+				"locateUsing": "xpath",
+				"locator": "//li/ul[1]/li[4]",
+				"note": "置于底层"
 			}
 
 		]
