@@ -75,7 +75,7 @@ public class TestInit extends elementFile {
         // System.out.println("--------------------------------------------");
         // 关闭浏览器
         // driver.close();
-//        driver.quit();
+        driver.quit();
     }
 
     /**
