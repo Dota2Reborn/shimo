@@ -215,7 +215,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	 * @Time 2018-07-24
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Text_Editing8() throws InterruptedException, AWTException {
 		login("textstyle8@shimo.im", "123123");
 		click(desktop);
@@ -249,7 +249,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	 * @Time 2018-07-24
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Text_Editing9() throws InterruptedException {
 		login("textediting@shimo.im", "123123");
 		click(desktop);

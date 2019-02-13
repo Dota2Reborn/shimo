@@ -125,6 +125,7 @@ public class testTextboxCopy extends TestInit {//文本框复制粘贴相关
 		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
 		Thread.sleep(500);
 		driver.navigate().refresh();// 刷新页面
+		Thread.sleep(1000);
 		Boolean element = doesWebElementExist(page_elements_2);
 		click(page_elements_2);
 		click(smslide_frame_anchor_1);
