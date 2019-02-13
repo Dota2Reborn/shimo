@@ -30,7 +30,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 		click(desktop_newslides);
 		click(page_elements_1);
 		action.sendKeys("在文本占位符输入验证保存").build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(1500);
 		driver.navigate().refresh();// 刷新页面
 		String time = getText(page_elements_1);
 		click(ppt_dotdotdot);

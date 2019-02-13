@@ -17,6 +17,26 @@ public class testGlobalPage extends TestInit {// 全局页面
 	 *
 	 */
 	@Test(enabled = true)
+	public void New_Page() throws InterruptedException {
+		login("New_Page@shimo.im", "123123");
+		click(desktop_new);
+		click(desktop_newslides);
+		click(add_page);
+		Boolean result = doesWebElementExist(ppt_page_2);
+		click(ppt_dotdotdot);
+		click(ppt_delete);
+		click(desktop_newFolder_name_ok);
+		assertTrue(result);
+
+	}
+	/**
+	 * 幻灯片中新增模板页面
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-24
+	 *
+	 */
+	@Test(enabled = true)
 	public void New_Template() throws InterruptedException {
 		login("NewTemplate@shimo.im", "123123");
 		click(desktop_new);
@@ -33,7 +53,6 @@ public class testGlobalPage extends TestInit {// 全局页面
 		assertTrue(result);
 
 	}
-
 	/**
 	 * 幻灯片中删除页面后撤销
 	 *
@@ -74,6 +93,53 @@ public class testGlobalPage extends TestInit {// 全局页面
 		Boolean result2 = doesWebElementExist(page_elements_2);
 		assertTrue(result1 && !result2);
 	}
+
+	/**
+	 * 幻灯片中右键复制粘贴页面
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Ppt_Right_1() throws InterruptedException {
+		login("ppt_right_1@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		contextClick(ppt_page_1);
+		click(right_key_new);
+		Boolean result1 = doesWebElementExist(page_elements_4);
+		action.sendKeys(Keys.DELETE).perform();
+		assertTrue(result1);
+	}
+	/**
+	 * 幻灯片中删除唯一页面
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Ppt_Right_2() throws InterruptedException {
+		login("ppt_right_2@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		contextClick(ppt_page_1);
+		click(right_key_new);
+		Boolean result1 = doesWebElementExist(ppt_page_2);
+		action.sendKeys(Keys.DELETE).perform();
+		assertTrue(result1);
+	}
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * 播放幻灯片
 	 *
