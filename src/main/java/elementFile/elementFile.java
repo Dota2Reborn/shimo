@@ -1282,6 +1282,51 @@ public class elementFile {
 	public WebElement onlineshown_later;
 	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_close", noteName = "结束演示")
 	public WebElement onlineshown_close;
+	/** 剪切 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1")
+	public WebElement element_ContextMenu_1;
+	/** 剪切 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_2")
+	public WebElement element_ContextMenu_2;
+	/** 剪切 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_3")
+	public WebElement element_ContextMenu_3;
+	/** 剪裁图片&层级 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_5")
+	public WebElement element_ContextMenu_5;
+	/** 替换图片&水平对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_6")
+	public WebElement element_ContextMenu_6;
+	/** 重置图片&垂直对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_7")
+	public WebElement element_ContextMenu_7;
+	/** 保存图片&分布 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_8")
+	public WebElement element_ContextMenu_8;
+	/** 组合&层级 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_10")
+	public WebElement element_ContextMenu_10;
+	/** 取消组合&水平对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_11")
+	public WebElement element_ContextMenu_11;
+	/** 垂直对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_12")
+	public WebElement element_ContextMenu_12;
+	/** 分布 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_13")
+	public WebElement element_ContextMenu_13;
+	/** 至于顶层&左对齐&上对齐&横向对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_1")
+	public WebElement element_ContextMenu_1_1;
+	/** 上移一层&居中对齐&横向分布 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_2")
+	public WebElement element_ContextMenu_1_2;
+	/** 下移一层&右对齐&下对齐 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_3")
+	public WebElement element_ContextMenu_1_3;
+	/** 置于底层 */
+	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_4")
+	public WebElement element_ContextMenu_1_4;
 
 	/**
 	 * Template
