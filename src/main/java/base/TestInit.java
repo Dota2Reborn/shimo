@@ -59,6 +59,9 @@ public class TestInit extends elementFile {
 //        Cookie cookie1 = new Cookie("lizard-view-enabled", "1", "/", null);
 //        driver.manage().addCookie(cookie1);
 //        System.out.println(">>>>>>>" + driver.manage().getCookieNamed("lizard-view-enabled").getValue() + "<<<<<<<<<<");
+        //屏蔽基础版和到期企业版提示付费的弹窗
+        Cookie cookie = new Cookie("DEBUG_CLOSE_AUTO_MODAL", "1", "/", null);
+        driver.manage().addCookie(cookie);
         String url = driver.getCurrentUrl();
         if (!url.equals(test_url + "login")) {
             logout();
@@ -100,7 +103,7 @@ public class TestInit extends elementFile {
         click(login_submit);
 
 //        gooiest();//跳过引导页
-        Sticker_Face();
+//        Sticker_Face();//付费提示框
         wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
     private  void Sticker_Face(){
@@ -116,10 +119,6 @@ public class TestInit extends elementFile {
     private void gooiest(){
 
         try {
-//            Thread.sleep(2000);
-//            WebElement didi = driver.findElement(By.xpath("//button[@class='sm-button sc-kasBVs icvvrq sc-iSDuPN eDntyh sc-1n784rm-0 bcuuIb']"));
-//            wait.until(ExpectedConditions.elementToBeClickable(didi));
-//            didi.click();
             wait.until(ExpectedConditions.elementToBeClickable(b_next));
             b_next.click();
             wait.until(ExpectedConditions.elementToBeClickable(b_finish));
