@@ -28,7 +28,7 @@ public class testSheetHeader extends TestInit {
             click(searchList_1);
             switchToPage(1);
             Thread.sleep(1000);
-            Boolean r1 = driver.getCurrentUrl().equals(getURL() + "sheet/TThxFn4ZL18GZWjC/MODOC");
+            Boolean r1 = driver.getCurrentUrl().equals(getURL() + "sheets/TThxFn4ZL18GZWjC/MODOC");
             assertTrue(r1);
         }
 

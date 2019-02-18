@@ -691,7 +691,8 @@ public class testRightClickMenu extends TestInit {
     public void Space_margin1() throws InterruptedException {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_4);
-        contextClick(space_document);
+//        contextClick(space_document);
+        action.moveToElement(desktop_new, -10, 0).contextClick().perform();
         click(space_RightMenu_5);
         Thread.sleep(600);
         String time = doc_header_title.getAttribute("value");
@@ -713,7 +714,8 @@ public class testRightClickMenu extends TestInit {
     public void Space_margin2() throws InterruptedException {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_5);
-        contextClick(space_document);
+//        contextClick(space_document);
+        action.moveToElement(desktop_new, -10, 0).contextClick().perform();
         click(space_RightMenu_11);
         Thread.sleep(500);
         click(doc_template);

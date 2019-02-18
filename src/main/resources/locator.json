@@ -3230,7 +3230,7 @@
 				"elementName": "space_document",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='none-file']",
-				"note": "协作空间第一行第一个文件"
+				"note": "协作空间空白处"
 			},
 			{
 				"elementName": "space_document_1_1",

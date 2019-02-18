@@ -36,7 +36,7 @@ public class testAuthorityForMoveFile extends TestInit {
         contextClick(desktop1_1);
         moveToElement(menu_cooperation);
 
-        Boolean r1 = getText(addCollaborator_1_list_userName).equals("authorityForMoveFile");
+        Boolean r1 = getText(addCollaborator_1_list_userName).equals("(我) authorityForMoveFile");
         Boolean r2 = getText(addCollaborator_2_list_userName).equals("MoveFile_1_2");
         Boolean r3 = getText(b_addCollaborator_1_list).equals("所有者");
         Boolean r4 = getText(b_addCollaborator_2_list).equals("管理者");
@@ -98,7 +98,7 @@ public class testAuthorityForMoveFile extends TestInit {
         contextClick(desktop1_1);
         moveToElement(menu_cooperation);
 
-        Boolean r1 = getText(addCollaborator_1_list_userName).equals("moveFile_3_1");
+        Boolean r1 = getText(addCollaborator_1_list_userName).equals("(我) moveFile_3_1");
         Boolean r2 = getText(addCollaborator_2_list_userName).equals("moveFile_3_3");
         Boolean r3 = getText(b_addCollaborator_1_list).equals("所有者");
         Boolean r4 = getText(b_addCollaborator_2_list).equals("管理者");

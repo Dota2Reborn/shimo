@@ -43,7 +43,7 @@ public class testTransferOwner extends TestInit {
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
         Thread.sleep(300);
-        Boolean result1 = getText(addCollaborator_1_list_userName).equals("transfer2");
+        Boolean result1 = getText(addCollaborator_1_list_userName).equals("(我) transfer2");
         click(Shut_down_sm_modal_close_x);
         deleteFile();
         assertTrue(result1);
