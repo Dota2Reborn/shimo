@@ -172,7 +172,7 @@ public class testSpacePermissions  extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Boolean result2 = getText(addCollaborator_1_list_userName).equals("qq0");
+        Boolean result2 = getText(addCollaborator_1_list_userName).equals("(我) qq0");
         assertTrue(result2);
 
     }
