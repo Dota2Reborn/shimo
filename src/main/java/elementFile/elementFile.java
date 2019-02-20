@@ -450,7 +450,7 @@ public class elementFile {
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_1")
 	public WebElement space_RightMenu_1;
 	/** 预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_1")
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_Preview")
 	public WebElement space_RightMenu_Preview;
 	/** 复制链接(协作空间右键菜单) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_copyLink")

@@ -19,9 +19,9 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_1);
         String msg = getText(space_upname);
         String msg1 = getText(space_listing_1);
-        msg1 = (String) msg1.subSequence(0,3);
-        System.out.print(msg);
-        System.out.print(msg1);
+//        msg1 = (String) msg1.subSequence(0,3);
+//        System.out.print(msg);
+//        System.out.print(msg1);
         assertEquals(msg,"www");
         String msg2 = getText(space_button_import);
         assertEquals(msg2,"上传");
@@ -41,9 +41,9 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_1);
         String msg = getText(space_upname);
         String msg1 = getText(space_listing_1);
-        msg1 = (String) msg1.subSequence(0,10);
-        System.out.print(msg);
-        System.out.print(msg1);
+//        msg1 = (String) msg1.subSequence(0,10);
+//        System.out.print(msg);
+//        System.out.print(msg1);
         assertEquals(msg,"TestTeason");
         String msg2 = getText(space_button_import);
         assertEquals(msg2,"导入");
