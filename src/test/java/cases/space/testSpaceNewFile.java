@@ -24,7 +24,7 @@ public class testSpaceNewFile extends TestInit {
         System.out.print(msg1);
         assertEquals(msg,"www");
         String msg2 = getText(space_button_import);
-        assertEquals(msg2,"上传 / 导入");
+        assertEquals(msg2,"上传");
         String msg3 = getText(space_button_new);
         assertEquals(msg3,"新建");
     }
@@ -91,8 +91,8 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg,"上传文件");
         String msg1 = getText(space_uploadfolder);
         assertEquals(msg1,"上传文件夹");
-        String msg6 = getText(space_list_import);
-        assertEquals(msg6,"导入");
+//        String msg6 = getText(space_list_import);
+//        assertEquals(msg6,"导入");
     }
 
 
