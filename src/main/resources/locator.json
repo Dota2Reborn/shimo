@@ -3349,99 +3349,99 @@
 			{
 				"elementName": "space_RightMenu_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[1]",
-				"note": "预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'在新标签页中打开')]",
+				"note": "在新标签页打开(协作空间右键菜单)"
 			},
 			{
-				"elementName": "space_RightMenu_2",
+				"elementName": "space_RightMenu_Preview",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[2]",
-				"note": "上传文件夹(桌面)&移动(多选)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'预览')]",
+				"note": "预览(协作空间右键菜单)"
 			},
 			{
-				"elementName": "space_RightMenu_3",
+				"elementName": "space_RightMenu_copyLink",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[3]",
-				"note": "复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'复制链接')]",
+				"note": "复制链接(协作空间右键菜单)"
+			},
+			{
+				"elementName": "space_RightMenu_collaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[@aria-owns='collaborator$Menu']",
+				"note": "协作(协作空间右键菜单)"
 			},
 			{
 				"elementName": "space_RightMenu_3_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[3]//li[1]",
+				"locator": "//ul[@id='collaborator$Menu']/li[1]",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "space_RightMenu_3_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[3]//li[2]",
+				"locator": "//ul[@id='collaborator$Menu']/li[2]",
 				"note": "查看协作者"
 			},
 			{
 				"elementName": "space_RightMenu_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]",
-				"note": "移动(文件夹)&分享(文件)"
+				"locator": "//div[@aria-owns='share$Menu']",
+				"note": "分享(协作空间右键菜单)"
 			},
 			{
 				"elementName": "space_RightMenu_4_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[1]",
+				"locator": "//ul[@id='share$Menu']/li[1]",
 				"note": "分享开关"
 			},
 			{
 				"elementName": "space_RightMenu_4_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[2]",
+				"locator": "//ul[@id='share$Menu']/li[2]",
 				"note": "复制链接"
 			},
 			{
 				"elementName": "space_RightMenu_4_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[4]//li[4]",
+				"locator": "//ul[@id='share$Menu']/li[4]",
 				"note": "分享设置"
 			},
 			{
-				"elementName": "space_RightMenu_5",
+				"elementName": "space_RightMenu_createCopy",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[5]",
-				"note": "创建副本(云文件)&文档(桌面)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'创建副本')]",
+				"note": "创建副本(云文件)"
 			},
 			{
-				"elementName": "space_RightMenu_6",
+				"elementName": "space_RightMenu_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[6]",
-				"note": "重命名(云文件)&删除(文件夹)&老表格(桌面)&重命名(脑图||表单)&导出(文档表格幻灯片)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'文档')]",
+				"note": "新建文档（协作空间右键菜单）"
 			},
 			{
-				"elementName": "space_RightMenu_7",
+				"elementName": "space_RightMenu_rename",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[7]",
-				"note": "移动(云文件||脑图表单)&重命名(文档表格幻灯片)&幻灯片(桌面)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'重命名')]",
+				"note": "重命名(协作空间右键菜单)"
 			},
 			{
-				"elementName": "space_RightMenu_8",
+				"elementName": "space_RightMenu_move",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[8]",
-				"note": "下载(云文件)&创建副本(脑图表单)&移动(文档表格幻灯片)&思维导图(桌面)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'移动')]",
+				"note": "移动(协作空间右键菜单)"
 			},
 			{
-				"elementName": "space_RightMenu_9",
+				"elementName": "space_RightMenu_delete",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[9]",
-				"note": "创建副本(文档表格幻灯片)&文件夹(桌面)"
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'删除')]",
+				"note": "删除(协作空间)"
 			},
-			{
-				"elementName": "space_RightMenu_10",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[10]",
-				"note": "删除(云文件||脑图表单)"
-			},
-			{
-				"elementName": "space_RightMenu_11",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='fixed-context-menu']/div/ul/li[11]",
-				"note": "删除(文档表格幻灯片)&从模板新建(桌面)"
-			}
+            {
+              "elementName": "space_RightMenu_newTemplate",
+              "locateUsing": "xpath",
+              "locator": "//div[@class='fixed-context-menu']//span[contains(text(),'从模板新建')]",
+              "note": "从模板新建(协作空间)"
+            }
 		]
 	},
 	{
@@ -3500,13 +3500,13 @@
 			{
 				"elementName": "space_button_new",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'ri')]/div[@data-test='create-file'][1]/div[1]/button",
+				"locator": "//div[@data-test='create-file']/div[1]/button",
 				"note": "空间右侧新建"
 			},
 			{
 				"elementName": "space_button_import",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'ri')]/div[@data-test='create-file'][1]/div[2]/button",
+				"locator": "//div[@data-test='create-file']/div[2]/button",
 				"note": "空间右侧上传/导入"
 			},
 			{

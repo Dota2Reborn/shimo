@@ -449,12 +449,15 @@ public class elementFile {
 	/** 预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_1")
 	public WebElement space_RightMenu_1;
-	/** 上传文件夹(桌面)&移动(多选) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_2")
-	public WebElement space_RightMenu_2;
-	/** 复制链接(云文件)&重命名(文件夹)&协作(文件)&导入(桌面)&删除(多选) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3")
-	public WebElement space_RightMenu_3;
+	/** 预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_Preview")
+	public WebElement space_RightMenu_Preview;
+	/** 复制链接(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_copyLink")
+	public WebElement space_RightMenu_copyLink;
+	/** 协作(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_collaborator")
+	public WebElement space_RightMenu_collaborator;
 	/** 添加协作者 */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_1")
 	public WebElement space_RightMenu_3_1;
@@ -473,27 +476,24 @@ public class elementFile {
 	/** 分享设置 */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4_3")
 	public WebElement space_RightMenu_4_3;
-	/** 创建副本(云文件)&文档(桌面) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_5")
-	public WebElement space_RightMenu_5;
-	/** 重命名(云文件)&删除(文件夹)&老表格(桌面)&重命名(脑图||表单)&导出(文档表格幻灯片) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_6")
-	public WebElement space_RightMenu_6;
-	/** 移动(云文件||脑图表单)&重命名(文档表格幻灯片)&幻灯片(桌面) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_7")
-	public WebElement space_RightMenu_7;
-	/** 下载(云文件)&创建副本(脑图表单)&移动(文档表格幻灯片)&思维导图(桌面) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_8")
-	public WebElement space_RightMenu_8;
-	/** 创建副本(文档表格幻灯片)&文件夹(桌面) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_9")
-	public WebElement space_RightMenu_9;
-	/** 删除(云文件||脑图表单) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_10")
-	public WebElement space_RightMenu_10;
-	/** 删除(文档表格幻灯片)&从模板新建(桌面) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_11")
-	public WebElement space_RightMenu_11;
+	/** 创建副本(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_createCopy")
+	public WebElement space_RightMenu_createCopy;
+	/** 新建文档(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_newDoc")
+	public WebElement space_RightMenu_newDoc;
+	/** 重命名(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_rename")
+	public WebElement space_RightMenu_rename;
+	/** 移动(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_move")
+	public WebElement space_RightMenu_move;
+	/** 删除(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_delete")
+	public WebElement space_RightMenu_delete;
+	/** 从模板新建(协作空间) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_newTemplate")
+	public WebElement space_RightMenu_newTemplate;
 
 
 

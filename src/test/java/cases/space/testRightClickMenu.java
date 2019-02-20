@@ -25,7 +25,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_video@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_video_music);
         assertTrue(element1);
@@ -44,7 +44,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_2);
         contextClick(space_document_1_1);
         Thread.sleep(200);
-        click(space_RightMenu_3);
+        click(space_RightMenu_copyLink);
         String text = setClipbordContents();
         String[] tmp = text.split("/");
         assertEquals(tmp[4], "w9ychrkJtqvHhVPT");
@@ -61,11 +61,11 @@ public class testRightClickMenu extends TestInit {
         login("Space_video@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        click(space_RightMenu_5);
+        click(space_RightMenu_createCopy);
         Thread.sleep(500);
         String name = getText(space_document_1_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_10);
+        click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
         Thread.sleep(1000);
         click(trash);
@@ -86,7 +86,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_video@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -111,7 +111,7 @@ public class testRightClickMenu extends TestInit {
         String name="";
         if(doesWebElementExist(space_document_1_1)){
             contextClick(space_document_1_1);
-            click(space_RightMenu_7);
+            click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
@@ -122,7 +122,7 @@ public class testRightClickMenu extends TestInit {
         }else {
             click(space_listing_8);
             contextClick(space_document_1_1);
-            click(space_RightMenu_7);
+            click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
@@ -144,7 +144,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_video@shimo.im", "123123");
         click(space_listing_7);
         contextClick(space_document_1_1);
-        click(space_RightMenu_10);
+        click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
         Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_document_1_1);
@@ -175,7 +175,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_music@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_video_music);
         assertTrue(element1);
@@ -193,11 +193,11 @@ public class testRightClickMenu extends TestInit {
         login("Space_music@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        click(space_RightMenu_5);
+        click(space_RightMenu_createCopy);
         Thread.sleep(500);
         String name = getText(space_document_1_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_10);
+        click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
         Thread.sleep(500);
         click(trash);
@@ -218,7 +218,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_music@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -243,7 +243,7 @@ public class testRightClickMenu extends TestInit {
         String name="";
         if(doesWebElementExist(space_document_1_1)){
             contextClick(space_document_1_1);
-            click(space_RightMenu_7);
+            click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
@@ -254,7 +254,7 @@ public class testRightClickMenu extends TestInit {
         }else {
             click(space_listing_8);
             contextClick(space_document_1_1);
-            click(space_RightMenu_7);
+            click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
@@ -276,7 +276,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_music@shimo.im", "123123");
         click(space_listing_7);
         contextClick(space_document_1_1);
-        click(space_RightMenu_10);
+        click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
         Thread.sleep(500);
         Boolean element1 = doesWebElementExist(space_document_1_1);
@@ -302,7 +302,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_image@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         Boolean element1 = doesWebElementExist(space_Preview_image);
         assertTrue(element1);
@@ -320,7 +320,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
@@ -340,7 +340,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
@@ -361,7 +361,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         String text = getText(space_Preview_office);
         text=text.replace("\n","");
@@ -381,7 +381,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
-        click(space_RightMenu_1);
+        click(space_RightMenu_Preview);
         Thread.sleep(1500);
         String text = getText(space_Preview_txt);
         text=text.replace("\n","");
@@ -399,7 +399,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -422,7 +422,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -446,7 +446,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -470,7 +470,7 @@ public class testRightClickMenu extends TestInit {
         login("Space_office1@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
-        click(space_RightMenu_6);
+        click(space_RightMenu_rename);
         Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
@@ -512,8 +512,9 @@ public class testRightClickMenu extends TestInit {
         login("Space_word@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-        Thread.sleep(800);
-        action.clickAndHold(space_RightMenu_3).perform();
+//        Thread.sleep(800);
+//        action.clickAndHold(space_RightMenu_collaborator).perform();
+        click(space_RightMenu_collaborator);
         click(space_RightMenu_3_1);
         Thread.sleep(500);
         Boolean element1 = doesWebElementExist(input_addCollaborator);
@@ -531,8 +532,9 @@ public class testRightClickMenu extends TestInit {
         login("Space_word@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-        Thread.sleep(800);
-        action.clickAndHold(space_RightMenu_3).perform();
+//        Thread.sleep(800);
+//        action.clickAndHold(space_RightMenu_collaborator).perform();
+        click(space_RightMenu_collaborator);
         click(space_RightMenu_3_2);
         Thread.sleep(500);
         String eminl = getText(collaborator_2_list_emailOrMobile);
@@ -550,8 +552,9 @@ public class testRightClickMenu extends TestInit {
         login("Space_word@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        Thread.sleep(500);
-        action.clickAndHold(space_RightMenu_4).perform();
+//        Thread.sleep(500);
+//        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4);
         click(space_RightMenu_4_1);
         String toast1 = getText(toast_msg);
         Thread.sleep(300);
@@ -568,12 +571,13 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_word_collaborate4() throws InterruptedException {
+    public void Space_word_collaborate4() {
         login("Space_word@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
-        Thread.sleep(800);
-        action.clickAndHold(space_RightMenu_4).perform();
+//        Thread.sleep(800);
+//        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4);
         click(space_RightMenu_4_2);
         String text = setClipbordContents();
         String[] tmp = text.split("/");
@@ -592,8 +596,9 @@ public class testRightClickMenu extends TestInit {
         login("Space_word@shimo.im", "123123");
         click(space_listing_3);
         contextClick(space_document_1_1);
-        Thread.sleep(500);
-        action.clickAndHold(space_RightMenu_4).perform();
+//        Thread.sleep(500);
+//        action.clickAndHold(space_RightMenu_4).perform();
+        click(space_RightMenu_4);
         click(space_RightMenu_4_3);
         Thread.sleep(500);
         Boolean element1 = doesWebElementExist(space_cooperation_Popup);
@@ -608,12 +613,12 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_word_collaborate6() throws InterruptedException {
+    public void Space_word_collaborate6() {
         login("Space_word@shimo.im", "123123");
         click(space_listing_5);
         contextClick(space_document_1_1);
-        click(space_RightMenu_7);
-        Thread.sleep(500);
+        click(space_RightMenu_rename);
+//        Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         click(ppt_delete_sure);
@@ -693,7 +698,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_4);
 //        contextClick(space_document);
         action.moveToElement(desktop_new, -10, 0).contextClick().perform();
-        click(space_RightMenu_5);
+        click(space_RightMenu_newDoc);
         Thread.sleep(600);
         String time = doc_header_title.getAttribute("value");
         click(doc_menu);
@@ -716,7 +721,7 @@ public class testRightClickMenu extends TestInit {
         click(space_listing_5);
 //        contextClick(space_document);
         action.moveToElement(desktop_new, -10, 0).contextClick().perform();
-        click(space_RightMenu_11);
+        click(space_RightMenu_newTemplate);
         Thread.sleep(500);
         click(doc_template);
         click(doc_template01);
