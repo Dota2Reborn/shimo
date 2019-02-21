@@ -23,7 +23,7 @@ public class testDesktop_new extends TestInit {
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newDoc);
         click(b_back);
@@ -32,7 +32,7 @@ public class testDesktop_new extends TestInit {
         click(desktop_newFolder_name_ok);
 
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
 
         assertEquals(msg, msg1);
 
@@ -51,7 +51,7 @@ public class testDesktop_new extends TestInit {
 
         click(desktop);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newSheet);
         click(b_back);
@@ -60,7 +60,7 @@ public class testDesktop_new extends TestInit {
         click(desktop_newFolder_name_ok);
 
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
 
         assertEquals(msg, msg1);
 
@@ -79,7 +79,7 @@ public class testDesktop_new extends TestInit {
 
         click(desktop);
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newFolder);
 
@@ -92,7 +92,7 @@ public class testDesktop_new extends TestInit {
         click(menu_delete);
         click(desktop_newFolder_name_ok);
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
 
         assertEquals(msg, msg1);
     }
@@ -118,7 +118,7 @@ public class testDesktop_new extends TestInit {
         Thread.sleep(2000);
         click(b_back);
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -146,7 +146,7 @@ public class testDesktop_new extends TestInit {
         Thread.sleep(2000);
         click(b_back);
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -172,7 +172,7 @@ public class testDesktop_new extends TestInit {
         uploadButton.sendKeys(url);
 
         click(desktop_newFolder_name_cancel);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -201,7 +201,7 @@ public class testDesktop_new extends TestInit {
         Thread.sleep(2000);
         click(b_back);
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

@@ -26,7 +26,7 @@ public class testCollection extends TestInit {
         click(b_back);
         click(favorites);
         Sort();
-        String name = getText(desktop1_1);
+        String name = getText(desktop1_1_name);
         // contextClick(desktop1_1);
         moveToElement(desktop1_1);
         click(desktop_setting);
@@ -52,7 +52,7 @@ public class testCollection extends TestInit {
         click(b_back);
         click(favorites);
         Sort();
-        String name = getText(desktop1_1);
+        String name = getText(desktop1_1_name);
         // contextClick(desktop1_1);
         moveToElement(desktop1_1);
         click(desktop_setting);

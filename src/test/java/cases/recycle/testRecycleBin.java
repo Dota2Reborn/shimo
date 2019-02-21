@@ -26,13 +26,13 @@ public class testRecycleBin extends TestInit {
         Thread.sleep(1000);
         click(trash);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String name = getText(desktop1_1);
+        String name = getText(desktop1_1_name);
         assertEquals(name, "删除恢复测试");
         contextClick(desktop1_1);
         click(menu_Recovery);
         click(desktop);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String name1 = getText(desktop1_1);
+        String name1 = getText(desktop1_1_name);
         assertEquals(name1, "删除恢复测试");
     }
 

@@ -149,8 +149,8 @@ public class testRegistered extends TestInit {
         //17610101523
         Registered("测试", "17610101523", "123123", 3, "123123");
         click(b_pass);
-        click(b_next);
-        click(b_finish);
+//        click(b_next);
+//        click(b_finish);
         click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);

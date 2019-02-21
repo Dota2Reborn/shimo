@@ -59,7 +59,7 @@ public class testDesktop extends TestInit {
         String msg = getText(desktop_shortcut_1);
 //        click(desktop_shortcut);
 //        Thread.sleep(500);
-        String doc_name = getText(desktop1_1);
+        String doc_name = getText(desktop1_1_name);
 
         contextClick(desktop1_1);
         click(menu_shortcut);
@@ -83,12 +83,12 @@ public class testDesktop extends TestInit {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
-        String doc_name = getText(desktop1_1);
+        String doc_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_collection);
 
         click(favorites);
-        String doc_name1 = getText(desktop1_1);
+        String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_collection);
 
@@ -106,7 +106,7 @@ public class testDesktop extends TestInit {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_move);
         click(desktop_moveFolder_back_button);
@@ -122,7 +122,7 @@ public class testDesktop extends TestInit {
 
         driver.navigate().refresh();
         click(desktop);
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
 
         assertEquals(msg, msg1);
     }
@@ -147,7 +147,7 @@ public class testDesktop extends TestInit {
         click(desktop_newFolder_name_ok);
 
         driver.navigate().refresh();
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
 
         assertEquals(msg, time);
     }
@@ -164,12 +164,12 @@ public class testDesktop extends TestInit {
         click(desktop);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_creatCopy);
 
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

@@ -215,7 +215,7 @@ public class TestInit extends elementFile {
         } catch (UnhandledAlertException e) {
             // 报错
             driver.switchTo().alert().accept();
-            driver.navigate().to(test_url + "logout");
+            driver.navigate().to(test_url + "login");
             System.out.println("Unhandled Alert!!!!");
         } catch (NoAlertPresentException e) {
             // 正常情况

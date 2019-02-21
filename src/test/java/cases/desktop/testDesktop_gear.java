@@ -59,7 +59,7 @@ public class testDesktop_gear extends TestInit {
 
         driver.navigate().refresh();
         String msg = getText(desktop_shortcut_1);
-        String doc_name = getText(desktop1_1);
+        String doc_name = getText(desktop1_1_name);
 
         contextClick(desktop1_1);
         click(menu_shortcut);
@@ -83,13 +83,13 @@ public class testDesktop_gear extends TestInit {
     public void desktop_doc_collection() {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
-        String doc_name = getText(desktop1_1);
+        String doc_name = getText(desktop1_1_name);
         moveToElement(desktop1_1);
         click(desktop_setting);
         click(menu_collection);
 
         click(favorites);
-        String doc_name1 = getText(desktop1_1);
+        String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_collection);
 
@@ -115,7 +115,7 @@ public class testDesktop_gear extends TestInit {
         click(desktop_newFolder_name_ok);
 
         driver.navigate().refresh();
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
 
         assertEquals(time, msg);
     }
@@ -130,13 +130,13 @@ public class testDesktop_gear extends TestInit {
     public void desktop_doc_createCopy() {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         moveToElement(desktop1_1);
         click(desktop_setting);
         click(menu_creatCopy);
 
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
 
         moveToElement(desktop1_1);
         click(desktop_setting);

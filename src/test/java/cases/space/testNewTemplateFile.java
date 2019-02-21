@@ -20,7 +20,7 @@ public class testNewTemplateFile extends TestInit {
     public void space_newtemplate_doc(){
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newtemplate);
         click(doc_template);
@@ -36,7 +36,7 @@ public class testNewTemplateFile extends TestInit {
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
 
@@ -50,7 +50,7 @@ public class testNewTemplateFile extends TestInit {
     public void space_newtemplate_mosheet(){
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newtemplate);
         wait.until(ExpectedConditions.elementToBeClickable(sheet_template));
@@ -67,7 +67,7 @@ public class testNewTemplateFile extends TestInit {
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
 
@@ -81,7 +81,7 @@ public class testNewTemplateFile extends TestInit {
     public void space_newtemplate_mine(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newtemplate);
         click(my_template);
@@ -97,7 +97,7 @@ public class testNewTemplateFile extends TestInit {
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1);
+        String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
 }

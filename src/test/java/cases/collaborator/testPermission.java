@@ -19,7 +19,7 @@ public class testPermission extends TestInit {
         login("testing_1@test.im", "123123");
         click(desktop);
         // 右键第一个文件
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         moveToElement(menu_cooperation);
 
         sendKeys(input_addCollaborator, "testing_6@test.im");
@@ -39,7 +39,7 @@ public class testPermission extends TestInit {
         assertEquals(M, "true");
         click(quick_access_point);
         click(Back_to_Dashboard);
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         click(menu_delete);
         click(Exit_share_OK);
     }
@@ -55,7 +55,7 @@ public class testPermission extends TestInit {
         login("testing_3@test.im", "123123");
         click(desktop);
         // 右键第一个文件
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         moveToElement(menu_cooperation);
         sendKeys(input_addCollaborator, "testing_5@test.im");
         click(b_addCollaborator_1_add);
@@ -73,7 +73,7 @@ public class testPermission extends TestInit {
         assertEquals(t, "true");
 
         click(desktop);
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
     }

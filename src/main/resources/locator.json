@@ -283,7 +283,7 @@
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_doc ')]",
+				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left ')]/li[1]",
 				"note": "新建文档"
 			},
 			{
@@ -355,31 +355,31 @@
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'desktop doc-tile')])[1]",
+				"locator": "(//div[@class='finder-grid-row']/div)[1]",
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
 				"elementName": "desktop1_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'desktop doc-tile')])[2]",
+				"locator": "(//div[@class='finder-grid-row']/div)[2]",
 				"note": "平铺模式第一行第二个文件"
 			},
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'desktop folder-tile')])[1]",
+				"locator": "(//div[contains(@class,' folder-tile')])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'desktop folder-tile')])[2]",
+				"locator": "(//div[contains(@class,' folder-tile')])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,'desktop folder-tile')])[3]",
+				"locator": "(//div[contains(@class,' folder-tile')])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
