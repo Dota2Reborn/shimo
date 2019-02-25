@@ -6,8 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class testGlobalPage extends TestInit {// 全局页面
 	/**
@@ -151,13 +150,23 @@ public class testGlobalPage extends TestInit {// 全局页面
 		assertFalse(result1);
 	}
 
-
-
-
-
-
-
-
+	/**
+	 * 右键删除幻灯片
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Ppt_Right_4() {
+		login("ppt_right_4@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		contextClick(ppt_page_1);
+		click(cutting);
+		Boolean result = doesWebElementExist(onlineshown_off);
+		assertTrue(result);
+	}
 
 	/**
 	 * 播放幻灯片
@@ -173,29 +182,68 @@ public class testGlobalPage extends TestInit {// 全局页面
 		click(desktop1_1);
 		click(ppt_broadcast);
 		WebElement input = driver.findElement(By.xpath("//div[@class='sm-slide-player-slide-viewer']"));
-		String time = getText(input);
-		System.out.println(time);
-
+		String time1 = getText(input);
 		action.click().build().perform();
-		time = getText(input);
-		System.out.println(time);
-
+		String time2 = getText(input);
 		action.click().build().perform();
-		time = getText(input);
-		System.out.println(time);
-
+		String time3 = getText(input);
 		action.click().build().perform();
-		time = getText(input);
-		System.out.println(time);
-
+		String time4 = getText(input);
 		action.click().build().perform();
-		time = getText(input);
-		System.out.println(time);
-
+		String time5 = getText(input);
 		action.click().build().perform();
-		time = getText(input);
-		System.out.println(time);
-
+		action.click().build().perform();
+		assertEquals(time1, "第一页");
+		assertEquals(time2, "第二页");
+		assertEquals(time3, "第三页");
+		assertEquals(time4, "第四页");
+		assertEquals(time5, "第五页");
+	}
+	/**
+	 * 播放幻灯片
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Play_2() {
+		login("Play_1@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(ppt_page_3);
+		click(ppt_broadcast);
+		WebElement input = driver.findElement(By.xpath("//div[@class='sm-slide-player-slide-viewer']"));
+		String time3 = getText(input);
+		action.click().build().perform();
+		String time4 = getText(input);
+		action.click().build().perform();
+		String time5 = getText(input);
+		action.click().build().perform();
+		action.click().build().perform();
+		assertEquals(time3, "第三页");
+		assertEquals(time4, "第四页");
+		assertEquals(time5, "第五页");
+	}
+	/**
+	 * 页面缩放调整
+	 *
+	 * @author 王继程
+	 * @Time 2018-07-23
+	 *
+	 */
+	@Test(enabled = true)
+	public void Page_Style() {
+		login("pagestyle@shimo.im", "123123");
+		click(desktop);
+		click(desktop1_1);
+		click(narrow_trying);
+		String zomm1 = getText(ppt_zoom);
+		driver.navigate().refresh();// 刷新页面
+		click(enlarge_trying);
+		String zomm2 = getText(ppt_zoom);;
+		assertEquals(zomm1, "75%");
+		assertEquals(zomm2, "125%");
 	}
 
 
@@ -208,14 +256,6 @@ public class testGlobalPage extends TestInit {// 全局页面
 	@Test(enabled = false)
 	public void Sorting_Order() {
 		login("SortingOrder@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		click(ppt_page_1);
-		click(ppt_text);
-		click(ppt_text);
-
-
-
 	}
 
 }
