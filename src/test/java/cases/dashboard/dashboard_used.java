@@ -27,7 +27,7 @@ public class dashboard_used extends TestInit {
                 .click();
         Thread.sleep(500);
         click(favorites);
-        String text = getText(desktop1_1);
+        String text = getText(desktop1_1_name);
         assertEquals(text, "最近使用");
 
         click(dashboard);

@@ -18,13 +18,13 @@ public class testDesktop_remove extends TestInit {
 		login("autoTest-cui@shimo.im", "123123");
 		
 		click(desktop);
-		String msg = getText(desktop1_1);
+		String msg = getText(desktop1_1_name);
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(Exit_share_OK);
 		
 		click(trash);
-		String msg1 = getText(desktop1_1);
+		String msg1 = getText(desktop1_1_name);
 		contextClick(desktop1_1);
 		click(menu_Recovery);
 		
@@ -43,12 +43,12 @@ public class testDesktop_remove extends TestInit {
 		login("autoTest-cui@shimo.im", "123123");
 		
 		click(trash);
-		String msg = getText(desktop1_1);
+		String msg = getText(desktop1_1_name);
 		contextClick(desktop1_1);
 		click(menu_Recovery);
 		
 		click(desktop);
-		String msg1 = getText(desktop1_1);
+		String msg1 = getText(desktop1_1_name);
 		
 		contextClick(desktop1_1);
 		click(menu_delete);
@@ -95,7 +95,7 @@ public class testDesktop_remove extends TestInit {
 		
 		click(desktop);
 		click(desktop1_1_folder);
-		String msg = getText(desktop1_1);
+		String msg = getText(desktop1_1_name);
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(Exit_share_OK);
@@ -106,7 +106,7 @@ public class testDesktop_remove extends TestInit {
 		
 		click(desktop);
 		click(desktop1_1_folder);
-		String msg1 = getText(desktop1_1);
+		String msg1 = getText(desktop1_1_name);
 		
 		assertEquals(msg, msg1);
 	}
@@ -149,7 +149,7 @@ public class testDesktop_remove extends TestInit {
 		contextClick(desktop1_1);
 		click(menu_delete);
 		click(Exit_share_OK);	
-		String msg1 = getText(desktop1_1);
+		String msg1 = getText(desktop1_1_name);
 		
 		assertEquals(msg, msg1);
 	}

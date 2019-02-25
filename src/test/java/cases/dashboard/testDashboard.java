@@ -142,7 +142,7 @@ public class testDashboard extends TestInit {
         click(menu_creatCopy);
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
-        String fileName = getText(desktop1_1);
+        String fileName = getText(desktop1_1_name);
 
         moveToElement(desktop1_1);
         click(desktop_setting);

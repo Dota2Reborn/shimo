@@ -67,7 +67,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_share_file_favorites);
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String text = getText(desktop1_1);
+        String text = getText(desktop1_1_name);
         assertEquals(text, "共享");
 
 

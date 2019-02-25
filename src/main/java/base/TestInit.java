@@ -62,6 +62,9 @@ public class TestInit extends elementFile {
         //屏蔽基础版和到期企业版提示付费的弹窗
         Cookie cookie = new Cookie("DEBUG_CLOSE_AUTO_MODAL", "1", "/", null);
         driver.manage().addCookie(cookie);
+        //屏蔽表单弹窗
+        Cookie cookie_1 = new Cookie("DEBUG_CLOSE_GUIDE_MODAL", "1", "/", null);
+        driver.manage().addCookie(cookie_1);
         String url = driver.getCurrentUrl();
         if (!url.equals(test_url + "login")) {
             logout();
@@ -212,7 +215,7 @@ public class TestInit extends elementFile {
         } catch (UnhandledAlertException e) {
             // 报错
             driver.switchTo().alert().accept();
-            driver.navigate().to(test_url + "logout");
+            driver.navigate().to(test_url + "login");
             System.out.println("Unhandled Alert!!!!");
         } catch (NoAlertPresentException e) {
             // 正常情况

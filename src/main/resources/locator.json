@@ -24,25 +24,25 @@
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']/div/a[1]",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/updated']",
 				"note": "工作台-最近更新"
 			},
 			{
 				"elementName": "dashboard_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']/div/a[2]",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/used']",
 				"note": "工作台-最近使用"
 			},
 			{
 				"elementName": "dashboard_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']/div/a[3]",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/own']",
 				"note": "工作台-我创建的"
 			},
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']/div/a[4]",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/shared']",
 				"note": "工作台-共享给我的"
 			},
 			{
@@ -72,7 +72,7 @@
 			{
 				"elementName": "dashboard_share_file_favorites",
 				"locateUsing": "xpath",
-				"locator": "//*[@class='card-content-title']/div[2]/*[name()='svg']",
+				"locator": "(//*[@class='card-content-title']//*[name()='svg'])[1]",
 				"note": "工作台第一行第一个文件收藏按钮"
 			},
 			{
@@ -121,7 +121,7 @@
 				"elementName": "dashboard_notice_list_1_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='notification-item'][1]//div[3]//button",
-				"note": "桌面通知铃铛-通知列表中第一个-按钮"
+				"note": "桌面通知铃铛-通知列表中第一个-加入企业按钮"
 			},
 			{
 				"elementName": "dashboard_notice_list_1_time",
@@ -132,13 +132,13 @@
 			{
 				"elementName": "dashboard_notice_list_allNotice",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'sm-tab-container')]//div[1]//div[1]/span",
+				"locator": "//span[contains(text(),'全部通知')]",
 				"note": "桌面通知铃铛-全部通知"
 			},
 			{
 				"elementName": "dashboard_notice_list_unread",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-container']/div/div/div[2]/span",
+				"locator": "//span[contains(text(),'未读')]",
 				"note": "桌面通知铃铛-未读"
 			},
 			{
@@ -156,25 +156,25 @@
 			{
 				"elementName": "desktop_user_icon_status_L",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='usermenu-container']//ul//li[3]//div//div[1]//span[1]",
+				"locator": "//div[@data-test='usermenu-container']//div/span[1]",
 				"note": "桌面-右上角头像-当前账号状态-左边，如高级版，购买企业版"
 			},
 			{
 				"elementName": "desktop_user_icon_status_R",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='usermenu-container']//ul//li[3]//div//div[1]//span[2]",
+				"locator": "//div[@data-test='usermenu-container']//div/span[2]",
 				"note": "桌面-右上角头像-当前账号状态-右边，如企业版过期，企业试用中，企业名称等"
 			},
 			{
 				"elementName": "desktop_user_icon_personSetting",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='usermenu-container']//ul//li[contains(text(),'帐号设置')]",
+				"locator": "//div[@data-test='usermenu-container']//li[contains(text(),'帐号设置')]",
 				"note": "桌面-右上角头像-账号设置"
 			},
 			{
 				"elementName": "desktop_user_icon_companyManagement",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='usermenu-container']//ul//li[6]",
+				"locator": "//div[@data-test='usermenu-container']//li[contains(text(),'企业管理') or contains(text(),'我的企业')]",
 				"note": "桌面-右上角头像-我的企业/企业管理"
 			}
 		]
@@ -271,7 +271,7 @@
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div/button",
+				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div/button)[1]",
 				"note": "新建文件按钮"
 			},
 			{
@@ -283,7 +283,7 @@
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left')]/li[1]",
+				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left ')]/li[1]",
 				"note": "新建文档"
 			},
 			{
@@ -355,31 +355,31 @@
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='title'])[1]",
+				"locator": "(//div[@class='finder-grid-row']/div)[1]",
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
 				"elementName": "desktop1_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']/div/a/div[@class='title'])[2]",
+				"locator": "(//div[@class='finder-grid-row']/div)[2]",
 				"note": "平铺模式第一行第二个文件"
 			},
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[1]",
+				"locator": "(//div[contains(@class,' folder-tile')])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[2]",
+				"locator": "(//div[contains(@class,' folder-tile')])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='file-icon folder']/following-sibling::div[1])[3]",
+				"locator": "(//div[contains(@class,' folder-tile')])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
@@ -523,7 +523,7 @@
 			{
 				"elementName": "desktop1_1_name",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='tile-inner is-selectable']//div//a//div[@class='title']",
+				"locator": "(//div[@class='tile-inner is-selectable']//div[@class='title'])[1]",
 				"note": "平铺模式第一行第一个文件名称"
 			},
 			{
@@ -554,7 +554,7 @@
 				"elementName": "Sticker_Face_x",
 				"locateUsing": "xpath",
 				"locator": "//span[@class='sm-modal-close-x']",
-				"note": "贴脸提示 X 按钮"
+				"note": "基础版，高级或企业版到期，贴脸提示 X 按钮"
 			}
 		]
 	},
@@ -577,13 +577,13 @@
 			{
 				"elementName": "b_addCollaborator_back",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[1]//span",
+				"locator": "//div[@class='sm-modal-body']//span[contains(text(),'返回')]",
 				"note": "从协作者列表反馈按钮"
 			},
 			{
 				"elementName": "b_addCollaborator_confirm",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//div//div[2]//button",
+				"locator": "(//div[@class='sm-popconfirm sm-tooltip-inner']//button)[1]",
 				"note": "协作者移除或者降低自己权限时提示弹窗的确定按钮"
 			},
 			{
@@ -685,7 +685,7 @@
 			{
 				"elementName": "addCollaborator_total",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-modal-body']//div[1]//p",
+				"locator": "//div[@class='sm-modal-body']//p",
 				"note": "协作者人数"
 			},
 			{
@@ -982,19 +982,19 @@
 			{
 				"elementName": "member_management",
 				"locateUsing": "xpath",
-				"locator": "//div[@class=' sm-tab-container']/div/div[2]",
-				"note": "企业管理-成员管理"
+				"locator": "//a[contains(text(),'通讯录')]",
+				"note": "企业管理-通讯录"
 			},
 			{
 				"elementName": "company_setting",
 				"locateUsing": "xpath",
-				"locator": "//div[@class=' sm-tab-container']/div/div[3]",
+				"locator": "//a[contains(text(),'企业设置')]",
 				"note": "企业管理-企业设置"
 			},
 			{
 				"elementName": "pay_order",
 				"locateUsing": "xpath",
-				"locator": "//div[@class=' sm-tab-container']/div/div[1]",
+				"locator": "//a[contains(text(),'支付与订单')]",
 				"note": "企业管理-支付与订单"
 			},
 			{

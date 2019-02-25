@@ -24,7 +24,7 @@ public class dashboard_own extends TestInit {
                 .click();// hover收藏
         click(favorites);
 //        String text = getText(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]"));
-        String text = getText(desktop1_1);
+        String text = getText(desktop1_1_name);
         assertEquals(text, "无标题");
 
         click(dashboard);

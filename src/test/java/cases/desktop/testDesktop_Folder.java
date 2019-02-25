@@ -159,7 +159,7 @@ public class testDesktop_Folder extends TestInit {
         sendKeys(desktop_newFolder_name, "删除文件夹");
         click(desktop_newFolder_name_ok);
         driver.navigate().refresh();
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
 
         contextClick(desktop1_1);
         click(menu_delete);
@@ -188,7 +188,7 @@ public class testDesktop_Folder extends TestInit {
         click(desktop_newFolder_name_ok);
 
         driver.navigate().refresh();
-        String msg = getText(desktop1_1);
+        String msg = getText(desktop1_1_name);
 
         assertEquals(time, msg);
     }
