@@ -976,7 +976,7 @@
 			{
 				"elementName": "company_Management",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'light enterprise')]",
+				"locator": "//a[starts-with(@class,'light enterprise')]/span",
 				"note": "桌面-企业管理入口"
 			},
 			{
@@ -1000,19 +1000,19 @@
 			{
 				"elementName": "button_companyName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[2]//a",
+				"locator": "//div[@data-test='enterprise-name']//button",
 				"note": "企业设置-企业名称（更改按钮）"
 			},
 			{
 				"elementName": "text_companyName",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[2]//div[@class='desc']",
+				"locator": "//div[@data-test='enterprise-name']//span",
 				"note": "企业设置-企业名称"
 			},
 			{
 				"elementName": "input_companyName",
 				"locateUsing": "xpath",
-				"locator": "//input[@class='sm-form-control ']",
+				"locator": "//div[@class='sm-modal-body']//input",
 				"note": "企业设置-企业名称（输入框）"
 			},
 			{
@@ -1054,7 +1054,7 @@
 			{
 				"elementName": "message_ok",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']",
+				"locator": "//div[@class='sm-modal-footer']/button",
 				"note": "消息确认按钮"
 			},
 			{
@@ -1090,31 +1090,37 @@
 			{
 				"elementName": "button_addCollaborators",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[5]//a",
+				"locator": "//div[@data-test='enterprise-add-outsider']//button",
 				"note": "企业设置-谁能添加外部协作者（更改按钮）"
 			},
 			{
-				"elementName": "addCollaborators_1",
+				"elementName": "menu_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]",
-				"note": "企业设置-谁能添加外部协作者-所有企业成员"
+				"locator": "(//ul/li/div/span[@class='title'])[1]",
+				"note": "企业设置 - 更改选项（任一）- 第一个选项"
 			},
 			{
-				"elementName": "addCollaborators_2",
+				"elementName": "menu_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[3]",
-				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员"
+				"locator": "(//ul/li/div/span[@class='title'])[2]",
+				"note": "企业设置 - 更改选项（任一）- 第二个选项"
 			},
 			{
-				"elementName": "addCollaborators_3",
+				"elementName": "menu_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[4]",
-				"note": "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者"
+				"locator": "(//ul/li/div/span[@class='title'])[3]",
+				"note": "企业设置 - 更改选项（任一）- 第三个选项"
+			},
+			{
+				"elementName": "menu_4",
+				"locateUsing": "xpath",
+				"locator": "(//ul/li/div/span[@class='title'])[4]",
+				"note": "企业设置 - 更改选项（任一）- 第四个选项"
 			},
 			{
 				"elementName": "transferCompany",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='row creator-only transfer-team']//span",
+				"locator": "//div[@data-test='enterprise-transfer-team']//button",
 				"note": "企业设置-移交企业"
 			},
 			{

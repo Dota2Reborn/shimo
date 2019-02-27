@@ -26,8 +26,7 @@ public class testCompanyManagement extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(button_addCollaborators);
-        click(addCollaborators_2);
-        click(message_ok);
+        click(menu_3);
 
         logout();
         login("amei@qq.com", "123123");
@@ -38,7 +37,8 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+//        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator, "erdan@qq.com");
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 
@@ -54,13 +54,13 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator,"erdan@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
         Thread.sleep(500);
-        String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+        String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
         click(b_addCollaborator_3_list);
@@ -82,8 +82,7 @@ public class testCompanyManagement extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(button_addCollaborators);
-        click(addCollaborators_1);
-        click(message_ok);
+        click(menu_1);
 
         logout();
         login("amei@qq.com", "123123");
@@ -93,16 +92,15 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator,"erdan@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
         Thread.sleep(500);
-        String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+        String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
-//		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
 
@@ -122,8 +120,7 @@ public class testCompanyManagement extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(button_addCollaborators);
-        click(addCollaborators_3);
-        click(message_ok);
+        click(menu_2);
 
         logout();
         login("shimo03@sina.com", "123123");
@@ -133,7 +130,7 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator,"erdan@qq.com");
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
 
@@ -147,12 +144,12 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator,"erdan@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
         Thread.sleep(500);
-        String m1 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+        String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
         click(b_addCollaborator_2_list);
@@ -167,13 +164,13 @@ public class testCompanyManagement extends TestInit {
         moveToElement(menu_cooperation);
         click(button_addCollaborator);
 
-        input_addCollaborator.sendKeys("erdan@qq.com");
+        sendKeys(input_addCollaborator,"erdan@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
         Thread.sleep(500);
-        String m2 = driver.findElement(By.xpath("//div[@class='Toastify__toast-body']//div//span")).getText();
+        String m2 = getText(toast_msg);
         Boolean R3 = m2.equals("二蛋 已添加");
 
         click(b_addCollaborator_3_list);
@@ -189,7 +186,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-06
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void memberSearch() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -208,7 +205,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-06
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void banUser() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -274,7 +271,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-06
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void exitCompany() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -321,7 +318,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-13
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void copyLink() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -348,7 +345,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-20
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void addMember() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -373,7 +370,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-06
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void addMember_1() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);
@@ -397,7 +394,7 @@ public class testCompanyManagement extends TestInit {
      * @author 刘晨
      * @Time 2018-03-20
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void member_setting() throws InterruptedException {
         login("panpan@qq.com", "123123");
         click(company_Management);

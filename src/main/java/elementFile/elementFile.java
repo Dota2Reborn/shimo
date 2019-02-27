@@ -607,11 +607,11 @@ public class elementFile {
 	public WebElement setAdmin_Creater;
 	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators", noteName = "企业设置-谁能添加外部协作者（更改按钮）")
 	public WebElement button_addCollaborators;
-	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_1", noteName = "企业设置-谁能添加外部协作者-所有企业成员")
+	@SearchWith(pageName = "companyManagement", elementName = "menu_1", noteName = "企业设置 - 更改选项（任一）- 第一个选项")
 	public WebElement addCollaborators_1;
-	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_2", noteName = "企业设置-谁能添加外部协作者-仅企业创建者和管理员")
+	@SearchWith(pageName = "companyManagement", elementName = "menu_2", noteName = "企业设置 - 更改选项（任一）- 第二个选项")
 	public WebElement addCollaborators_2;
-	@SearchWith(pageName = "companyManagement", elementName = "addCollaborators_3", noteName = "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者")
+	@SearchWith(pageName = "companyManagement", elementName = "menu_3", noteName = "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者")
 	public WebElement addCollaborators_3;
 	@SearchWith(pageName = "companyManagement", elementName = "transferCompany", noteName = "企业设置-移交企业")
 	public WebElement transferCompany;
@@ -631,6 +631,24 @@ public class elementFile {
 	public WebElement button_exitCompany;
 	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open", noteName = "企业设置-打开或者关闭邀请链接")
 	public WebElement addmember_copyLink_open;
+
+
+	/**  ----------------------------------------------------------------------------------------------------------------------  */
+	/** 企业设置 - 更改选项（任一）- 第一个选项 */
+	@SearchWith(pageName = "companyManagement", elementName = "menu_1", noteName = "企业设置 - 更改选项（任一）- 第一个选项")
+	public WebElement menu_1;
+	/** 企业设置 - 更改选项（任一）- 第二个选项 */
+	@SearchWith(pageName = "companyManagement", elementName = "menu_2", noteName = "企业设置 - 更改选项（任一）- 第二个选项")
+	public WebElement menu_2;
+	/** 企业设置 - 更改选项（任一）- 第二个选项 */
+	@SearchWith(pageName = "companyManagement", elementName = "menu_3", noteName = "企业设置 - 更改选项（任一）- 第三个选项")
+	public WebElement menu_3;
+	/** 企业设置 - 更改选项（任一）- 第二个选项 */
+	@SearchWith(pageName = "companyManagement", elementName = "menu_4", noteName = "企业设置 - 更改选项（任一）- 第四个选项")
+	public WebElement menu_4;
+
+
+	/**  ----------------------------------------------------------------------------------------------------------------------  */
 
 
 	/**

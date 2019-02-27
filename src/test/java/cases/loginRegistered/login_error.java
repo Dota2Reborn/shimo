@@ -23,8 +23,8 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@", "123123");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]"), "邮箱格式不正确，请重新输入"));
-        String toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]")).getText();
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "邮箱格式不正确，请重新输入"));
+        String toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
 
         assertEquals(toast, "邮箱格式不正确，请重新输入");
 
@@ -42,10 +42,10 @@ public class login_error extends TestInit {
 
 
         login_error("", "123123");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]"), "请填写手机号或邮箱"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "请填写手机号或邮箱"));
 
         String toast = "";
-        toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[1]//div[1]")).getText();
+        toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
         assertEquals(toast, "请填写手机号或邮箱");
 
     }
@@ -80,10 +80,10 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@shimo.im", "");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "请填写密码"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "请填写密码"));
 
         String toast = "";
-        toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
+        toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
         assertEquals(toast, "请填写密码");
 
     }
@@ -100,10 +100,10 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@shimo.im", " ");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "请填写 6-72 位的密码"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "请填写 6-72 位的密码"));
 
         String toast = "";
-        toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
+        toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
         assertEquals(toast, "请填写 6-72 位的密码");
     }
 
@@ -119,10 +119,10 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@shimo.im", "8294854");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]"), "密码错误，请重新输入"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "密码错误，请重新输入"));
 
         String toast = "";
-        toast = driver.findElement(By.xpath("//div[@class='main']//div[2]//div[1]//div[2]//div[1]")).getText();
+        toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
         assertEquals(toast, "密码错误，请重新输入");
     }
 
