@@ -2,7 +2,6 @@ package cases.docSheet;
 
 import base.TestInit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -12,7 +11,7 @@ import static org.testng.Assert.assertTrue;
 public class testSheetHeader extends TestInit {
 
         /**
-         * 文档编辑页，header上搜索，点击搜索结果跳转
+         * 表格编辑页，header上搜索，点击搜索结果跳转
          *
          * @author 刘晨
          * @Time 2018-12-20
@@ -33,7 +32,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 点击返回桌面
+         * 表格编辑页，header 点击返回桌面
          *
          * @author 刘晨
          * @Time 2018-12-20
@@ -51,7 +50,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 点击返回工作台
+         * 表格编辑页，header 点击返回工作台
          *
          * @author 刘晨
          * @Time 2018-12-20
@@ -69,7 +68,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 新建文档
+         * 表格编辑页，header 新建文档
          *
          * @author 刘晨
          * @Time 2018-12-20
@@ -87,7 +86,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 收藏文件
+         * 表格编辑页，header 收藏文件
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -109,7 +108,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 点击用户头像展开用户菜单
+         * 表格编辑页，header 点击用户头像展开用户菜单
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -128,7 +127,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 点击讨论按钮
+         * 表格编辑页，header 点击讨论按钮
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -148,7 +147,7 @@ public class testSheetHeader extends TestInit {
 
 
         /**
-         * 文档编辑页，header 添加协作者
+         * 表格编辑页，header 添加协作者
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -174,7 +173,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 添加快捷方式
+         * 表格编辑页，header 添加快捷方式
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -200,7 +199,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 消息免打扰
+         * 表格编辑页，header 消息免打扰
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -225,7 +224,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 收藏
+         * 表格编辑页，header 收藏
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -250,7 +249,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 移动
+         * 表格编辑页，header 移动
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -272,7 +271,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 创建副本
+         * 表格编辑页，header 创建副本
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -302,7 +301,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 保存模板
+         * 表格编辑页，header 保存模板
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -330,7 +329,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页，header 保存版本
+         * 表格编辑页，header 保存版本
          *
          * @author 刘晨
          * @Time 2018-12-26
@@ -348,7 +347,7 @@ public class testSheetHeader extends TestInit {
         }
 
         /**
-         * 文档编辑页菜单，点击文档信息
+         * 表格编辑页菜单，点击文档信息
          *
          * @author 刘晨
          * @Time 2018-03-19
@@ -360,7 +359,7 @@ public class testSheetHeader extends TestInit {
             click(desktop);
             click(desktop1_1);
             click(doc_menu);
-            moveToElement(file_menu_help);
+//            moveToElement(file_menu_help);
             click(file_menu_msg);
 
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
