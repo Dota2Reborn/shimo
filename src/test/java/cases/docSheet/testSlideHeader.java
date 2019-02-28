@@ -17,7 +17,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-20
      */
     @Test(enabled = true)
-    public void doc_search() {
+    public void slide_search() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -37,7 +37,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-20
      */
     @Test(enabled = true)
-    public void doc_backToDesktop() {
+    public void slide_backToDesktop() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -55,7 +55,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-20
      */
     @Test(enabled = true)
-    public void doc_backToDashboard() {
+    public void slide_backToDashboard() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -73,7 +73,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-20
      */
     @Test(enabled = false)
-    public void doc_createDoc() {
+    public void slide_createDoc() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -91,7 +91,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_collectionDoc() {
+    public void slide_collectionDoc() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -113,7 +113,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_click_userIcon() {
+    public void slide_click_userIcon() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -133,7 +133,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_shortcut() {
+    public void slide_shortcut() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -159,7 +159,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_messageMute() {
+    public void slide_messageMute() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -184,7 +184,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_collection() {
+    public void slide_collection() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -209,7 +209,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_move() {
+    public void slide_move() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -231,7 +231,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_create() {
+    public void slide_create() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
@@ -262,7 +262,7 @@ public class testSlideHeader extends TestInit {
      * @Time 2018-03-19
      */
     @Test(enabled = true)
-    public void doc_msg() {
+    public void slide_msg() {
         login("testSlideHeader@shimo.im", "123123");
 
         click(desktop);
