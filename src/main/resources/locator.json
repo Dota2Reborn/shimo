@@ -1383,7 +1383,6 @@
 			}
 		]
 	},
-
 	{
 		"note": "PPT_header",
 		"pageName": "PPT_header",
@@ -1534,9 +1533,6 @@
 			}
 		]
 	},
-
-
-
 	{
 		"note": "PPT_顶部工具栏",
 		"pageName": "ppt_top",
@@ -1934,7 +1930,6 @@
 			}
 		]
 	},
-
 	{
 		"note": "PPT_幻灯片选中页面右边栏",
 		"pageName": "PPT_page_rightBar",
@@ -2062,7 +2057,6 @@
 
 		]
 	},
-
 	{
 		"note": "PPT_幻灯片选中文本框右边栏",
 		"pageName": "PPT_textbox_rightBar",
@@ -2274,9 +2268,6 @@
 
 		]
 	},
-
-
-
 	{
 		"note": "PPT_幻灯片选中图片右边栏",
 		"pageName": "PPT_rightBar_images",
@@ -2314,7 +2305,6 @@
 
 		]
 	},
-
 	{
 		"note": "PPT_幻灯片选中形状右边栏",
 		"pageName": "PPT_rightBar_shape",
@@ -2365,7 +2355,6 @@
 
 		]
 	},
-
 	{
 		"note": "PPT_幻灯片通用右边栏",
 		"pageName": "PPT_rightBar_general",
@@ -2557,7 +2546,6 @@
 			}
 		]
 	},
-
 	{
 		"note": "幻灯片中右键菜单与下拉列表",
 		"pageName": "ppt_tabulation",
@@ -3535,9 +3523,5 @@
 			}
 
 		]
-	},
-	{
-		"pageName": "--------------------------------------------------------------------",
-		"test":"123123123123123"
 	}
 ]
