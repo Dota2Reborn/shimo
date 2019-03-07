@@ -62,7 +62,6 @@
 			<class name="cases.collection.testCollection" />
 			<class name="cases.loginRegistered.login_error" />
 			<class name="cases.loginRegistered.testRegistered" />
-			<class name="cases.docSheet.testMenu_Doc_Sheet" />
 		</classes>
 	</test>
 	<test name="test10">
