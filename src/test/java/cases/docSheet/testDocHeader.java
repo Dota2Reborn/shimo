@@ -29,13 +29,6 @@ public class testDocHeader extends TestInit {
         String msg = getText(toast_msg);
         assertEquals(msg, "模板保存成功。在「新建」-「从模板新建」-「我的模板」中查看");
 
-//        click(b_back);
-//        click(desktop_new);
-//        click(desktop_newTemplate);
-//
-//        contextClick(desktop_newTemplate_1);
-//        click(desktop_template_delete);
-//        click(doc_menu_delete_OK);
     }
 
     /**
@@ -167,7 +160,7 @@ public class testDocHeader extends TestInit {
         click(b_discord);
 
         Thread.sleep(500);
-        Boolean r1 = driver.findElement(By.id("discordpanel-show")).isDisplayed();
+        Boolean r1 = driver.findElement(By.xpath("//div[@id='discordpanel-show']//ul/li[2]")).getAttribute("class").contains(" active__");
         assertTrue(r1);
     }
 
@@ -200,7 +193,6 @@ public class testDocHeader extends TestInit {
 
         click(desktop);
         click(desktop1_1);
-//        Thread.sleep(500);
         click(b_collaborator);
         sendKeys(input_collaborator, "test0910@qq.com");
         click(b_addCollaborator_1_add);
@@ -373,7 +365,6 @@ public class testDocHeader extends TestInit {
         click(desktop);
         click(desktop1_1);
         click(doc_menu);
-//        moveToElement(file_menu_help);
         click(file_menu_msg);
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));

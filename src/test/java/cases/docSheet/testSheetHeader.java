@@ -141,7 +141,7 @@ public class testSheetHeader extends TestInit {
             click(b_discord);
 
             Thread.sleep(500);
-            Boolean r1 = driver.findElement(By.xpath("//div[@class='sm-sidebar sm-sidebar-applist-discord ']")).isDisplayed();
+            Boolean r1 = driver.findElement(By.xpath("//div[@class='sm-sheet-editor-sidebar show']")).isDisplayed();
             assertTrue(r1);
         }
 
@@ -310,13 +310,6 @@ public class testSheetHeader extends TestInit {
         public void sheet_template() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
-//            click(desktop_new);
-//            click(desktop_newTemplate);
-//            contextClick(desktop_newTemplate_1);
-//            click(desktop_template_delete);
-//            click(doc_menu_delete_OK);
-//            click(driver.findElement(By.className("sm-modal-close")));
-
             click(desktop);
             click(desktop1_1);
             click(doc_menu);
@@ -359,7 +352,6 @@ public class testSheetHeader extends TestInit {
             click(desktop);
             click(desktop1_1);
             click(doc_menu);
-//            moveToElement(file_menu_help);
             click(file_menu_msg);
 
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-footer']//button")));
