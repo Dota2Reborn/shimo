@@ -61,7 +61,7 @@
 		<classes>
 			<class name="cases.collection.testCollection" />
 			<class name="cases.loginRegistered.login_error" />
-			<class name="cases.loginRegistered.testRegistered" />
+			<!--<class name="cases.loginRegistered.testRegistered" />-->
 		</classes>
 	</test>
 	<test name="test10">
