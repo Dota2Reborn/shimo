@@ -256,10 +256,8 @@ public class hovertest extends TestInit {
         driver.findElement(
                 By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a[2]"))
                 .click();
-
-        switchToPage(1);
-        String url = driver.getCurrentUrl();
-        assertEquals(url, getURL() + "company/register");
+        Boolean r1 = doesWebElementExist(By.xpath("//div[@class='sm-modal-content']"));
+        assertTrue(r1);
 
     }
 
