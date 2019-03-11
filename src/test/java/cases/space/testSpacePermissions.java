@@ -394,14 +394,25 @@ public class testSpacePermissions  extends TestInit {
      */
     @Test
     public void testSpacePermission_13() throws InterruptedException {
+        login("qq8@qq.qqq","123123");
+        click(space_listing_4);
+        click(b_SpaceSetting4);
+        click(b_SpaceSetting_collaboration);
+        click(b_SpaceSetting_collaboration_view);
+
+        sendKeys(input_addCollaborator,"qq11@qq.qqq");
+        click(b_addCollaborator_1_add);
+        Thread.sleep(500);
+        logout();
+
         login("qq11@qq.qqq","123123");
         click(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
         click(ppt_delete_sure);//删除确认弹窗中"确认删除"button
         Thread.sleep(500);
-        logout();
 
+        logout();
         login("qq8@qq.qqq","123123");
         click(space_listing_4);
         click(b_SpaceSetting4);
@@ -409,16 +420,6 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting_collaboration_view);
         Boolean result = getText(addCollaborator_total).equals("1 人协作");
         assertTrue(result);
-
-
-        sendKeys(input_addCollaborator,"qq11@qq.qqq");
-        click(b_addCollaborator_1_add);
-        Thread.sleep(500);
-        Boolean result1 = getText(addCollaborator_total).equals("2 人协作");
-        assertTrue(result1);
-
-
-
     }
     /**
      * 空间只评论/只读协作者对于空间的操作  编号98、99
