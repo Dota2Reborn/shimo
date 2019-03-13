@@ -102,7 +102,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 	 * @Time 2018-07-23
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Ppt_Right_1() {
 		login("ppt_right_1@shimo.im", "123123");
 		click(desktop);
