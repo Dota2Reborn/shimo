@@ -45,8 +45,8 @@ public class testCollaboratorUI extends TestInit {
         moveToElement(menu_cooperation);
         wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
         Boolean r1 = getText(collaborator_1_list_emailOrMobile).equals("panpan@panpan.com");
-        Boolean r2 = getText(collaborator_2_list_emailOrMobile).equals("pan***@qq.com");
-        Boolean r3 = getText(collaborator_3_list_emailOrMobile).equals("+86139****8584");
+        Boolean r2 = getText(collaborator_2_list_emailOrMobile).equals("+86139****8584");
+        Boolean r3 = getText(collaborator_3_list_emailOrMobile).equals("pan***@qq.com");
 
         assertTrue(r1 && r2 && r3);
 

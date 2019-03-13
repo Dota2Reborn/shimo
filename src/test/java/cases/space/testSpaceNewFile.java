@@ -161,7 +161,7 @@ public class testSpaceNewFile extends TestInit {
 
 
     /**
-     * 空间新建幻灯片
+     * 空间新建脑图
      * @author  范金叶
      * @Time  2019-01-15
      */

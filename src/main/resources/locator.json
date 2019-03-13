@@ -515,10 +515,22 @@
 				"note": "移动文件到文件夹，列表中后退按钮"
 			},
 			{
+				"elementName": "desktop_moveToSpace_space_1",
+				"locateUsing": "xpath",
+				"locator": "(//ul[@class='rc-tree']/li)[2]",
+				"note": "移动文件到协作空间，列表中第一个协作空间"
+			},
+			{
 				"elementName": "desktop_moveFolder_button",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-body']//button[1]",
 				"note": "移动到测试文件夹【按钮】"
+			},
+			{
+				"elementName": "desktop_moveToSpace_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//button[1]",
+				"note": "桌面文件移动到协作空间的二次确认"
 			},
 			{
 				"elementName": "desktop1_1_name",

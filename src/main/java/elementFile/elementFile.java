@@ -104,6 +104,15 @@ public class elementFile {
 	public WebElement desktop_moveFolder_list_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2", noteName = "移动文件到文件夹，选择列表中第二个文件夹")
 	public WebElement desktop_moveFolder_list_2;
+
+
+	/** 移动文件到协作空间，列表中第一个协作空间 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveToSpace_space_1")
+	public WebElement desktop_moveToSpace_space_1;
+	/** 桌面文件移动到协作空间的二次确认 */
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveToSpace_confirm")
+	public WebElement desktop_moveToSpace_confirm;
+
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_1", noteName = "表头文件名排序")
 	public WebElement desktop_orderHeader_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_orderHeader_2", noteName = "表头所有者排序")

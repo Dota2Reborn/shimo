@@ -38,23 +38,23 @@ public class hovertest extends TestInit {
         String result4 = driver.findElement(By.xpath(dd)).getText();
         assertEquals(result4, "autoTesthover@shimo.im");
 
-        String ee = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[5]";
+        String ee = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]";
         String result5 = driver.findElement(By.xpath(ee)).getText();
         assertEquals(result5, "帐号设置");
 
-        String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span";
+        String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span";
         String result6 = driver.findElement(By.xpath(ff)).getText();
         assertEquals(result6, "邀请好友免费获得高级版");
 
-        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]";
+        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
         String result7 = driver.findElement(By.xpath(gg)).getText();
         assertEquals(result7, "下载石墨文档 App");
 
-        String yy = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
+        String yy = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
         String result10 = driver.findElement(By.xpath(yy)).getText();
         assertEquals(result10, "石墨官网");
 
-        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
+        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]";
         String result8 = driver.findElement(By.xpath(hh)).getText();
         assertEquals(result8, "使用帮助");
 
@@ -113,8 +113,8 @@ public class hovertest extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]//span")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span")).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-title']//div[1]")));
         String text = driver.findElement(By.xpath("//div[@class='sm-modal-title']//div[1]")).getText();
@@ -135,8 +135,8 @@ public class hovertest extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]")).click();
 
         String aa = "//div[@role='document']/div/div/div/h3";
         String text = driver.findElement(By.xpath(aa)).getText();
@@ -157,8 +157,8 @@ public class hovertest extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "help");
