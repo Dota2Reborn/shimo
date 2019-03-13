@@ -16,8 +16,8 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test(enabled = true)
-    public void space_newtemplate_doc(){
+    @Test
+    public void space_newTemplate_doc(){
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
@@ -25,11 +25,7 @@ public class testNewTemplateFile extends TestInit {
         click(desktop_newtemplate);
         click(doc_template);
         click(doc_template01);
-//        Set<String> winHandels = driver.getWindowHandles();
-//        List<String> it = new ArrayList<String>(winHandels);
-//        String url = driver.getCurrentUrl();
-//        System.out.println(url);
-//        driver.switchTo().window(it.get(1));
+
         switchToPage(1);
         click(b_back);
         click(space_listing_3);
@@ -46,8 +42,8 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test(enabled = true)
-    public void space_newtemplate_mosheet(){
+    @Test
+    public void space_newTemplate_sheet(){
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
@@ -56,11 +52,7 @@ public class testNewTemplateFile extends TestInit {
         wait.until(ExpectedConditions.elementToBeClickable(sheet_template));
         click(sheet_template);
         click(sheet_template01);
-//        Set<String> winHandels = driver.getWindowHandles();
-//        List<String> it = new ArrayList<String>(winHandels);
-//        String url = driver.getCurrentUrl();
-//        System.out.println(url);
-//        driver.switchTo().window(it.get(1));
+
         switchToPage(1);
         click(b_back);
         click(space_listing_3);
@@ -77,8 +69,8 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test(enabled = true)
-    public void space_newtemplate_mine(){
+    @Test
+    public void space_newTemplate_mine(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
@@ -86,11 +78,7 @@ public class testNewTemplateFile extends TestInit {
         click(desktop_newtemplate);
         click(my_template);
         click(my_template02);
-//        Set<String> winHandels = driver.getWindowHandles();
-//        List<String> it = new ArrayList<String>(winHandels);
-//        String url = driver.getCurrentUrl();
-//        System.out.println(url);
-//        driver.switchTo().window(it.get(1));
+
         switchToPage(1);
         click(b_back);
         click(space_listing_3);
@@ -99,5 +87,29 @@ public class testNewTemplateFile extends TestInit {
         click(desktop_newFolder_name_ok);
         String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
+    }
+
+    /**
+     * 空间  我的模板
+     * @author
+     * @Time
+     */
+    @Test
+    public void desktopFile_moveToSpace() {
+        login("desktopFile_moveToSpace@shimo.im", "123123");
+        click(desktop);
+        click(desktop_new);
+        click(desktop_newDoc);
+        click(b_back);
+        contextClick(desktop1_1);
+        click(menu_move);
+        click(desktop_moveToSpace_space_1);
+        click(desktop_moveFolder_button);
+        click(desktop_moveToSpace_confirm);
+        assertEquals("1 个文件已移动至 测试协作空间", getText(toast_msg));
+        click(space_listing_1);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
     }
 }
