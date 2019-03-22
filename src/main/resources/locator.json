@@ -254,6 +254,54 @@
 				"elementName": "b_pass",
 				"locateUsing": "xpath",
 				"locator": "//div[contains(text(),'跳过')]"
+			},
+			{
+				"note": "注册页面-手机号输入框",
+				"elementName": "input_registered_mobile",
+				"locateUsing": "name",
+				"locator": "mobile"
+			},
+			{
+				"note": "注册页面-邮箱输入框",
+				"elementName": "input_registered_email",
+				"locateUsing": "name",
+				"locator": "email"
+			},
+			{
+				"note": "注册页面-昵称输入框",
+				"elementName": "input_registered_nickname",
+				"locateUsing": "name",
+				"locator": "nickname"
+			},
+			{
+				"note": "注册页面-密码输入框",
+				"elementName": "input_registered_password",
+				"locateUsing": "name",
+				"locator": "password"
+			},
+			{
+				"note": "注册页面-注册按钮",
+				"elementName": "button_registered",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='form-wrapper']/div/button"
+			},
+			{
+				"note": "注册页面-提示信息",
+				"elementName": "tips_registered",
+				"locateUsing": "className",
+				"locator": "tips"
+			},
+			{
+				"note": "注册页面-使用邮箱注册",
+				"elementName": "link_registered_useEmail",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='form-wrapper']/div/div/span"
+			},
+			{
+				"note": "填写验证码页面-确定按钮",
+				"elementName": "button_registered_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'确 定')]"
 			}
 			
 		]

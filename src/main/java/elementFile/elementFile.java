@@ -689,6 +689,34 @@ public class elementFile {
 	@SearchWith(pageName = "Registered", elementName = "b_pass", noteName = "绑定手机/邮箱送高级版，跳过按钮")
 	public WebElement b_pass;
 
+	/** 注册页面-手机号输入框 */
+	@SearchWith(pageName = "Registered", elementName = "input_registered_mobile")
+	public WebElement input_registered_mobile;
+	/** 注册页面-邮箱输入框 */
+	@SearchWith(pageName = "Registered", elementName = "input_registered_email")
+	public WebElement input_registered_email;
+	/** 注册页面-昵称输入框 */
+	@SearchWith(pageName = "Registered", elementName = "input_registered_nickname")
+	public WebElement input_registered_nickname;
+	/** 注册页面-密码输入框 */
+	@SearchWith(pageName = "Registered", elementName = "input_registered_password")
+	public WebElement input_registered_password;
+	/** 注册页面-注册按钮 */
+	@SearchWith(pageName = "Registered", elementName = "button_registered")
+	public WebElement button_registered;
+	/** 注册页面-提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_registered")
+	public WebElement tips_registered;
+	/** 注册页面-使用邮箱注册 */
+	@SearchWith(pageName = "Registered", elementName = "link_registered_useEmail")
+	public WebElement link_registered_useEmail;
+	/** 填写验证码页面-确定按钮 */
+	@SearchWith(pageName = "Registered", elementName = "button_registered_confirm")
+	public WebElement button_registered_confirm;
+
+
+
+
 	/**
 	 * profile
 	 * 个人账号设置页面

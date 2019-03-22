@@ -198,6 +198,32 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 注册
+     *
+     * @param type 1为手机注册 2为邮箱注册 3为手机成功注册
+     * @author 刘晨
+     * @Time 2019-3-21
+     */
+    public void Registered_new(String name, String user, String pwd, int type) {
+        driver.navigate().to(test_url + "register");
+
+        if (type == 1) {
+            sendKeys(input_registered_nickname, name);
+            sendKeys(input_registered_mobile, user);
+            sendKeys(input_registered_password, pwd);
+            click(button_registered);
+        }else if(type == 2){
+            click(link_registered_useEmail);
+            sendKeys(input_registered_nickname, name);
+            sendKeys(input_registered_email, user);
+            sendKeys(input_registered_password, pwd);
+            click(button_registered);
+        }else{
+            return;
+        }
+    }
+
+    /**
      * 登出
      *
      * @author 刘晨

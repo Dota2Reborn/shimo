@@ -48,13 +48,17 @@ public class hovertest extends TestInit {
 
         String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
         String result7 = driver.findElement(By.xpath(gg)).getText();
-        assertEquals(result7, "下载石墨文档 App");
+        assertEquals(result7, "石墨文档 App");
 
         String yy = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
         String result10 = driver.findElement(By.xpath(yy)).getText();
-        assertEquals(result10, "石墨官网");
+        assertEquals(result10, "石墨文档小程序");
 
-        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]";
+        String zz = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]//span";
+        String result11 = driver.findElement(By.xpath(zz)).getText();
+        assertEquals(result11, "前往官网");
+
+        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]";
         String result8 = driver.findElement(By.xpath(hh)).getText();
         assertEquals(result8, "使用帮助");
 
@@ -128,7 +132,7 @@ public class hovertest extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-12
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person4() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -157,8 +161,8 @@ public class hovertest extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "help");
@@ -358,16 +362,16 @@ public class hovertest extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-24
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void hover_person15() {
 
         login("fufei1@shimo.im", "123456");
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]")));
+                By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'石墨文档 App')]")));
         WebElement download = driver
-                .findElement(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'下载石墨文档 App')]"));
+                .findElement(By.xpath("//div[@data-test='usermenu-container']//ul//li[contains(text(),'石墨文档 App')]"));
         click(download);
 
         WebElement header = driver.findElement(By.xpath("//div[@class='sm-modal-body']//div//h3"));

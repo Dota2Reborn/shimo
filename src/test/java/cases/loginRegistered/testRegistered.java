@@ -57,12 +57,12 @@ public class testRegistered extends TestInit {
         assertEquals(tishi, "请填写邮箱");
     }
 
-    /*
+    /**
      * 用户注册特殊情况输入空密码
      *
      * @author 王继程
      * @Time 2018-01-08
-     **/
+     */
 
     @Test(enabled = true)
     public void Registered_4() {
