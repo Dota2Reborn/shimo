@@ -100,11 +100,11 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@shimo.im", " ");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "请填写 6-72 位的密码"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "密码首尾不能有空格"));
 
         String toast = "";
         toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
-        assertEquals(toast, "请填写 6-72 位的密码");
+        assertEquals(toast, "密码首尾不能有空格");
     }
 
     /**
