@@ -500,6 +500,9 @@ public class elementFile {
 	/** 删除(协作空间右键菜单) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_delete")
 	public WebElement space_RightMenu_delete;
+	/** 收藏(协作空间右键菜单) */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_collection")
+	public WebElement space_RightMenu_collection;
 	/** 从模板新建(协作空间) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_newTemplate")
 	public WebElement space_RightMenu_newTemplate;

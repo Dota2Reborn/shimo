@@ -3485,6 +3485,12 @@
 				"note": "移动(协作空间右键菜单)"
 			},
 			{
+				"elementName": "space_RightMenu_collection",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-unstar ')]",
+				"note": "收藏(协作空间右键菜单)"
+			},
+			{
 				"elementName": "space_RightMenu_delete",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'删除')]",

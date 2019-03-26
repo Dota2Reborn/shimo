@@ -90,7 +90,7 @@ public class testDesktop extends TestInit {
         click(favorites);
         String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        click(menu_collection);
+        click(space_RightMenu_collection);
 
         assertEquals(doc_name, doc_name1);
     }
