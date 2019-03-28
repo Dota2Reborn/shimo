@@ -31,7 +31,7 @@ public class dashboard_update extends TestInit {
         boolean text2 = getText(menu_mute).equals("消息免打扰");
         boolean text3 = getText(menu_shortcut).equals("添加到快捷方式");
         boolean text4 = getText(menu_collection).equals("收藏");
-        boolean text6 = getText(menu_cooperation).equals("1 人协作");
+        boolean text6 = getText(menu_cooperation).equals("协作");
         boolean text7 = getText(menu_move).equals("移动");
         boolean text9 = getText(menu_moveToFolder).equals("定位到所在文件夹");
         boolean text10 = getText(menu_rename).equals("重命名");
