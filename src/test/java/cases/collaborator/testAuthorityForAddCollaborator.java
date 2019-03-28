@@ -22,7 +22,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "pipi@qq.com");
         Thread.sleep(500);
@@ -48,7 +48,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "panpan@qq.com");
         Thread.sleep(500);
@@ -75,7 +75,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         click(b_addCollaborator_2_list);
         click(can_only_comment_2);
@@ -100,7 +100,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "liuchen@shimo.im");
@@ -111,16 +111,16 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result1 = getText(addCollaborator_total).equals("2 人协作");
         click(Shut_down_sm_modal_close_x);
         contextClick(desktop1_2);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result2 = getText(addCollaborator_total).equals("3 人协作");
         click(Shut_down_sm_modal_close_x);
 
         click(Folder_settings);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_3_list);
         click(list_addCollaborator_4);
 
@@ -141,7 +141,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1_folder);
 
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         String t = button_addCollaborator.getAttribute("disabled");
         assertEquals(t, "true");
     }
@@ -154,7 +154,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_6() {
+    public void authorityForAddCollaborator_6() throws InterruptedException {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
@@ -170,8 +170,10 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
         wait.until(ExpectedConditions.visibilityOf(menu_cooperation));
-        action.moveToElement(menu_cooperation).perform();
-        Boolean r4 = menu_cooperation_1.getAttribute("disabled").equals("true");
+//        action.click(menu_cooperation).perform();
+        click(menu_cooperation);
+        Thread.sleep(1000);
+        Boolean r4 = button_addCollaborator.getAttribute("disabled").equals("true");
 
         assertTrue(r1 && r2 && r3 && r4);
     }
@@ -190,7 +192,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
@@ -209,7 +211,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");

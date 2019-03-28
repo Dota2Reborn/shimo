@@ -27,11 +27,11 @@
 			<class name="cases.desktop.testDesktop" />
 		</classes>
 	</test>
-	<test name="test4">
-		<classes>
-			<class name="cases.space.testRightClickMenu" />
-		</classes>
-	</test>
+	<!--<test name="test4">-->
+		<!--<classes>-->
+			<!--<class name="cases.space.testRightClickMenu" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test5">
 		<classes>
 			<class name="cases.desktop.hovertest" />
@@ -79,11 +79,11 @@
 			<class name="cases.desktop.testDesktop_new" />
 		</classes>
 	</test>
-	<test name="test13">
-		<classes>
-			<class name="cases.space.testSpacePermissions" />
-		</classes>
-	</test>
+	<!--<test name="test13">-->
+		<!--<classes>-->
+			<!--<class name="cases.space.testSpacePermissions" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test14">
 		<classes>
 			<class name="cases.collaborator.testAuthorityForAddCollaborator" />
@@ -129,14 +129,14 @@
 			<class name="cases.dashboard.dashboard_used" />
 		</classes>
 	</test>
-	<test name="test23">
-		<classes>
-			<class name="cases.space.testNewTemplateFile" />
-		</classes>
-	</test>
-	<test name="test24">
-		<classes>
-			<class name="cases.space.testSpaceNewFile" />
-		</classes>
-	</test>
+	<!--<test name="test23">-->
+		<!--<classes>-->
+			<!--<class name="cases.space.testNewTemplateFile" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test24">-->
+		<!--<classes>-->
+			<!--<class name="cases.space.testSpaceNewFile" />-->
+		<!--</classes>-->
+	<!--</test>-->
 </suite>

@@ -34,7 +34,7 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
 //        input_addCollaborator.sendKeys("erdan@qq.com");
@@ -51,7 +51,7 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
@@ -89,7 +89,7 @@ public class testCompanyManagement extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
@@ -127,7 +127,7 @@ public class testCompanyManagement extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
@@ -141,7 +141,7 @@ public class testCompanyManagement extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
@@ -161,7 +161,7 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");

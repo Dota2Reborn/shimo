@@ -25,7 +25,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_3);
         contextClick(dashboard_update_name);
         Thread.sleep(1000);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "gx2@shimo.im");
         Thread.sleep(500);

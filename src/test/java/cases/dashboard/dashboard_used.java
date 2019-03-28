@@ -159,7 +159,7 @@ public class dashboard_used extends TestInit {
         click(dashboard_2);
 
         contextClick(dashboard_update_name);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -206,7 +206,7 @@ public class dashboard_used extends TestInit {
         click(b_back);
         click(dashboard_2);
         contextClick(dashboard_update_name);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -222,7 +222,7 @@ public class dashboard_used extends TestInit {
         login("zuijin55@shimo.im", "123123");
         click(dashboard_2);
         contextClick(dashboard_update_file);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         click(Shut_down_sm_modal_close_x);

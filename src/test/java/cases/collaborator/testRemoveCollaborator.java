@@ -21,7 +21,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove1@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         Boolean r1 = doesWebElementExist(b_addCollaborator_2_list);
 
@@ -36,13 +36,13 @@ public class testRemoveCollaborator extends TestInit {
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result1 = getText(addCollaborator_total).equals("1 人协作");
         assertTrue(result1);
 
@@ -60,7 +60,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove3@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         Boolean r1 = doesWebElementExist(b_addCollaborator_2_list);
 
@@ -75,14 +75,14 @@ public class testRemoveCollaborator extends TestInit {
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         click(button_addCollaborator_close);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result1 = getText(addCollaborator_total).equals("1 人协作");
         assertTrue(result1);
 
@@ -100,7 +100,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove4@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         sendKeys(input_addCollaborator, "remove2@shimo.im");
         click(b_addCollaborator_1_add);
@@ -108,7 +108,7 @@ public class testRemoveCollaborator extends TestInit {
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         Boolean result1 = getText(addCollaborator_total).equals("2 人协作");
@@ -117,7 +117,7 @@ public class testRemoveCollaborator extends TestInit {
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result2 = getText(addCollaborator_total).equals("2 人协作");
         assertTrue(result1 && result2);
 
@@ -135,7 +135,7 @@ public class testRemoveCollaborator extends TestInit {
 		 login("remove6@shimo.im", "123123");
 		 click(desktop);
 		 contextClick(desktop1_1_folder);
-		 moveToElement(menu_cooperation);
+		 click(menu_cooperation);
 		 click(button_addCollaborator);
 		 click(addCollaborator_1_add);
 		 click(b_addCollaborator_ok);
@@ -154,7 +154,7 @@ public class testRemoveCollaborator extends TestInit {
 		 login("remove6@shimo.im", "123123");
 		 click(desktop);
 		 contextClick(desktop1_1_folder);
-		 moveToElement(menu_cooperation);
+		 click(menu_cooperation);
 		 click(b_addCollaborator_2_list);
 		 click(list_addCollaborator_4);
 		 click(list_addCollaborator_4_ok);
@@ -177,19 +177,19 @@ public class testRemoveCollaborator extends TestInit {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_3_list);
         click(list_addCollaborator_4);
         click(button_addCollaborator_close);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result1 = getText(addCollaborator_total).equals("3 人协作");
         click(button_addCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -217,7 +217,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_2_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Thread.sleep(500);
         String t = b_addCollaborator_3_list_disable.getAttribute("disabled");
         assertEquals(t, "true");

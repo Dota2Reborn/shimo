@@ -20,7 +20,7 @@ public class testPermission extends TestInit {
         click(desktop);
         // 右键第一个文件
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
 
         sendKeys(input_addCollaborator, "testing_6@test.im");
         click(b_addCollaborator_1_add);
@@ -56,7 +56,7 @@ public class testPermission extends TestInit {
         click(desktop);
         // 右键第一个文件
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         sendKeys(input_addCollaborator, "testing_5@test.im");
         click(b_addCollaborator_1_add);
         Modify(3, 2);

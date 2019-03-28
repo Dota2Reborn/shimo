@@ -26,7 +26,7 @@ public class testTransferOwner extends TestInit {
         click(b_back);
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(addCollaborator_2_add);
@@ -37,7 +37,7 @@ public class testTransferOwner extends TestInit {
         login("transfer2@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_1_list);
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
@@ -60,7 +60,7 @@ public class testTransferOwner extends TestInit {
         click(desktop_newFolder_name_ok);
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_company_list);
         driver.findElement(By.xpath("//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div")).click();
@@ -83,7 +83,7 @@ public class testTransferOwner extends TestInit {
         login("transfer4@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_1_list);
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
@@ -92,7 +92,7 @@ public class testTransferOwner extends TestInit {
         click(button_addCollaborator_close);
         click(desktop1_1_folder);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         Boolean result = getText(b_addCollaborator_3_list).equals("管理者");
         click(Shut_down_sm_modal_close_x);
         deleteFile();

@@ -82,7 +82,7 @@ public class dashboard_own extends TestInit {
         click(b_back);
         click(dashboard_3);
         contextClick(dashboard_update_file);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -118,7 +118,7 @@ public class dashboard_own extends TestInit {
         login("own6@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         sendKeys(input_addCollaborator, "own7@shimo.im");
         click(b_addCollaborator_1_add);
         // 获取当前时间

@@ -134,7 +134,7 @@ public class testDesktop_remove extends TestInit {
 		click(b_back);
 		
 		contextClick(desktop1_1);
-		moveToElement(menu_cooperation);
+		click(menu_cooperation);
 		click(button_addCollaborator);
 		sendKeys(input_addCollaborator, "autoTest-cui@shimo.im");
 		Thread.sleep(500);

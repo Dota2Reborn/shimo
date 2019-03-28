@@ -152,7 +152,7 @@ public class dashboard_update extends TestInit {
         String text1 = getText(dashboard_update_name);
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
 //		click(b_addCollaborator_confirm);
@@ -163,7 +163,7 @@ public class dashboard_update extends TestInit {
         logout();
         login("gengxin9@shimo.im", "123123");
         contextClick(dashboard_update_name);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -218,7 +218,7 @@ public class dashboard_update extends TestInit {
 
         login("gengxin12@shimo.im", "123123");
         contextClick(dashboard_update_name);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         click(Shut_down_sm_modal_close_x);
@@ -233,7 +233,7 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        moveToElement(menu_cooperation);
+        click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);

@@ -1282,7 +1282,7 @@
 			{
 				"elementName": "menu_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//div[@aria-owns='file-menu-collab$Menu']",
+				"locator": "//li//span[contains(text(),'协作')]",
 				"note": "添加协作者"
 			},
 			{
