@@ -543,6 +543,23 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 获取协作者列表中协作者数量
+     *
+     * @author 刘晨
+     * @Time 2018-03-23
+     */
+    public int getCollaboratorSize() {
+        int result = 0;
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")));
+            result = driver.findElements(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")).size();
+        } catch (NoSuchElementException e) {
+            System.out.println("协作者列表为空");
+        }
+        return result;
+    }
+
+    /**
      * 输入内容
      *
      * @param

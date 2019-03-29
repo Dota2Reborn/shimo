@@ -112,11 +112,11 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result1 = getText(addCollaborator_total).equals("2 人协作");
+        int result1 = getCollaboratorSize();//获取协作者数量
         click(Shut_down_sm_modal_close_x);
         contextClick(desktop1_2);
         click(menu_cooperation);
-        Boolean result2 = getText(addCollaborator_total).equals("3 人协作");
+        int result2 = getCollaboratorSize();//获取协作者数量
         click(Shut_down_sm_modal_close_x);
 
         click(Folder_settings);
@@ -124,7 +124,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(b_addCollaborator_3_list);
         click(list_addCollaborator_4);
 
-        assertTrue(result1 && result2);
+        assertEquals(result2, result1 + 1);
     }
 
     /**

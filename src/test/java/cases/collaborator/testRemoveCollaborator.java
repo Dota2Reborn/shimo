@@ -43,8 +43,8 @@ public class testRemoveCollaborator extends TestInit {
 
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result1 = getText(addCollaborator_total).equals("1 人协作");
-        assertTrue(result1);
+        int count = getCollaboratorSize();
+        assertTrue(count == 1);
 
 
     }
@@ -83,8 +83,8 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result1 = getText(addCollaborator_total).equals("1 人协作");
-        assertTrue(result1);
+        int count = getCollaboratorSize();
+        assertTrue(count == 1);
 
 
     }
@@ -111,15 +111,15 @@ public class testRemoveCollaborator extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
-        Boolean result1 = getText(addCollaborator_total).equals("2 人协作");
+        int count1 = getCollaboratorSize();
         click(button_addCollaborator_close);
 
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result2 = getText(addCollaborator_total).equals("2 人协作");
-        assertTrue(result1 && result2);
+        int count2 = getCollaboratorSize();
+        assertTrue(count1 == count2);
 
     }
 	 
@@ -185,7 +185,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result1 = getText(addCollaborator_total).equals("3 人协作");
+        int count = getCollaboratorSize();
         click(button_addCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -194,7 +194,7 @@ public class testRemoveCollaborator extends TestInit {
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);
-        assertTrue(result1);
+        assertTrue(count == 3);
 
 
     }

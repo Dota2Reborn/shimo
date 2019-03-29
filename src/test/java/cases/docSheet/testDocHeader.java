@@ -201,9 +201,8 @@ public class testDocHeader extends TestInit {
         wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
-
-        Boolean r1 = getText(b_collaborator).equals("添加协作者");
-        assertTrue(r1);
+        int r1 = getCollaboratorSize();
+        assertTrue(r1 == 1);
     }
 
     /**

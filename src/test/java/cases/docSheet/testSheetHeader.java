@@ -168,8 +168,8 @@ public class testSheetHeader extends TestInit {
             click(b_addCollaborator_2_list);
             click(list_addCollaborator_4);
 
-            Boolean r1 = getText(By.xpath("//div[@data-test='page-header-right']/button[2]")).equals("添加协作者");
-            assertTrue(r1);
+            int count = getCollaboratorSize();
+            assertTrue(count == 1);
         }
 
         /**
