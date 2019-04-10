@@ -514,32 +514,12 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
 //        Thread.sleep(800);
 //        action.clickAndHold(space_RightMenu_collaborator).perform();
-        click(space_RightMenu_collaborator);
-        click(space_RightMenu_3_1);
+        click(b_SpaceSetting_collaboration);
         Thread.sleep(500);
-        Boolean element1 = doesWebElementExist(input_addCollaborator);
+        Boolean element1 = doesWebElementExist(input_add_Collaborator);
         assertTrue(element1);
     }
-    /**
-     * 右键查看协作者
-     *
-     * @author 王继程
-     * @Time 2018-07-24
-     *
-     */
-    @Test(enabled = true)
-    public void Space_word_collaborate2() throws InterruptedException {
-        login("Space_word@shimo.im", "123123");
-        click(space_listing_2);
-        contextClick(space_document_1_1);
-//        Thread.sleep(800);
-//        action.clickAndHold(space_RightMenu_collaborator).perform();
-        click(space_RightMenu_collaborator);
-        click(space_RightMenu_3_2);
-        Thread.sleep(500);
-        String eminl = getText(collaborator_2_list_emailOrMobile);
-        assertEquals(eminl,"wangjich***@shimo.im");
-    }
+
     /**
      * 右键分享开关
      *

@@ -3084,7 +3084,7 @@
             {
               "elementName": "i_newSpace_inputPaceName",
               "locateUsing": "xpath",
-              "locator": "//input[@class='name']",
+              "locator": "//div[starts-with(@class,'sm-input name ')]//input",
               "note": "新建协作空间，空间名输入框"
             },
             {
@@ -3138,7 +3138,7 @@
 			{
 				"elementName": "b_SpaceSetting_collaboration",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-menu-submenu-title']/span[1]",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-collaborator ')]",
 				"note": "协作空间hover设置--「协作者」"
 			},
 			{
@@ -3150,7 +3150,7 @@
 			{
 				"elementName": "b_SpaceSetting_collaboration_add",
 				"locateUsing": "xpath",
-				"locator": "//div/span[1]/span[contains(text(),'添加协作者')]",
+				"locator": "//span[starts-with(@class,'_collab_button_text_')]",
 				"note": "协作空间hover设置「协作者」--添加协作者"
 			},
 			{
@@ -3229,55 +3229,55 @@
 			{
 				"elementName": "space_listing_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[1]/a",
+				"locator": "//div[@class='list']/div[1]/a/span[2]",
 				"note": "协作空间列表1"
 			},
 			{
 				"elementName": "space_listing_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[2]/a",
+				"locator": "//div[@class='list']/div[2]/a/span[2]",
 				"note": "协作空间列表2"
 			},
 			{
 				"elementName": "space_listing_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[3]/a",
+				"locator": "//div[@class='list']/div[3]/a/span[2]",
 				"note": "协作空间列表3"
 			},
 			{
 				"elementName": "space_listing_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[4]/a",
+				"locator": "//div[@class='list']/div[4]/a/span[2]",
 				"note": "协作空间列表4"
 			},
 			{
 				"elementName": "space_listing_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[5]/a",
+				"locator": "//div[@class='list']/div[5]/a/span[2]",
 				"note": "协作空间列表5"
 			},
 			{
 				"elementName": "space_listing_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[6]/a",
+				"locator": "//div[@class='list']/div[6]/a/span[2]",
 				"note": "协作空间列表6"
 			},
 			{
 				"elementName": "space_listing_7",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[7]/a",
+				"locator": "//div[@class='list']/div[7]/a/span[2]",
 				"note": "协作空间列表7"
 			},
 			{
 				"elementName": "space_listing_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[8]/a",
+				"locator": "//div[@class='list']/div[8]/a/span[2]",
 				"note": "协作空间列表8"
 			},
 			{
 				"elementName": "space_listing_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[9]/a",
+				"locator": "//div[@class='list']/div[9]/a/span[2]",
 				"note": "协作空间列表9"
 			},
 			{
@@ -3588,6 +3588,144 @@
 				"note": "协作空间下拉列表导入"
 			}
 
+		]
+	},
+	{
+		"note": "协作空间协作面板",
+		"pageName": "spaceCollaboratorUI",
+		"elements": [
+			{
+				"elementName": "b_add_Collaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_collab_button_')]",
+				"note": "【新协作面板】添加协作权限按钮"
+			},
+			{
+				"elementName": "input_add_Collaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_searchbox_input_wrapper_')]/div",
+				"note": "【新协作面板】添加协作者邮箱/手机号-输入框"
+			},
+			{
+				"elementName": "input_add_Collaborator_1",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_searchbox_input_wrapper_')]/input",
+				"note": "【新协作面板】添加协作者邮箱/手机号-输入框"
+			},
+			{
+				"elementName": "b_add_CollaboratorList_1",
+				"locateUsing": "xpath",
+				"locator": "(//span[starts-with(@class,'_dropdown_button_text_')])[1]",
+				"note": "【新协作面板】协作者列表，第一个协作者添加权限按钮"
+			},
+			{
+				"elementName": "b_add_CollaboratorList_2",
+				"locateUsing": "xpath",
+				"locator": "(//span[starts-with(@class,'_dropdown_button_text_')])[2]",
+				"note": "【新协作面板】协作者列表，第二个协作者添加权限按钮"
+			},
+			{
+				"elementName": "cpList_onlyRead",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'只能阅读')]",
+				"note": "【新协作面板】协作者权限，只能阅读"
+			},
+			{
+				"elementName": "cpList_onlyDiscuss",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'只能评论')]",
+				"note": "【新协作面板】协作者权限，只能评论"
+			},
+			{
+				"elementName": "cpList_edit",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'可以编辑')]",
+				"note": "【新协作面板】协作者权限，可以编辑"
+			},
+			{
+				"elementName": "cpList_remove",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_remove_item_button_')]",
+				"note": "【新协作面板】协作者权限，移除已选权限"
+			},
+			{
+				"elementName": "b_collaborator_Back",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_back_button_')]",
+				"note": "【新协作面板】返回按钮"
+			},
+			{
+				"elementName": "b_collaboratorsList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[1]",
+				"note": "【新协作面板】协作者列表第一个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_collaboratorsList_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[2]",
+				"note": "【新协作面板】协作者列表第二个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_department_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_department_tree_row_')])[2]/div/div[2]//span",
+				"note": "【新协作面板】协作者列表【组织】第二个变更权限按钮"
+			},
+			{
+				"elementName": "toast_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "(//div[@id='toast-container']/div/div)[last()]",
+				"note": "【新协作面板】协作者变更toast"
+			},
+			{
+				"elementName": "tabs_collaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'协作者')]",
+				"note": "【新协作面板】协作者列表标签切换-协作者"
+			},
+			{
+				"elementName": "tabs_management",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'管理员')]",
+				"note": "【新协作面板】协作者列表标签切换-管理员"
+			},
+			{
+				"elementName": "tabs_soon",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'最近')]",
+				"note": "【新协作面板】添加协作者列表标签切换-最近"
+			},
+			{
+				"elementName": "tabs_companyMember",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'企业全员')]",
+				"note": "【新协作面板】添加协作者列表标签切换-企业全员"
+			},
+			{
+				"elementName": "tabs_organization",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'组织')]",
+				"note": "【新协作面板】添加协作者列表标签切换-组织"
+			},
+			{
+				"elementName": "spacingSetting_spaceName",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-input name ')]/div/input",
+				"note": "【新协作面板】协作空间设置页面-空间名输入框"
+			},
+			{
+				"elementName": "b_spacingSetting_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[starts-with(@class,'sm-button m-config-ok ')]",
+				"note": "【新协作面板】协作空间设置页面-确定按钮"
+			},
+			{
+				"elementName": "b_spacingCollaborator_close",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_x_button_visible_')]",
+				"note": "【新协作面板】协作者列表页面-关闭按钮"
+			}
 		]
 	}
 ]

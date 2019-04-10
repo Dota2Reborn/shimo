@@ -422,6 +422,9 @@ public class TestInit extends elementFile {
                 list_addCollaborator_4.click();
                 wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
                 list_addCollaborator_4_ok.click();
+            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())){
+                //协作空间，添加协作者
+                space_addCollaborator(b_add_CollaboratorList_1);
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
@@ -463,6 +466,12 @@ public class TestInit extends elementFile {
         }
     }
 
+    /**
+     * 桌面添加协作者
+     *
+     * @author 刘晨
+     * @Time 2017-11-21
+     */
     public void addCollaborator(WebElement element) {
         String msg = getText(element);
         if (msg.equals("添加") || msg.equals("邀请")) {
@@ -473,6 +482,27 @@ public class TestInit extends elementFile {
             element.click();
             wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
             click(list_addCollaborator_4);
+            assertTrue(false);
+        }
+    }
+
+
+    /**
+     * 协作空间添加协作者
+     *
+     * @author 刘晨
+     * @Time 2019-4-2
+     */
+    public void space_addCollaborator(WebElement element) {
+        String msg = getText(element);
+        if (msg.equals("添加权限")) {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+        } else {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+            wait.until(ExpectedConditions.elementToBeClickable(cpList_remove));
+            click(cpList_remove);
             assertTrue(false);
         }
     }
@@ -560,6 +590,23 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 协作空间，协作面板获取协作者列表中协作者数量
+     *
+     * @author 刘晨
+     * @Time 2018-03-23
+     */
+    public int getSpaceCollaboratorSize() {
+        int result = 0;
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_')]")));
+            result = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]")).size();
+        } catch (NoSuchElementException e) {
+            return 0;
+        }
+        return result;
+    }
+
+    /**
      * 输入内容
      *
      * @param
@@ -567,8 +614,15 @@ public class TestInit extends elementFile {
      * @Time 2018-04-16
      */
     public void sendKeys(WebElement element, String msg) {
-        wait.until(ExpectedConditions.visibilityOf(element));
-        element.sendKeys(msg);
+        if(element.toString().equals(input_add_Collaborator.toString())){
+            //协作空间，协作面板，需要先点击在输入
+            click(element);
+            wait.until(ExpectedConditions.visibilityOf(input_add_Collaborator_1));
+            input_add_Collaborator_1.sendKeys(msg);
+        }else{
+            wait.until(ExpectedConditions.visibilityOf(element));
+            element.sendKeys(msg);
+        }
     }
 
     /**

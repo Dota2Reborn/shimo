@@ -1421,4 +1421,77 @@ public class elementFile {
 	public WebElement space_uploadfolder;
 	@SearchWith(pageName = "spaceRightButton", elementName = "space_list_import", noteName = "协作空间下拉列表导入")
 	public WebElement space_list_import;
+
+
+	/**
+	 * spaceCollaboratorUI
+	 * 【新协作面板】
+	 */
+
+	/** 【新协作面板】添加协作权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_add_Collaborator")
+	public WebElement b_add_Collaborator;
+	/** 【新协作面板】添加协作者邮箱/手机号-输入框 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "input_add_Collaborator")
+	public WebElement input_add_Collaborator;
+    /** 【新协作面板】添加协作者邮箱/手机号-输入框 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "input_add_Collaborator_1")
+    public WebElement input_add_Collaborator_1;
+    /** 【新协作面板】协作者列表，第一个协作者添加权限按钮 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_add_CollaboratorList_1")
+    public WebElement b_add_CollaboratorList_1;
+	/** 【新协作面板】协作者列表，第二个协作者添加权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_add_CollaboratorList_2")
+	public WebElement b_add_CollaboratorList_2;
+    /** 【新协作面板】协作者权限，只能阅读 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "cpList_onlyRead")
+    public WebElement cpList_onlyRead;
+    /** 【新协作面板】协作者权限，只能评论 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "cpList_onlyDiscuss")
+    public WebElement cpList_onlyDiscuss;
+    /** 【新协作面板】协作者权限，可以编辑 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "cpList_edit")
+    public WebElement cpList_edit;
+    /** 【新协作面板】协作者权限，移除已选权限 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "cpList_remove")
+    public WebElement cpList_remove;
+    /** 【新协作面板】返回按钮 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaborator_Back")
+    public WebElement b_collaborator_Back;
+    /** 【新协作面板】协作者列表第一个协作者变更权限按钮 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaboratorsList_1")
+    public WebElement b_collaboratorsList_1;
+	/** 【新协作面板】协作者列表第二个协作者变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaboratorsList_2")
+	public WebElement b_collaboratorsList_2;
+    /** 【新协作面板】协作者列表【组织】第二个变更权限按钮 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_2")
+    public WebElement b_department_2;
+    /** 【新协作面板】协作者变更toast */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "toast_addCollaborator")
+    public WebElement toast_addCollaborator;
+    /** 【新协作面板】协作者列表标签切换-协作者 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_collaborator")
+    public WebElement tabs_collaborator;
+    /** 【新协作面板】协作者列表标签切换-管理员 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_management")
+    public WebElement tabs_management;
+    /** 【新协作面板】添加协作者列表标签切换-最近 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_soon")
+    public WebElement tabs_soon;
+    /** 【新协作面板】协作者列表标签切换-企业全员 */
+    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_companyMember")
+    public WebElement tabs_companyMember;
+    /** 【新协作面板】协作者列表标签切换-组织 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_organization")
+	public WebElement tabs_organization;
+	/** 【新协作面板】协作空间设置页面-空间名输入框 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "spacingSetting_spaceName")
+	public WebElement spacingSetting_spaceName;
+	/** 【新协作面板】协作空间设置页面-确定按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingSetting_confirm")
+	public WebElement b_spacingSetting_confirm;
+	/** 【新协作面板】协作者列表页面-关闭按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_close")
+	public WebElement b_spacingCollaborator_close;
 }
