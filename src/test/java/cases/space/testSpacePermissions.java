@@ -1,14 +1,9 @@
 package cases.space;
 
 import base.TestInit;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.annotations.Test;
 
-import javax.print.DocFlavor;
 
 import static org.testng.Assert.*;
 
@@ -157,37 +152,7 @@ public class testSpacePermissions  extends TestInit {
         String msg = getText(space_listing_1);
         assertEquals(msg, time);
     }
-//    /**
-//     * 空间创建者对于空间的操作  编号86
-//     * 创建者/管理员修改全员权限
-//     * @author 陈清杰
-//     * @Time 2019-01-08
-//     *
-//     */
-//
-//    @Test(enabled = false)
-//    public void testSpacePermission_6() {
-//        login("qq6@qq.qqq","123123");
-//        click(space_listing_2);
-//        click(b_SpaceSetting2);
-//        click(b_SpaceSetting_setting);
-//
-//
-//        click(b_SpaceSetting_setting_ChangePermission);
-//        click(b_SpaceSetting_setting_ChangePermission_edit);
-//        click(b_SpaceSetting_setting_ok);
-//
-//        click(space_listing_2);
-//        click(b_SpaceSetting2);
-//        click(b_SpaceSetting_setting);
-//        Boolean result1 = getText(b_SpaceSetting_setting_ChangePermission_now).equals("可编辑");
-//        assertTrue(result1);
-//
-//        click(b_SpaceSetting_setting_ChangePermission);
-//        click(b_SpaceSetting_setting_ChangePermission_comment);
-//
-//
-//    }
+
 
     /**
      * 空间创建者对于空间的操作  编号86
@@ -296,26 +261,6 @@ public class testSpacePermissions  extends TestInit {
         assertEquals(msg2 ,"研发 的权限已移除");
     }
 
-//    /**
-//     * 空间可编辑协作者对于空间的操作  编号94
-//     * 可编辑协作者转让所有权（预期：无权限）
-//     * @author 陈清杰
-//     * @Time 2019-01-10
-//     *
-//     */
-//    @Test(enabled = true)
-//    public  void  testSpacePermission_10() throws InterruptedException {
-//        login("qq9@qq.qqq", "123123");
-//        click(space_listing_3);
-//        click(b_SpaceSetting3);
-//        click(b_SpaceSetting_collaboration);
-////        click(b_SpaceSetting_collaboration_add);
-//
-//        String b = b_addCollaborator_1_list_disable.getAttribute("disabled");
-//        assertEquals(b,"true");
-//
-//
-//    }
 
     /**
      * 空间可编辑协作者对于空间的操作  编号95
@@ -430,18 +375,6 @@ public class testSpacePermissions  extends TestInit {
 
         assertFalse(r);
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
