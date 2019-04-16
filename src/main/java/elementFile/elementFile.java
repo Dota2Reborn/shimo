@@ -1494,4 +1494,16 @@ public class elementFile {
 	/** 【新协作面板】协作者列表页面-关闭按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_close")
 	public WebElement b_spacingCollaborator_close;
+	/** 【新协作面板】管理员列表页面-【添加管理员】按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_addAdmin")
+	public WebElement b_spacingCollaborator_addAdmin;
+	/** 【新协作面板】管理员列表第一个【设为管理员】按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_addAdmin_1")
+	public WebElement b_spacingCollaborator_addAdmin_1;
+	/** 【新协作面板】管理员列表，【移除管理员】按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_removeAdmin")
+	public WebElement b_spacingCollaborator_removeAdmin;
+	/** 【新协作面板】管理员列表，移除管理员，【确认】按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_removeAdmin_confirm")
+	public WebElement b_spacingCollaborator_removeAdmin_confirm;
 }

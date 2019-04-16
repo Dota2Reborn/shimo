@@ -376,7 +376,61 @@ public class testSpacePermissions  extends TestInit {
         assertFalse(r);
     }
 
+    /**
+     * 协作空间添加/删除管理员
+     * 添加管理员，删除管理员，管理员变为普通协作者，删除协作者
+     * @author 刘晨
+     * @Time 2019-04-16
+     *
+     */
+    @Test
+    public void testSpacePermission_17() throws InterruptedException {
+        login("testSpace01@qq.com","123123");
+        click(space_listing_1);
+        click(b_SpaceSetting1);
+        click(b_SpaceSetting_collaboration);
 
+        click(tabs_management);
+        click(b_spacingCollaborator_addAdmin);
+        sendKeys(input_add_Collaborator,"testSpace02@qq.com");
+        click(b_spacingCollaborator_addAdmin_1);
 
+        String msg = getText(toast_addCollaborator);
+        assertEquals(msg ,"ApexLegends 的权限已设置为管理员");
+
+        click(b_collaborator_Back);
+        Thread.sleep(500);
+        click(b_collaborator_Back);
+
+        click(b_collaboratorsList_2);
+        click(b_spacingCollaborator_removeAdmin);
+        click(b_spacingCollaborator_removeAdmin_confirm);
+        click(tabs_collaborator);
+        click(b_collaboratorsList_1);
+        click(cpList_remove);
+
+        String msg2 = getText(toast_addCollaborator);
+        assertEquals(msg2 ,"ApexLegends 的权限已移除");
+
+    }
+
+    /**
+     * 协作空间协作者，查看管理员列表，没有添加管理员按钮
+     *
+     * @author 刘晨
+     * @Time 2019-04-16
+     *
+     */
+    @Test
+    public void testSpacePermission_18() {
+        login("testSpace03@qq.com", "123123");
+        click(space_listing_1);
+        click(b_SpaceSetting1);
+        click(b_SpaceSetting_collaboration);
+
+        click(tabs_management);
+        Boolean result = doesWebElementExist(b_spacingCollaborator_addAdmin);
+        assertFalse(result);
+    }
 
 }

@@ -3725,6 +3725,30 @@
 				"locateUsing": "xpath",
 				"locator": "//div[starts-with(@class,'_x_button_visible_')]",
 				"note": "【新协作面板】协作者列表页面-关闭按钮"
+			},
+			{
+				"elementName": "b_spacingCollaborator_addAdmin",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_row_add_admin_')]",
+				"note": "【新协作面板】管理员列表页面-【添加管理员】按钮"
+			},
+			{
+				"elementName": "b_spacingCollaborator_addAdmin_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_set_admin_')])[1]",
+				"note": "【新协作面板】管理员列表第一个【设为管理员】按钮"
+			},
+			{
+				"elementName": "b_spacingCollaborator_removeAdmin",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_remove_admin_item_')]",
+				"note": "【新协作面板】管理员列表，【移除管理员】按钮"
+			},
+			{
+				"elementName": "b_spacingCollaborator_removeAdmin_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_confirm_dialog_buttons_ok_')]",
+				"note": "【新协作面板】管理员列表，移除管理员，【确认】按钮"
 			}
 		]
 	}
