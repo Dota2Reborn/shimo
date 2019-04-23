@@ -135,7 +135,7 @@ public class testSpacePermissions  extends TestInit {
      * @Time 2019-01-08
      *
      */
-    @Test
+    @Test(enabled = false)
     public  void  testSpacePermission_5() {
         login("qq6@qq.qqq","123123");
         click(space_listing_1);
