@@ -232,7 +232,7 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public  void  testPermission_9() {
+    public  void  testSpacePermission_9() {
         login("qq9@qq.qqq","123123");
         click(space_listing_2);
         click(b_SpaceSetting2);
