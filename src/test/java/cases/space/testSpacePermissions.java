@@ -17,7 +17,7 @@ public class testSpacePermissions  extends TestInit {
      */
 
     @Test
-    public  void testSpacePermissions_0() throws InterruptedException {
+    public  void testSpacePermission_0() throws InterruptedException {
 
         login("qq0@qq.qqqq", "123123");
         click(space_listing_2);
@@ -57,7 +57,7 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public  void  testSpacePermissions_2() throws InterruptedException {
+    public  void  testSpacePermission_2() throws InterruptedException {
         login("qq0@qq.qqqq", "123123");
         click(space_listing_4);
         click(b_SpaceSetting4);
@@ -96,7 +96,7 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public  void  testSpacePermissions_3() {
+    public  void  testSpacePermission_3() {
         login("qq0@qq.qqqq","123123");
         click(space_listing_5);
         click(b_SpaceSetting5);
