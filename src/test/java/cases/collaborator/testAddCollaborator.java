@@ -14,10 +14,9 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-11-22
      */
-    //Todo 目前限制 为15人
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void addCollaborator_1() {
-        login("autoTest01@shimo.im", "123123");
+        login("jcbyh@shimo.im", "123123");
 
         click(desktop);
         contextClick(desktop1_1);

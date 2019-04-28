@@ -739,7 +739,7 @@
 			{
 				"elementName": "list_addCollaborator_4_ok",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'确定')]",
+				"locator": "//div[@class='sm-popconfirm sm-tooltip-inner']//button[contains(text(),'确定')]",
 				"note": "协作者权限列表--移除--确认移除"
 			},
 			{
