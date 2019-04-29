@@ -56,9 +56,6 @@ public class TestInit extends elementFile {
 
     @BeforeMethod
     public void setUp() {
-//        Cookie cookie1 = new Cookie("lizard-view-enabled", "1", "/", null);
-//        driver.manage().addCookie(cookie1);
-//        System.out.println(">>>>>>>" + driver.manage().getCookieNamed("lizard-view-enabled").getValue() + "<<<<<<<<<<");
         //屏蔽基础版和到期企业版提示付费的弹窗
         Cookie cookie = new Cookie("DEBUG_CLOSE_AUTO_MODAL", "1", "/", null);
         driver.manage().addCookie(cookie);
@@ -109,6 +106,13 @@ public class TestInit extends elementFile {
 //        Sticker_Face();//付费提示框
         wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
+
+    /**
+     * 跳过付费提示框
+     *
+     * @author 刘晨
+     * @Time 2017-01-08
+     */
     private  void Sticker_Face(){
         try {
             driver.navigate().refresh();// 刷新页面
@@ -119,6 +123,13 @@ public class TestInit extends elementFile {
             return;
         }
     }
+
+    /**
+     * 跳过引导页
+     *
+     * @author 刘晨
+     * @Time 2017-01-08
+     */
     private void gooiest(){
 
         try {
@@ -147,7 +158,6 @@ public class TestInit extends elementFile {
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         sendKeys(userEmail, user);
         sendKeys(userPwd, pwd);
-        // login_submit.click();
         click(login_submit);
     }
 
@@ -256,8 +266,8 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public void switchToPage(int i) {
-        Set<String> winHandels = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandels);
+        Set<String> winHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(winHandles);
         driver.switchTo().window(it.get(i));
     }
 
@@ -268,16 +278,16 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public void pageInit() {
-        Set<String> winHandels = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandels);
+        Set<String> winHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(winHandles);
         int n = it.size();
         for (int i = 0; i < n - 1; i++) {
             driver.switchTo().window(it.get(i));
             driver.close();
         }
 
-        winHandels = driver.getWindowHandles();
-        it = new ArrayList<String>(winHandels);
+        winHandles = driver.getWindowHandles();
+        it = new ArrayList<String>(winHandles);
         driver.switchTo().window(it.get(0));
     }
 
@@ -408,10 +418,6 @@ public class TestInit extends elementFile {
                 element.click();
                 driver.switchTo().alert().accept();
             } else if (element.toString().equals(desktop.toString())) {
-//                if(element.toString().equals(favorites.toString())){
-//                    wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-//                    dashboard.click();
-//                }
                 // 点击我的桌面
                 clickDesktop(element);
             } else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
