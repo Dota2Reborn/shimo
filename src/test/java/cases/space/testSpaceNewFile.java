@@ -102,7 +102,7 @@ public class testSpaceNewFile extends TestInit {
      * @Time  2019-01-15
      */
     @Test(enabled = true)
-    public void space_newdoc(){
+    public void space_newDoc(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
         String msg = getText(desktop1_1_name);
@@ -124,7 +124,7 @@ public class testSpaceNewFile extends TestInit {
      * @Time  2019-01-15
      */
     @Test(enabled = true)
-    public void space_newsheets(){
+    public void space_newSheets(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
         String msg = getText(desktop1_1_name);
@@ -187,7 +187,7 @@ public class testSpaceNewFile extends TestInit {
      * @Time  2019-01-15
      */
     @Test(enabled = true)
-    public void space_newfolder(){
+    public void space_newFolder(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
         String msg = getText(desktop1_1_name);
