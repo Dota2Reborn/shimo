@@ -79,8 +79,7 @@ public class testDesktop_Folder extends TestInit {
         Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
         if(r1){
             click(menu_shortcut);
-            moveToElement(desktop1_1);
-            click(desktop_setting);
+            contextClick(desktop1_1);
         }
 
         click(menu_shortcut);
