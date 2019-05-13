@@ -44,7 +44,7 @@ public class hovertest extends TestInit {
 
         String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span";
         String result6 = driver.findElement(By.xpath(ff)).getText();
-        assertEquals(result6, "邀请好友免费获得高级版");
+        assertEquals(result6, "免费获得高级版");
 
         String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
         String result7 = driver.findElement(By.xpath(gg)).getText();
@@ -122,7 +122,7 @@ public class hovertest extends TestInit {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-title']//div[1]")));
         String text = driver.findElement(By.xpath("//div[@class='sm-modal-title']//div[1]")).getText();
-        assertEquals(text, "免费获得石墨文档高级版！ ?");
+        assertEquals(text, "免费获得石墨文档高级版！");
 
     }
 
