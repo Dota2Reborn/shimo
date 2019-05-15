@@ -115,7 +115,7 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-18
      */
     @Test(enabled = true)
-    public void dashboard_setting_locatFolder() {
+    public void dashboard_setting_localFolder() {
         login("autoTest08@shimo.im", "123123");
         click(dashboard_3);
         contextClick(dashboard_update_name);
