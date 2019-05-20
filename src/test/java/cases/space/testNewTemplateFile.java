@@ -90,7 +90,7 @@ public class testNewTemplateFile extends TestInit {
     }
 
     /**
-     * 空间  我的模板
+     * 桌面文件移动到协作空间
      * @author
      * @Time
      */

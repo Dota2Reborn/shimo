@@ -3108,31 +3108,31 @@
 			{
 				"elementName": "b_SpaceSetting1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[1]/a/div",
+				"locator": "(//div[@class='list']//span[@class='setting'])[1]",
 				"note": "协作空间列表1hover设置"
 			},
 			{
 				"elementName": "b_SpaceSetting2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[2]/a/div",
+				"locator": "(//div[@class='list']//span[@class='setting'])[2]",
 				"note": "协作空间列表2hover设置"
 			},
 			{
 				"elementName": "b_SpaceSetting3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[3]/a/div",
+				"locator": "(//div[@class='list']//span[@class='setting'])[3]",
 				"note": "协作空间列表3hover设置"
 			},
 			{
 				"elementName": "b_SpaceSetting4",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[4]/a/div",
+				"locator": "(//div[@class='list']//span[@class='setting'])[4]",
 				"note": "协作空间列表4hover设置"
 			},
 			{
 				"elementName": "b_SpaceSetting5",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[5]/a/div",
+				"locator": "(//div[@class='list']//span[@class='setting'])[5]",
 				"note": "协作空间列表5hover设置"
 			},
 			{
@@ -3229,55 +3229,55 @@
 			{
 				"elementName": "space_listing_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[1]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[1]",
 				"note": "协作空间列表1"
 			},
 			{
 				"elementName": "space_listing_2",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[2]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[2]",
 				"note": "协作空间列表2"
 			},
 			{
 				"elementName": "space_listing_3",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[3]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[3]",
 				"note": "协作空间列表3"
 			},
 			{
 				"elementName": "space_listing_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[4]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[4]",
 				"note": "协作空间列表4"
 			},
 			{
 				"elementName": "space_listing_5",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[5]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[5]",
 				"note": "协作空间列表5"
 			},
 			{
 				"elementName": "space_listing_6",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[6]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[6]",
 				"note": "协作空间列表6"
 			},
 			{
 				"elementName": "space_listing_7",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[7]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[7]",
 				"note": "协作空间列表7"
 			},
 			{
 				"elementName": "space_listing_8",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[8]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[8]",
 				"note": "协作空间列表8"
 			},
 			{
 				"elementName": "space_listing_9",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='list']/div[9]/a/span[2]",
+				"locator": "(//div[@class='list']//a/span[2])[9]",
 				"note": "协作空间列表9"
 			},
 			{
