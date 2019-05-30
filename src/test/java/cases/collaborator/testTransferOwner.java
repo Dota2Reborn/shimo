@@ -94,7 +94,7 @@ public class testTransferOwner extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        Boolean result = getText(b_addCollaborator_3_list).equals("管理者");
+        Boolean result = getText(b_addCollaborator_2_list).equals("管理者");
         click(Shut_down_sm_modal_close_x);
         deleteFile();
 
