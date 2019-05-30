@@ -63,7 +63,8 @@ public class testTransferOwner extends TestInit {
         click(menu_cooperation);
         click(button_addCollaborator);
         click(addCollaborator_company_list);
-        driver.findElement(By.xpath("//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div")).click();
+//        driver.findElement(By.xpath("//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div")).click();
+        click(addCollaborator_companyList_1_add);
         click(addCollaborator_companyList_2_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);
