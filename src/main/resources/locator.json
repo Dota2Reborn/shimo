@@ -24,7 +24,7 @@
 			{
 				"elementName": "dashboard_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/updated']",
+				"locator": "//div[@data-test='category-list-wrapper']/div[1]/a[1]",
 				"note": "工作台-最近更新"
 			},
 			{
@@ -44,6 +44,18 @@
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/shared']",
 				"note": "工作台-共享给我的"
+			},
+			{
+				"elementName": "dashboard_activitiesByFile",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/updated']",
+				"note": "工作台-工作动态切换为按文件"
+			},
+			{
+				"elementName": "dashboard_activitiesByMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/activities']",
+				"note": "工作台-工作动态切换为按人员"
 			},
 			{
 				"elementName": "dashboard_update_file",

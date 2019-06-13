@@ -26,6 +26,7 @@ public class dashboard_update extends TestInit {
 
         click(dashboard);
         click(dashboard_1);
+        click(dashboard_activitiesByFile);
         click(menu_Point_Menu);
         boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
         boolean text2 = getText(menu_mute).equals("消息免打扰");
@@ -55,6 +56,8 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_edit, "la");
         click(b_back);
 
+//        click(dashboard_1);
+        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
         contextClick(dashboard_share_file_1);
         click(menu_delete);
@@ -79,6 +82,7 @@ public class dashboard_update extends TestInit {
         logout();
 
         login("gengxin4@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
         assertEquals(text1, "刚刚 AA 更新");
     }
@@ -101,6 +105,7 @@ public class dashboard_update extends TestInit {
         click(doc_discuss_input_ok);
         click(b_back);
         driver.navigate().refresh();
+        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
 
         assertEquals(text1, "刚刚 我 评论：通过");
@@ -127,6 +132,7 @@ public class dashboard_update extends TestInit {
         logout();
 
         login("gengxin8@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
         click(dashboard_update_time);
         click(b_back);
@@ -149,6 +155,7 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_edit, "1");
         click(b_back);
         click(dashboard_1);
+        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_name);
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
@@ -162,6 +169,7 @@ public class dashboard_update extends TestInit {
 
         logout();
         login("gengxin9@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
         click(menu_cooperation);
         click(button_addCollaborator);
@@ -184,6 +192,7 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_title_input, time);
         sendKeys(doc_edit, "la");
         click(b_back);
+        click(dashboard_activitiesByFile);
         contextClick(dashboard_update_file);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -217,6 +226,7 @@ public class dashboard_update extends TestInit {
         logout();
 
         login("gengxin12@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
         click(menu_cooperation);
         click(b_addCollaborator_2_list);
@@ -225,6 +235,7 @@ public class dashboard_update extends TestInit {
 
         logout();
         login("gengxin13@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
         String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
         assertEquals(text2, "没有文件");
@@ -271,6 +282,7 @@ public class dashboard_update extends TestInit {
             result = false;
         }
 
+        click(dashboard_activitiesByFile);
         boolean text1 = getText(dashboard_update_time).equals("刚刚 我 更新");
         assertFalse(result);
         assertTrue(text1);

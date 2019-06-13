@@ -242,6 +242,13 @@ public class elementFile {
 	public WebElement dashboard_3;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_4", noteName = "工作台-共享给我的")
 	public WebElement dashboard_4;
+	/** 工作台-工作动态切换为按文件 */
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_activitiesByFile")
+	public WebElement dashboard_activitiesByFile;
+	/** 工作台-工作动态切换为按成员 */
+	@SearchWith(pageName = "dashboard", elementName = "dashboard_activitiesByMember")
+	public WebElement dashboard_activitiesByMember;
+
 	@SearchWith(pageName = "dashboard", elementName = "dashboard", noteName = "切换到工作台")
 	public WebElement dashboard;
 	@SearchWith(pageName = "dashboard", elementName = "favorites", noteName = "切换到我的收藏")

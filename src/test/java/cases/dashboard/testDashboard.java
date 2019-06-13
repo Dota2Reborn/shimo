@@ -25,6 +25,7 @@ public class testDashboard extends TestInit {
         logout();
         login("autoTest05@shimo.im", "123123");
         driver.navigate().refresh();
+        click(dashboard_activitiesByFile);
         String msg = getText(dashboard_update_time);
         assertEquals(msg, "刚刚 autoTest... 更新");
     }
