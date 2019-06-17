@@ -95,6 +95,7 @@ public class dashboard_update extends TestInit {
     @Test
     public void update5() {
         login("gengxin6@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
         click(dashboard_update_time);
         click(doc_edit);
         doc_edit.clear();
@@ -105,7 +106,7 @@ public class dashboard_update extends TestInit {
         click(doc_discuss_input_ok);
         click(b_back);
         driver.navigate().refresh();
-        click(dashboard_activitiesByFile);
+//        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
 
         assertEquals(text1, "刚刚 我 评论：通过");

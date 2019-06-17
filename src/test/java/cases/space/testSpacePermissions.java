@@ -208,14 +208,14 @@ public class testSpacePermissions  extends TestInit {
         assertEquals(msg ,"qq10 的权限已修改为「可以编辑」");
 
         click(b_collaborator_Back);
-        click(b_collaboratorsList_1);
+        click(b_collaboratorsList_2);
         click(cpList_onlyDiscuss);
 
 
-        String msg1 = getText(b_add_CollaboratorList_1);
+        String msg1 = getText(b_add_CollaboratorList_2);
         assertEquals(msg1 ,"只能评论");
 
-        click(b_collaboratorsList_1);
+        click(b_collaboratorsList_2);
         click(cpList_remove);
 
         String msg2 = getText(toast_addCollaborator);

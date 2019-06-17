@@ -83,7 +83,7 @@ public class testDocHeader extends TestInit {
         click(desktop1_1);
         click(quick_access_point);
         click(Back_to_Dashboard);
-        Boolean r1 = driver.getCurrentUrl().equals(getURL() + "dashboard/updated");
+        Boolean r1 = driver.getCurrentUrl().equals(getURL() + "dashboard/used");
         assertTrue(r1);
     }
 
