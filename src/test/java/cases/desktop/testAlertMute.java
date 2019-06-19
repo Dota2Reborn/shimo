@@ -89,6 +89,7 @@ public class testAlertMute extends TestInit {
     public void Notification_shutdown() {
         login("AlertMute2@shimo.im", "123123");
         click(dashboard_1);
+        click(dashboard_activitiesByFile);
         click(menu_Point_Menu);
         click(menu_mute);//关闭消息通知
         driver.navigate().refresh();
@@ -103,6 +104,7 @@ public class testAlertMute extends TestInit {
         click(quick_access_point);
         click(Back_to_Dashboard);
         wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+        click(dashboard_activitiesByFile);
         Boolean exist1 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
         int i = 1;
         while (exist1 == false && i < 6) {

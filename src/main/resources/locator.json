@@ -1282,7 +1282,7 @@
 			{
 				"elementName": "menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'快捷方式')]",
+				"locator": "//li//div//span[contains(text(),'快速访问')]",
 				"note": "添加快捷方式"
 			},
 			{
