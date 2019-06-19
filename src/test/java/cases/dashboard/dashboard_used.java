@@ -160,7 +160,7 @@ public class dashboard_used extends TestInit {
 
         contextClick(dashboard_update_name);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);
@@ -207,7 +207,7 @@ public class dashboard_used extends TestInit {
         click(dashboard_2);
         contextClick(dashboard_update_name);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);

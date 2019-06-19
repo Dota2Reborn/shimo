@@ -109,7 +109,7 @@ public class testModifyPermissions extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(Can_edit_1);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
 
     }
 

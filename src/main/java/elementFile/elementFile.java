@@ -569,7 +569,7 @@ public class elementFile {
 	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内,文件夹路径上的设置按钮")
 	public WebElement addCollaborator_folder_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
-	public WebElement button_addCollaborator;
+	public WebElement b_addCollaborator;
 	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator", noteName = "添加协作者邮箱输入框")
 	public WebElement input_addCollaborator;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add", noteName = "搜索显示被添加协作者列表第一个添加按钮")

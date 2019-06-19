@@ -88,7 +88,7 @@ public class testNotice extends TestInit {
 
 		contextClick(desktop1_1);
 		click(menu_cooperation);
-		click(button_addCollaborator);
+		click(b_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
 		Thread.sleep(500);
@@ -122,14 +122,14 @@ public class testNotice extends TestInit {
 
 		contextClick(desktop1_1);
 		click(menu_cooperation);
-		click(button_addCollaborator);
+		click(b_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
 		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
-		wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
 		click(b_addCollaborator_2_list);
 		click(list_addCollaborator_4);
 

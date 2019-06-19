@@ -23,7 +23,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "pipi@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
@@ -49,7 +49,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "panpan@qq.com");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
@@ -102,7 +102,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
 
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "liuchen@shimo.im");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
@@ -142,7 +142,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
 
         click(menu_cooperation);
-        String t = button_addCollaborator.getAttribute("disabled");
+        String t = b_addCollaborator.getAttribute("disabled");
         assertEquals(t, "true");
     }
 
@@ -173,7 +173,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 //        action.click(menu_cooperation).perform();
         click(menu_cooperation);
         Thread.sleep(1000);
-        Boolean r4 = button_addCollaborator.getAttribute("disabled").equals("true");
+        Boolean r4 = b_addCollaborator.getAttribute("disabled").equals("true");
 
         assertTrue(r1 && r2 && r3 && r4);
     }
@@ -194,7 +194,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1);
         click(menu_cooperation);
 
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
@@ -213,7 +213,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
 
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
         Thread.sleep(500);
         click(b_addCollaborator_1_add);
@@ -230,8 +230,9 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+        click(menu_cooperation);
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
 
         assertTrue(r1 && r2 && !r3 && r4);
     }

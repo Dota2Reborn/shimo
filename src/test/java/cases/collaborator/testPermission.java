@@ -81,7 +81,7 @@ public class testPermission extends TestInit {
 
     // 选择权限
     public void Modify(int Permissions, int Several) {
-        wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
         if (Permissions == 1) {// 可写
             driver.findElement(
                     By.xpath("//div[@class='sm-modal-body']//div[3]//div[1]//div[" + Several + "]//div[1]//div[1]"))

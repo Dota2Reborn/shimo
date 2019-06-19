@@ -173,7 +173,7 @@ public class dashboard_update extends TestInit {
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(Shut_down_sm_modal_close_x);
@@ -246,7 +246,7 @@ public class dashboard_update extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(Shut_down_sm_modal_close_x);

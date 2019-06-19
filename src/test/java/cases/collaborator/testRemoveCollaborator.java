@@ -30,7 +30,7 @@ public class testRemoveCollaborator extends TestInit {
             click(list_addCollaborator_4);
         }
 
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);
@@ -69,7 +69,7 @@ public class testRemoveCollaborator extends TestInit {
             click(list_addCollaborator_4);
         }
 
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);
@@ -101,7 +101,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         sendKeys(input_addCollaborator, "remove2@shimo.im");
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
@@ -136,7 +136,7 @@ public class testRemoveCollaborator extends TestInit {
 		 click(desktop);
 		 contextClick(desktop1_1_folder);
 		 click(menu_cooperation);
-		 click(button_addCollaborator);
+		 click(b_addCollaborator);
 		 click(addCollaborator_1_add);
 		 click(b_addCollaborator_ok);
 		 click(button_addCollaborator_close);
@@ -190,7 +190,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(button_addCollaborator_close);

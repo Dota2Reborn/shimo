@@ -87,7 +87,7 @@ public class testDashboard extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
 
         sendKeys(input_addCollaborator, "autoTest07@shimo.im");
         Thread.sleep(500);

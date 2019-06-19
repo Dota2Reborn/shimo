@@ -83,7 +83,7 @@ public class dashboard_own extends TestInit {
         click(dashboard_3);
         contextClick(dashboard_update_file);
         click(menu_cooperation);
-        click(button_addCollaborator);
+        click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
         Thread.sleep(500);

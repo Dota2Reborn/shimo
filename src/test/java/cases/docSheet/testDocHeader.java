@@ -198,7 +198,7 @@ public class testDocHeader extends TestInit {
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
-        wait.until(ExpectedConditions.elementToBeClickable(button_addCollaborator));
+        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
         int r1 = getCollaboratorSize();
