@@ -76,7 +76,7 @@ public class testDesktop_Folder extends TestInit {
 
         contextClick(desktop1_1_folder);
 
-        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        Boolean r1 = getText(menu_shortcut).equals("从快速访问移除");
         if(r1){
             click(menu_shortcut);
             contextClick(desktop1_1);

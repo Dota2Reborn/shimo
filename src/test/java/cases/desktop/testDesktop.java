@@ -45,7 +45,7 @@ public class testDesktop extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
 
-        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        Boolean r1 = getText(menu_shortcut).equals("从快速访问移除");
         if(r1){
             click(menu_shortcut);
             moveToElement(desktop1_1);

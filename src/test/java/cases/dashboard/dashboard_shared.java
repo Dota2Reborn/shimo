@@ -99,7 +99,7 @@ public class dashboard_shared extends TestInit {
         click(menu_Point_Menu);
         boolean text1 = getText(menu_newPage).equals("在新标签页中打开");
         boolean text2 = getText(menu_mute).equals("消息免打扰");
-        boolean text3 = getText(menu_shortcut).equals("添加到快捷方式");
+        boolean text3 = getText(menu_shortcut).equals("添加到快速访问");
         boolean text4 = getText(menu_collection).equals("收藏");
         boolean text6 = getText(menu_cooperation).equals("协作");
         boolean text7 = getText(menu_move).equals("移动");

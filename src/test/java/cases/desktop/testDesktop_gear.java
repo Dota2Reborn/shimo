@@ -48,7 +48,7 @@ public class testDesktop_gear extends TestInit {
         moveToElement(desktop1_1);
         click(desktop_setting);
 
-        Boolean r1 = getText(menu_shortcut).equals("从快捷方式移除");
+        Boolean r1 = getText(menu_shortcut).equals("从快速访问移除");
         if(r1){
             click(menu_shortcut);
             moveToElement(desktop1_1);
