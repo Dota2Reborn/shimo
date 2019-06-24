@@ -103,7 +103,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void desktop_import_doc() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
@@ -133,7 +133,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void desktop_import_docx() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
