@@ -70,7 +70,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-19
      */
     @Test
-    public void desktop_show_type() throws InterruptedException {
+    public void desktop_show_type() {
 
         login("Collection@shimo.im", "123123");
         click(favorites);

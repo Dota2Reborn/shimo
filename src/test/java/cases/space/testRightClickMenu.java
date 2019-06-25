@@ -45,7 +45,7 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
         Thread.sleep(200);
         click(space_RightMenu_copyLink);
-        String text = setClipbordContents();
+        String text = setClipboardContents();
         String[] tmp = text.split("/");
         assertEquals(tmp[4], "w9ychrkJtqvHhVPT");
     }
@@ -559,7 +559,7 @@ public class testRightClickMenu extends TestInit {
 //        action.clickAndHold(space_RightMenu_4).perform();
         click(space_RightMenu_4);
         click(space_RightMenu_4_2);
-        String text = setClipbordContents();
+        String text = setClipboardContents();
         String[] tmp = text.split("/");
         assertEquals(tmp[4], "6rwH3wKv6TGx3qyR");
 
@@ -712,7 +712,7 @@ public class testRightClickMenu extends TestInit {
      *
      *
      */
-    private String setClipbordContents() {
+    private String setClipboardContents() {
         String text ="";
         Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
         Transferable clipTf = sysClip.getContents(null);//从系统剪切板中获取数据

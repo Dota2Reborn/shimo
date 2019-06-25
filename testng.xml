@@ -34,7 +34,7 @@
 	</test>
 	<test name="test5">
 		<classes>
-			<class name="cases.desktop.hovertest" />
+			<class name="cases.desktop.testHover" />
 			<class name="cases.desktop.testAlertMute" />
 			<class name="cases.desktop.testDesktopOrderBy" />
 		</classes>

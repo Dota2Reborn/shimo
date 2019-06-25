@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class hovertest extends TestInit {
+public class testHover extends TestInit {
 
     /**
      * 基础版 hover头像 鼠标 hover 到头像上
