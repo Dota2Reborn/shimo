@@ -110,7 +110,7 @@ public class baseFunc {
 //				option.addArguments("--headless");
                 // option.addArguments("--kiosk");
                 option.setCapability("browserName", "chrome");
-                option.setCapability("version", "70");
+                option.setCapability("version", "75");
                 option.setCapability("plaform", "ANY");
 //                option.addArguments("start-fullscreen");  //全屏
                 option.addArguments("start-maximized");  //浏览器最大化
