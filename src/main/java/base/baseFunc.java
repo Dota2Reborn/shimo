@@ -46,8 +46,7 @@ public class baseFunc {
             if (os.startsWith("Windows") && browser.equals("chrome")) {
 //                System.setProperty("webdriver.chrome.driver",
 //                        "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriverMac.exe");
-                System.setProperty("webdriver.chrome.driver",
-                        new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriver.exe").getFile()).getPath());
+                System.setProperty("webdriver.chrome.driver", new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriver.exe").getFile()).getPath());
 
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
