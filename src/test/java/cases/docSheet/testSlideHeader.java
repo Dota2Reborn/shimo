@@ -144,10 +144,10 @@ public class testSlideHeader extends TestInit {
         String msg = getText(toast_msg);
 
         String title = ppt_filename.getAttribute("value");
-        if(b_Msg.equals("添加到快捷方式")){
-            assertEquals(msg, "「"+ title +"」已添加到快捷方式");
+        if(b_Msg.equals("添加到快速访问")){
+            assertEquals(msg, "「"+ title +"」已添加到快速访问");
         }else {
-            assertEquals(msg, "「"+ title +"」已从快捷方式移除");
+            assertEquals(msg, "「"+ title +"」已从快速访问移除");
         }
 
     }

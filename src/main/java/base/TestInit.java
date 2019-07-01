@@ -430,6 +430,8 @@ public class TestInit extends elementFile {
             } else if(element.toString().equals(b_add_CollaboratorList_1.toString())){
                 //协作空间，添加协作者
                 space_addCollaborator(b_add_CollaboratorList_1);
+            } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
+                clickDashboardActivitiesByFile(dashboard_activitiesByFile);
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
@@ -558,6 +560,27 @@ public class TestInit extends elementFile {
             System.out.println(element + "is missing");
         }
         return msg;
+    }
+
+    public  void  clickDashboardActivitiesByFile(WebElement element){
+//        try {
+//            wait.until(ExpectedConditions.visibilityOf(element));
+//            element.click();
+//        } catch (NoSuchElementException e) {
+//            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
+//            dashboard_activitiesByMember.click();
+//
+//        }
+        Boolean r1 = doesWebElementExist(dashboard_activitiesByMember);
+        if(r1){
+            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
+            dashboard_activitiesByMember.click();
+            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByFile));
+            dashboard_activitiesByFile.click();
+        }else{
+            return;
+        }
+
     }
 
     /**

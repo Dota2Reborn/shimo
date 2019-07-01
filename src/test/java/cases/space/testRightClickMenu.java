@@ -676,7 +676,7 @@ public class testRightClickMenu extends TestInit {
     public void Space_margin1() {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_4);
-        action.moveToElement(desktop_new, -10, 0).contextClick().perform();
+        action.moveToElement(desktop_new, -150, 0).contextClick().perform();
         click(space_RightMenu_newDoc);
         click(doc_menu);
         click(doc_menu_delete);
@@ -694,7 +694,7 @@ public class testRightClickMenu extends TestInit {
     public void Space_margin2() {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_5);
-        action.moveToElement(desktop_new, -10, 0).contextClick().perform();
+        action.moveToElement(desktop_new, -150, 0).contextClick().perform();
         click(space_RightMenu_newTemplate);
         click(doc_template);
         click(doc_template01);

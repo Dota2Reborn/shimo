@@ -1390,8 +1390,8 @@
 			{
 				"elementName": "file_menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li/div[contains(text(),'快捷方式')]",
-				"note": "添加快捷方式"
+				"locator": "//li/div[contains(text(),'快速访问')]",
+				"note": "添加快速访问"
 			},
 			{
 				"elementName": "file_menu_collection",
