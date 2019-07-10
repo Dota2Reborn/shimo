@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -49,8 +50,8 @@ public class TestInit extends elementFile {
             driver.navigate().to(urlWithCookie);
         }
         driver.navigate().to(test_url + "login");
-        // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
     }
 
