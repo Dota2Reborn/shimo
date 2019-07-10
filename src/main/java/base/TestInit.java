@@ -383,15 +383,8 @@ public class TestInit extends elementFile {
      */
     public void moveToElement(WebElement element) {
         try {
-            if (element.toString().equals(menu_cooperation.toString())) {
-                // 点击添加协作者
-                wait.until(ExpectedConditions.visibilityOf(element));
-                action.moveToElement(element).perform();
-                click(menu_cooperation_2);
-            } else {
-                wait.until(ExpectedConditions.visibilityOf(element));
-                action.moveToElement(element).perform();
-            }
+            wait.until(ExpectedConditions.visibilityOf(element));
+            action.moveToElement(element).perform();
 
         } catch (NoSuchElementException e) {
             System.out.println(element + "is missing");
