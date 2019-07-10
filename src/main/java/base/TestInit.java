@@ -50,7 +50,7 @@ public class TestInit extends elementFile {
             driver.navigate().to(urlWithCookie);
         }
         driver.navigate().to(test_url + "login");
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
     }
