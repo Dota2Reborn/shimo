@@ -93,7 +93,7 @@ public class TestInit extends elementFile {
         // className = new Exception().getStackTrace()[1].getMethodName();
         // printLog(className, user);
 
-        if (!driver.getCurrentUrl().equals(test_url + "login")) {
+        if (!driver.getCurrentUrl().startsWith(test_url + "login")) {
             driver.navigate().to(test_url + "login");
         }
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
@@ -105,7 +105,7 @@ public class TestInit extends elementFile {
 
 //        gooiest();//跳过引导页
 //        Sticker_Face();//付费提示框
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
 
     /**
@@ -529,6 +529,13 @@ public class TestInit extends elementFile {
                 wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
                 desktop_orderByDefault.click();
             }
+            Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+            if(checkFileName){
+                contextClick(desktop1_1);
+                click(menu_delete);
+                click(desktop_newFolder_name_ok);
+            }
+
         } finally {
             msg = desktop_show_type.getText();
             if (msg.equals("平铺")) {
@@ -656,6 +663,30 @@ public class TestInit extends elementFile {
      */
     public String getURL() {
         return test_url;
+    }
+
+    /**
+     * 跳转到指定链接
+     *
+     * @param
+     * @author 刘晨
+     * @Time 2019-7-11
+     */
+    public void jumpToURL(String url) {
+        driver.navigate().to(url);
+    }
+
+    /**
+     * 获得元素属性值
+     *
+     * @param
+     * @author 刘晨
+     * @Time 2019-7-11
+     */
+    public String getAttribute(WebElement element, String attribute) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        String msg = element.getAttribute(attribute);
+        return msg;
     }
 
     /**

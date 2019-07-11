@@ -1037,6 +1037,24 @@
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='collaborator-search-inputbox']",
 				"note": "header上添加协作者邮箱输入框"
+			},
+			{
+				"elementName": "b_share",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'分享')]",
+				"note": "header分享按钮"
+			},
+			{
+				"elementName": "share_changePWD",
+				"locateUsing": "xpath",
+				"locator": "//a[contains(text(),'更换密码')]",
+				"note": "header分享面板，更换密码"
+			},
+			{
+				"elementName": "share_PWD",
+				"locateUsing": "xpath",
+				"locator": "//a[contains(text(),'更换密码')]/preceding-sibling::input",
+				"note": "header分享面板，密码"
 			}
 			
 		]
@@ -1452,6 +1470,18 @@
 				"locateUsing": "xpath",
 				"locator": "//li/div/span[contains(text(),'信息')]",
 				"note": "文档/表格信息"
+			},
+			{
+				"elementName": "sharePage_inputPwd",
+				"locateUsing": "xpath",
+				"locator": "//input[@placeholder='请输入密码']",
+				"note": "分享链接打开页面，输入密码框"
+			},
+			{
+				"elementName": "sharePage_buttonConfirm",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(text(),'确定')]",
+				"note": "分享链接打开页面，输入密码,确定按钮"
 			}
 		]
 	},

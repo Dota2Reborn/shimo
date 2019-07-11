@@ -218,6 +218,15 @@ public class elementFile {
 	/** header上添加协作者邮箱输入框 */
 	@SearchWith(pageName = "doc", elementName = "input_collaborator")
 	public WebElement input_collaborator;
+	/** header上分享按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_share")
+	public WebElement b_share;
+	/** header分享面板，更换密码 */
+	@SearchWith(pageName = "doc", elementName = "share_changePWD")
+	public WebElement share_changePWD;
+	/** header分享面板，密码 */
+	@SearchWith(pageName = "doc", elementName = "share_PWD")
+	public WebElement share_PWD;
 	/**
 	 * dashboard
 	 * 工作台
@@ -808,6 +817,12 @@ public class elementFile {
 	public WebElement file_menu_mute;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_msg", noteName = "文档信息")
 	public WebElement file_menu_msg;
+	/** 分享链接打开页面，输入密码框 */
+	@SearchWith(pageName = "file_menu", elementName = "sharePage_inputPwd")
+	public WebElement sharePage_inputPwd;
+	/** 分享链接打开页面，输入密码,确定按钮 */
+	@SearchWith(pageName = "file_menu", elementName = "sharePage_buttonConfirm")
+	public WebElement sharePage_buttonConfirm;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
 	public WebElement file_menu_help;
 	/** header上保存模板 */
