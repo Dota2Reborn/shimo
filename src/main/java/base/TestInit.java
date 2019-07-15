@@ -50,6 +50,8 @@ public class TestInit extends elementFile {
             driver.navigate().to(urlWithCookie);
         }
         driver.navigate().to(test_url + "login");
+        checkAlert();//检查异常Alert
+
 //        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
@@ -722,6 +724,20 @@ public class TestInit extends elementFile {
      */
     public void waitFor() {
 
+    }
+
+    /**
+     * 检测是否存在Alert
+     *
+     * @author 刘晨
+     * @Time 2019-07-15
+     */
+    public void checkAlert() {
+        try {
+            driver.switchTo().alert().accept();
+        }catch (NoAlertPresentException e){
+            return;
+        }
     }
 
     /**
