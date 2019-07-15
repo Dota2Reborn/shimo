@@ -30,6 +30,7 @@
 	<test name="test4">
 		<classes>
 			<class name="cases.space.testRightClickMenu" />
+			<class name="cases.sharePage.SharePage" />
 		</classes>
 	</test>
 	<test name="test5">
