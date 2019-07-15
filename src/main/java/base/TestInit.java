@@ -354,6 +354,7 @@ public class TestInit extends elementFile {
      */
     public boolean doesWebElementExist(WebElement element) {
         try {
+            wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;

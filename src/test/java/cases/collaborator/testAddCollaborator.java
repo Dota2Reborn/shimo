@@ -46,7 +46,7 @@ public class testAddCollaborator extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator, "11@cc.ccc");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
@@ -151,7 +151,7 @@ public class testAddCollaborator extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator);
         sendKeys(input_addCollaborator, "autoTest04@shimo.im");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
@@ -184,7 +184,7 @@ public class testAddCollaborator extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator, "autoTest04@shimo.im");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
@@ -221,7 +221,7 @@ public class testAddCollaborator extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(500);
+//        Thread.sleep(500);
 
         logout();
         login("autoTest03@shimo.im", "123123");
@@ -246,7 +246,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-07
      */
     @Test(enabled = true)
-    public void addCollaborator_9() throws InterruptedException {
+    public void addCollaborator_9() {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
@@ -256,7 +256,7 @@ public class testAddCollaborator extends TestInit {
 
         sendKeys(input_addCollaborator, "11@cc.ccc");
 
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
@@ -285,7 +285,7 @@ public class testAddCollaborator extends TestInit {
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
 
-        Thread.sleep(500);
+//        Thread.sleep(500);
 
         logout();
         login("autoTest_addCollabor@shimo.im", "123123");

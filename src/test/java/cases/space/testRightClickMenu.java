@@ -21,12 +21,12 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_preview() throws InterruptedException {
+    public void Space_video_preview() {
         login("Space_video@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_Preview);
-        Thread.sleep(1500);
+//        Thread.sleep(500);
         Boolean element1 = doesWebElementExist(space_Preview_video_music);
         assertTrue(element1);
 
@@ -39,11 +39,11 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_copy() throws InterruptedException {
+    public void Space_video_copy() {
         login("Space_video@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-        Thread.sleep(200);
+//        Thread.sleep(200);
         click(space_RightMenu_copyLink);
         String text = setClipboardContents();
         String[] tmp = text.split("/");
@@ -67,7 +67,7 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
         click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Completely_removed);
@@ -82,12 +82,12 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_renaming() throws InterruptedException {
+    public void Space_video_renaming() {
         login("Space_video@shimo.im", "123123");
         click(space_listing_4);
         contextClick(space_document_1_1);
         click(space_RightMenu_rename);
-        Thread.sleep(500);
+//        Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".mp4";
@@ -105,14 +105,14 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_move() throws InterruptedException {
+    public void Space_video_move() {
         login("Space_video@shimo.im", "123123");
         click(space_listing_5);
         String name="";
         if(doesWebElementExist(space_document_1_1)){
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
-            Thread.sleep(500);
+//            Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
             click(space_listing_8);
@@ -123,7 +123,7 @@ public class testRightClickMenu extends TestInit {
             click(space_listing_8);
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
-            Thread.sleep(500);
+//            Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
             click(space_listing_5);
@@ -140,19 +140,19 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_delete() throws InterruptedException {
+    public void Space_video_delete() {
         login("Space_video@shimo.im", "123123");
         click(space_listing_7);
         contextClick(space_document_1_1);
         click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_document_1_1);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Recovery);
         click(space_listing_7);
-        Thread.sleep(600);
+//        Thread.sleep(600);
         Boolean element2 = doesWebElementExist(space_document_1_1);
         assertFalse(element1);
         assertTrue(element2);

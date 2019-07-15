@@ -427,19 +427,19 @@
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[1]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[2]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[3]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
