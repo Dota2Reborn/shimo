@@ -356,7 +356,7 @@ public class TestInit extends elementFile {
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
-        } catch (NoSuchElementException e) {
+        } catch (Exception e) {
             return false;
         }
     }

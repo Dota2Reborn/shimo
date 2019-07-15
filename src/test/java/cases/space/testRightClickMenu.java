@@ -105,14 +105,14 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_move() {
+    public void Space_video_move() throws InterruptedException {
         login("Space_video@shimo.im", "123123");
         click(space_listing_5);
         String name="";
         if(doesWebElementExist(space_document_1_1)){
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
-//            Thread.sleep(500);
+            Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
             click(space_listing_8);
@@ -123,7 +123,7 @@ public class testRightClickMenu extends TestInit {
             click(space_listing_8);
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
-//            Thread.sleep(500);
+            Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
             click(space_listing_5);
