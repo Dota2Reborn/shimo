@@ -23,8 +23,8 @@ public class testDesktopOrderBy extends TestInit {
 
         Thread.sleep(1000);
         Boolean f1 = desktop_list_1_file.getText().equals("最近更新");
-        Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
-        Boolean f3 = desktop_list_3_file.getText().equals("111");
+        Boolean f2 = desktop_list_2_file.getText().equals("所有者排序");
+        Boolean f3 = desktop_list_3_file.getText().equals("最新创建");
 
         click(desktop_order);
         click(desktop_orderByDefault);

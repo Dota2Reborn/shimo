@@ -524,25 +524,32 @@ public class TestInit extends elementFile {
             element.click();
             msg = getText(desktop_order);
             if (msg.equals("更新时间")) {
-                desktop_order.click();
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-                desktop_orderByFolderUP.click();
+                click(desktop_order);
+//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+                click(desktop_orderByFolderUP);
 
-                desktop_order.click();
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-                desktop_orderByDefault.click();
+                click(desktop_order);
+//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+                click(desktop_orderByDefault);
             }
+//            Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+//            if(checkFileName){
+//                contextClick(desktop1_1);
+//                click(menu_delete);
+//                click(desktop_newFolder_name_ok);
+//            }
+
+        } finally {
+            msg = getText(desktop_show_type);
+            if (msg.equals("平铺")) {
+                click(desktop_show_type);
+            }
+
             Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
             if(checkFileName){
                 contextClick(desktop1_1);
                 click(menu_delete);
                 click(desktop_newFolder_name_ok);
-            }
-
-        } finally {
-            msg = desktop_show_type.getText();
-            if (msg.equals("平铺")) {
-                desktop_show_type.click();
             }
             checkPageIsReady();
         }
