@@ -20,7 +20,7 @@ public class testCompanyManagement extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = true)
-    public void addCollaborators_ManagerAndCreater() throws InterruptedException {
+    public void addCollaborators_ManagerAndCreator() {
         login("panpan@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -37,12 +37,8 @@ public class testCompanyManagement extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator);
 
-//        input_addCollaborator.sendKeys("erdan@qq.com");
         sendKeys(input_addCollaborator, "erdan@qq.com");
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-
-        String t = b_addCollaborator_1_add.getAttribute("disabled");
+        String t = getAttribute(b_addCollaborator_1_add,"disabled");
         Boolean R1 = t.equals("true");
 
         logout();
@@ -55,11 +51,9 @@ public class testCompanyManagement extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
-        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
-        Thread.sleep(500);
         String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
@@ -76,7 +70,7 @@ public class testCompanyManagement extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = true)
-    public void addCollaborators_all() throws InterruptedException {
+    public void addCollaborators_all() {
         login("panpan@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -93,11 +87,9 @@ public class testCompanyManagement extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
-        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
-        Thread.sleep(500);
         String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
@@ -108,13 +100,13 @@ public class testCompanyManagement extends TestInit {
     }
 
     /**
-     * 谁能添加外部协作者-作者，企业创建者和管理员
+     * 谁能添加外部协作者-所有者，企业创建者和管理员
      *
      * @author 刘晨
      * @Time 2018-03-06
      */
     @Test(enabled = true)
-    public void addCollaborators_ownerManagerAndCreater() throws InterruptedException {
+    public void addCollaborators_ownerManagerAndCreator() {
         login("panpan@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -131,10 +123,7 @@ public class testCompanyManagement extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_1_add));
-
-        Boolean R1 = b_addCollaborator_1_add.getAttribute("disabled").equalsIgnoreCase("true");
+        Boolean R1 = getAttribute(b_addCollaborator_1_add,"disabled").equalsIgnoreCase("true");
 
         logout();
         login("amei@qq.com", "123123");
@@ -145,10 +134,8 @@ public class testCompanyManagement extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
-        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
-        Thread.sleep(500);
         String m1 = getText(toast_msg);
         Boolean R2 = m1.equals("二蛋 已添加");
 
@@ -165,11 +152,9 @@ public class testCompanyManagement extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator,"erdan@qq.com");
-        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
-        Thread.sleep(500);
         String m2 = getText(toast_msg);
         Boolean R3 = m2.equals("二蛋 已添加");
 
