@@ -208,7 +208,7 @@ public class testSlideHeader extends TestInit {
      * @author 刘晨
      * @Time 2018-12-26
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void slide_move() {
         login("testSlideHeader@shimo.im", "123123");
 
