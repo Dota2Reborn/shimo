@@ -24,11 +24,11 @@ public class dashboard_shared extends TestInit {
         login("gx1@shimo.im", "123123");
         click(dashboard_3);
         contextClick(dashboard_update_name);
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         click(menu_cooperation);
         click(b_addCollaborator);
         sendKeys(input_addCollaborator, "gx2@shimo.im");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
         logout();
@@ -66,7 +66,7 @@ public class dashboard_shared extends TestInit {
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
         String text = getText(desktop1_1_name);
         assertEquals(text, "共享");
 
@@ -76,8 +76,8 @@ public class dashboard_shared extends TestInit {
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
 

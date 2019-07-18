@@ -81,7 +81,7 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-19
      */
     @Test(enabled = true)
-    public void dashboard_share() throws InterruptedException {
+    public void dashboard_share() {
         login("autoTest06@shimo.im", "123123");
 
         click(desktop);
@@ -90,7 +90,7 @@ public class testDashboard extends TestInit {
         click(b_addCollaborator);
 
         sendKeys(input_addCollaborator, "autoTest07@shimo.im");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
@@ -102,9 +102,9 @@ public class testDashboard extends TestInit {
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
 
-        String msg = driver.findElement(By.className("none-file")).getText();
+        String msg = getText(driver.findElement(By.className("none-file")));
         assertEquals(msg, "没有文件");
 
     }

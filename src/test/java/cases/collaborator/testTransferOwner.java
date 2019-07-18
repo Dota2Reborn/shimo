@@ -16,7 +16,7 @@ public class testTransferOwner extends TestInit {
      * @Time 2018-07-20
      */
     @Test
-    public void Transfer_1() throws InterruptedException {
+    public void Transfer_1() {
         login("transfer1@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
@@ -42,7 +42,7 @@ public class testTransferOwner extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(300);
+//        Thread.sleep(300);
         Boolean result1 = getText(addCollaborator_1_list_userName).equals("(我) transfer2");
         click(Shut_down_sm_modal_close_x);
         deleteFile();
@@ -89,7 +89,7 @@ public class testTransferOwner extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(300);
+//        Thread.sleep(300);
         click(button_addCollaborator_close);
         click(desktop1_1_folder);
         contextClick(desktop1_1);

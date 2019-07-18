@@ -198,7 +198,7 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         click(b_back);
 
         String msg = getText(desktop1_1_name);

@@ -20,8 +20,8 @@ public class dashboard_own extends TestInit {
         click(dashboard_3);
 
         moveToElement(dashboard_share_file_1);
-        driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
-                .click();// hover收藏
+
+        click(driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));// hover收藏
         click(favorites);
 //        String text = getText(By.xpath("//div[@class='tile-inner']//div[1]//a[1]//div[2]"));
         String text = getText(desktop1_1_name);
@@ -30,8 +30,7 @@ public class dashboard_own extends TestInit {
         click(dashboard);
         click(dashboard_3);
         moveToElement(dashboard_share_file_1);
-        driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]"))
-                .click();
+        click(driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
         click(favorites);
         String text2 = getText(By.xpath("//div[@class='none-file']//span"));
         assertEquals(text2, "没有文件");

@@ -90,7 +90,7 @@ public class testDesktop_remove extends TestInit {
 	 *
 	 */
 	@Test
-	public void desktop_removeFileinFolder()  {
+	public void desktop_removeFileInFolder()  {
 		login("autoTest-removeFolder@shimo.im", "123123");
 		
 		click(desktop);

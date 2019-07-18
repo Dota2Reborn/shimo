@@ -162,7 +162,7 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_9() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);

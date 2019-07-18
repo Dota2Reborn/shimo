@@ -51,8 +51,8 @@ public class testAlertMute extends TestInit {
         login("AlertMute@shimo.im", "123123");
         click(dashboard_notice);
         //String time2 = getText(dashboard_notice_list_1_time);
-        wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
-        String time2 = dashboard_notice_list_1_time.getText();
+//        wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
+        String time2 = getText(dashboard_notice_list_1_time);
         String time = time2.substring(0, 2);
         //System.out.println(time2);
         String gg = "刚刚";
@@ -68,7 +68,7 @@ public class testAlertMute extends TestInit {
             }
         }
         assertTrue(a);
-        dashboard_notice_list_1.click();
+        click(dashboard_notice_list_1);
         switchToPage(1);
         click(End_Discussion);
         click(End_Discussion_OK);

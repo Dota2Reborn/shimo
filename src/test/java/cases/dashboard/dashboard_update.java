@@ -164,8 +164,8 @@ public class dashboard_update extends TestInit {
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
 //		click(b_addCollaborator_confirm);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
         logout();
@@ -237,8 +237,8 @@ public class dashboard_update extends TestInit {
         logout();
         login("gengxin13@shimo.im", "123123");
         click(dashboard_activitiesByFile);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
+        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
         logout();

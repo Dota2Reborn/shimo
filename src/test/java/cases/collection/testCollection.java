@@ -17,7 +17,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-12
      */
     @Test(enabled = true)
-    public void New_Document() throws InterruptedException {
+    public void New_Document() {
         login("New_collection@shimo.im", "123123");
         click(favorites);
         click(desktop_new);
@@ -32,7 +32,7 @@ public class testCollection extends TestInit {
         click(desktop_setting);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        Thread.sleep(500);
+//        Thread.sleep(500);
         assertEquals(name, "无标题");
     }
 
@@ -43,7 +43,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-12
      */
     @Test(enabled = true)
-    public void Create_Table() throws InterruptedException {
+    public void Create_Table() {
         login("New_collection@shimo.im", "123123");
         click(favorites);
         click(desktop_new);
@@ -58,7 +58,7 @@ public class testCollection extends TestInit {
         click(desktop_setting);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        Thread.sleep(500);
+//        Thread.sleep(500);
         assertEquals(name, "无标题");
 
     }
@@ -110,8 +110,8 @@ public class testCollection extends TestInit {
         assertEquals(name, "第四个创建的");
         contextClick(desktop1_1);
         click(menu_moveToFolder);
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
-        String Folder_name = driver.findElement(By.className("final")).getText();
+//        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
+        String Folder_name = getText(driver.findElement(By.className("final")));
         assertEquals(Folder_name, "第三个创建的");
 
     }

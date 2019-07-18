@@ -13,7 +13,7 @@ public class testDesktopOrderBy extends TestInit {
      * @Time 2017-11-28
      */
     @Test(enabled = true)
-    public void order_setting_byUpdate() throws InterruptedException {
+    public void order_setting_byUpdate() {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
@@ -21,10 +21,10 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_order);
         click(desktop_orderByUpdate);
 
-        Thread.sleep(1000);
-        Boolean f1 = desktop_list_1_file.getText().equals("最近更新");
-        Boolean f2 = desktop_list_2_file.getText().equals("所有者排序");
-        Boolean f3 = desktop_list_3_file.getText().equals("最新创建");
+//        Thread.sleep(1000);
+        Boolean f1 = getText(desktop_list_1_file).equals("最近更新");
+        Boolean f2 = getText(desktop_list_2_file).equals("所有者排序");
+        Boolean f3 = getText(desktop_list_3_file).equals("最新创建");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -47,9 +47,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_order);
         click(desktop_orderByCreate);
 
-        Boolean f1 = desktop_list_1_file.getText().equals("最新创建");
-        Boolean f2 = desktop_list_2_file.getText().equals("111");
-        Boolean f3 = desktop_list_3_file.getText().equals("最近更新");
+        Boolean f1 = getText(desktop_list_1_file).equals("最新创建");
+        Boolean f2 = getText(desktop_list_2_file).equals("111");
+        Boolean f3 = getText(desktop_list_3_file).equals("最近更新");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -72,9 +72,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_order);
         click(desktop_orderByFile);
 
-        Boolean f1 = desktop_list_1_file.getText().equals("111");
-        Boolean f2 = desktop_list_2_file.getText().equals("表格排序");
-        Boolean f3 = desktop_list_3_file.getText().startsWith("所有者排序");
+        Boolean f1 = getText(desktop_list_1_file).equals("111");
+        Boolean f2 = getText(desktop_list_2_file).equals("表格排序");
+        Boolean f3 = getText(desktop_list_3_file).startsWith("所有者排序");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -98,9 +98,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_order);
         click(desktop_orderByOwner);
 
-        Boolean f1 = desktop_list_1_file.getText().startsWith("所有者排序");
-        Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
-        Boolean f3 = desktop_list_3_file.getText().equals("111");
+        Boolean f1 = getText(desktop_list_1_file).startsWith("所有者排序");
+        Boolean f2 = getText(desktop_list_2_file).equals("最新创建");
+        Boolean f3 = getText(desktop_list_3_file).equals("111");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -125,9 +125,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_order);
         click(desktop_orderByCreate);
 
-        Boolean f1 = desktop_list_1_file.getText().equals("文件夹排序");
-        Boolean f2 = desktop_list_2_file.getText().equals("最新创建");
-        Boolean f3 = desktop_list_3_file.getText().equals("111");
+        Boolean f1 = getText(desktop_list_1_file).equals("文件夹排序");
+        Boolean f2 = getText(desktop_list_2_file).equals("最新创建");
+        Boolean f3 = getText(desktop_list_3_file).equals("111");
 
         click(desktop_order);
         click(desktop_orderByFolderUP);
@@ -151,9 +151,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_orderByCreate);
         click(desktop_orderHeader_3);
 
-        Boolean f1 = desktop_list_1_file.getText().equals("文档排序");
-        Boolean f2 = desktop_list_2_file.getText().equals("表格排序");
-        Boolean f3 = desktop_list_3_file.getText().equals("文件夹排序");
+        Boolean f1 = getText(desktop_list_1_file).equals("文档排序");
+        Boolean f2 = getText(desktop_list_2_file).equals("表格排序");
+        Boolean f3 = getText(desktop_list_3_file).equals("文件夹排序");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -177,9 +177,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_orderByOwner);
         click(desktop_orderHeader_2);
 
-        Boolean f1 = desktop_list_1_file.getText().startsWith("最新创建");
-        Boolean f2 = desktop_list_2_file.getText().equals("111");
-        Boolean f3 = desktop_list_3_file.getText().equals("最近更新");
+        Boolean f1 = getText(desktop_list_1_file).startsWith("最新创建");
+        Boolean f2 = getText(desktop_list_2_file).equals("111");
+        Boolean f3 = getText(desktop_list_3_file).equals("最近更新");
 
         click(desktop_order);
         click(desktop_orderByDefault);
@@ -204,9 +204,9 @@ public class testDesktopOrderBy extends TestInit {
         click(desktop_orderByFile);
         click(desktop_orderHeader_1);
 
-        Boolean f1 = desktop_list_1_file.getText().equals("最新创建");
-        Boolean f2 = desktop_list_2_file.getText().equals("最近更新");
-        Boolean f3 = desktop_list_3_file.getText().startsWith("文件夹排序");
+        Boolean f1 = getText(desktop_list_1_file).equals("最新创建");
+        Boolean f2 = getText(desktop_list_2_file).equals("最近更新");
+        Boolean f3 = getText(desktop_list_3_file).startsWith("文件夹排序");
 
         click(desktop_order);
         click(desktop_orderByDefault);

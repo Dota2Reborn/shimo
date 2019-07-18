@@ -91,7 +91,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_4() throws InterruptedException {
+    public void authorityForAddCollaborator_4() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -99,7 +99,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(b_addCollaborator);
         sendKeys(input_addCollaborator, "liuchen@shimo.im");
-        Thread.sleep(500);
+//        Thread.sleep(500);
         click(b_addCollaborator_1_add);
         click(b_addCollaborator_ok);
         click(Shut_down_sm_modal_close_x);

@@ -28,7 +28,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		click(doc_notice_user);
 		String url1 = driver.getCurrentUrl();
 		click(b_back);
@@ -58,7 +58,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		click(doc_notice_user);
 		click(b_back);
 		logout();
@@ -91,7 +91,7 @@ public class testNotice extends TestInit {
 		click(b_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
-		Thread.sleep(500);
+//		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
@@ -125,7 +125,7 @@ public class testNotice extends TestInit {
 		click(b_addCollaborator);
 
 		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
-		Thread.sleep(500);
+//		Thread.sleep(500);
 		click(b_addCollaborator_1_add);
 		click(b_addCollaborator_ok);
 
@@ -170,8 +170,8 @@ public class testNotice extends TestInit {
 
 		switchToPage(1);
 		wait.until(ExpectedConditions.elementToBeClickable(End_Discussion));
-		Boolean resutl = doc_discuss_input.isDisplayed();
-		assertTrue(resutl);
+		Boolean result = doc_discuss_input.isDisplayed();
+		assertTrue(result);
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		click(doc_notice_user);
 
 		click(b_back);
@@ -200,7 +200,7 @@ public class testNotice extends TestInit {
 		click(dashboard_notice);
 		click(dashboard_notice_list_unread);
 
-		String result = dashboard_notice_list_unread.getAttribute("data-test");
+		String result = getAttribute(dashboard_notice_list_unread,"data-test");
 		List<WebElement> elements;
 		int i = 100;
 		if (result.equals("active")) {
@@ -214,7 +214,7 @@ public class testNotice extends TestInit {
 			assertFalse(true);
 		}
 
-		String msg1 = dashboard_notice_list_unread.getText();
+		String msg1 = getText(dashboard_notice_list_unread);
 		String msg2 = "未读 (" + i + ")";
 		assertTrue(msg1.equals(msg2));
 	}

@@ -14,7 +14,7 @@ public class testModifyPermissions extends TestInit {
      * @Time 2018-07-20
      */
     @Test
-    public void Modify_1() throws InterruptedException {
+    public void Modify_1() {
 
         login("modify2@shimo.im", "123123");
         click(desktop);
@@ -23,10 +23,8 @@ public class testModifyPermissions extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator_3_list);
         click(can_only_comment_2);
-        Thread.sleep(300);
         Boolean result = getText(b_addCollaborator_3_list).equals("只能评论");
         assertTrue(result);
-        Thread.sleep(300);
         click(b_addCollaborator_3_list);
         click(Can_edit_1);
         click(button_addCollaborator_close);
@@ -179,13 +177,12 @@ public class testModifyPermissions extends TestInit {
      */
 
     @Test
-    public void Modify_7() throws InterruptedException {
+    public void Modify_7() {
         login("modify11@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-        Thread.sleep(500);
-        String t = b_addCollaborator_3_list_disable.getAttribute("disabled");
+        String t = getAttribute(b_addCollaborator_3_list_disable,"disabled");
         assertEquals(t, "true");
 
     }

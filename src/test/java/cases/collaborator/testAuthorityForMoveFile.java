@@ -15,7 +15,7 @@ public class testAuthorityForMoveFile extends TestInit {
      * @Time 2018-7-24
      */
     @Test(enabled = true)
-    public void authorityForMoveFile_1() throws InterruptedException {
+    public void authorityForMoveFile_1() {
         login("authorityForMoveFile_1_1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
@@ -25,7 +25,6 @@ public class testAuthorityForMoveFile extends TestInit {
 
         contextClick(desktop1_1);
         click(menu_move);
-        Thread.sleep(500);
         click(desktop_moveFolder_back_button);
         click(desktop_moveFolder_list_2);
         click(desktop_moveFolder_button);
@@ -76,7 +75,7 @@ public class testAuthorityForMoveFile extends TestInit {
      * @Time 2018-7-24
      */
     @Test(enabled = true)
-    public void authorityForMoveFile_3() throws InterruptedException {
+    public void authorityForMoveFile_3() {
         login("authorityForMoveFile_3_1@shimo.im", "123123");
         click(desktop);
         click(desktop1_2_folder);
@@ -88,7 +87,6 @@ public class testAuthorityForMoveFile extends TestInit {
         contextClick(desktop1_1);
         click(menu_move);
         click(desktop_moveFolder_back_button);
-        Thread.sleep(500);
         click(desktop_moveFolder_list_1);
         click(desktop_moveFolder_button);
 
