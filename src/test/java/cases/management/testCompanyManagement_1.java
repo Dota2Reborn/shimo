@@ -50,7 +50,7 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = false)
-    public void inviteMember_ManagerAndCreater() {
+    public void inviteMember_ManagerAndCreator() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
@@ -78,7 +78,7 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = false)
-    public void inviteMember_JustByCreater() {
+    public void inviteMember_JustByCreator() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
@@ -135,7 +135,7 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2017-01-08
      */
     @Test(enabled = false)
-    public void setManager_Creater() {
+    public void setManager_Creator() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
@@ -182,7 +182,7 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = false)
-    public void setManager_ManagerAndCreater() {
+    public void setManager_ManagerAndCreator() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
