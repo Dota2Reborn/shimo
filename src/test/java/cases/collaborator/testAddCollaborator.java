@@ -175,7 +175,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-01
      */
     @Test(enabled = true)
-    public void addCollaborator_7() throws InterruptedException {
+    public void addCollaborator_7() {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
 
@@ -199,8 +199,8 @@ public class testAddCollaborator extends TestInit {
         click(list_addCollaborator_4);
 //		click(b_addCollaborator_confirm);
 
-        Thread.sleep(500);
-        String fileName = desktop1_1_folder.getText();
+//        Thread.sleep(500);
+        String fileName = getText(desktop1_1_folder);
         assertNotEquals(fileName, "添加协作者测试");
     }
 
