@@ -475,7 +475,7 @@
 			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='shortcut-list']//li[1]",
+				"locator": "(//ul[@class='shortcut-list']//div[@class='item-name-one-line'])[1]",
 				"note": "桌面快捷方式第一个"
 			},
 			{

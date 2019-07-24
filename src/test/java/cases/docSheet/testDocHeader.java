@@ -287,7 +287,7 @@ public class testDocHeader extends TestInit {
      * @author 刘晨
      * @Time 2018-12-26
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void doc_move() {
         login("testDocHeader@shimo.im", "123123");
 

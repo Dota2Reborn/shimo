@@ -254,7 +254,7 @@ public class testSheetHeader extends TestInit {
          * @author 刘晨
          * @Time 2018-12-26
          */
-        @Test(enabled = false)
+        @Test(enabled = true)
         public void sheet_move() {
             login("testSheetHeader@shimo.im", "123123");
 
