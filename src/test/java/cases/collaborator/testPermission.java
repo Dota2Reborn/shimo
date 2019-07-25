@@ -38,9 +38,13 @@ public class testPermission extends TestInit {
         assertEquals(M, "true");
         click(quick_access_point);
         click(Back_to_Dashboard);
+
         contextClick(desktop1_1_folder);
-        click(menu_delete);
-        click(Exit_share_OK);
+        click(menu_cooperation);
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
+//        click(menu_delete);
+//        click(Exit_share_OK);
     }
 
     /**
@@ -73,8 +77,11 @@ public class testPermission extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+        click(menu_cooperation);
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
     }
 
 
