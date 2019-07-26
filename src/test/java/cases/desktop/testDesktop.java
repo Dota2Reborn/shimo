@@ -55,10 +55,7 @@ public class testDesktop extends TestInit {
         click(menu_shortcut);
 
         driver.navigate().refresh();
-//        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
-//        click(desktop_shortcut);
-//        Thread.sleep(500);
         String doc_name = getText(desktop1_1_name);
 
         contextClick(desktop1_1);
@@ -162,7 +159,6 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_9() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
-//        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
 
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);

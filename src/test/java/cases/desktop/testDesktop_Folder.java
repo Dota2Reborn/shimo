@@ -83,12 +83,7 @@ public class testDesktop_Folder extends TestInit {
         }
 
         click(menu_shortcut);
-
-//        driver.navigate().refresh();
-//        click(desktop_shortcut);
         String msg = getText(desktop_shortcut_1);
-//        click(desktop_shortcut);
-//        Thread.sleep(500);
         String doc_name = getText(desktop1_1_folder);
 
         contextClick(desktop1_1_folder);
@@ -143,7 +138,6 @@ public class testDesktop_Folder extends TestInit {
         click(desktop_newFolder);
         sendKeys(desktop_newFolder_name, "FFFFF");
         click(desktop_newFolder_name_ok);
-        // wait.until(ExpectedConditions.elementToBeClickable(By.className("settings")));
         click(desktop);
         contextClick(desktop1_1);
         click(menu_move);

@@ -21,12 +21,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "pipi@qq.com");
-//        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("pipi@qq.com");
 
         click(b_addCollaborator_2_list);
         String msg = getText(Can_edit_1);
@@ -46,11 +41,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "panpan@qq.com");
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("panpan@qq.com");
 
         click(b_addCollaborator_2_list);
         String msg = getText(Can_edit_1);
@@ -95,13 +86,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "liuchen@shimo.im");
-//        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("liuchen@shimo.im");
         click(Shut_down_sm_modal_close_x);
 
         click(desktop1_1_folder);
@@ -115,9 +100,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(Shut_down_sm_modal_close_x);
 
         click(Folder_settings);
-        click(menu_cooperation);
-        click(b_addCollaborator_3_list);
-        click(list_addCollaborator_4);
+        removeCollaboratorByPosition(3);
 
         assertEquals(result2, result1 + 1);
     }
@@ -180,13 +163,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
-//        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
 
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
@@ -199,13 +176,8 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
 
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
-//        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
         click(desktop);
@@ -218,9 +190,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+        removeCollaboratorByPosition(2);
 
         assertTrue(r1 && r2 && r3 && r4);
     }

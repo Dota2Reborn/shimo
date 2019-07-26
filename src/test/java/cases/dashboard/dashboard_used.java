@@ -21,7 +21,7 @@ public class dashboard_used extends TestInit {
 
         login("zuijin7@shimo.im", "123123");
         click(dashboard_2);
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
+//        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
         moveToElement(dashboard_update_name);
         click(driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
         Thread.sleep(500);
@@ -105,7 +105,6 @@ public class dashboard_used extends TestInit {
         click(dashboard_share_file_2);
         click(b_back);
         click(dashboard_2);
-//        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         String text1 = getText(dashboard_update_name);
         assertFalse(text.equals(text1));
 
@@ -169,10 +168,8 @@ public class dashboard_used extends TestInit {
         click(dashboard_4);
         click(dashboard_update_name);
         click(b_back);
-//        wait.until(ExpectedConditions.elementToBeClickable(dashboard_2));
         click(dashboard_2);
 
-//        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_file));
         contextClick(dashboard_update_name);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

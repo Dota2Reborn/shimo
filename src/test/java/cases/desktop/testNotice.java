@@ -20,7 +20,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_1() throws InterruptedException {
+	public void notice_1() {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -28,7 +28,6 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-//		Thread.sleep(1000);
 		click(doc_notice_user);
 		String url1 = driver.getCurrentUrl();
 		click(b_back);
@@ -58,7 +57,6 @@ public class testNotice extends TestInit {
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-//		Thread.sleep(1000);
 		click(doc_notice_user);
 		click(b_back);
 		logout();
@@ -82,18 +80,12 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_3() throws InterruptedException {
+	public void notice_3() {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
-		click(b_addCollaborator);
-
-		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
-//		Thread.sleep(500);
-		click(b_addCollaborator_1_add);
-		click(b_addCollaborator_ok);
+		addCollaboratorByEmail("autoTest12@shimo.im");
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -116,18 +108,12 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_4() throws InterruptedException {
+	public void notice_4() {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 
 		contextClick(desktop1_1);
-		click(menu_cooperation);
-		click(b_addCollaborator);
-
-		sendKeys(input_addCollaborator, "autoTest12@shimo.im");
-//		Thread.sleep(500);
-		click(b_addCollaborator_1_add);
-		click(b_addCollaborator_ok);
+		addCollaboratorByEmail("autoTest12@shimo.im");
 
 		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
 		click(b_addCollaborator_2_list);
@@ -187,11 +173,9 @@ public class testNotice extends TestInit {
 		click(desktop);
 
 		click(desktop1_1);
-
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "@autoTest12@shimo.im");
-//		Thread.sleep(1000);
 		click(doc_notice_user);
 
 		click(b_back);

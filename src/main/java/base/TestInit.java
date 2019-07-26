@@ -364,7 +364,7 @@ public class TestInit extends elementFile {
     }
 
     /**
-     * 右键点击moveToElement
+     * 右键点击
      *
      * @author 刘晨
      * @Time 2018-03-23
@@ -376,6 +376,63 @@ public class TestInit extends elementFile {
         } catch (NoSuchElementException e) {
             System.out.println(element + "is missing");
         }
+
+    }
+
+    /**
+     * 加协作者，通过邮箱/手机号添
+     *
+     * @param email
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void addCollaboratorByEmail(String email) {
+        click(menu_cooperation);
+        click(b_addCollaborator);
+        sendKeys(input_addCollaborator, email);
+        click(b_addCollaborator_1_add);
+        click(b_addCollaborator_ok);
+    }
+
+
+    /**
+     * 除协作者，通过邮箱/手机号移
+     *
+     * @param email
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeCollaboratorByEmail(String email) {
+        click(menu_cooperation);
+        click(b_addCollaborator);
+        sendKeys(input_addCollaborator, email);
+        click(b_addCollaborator_1_add);
+        click(list_addCollaborator_4);
+    }
+
+    /**
+     * 移除协作者，通过所处协作者列表位置
+     *
+     * @param i
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeCollaboratorByPosition(int i) {
+        click(menu_cooperation);
+        WebElement b_collaboratorPosition = null;
+        switch (i){
+            case 1:
+                b_collaboratorPosition = b_addCollaborator_1_list;
+                break;
+            case 2:
+                b_collaboratorPosition = b_addCollaborator_2_list;
+                break;
+            case 3:
+                b_collaboratorPosition = b_addCollaborator_3_list;
+                break;
+        }
+        click(b_collaboratorPosition);
+        click(list_addCollaborator_4);
 
     }
 

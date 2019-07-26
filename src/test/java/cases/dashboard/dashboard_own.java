@@ -117,9 +117,10 @@ public class dashboard_own extends TestInit {
         login("own6@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        sendKeys(input_addCollaborator, "own7@shimo.im");
-        click(b_addCollaborator_1_add);
+//        click(menu_cooperation);
+//        sendKeys(input_addCollaborator, "own7@shimo.im");
+//        click(b_addCollaborator_1_add);
+        addCollaboratorByEmail("own7@shimo.im");
         // 获取当前时间
         Boolean a = false;
         String time = getDate();

@@ -86,13 +86,7 @@ public class testDashboard extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-
-        sendKeys(input_addCollaborator, "autoTest07@shimo.im");
-//        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("autoTest07@shimo.im");
 
         logout();
         login("autoTest07@shimo.im", "123123");
@@ -101,8 +95,6 @@ public class testDashboard extends TestInit {
         contextClick(dashboard_share_file_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-
-//        Thread.sleep(1000);
 
         String msg = getText(driver.findElement(By.className("none-file")));
         assertEquals(msg, "没有文件");
