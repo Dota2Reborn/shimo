@@ -50,8 +50,8 @@ public class testRecycleBin extends TestInit {
         Sort();
         click(desktop_new);
         click(desktop_newDoc);
-        wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
-        doc_edit.sendKeys("文档内输入内容，可进入回收站" + Keys.ENTER);
+//        wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
+        sendKeys(doc_edit,"文档内输入内容，可进入回收站" + Keys.ENTER);
         //点点点
         click(doc_menu);
         //删除按钮
@@ -59,10 +59,9 @@ public class testRecycleBin extends TestInit {
         //删除文档，确认删除
         click(doc_menu_delete_OK);
         click(trash);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String name = desktop1_1.getText();
+        String name = getText(desktop1_1);
         assertEquals(name, "无标题");
-        action.contextClick(desktop1_1).perform();
+        contextClick(desktop1_1);
         click(menu_Completely_removed);
         click(desktop_newFolder_name_ok);
         Thread.sleep(500);

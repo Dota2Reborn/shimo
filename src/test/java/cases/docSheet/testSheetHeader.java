@@ -159,7 +159,7 @@ public class testSheetHeader extends TestInit {
             click(desktop);
             click(desktop1_1);
             Thread.sleep(1000);
-            click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[2]")));
+            click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[3]")));
             sendKeys(input_collaborator, "test0910@qq.com");
             click(b_addCollaborator_1_add);
             click(b_addCollaborator_ok);

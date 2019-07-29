@@ -602,11 +602,14 @@ public class TestInit extends elementFile {
                 click(desktop_show_type);
             }
 
-            Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
-            if(checkFileName){
-                contextClick(desktop1_1);
-                click(menu_delete);
-                click(desktop_newFolder_name_ok);
+            Boolean fileCheck = doesWebElementExist(desktop1_1);
+            if(fileCheck){
+                Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+                if(checkFileName){
+                    contextClick(desktop1_1);
+                    click(menu_delete);
+                    click(desktop_newFolder_name_ok);
+                }
             }
             checkPageIsReady();
         }
