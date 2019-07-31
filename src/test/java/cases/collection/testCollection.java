@@ -66,7 +66,7 @@ public class testCollection extends TestInit {
     /**
      * 我的收藏-列表/平铺 模式切换
      *
-     * @author
+     * @author 刘晨
      * @Time 2018-03-19
      */
     @Test
@@ -155,15 +155,15 @@ public class testCollection extends TestInit {
         click(desktop_order);
         click(desktop_orderByCreate);
         // 刷新
-        driver.navigate().refresh();
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_creatCopy);
-        driver.navigate().refresh();
+//        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+
+        driver.navigate().refresh();
         String name = getText(desktop1_1_name);
         if (name1 != name) {
             contextClick(desktop1_1);
@@ -177,7 +177,7 @@ public class testCollection extends TestInit {
     }
 
     // 验证排序是否初始化
-    public void Sort() {
+    private void Sort() {
         wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
         String msg = getText(desktop_show_type);
         if (msg.equals("平铺")) {
@@ -190,7 +190,7 @@ public class testCollection extends TestInit {
             Boolean exist = doesWebElementExist(
                     By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
             click(desktop_orderByDefault);
-            if (exist == true) {
+            if (exist) {
                 click(desktop_order);
                 wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
                 click(desktop_orderByFolderUP);
@@ -200,7 +200,7 @@ public class testCollection extends TestInit {
             wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
             Boolean exist = doesWebElementExist(
                     By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-            if (exist == true) {
+            if (exist) {
                 click(desktop_orderByFolderUP);
             } else {
                 click(desktop_orderByDefault);
