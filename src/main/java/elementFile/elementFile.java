@@ -61,10 +61,10 @@ public class elementFile {
 	public WebElement desktop_orderByDefault;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newSheet", noteName = "新建表格")
 	public WebElement desktop_newSheet;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newslides", noteName = "新建幻灯片")
-	public WebElement desktop_newslides;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newmindmap", noteName = "新建思维脑图")
-	public WebElement desktop_newmindmap;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newSlides", noteName = "新建幻灯片")
+	public WebElement desktop_newSlides;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newMindMap", noteName = "新建思维脑图")
+	public WebElement desktop_newMindMap;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newtemplate", noteName = "从模板新建")
 	public WebElement desktop_newtemplate;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
@@ -629,10 +629,10 @@ public class elementFile {
 	public WebElement text_companyName;
 	@SearchWith(pageName = "companyManagement", elementName = "setAdmin", noteName = "企业设置-设置管理员")
 	public WebElement setAdmin;
-	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_ManagerAndCreater", noteName = "企业设置-设置管理员-管理员和创建者")
-	public WebElement setAdmin_ManagerAndCreater;
-	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_Creater", noteName = "企业设置-设置管理员-仅创建者")
-	public WebElement setAdmin_Creater;
+	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_ManagerAndCreator", noteName = "企业设置-设置管理员-管理员和创建者")
+	public WebElement setAdmin_ManagerAndCreator;
+	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_Creator", noteName = "企业设置-设置管理员-仅创建者")
+	public WebElement setAdmin_Creator;
 	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators", noteName = "企业设置-谁能添加外部协作者（更改按钮）")
 	public WebElement button_addCollaborators;
 	@SearchWith(pageName = "companyManagement", elementName = "menu_1", noteName = "企业设置 - 更改选项（任一）- 第一个选项")

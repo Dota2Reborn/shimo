@@ -141,7 +141,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(setAdmin);
-        click(setAdmin_Creater);
+        click(setAdmin_Creator);
         click(message_ok);
 
         logout();
@@ -188,7 +188,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(setAdmin);
-        click(setAdmin_ManagerAndCreater);
+        click(setAdmin_ManagerAndCreator);
         click(message_ok);
 
         logout();

@@ -66,9 +66,9 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg,"文档");
         String msg1 = getText(desktop_newSheet);
         assertEquals(msg1,"表格");
-        String msg2 = getText(desktop_newslides);
+        String msg2 = getText(desktop_newSlides);
         assertEquals(msg2,"幻灯片");
-        String msg3 = getText(desktop_newmindmap);
+        String msg3 = getText(desktop_newMindMap);
         assertEquals(msg3,"思维导图");
         String msg4 = getText(desktop_newFolder);
         assertEquals(msg4,"文件夹");
@@ -150,7 +150,7 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_2);
         String msg = getText(desktop1_1_name);
         click(desktop_new);
-        click(desktop_newslides);
+        click(desktop_newSlides);
         click(b_back);
         contextClick(desktop1_1);
         click(menu_delete);
@@ -171,7 +171,7 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_2);
         String msg = getText(desktop1_1_name);
         click(desktop_new);
-        click(desktop_newmindmap);
+        click(desktop_newMindMap);
         click(b_back);
         contextClick(desktop1_1);
         click(menu_delete);

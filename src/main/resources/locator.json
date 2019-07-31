@@ -353,13 +353,13 @@
 				"note": "新建表格"
 			},
 			{
-				"elementName": "desktop_newslides",
+				"elementName": "desktop_newSlides",
 				"locateUsing": "xpath",
 				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_slide')]",
 				"note": "新建幻灯片"
 			},
 			{
-				"elementName": "desktop_newmindmap",
+				"elementName": "desktop_newMindMap",
 				"locateUsing": "xpath",
 				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mindmap')]",
 				"note": "新建思维脑图"
@@ -1166,13 +1166,13 @@
 				"note": "企业设置-设置管理员"
 			},
 			{
-				"elementName": "setAdmin_ManagerAndCreater",
+				"elementName": "setAdmin_ManagerAndCreator",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[1]",
 				"note": "企业设置-设置管理员-管理员和创建者"
 			},
 			{
-				"elementName": "setAdmin_Creater",
+				"elementName": "setAdmin_Creator",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[2]",
 				"note": "企业设置-设置管理员-仅创建者"

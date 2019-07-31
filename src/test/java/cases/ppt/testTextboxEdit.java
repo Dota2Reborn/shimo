@@ -27,7 +27,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	public void Text_Editing1() throws InterruptedException {
 		login("textstyle1@shimo.im", "123123");
 		click(desktop_new);
-		click(desktop_newslides);
+		click(desktop_newSlides);
 		click(page_elements_1);
 		action.sendKeys("在文本占位符输入验证保存").build().perform();
 		Thread.sleep(1500);
@@ -137,7 +137,7 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	public void Text_Editing5() throws InterruptedException, AWTException {
 		login("textstyle5@shimo.im", "123123");
 		click(desktop_new);
-		click(desktop_newslides);
+		click(desktop_newSlides);
 		click(ppt_page_1);
 		click(page_elements_1);
 		action.sendKeys("第一行"+Keys.ENTER+"第二行").build().perform();

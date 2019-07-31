@@ -20,7 +20,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 	public void New_Page() {
 		login("New_Page@shimo.im", "123123");
 		click(desktop_new);
-		click(desktop_newslides);
+		click(desktop_newSlides);
 		click(add_page);
 		Boolean result = doesWebElementExist(ppt_page_2);
 		click(ppt_dotdotdot);
@@ -40,7 +40,7 @@ public class testGlobalPage extends TestInit {// 全局页面
 	public void New_Template() {
 		login("NewTemplate@shimo.im", "123123");
 		click(desktop_new);
-		click(desktop_newslides);
+		click(desktop_newSlides);
 		for (int i = 1; i < 11; i++) {
 			click(down_arrow);
 			WebElement template = driver.findElement(By.xpath("//ul[@id='sm-slide-layout']//li[" + i + "]"));
