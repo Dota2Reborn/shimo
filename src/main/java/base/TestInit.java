@@ -582,19 +582,10 @@ public class TestInit extends elementFile {
             msg = getText(desktop_order);
             if (msg.equals("更新时间")) {
                 click(desktop_order);
-//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
                 click(desktop_orderByFolderUP);
-
                 click(desktop_order);
-//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
                 click(desktop_orderByDefault);
             }
-//            Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
-//            if(checkFileName){
-//                contextClick(desktop1_1);
-//                click(menu_delete);
-//                click(desktop_newFolder_name_ok);
-//            }
 
         } finally {
             msg = getText(desktop_show_type);
@@ -634,20 +625,13 @@ public class TestInit extends elementFile {
     }
 
     public  void  clickDashboardActivitiesByFile(WebElement element){
-//        try {
-//            wait.until(ExpectedConditions.visibilityOf(element));
-//            element.click();
-//        } catch (NoSuchElementException e) {
-//            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
-//            dashboard_activitiesByMember.click();
-//
-//        }
+
         Boolean r1 = doesWebElementExist(dashboard_activitiesByMember);
         if(r1){
             wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
             dashboard_activitiesByMember.click();
-            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByFile));
-            dashboard_activitiesByFile.click();
+            wait.until(ExpectedConditions.visibilityOf(element));
+            element.click();
         }else{
             return;
         }
