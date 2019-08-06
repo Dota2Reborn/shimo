@@ -47,9 +47,9 @@ public class TestInit extends elementFile {
             urlWithCookie = testURL;
         }
         if(!urlWithCookie.isEmpty()){
-            driver.navigate().to(urlWithCookie);
+            jumpToURL(urlWithCookie);
         }
-        driver.navigate().to(test_url + "login");
+        jumpToURL(test_url + "login");
         checkAlert();//检查异常Alert
 
 //        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -96,7 +96,7 @@ public class TestInit extends elementFile {
         // printLog(className, user);
 
         if (!driver.getCurrentUrl().startsWith(test_url + "login")) {
-            driver.navigate().to(test_url + "login");
+            jumpToURL(test_url + "login");
         }
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         userEmail.clear();
@@ -157,7 +157,7 @@ public class TestInit extends elementFile {
         // className = new Exception().getStackTrace()[1].getMethodName();
         // printLog(className, user);
 
-        driver.navigate().to(test_url + "login");
+        jumpToURL(test_url + "login");
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         sendKeys(userEmail, user);
         sendKeys(userPwd, pwd);
@@ -173,7 +173,7 @@ public class TestInit extends elementFile {
      */
     public void Registered(String name, String user, String pwd, int type, String repwd) {
         if (type == 1) {
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
             click(personalRegister);
             click(mobileRegister);
@@ -184,7 +184,7 @@ public class TestInit extends elementFile {
             sendKeys(verifyCode, "2222");
             click(Next);
         } else if (type == 2) {
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
             click(personalRegister);
             click(emailRegister);
@@ -194,7 +194,7 @@ public class TestInit extends elementFile {
             sendKeys(rePwd, repwd);
             click(Next);
         }else if (type == 3){
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             click(personalRegister);
             click(mobileRegister);
             sendKeys(userName, name);
@@ -218,7 +218,7 @@ public class TestInit extends elementFile {
      * @Time 2019-3-21
      */
     public void Registered_new(String name, String user, String pwd, int type) {
-        driver.navigate().to(test_url + "register");
+        jumpToURL(test_url + "register");
 
         if (type == 1) {
             sendKeys(input_registered_nickname, name);
@@ -247,14 +247,14 @@ public class TestInit extends elementFile {
 //            driver.manage().deleteAllCookies();
             driver.manage().deleteCookieNamed("userId");
             driver.manage().deleteCookieNamed("shimo_dev_sid");
-            driver.navigate().to(test_url + "login");
+            jumpToURL(test_url + "login");
 //            driver.navigate().to(test_url + "logout");
             driver.switchTo().alert().accept();
             action.sendKeys(Keys.ESCAPE);
         } catch (UnhandledAlertException e) {
             // 报错
             driver.switchTo().alert().accept();
-            driver.navigate().to(test_url + "login");
+            jumpToURL(test_url + "login");
             System.out.println("Unhandled Alert!!!!");
         } catch (NoAlertPresentException e) {
             // 正常情况
@@ -763,6 +763,12 @@ public class TestInit extends elementFile {
         }
     }
 
+    /**
+     * 返回driver
+     *
+     * @author 刘晨
+     * @Time 2018-04-10
+     */
     public WebDriver getDriver() {
         return driver;
     }
