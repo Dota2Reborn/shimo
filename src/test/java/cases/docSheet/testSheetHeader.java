@@ -114,11 +114,12 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_click_userIcon() {
+        public void sheet_click_userIcon() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(b_user_icon);
 
             String result2 = getText(desktop_user_icon_status_L);
@@ -138,6 +139,7 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(b_discord);
 
             Thread.sleep(500);
@@ -158,7 +160,7 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
-            Thread.sleep(1000);
+            Thread.sleep(2000);
             click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[3]")));
             sendKeys(input_collaborator, "test0910@qq.com");
             click(b_addCollaborator_1_add);
@@ -179,11 +181,12 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_shortcut() {
+        public void sheet_shortcut() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(doc_menu);
             String b_Msg = getText(file_menu_shortcut);
             click(file_menu_shortcut);
@@ -205,11 +208,13 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_messageMute() {
+        public void sheet_messageMute() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+
+            Thread.sleep(2000);
             click(doc_menu);
             String b_Msg = getText(file_menu_mute);
             click(file_menu_mute);
@@ -230,11 +235,13 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_collection() {
+        public void sheet_collection() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+
+            Thread.sleep(2000);
             click(doc_menu);
             String b_Msg = getText(file_menu_collection);
             click(file_menu_collection);
@@ -255,11 +262,13 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_move() {
+        public void sheet_move() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+
+            Thread.sleep(2000);
             click(doc_menu);
             click(file_menu_move);
             click(desktop_moveFolder_back_button);
@@ -277,7 +286,7 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_create() {
+        public void sheet_create() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
@@ -285,6 +294,8 @@ public class testSheetHeader extends TestInit {
             click(desktop1_1_folder);
             click(desktop_new);
             click(desktop_newSheet);
+
+            Thread.sleep(2000);
             click(doc_menu);
             click(file_menu_creatCopy);
             String msg = getText(toast_msg);
@@ -312,6 +323,7 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(doc_menu);
             click(file_menu_template);
             Thread.sleep(500);
@@ -328,11 +340,12 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-12-26
          */
         @Test(enabled = true)
-        public void sheet_saveVersion() {
+        public void sheet_saveVersion() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(doc_menu);
             click(file_menu_version);
             String msg = getText(driver.findElement(By.xpath("//p[@class='sm-alert-content']")));
@@ -346,11 +359,12 @@ public class testSheetHeader extends TestInit {
          * @Time 2018-03-19
          */
         @Test(enabled = true)
-        public void sheet_msg() {
+        public void sheet_msg() throws InterruptedException {
             login("testSheetHeader@shimo.im", "123123");
 
             click(desktop);
             click(desktop1_1);
+            Thread.sleep(2000);
             click(doc_menu);
             click(file_menu_msg);
 
