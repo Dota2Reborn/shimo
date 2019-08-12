@@ -76,7 +76,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
     }
 
     /**
-     * 文件夹协作者权限为可编辑的用户，为文件夹添加协作者，只会对文件夹中自己权限为可编辑的添加协作者
+     * 文件夹协作者权限为可编辑的用户，为文件夹添加协作者，不论子文件是何种协作权限，都会添加协作者
      *
      * @author 刘晨
      * @Time 2018-7-3
@@ -102,7 +102,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(Folder_settings);
         removeCollaboratorByPosition(3);
 
-        assertEquals(result2, result1 + 1);
+        assertEquals(result2, result1);
     }
 
     /**
@@ -151,7 +151,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
     }
 
     /**
-     * 协作者被添加为文件协作者（文件出现在协作者桌面），然后被添加为该文件夹父文件夹的协作者（文件在协作者桌面消失出现在共享文件夹中）
+     * 协作者被添加为文件协作者（文件出现在协作者桌面），然后被添加为该文件夹父文件夹的协作者，用户桌面会出现该文件快捷方式和父文件夹快捷方式
      *
      * @author 刘晨
      * @Time 2018-7-3
@@ -164,34 +164,28 @@ public class testAuthorityForAddCollaborator extends TestInit {
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
         addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        click(button_addCollaborator_close);
+
+        click(desktop);
+        contextClick(desktop1_1_folder);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        click(button_addCollaborator_close);
 
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
         click(desktop);
 
         Boolean r1 = getText(desktop1_1_name).equals(file_name);
-
-        logout();
-        login("AddCollaborator_04_1@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
-
-        logout();
-        login("AddCollaborator_04_2@shimo.im", "123123");
-        click(desktop);
-
         Boolean r2 = getText(desktop1_1_folder).equals("test");
-        Boolean r3 = doesWebElementExist(desktop1_2);
 
         click(desktop1_1_folder);
-        Boolean r4 = getText(desktop1_1_name).equals(file_name);
+        Boolean r3 = getText(desktop1_1_name).equals(file_name);
 
         click(desktop);
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(2);
 
-        assertTrue(r1 && r2 && r3 && r4);
+        assertTrue(r1 && r2 && r3);
+
     }
 }

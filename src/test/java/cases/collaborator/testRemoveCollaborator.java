@@ -32,8 +32,6 @@ public class testRemoveCollaborator extends TestInit {
         click(menu_cooperation);
         int count = getCollaboratorSize();
         assertTrue(count == 1);
-
-
     }
 
     /**
@@ -60,8 +58,6 @@ public class testRemoveCollaborator extends TestInit {
         click(menu_cooperation);
         int count = getCollaboratorSize();
         assertTrue(count == 1);
-
-
     }
 
     /**
@@ -83,7 +79,6 @@ public class testRemoveCollaborator extends TestInit {
         int count1 = getCollaboratorSize();
         click(button_addCollaborator_close);
 
-
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
@@ -94,7 +89,7 @@ public class testRemoveCollaborator extends TestInit {
 
 
     /**
-     * 文件夹可编辑协作者移除协作者，子文件中自己为可编辑权限的可以移除（企业与权限相关78）
+     * 文件夹可编辑协作者移除协作者，子文件中自己为任何权限的都可以移除（企业与权限相关78）
      *
      * @author 陈清杰
      * @Time 2018-07-17
@@ -104,9 +99,6 @@ public class testRemoveCollaborator extends TestInit {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_3_list);
-//        click(list_addCollaborator_4);
         removeCollaboratorByPosition(3);
         click(button_addCollaborator_close);
 
@@ -117,15 +109,8 @@ public class testRemoveCollaborator extends TestInit {
         click(button_addCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        click(addCollaborator_1_add);
-//        click(b_addCollaborator_ok);
-//        click(button_addCollaborator_close);
         addCollaboratorByEmail("remove10@shimo.im");
-        assertTrue(count == 3);
-
-
+        assertTrue(count == 2);
     }
 
     @Test
@@ -136,9 +121,5 @@ public class testRemoveCollaborator extends TestInit {
         click(menu_cooperation);
         String t = getAttribute(b_addCollaborator_3_list_disable,"disabled");
         assertEquals(t, "true");
-
-
     }
-
-
 }
