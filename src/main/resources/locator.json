@@ -353,13 +353,13 @@
 				"note": "新建表格"
 			},
 			{
-				"elementName": "desktop_newslides",
+				"elementName": "desktop_newSlides",
 				"locateUsing": "xpath",
 				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_slide')]",
 				"note": "新建幻灯片"
 			},
 			{
-				"elementName": "desktop_newmindmap",
+				"elementName": "desktop_newMindMap",
 				"locateUsing": "xpath",
 				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mindmap')]",
 				"note": "新建思维脑图"
@@ -427,19 +427,19 @@
 			{
 				"elementName": "desktop1_1_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[1]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[1]",
 				"note": "平铺模式第一行第一个文件夹"
 			},
 			{
 				"elementName": "desktop1_2_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[2]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[2]",
 				"note": "平铺模式第一行第二个文件夹"
 			},
 			{
 				"elementName": "desktop1_3_folder",
 				"locateUsing": "xpath",
-				"locator": "(//div[contains(@class,' folder-tile')])[3]",
+				"locator": "(//div[contains(@class,' folder-tile')]//div[@class='title'])[3]",
 				"note": "平铺模式第一行第三个文件夹"
 			},
 			{
@@ -475,7 +475,7 @@
 			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='shortcut-list']//li[1]",
+				"locator": "(//ul[@class='shortcut-list']//div[@class='item-name-one-line'])[1]",
 				"note": "桌面快捷方式第一个"
 			},
 			{
@@ -1037,6 +1037,24 @@
 				"locateUsing": "xpath",
 				"locator": "//input[@data-test='collaborator-search-inputbox']",
 				"note": "header上添加协作者邮箱输入框"
+			},
+			{
+				"elementName": "b_share",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'分享')]",
+				"note": "header分享按钮"
+			},
+			{
+				"elementName": "share_changePWD",
+				"locateUsing": "xpath",
+				"locator": "//a[contains(text(),'更换密码')]",
+				"note": "header分享面板，更换密码"
+			},
+			{
+				"elementName": "share_PWD",
+				"locateUsing": "xpath",
+				"locator": "//a[contains(text(),'更换密码')]/preceding-sibling::input",
+				"note": "header分享面板，密码"
 			}
 			
 		]
@@ -1148,13 +1166,13 @@
 				"note": "企业设置-设置管理员"
 			},
 			{
-				"elementName": "setAdmin_ManagerAndCreater",
+				"elementName": "setAdmin_ManagerAndCreator",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[1]",
 				"note": "企业设置-设置管理员-管理员和创建者"
 			},
 			{
-				"elementName": "setAdmin_Creater",
+				"elementName": "setAdmin_Creator",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='modal-content']//div[2]",
 				"note": "企业设置-设置管理员-仅创建者"
@@ -1452,6 +1470,18 @@
 				"locateUsing": "xpath",
 				"locator": "//li/div/span[contains(text(),'信息')]",
 				"note": "文档/表格信息"
+			},
+			{
+				"elementName": "sharePage_inputPwd",
+				"locateUsing": "xpath",
+				"locator": "//input[@placeholder='请输入密码']",
+				"note": "分享链接打开页面，输入密码框"
+			},
+			{
+				"elementName": "sharePage_buttonConfirm",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(text(),'确定')]",
+				"note": "分享链接打开页面，输入密码,确定按钮"
 			}
 		]
 	},

@@ -243,8 +243,7 @@ public class testRegistered_new extends TestInit {
         Thread.sleep(11000);
         WebElement b_zhuxiao = driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]"));
         click(b_zhuxiao);
-        Boolean r1 = getText(profile_toast).equals("账号注销成功");
-        System.out.print(getText(profile_toast));
+        Boolean r1 = getText(profile_toast).equals("帐号注销成功");
         assertTrue(r1);
     }
 

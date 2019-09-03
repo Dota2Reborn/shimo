@@ -32,9 +32,6 @@ public class testAlertMute extends TestInit {
         login("AlertMute1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1);
-        //已经打开文档
-//        click(doc_edit);
-//        click(ql_comment_Comments);
         wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         doc_edit.clear();
         sendKeys(doc_edit, "lala");
@@ -45,14 +42,10 @@ public class testAlertMute extends TestInit {
         Boolean a = false;
         String time1 = getDate();
         int dat1 = Integer.parseInt(time1);
-//        sendKeys(doc_discuss_input,"输入评论收到通知");
-//        doc_discuss_input_ok.click();
         logout();
         login("AlertMute@shimo.im", "123123");
         click(dashboard_notice);
-        //String time2 = getText(dashboard_notice_list_1_time);
-        wait.until(ExpectedConditions.visibilityOf(dashboard_notice_list_1_time));
-        String time2 = dashboard_notice_list_1_time.getText();
+        String time2 = getText(dashboard_notice_list_1_time);
         String time = time2.substring(0, 2);
         //System.out.println(time2);
         String gg = "刚刚";
@@ -68,7 +61,7 @@ public class testAlertMute extends TestInit {
             }
         }
         assertTrue(a);
-        dashboard_notice_list_1.click();
+        click(dashboard_notice_list_1);
         switchToPage(1);
         click(End_Discussion);
         click(End_Discussion_OK);

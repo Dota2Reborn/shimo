@@ -311,11 +311,12 @@ public class testHover extends TestInit {
      * @Time 2018-01-16
      */
     @Test
-    public void hover_person12() {
+    public void hover_person12() throws InterruptedException {
 
         login("shiyongtest@shimo.im", "123123");
         click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
+        Thread.sleep(500);
         Boolean r1 = driver.getCurrentUrl().equals(getURL() + "enterprise/members");
         assertTrue(r1);
     }
@@ -345,13 +346,14 @@ public class testHover extends TestInit {
      * @Time 2018-01-24
      */
     @Test
-    public void hover_person14() {
+    public void hover_person14() throws InterruptedException {
 
         login("fufei1@shimo.im", "123456");
 
         click(desktop_user_icon);
         click(desktop_user_icon_companyManagement);
 
+        Thread.sleep(500);
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "enterprise/members");
     }

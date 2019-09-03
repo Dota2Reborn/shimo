@@ -56,7 +56,6 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_edit, "la");
         click(b_back);
 
-//        click(dashboard_1);
         click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
         contextClick(dashboard_share_file_1);
@@ -106,7 +105,6 @@ public class dashboard_update extends TestInit {
         click(doc_discuss_input_ok);
         click(b_back);
         driver.navigate().refresh();
-//        click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
 
         assertEquals(text1, "刚刚 我 评论：通过");
@@ -163,9 +161,7 @@ public class dashboard_update extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
-//		click(b_addCollaborator_confirm);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
         logout();
@@ -237,8 +233,7 @@ public class dashboard_update extends TestInit {
         logout();
         login("gengxin13@shimo.im", "123123");
         click(dashboard_activitiesByFile);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = driver.findElement(By.xpath("//div[@class='none-file']//span")).getText();
+        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
         logout();

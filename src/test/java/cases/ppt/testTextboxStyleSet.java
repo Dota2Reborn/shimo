@@ -22,7 +22,7 @@ public class testTextboxStyleSet extends TestInit {//文本设置样式
     public void Text_Editing5() throws InterruptedException, AWTException {
         login("textstyle5@shimo.im", "123123");
         click(desktop_new);
-        click(desktop_newslides);
+        click(desktop_newSlides);
         click(ppt_page_1);
         click(page_elements_1);
         action.sendKeys("第一行"+ Keys.ENTER+"第二行").build().perform();

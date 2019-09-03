@@ -46,7 +46,6 @@ public class testDesktop_new extends TestInit {
      */
     @Test
     public void desktop_newSheet() {
-
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
@@ -63,7 +62,6 @@ public class testDesktop_new extends TestInit {
         String msg1 = getText(desktop1_1_name);
 
         assertEquals(msg, msg1);
-
     }
 
     /**
@@ -74,7 +72,6 @@ public class testDesktop_new extends TestInit {
      */
     @Test
     public void desktop_newFolder() {
-
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
@@ -109,8 +106,6 @@ public class testDesktop_new extends TestInit {
         click(desktop);
 
         click(desktop_new);
-//        WebElement uploadButton = desktop_import;
-
         String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_doc.doc").getFile()).getPath();
         System.out.println(url);
         desktop_import.sendKeys(url);
@@ -188,7 +183,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_md() throws InterruptedException {
+    public void desktop_import_md() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -198,9 +193,7 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
-        Thread.sleep(2000);
         click(b_back);
-
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);

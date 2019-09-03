@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -46,11 +47,13 @@ public class TestInit extends elementFile {
             urlWithCookie = testURL;
         }
         if(!urlWithCookie.isEmpty()){
-            driver.navigate().to(urlWithCookie);
+            jumpToURL(urlWithCookie);
         }
-        driver.navigate().to(test_url + "login");
-        // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        jumpToURL(test_url + "login");
+        checkAlert();//检查异常Alert
+
+//        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
     }
 
@@ -92,8 +95,8 @@ public class TestInit extends elementFile {
         // className = new Exception().getStackTrace()[1].getMethodName();
         // printLog(className, user);
 
-        if (!driver.getCurrentUrl().equals(test_url + "login")) {
-            driver.navigate().to(test_url + "login");
+        if (!driver.getCurrentUrl().startsWith(test_url + "login")) {
+            jumpToURL(test_url + "login");
         }
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         userEmail.clear();
@@ -104,7 +107,7 @@ public class TestInit extends elementFile {
 
 //        gooiest();//跳过引导页
 //        Sticker_Face();//付费提示框
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
     }
 
     /**
@@ -154,7 +157,7 @@ public class TestInit extends elementFile {
         // className = new Exception().getStackTrace()[1].getMethodName();
         // printLog(className, user);
 
-        driver.navigate().to(test_url + "login");
+        jumpToURL(test_url + "login");
         wait.until(ExpectedConditions.elementToBeClickable(login_submit));
         sendKeys(userEmail, user);
         sendKeys(userPwd, pwd);
@@ -170,7 +173,7 @@ public class TestInit extends elementFile {
      */
     public void Registered(String name, String user, String pwd, int type, String repwd) {
         if (type == 1) {
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
             click(personalRegister);
             click(mobileRegister);
@@ -181,7 +184,7 @@ public class TestInit extends elementFile {
             sendKeys(verifyCode, "2222");
             click(Next);
         } else if (type == 2) {
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
             click(personalRegister);
             click(emailRegister);
@@ -191,7 +194,7 @@ public class TestInit extends elementFile {
             sendKeys(rePwd, repwd);
             click(Next);
         }else if (type == 3){
-            driver.navigate().to(test_url + "register");
+            jumpToURL(test_url + "register");
             click(personalRegister);
             click(mobileRegister);
             sendKeys(userName, name);
@@ -215,7 +218,7 @@ public class TestInit extends elementFile {
      * @Time 2019-3-21
      */
     public void Registered_new(String name, String user, String pwd, int type) {
-        driver.navigate().to(test_url + "register");
+        jumpToURL(test_url + "register");
 
         if (type == 1) {
             sendKeys(input_registered_nickname, name);
@@ -244,14 +247,14 @@ public class TestInit extends elementFile {
 //            driver.manage().deleteAllCookies();
             driver.manage().deleteCookieNamed("userId");
             driver.manage().deleteCookieNamed("shimo_dev_sid");
-            driver.navigate().to(test_url + "login");
+            jumpToURL(test_url + "login");
 //            driver.navigate().to(test_url + "logout");
             driver.switchTo().alert().accept();
             action.sendKeys(Keys.ESCAPE);
         } catch (UnhandledAlertException e) {
             // 报错
             driver.switchTo().alert().accept();
-            driver.navigate().to(test_url + "login");
+            jumpToURL(test_url + "login");
             System.out.println("Unhandled Alert!!!!");
         } catch (NoAlertPresentException e) {
             // 正常情况
@@ -353,14 +356,15 @@ public class TestInit extends elementFile {
      */
     public boolean doesWebElementExist(WebElement element) {
         try {
+            wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
-        } catch (NoSuchElementException e) {
+        } catch (Exception e) {
             return false;
         }
     }
 
     /**
-     * 右键点击moveToElement
+     * 右键点击
      *
      * @author 刘晨
      * @Time 2018-03-23
@@ -376,6 +380,63 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 加协作者，通过邮箱/手机号添
+     *
+     * @param email
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void addCollaboratorByEmail(String email) {
+        click(menu_cooperation);
+        click(b_addCollaborator);
+        sendKeys(input_addCollaborator, email);
+        click(b_addCollaborator_1_add);
+        click(b_addCollaborator_ok);
+    }
+
+
+    /**
+     * 除协作者，通过邮箱/手机号移
+     *
+     * @param email
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeCollaboratorByEmail(String email) {
+        click(menu_cooperation);
+        click(b_addCollaborator);
+        sendKeys(input_addCollaborator, email);
+        click(b_addCollaborator_1_add);
+        click(list_addCollaborator_4);
+    }
+
+    /**
+     * 移除协作者，通过所处协作者列表位置
+     *
+     * @param i
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeCollaboratorByPosition(int i) {
+        click(menu_cooperation);
+        WebElement b_collaboratorPosition = null;
+        switch (i){
+            case 1:
+                b_collaboratorPosition = b_addCollaborator_1_list;
+                break;
+            case 2:
+                b_collaboratorPosition = b_addCollaborator_2_list;
+                break;
+            case 3:
+                b_collaboratorPosition = b_addCollaborator_3_list;
+                break;
+        }
+        click(b_collaboratorPosition);
+        click(list_addCollaborator_4);
+
+    }
+
+    /**
      * 鼠标移动到元素
      *
      * @author 刘晨
@@ -383,15 +444,8 @@ public class TestInit extends elementFile {
      */
     public void moveToElement(WebElement element) {
         try {
-            if (element.toString().equals(menu_cooperation.toString())) {
-                // 点击添加协作者
-                wait.until(ExpectedConditions.visibilityOf(element));
-                action.moveToElement(element).perform();
-                click(menu_cooperation_2);
-            } else {
-                wait.until(ExpectedConditions.visibilityOf(element));
-                action.moveToElement(element).perform();
-            }
+            wait.until(ExpectedConditions.visibilityOf(element));
+            action.moveToElement(element).perform();
 
         } catch (NoSuchElementException e) {
             System.out.println(element + "is missing");
@@ -527,18 +581,26 @@ public class TestInit extends elementFile {
             element.click();
             msg = getText(desktop_order);
             if (msg.equals("更新时间")) {
-                desktop_order.click();
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-                desktop_orderByFolderUP.click();
-
-                desktop_order.click();
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-                desktop_orderByDefault.click();
+                click(desktop_order);
+                click(desktop_orderByFolderUP);
+                click(desktop_order);
+                click(desktop_orderByDefault);
             }
+
         } finally {
-            msg = desktop_show_type.getText();
+            msg = getText(desktop_show_type);
             if (msg.equals("平铺")) {
-                desktop_show_type.click();
+                click(desktop_show_type);
+            }
+
+            Boolean fileCheck = doesWebElementExist(desktop1_1);
+            if(fileCheck){
+                Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+                if(checkFileName){
+                    contextClick(desktop1_1);
+                    click(menu_delete);
+                    click(desktop_newFolder_name_ok);
+                }
             }
             checkPageIsReady();
         }
@@ -563,20 +625,13 @@ public class TestInit extends elementFile {
     }
 
     public  void  clickDashboardActivitiesByFile(WebElement element){
-//        try {
-//            wait.until(ExpectedConditions.visibilityOf(element));
-//            element.click();
-//        } catch (NoSuchElementException e) {
-//            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
-//            dashboard_activitiesByMember.click();
-//
-//        }
+
         Boolean r1 = doesWebElementExist(dashboard_activitiesByMember);
         if(r1){
             wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
             dashboard_activitiesByMember.click();
-            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByFile));
-            dashboard_activitiesByFile.click();
+            wait.until(ExpectedConditions.visibilityOf(element));
+            element.click();
         }else{
             return;
         }
@@ -665,6 +720,30 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 跳转到指定链接
+     *
+     * @param
+     * @author 刘晨
+     * @Time 2019-7-11
+     */
+    public void jumpToURL(String url) {
+        driver.navigate().to(url);
+    }
+
+    /**
+     * 获得元素属性值
+     *
+     * @param
+     * @author 刘晨
+     * @Time 2019-7-11
+     */
+    public String getAttribute(WebElement element, String attribute) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        String msg = element.getAttribute(attribute);
+        return msg;
+    }
+
+    /**
      * 通过JS判断页面是否加载完毕
      *
      * @author 刘晨
@@ -684,6 +763,12 @@ public class TestInit extends elementFile {
         }
     }
 
+    /**
+     * 返回driver
+     *
+     * @author 刘晨
+     * @Time 2018-04-10
+     */
     public WebDriver getDriver() {
         return driver;
     }
@@ -696,6 +781,20 @@ public class TestInit extends elementFile {
      */
     public void waitFor() {
 
+    }
+
+    /**
+     * 检测是否存在Alert
+     *
+     * @author 刘晨
+     * @Time 2019-07-15
+     */
+    public void checkAlert() {
+        try {
+            driver.switchTo().alert().accept();
+        }catch (NoAlertPresentException e){
+            return;
+        }
     }
 
     /**

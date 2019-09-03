@@ -9,7 +9,7 @@ import static org.testng.Assert.*;
 public class testAddCollaborator extends TestInit {
 
     /**
-     * 基础版用户，文件协作者为5人，不能继续添加协作者
+     * 基础版用户，文件协作者为15人，不能继续添加协作者
      *
      * @author 刘晨
      * @Time 2017-11-22
@@ -36,27 +36,16 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-21
      */
     @Test(enabled = true)
-    public void addCollaborator_2() throws InterruptedException {
+    public void addCollaborator_2() {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
+        addCollaboratorByEmail("11@cc.ccc");
 
-        String msg_a = getText(addCollaborator_total);
-        click(b_addCollaborator);
-
-        sendKeys(input_addCollaborator, "11@cc.ccc");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
 
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
 
-        Thread.sleep(500);
-        String msg_b = getText(addCollaborator_total);
-
-        assertEquals(msg_a, msg_b);
     }
 
     /**
@@ -66,25 +55,18 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-29
      */
     @Test(enabled = true)
-    public void addCollaborator_3() throws InterruptedException {
+    public void addCollaborator_3() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
-
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
 
-        String msg_a = getText(addCollaborator_total);
+        click(menu_cooperation);
         click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_ok);
 
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
-
-        Thread.sleep(500);
-        String msg_b = getText(addCollaborator_total);
-
-        assertEquals(msg_a, msg_b);
     }
 
     /**
@@ -94,14 +76,13 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-29
      */
     @Test(enabled = true)
-    public void addCollaborator_4() throws InterruptedException {
+    public void addCollaborator_4() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
 
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
 
-        String msg_a = getText(addCollaborator_total);
         click(b_addCollaborator);
         click(addCollaborator_company_list);
         click(addCollaborator_companyList_2_add);
@@ -110,10 +91,6 @@ public class testAddCollaborator extends TestInit {
         click(b_addCollaborator_2_list);
         click(list_addCollaborator_4);
 
-        Thread.sleep(500);
-        String msg_b = getText(addCollaborator_total);
-
-        assertEquals(msg_a, msg_b);
     }
 
     /**
@@ -123,18 +100,14 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-29
      */
     @Test(enabled = true)
-    public void addCollaborator_5() throws InterruptedException {
+    public void addCollaborator_5() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-        String msg_a = getText(addCollaborator_total);
         click(b_addCollaborator);
         click(addCollaborator_1_add);
         click(b_addCollaborator_back);
-        Thread.sleep(500);
-        String msg_b = getText(addCollaborator_total);
-        assertEquals(msg_a, msg_b);
     }
 
     /**
@@ -144,26 +117,17 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-01
      */
     @Test(enabled = true)
-    public void addCollaborator_6() throws InterruptedException {
+    public void addCollaborator_6() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "autoTest04@shimo.im");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("autoTest04@shimo.im");
 
         logout();
         login("autoTest04@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-//		click(b_addCollaborator_confirm);
-        Thread.sleep(500);
+        removeCollaboratorByPosition(2);
         String fileName = getText(desktop1_1_folder);
         assertNotEquals(fileName, "添加协作者测试");
     }
@@ -175,33 +139,22 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-01
      */
     @Test(enabled = true)
-    public void addCollaborator_7() throws InterruptedException {
+    public void addCollaborator_7() {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
 
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-
-        sendKeys(input_addCollaborator, "autoTest04@shimo.im");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("autoTest04@shimo.im");
 
         logout();
         login("autoTest04@shimo.im", "123123");
 
         click(desktop);
-
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-//		click(b_addCollaborator_confirm);
+        removeCollaboratorByPosition(2);
 
-        Thread.sleep(500);
-        String fileName = desktop1_1_folder.getText();
-        assertNotEquals(fileName, "添加协作者测试");
+        String toast = getText(toast_msg);
+        assertEquals(toast, "你已退出协作「内部协作者」");
     }
 
     /**
@@ -221,7 +174,7 @@ public class testAddCollaborator extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(500);
+//        Thread.sleep(500);
 
         logout();
         login("autoTest03@shimo.im", "123123");
@@ -246,19 +199,12 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-07
      */
     @Test(enabled = true)
-    public void addCollaborator_9() throws InterruptedException {
+    public void addCollaborator_9() {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         click(addCollaborator_folder_add);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-
-        sendKeys(input_addCollaborator, "11@cc.ccc");
-
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("11@cc.ccc");
 
         String username = getText(addCollaborator_2_list_userName);
         click(b_addCollaborator_2_list);
@@ -285,7 +231,7 @@ public class testAddCollaborator extends TestInit {
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
 
-        Thread.sleep(500);
+//        Thread.sleep(500);
 
         logout();
         login("autoTest_addCollabor@shimo.im", "123123");

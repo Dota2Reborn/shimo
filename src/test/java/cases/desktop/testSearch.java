@@ -28,24 +28,7 @@ public class testSearch extends TestInit {
 		assertEquals(title, "搜索测试");
 
 	}
-
-//	/**
-//	 * hover 搜索图标输入搜索内容，移开鼠标，搜索结果保持，输入框不收起
-//	 *
-//	 * @author 刘晨
-//	 * @Time 2018-01-09
-//	 *
-//	 */
-//	@Test(enabled = false)
-//	public void search_move() {
-//		login("liuchen@shimo.im", "123123");
-//		moveToElement(dashboard_search_button);
-//		sendKeys(dashboard_search_input, "搜索测试");
-//
-//		moveToElement(desktop);
-//		Boolean result = dashboard_search_input.isDisplayed();
-//		assertTrue(result);
-//	}
+	
 
 	/**
 	 * hover 搜索图标输入搜索内容，移开鼠标，任意点击搜索外的位置，搜索收起

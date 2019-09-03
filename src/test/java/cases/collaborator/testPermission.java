@@ -34,14 +34,17 @@ public class testPermission extends TestInit {
         click(desktop1_1);
         click(doc_edit);
         click(ql_comment_Comments);
-        wait.until(ExpectedConditions.elementToBeClickable(doc_discuss_input));
-        String M = doc_discuss_input.getAttribute("contenteditable");
+        String M = getAttribute(doc_discuss_input,"contenteditable");
         assertEquals(M, "true");
         click(quick_access_point);
         click(Back_to_Dashboard);
+
         contextClick(desktop1_1_folder);
-        click(menu_delete);
-        click(Exit_share_OK);
+        click(menu_cooperation);
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
+//        click(menu_delete);
+//        click(Exit_share_OK);
     }
 
     /**
@@ -66,16 +69,19 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
 
-        wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
+//        wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
         click(desktop_new);
-        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
-        String t = desktop_newDoc.getAttribute("aria-disabled");
+//        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
+        String t = getAttribute(desktop_newDoc,"aria-disabled");
         assertEquals(t, "true");
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+        click(menu_cooperation);
+        click(b_addCollaborator_2_list);
+        click(list_addCollaborator_4);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
     }
 
 

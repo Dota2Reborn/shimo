@@ -238,7 +238,7 @@ public class testSlideHeader extends TestInit {
         click(desktop1_1_folder);
         click(desktop1_1_folder);
         click(desktop_new);
-        click(desktop_newslides);
+        click(desktop_newSlides);
         click(doc_menu);
         click(file_menu_creatCopy);
         String msg = getText(toast_msg);

@@ -30,6 +30,7 @@
 	<test name="test4">
 		<classes>
 			<class name="cases.space.testRightClickMenu" />
+			<class name="cases.sharePage.SharePage" />
 		</classes>
 	</test>
 	<test name="test5">
@@ -53,7 +54,7 @@
 	</test>
 	<test name="test8">
 		<classes>
-			<class name="cases.docSheet.testSheetHeader" />
+			<!--<class name="cases.docSheet.testSheetHeader" />-->
 			<class name="cases.docSheet.testSlideHeader" />
 		</classes>
 	</test>

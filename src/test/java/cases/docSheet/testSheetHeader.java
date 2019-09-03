@@ -159,7 +159,7 @@ public class testSheetHeader extends TestInit {
             click(desktop);
             click(desktop1_1);
             Thread.sleep(1000);
-            click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[2]")));
+            click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[3]")));
             sendKeys(input_collaborator, "test0910@qq.com");
             click(b_addCollaborator_1_add);
             click(b_addCollaborator_ok);
@@ -235,6 +235,7 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
+
             click(doc_menu);
             String b_Msg = getText(file_menu_collection);
             click(file_menu_collection);
@@ -260,6 +261,7 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
+
             click(doc_menu);
             click(file_menu_move);
             click(desktop_moveFolder_back_button);
@@ -285,6 +287,7 @@ public class testSheetHeader extends TestInit {
             click(desktop1_1_folder);
             click(desktop_new);
             click(desktop_newSheet);
+
             click(doc_menu);
             click(file_menu_creatCopy);
             String msg = getText(toast_msg);

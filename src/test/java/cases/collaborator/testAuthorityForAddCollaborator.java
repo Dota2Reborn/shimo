@@ -13,24 +13,18 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 企业管理员被添加为协作者，在协作者列表显示为管理者
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-6-27
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_1() throws InterruptedException {
+    public void authorityForAddCollaborator_1() {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "pipi@qq.com");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("pipi@qq.com");
 
         click(b_addCollaborator_2_list);
-        String msg = Can_edit_1.getText();
+        String msg = getText(Can_edit_1);
         click(list_addCollaborator_4);
 
         assertEquals(msg, "管理者");
@@ -39,24 +33,18 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 企业创建者被添加为协作者，在协作者列表显示为管理者
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-6-27
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_2() throws InterruptedException {
+    public void authorityForAddCollaborator_2() {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "panpan@qq.com");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("panpan@qq.com");
 
         click(b_addCollaborator_2_list);
-        String msg = Can_edit_1.getText();
+        String msg = getText(Can_edit_1);
         click(list_addCollaborator_4);
 
         assertEquals(msg, "管理者");
@@ -65,12 +53,11 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 父文件夹为编辑权限，子文件中为可评论/可阅读
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-7-2
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_3() throws InterruptedException {
+    public void authorityForAddCollaborator_3() {
         login("AddCollaborator_01@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
@@ -79,7 +66,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(b_addCollaborator_2_list);
         click(can_only_comment_2);
-        Thread.sleep(200);
+//        Thread.sleep(200);
         String msg = getText(b_addCollaborator_2_list);
 
         click(b_addCollaborator_2_list);
@@ -89,24 +76,17 @@ public class testAuthorityForAddCollaborator extends TestInit {
     }
 
     /**
-     * 文件夹协作者权限为可编辑的用户，为文件夹添加协作者，只会对文件夹中自己权限为可编辑的添加协作者
+     * 文件夹协作者权限为可编辑的用户，为文件夹添加协作者，不论子文件是何种协作权限，都会添加协作者
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_4() throws InterruptedException {
+    public void authorityForAddCollaborator_4() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "liuchen@shimo.im");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        addCollaboratorByEmail("liuchen@shimo.im");
         click(Shut_down_sm_modal_close_x);
 
         click(desktop1_1_folder);
@@ -120,17 +100,14 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(Shut_down_sm_modal_close_x);
 
         click(Folder_settings);
-        click(menu_cooperation);
-        click(b_addCollaborator_3_list);
-        click(list_addCollaborator_4);
+        removeCollaboratorByPosition(3);
 
-        assertEquals(result2, result1 + 1);
+        assertEquals(result2, result1);
     }
 
     /**
      * 文件夹协作者权限为只读的用户，为文件夹添加协作者，不能添加
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-7-3
      */
@@ -149,91 +126,66 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 文件夹协作者权限为只读的用户，右键菜单添加协作者，公开分享，重命名和移动置灰
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_6() throws InterruptedException {
+    public void authorityForAddCollaborator_6() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         click(desktop1_1_folder);
         contextClick(desktop1_1);
 
-        Boolean r1 = menu_rename.getAttribute("disabled").equals("true");
-        Boolean r2 = menu_move.getAttribute("disabled").equals("true");
+        Boolean r1 = getAttribute(menu_rename,"disabled").equals("true");
+        Boolean r2 = getAttribute(menu_move,"disabled").equals("true");
 
         moveToElement(menu_share);
-//        Boolean r3 = menu_share_1.getAttribute("disabled").equals("true");
         click(menu_share_1);
 
         Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
         wait.until(ExpectedConditions.visibilityOf(menu_cooperation));
-//        action.click(menu_cooperation).perform();
         click(menu_cooperation);
-        Thread.sleep(1000);
-        Boolean r4 = b_addCollaborator.getAttribute("disabled").equals("true");
-
+        Boolean r4 = getAttribute(b_addCollaborator, "disabled").equals("true");
         assertTrue(r1 && r2 && r3 && r4);
     }
 
     /**
-     * 协作者被添加为文件协作者（文件出现在协作者桌面），然后被添加为该文件夹父文件夹的协作者（文件在协作者桌面消失出现在共享文件夹中）
+     * 协作者被添加为文件协作者（文件出现在协作者桌面），然后被添加为该文件夹父文件夹的协作者，用户桌面会出现该文件快捷方式和父文件夹快捷方式
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_7() throws InterruptedException {
+    public void authorityForAddCollaborator_7() {
         login("AddCollaborator_04_1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        click(menu_cooperation);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        click(button_addCollaborator_close);
 
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        click(desktop);
+        contextClick(desktop1_1_folder);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        click(button_addCollaborator_close);
 
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
         click(desktop);
 
         Boolean r1 = getText(desktop1_1_name).equals(file_name);
-
-        logout();
-        login("AddCollaborator_04_1@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, "AddCollaborator_04_2@shimo.im");
-        Thread.sleep(500);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        logout();
-        login("AddCollaborator_04_2@shimo.im", "123123");
-        click(desktop);
-
-        Boolean r2 = getText(desktop1_1_name).equals("test");
-        Boolean r3 = doesWebElementExist(desktop1_2);
+        Boolean r2 = getText(desktop1_1_folder).equals("test");
 
         click(desktop1_1_folder);
-        Boolean r4 = getText(desktop1_1_name).equals(file_name);
+        Boolean r3 = getText(desktop1_1_name).equals(file_name);
 
         click(desktop);
-        contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+        contextClick(desktop1_1_folder);
+        removeCollaboratorByPosition(2);
 
-        assertTrue(r1 && r2 && !r3 && r4);
+        assertTrue(r1 && r2 && r3);
+
     }
 }

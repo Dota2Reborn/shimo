@@ -16,7 +16,7 @@ public class testTransferOwner extends TestInit {
      * @Time 2018-07-20
      */
     @Test
-    public void Transfer_1() throws InterruptedException {
+    public void Transfer_1() {
         login("transfer1@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
@@ -42,7 +42,6 @@ public class testTransferOwner extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(300);
         Boolean result1 = getText(addCollaborator_1_list_userName).equals("(我) transfer2");
         click(Shut_down_sm_modal_close_x);
         deleteFile();
@@ -51,7 +50,7 @@ public class testTransferOwner extends TestInit {
     }
 
     @Test
-    public void Transfer_2() throws InterruptedException {
+    public void Transfer_2() {
         login("transfer4@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newFolder);
@@ -63,7 +62,6 @@ public class testTransferOwner extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator);
         click(addCollaborator_company_list);
-//        driver.findElement(By.xpath("//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div")).click();
         click(addCollaborator_companyList_1_add);
         click(addCollaborator_companyList_2_add);
         click(b_addCollaborator_ok);
@@ -89,7 +87,6 @@ public class testTransferOwner extends TestInit {
         click(list_addCollaborator_1);
         click(list_addCollaborator_changeOwner_1);
         click(b_addCollaborator_confirm);
-        Thread.sleep(300);
         click(button_addCollaborator_close);
         click(desktop1_1_folder);
         contextClick(desktop1_1);
