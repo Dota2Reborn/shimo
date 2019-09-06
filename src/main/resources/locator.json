@@ -3559,13 +3559,13 @@
 			{
 				"elementName": "my_template02",
 				"locateUsing": "xpath",
-				"locator": "//ul//li[2]//div[@class='name']",
+				"locator": "//div[@class='sm-tab-content']//ul/li[2]",
 				"note": "我的模板第二个"
 			},
 			{
 				"elementName": "my_template01",
 				"locateUsing": "xpath",
-				"locator": "//ul//li[1]//div[@class='name']",
+				"locator": "//div[@class='sm-tab-content']//ul/li[1]",
 				"note": "我的模板第一个"
 			},
 			{
