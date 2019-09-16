@@ -36,7 +36,7 @@ public class testCollaboratorUI extends TestInit {
      * @author 刘晨
      * @Time 2018-8-29
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void collaboratorUI_2() {
         login("panpan@panpan.com", "123123");
         click(desktop);
