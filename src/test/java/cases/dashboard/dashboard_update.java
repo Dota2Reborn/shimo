@@ -147,6 +147,18 @@ public class dashboard_update extends TestInit {
      */
     @Test
     public void update7() {
+        login("gengxin9@shimo.im", "123123");
+        click(dashboard_activitiesByFile);
+        contextClick(dashboard_update_name);
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+//        click(Shut_down_sm_modal_close_x);
+        addCollaboratorByEmail("gengxin10@shimo.im");
+
+        logout();
+
         login("gengxin10@shimo.im", "123123");
         click(dashboard_4);
         click(dashboard_update_time);
@@ -164,15 +176,7 @@ public class dashboard_update extends TestInit {
         String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
-        logout();
-        login("gengxin9@shimo.im", "123123");
-        click(dashboard_activitiesByFile);
-        contextClick(dashboard_update_name);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        click(Shut_down_sm_modal_close_x);
+
     }
 
     /**
