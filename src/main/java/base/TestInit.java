@@ -219,7 +219,8 @@ public class TestInit extends elementFile {
      */
     public void Registered_new(String name, String user, String pwd, int type) {
         jumpToURL(test_url + "register");
-
+        WebElement tab = driver.findElement(By.xpath("//div[@class='main']/div[2]/div[1]/div[1]"));
+        click(tab);
         if (type == 1) {
             sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_mobile, user);
