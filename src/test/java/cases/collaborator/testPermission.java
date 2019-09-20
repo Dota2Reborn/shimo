@@ -69,7 +69,6 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
 
-//        wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
         click(desktop_new);
 //        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
         String t = getAttribute(desktop_newDoc,"aria-disabled");

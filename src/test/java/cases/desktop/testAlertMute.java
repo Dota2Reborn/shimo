@@ -137,12 +137,12 @@ public class testAlertMute extends TestInit {
         logout();
         login("AlertMute3@shimo.im", "123123");
         wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-        Boolean exist2 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
+        Boolean exist2 = doesWebElementExist(dashboard_share_file_1);
         int i = 1;
         while (exist2 == false && i < 6) {
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-            exist2 = doesWebElementExist(By.xpath("//div[@data-test='category-list-wrapper']//div[2]//div[@class='category-card-container']"));
+            exist2 = doesWebElementExist(dashboard_share_file_1);
             i++;
         }
         if (exist2 == true) {
@@ -175,7 +175,7 @@ public class testAlertMute extends TestInit {
         click(menu_mute);
         driver.navigate().refresh();
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        Boolean exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
+        Boolean exist1 = doesWebElementExist(By.className("mute-icon"));
         int i = 0;
 
         if (exist1 == true) {
@@ -183,7 +183,7 @@ public class testAlertMute extends TestInit {
             click(menu_mute);
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
+            Boolean exist2 = doesWebElementExist(By.className("mute-icon"));
             i = 1;
             assertFalse(exist2);
 
@@ -192,7 +192,7 @@ public class testAlertMute extends TestInit {
             click(menu_mute);
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
+            Boolean exist2 = doesWebElementExist(By.className("mute-icon"));
             i = 2;
             assertTrue(exist2);
         }
@@ -200,7 +200,7 @@ public class testAlertMute extends TestInit {
         click(menu_mute);
         driver.navigate().refresh();
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        exist1 = doesWebElementExist(By.xpath("//div[@class='tile-inner is-selectable']//div[1]//a[1]//div[2]//*[name()='svg']"));
+        exist1 = doesWebElementExist(By.className("mute-icon"));
         if (i == 1) {
             assertTrue(exist1);
         } else if (i == 2) {

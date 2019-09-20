@@ -133,7 +133,7 @@ public class testDesktop_gear extends TestInit {
         String msg = getText(desktop1_1_name);
         moveToElement(desktop1_1);
         click(desktop_setting);
-        click(menu_creatCopy);
+        click(menu_createCopy);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);

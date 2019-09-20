@@ -319,7 +319,7 @@ public class testDocHeader extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         click(doc_menu);
-        click(file_menu_creatCopy);
+        click(file_menu_createCopy);
         String msg = getText(toast_msg);
         assertEquals(msg, "副本已保存到「搜索文件夹」文件夹");
 
@@ -348,7 +348,7 @@ public class testDocHeader extends TestInit {
         click(doc_menu);
         click(file_menu_version);
         String msg = getText(toast_msg);
-        assertEquals(msg, "已成功创建版本，无需重复创建");
+        assertEquals(msg, "不能重复创建版本");
     }
 
     /**

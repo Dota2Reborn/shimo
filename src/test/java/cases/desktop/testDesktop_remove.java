@@ -110,47 +110,5 @@ public class testDesktop_remove extends TestInit {
 		
 		assertEquals(msg, msg1);
 	}
-	
-	/**
-	 * 右键文档-删除协作文件
-	 * 
-	 * @author 崔明亮
-	 * @Time 2018-7-17
-	 *
-	 */
-	@Test
-	public void desktop_removeCollaboration() throws InterruptedException {
-		removeCollaboration("cuimingliang@shimo.im");
-	}
-	
-	public void removeCollaboration(String authority) throws InterruptedException {
-		login(authority, "123123");
-		
-		click(desktop);
-		click(desktop_new);
-		click(desktop_newDoc);
-		sendKeys(doc_title_input,"自动协作文件");
-		click(b_back);
-		
-		contextClick(desktop1_1);
-		click(menu_cooperation);
-		click(b_addCollaborator);
-		sendKeys(input_addCollaborator, "autoTest-cui@shimo.im");
-		Thread.sleep(500);
-		click(b_addCollaborator_1_add);
-		click(b_addCollaborator_ok);
-
-		logout();
-		
-		login("autoTest-cui@shimo.im", "123123");
-		click(desktop);
-		String msg = getText(desktop1_2);
-		contextClick(desktop1_1);
-		click(menu_delete);
-		click(Exit_share_OK);	
-		String msg1 = getText(desktop1_1_name);
-		
-		assertEquals(msg, msg1);
-	}
 
 }

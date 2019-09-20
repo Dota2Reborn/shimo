@@ -78,11 +78,11 @@ public class testCollection extends TestInit {
         click(desktop_show_type);
 
         Boolean result = false;
-        Boolean exist1 = doesWebElementExist(By.className("table-head-cell"));
+        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
 
         click(desktop_show_type);
 
-        Boolean exist2 = doesWebElementExist(By.className("table-head-cell"));
+        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
 
         if (exist1 == true && exist2 == false) {
             result = true;
@@ -110,8 +110,7 @@ public class testCollection extends TestInit {
         assertEquals(name, "第四个创建的");
         contextClick(desktop1_1);
         click(menu_moveToFolder);
-//        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("final"))));
-        String Folder_name = getText(driver.findElement(By.className("final")));
+        String Folder_name = getText(space_title);
         assertEquals(Folder_name, "第三个创建的");
 
     }
@@ -158,7 +157,7 @@ public class testCollection extends TestInit {
 //        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        click(menu_creatCopy);
+        click(menu_createCopy);
 //        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);

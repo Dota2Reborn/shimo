@@ -240,7 +240,7 @@ public class testSlideHeader extends TestInit {
         click(desktop_new);
         click(desktop_newSlides);
         click(doc_menu);
-        click(file_menu_creatCopy);
+        click(file_menu_createCopy);
         String msg = getText(toast_msg);
         assertEquals(msg, "副本已保存到「搜索文件夹」文件夹");
 

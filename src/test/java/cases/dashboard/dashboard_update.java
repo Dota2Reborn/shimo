@@ -36,7 +36,7 @@ public class dashboard_update extends TestInit {
         boolean text7 = getText(menu_move).equals("移动");
         boolean text9 = getText(menu_moveToFolder).equals("定位到所在文件夹");
         boolean text10 = getText(menu_rename).equals("重命名");
-        boolean text11 = getText(menu_creatCopy).equals("创建副本");
+        boolean text11 = getText(menu_createCopy).equals("创建副本");
         boolean text13 = getText(menu_delete).equals("删除");
         assertTrue(text1 && text2 && text3 && text4 && text6 && text7 && text9 && text10 && text11 && text13);
     }
@@ -143,18 +143,13 @@ public class dashboard_update extends TestInit {
     /**
      * 最近更新 自己退出共享，已经生成的卡片从最近更新消失
      *
-     * @author 陈清杰 @Time2018-03-27 账号状态：gengxin10里面有一个9共享的文件
+     * @author 陈清杰 @Time2018-03-27 账号状态：gengxin9存在一个固定的文件
      */
     @Test
     public void update7() {
         login("gengxin9@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        click(addCollaborator_1_add);
-//        click(b_addCollaborator_ok);
-//        click(Shut_down_sm_modal_close_x);
         addCollaboratorByEmail("gengxin10@shimo.im");
 
         logout();
