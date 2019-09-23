@@ -2,6 +2,7 @@ package cases.dashboard;
 
 import base.TestInit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -136,7 +137,7 @@ public class dashboard_update extends TestInit {
         click(dashboard_update_time);
         click(b_back);
 //        assertEquals(text1, "1 评论刚刚 cc 评论：通过");
-        assertTrue(text1.contains("1 评论刚刚 cc "));
+        assertTrue(text1.contains("1 评论刚刚 cc 更新"));
 
     }
 
