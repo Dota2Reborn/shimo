@@ -55,7 +55,7 @@ public class SharePage extends TestInit {
     public void sharePage_companyOnly_read() {
         jumpToURL("https://release.shimodev.com/docs/T1XIgAok6eQ02WUJ/");
 
-        WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div/div[2]/a"));
+        WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div//a"));
         click(button_Confirm);
 
         login("liuchen@shimo.im","123123");
@@ -83,7 +83,7 @@ public class SharePage extends TestInit {
         logout();
 
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
-        WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div/div[2]/a"));
+        WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div//a"));
         click(button_Confirm);
         login("liuchen@shimo.im","123123");
 
