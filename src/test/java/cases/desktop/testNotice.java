@@ -167,7 +167,7 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);

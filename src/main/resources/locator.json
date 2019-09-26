@@ -126,7 +126,7 @@
 			{
 				"elementName": "dashboard_notice_list_1",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-item'][1]",
+				"locator": "//li[@data-test='message-item'][1]",
 				"note": "桌面通知铃铛-通知列表中第一个"
 			},
 			{
@@ -138,19 +138,19 @@
 			{
 				"elementName": "dashboard_notice_list_1_time",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-item'][1]//div[2]",
+				"locator": "(//li[@data-test='message-item']//span[@class='date'])[1]",
 				"note": "桌面通知铃铛-通知列表中第一个时间"
 			},
 			{
 				"elementName": "dashboard_notice_list_allNotice",
 				"locateUsing": "xpath",
-				"locator": "//span[contains(text(),'全部通知')]",
+				"locator": "//div[contains(text(),'全部通知')]",
 				"note": "桌面通知铃铛-全部通知"
 			},
 			{
 				"elementName": "dashboard_notice_list_unread",
 				"locateUsing": "xpath",
-				"locator": "//span[contains(text(),'未读')]",
+				"locator": "//div[contains(text(),'未读')]",
 				"note": "桌面通知铃铛-未读"
 			},
 			{
