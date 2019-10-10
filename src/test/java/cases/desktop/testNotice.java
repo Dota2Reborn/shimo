@@ -125,7 +125,7 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 		switchToPage(1);
 		String result = getText(By.xpath("//div[@id='root']/div/div/div"));
-		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个 文档");
+		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个文档");
 	}
 
 	/**
