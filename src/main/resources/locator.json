@@ -861,7 +861,7 @@
 			{
 				"elementName": "doc_edit",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='editor']/div[2]",
+				"locator": "//div[starts-with(@class,'ql-editor')]",
 				"note": "文档编辑入口"
 			},
 			{
