@@ -849,13 +849,13 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-file-icon qa-desktop-icon']",
+				"locator": "//div[@data-test='quick-access-ancestor-desktop']/a",
 				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
 				"elementName": "Back_to_Dashboard",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[2]/a[1]",
+				"locator": "//div[@data-test='quick-access-ancestor-dashboard']/a",
 				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
 			},
 			{
@@ -957,7 +957,7 @@
 			{
 				"elementName": "searchList_1",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'qa-highlight ')]/a",
+				"locator": "//li[@data-test='search-result-item'][1]",
 				"note": "header搜索结果，第一个"
 			},
             {
