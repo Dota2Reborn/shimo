@@ -879,7 +879,7 @@
 			{
 				"elementName": "doc_menu",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[last()]",
+				"locator": "//button[@data-test='file-header-file-menu']",
 				"note": "文档编辑页面中右上角 点点点"
 			},
 			{
@@ -999,13 +999,13 @@
             {
               "elementName": "b_discord",
               "locateUsing": "xpath",
-              "locator": "//div[@data-test='page-header-right']/button",
+              "locator": "//div[@data-test='file-header-custom-wrapper']/button[1]",
               "note": "header上讨论按钮"
             },
             {
               "elementName": "b_screenShow",
               "locateUsing": "xpath",
-              "locator": "//div[@data-test='page-header-right']/button[2]",
+              "locator": "//div[@data-test='file-header-custom-wrapper']/button[2]",
               "note": "header上演示按钮"
             },
             {
@@ -1017,7 +1017,7 @@
 			{
 				"elementName": "b_collaborator",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[3]",
+				"locator": "//button[contains(text(),'协作')]",
 				"note": "header上协作者按钮"
 			},
 			{
