@@ -21,6 +21,7 @@ public class dashboard_own extends TestInit {
 
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "无标题");
@@ -29,6 +30,7 @@ public class dashboard_own extends TestInit {
         click(dashboard_3);
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);

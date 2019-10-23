@@ -68,6 +68,7 @@ public class testRightClickMenu extends TestInit {
         click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
 //        Thread.sleep(1000);
+        click(b_closeSpace);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Completely_removed);
@@ -115,17 +116,20 @@ public class testRightClickMenu extends TestInit {
             Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
+            click(b_closeSpace);
             click(space_listing_8);
             name = getText(space_document_1_1);
             name=name.replace("\n"+" ","");
 
         }else {
+            click(b_closeSpace);
             click(space_listing_8);
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
+            click(b_closeSpace);
             click(space_listing_5);
             name = getText(space_document_1_1);
             name=name.replace("\n"+" ","");
@@ -148,6 +152,7 @@ public class testRightClickMenu extends TestInit {
         click(desktop_newFolder_name_ok);
 //        Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_document_1_1);
+        click(b_closeSpace);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Recovery);

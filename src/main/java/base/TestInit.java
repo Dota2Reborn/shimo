@@ -581,28 +581,17 @@ public class TestInit extends elementFile {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
-            msg = getText(desktop_order);
-            if (msg.equals("更新时间")) {
+            click(desktop_order);
+            Boolean order1 = doesWebElementExist(By.xpath("(//span[@class='check-mark'])[6]/*[name()='svg']"));
+
+            click(desktop_orderByDefault);
+            if(order1){
                 click(desktop_order);
                 click(desktop_orderByFolderUP);
-                click(desktop_order);
-                click(desktop_orderByDefault);
             }
-//            click(desktop_order);
-//            Boolean order_folder = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class,'sm-dropdown-menu-item ')][6]/span/*[name()='svg']")));
-//            if (order_folder){
-//                click(desktop_orderByFolderUP);
-//                click(desktop_order);
-//                click(desktop_orderByDefault);
-//            }else{
-//                click(desktop_orderByDefault);
-//            }
 
         } finally {
-            msg = getText(desktop_show_type);
-            if (msg.equals("平铺")) {
-                click(desktop_show_type);
-            }
+            click(desktop_show_type_grid);
 
             Boolean fileCheck = doesWebElementExist(desktop1_1);
             if(fileCheck){

@@ -20,7 +20,7 @@ public class testSpacePermissions  extends TestInit {
     public  void testSpacePermission_0() throws InterruptedException {
 
         login("qq0@qq.qqqq", "123123");
-        click(space_listing_2);
+        moveToElement(space_listing_2);
         click(b_SpaceSetting2);
         click(b_SpaceSetting_collaboration);
 
@@ -59,7 +59,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public  void  testSpacePermission_2() throws InterruptedException {
         login("qq0@qq.qqqq", "123123");
-        click(space_listing_4);
+        moveToElement(space_listing_4);
         click(b_SpaceSetting4);
         click(b_SpaceSetting_collaboration);
 
@@ -98,7 +98,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public  void  testSpacePermission_3() {
         login("qq0@qq.qqqq","123123");
-        click(space_listing_5);
+        moveToElement(space_listing_5);
         click(b_SpaceSetting5);
         click(b_SpaceSetting_collaboration);
 
@@ -138,7 +138,7 @@ public class testSpacePermissions  extends TestInit {
     @Test(enabled = false)
     public  void  testSpacePermission_5() {
         login("qq6@qq.qqq","123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_setting);
 
@@ -171,7 +171,8 @@ public class testSpacePermissions  extends TestInit {
         click(b_newSpace_next);
         Thread.sleep(500);
         click(b_spacingCollaborator_close);
-        click(space_listing_1);
+        click(b_closeSpace);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
         click(ppt_delete_sure);//删除确认弹窗中"确认删除"button
@@ -194,7 +195,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void  testSpacePermission_8() throws InterruptedException {
         login("qq9@qq.qqq","123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
 
@@ -234,7 +235,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public  void  testSpacePermission_9() {
         login("qq9@qq.qqq","123123");
-        click(space_listing_2);
+        moveToElement(space_listing_2);
         click(b_SpaceSetting2);
         click(b_SpaceSetting_collaboration);
 
@@ -273,7 +274,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public  void  testSpacePermission_11() {
         login("qq9@qq.qqq", "123123");
-        click(space_listing_3);
+        moveToElement(space_listing_3);
         click(b_SpaceSetting3);
         click(b_SpaceSetting_setting);
 
@@ -293,7 +294,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void testSpacePermission_13() throws InterruptedException {
         login("qq8@qq.qqq","123123");
-        click(space_listing_4);
+        moveToElement(space_listing_4);
         click(b_SpaceSetting4);
 
         click(b_SpaceSetting_collaboration);
@@ -306,7 +307,7 @@ public class testSpacePermissions  extends TestInit {
         logout();
 
         login("qq11@qq.qqq","123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
         click(ppt_delete_sure);//删除确认弹窗中"确认删除"button
@@ -314,7 +315,7 @@ public class testSpacePermissions  extends TestInit {
 
         logout();
         login("qq8@qq.qqq","123123");
-        click(space_listing_4);
+        moveToElement(space_listing_4);
         click(b_SpaceSetting4);
         click(b_SpaceSetting_collaboration);
 //        click(tabs_collaborator);
@@ -332,7 +333,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void  testSpacePermission_14(){
         login("qq14@qq.qqq","123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
         Boolean r = doesWebElementExist(b_add_Collaborator);
@@ -349,7 +350,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void testSpacePermission_15() {
         login("qq14@qq.qqq","123123");
-        click(space_listing_2);
+        moveToElement(space_listing_2);
         click(b_SpaceSetting2);
         click(b_SpaceSetting_collaboration);
         Boolean r = doesWebElementExist(b_add_Collaborator);
@@ -367,7 +368,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void testSpacePermission_16() {
         login("qq14@qq.qqq","123123");
-        click(space_listing_3);
+        moveToElement(space_listing_3);
         click(b_SpaceSetting3);
         click(b_SpaceSetting_collaboration);
 
@@ -386,7 +387,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void testSpacePermission_17() throws InterruptedException {
         login("testSpace01@qq.com","123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
 
@@ -424,7 +425,7 @@ public class testSpacePermissions  extends TestInit {
     @Test
     public void testSpacePermission_18() {
         login("testSpace03@qq.com", "123123");
-        click(space_listing_1);
+        moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
 

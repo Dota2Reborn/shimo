@@ -88,6 +88,7 @@ public class testDesktop_gear extends TestInit {
         click(desktop_setting);
         click(menu_collection);
 
+        click(dashboard);
         click(favorites);
         String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);

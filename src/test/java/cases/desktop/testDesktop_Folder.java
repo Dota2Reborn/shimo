@@ -25,12 +25,12 @@ public class testDesktop_Folder extends TestInit {
         login("autoTest_Folder@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
 
         Boolean result = false;
         Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
 
-        click(desktop_show_type);
+        click(desktop_show_type_grid);
 
         Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
 
@@ -113,6 +113,7 @@ public class testDesktop_Folder extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_collection);
 
+        click(dashboard);
         click(favorites);
         String doc_name1 = getText(desktop1_1_folder);
         contextClick(desktop1_1_folder);

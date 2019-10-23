@@ -24,6 +24,7 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
+        click(dashboard);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "最近使用");
@@ -33,6 +34,7 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
+        click(dashboard);
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);
@@ -165,6 +167,7 @@ public class dashboard_used extends TestInit {
         click(dashboard_4);
         click(dashboard_update_name);
         click(b_back);
+        click(dashboard);
         click(dashboard_2);
 
         contextClick(dashboard_update_name);

@@ -22,9 +22,8 @@ public class testHover extends TestInit {
 
         login("autoTesthover@shimo.im", "123123");
         click(desktop_user_icon);
-        wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
-        String aa = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-test='usermenu-container']//li[1]/div/div[1]")));
+        String aa = "//div[@data-test='usermenu-container']//li[1]/div/div[1]";
         String result = driver.findElement(By.xpath(aa)).getText();
         assertEquals(result, "基础版");
 
@@ -34,31 +33,31 @@ public class testHover extends TestInit {
         String result3 = getText(desktop_user_icon_status_R);
         assertEquals(result3, "升级到企业版或高级版");
 
-        String dd = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div[2]";
+        String dd = "//div[@data-test='usermenu-container']//li[1]/div/div[2]";
         String result4 = driver.findElement(By.xpath(dd)).getText();
         assertEquals(result4, "autoTesthover@shimo.im");
 
-        String ee = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]";
+        String ee = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[4]";
         String result5 = driver.findElement(By.xpath(ee)).getText();
         assertEquals(result5, "帐号设置");
 
-        String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span";
+        String ff = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]//span";
         String result6 = driver.findElement(By.xpath(ff)).getText();
         assertEquals(result6, "免费获得高级版");
 
-        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]";
+        String gg = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[7]";
         String result7 = driver.findElement(By.xpath(gg)).getText();
         assertEquals(result7, "石墨文档 App");
 
-        String yy = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
+        String yy = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]";
         String result10 = driver.findElement(By.xpath(yy)).getText();
         assertEquals(result10, "石墨文档小程序");
 
-        String zz = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[11]//span";
+        String zz = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[9]/span";
         String result11 = driver.findElement(By.xpath(zz)).getText();
         assertEquals(result11, "前往官网");
 
-        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]";
+        String hh = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]";
         String result8 = driver.findElement(By.xpath(hh)).getText();
         assertEquals(result8, "使用帮助");
 
@@ -117,8 +116,8 @@ public class testHover extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[8]//span")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]//span")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[6]//span")).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='sm-modal-title']//div[1]")));
         String text = driver.findElement(By.xpath("//div[@class='sm-modal-title']//div[1]")).getText();
@@ -161,8 +160,8 @@ public class testHover extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]")));
-        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[12]")).click();
+                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")));
+        driver.findElement(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[10]")).click();
 
         String url = driver.getCurrentUrl();
         assertEquals(url, getURL() + "help");
@@ -200,20 +199,18 @@ public class testHover extends TestInit {
         login("gaoji1@shimo.im", "123456");
         click(desktop_user_icon);
         wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]")));
-        String cc = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[1]";
+                .elementToBeClickable(By.xpath("//div[@data-test='usermenu-container']//li[1]/div/div[1]")));
+        String cc = "//div[@data-test='usermenu-container']//li[1]/div/div[1]";
         String result = driver.findElement(By.xpath(cc)).getText();
         assertEquals(result, "gaoji1");
 
-        String aa = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[1]";
-        String result1 = driver.findElement(By.xpath(aa)).getText();
+        String result1 = getText(desktop_user_icon_status_L);
         assertEquals(result1, "高级版");
 
-        String bb = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span";
-        String result2 = driver.findElement(By.xpath(bb)).getText();
+        String result2 = getText(desktop_user_icon_status_R);
         assertEquals(result2, "续费或升级到企业版");
 
-        String dd = "//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div[2]";
+        String dd = "//div[@data-test='usermenu-container']//li[1]/div/div[2]";
         String result3 = driver.findElement(By.xpath(dd)).getText();
         assertEquals(result3, "gaoji1@shimo.im");
 
@@ -232,9 +229,9 @@ public class testHover extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a")));
+                By.xpath("//div[@data-test='usermenu-container']//div/span[2]/span/a[1]")));
         driver.findElement(
-                By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a"))
+                By.xpath("//div[@data-test='usermenu-container']//div/span[2]/span/a[1]"))
                 .click();
 
         switchToPage(1);
@@ -256,9 +253,9 @@ public class testHover extends TestInit {
         click(desktop_user_icon);
 
         wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a[2]")));
+                By.xpath("//div[@data-test='usermenu-container']//div/span[2]/span/a[2]")));
         driver.findElement(
-                By.xpath("//ul[contains(@class,'sm-menu sm-menu-vertical')]//li[3]//div//div//span[2]//span//a[2]"))
+                By.xpath("//div[@data-test='usermenu-container']//div/span[2]/span/a[2]"))
                 .click();
         Boolean r1 = doesWebElementExist(By.xpath("//div[@class='sm-modal-content']"));
         assertTrue(r1);

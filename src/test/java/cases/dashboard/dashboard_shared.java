@@ -56,6 +56,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_4);
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "共享");
@@ -65,6 +66,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_4);
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);

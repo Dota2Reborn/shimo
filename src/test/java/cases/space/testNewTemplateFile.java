@@ -28,7 +28,7 @@ public class testNewTemplateFile extends TestInit {
 
         switchToPage(1);
         click(b_back);
-        click(space_listing_3);
+//        click(space_listing_3);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -55,7 +55,7 @@ public class testNewTemplateFile extends TestInit {
 
         switchToPage(1);
         click(b_back);
-        click(space_listing_3);
+//        click(space_listing_3);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -81,7 +81,7 @@ public class testNewTemplateFile extends TestInit {
 
         switchToPage(1);
         click(b_back);
-        click(space_listing_3);
+//        click(space_listing_3);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

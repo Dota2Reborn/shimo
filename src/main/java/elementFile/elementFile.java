@@ -21,8 +21,10 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_new", noteName = "新建文件按钮")
 	public WebElement desktop_new;
-	@SearchWith(pageName = "desktop", elementName = "desktop_show_type", noteName = "列表平铺模式切换")
-	public WebElement desktop_show_type;
+	@SearchWith(pageName = "desktop", elementName = "desktop_show_type_grid", noteName = "桌面平铺模式")
+	public WebElement desktop_show_type_grid;
+	@SearchWith(pageName = "desktop", elementName = "desktop_show_type_list", noteName = "桌面列表模式")
+	public WebElement desktop_show_type_list;
 	@SearchWith(pageName = "desktop", elementName = "desktop", noteName = "切换到我的桌面")
 	public WebElement desktop;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1", noteName = "平铺模式第一行第一个文件")
@@ -301,9 +303,12 @@ public class elementFile {
 	/** 协作空间 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "Space")
 	public WebElement Space;
-	/** 绑定手机号按钮 */
+	/** 新建协作空间按钮 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_newSpace")
 	public WebElement b_newSpace;
+	/** 收起协作空间文件列表 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_closeSpace")
+	public WebElement b_closeSpace;
 	/** 新建协作空间，空间明输入框 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "i_newSpace_inputPaceName")
 	public WebElement i_newSpace_inputPaceName;
@@ -331,6 +336,9 @@ public class elementFile {
 	/** 协作空间列表5hover设置 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting5")
 	public WebElement b_SpaceSetting5;
+	/** 协作空间设置 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting")
+	public WebElement b_SpaceSetting;
 	/** 协作空间hover设置--「协作者」 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration")
 	public WebElement b_SpaceSetting_collaboration;

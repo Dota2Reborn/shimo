@@ -17,7 +17,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByUpdate);
 
@@ -41,7 +41,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByCreate);
 
@@ -66,7 +66,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByFile);
 
@@ -92,7 +92,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByOwner);
 
@@ -117,7 +117,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByFolderUP);
         click(desktop_order);
@@ -144,7 +144,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByCreate);
         click(desktop_orderHeader_3);
@@ -170,7 +170,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByOwner);
         click(desktop_orderHeader_2);
@@ -196,7 +196,7 @@ public class testDesktopOrderBy extends TestInit {
         login("autoTest02@shimo.im", "123123");
 
         click(desktop);
-        click(desktop_show_type);
+        click(desktop_show_type_list);
         click(desktop_order);
 
         click(desktop_orderByFile);
