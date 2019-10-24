@@ -6,7 +6,7 @@
 			{
 				"elementName": "dashboard",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'light dashboard')]",
+				"locator": "//a[starts-with(@class,'light dashboard')]/span",
 				"note": "切换到工作台"
 			},
 			{
@@ -42,7 +42,7 @@
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'light inbox ')]",
+				"locator": "//a[starts-with(@class,'light inbox ')]/span",
 				"note": "工作台-共享给我的"
 			},
 			{
