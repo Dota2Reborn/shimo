@@ -124,8 +124,8 @@ public class testNotice extends TestInit {
 		click(dashboard_notice);
 		click(dashboard_notice_list_1);
 		switchToPage(1);
-		String result = getText(By.xpath("//div[@id='root']/div/div[2]/div"));
-		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个 文档");
+		String result = getText(By.xpath("//div[@id='root']/div/div/div[2]"));
+		assertEquals(result, "当前登录账号 autoTest12@shimo.im 没有权限访问这个文档");
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);

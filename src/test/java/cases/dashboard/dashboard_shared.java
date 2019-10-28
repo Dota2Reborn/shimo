@@ -29,16 +29,13 @@ public class dashboard_shared extends TestInit {
         login("gx2@shimo.im", "123123");
         click(dashboard_4);
         wait.until(ExpectedConditions.elementToBeClickable(menu_Point_Menu));
-        boolean b = driver.findElement(By.xpath("//div[@class='card-icon']//div")).isDisplayed();//卡片图标
-        boolean c = driver.findElement(By.xpath("//div[@class='card-icon']//span")).isDisplayed();//卡片图标
-        boolean text = driver.findElement(By.xpath("//div[@class='card-content-title']//div[1]")).getText().equals("无标题");
-//        boolean text1 = getText(dashboard_update_time).equals("2人共享 · 刚刚 共享 共享");
+        boolean b = driver.findElement(By.className("file-icon")).isDisplayed();//卡片图标
+        boolean c = driver.findElement(By.className("avatar")).isDisplayed();//卡片图标
+        boolean text = getText(dashboard_update_name).equals("无标题");
         boolean text1 = getText(dashboard_update_time).equals("刚刚 共享 共享");
-        WebElement card = driver.findElement(By.xpath("//div[@class='category-card-container']"));
-        moveToElement(card);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
-        boolean d = driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")).isDisplayed();
-        boolean e = driver.findElement(By.xpath("//div[@class='file-options-icon']")).isDisplayed();
+        moveToElement(dashboard_update_name);
+        boolean d = doesWebElementExist(dashboard_share_file_favorites);
+        boolean e = doesWebElementExist(menu_Point_Menu);
         assertTrue(b && c && text && text1 && d && e);
         Thread.sleep(200);
         contextClick(dashboard_update_name);
@@ -69,9 +66,8 @@ public class dashboard_shared extends TestInit {
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
         click(favorites);
-        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
-        assertEquals(text2, "没有文件");
-
+        Boolean r = doesWebElementExist(desktop_none_file);
+        assertTrue(r);
 
     }
 
@@ -97,7 +93,7 @@ public class dashboard_shared extends TestInit {
         boolean text7 = getText(menu_move).equals("移动");
         boolean text9 = getText(menu_moveToFolder).equals("定位到所在文件夹");
         boolean text10 = getText(menu_rename).equals("重命名");
-        boolean text11 = getText(menu_creatCopy).equals("创建副本");
+        boolean text11 = getText(menu_createCopy).equals("创建副本");
         boolean text13 = getText(menu_delete).equals("删除");
         assertTrue(text1 && text2 && text3 && text4 && text6 && text7 && text9 && text10 && text11 && text13);
 

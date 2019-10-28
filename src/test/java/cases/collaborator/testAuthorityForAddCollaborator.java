@@ -13,10 +13,12 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 企业管理员被添加为协作者，在协作者列表显示为管理者
      *
+     * -----》新的逻辑，取消企业创建者/管理员在桌面文件协作者列表为管理者《--------
+     *
      * @author 刘晨
      * @Time 2018-6-27
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void authorityForAddCollaborator_1() {
         login("0000000@qq.com", "123123");
         click(desktop);
@@ -33,10 +35,12 @@ public class testAuthorityForAddCollaborator extends TestInit {
     /**
      * 企业创建者被添加为协作者，在协作者列表显示为管理者
      *
+     * -----》新的逻辑，取消企业创建者/管理员在桌面文件协作者列表为管理者《--------
+     *
      * @author 刘晨
      * @Time 2018-6-27
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void authorityForAddCollaborator_2() {
         login("0000000@qq.com", "123123");
         click(desktop);
@@ -90,11 +94,11 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(Shut_down_sm_modal_close_x);
 
         click(desktop1_1_folder);
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         click(menu_cooperation);
         int result1 = getCollaboratorSize();//获取协作者数量
         click(Shut_down_sm_modal_close_x);
-        contextClick(desktop1_2);
+        contextClick(desktop1_1);
         click(menu_cooperation);
         int result2 = getCollaboratorSize();//获取协作者数量
         click(Shut_down_sm_modal_close_x);
@@ -137,8 +141,10 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
 
-        Boolean r1 = getAttribute(menu_rename,"disabled").equals("true");
-        Boolean r2 = getAttribute(menu_move,"disabled").equals("true");
+//        Boolean r1 = getAttribute(menu_rename,"disabled").equals("true");
+//        Boolean r2 = getAttribute(menu_move,"disabled").equals("true");
+        Boolean r1 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-rename ')]")));
+        Boolean r2 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-move ')]")));
 
         moveToElement(menu_share);
         click(menu_share_1);

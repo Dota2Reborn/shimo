@@ -88,8 +88,6 @@ public class elementFile {
 
 	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
 	public WebElement desktop_setting;
-	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut", noteName = "桌面快捷方式入口")
-	public WebElement desktop_shortcut;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1", noteName = "桌面快捷方式第一个")
 	public WebElement desktop_shortcut_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Increase", noteName = "新增桌面快捷方式区域")
@@ -98,7 +96,7 @@ public class elementFile {
 	public WebElement desktop_shortcut_Tips;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button", noteName = "移动到测试文件夹")
 	public WebElement desktop_moveFolder_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button", noteName = "移动文件到文件夹，列表中后退按钮")
+	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button", noteName = "移动文件到文件夹，列表切到我的桌面按钮")
 	public WebElement desktop_moveFolder_back_button;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1", noteName = "移动文件到文件夹，选择列表中第一个文件夹")
 	public WebElement desktop_moveFolder_list_1;
@@ -121,8 +119,6 @@ public class elementFile {
 	public WebElement desktop_orderHeader_3;
 	@SearchWith(pageName = "desktop", elementName = "desktop1_1_name", noteName = "获取第一个文件名称")
 	public WebElement desktop1_1_name;
-	@SearchWith(pageName = "desktop", elementName = "desktop_orderByFolderUP_Hook", noteName = "桌面排序-文件夹置顶-对钩")
-	public WebElement desktop_orderByFolderUP_Hook;
 	@SearchWith(pageName = "desktop", elementName = "toast_msg", noteName = "桌面toast提示信息")
 	public WebElement toast_msg;
 	@SearchWith(pageName = "desktop", elementName = "b_next", noteName = "新注册用户桌面欢迎页面，下一步按钮")
@@ -131,6 +127,8 @@ public class elementFile {
 	public WebElement b_finish;
 	@SearchWith(pageName = "desktop", elementName = "Sticker_Face_x", noteName = "贴脸提示 X 按钮")
 	public WebElement Sticker_Face_x;
+	@SearchWith(pageName = "desktop", elementName = "desktop_none_file", noteName = "桌面/我的收藏/回收站为空标识")
+	public WebElement desktop_none_file;
 
 	/**
 	 * doc
@@ -417,15 +415,7 @@ public class elementFile {
 	/** 协作空间第一行第三个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_3")
 	public WebElement space_document_1_3;
-	/** 协作空间第二行第一个文件 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_2_1")
-	public WebElement space_document_2_1;
-	/** 协作空间第二行第二个文件 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_2_2")
-	public WebElement space_document_2_2;
-	/** 协作空间第二行第三个文件 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_2_3")
-	public WebElement space_document_2_3;
+
 	/** 音视频预览 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_Preview_video_music")
 	public WebElement space_Preview_video_music;
@@ -460,8 +450,8 @@ public class elementFile {
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_cooperation_Popup")
 	public WebElement space_cooperation_Popup;
 	/** 协作空间上方名 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "space_upname")
-	public WebElement space_upname;
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_title")
+	public WebElement space_title;
 
 
 
@@ -575,8 +565,6 @@ public class elementFile {
 	public WebElement collaborator_2_list_emailOrMobile;
 	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
 	public WebElement collaborator_3_list_emailOrMobile;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_folder_add", noteName = "文件夹内,文件夹路径上的设置按钮")
-	public WebElement addCollaborator_folder_add;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
 	public WebElement b_addCollaborator;
 	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator", noteName = "添加协作者邮箱输入框")
@@ -774,8 +762,8 @@ public class elementFile {
 	public WebElement menu_share_1;
 	@SearchWith(pageName = "menu", elementName = "menu_rename", noteName = "重命名")
 	public WebElement menu_rename;
-	@SearchWith(pageName = "menu", elementName = "menu_creatCopy", noteName = "创建副本")
-	public WebElement menu_creatCopy;
+	@SearchWith(pageName = "menu", elementName = "menu_createCopy", noteName = "创建副本")
+	public WebElement menu_createCopy;
 	@SearchWith(pageName = "menu", elementName = "menu_delete", noteName = "删除")
 	public WebElement menu_delete;
 	@SearchWith(pageName = "menu", elementName = "menu_mute", noteName = "消息免打扰")
@@ -788,10 +776,6 @@ public class elementFile {
 	public WebElement menu_Completely_removed;
 	@SearchWith(pageName = "menu", elementName = "menu_Point_Menu", noteName = "工作台-最近使用-第一个文件点点(仅有一个文件时使用)")
 	public WebElement menu_Point_Menu;
-	@SearchWith(pageName = "menu", elementName = "menu_cooperation_1", noteName = "添加协作者-二级菜单（添加协作者）")
-	public WebElement menu_cooperation_1;
-	@SearchWith(pageName = "menu", elementName = "menu_cooperation_2", noteName = "添加协作者-二级菜单（查看协作者）")
-	public WebElement menu_cooperation_2;
 
 	/**
 	 * file_menu
@@ -809,8 +793,8 @@ public class elementFile {
 	public WebElement file_menu_move;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_history", noteName = "查看历史")
 	public WebElement file_menu_history;
-	@SearchWith(pageName = "file_menu", elementName = "file_menu_creatCopy", noteName = "创建副本")
-	public WebElement file_menu_creatCopy;
+	@SearchWith(pageName = "file_menu", elementName = "file_menu_createCopy", noteName = "创建副本")
+	public WebElement file_menu_createCopy;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_delete", noteName = "删除")
 	public WebElement file_menu_delete;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_mute", noteName = "消息免打扰")

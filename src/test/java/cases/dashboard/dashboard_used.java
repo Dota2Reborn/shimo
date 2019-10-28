@@ -21,24 +21,21 @@ public class dashboard_used extends TestInit {
 
         login("zuijin7@shimo.im", "123123");
         click(dashboard_2);
-//        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
         moveToElement(dashboard_update_name);
-        click(driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
-        Thread.sleep(500);
+        click(dashboard_share_file_favorites);
+        Thread.sleep(200);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "最近使用");
 
         click(dashboard);
         click(dashboard_2);
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard_update_name));
         moveToElement(dashboard_update_name);
-        click(driver.findElement(By.xpath("//div[@class='category-card-container']//div//a//div[1]//div[2]//div//div[2]")));
-        Thread.sleep(500);
+        click(dashboard_share_file_favorites);
+        Thread.sleep(200);
         click(favorites);
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='none-file']//span")));
-        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
-        assertEquals(text2, "没有文件");
+        Boolean r = doesWebElementExist(desktop_none_file);
+        assertTrue(r);
 
     }
 
@@ -62,7 +59,7 @@ public class dashboard_used extends TestInit {
         boolean text7 = getText(menu_move).equals("移动");
         boolean text9 = getText(menu_moveToFolder).equals("定位到所在文件夹");
         boolean text10 = getText(menu_rename).equals("重命名");
-        boolean text11 = getText(menu_creatCopy).equals("创建副本");
+        boolean text11 = getText(menu_createCopy).equals("创建副本");
         boolean text13 = getText(menu_delete).equals("删除");
         assertTrue(text1 && text2 && text3 && text4 && text6 && text9 && text7 && text10 && text11 && text13);
 
@@ -83,7 +80,7 @@ public class dashboard_used extends TestInit {
         click(menu_Point_Menu);
         Boolean r1 = getText(menu_newPage).equals("在新标签页中打开");
         Boolean r2 = getText(menu_collection).equals("收藏");
-        Boolean r3 = getText(menu_creatCopy).equals("创建副本");
+        Boolean r3 = getText(menu_createCopy).equals("创建副本");
         assertTrue(r1 && r2 && r3);
     }
 

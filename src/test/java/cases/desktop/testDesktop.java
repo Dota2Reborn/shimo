@@ -162,7 +162,7 @@ public class testDesktop extends TestInit {
 
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        click(menu_creatCopy);
+        click(menu_createCopy);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);

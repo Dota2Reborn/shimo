@@ -14,7 +14,7 @@ public class testModifyPermissions extends TestInit {
      * @Time 2018-07-20
      */
     @Test
-    public void Modify_1() {
+    public void Modify_1() throws InterruptedException {
 
         login("modify2@shimo.im", "123123");
         click(desktop);
@@ -23,6 +23,7 @@ public class testModifyPermissions extends TestInit {
         click(menu_cooperation);
         click(b_addCollaborator_3_list);
         click(can_only_comment_2);
+        Thread.sleep(200);
         Boolean result = getText(b_addCollaborator_3_list).equals("只能评论");
         assertTrue(result);
         click(b_addCollaborator_3_list);
@@ -33,10 +34,11 @@ public class testModifyPermissions extends TestInit {
     /**
      * 修改子文件中管理者user a的权限，不能修改（企业与权限相关81）
      *
+     * -----》新的逻辑，取消企业创建者/管理员在桌面文件协作者列表为管理者《--------
      * @author 陈清杰
      * @Time 2018-07-20
      */
-    @Test
+    @Test(enabled = false)
     public void Modify_2() {
         login("modify1@shimo.im", "123123");
         click(desktop);

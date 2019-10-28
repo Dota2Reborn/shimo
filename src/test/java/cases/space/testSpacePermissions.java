@@ -112,7 +112,7 @@ public class testSpacePermissions  extends TestInit {
         assertEquals(msg ,"研发 的权限已修改为「可以编辑」");
 
         click(b_collaborator_Back);
-        click(tabs_collaborator);
+//        click(tabs_collaborator);
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
 
@@ -247,7 +247,7 @@ public class testSpacePermissions  extends TestInit {
         assertEquals(msg ,"研发 的权限已修改为「可以编辑」");
 
         click(b_collaborator_Back);
-        click(tabs_collaborator);
+//        click(tabs_collaborator);
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
 
@@ -317,7 +317,7 @@ public class testSpacePermissions  extends TestInit {
         click(space_listing_4);
         click(b_SpaceSetting4);
         click(b_SpaceSetting_collaboration);
-        click(tabs_collaborator);
+//        click(tabs_collaborator);
 
         int size = getSpaceCollaboratorSize();
         assertEquals(size, 0);
@@ -390,13 +390,13 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
 
-        click(tabs_management);
+//        click(tabs_management);
         click(b_spacingCollaborator_addAdmin);
         sendKeys(input_add_Collaborator,"testSpace02@qq.com");
         click(b_spacingCollaborator_addAdmin_1);
 
         String msg = getText(toast_addCollaborator);
-        assertEquals(msg ,"ApexLegends 的权限已设置为管理员");
+        assertEquals(msg ,"ApexLegends 的权限已设置为管理者");
 
         click(b_collaborator_Back);
         Thread.sleep(500);
@@ -405,7 +405,7 @@ public class testSpacePermissions  extends TestInit {
         click(b_collaboratorsList_2);
         click(b_spacingCollaborator_removeAdmin);
         click(b_spacingCollaborator_removeAdmin_confirm);
-        click(tabs_collaborator);
+//        click(tabs_collaborator);
         click(b_collaboratorsList_1);
         click(cpList_remove);
 
@@ -428,7 +428,7 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
 
-        click(tabs_management);
+//        click(tabs_management);
         Boolean result = doesWebElementExist(b_spacingCollaborator_addAdmin);
         assertFalse(result);
     }

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class testDashboard extends TestInit {
 
@@ -96,8 +97,8 @@ public class testDashboard extends TestInit {
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-        String msg = getText(driver.findElement(By.className("none-file")));
-        assertEquals(msg, "没有文件");
+        Boolean r = doesWebElementExist(desktop_none_file);
+        assertTrue(r);
 
     }
 
@@ -132,7 +133,7 @@ public class testDashboard extends TestInit {
         click(dashboard_3);
 
         contextClick(dashboard_update_name);
-        click(menu_creatCopy);
+        click(menu_createCopy);
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
         String fileName = getText(desktop1_1_name);

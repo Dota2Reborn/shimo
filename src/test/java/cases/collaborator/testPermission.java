@@ -37,7 +37,7 @@ public class testPermission extends TestInit {
         String M = getAttribute(doc_discuss_input,"contenteditable");
         assertEquals(M, "true");
         click(quick_access_point);
-        click(Back_to_Dashboard);
+        click(Back_to_Desktop);
 
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
@@ -69,7 +69,6 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
 
-//        wait.until(ExpectedConditions.elementToBeClickable(addCollaborator_folder_add));
         click(desktop_new);
 //        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
         String t = getAttribute(desktop_newDoc,"aria-disabled");

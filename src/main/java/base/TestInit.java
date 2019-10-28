@@ -219,7 +219,8 @@ public class TestInit extends elementFile {
      */
     public void Registered_new(String name, String user, String pwd, int type) {
         jumpToURL(test_url + "register");
-
+        WebElement tab = driver.findElement(By.xpath("//div[@class='main']/div[2]/div[1]/div[1]"));
+        click(tab);
         if (type == 1) {
             sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_mobile, user);
@@ -355,6 +356,7 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public boolean doesWebElementExist(WebElement element) {
+        wait = new WebDriverWait(driver, 1);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
@@ -586,6 +588,15 @@ public class TestInit extends elementFile {
                 click(desktop_order);
                 click(desktop_orderByDefault);
             }
+//            click(desktop_order);
+//            Boolean order_folder = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class,'sm-dropdown-menu-item ')][6]/span/*[name()='svg']")));
+//            if (order_folder){
+//                click(desktop_orderByFolderUP);
+//                click(desktop_order);
+//                click(desktop_orderByDefault);
+//            }else{
+//                click(desktop_orderByDefault);
+//            }
 
         } finally {
             msg = getText(desktop_show_type);

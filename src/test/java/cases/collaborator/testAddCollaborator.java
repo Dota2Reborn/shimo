@@ -129,7 +129,7 @@ public class testAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(2);
         String fileName = getText(desktop1_1_folder);
-        assertNotEquals(fileName, "添加协作者测试");
+        assertNotEquals(fileName, "测试文件夹");
     }
 
     /**
@@ -203,7 +203,7 @@ public class testAddCollaborator extends TestInit {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
-        click(addCollaborator_folder_add);
+        click(Folder_settings);
         addCollaboratorByEmail("11@cc.ccc");
 
         String username = getText(addCollaborator_2_list_userName);

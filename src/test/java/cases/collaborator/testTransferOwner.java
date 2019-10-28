@@ -12,10 +12,11 @@ public class testTransferOwner extends TestInit {
     /**
      * 管理员转移所有权（企业与权限相关88）
      *
+     * 此case作废，新需求不允许管理员有转移所有权的能力，2019/9/20
      * @author 陈清杰
      * @Time 2018-07-20
      */
-    @Test
+    @Test(enabled = false)
     public void Transfer_1() {
         login("transfer1@shimo.im", "123123");
         click(desktop_new);

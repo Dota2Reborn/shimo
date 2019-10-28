@@ -17,7 +17,7 @@ public class testSpaceNewFile extends TestInit {
     public void space_right_button(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_1);
-        String msg = getText(space_upname);
+        String msg = getText(space_title);
         String msg1 = getText(space_listing_1);
 //        msg1 = (String) msg1.subSequence(0,3);
 //        System.out.print(msg);
@@ -39,7 +39,7 @@ public class testSpaceNewFile extends TestInit {
     public void space_right_button1(){
         login("spacebuild@shimo.im", "123123");
         click(space_listing_1);
-        String msg = getText(space_upname);
+        String msg = getText(space_title);
         String msg1 = getText(space_listing_1);
 //        msg1 = (String) msg1.subSequence(0,10);
 //        System.out.print(msg);
@@ -105,15 +105,15 @@ public class testSpaceNewFile extends TestInit {
     public void space_newDoc(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
-        String msg = getText(desktop1_1_name);
+        String msg = getText(space_document_1_1);
         click(desktop_new);
         click(desktop_newDoc);
         click(b_back);
-        contextClick(desktop1_1);
+        contextClick(space_document_1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
         driver.navigate().refresh();
-        String msg1 = getText(desktop1_1_name);
+        String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
 
@@ -127,14 +127,14 @@ public class testSpaceNewFile extends TestInit {
     public void space_newSheets(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
-        String msg = getText(desktop1_1_name);
+        String msg = getText(space_document_1_1);
         click(desktop_new);
         click(desktop_newSheet);
         click(b_back);
-        contextClick(desktop1_1);
+        contextClick(space_document_1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1_name);
+        String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
 
@@ -148,14 +148,14 @@ public class testSpaceNewFile extends TestInit {
     public void space_newPPT(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
-        String msg = getText(desktop1_1_name);
+        String msg = getText(space_document_1_1);
         click(desktop_new);
         click(desktop_newSlides);
         click(b_back);
-        contextClick(desktop1_1);
+        contextClick(space_document_1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1_name);
+        String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
 
@@ -169,14 +169,14 @@ public class testSpaceNewFile extends TestInit {
     public void space_newMMP(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
-        String msg = getText(desktop1_1_name);
+        String msg = getText(space_document_1_1);
         click(desktop_new);
         click(desktop_newMindMap);
         click(b_back);
-        contextClick(desktop1_1);
+        contextClick(space_document_1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1_name);
+        String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
 
@@ -190,17 +190,17 @@ public class testSpaceNewFile extends TestInit {
     public void space_newFolder(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
-        String msg = getText(desktop1_1_name);
+        String msg = getText(space_document_1_1);
         click(desktop_new);
         click(desktop_newFolder);
         String time = getDate();
         sendKeys(desktop_newFolder_name, time);
         click(desktop_newFolder_name_ok);
         driver.navigate().back();
-        contextClick(desktop1_1);
+        contextClick(space_document_1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
-        String msg1 = getText(desktop1_1_name);
+        String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
 }
