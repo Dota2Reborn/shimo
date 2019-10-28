@@ -3578,19 +3578,19 @@
 			{
 				"elementName": "space_button_new",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='create-file']/div[1]/button",
+				"locator": "(//div[@data-test='create-file']//div/button)[1]",
 				"note": "空间右侧新建"
 			},
 			{
 				"elementName": "space_button_import",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='create-file']/div[2]/button",
+				"locator": "(//div[@data-test='create-file']//div/button)[2]",
 				"note": "空间右侧上传/导入"
 			},
 			{
 				"elementName": "space_uploadfile",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-upload_file')]",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-upload_file ')]",
 				"note": "上传文件"
 			},
 			{

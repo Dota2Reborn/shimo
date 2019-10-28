@@ -3,6 +3,7 @@ package cases.collaborator;
 import base.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -70,9 +71,10 @@ public class testPermission extends TestInit {
         click(desktop1_1_folder);
 
         click(desktop_new);
-//        wait.until(ExpectedConditions.attributeContains(desktop_newDoc,"aria-disabled","true"));
-        String t = getAttribute(desktop_newDoc,"aria-disabled");
-        assertEquals(t, "true");
+//        String t = getAttribute(desktop_newDoc,"aria-disabled");
+        Boolean r1 = doesWebElementExist(desktop_newDoc);
+//        assertEquals(t, "true");
+        Assert.assertFalse(r1);
 
         click(desktop);
         contextClick(desktop1_1_folder);
