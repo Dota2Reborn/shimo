@@ -939,7 +939,7 @@
 			{
 				"elementName": "Collection_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"locator": "//button[@data-test='file-header-star-button']/*[name()='svg']",
 				"note": "标题栏收藏按钮"
 			},
 			{
