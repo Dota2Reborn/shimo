@@ -331,7 +331,7 @@
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div/button)[1]",
+				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div)[1]",
 				"note": "新建文件按钮"
 			},
 			{
