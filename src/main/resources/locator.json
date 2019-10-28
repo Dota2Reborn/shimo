@@ -343,37 +343,37 @@
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left ')]/li[1]",
+				"locator": "//span[@data-test='create-file-doc']",
 				"note": "新建文档"
 			},
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mosheet ')]",
+				"locator": "//span[@data-test='create-file-sheets']",
 				"note": "新建表格"
 			},
 			{
 				"elementName": "desktop_newSlides",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_slide')]",
+				"locator": "//span[@data-test='create-file-slide']",
 				"note": "新建幻灯片"
 			},
 			{
 				"elementName": "desktop_newMindMap",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mindmap')]",
+				"locator": "//span[@data-test='create-file-mindmap']",
 				"note": "新建思维脑图"
 			},
 			{
 				"elementName": "desktop_newtemplate",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template')]",
+				"locator": "//span[@data-test='create-file-template']",
 				"note": "从模板新建"
 			},
 			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_folder')]",
+				"locator": "//span[@data-test='create-file-folder']",
 				"note": "新建文件夹"
 			},
 			{
