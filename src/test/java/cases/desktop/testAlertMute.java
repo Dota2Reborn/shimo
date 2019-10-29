@@ -174,8 +174,8 @@ public class testAlertMute extends TestInit {
         click(desktop1_1);
         contextClick(desktop1_1);
         click(menu_mute);
-        driver.navigate().refresh();
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
+//        driver.navigate().refresh();
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
         Boolean exist1 = doesWebElementExist(By.className("mute-icon"));
         int i = 0;
 
