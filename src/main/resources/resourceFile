@@ -5,12 +5,12 @@
     "elements": [
       {
         "testEnvironment": "release",
-        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=&redirect=https%3A%2F%2Frelease.shimodev.com%2Flogin&lizard-view-enabled=&override=1",
+        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-rmunused&redirect=%2Flogin&lizard-view-enabled=&override=1",
         "note": "仅修改 testURL"
       },
       {
         "testEnvironment": "dev",
-        "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-bootstrap%3Afeature-beta-shimo2.0-develop%3Blizard-service-desktop%3Afeature-beta-shimo2.0-develop&redirect=https%3A%2F%2Fshimodev.com%2Flogin&lizard-view-enabled=1",
+        "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-desktop%3Afeature-duplicated%3Blizard-service-doc%3Afeature-duplicate&redirect=https%3A%2F%2Fshimodev.com%2Flogin&lizard-view-enabled=1&override=1",
         "note": "仅修改 testURL"
       }
     ]
