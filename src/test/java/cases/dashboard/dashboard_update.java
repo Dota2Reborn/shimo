@@ -137,7 +137,7 @@ public class dashboard_update extends TestInit {
         click(dashboard_update_time);
         click(b_back);
 //        assertEquals(text1, "1 评论刚刚 cc 评论：通过");
-        assertTrue(text1.contains("1 评论刚刚 cc 更新"));
+        assertTrue(text1.contains("刚刚 cc 更新"));
 
     }
 

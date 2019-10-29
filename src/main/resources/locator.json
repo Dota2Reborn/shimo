@@ -849,13 +849,13 @@
 			{
 				"elementName": "Back_to_Desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-file-icon qa-desktop-icon']",
+				"locator": "//div[@data-test='quick-access-ancestor-desktop']/a",
 				"note": "桌面下的文档或者表格下箭头返回桌面"
 			},
 			{
 				"elementName": "Back_to_Dashboard",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='qa-scroll qa-row-wrapper']/div[2]/div[2]/a[1]",
+				"locator": "//div[@data-test='quick-access-ancestor-dashboard']/a",
 				"note": "桌面下的文档或者表格下箭头返回工作台，一级文件夹下箭头返回桌面"
 			},
 			{
@@ -879,7 +879,7 @@
 			{
 				"elementName": "doc_menu",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[last()]",
+				"locator": "//button[@data-test='file-header-file-menu']",
 				"note": "文档编辑页面中右上角 点点点"
 			},
 			{
@@ -957,7 +957,7 @@
 			{
 				"elementName": "searchList_1",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'qa-highlight ')]/a",
+				"locator": "//li[@data-test='search-result-item'][1]",
 				"note": "header搜索结果，第一个"
 			},
             {
@@ -999,13 +999,13 @@
             {
               "elementName": "b_discord",
               "locateUsing": "xpath",
-              "locator": "//div[@data-test='page-header-right']/button",
+              "locator": "//div[@data-test='file-header-custom-wrapper']/button[1]",
               "note": "header上讨论按钮"
             },
             {
               "elementName": "b_screenShow",
               "locateUsing": "xpath",
-              "locator": "//div[@data-test='page-header-right']/button[2]",
+              "locator": "//div[@data-test='file-header-custom-wrapper']/button[2]",
               "note": "header上演示按钮"
             },
             {
@@ -1017,7 +1017,7 @@
 			{
 				"elementName": "b_collaborator",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[3]",
+				"locator": "//button[contains(text(),'协作')]",
 				"note": "header上协作者按钮"
 			},
 			{
@@ -1468,31 +1468,31 @@
 			{
 				"elementName": "ppt_return",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']/button[1]",
+				"locator": "//button[@data-test='file-header-go-back']",
 				"note": "幻灯片内返回"
 			},
 			{
 				"elementName": "ppt_down",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"locator": "//button[@data-test='file-header-quick-access-menu']",
 				"note": "幻灯片内下箭头"
 			},
 			{
 				"elementName": "ppt_plus_sign",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']/div[1]",
+				"locator": "//button[@data-test='create-file']",
 				"note": "幻灯片中加号"
 			},
 			{
 				"elementName": "ppt_filename",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//input",
+				"locator": "//div[@data-test='file-header-file-title']",
 				"note": "幻灯片标题"
 			},
 			{
 				"elementName": "ppt_collect",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"locator": "//button[@data-test='file-header-star-button']",
 				"note": "收藏标签"
 			},
 			{
@@ -1504,31 +1504,31 @@
 			{
 				"elementName": "ppt_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[1]",
+				"locator": "//div[@data-test='file-header-custom-wrapper']/button[1]",
 				"note": "播放幻灯片"
 			},
 			{
 				"elementName": "ppt_online_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
+				"locator": "//div[@data-test='file-header-custom-wrapper']//div[1]",
 				"note": "在线演示"
 			},
 			{
 				"elementName": "ppt_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"locator": "//div[@data-test='page-header-right']//button[1]",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "ppt_share",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"locator": "//div[@data-test='page-header-right']//button[2]",
 				"note": "分享"
 			},
 			{
 				"elementName": "ppt_dotdotdot",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"locator": "//div[@data-test='page-header-right']//button[3]",
 				"note": "左上角点点点"
 			},
 			{
