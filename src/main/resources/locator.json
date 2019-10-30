@@ -3547,7 +3547,7 @@
 			{
 				"elementName": "sheet_template",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'表格模板')]",
+				"locator": "//span[contains(text(),'表格模板')]",
 				"note": "表格模板"
 			},
 			{
@@ -3559,7 +3559,7 @@
 			{
 				"elementName": "doc_template",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'文档模板')]",
+				"locator": "//span[contains(text(),'文档模板')]",
 				"note": "文档模板"
 			},
 			{
