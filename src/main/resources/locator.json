@@ -1264,14 +1264,14 @@
 			{
 				"note": "用户名_邮箱",
 				"elementName": "userEmail",
-				"locateUsing": "xpath",
-				"locator": "//input[@name='mobileOrEmail']"
+				"locateUsing": "name",
+				"locator": "mobileOrEmail"
 			},
 			{
 				"note": "密码",
 				"elementName": "userPwd",
-				"locateUsing": "xpath",
-				"locator": "//input[@name='password']"
+				"locateUsing": "name",
+				"locator": "password"
 			},
 			{
 				"note": "登录按钮",

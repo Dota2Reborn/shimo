@@ -577,6 +577,45 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public void clickDesktop(WebElement element) {
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+//            element.click();
+//            click(desktop_order);
+//            Boolean order1 = doesWebElementExist(By.xpath("(//span[@class='check-mark'])[6]/*[name()='svg']"));
+//
+//            click(desktop_orderByDefault);
+//            if(order1){
+//                click(desktop_order);
+//                click(desktop_orderByFolderUP);
+//            }
+//
+//        } finally {
+//            click(desktop_show_type_grid);
+
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+
+            Boolean fileCheck = doesWebElementExist(desktop1_1);
+            if(fileCheck){
+                Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+                if(checkFileName){
+                    contextClick(desktop1_1);
+                    click(menu_delete);
+                    click(desktop_newFolder_name_ok);
+                }
+            }
+            checkPageIsReady();
+//        }
+
+    }
+
+    /**
+     * 点击切换到我的桌面
+     *
+     * @author 刘晨
+     * @Time 2017-11-21
+     */
+    public void clickDesktopByDefaultOrder(WebElement element) {
         String msg = "";
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
