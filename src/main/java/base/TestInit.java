@@ -164,51 +164,6 @@ public class TestInit extends elementFile {
         click(login_submit);
     }
 
-    /**
-     * 注册
-     *
-     * @param type 1为手机注册 2为邮箱注册 3为手机成功注册
-     * @author 王继程
-     * @Time 2017-11-21
-     */
-    public void Registered(String name, String user, String pwd, int type, String repwd) {
-        if (type == 1) {
-            jumpToURL(test_url + "register");
-            wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
-            click(personalRegister);
-            click(mobileRegister);
-            sendKeys(userName, name);
-            sendKeys(userMobile, user);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            sendKeys(verifyCode, "2222");
-            click(Next);
-        } else if (type == 2) {
-            jumpToURL(test_url + "register");
-            wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
-            click(personalRegister);
-            click(emailRegister);
-            sendKeys(userName, name);
-            sendKeys(Email, user);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            click(Next);
-        }else if (type == 3){
-            jumpToURL(test_url + "register");
-            click(personalRegister);
-            click(mobileRegister);
-            sendKeys(userName, name);
-            sendKeys(userMobile, user);
-            WebElement b_verifyCode = driver.findElement(By.xpath("//div[@class='verifyCodeContainer']/button"));
-            click(b_verifyCode);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            sendKeys(verifyCode, "2222");
-            click(Next);
-        } else {
-            return;
-        }
-    }
 
     /**
      * 注册
@@ -577,21 +532,6 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public void clickDesktop(WebElement element) {
-//        try {
-//            wait.until(ExpectedConditions.elementToBeClickable(element));
-//            element.click();
-//            click(desktop_order);
-//            Boolean order1 = doesWebElementExist(By.xpath("(//span[@class='check-mark'])[6]/*[name()='svg']"));
-//
-//            click(desktop_orderByDefault);
-//            if(order1){
-//                click(desktop_order);
-//                click(desktop_orderByFolderUP);
-//            }
-//
-//        } finally {
-//            click(desktop_show_type_grid);
-
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
 
