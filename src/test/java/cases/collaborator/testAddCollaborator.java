@@ -1,6 +1,7 @@
 package cases.collaborator;
 
 import base.TestInit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -249,20 +250,20 @@ public class testAddCollaborator extends TestInit {
     }
 
     /**
-     * 非席位成员，在5个人以上协作者文件夹中不能新建
+     * 当前非席位企业成员，任何情况下都不能新建
      *
      * @author 刘晨
      * @Time 2017-12-07
      */
-    //Todo 需求变化，当前非席位企业成员，任何情况下都不能新建
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void addCollaborator_fail() {
         login("autoTest10@shimo.im", "123123");
         click(desktop);
-        click(desktop1_1_folder);
-        String t = desktop_new.getAttribute("disabled");
+        click(desktop_new);
 
-        assertEquals(t, "true");
+        String msg = "非企业席位成员，不能新建文件或文件夹，请联系企业创建者或直接购买席位。";
+        Boolean r = getText(By.xpath("//div[@class='sm-tooltip-inner']/div/p")).equals(msg);
+        assertTrue(r);
     }
 
 }
