@@ -246,7 +246,7 @@ public class TestInit extends elementFile {
         }
 
         winHandles = driver.getWindowHandles();
-        it = new ArrayList<String>(winHandles);
+        it = new ArrayList<>(winHandles);
         driver.switchTo().window(it.get(0));
     }
 
