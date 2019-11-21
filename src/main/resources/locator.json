@@ -365,6 +365,18 @@
 				"note": "新建思维脑图"
 			},
 			{
+				"elementName": "desktop_newFileBoard",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-board']",
+				"note": "新建白板"
+			},
+			{
+				"elementName": "desktop_newFileForm",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-form']",
+				"note": "新建表单"
+			},
+			{
 				"elementName": "desktop_newtemplate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-template']",

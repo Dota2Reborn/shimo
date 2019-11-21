@@ -67,6 +67,10 @@ public class elementFile {
 	public WebElement desktop_newSlides;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newMindMap", noteName = "新建思维脑图")
 	public WebElement desktop_newMindMap;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newFileBoard", noteName = "新建白板")
+	public WebElement desktop_newFileBoard;
+	@SearchWith(pageName = "desktop", elementName = "desktop_newFileForm", noteName = "新建表单")
+	public WebElement desktop_newFileForm;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newtemplate", noteName = "从模板新建")
 	public WebElement desktop_newtemplate;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
