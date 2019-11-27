@@ -295,7 +295,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_md() {
+    public void desktop_import_md() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -305,6 +305,7 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
+        Thread.sleep(500);
         click(b_back);
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
