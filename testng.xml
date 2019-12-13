@@ -39,11 +39,11 @@
 			<class name="cases.dashboard.dashboard_update" />
 		</classes>
 	</test>
-	<test name="test7">
-		<classes>
-			<class name="cases.collaborator.testAddCollaborator" />
-		</classes>
-	</test>
+	<!--<test name="test7">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testAddCollaborator" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test8">
 		<classes>
 			<!--<class name="cases.docSheet.testSheetHeader" />-->
@@ -76,36 +76,36 @@
 			<class name="cases.space.testSpacePermissions" />
 		</classes>
 	</test>
-	<test name="test14">
-		<classes>
-			<class name="cases.collaborator.testAuthorityForAddCollaborator" />
-		</classes>
-	</test>
-	<test name="test15">
-		<classes>
-			<class name="cases.collaborator.testModifyPermissions" />
-		</classes>
-	</test>
-	<test name="test16">
-		<classes>
-			<class name="cases.collaborator.testRemoveCollaborator" />
-		</classes>
-	</test>
-	<test name="test17">
-		<classes>
-			<class name="cases.collaborator.testTransferOwner" />
-		</classes>
-	</test>
-	<test name="test18">
-		<classes>
-			<class name="cases.collaborator.testAuthorityForMoveFile" />
-		</classes>
-	</test>
-	<test name="test19">
-		<classes>
-			<class name="cases.collaborator.testCollaboratorUI" />
-		</classes>
-	</test>
+	<!--<test name="test14">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testAuthorityForAddCollaborator" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test15">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testModifyPermissions" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test16">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testRemoveCollaborator" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test17">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testTransferOwner" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test18">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testAuthorityForMoveFile" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<!--<test name="test19">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testCollaboratorUI" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test20">
 		<classes>
 			<class name="cases.profile.testProfile" />
@@ -131,11 +131,11 @@
 			<class name="cases.space.testSpaceNewFile" />
 		</classes>
 	</test>
-	<test name="test25">
-		<classes>
-			<class name="cases.collaborator.testPermission" />
-		</classes>
-	</test>
+	<!--<test name="test25">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testPermission" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test26">
 		<classes>
 			<class name="cases.desktop.testSearch" />
