@@ -85,7 +85,7 @@ public class testNotice extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		addCollaboratorByEmail("autoTest12@shimo.im");
+		addCollaboratorByEmail("autoTest12@shimo.im", 1);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -113,11 +113,13 @@ public class testNotice extends TestInit {
 		click(desktop);
 
 		contextClick(desktop1_1);
-		addCollaboratorByEmail("autoTest12@shimo.im");
+		addCollaboratorByEmail("autoTest12@shimo.im", 1);
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
-		click(b_addCollaborator_2_list);
-		click(list_addCollaborator_4);
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
+//		click(b_addCollaborator_2_list);
+//		click(list_addCollaborator_4);
+		contextClick(desktop1_1);
+		removeCollaboratorByPosition(1);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");

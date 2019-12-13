@@ -305,6 +305,72 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 获取通讯录信息，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public int getMemberList(String email) {
+        checkPageIsReady();
+        int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
+        List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
+        for(int n = 0; n<i; n++){
+            int m = n + 1;
+            String memberName = getText((By.xpath("(//td[@data-test='email-cell'])"+ "[" + m + "]")));
+            memberList.add(n ,memberName);
+        }
+        int r = memberList.indexOf(email);//根据邮箱地址，判断当前成员所处于的位置
+        if(r == -1){
+            System.out.println(email + "该邮箱用户不存在");
+            assertTrue(false);
+        }
+        return r + 1;
+    }
+
+    /**
+     * 选中通讯录中的指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public void selectMember(String email) {
+        int i = getMemberList(email);
+        driver.findElement(By.xpath("(//td[@data-test='select-cell'])"+ "[" + i + "]")).click();
+    }
+
+    /**
+     * 控制通讯录中的指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public void controlMember(String email) {
+        int i = getMemberList(email);
+        driver.findElement(By.xpath("(//div[@data-test='action'])"+ "[" + i + "]")).click();
+
+    }
+
+    /**
+     * 判断通讯录中是否存在指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public Boolean checkMember(String email) {
+        checkPageIsReady();
+        int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
+        List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
+        for(int n = 0; n<i; n++){
+            int m = n + 1;
+            String memberName = getText((By.xpath("(//td[@data-test='email-cell'])"+ "[" + m + "]")));
+            memberList.add(n ,memberName);
+        }
+        Boolean r = memberList.contains(email);//判断通讯录中是否存在指定邮箱地址
+        return r;
+    }
+
+
+    /**
      * 判断元素是否存在
      *
      * @author 刘晨
@@ -337,34 +403,102 @@ public class TestInit extends elementFile {
     }
 
     /**
-     * 加协作者，通过邮箱/手机号添
+     * 添加管理者，通过邮箱/手机号添
      *
-     * @param email
+     * @param email 添加管理者邮箱地址
+     * @param n 打开协作面板的入口类型
      * @author 刘晨
      * @Time 2019-07-25
      */
-    public void addCollaboratorByEmail(String email) {
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, email);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+    public void addAdminByEmail(String email, int n) {
+        switch(n){
+            case 1 ://桌面菜单添加协作者
+                click(menu_cooperation);//点击菜单上的【协作】按钮
+                click(b_add_Collaborator);
+                sendKeys(input_add_Collaborator, email);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                click(b_spacingCollaborator_close);
+                break;
+            default : //可选
+                //语句
+        }
+    }
+
+    /**
+     * 添加协作者，通过邮箱/手机号添
+     *
+     * @param email 添加协作邮箱地址
+     * @param n 打开协作面板的入口类型
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void addCollaboratorByEmail(String email, int n) {
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        sendKeys(input_addCollaborator, email);
+//        click(b_addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+
+        switch(n){
+            case 1 ://桌面菜单添加协作者
+                click(menu_cooperation);//点击菜单上的【协作】按钮
+                click(b_add_Collaborator);
+                sendKeys(input_add_Collaborator, email);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                click(b_spacingCollaborator_close);
+                break;
+
+
+            case 2 ://文件夹内右侧直接打开协作面板
+                sendKeys(input_add_Collaborator, email);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                click(b_spacingCollaborator_close);
+                break; //可选
+            //你可以有任意数量的case语句
+            default :
+                //语句
+        }
+
     }
 
 
     /**
-     * 除协作者，通过邮箱/手机号移
+     * 移除协作者，通过邮箱/手机号移除
      *
      * @param email
      * @author 刘晨
      * @Time 2019-07-25
      */
     public void removeCollaboratorByEmail(String email) {
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        sendKeys(input_addCollaborator, email);
+//        click(b_addCollaborator_1_add);
+//        click(list_addCollaborator_4);
         click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, email);
-        click(b_addCollaborator_1_add);
-        click(list_addCollaborator_4);
+        click(b_add_Collaborator);
+        sendKeys(input_add_Collaborator, email);
+        for(int i=0; i < 5; i++){
+            Boolean r = getText(list_collaboratorEmail_1).equals(email);
+            if(r){break;}
+        }
+        click(b_add_CollaboratorList_1);
+        click(cpList_remove);
     }
 
     /**
@@ -379,17 +513,18 @@ public class TestInit extends elementFile {
         WebElement b_collaboratorPosition = null;
         switch (i){
             case 1:
-                b_collaboratorPosition = b_addCollaborator_1_list;
+                b_collaboratorPosition = b_collaboratorsList_1;
                 break;
             case 2:
-                b_collaboratorPosition = b_addCollaborator_2_list;
+                b_collaboratorPosition = b_collaboratorsList_2;
                 break;
             case 3:
-                b_collaboratorPosition = b_addCollaborator_3_list;
+                b_collaboratorPosition = b_collaboratorsList_3;
                 break;
         }
         click(b_collaboratorPosition);
-        click(list_addCollaborator_4);
+        click(cpList_remove);
+        click(b_spacingCollaborator_close);
 
     }
 
@@ -421,8 +556,8 @@ public class TestInit extends elementFile {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(Back_to_Dashboard.toString()) || element.toString().equals(doc_menu_delete_OK.toString())) {
                 // 离开文档表格编辑页
-                wait.until(ExpectedConditions.elementToBeClickable(element));
                 checkPageIsReady();
+                wait.until(ExpectedConditions.elementToBeClickable(element));
                 wait.until(ExpectedConditions
                         .invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
                 element.click();
@@ -643,8 +778,8 @@ public class TestInit extends elementFile {
     public int getCollaboratorSize() {
         int result = 0;
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")));
-            result = driver.findElements(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")).size();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[starts-with(@class,'_dropdown_button_text_')]")));
+            result = driver.findElements(By.xpath("//span[starts-with(@class,'_dropdown_button_text_')]")).size();
         } catch (NoSuchElementException e) {
             System.out.println("协作者列表为空");
         }

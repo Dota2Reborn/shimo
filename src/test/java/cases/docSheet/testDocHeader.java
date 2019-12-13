@@ -188,21 +188,30 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_addCollaborator() {
+    public void doc_addCollaborator() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
         click(b_collaborator);
-        sendKeys(input_collaborator, "test0910@qq.com");
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+//        sendKeys(input_collaborator, "test0910@qq.com");
+//        click(b_addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+        sendKeys(input_add_Collaborator, "test0910@qq.com");
+        Thread.sleep(500);
+        click(b_add_CollaboratorList_1);
+        click(cpList_edit);
 
-        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+//        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+        driver.navigate().refresh();
+        click(b_collaborator);
+        click(b_collaboratorsList_1);
+        click(cpList_remove);
+
         int r1 = getCollaboratorSize();
-        assertTrue(r1 == 1);
+        assertEquals(r1, 1);
     }
 
     /**

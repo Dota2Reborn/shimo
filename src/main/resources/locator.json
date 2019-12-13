@@ -132,7 +132,7 @@
 			{
 				"elementName": "dashboard_notice_list_1_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-item'][1]//div[3]//button",
+				"locator": "(//li[@data-test='message-item']//button)[1]",
 				"note": "桌面通知铃铛-通知列表中第一个-加入企业按钮"
 			},
 			{
@@ -943,6 +943,12 @@
 				"note": "文件夹中上方设置按钮"
 			},
 			{
+				"elementName": "b_folder_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//span[starts-with(@class, 'add-button ')]",
+				"note": "文件夹中,直接右侧添加协作者按钮"
+			},
+			{
 				"elementName": "Exit_share_OK",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button",
@@ -1114,32 +1120,8 @@
 			{
 				"elementName": "invite_member",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[4]//a",
+				"locator": "//div[@data-test='enterprise-invite-member']/div/button",
 				"note": "企业设置-谁能邀请新成员进企业"
-			},
-			{
-				"elementName": "invite_member_3",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[3]",
-				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者"
-			},
-			{
-				"elementName": "invite_member_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]",
-				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者和管理员"
-			},
-			{
-				"elementName": "invite_member_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[1]",
-				"note": "企业设置-谁能邀请新成员进企业-所有企业成员"
-			},
-			{
-				"elementName": "invite_member_OK",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']",
-				"note": "企业设置-谁能邀请新成员进企业-保存按钮"
 			},
 			{
 				"elementName": "addMember",
@@ -1168,8 +1150,14 @@
 			{
 				"elementName": "setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[6]//a",
+				"locator": "//div[@data-test='action-set-admin']",
 				"note": "企业设置-设置管理员"
+			},
+			{
+				"elementName": "b_delMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-remove-member']",
+				"note": "企业设置-移除成员"
 			},
 			{
 				"elementName": "setAdmin_ManagerAndCreator",
@@ -1187,7 +1175,7 @@
 				"elementName": "button_addCollaborators",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='enterprise-add-outsider']//button",
-				"note": "企业设置-谁能添加外部协作者（更改按钮）"
+				"note": "企业设置-谁能添加外部协作者（设置按钮）"
 			},
 			{
 				"elementName": "menu_1",
@@ -1228,37 +1216,97 @@
 			{
 				"elementName": "memberSearch",
 				"locateUsing": "xpath",
-				"locator": "//input[@class='search-input standard']",
+				"locator": "//input[@data-test='search-members']",
 				"note": "企业设置-成员列表-搜索"
 			},
 			{
-				"elementName": "xpath_banUser_2",
+				"elementName": "b_setMember",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='shimo-modal-content']//div//div[2]",
-				"note": "企业设置-成员列表-移除成员-禁用"
+				"locator": "//div[@data-test='action-set-member']",
+				"note": "企业设置-成员列表-设置管理员为成员按钮"
 			},
 			{
-				"elementName": "xpath_banUser_ok",
+				"elementName": "b_setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']",
-				"note": "企业设置-成员列表-移除成员-禁用-确认"
+				"locator": "//div[@data-test='action-set-admin']",
+				"note": "企业设置-成员列表-设置成员为管理员按钮"
 			},
 			{
-				"elementName": "xpath_userTab_1",
+				"elementName": "b_handover",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[1]",
-				"note": "企业设置-成员列表"
+				"locator": "//div[@data-test='handover']",
+				"note": "企业设置-成员列表-禁用成员的发起交接按钮"
 			},
 			{
-				"elementName": "xpath_userTab_3",
+				"elementName": "b_disableMember",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[3]",
-				"note": "企业设置-禁用成员列表"
+				"locator": "//div[@data-test='disable-member']",
+				"note": "企业设置-成员列表-移除成员-禁用成员"
+			},
+			{
+				"elementName": "b_resetMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-reset-member']",
+				"note": "通讯录-禁用成员列表-重新激活成员"
+			},
+			{
+				"elementName": "b_delMember_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='remove-member-confirm']",
+				"note": "通讯录-成员列表-移除成员-确认按钮"
+			},
+			{
+				"elementName": "list_department_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[1]",
+				"note": "通讯录-组织架构根部门"
+			},
+			{
+				"elementName": "list_department_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[2]",
+				"note": "通讯录-组织架构第二行部门"
+			},
+			{
+				"elementName": "list_department_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[3]",
+				"note": "通讯录-组织架构第三行部门"
+			},
+			{
+				"elementName": "b_setDepartment_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='btn-tool'])[3]",
+				"note": "通讯录-组织架构第三行部门设置菜单按钮"
+			},
+			{
+				"elementName": "b_setting_delDepartment",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-dropdown-menu-item delete-department-item ')]",
+				"note": "通讯录-组织架构部门设置菜单，删除部门按钮"
+			},
+			{
+				"elementName": "b_setting_renameDepartment",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-dropdown-menu-item rename-department-item ')]",
+				"note": "通讯录-组织架构部门设置菜单，修改部门名称按钮"
+			},
+			{
+				"elementName": "input_setting_renameDepartment",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//input",
+				"note": "通讯录-组织架构部门设置菜单，修改部门名称输入框"
+			},
+			{
+				"elementName": "list_disableMember",
+				"locateUsing": "xpath",
+				"locator": "//a[@data-test='members-disabled']",
+				"note": "通讯录-禁用成员列表"
 			},
 			{
 				"elementName": "button_exitCompany",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='action red show']",
+				"locator": "//div[@data-test='enterprise-quit-team']//button",
 				"note": "企业设置-成员退出企业"
 			},
 			{
@@ -1266,6 +1314,90 @@
 				"locateUsing": "className",
 				"locator": "close-invitation-link",
 				"note": "企业设置-打开或者关闭邀请链接"
+			},
+			{
+				"elementName": "b_addDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-sub-department-button']",
+				"note": "通讯录页面，添加子部门按钮"
+			},
+			{
+				"elementName": "b_addMember",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-new-member-button']",
+				"note": "通讯录页面，添加新成员按钮"
+			},
+			{
+				"elementName": "input_addMember",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='batch-input']",
+				"note": "通讯录页面，添加新成员弹框，账号输入框"
+			},
+			{
+				"elementName": "b_confirm_addMember",
+				"locateUsing": "xpath",
+				"locator": "//footer/button",
+				"note": "通讯录页面，添加新成员弹框，确认邀请成员按钮"
+			},
+			{
+				"elementName": "b_close_addMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='icon-close modal-close']",
+				"note": "通讯录页面，添加新成员弹框，关闭弹框按钮"
+			},
+			{
+				"elementName": "b_cancel_invite",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-cancel-invite']",
+				"note": "通讯录页面，成员列表，取消邀请"
+			},
+			{
+				"elementName": "memberList_email_1",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='email-cell'])[1]",
+				"note": "通讯录页面，成员列表，第一个成员邮箱地址"
+			},
+			{
+				"elementName": "memberList_email_2",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='email-cell'])[2]",
+				"note": "通讯录页面，成员列表，第二个成员邮箱地址"
+			},
+			{
+				"elementName": "b_setDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='set-department-button']",
+				"note": "通讯录页面，设置所在部门按钮"
+			},
+			{
+				"elementName": "b_removeFromDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='remove-from-department-button']",
+				"note": "通讯录页面，部门成员，从部门移除按钮"
+			},
+			{
+				"elementName": "b_addSubDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-sub-department-button']",
+				"note": "通讯录页面，添加子部门按钮"
+			},
+			{
+				"elementName": "input_subDepartmentName",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='department-name-input']",
+				"note": "通讯录页面，添加子部门，子部门名称输入框"
+			},
+			{
+				"elementName": "list_setDepartment_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='part']//div[@class='name'])[2]",
+				"note": "通讯录页面，设置所在部门，部门选择页面，第二行的部门"
+			},
+			{
+				"elementName": "list_memberListDepartment_1",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='department-cell'])[1]",
+				"note": "通讯录页面，成员列表中的第一个部门"
 			}
 		]
 	},
@@ -3655,6 +3787,12 @@
 				"note": "【新协作面板】协作者列表，第二个协作者添加权限按钮"
 			},
 			{
+				"elementName": "b_add_companyCollaboratorList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='_yeaulcm']//span[starts-with(@class,'_dropdown_button_text_')])[1]",
+				"note": "【新协作面板】协作者列表，【企业全员tab】第一个人员添加权限按钮"
+			},
+			{
 				"elementName": "cpList_onlyRead",
 				"locateUsing": "xpath",
 				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'只能阅读')]",
@@ -3695,6 +3833,12 @@
 				"locateUsing": "xpath",
 				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[2]",
 				"note": "【新协作面板】协作者列表第二个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_collaboratorsList_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[3]",
+				"note": "【新协作面板】协作者列表第三个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_department_2",
@@ -3779,6 +3923,24 @@
 				"locateUsing": "xpath",
 				"locator": "//div[starts-with(@class,'_confirm_dialog_buttons_ok_')]",
 				"note": "【新协作面板】管理员列表，移除管理员，【确认】按钮"
+			},
+			{
+				"elementName": "list_collaboratorName_1",
+				"locateUsing": "xpath",
+				"locator": "(//span[starts-with(@class,'_name_text_')])[1]",
+				"note": "【新协作面板】协作者列表，第一行用户的用户名"
+			},
+			{
+				"elementName": "list_companyCollaboratorName_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='_yeaulcm']//span[starts-with(@class,'_name_text_')])[1]",
+				"note": "【新协作面板】协作者企业全员，第一行企业成员的用户名"
+			},
+			{
+				"elementName": "list_collaboratorEmail_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_description_')])[1]",
+				"note": "【新协作面板】协作者企业全员，第一行企业成员的邮箱地址"
 			}
 		]
 	}

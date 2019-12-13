@@ -88,7 +88,7 @@ public class testDashboard extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("autoTest07@shimo.im");
+        addCollaboratorByEmail("autoTest07@shimo.im", 1);
 
         logout();
         login("autoTest07@shimo.im", "123123");

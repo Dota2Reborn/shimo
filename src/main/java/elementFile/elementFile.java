@@ -175,6 +175,10 @@ public class elementFile {
 	public WebElement ql_comment_Comments;
 	@SearchWith(pageName = "doc", elementName = "Folder_settings", noteName = "文件夹中上方设置按钮")
 	public WebElement Folder_settings;
+
+	/** 文件夹中,直接右侧添加协作者按钮 */
+	@SearchWith(pageName = "doc", elementName = "b_folder_addCollaborator")
+	public WebElement b_folder_addCollaborator;
 	@SearchWith(pageName = "doc", elementName = "Exit_share_OK", noteName = "管理员删除文档-选择退出共享")
 	public WebElement Exit_share_OK;
 	@SearchWith(pageName = "doc", elementName = "Collection_OK", noteName = "标题栏收藏按钮")
@@ -601,18 +605,12 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "companyManagement", elementName = "company_Management", noteName = "桌面-企业管理入口")
 	public WebElement company_Management;
-	@SearchWith(pageName = "companyManagement", elementName = "company_setting", noteName = "企业管理-企业设置")
+
+	/** 企业管理-企业设置 */
+	@SearchWith(pageName = "companyManagement", elementName = "company_setting")
 	public WebElement company_setting;
 	@SearchWith(pageName = "companyManagement", elementName = "invite_member", noteName = "企业设置-谁能邀请新成员进企业")
 	public WebElement invite_member;
-	@SearchWith(pageName = "companyManagement", elementName = "invite_member_OK", noteName = "企业设置-谁能邀请新成员进企业-保存按钮")
-	public WebElement invite_member_OK;
-	@SearchWith(pageName = "companyManagement", elementName = "invite_member_1", noteName = "企业设置-谁能邀请新成员进企业-所有企业成员")
-	public WebElement invite_member_1;
-	@SearchWith(pageName = "companyManagement", elementName = "invite_member_2", noteName = "企业设置-谁能邀请新成员进企业-仅企业创建者和管理员")
-	public WebElement invite_member_2;
-	@SearchWith(pageName = "companyManagement", elementName = "invite_member_3", noteName = "企业设置-谁能邀请新成员进企业-仅企业创建者")
-	public WebElement invite_member_3;
 	@SearchWith(pageName = "companyManagement", elementName = "addMember", noteName = "成员管理-添加成员按钮")
 	public WebElement addMember;
 	@SearchWith(pageName = "companyManagement", elementName = "address_cppy", noteName = "企业设置-添加成员-复制链接按钮")
@@ -629,11 +627,17 @@ public class elementFile {
 	public WebElement text_companyName;
 	@SearchWith(pageName = "companyManagement", elementName = "setAdmin", noteName = "企业设置-设置管理员")
 	public WebElement setAdmin;
+
+
+	/** 企业设置-移除成员 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_delMember")
+	public WebElement b_delMember;
 	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_ManagerAndCreator", noteName = "企业设置-设置管理员-管理员和创建者")
 	public WebElement setAdmin_ManagerAndCreator;
 	@SearchWith(pageName = "companyManagement", elementName = "setAdmin_Creator", noteName = "企业设置-设置管理员-仅创建者")
 	public WebElement setAdmin_Creator;
-	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators", noteName = "企业设置-谁能添加外部协作者（更改按钮）")
+	/** 企业设置-谁能添加外部协作者（设置按钮） */
+	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators")
 	public WebElement button_addCollaborators;
 	@SearchWith(pageName = "companyManagement", elementName = "menu_1", noteName = "企业设置 - 更改选项（任一）- 第一个选项")
 	public WebElement addCollaborators_1;
@@ -647,18 +651,94 @@ public class elementFile {
 	public WebElement transferCompany_button;
 	@SearchWith(pageName = "companyManagement", elementName = "memberSearch", noteName = "企业设置-成员列表-搜索")
 	public WebElement memberSearch;
-	@SearchWith(pageName = "companyManagement", elementName = "xpath_banUser_2", noteName = "企业设置-成员列表-移除成员-禁用")
-	public WebElement xpath_banUser_2;
-	@SearchWith(pageName = "companyManagement", elementName = "xpath_banUser_ok", noteName = "企业设置-成员列表-移除成员-禁用-确认")
-	public WebElement xpath_banUser_ok;
-	@SearchWith(pageName = "companyManagement", elementName = "xpath_userTab_1", noteName = "企业设置-成员列表")
-	public WebElement xpath_userTab_1;
-	@SearchWith(pageName = "companyManagement", elementName = "xpath_userTab_3", noteName = "企业设置-禁用成员列表")
-	public WebElement xpath_userTab_3;
+	@SearchWith(pageName = "companyManagement", elementName = "b_disableMember", noteName = "企业设置-成员列表-移除成员-禁用")
+	public WebElement b_disableMember;
+	/** 企业设置-成员列表-设置管理员为成员按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setMember")
+	public WebElement b_setMember;
+	/** 企业设置-成员列表-设置管理员为成员按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setAdmin")
+	public WebElement b_setAdmin;
+	/** 企业设置-成员列表-禁用成员的发起交接按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_handover")
+	public WebElement b_handover;
+	@SearchWith(pageName = "companyManagement", elementName = "b_delMember_confirm", noteName = "通讯录-成员列表-移除成员-确认按钮")
+	public WebElement b_delMember_confirm;
+	@SearchWith(pageName = "companyManagement", elementName = "list_department_1", noteName = "通讯录-组织架构根部门")
+	public WebElement list_department_1;
+
+
+	/** 通讯录-组织架构第二行部门 */
+	@SearchWith(pageName = "companyManagement", elementName = "list_department_2")
+	public WebElement list_department_2;
+	/** 通讯录-组织架构第三行部门 */
+	@SearchWith(pageName = "companyManagement", elementName = "list_department_3")
+	public WebElement list_department_3;
+	/** 通讯录-组织架构第三行部门设置菜单按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setDepartment_3")
+	public WebElement b_setDepartment_3;
+	/** 通讯录-组织架构部门设置菜单，删除部门按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setting_delDepartment")
+	public WebElement b_setting_delDepartment;
+	/** 通讯录-组织架构部门设置菜单，修改部门名称按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setting_renameDepartment")
+	public WebElement b_setting_renameDepartment;
+	/** 通讯录-组织架构部门设置菜单，修改部门名称按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "input_setting_renameDepartment")
+	public WebElement input_setting_renameDepartment;
+	@SearchWith(pageName = "companyManagement", elementName = "list_disableMember", noteName = "通讯录-禁用成员列表")
+	public WebElement list_disableMember;
 	@SearchWith(pageName = "companyManagement", elementName = "button_exitCompany", noteName = "企业设置-成员退出企业")
 	public WebElement button_exitCompany;
 	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open", noteName = "企业设置-打开或者关闭邀请链接")
 	public WebElement addmember_copyLink_open;
+
+
+	/** 通讯录页面，添加新成员按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_addMember")
+	public WebElement b_addMember;
+	/** 通讯录-禁用成员列表-重新激活成员 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_resetMember")
+	public WebElement b_resetMember;
+	/** 通讯录页面，添加子部门按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_addDepartment")
+	public WebElement b_addDepartment;
+	/** 通讯录页面，添加新成员弹框，账号输入框 */
+	@SearchWith(pageName = "companyManagement", elementName = "input_addMember")
+	public WebElement input_addMember;
+	/** 通讯录页面，添加新成员弹框，确认邀请成员按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_confirm_addMember")
+	public WebElement b_confirm_addMember;
+	/** 通讯录页面，添加新成员弹框，关闭弹框按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_close_addMember")
+	public WebElement b_close_addMember;
+	/** 通讯录页面，成员列表，取消邀请 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_cancel_invite")
+	public WebElement b_cancel_invite;
+	/** 通讯录页面，成员列表，第一个成员邮箱地址 */
+	@SearchWith(pageName = "companyManagement", elementName = "memberList_email_1")
+	public WebElement memberList_email_1;
+	/** 通讯录页面，成员列表，第二个成员邮箱地址 */
+	@SearchWith(pageName = "companyManagement", elementName = "memberList_email_2")
+	public WebElement memberList_email_2;
+	/** 通讯录页面，设置所在部门按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_setDepartment")
+	public WebElement b_setDepartment;
+	/** 通讯录页面，部门成员，从部门移除按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_removeFromDepartment")
+	public WebElement b_removeFromDepartment;
+	/** 通讯录页面，设置所在部门，部门选择页面，第二行的部门 */
+	@SearchWith(pageName = "companyManagement", elementName = "list_setDepartment_2")
+	public WebElement list_setDepartment_2;
+	/** 通讯录页面，成员列表中的第一个部门 */
+	@SearchWith(pageName = "companyManagement", elementName = "list_memberListDepartment_1")
+	public WebElement list_memberListDepartment_1;
+	/** 通讯录页面，添加子部门按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_addSubDepartment")
+	public WebElement b_addSubDepartment;
+	/** 通讯录页面，添加子部门，子部门名称输入框 */
+	@SearchWith(pageName = "companyManagement", elementName = "input_subDepartmentName")
+	public WebElement input_subDepartmentName;
 
 
 	/**  ----------------------------------------------------------------------------------------------------------------------  */
@@ -1461,6 +1541,9 @@ public class elementFile {
 	/** 【新协作面板】协作者列表，第二个协作者添加权限按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_add_CollaboratorList_2")
 	public WebElement b_add_CollaboratorList_2;
+	/** 【新协作面板】协作者列表，【企业全员tab】第一个人员添加权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_add_companyCollaboratorList_1")
+	public WebElement b_add_companyCollaboratorList_1;
     /** 【新协作面板】协作者权限，只能阅读 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "cpList_onlyRead")
     public WebElement cpList_onlyRead;
@@ -1482,6 +1565,9 @@ public class elementFile {
 	/** 【新协作面板】协作者列表第二个协作者变更权限按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaboratorsList_2")
 	public WebElement b_collaboratorsList_2;
+	/** 【新协作面板】协作者列表第三个协作者变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaboratorsList_3")
+	public WebElement b_collaboratorsList_3;
     /** 【新协作面板】协作者列表【组织】第二个变更权限按钮 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_2")
     public WebElement b_department_2;
@@ -1524,4 +1610,13 @@ public class elementFile {
 	/** 【新协作面板】管理员列表，移除管理员，【确认】按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_removeAdmin_confirm")
 	public WebElement b_spacingCollaborator_removeAdmin_confirm;
+	/** 【新协作面板】协作者列表，第一行用户的用户名 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_collaboratorName_1")
+	public WebElement list_collaboratorName_1;
+	/** 【新协作面板】协作者企业全员，第一行企业成员的用户名 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_companyCollaboratorName_1")
+	public WebElement list_companyCollaboratorName_1;
+	/** 【新协作面板】协作者企业全员，第一行企业成员的邮箱地址 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_collaboratorEmail_1")
+	public WebElement list_collaboratorEmail_1;
 }

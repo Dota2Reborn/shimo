@@ -151,7 +151,7 @@ public class dashboard_update extends TestInit {
         login("gengxin9@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-        addCollaboratorByEmail("gengxin10@shimo.im");
+        addCollaboratorByEmail("gengxin10@shimo.im", 1);
 
         logout();
 
@@ -166,9 +166,10 @@ public class dashboard_update extends TestInit {
         String text1 = getText(dashboard_update_name);
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+        removeCollaboratorByPosition(1);
         String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
@@ -225,10 +226,11 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-        click(Shut_down_sm_modal_close_x);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+//        click(Shut_down_sm_modal_close_x);
+        removeCollaboratorByPosition(1);
 
         logout();
         login("gengxin13@shimo.im", "123123");
@@ -240,11 +242,12 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        click(Shut_down_sm_modal_close_x);
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+//        click(Shut_down_sm_modal_close_x);
+        addCollaboratorByEmail("gengxin13@shimo.im", 1);
 
     }
 

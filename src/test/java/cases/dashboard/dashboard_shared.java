@@ -24,7 +24,7 @@ public class dashboard_shared extends TestInit {
         login("gx1@shimo.im", "123123");
         click(dashboard_3);
         contextClick(dashboard_update_name);
-        addCollaboratorByEmail("gx2@shimo.im");
+        addCollaboratorByEmail("gx2@shimo.im", 1);
         logout();
         login("gx2@shimo.im", "123123");
         click(dashboard_4);
