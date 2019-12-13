@@ -21,12 +21,15 @@ public class testAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
+//        click(menu_cooperation);
 
-        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-        Boolean exist = b_addCollaborator.isEnabled();
-
-        assertFalse(exist);
+//        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
+//        Boolean exist = b_addCollaborator.isEnabled();
+//
+//        assertFalse(exist);
+        addCollaboratorByEmail("panpan@qq.com", 1);
+        String msg = getText(toast_addCollaborator);
+        assertEquals("升级到高级版或企业版，获得无限制协作（现在上限是 15）", msg);
 
     }
 
@@ -41,11 +44,16 @@ public class testAddCollaborator extends TestInit {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("11@cc.ccc");
+        addCollaboratorByEmail("11@cc.ccc", 1);
 
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+        contextClick(desktop1_1_folder);
+        removeCollaboratorByPosition(1);
+
+        String msg = getText(toast_addCollaborator);
+        assertEquals("李磊 的权限已移除", msg);
 
     }
 
@@ -62,12 +70,21 @@ public class testAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
 
         click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+        click(b_add_Collaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+        String userName = getText(list_collaboratorName_1);
+        click(b_collaboratorsList_1);
+        click(cpList_edit);
+        click(b_spacingCollaborator_close);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+        contextClick(desktop1_1_folder);
+        removeCollaboratorByPosition(1);
+
+        String msg = getText(toast_addCollaborator);
+        assertEquals(userName + " 的权限已移除", msg);
     }
 
     /**
@@ -83,33 +100,44 @@ public class testAddCollaborator extends TestInit {
 
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_company_list);
+//        click(addCollaborator_companyList_2_add);
+//        click(b_addCollaborator_ok);
+//
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
 
-        click(b_addCollaborator);
-        click(addCollaborator_company_list);
-        click(addCollaborator_companyList_2_add);
-        click(b_addCollaborator_ok);
+        click(b_add_Collaborator);
+        click(tabs_companyMember);
+        String userName = getText(list_companyCollaboratorName_1);
+        click(b_add_companyCollaboratorList_1);
+        click(cpList_edit);
+        click(b_spacingCollaborator_close);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-
-    }
-
-    /**
-     * 点击协作者列表中添加协作者之后，不点击确定，点击返回，协作者不会被添加
-     *
-     * @author 刘晨
-     * @Time 2017-11-29
-     */
-    @Test(enabled = true)
-    public void addCollaborator_5() {
-        login("autoTest01@shimo.im", "123123");
-        click(desktop);
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_back);
+        removeCollaboratorByPosition(1);
+
+        String msg = getText(toast_addCollaborator);
+        assertEquals(userName + " 的权限已移除", msg);
     }
+
+//    /**
+//     * 点击协作者列表中添加协作者之后，不点击确定，点击返回，协作者不会被添加
+//     *
+//     * @author 刘晨
+//     * @Time 2017-11-29
+//     */
+//    @Test(enabled = true)
+//    public void addCollaborator_5() {
+//        login("autoTest01@shimo.im", "123123");
+//        click(desktop);
+//        contextClick(desktop1_1_folder);
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_back);
+//    }
 
     /**
      * 协作者在协作者列表中移除自己
@@ -122,13 +150,13 @@ public class testAddCollaborator extends TestInit {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("autoTest04@shimo.im");
+        addCollaboratorByEmail("autoTest04@shimo.im", 1);
 
         logout();
         login("autoTest04@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
         String fileName = getText(desktop1_1_folder);
         assertNotEquals(fileName, "测试文件夹");
     }
@@ -139,13 +167,13 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-01
      */
-    @Test(enabled = true)
+    @Test(enabled = true)//todo 历史数据有问题
     public void addCollaborator_7() {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
 
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("autoTest04@shimo.im");
+        addCollaboratorByEmail("autoTest04@shimo.im", 1);
 
         logout();
         login("autoTest04@shimo.im", "123123");
@@ -158,40 +186,56 @@ public class testAddCollaborator extends TestInit {
         assertEquals(toast, "你已退出协作「内部协作者」");
     }
 
+//    /**
+//     * 企业成员之间转让所有权
+//     *
+//     * @author 刘晨
+//     * @Time 2017-12-01
+//     */
+//    @Test(enabled = true)
+//    public void addCollaborator_8() throws InterruptedException {
+//        login("autoTest01@shimo.im", "123123");
+//        click(desktop);
+//
+//        contextClick(desktop1_3_folder);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_1_list);
+//        click(list_addCollaborator_1);
+//        click(list_addCollaborator_changeOwner_1);
+//        click(b_addCollaborator_confirm);
+////        Thread.sleep(500);
+//
+//        logout();
+//        login("autoTest03@shimo.im", "123123");
+//        click(desktop);
+//
+//        contextClick(desktop1_1_folder);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_1_list);
+//        click(list_addCollaborator_1);
+//        click(list_addCollaborator_changeOwner_1);
+//        click(b_addCollaborator_confirm);
+//
+//        Thread.sleep(500);
+//        String email = getText(addCollaborator_1_list_userName);
+//        assertEquals(email, "autoTest01");
+//    }
     /**
-     * 企业成员之间转让所有权
+     * 桌面文件添加管理者
      *
      * @author 刘晨
-     * @Time 2017-12-01
+     * @Time 2019-12-10
      */
     @Test(enabled = true)
-    public void addCollaborator_8() throws InterruptedException {
+    public void addCollaborator_8() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
 
         contextClick(desktop1_3_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_1_list);
-        click(list_addCollaborator_1);
-        click(list_addCollaborator_changeOwner_1);
-        click(b_addCollaborator_confirm);
-//        Thread.sleep(500);
+        
 
-        logout();
-        login("autoTest03@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_1_list);
-        click(list_addCollaborator_1);
-        click(list_addCollaborator_changeOwner_1);
-        click(b_addCollaborator_confirm);
-
-        Thread.sleep(500);
-        String email = getText(addCollaborator_1_list_userName);
-        assertEquals(email, "autoTest01");
     }
+
 
     /**
      * 通过文件夹右侧添加协作者
@@ -204,49 +248,67 @@ public class testAddCollaborator extends TestInit {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
+        click(b_folder_addCollaborator);
+        addCollaboratorByEmail("11@cc.ccc", 2);
+
         click(Folder_settings);
-        addCollaboratorByEmail("11@cc.ccc");
+        removeCollaboratorByPosition(1);
 
-        String username = getText(addCollaborator_2_list_userName);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-
-        assertEquals(username, "李磊");
+        String msg = getText(toast_addCollaborator);
+        assertEquals( "李磊 的权限已移除", msg);
 
     }
 
+//    /**
+//     * 非企业成员之间转让所有权
+//     *
+//     * @author 刘晨
+//     * @Time 2017-12-07
+//     */
+//    @Test(enabled = true)
+//    public void addCollaborator_10() throws InterruptedException {
+//        login("autoTest01@shimo.im", "123123");
+//        click(desktop);
+//        contextClick(desktop1_2_folder);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_1_list);
+//        click(list_addCollaborator_1);
+//        click(list_addCollaborator_changeOwner_1);
+//        click(b_addCollaborator_confirm);
+//
+//        logout();
+//        login("autoTest_addCollabor@shimo.im", "123123");
+//        click(desktop);
+//
+//        contextClick(desktop1_1_folder);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_1_list);
+//        click(list_addCollaborator_1);
+//        click(list_addCollaborator_changeOwner_1);
+//        click(b_addCollaborator_confirm);
+//        Thread.sleep(500);
+//        String email = getText(addCollaborator_1_list_userName);
+//        assertEquals(email, "autoTest01");
+//    }
+
     /**
-     * 非企业成员之间转让所有权
+     * 企业文件不能添加外部协作者为管理员
      *
      * @author 刘晨
-     * @Time 2017-12-07
+     * @Time 2019-12-10
      */
-    @Test(enabled = true)
-    public void addCollaborator_10() throws InterruptedException {
+    @Test(enabled = true) //todo 需要怡年给置灰按钮添加disable属性值
+    public void addCollaborator_10() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_2_folder);
         click(menu_cooperation);
-        click(b_addCollaborator_1_list);
-        click(list_addCollaborator_1);
-        click(list_addCollaborator_changeOwner_1);
-        click(b_addCollaborator_confirm);
+        click(b_spacingCollaborator_addAdmin);
+        sendKeys(input_add_Collaborator, "autoTest_addCollabor@shimo.im");
 
-//        Thread.sleep(500);
+        Boolean r = doesWebElementExist(b_spacingCollaborator_addAdmin_1);
 
-        logout();
-        login("autoTest_addCollabor@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_1_list);
-        click(list_addCollaborator_1);
-        click(list_addCollaborator_changeOwner_1);
-        click(b_addCollaborator_confirm);
-        Thread.sleep(500);
-        String email = getText(addCollaborator_1_list_userName);
-        assertEquals(email, "autoTest01");
+        assertFalse(r);
     }
 
     /**

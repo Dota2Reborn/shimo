@@ -21,7 +21,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove1@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("remove2@shimo.im");
+        addCollaboratorByEmail("remove2@shimo.im", 1);
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1);
@@ -46,7 +46,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
 
-        addCollaboratorByEmail("remove2@shimo.im");
+        addCollaboratorByEmail("remove2@shimo.im", 1);
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
@@ -71,7 +71,7 @@ public class testRemoveCollaborator extends TestInit {
         login("remove4@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("remove2@shimo.im");
+        addCollaboratorByEmail("remove2@shimo.im", 1);
         click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
@@ -109,7 +109,7 @@ public class testRemoveCollaborator extends TestInit {
         click(button_addCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("remove10@shimo.im");
+        addCollaboratorByEmail("remove10@shimo.im", 1);
         assertTrue(count == 2);
     }
 

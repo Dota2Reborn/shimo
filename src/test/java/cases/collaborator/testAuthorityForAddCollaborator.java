@@ -23,7 +23,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("pipi@qq.com");
+        addCollaboratorByEmail("pipi@qq.com", 1);
 
         click(b_addCollaborator_2_list);
         String msg = getText(Can_edit_1);
@@ -45,7 +45,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("panpan@qq.com");
+        addCollaboratorByEmail("panpan@qq.com", 1);
 
         click(b_addCollaborator_2_list);
         String msg = getText(Can_edit_1);
@@ -90,7 +90,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("liuchen@shimo.im");
+        addCollaboratorByEmail("liuchen@shimo.im", 1);
         click(Shut_down_sm_modal_close_x);
 
         click(desktop1_1_folder);
@@ -169,12 +169,12 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
         click(button_addCollaborator_close);
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
         click(button_addCollaborator_close);
 
         logout();
