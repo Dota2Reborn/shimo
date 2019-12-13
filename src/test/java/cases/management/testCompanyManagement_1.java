@@ -20,15 +20,14 @@ public class testCompanyManagement_1 extends TestInit {
      * @author 刘晨
      * @Time 2017-01-08
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void inviteMember_allMember() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_1);
-        click(invite_member_OK);
+        click(menu_1);
 
         logout();
         login("autoTest_company_3@shimo.im", "123123");
@@ -56,8 +55,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_2);
-        click(invite_member_OK);
+        click(menu_2);
 
         logout();
         login("autoTest_company_3@shimo.im", "123123");
@@ -84,8 +82,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_3);
-        click(invite_member_OK);
+        click(menu_3);
 
         logout();
         login("autoTest_company_2@shimo.im", "123123");
