@@ -372,7 +372,9 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting3);
         click(b_SpaceSetting_collaboration);
 
-        Boolean r = doesWebElementExist(b_collaboratorsList_1);
+        click(b_collaboratorsList_1);
+
+        Boolean r = doesWebElementExist(cpList_remove);
 
         assertFalse(r);
     }
