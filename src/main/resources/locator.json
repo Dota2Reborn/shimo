@@ -3825,19 +3825,19 @@
 			{
 				"elementName": "b_collaboratorsList_1",
 				"locateUsing": "xpath",
-				"locator": "(//*[starts-with(@class,'_dropdown_button_')])[1]",
+				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
 				"note": "【新协作面板】协作者列表第一个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_collaboratorsList_2",
 				"locateUsing": "xpath",
-				"locator": "(//*[starts-with(@class,'_dropdown_button_')])[2]",
+				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[2]",
 				"note": "【新协作面板】协作者列表第二个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_collaboratorsList_3",
 				"locateUsing": "xpath",
-				"locator": "(//*[starts-with(@class,'_dropdown_button_')])[3]",
+				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[3]",
 				"note": "【新协作面板】协作者列表第三个协作者变更权限按钮"
 			},
 			{

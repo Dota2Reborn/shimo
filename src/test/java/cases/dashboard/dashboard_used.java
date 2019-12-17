@@ -223,7 +223,7 @@ public class dashboard_used extends TestInit {
 //        click(b_addCollaborator_2_list);
 //        click(list_addCollaborator_4);
 //        click(Shut_down_sm_modal_close_x);
-        removeCollaboratorByPosition(1);
+        removeCollaboratorByPosition(2);
         contextClick(dashboard_update_file);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

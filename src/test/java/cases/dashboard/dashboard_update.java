@@ -169,7 +169,7 @@ public class dashboard_update extends TestInit {
 //        click(menu_cooperation);
 //        click(b_addCollaborator_2_list);
 //        click(list_addCollaborator_4);
-        removeCollaboratorByPosition(1);
+        removeCollaboratorByPosition(2);
         String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
@@ -230,7 +230,7 @@ public class dashboard_update extends TestInit {
 //        click(b_addCollaborator_2_list);
 //        click(list_addCollaborator_4);
 //        click(Shut_down_sm_modal_close_x);
-        removeCollaboratorByPosition(1);
+        removeCollaboratorByPosition(2);
 
         logout();
         login("gengxin13@shimo.im", "123123");
