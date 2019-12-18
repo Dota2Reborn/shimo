@@ -372,11 +372,9 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting3);
         click(b_SpaceSetting_collaboration);
 
-        click(b_collaboratorsList_1);
+        String r = getAttribute(b_collaboratorsList_1, "data-disabled");
 
-        Boolean r = doesWebElementExist(cpList_remove);
-
-        assertFalse(r);
+        assertEquals(r, "true");
     }
 
     /**
