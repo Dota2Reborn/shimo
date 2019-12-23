@@ -167,7 +167,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-01
      */
-    @Test(enabled = true)//todo 历史数据有问题
+    @Test(enabled = true)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
     public void addCollaborator_7() {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
@@ -180,7 +180,7 @@ public class testAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
 
         String toast = getText(toast_msg);
         assertEquals(toast, "你已退出协作「内部协作者」");
@@ -232,8 +232,14 @@ public class testAddCollaborator extends TestInit {
         click(desktop);
 
         contextClick(desktop1_3_folder);
-        
+        addAdminByEmail("autoTest03@shimo.im", 1);
 
+        contextClick(desktop1_3_folder);
+        removeAdminByPosition(2);
+
+
+        String msg = getText(toast_addCollaborator);
+        assertEquals(msg ,"autoTest03 的权限已移除");
     }
 
 

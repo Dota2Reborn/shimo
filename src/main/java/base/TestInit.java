@@ -414,14 +414,13 @@ public class TestInit extends elementFile {
         switch(n){
             case 1 ://桌面菜单添加协作者
                 click(menu_cooperation);//点击菜单上的【协作】按钮
-                click(b_add_Collaborator);
+                click(b_spacingCollaborator_addAdmin);
                 sendKeys(input_add_Collaborator, email);
                 for(int i=0; i < 10; i++){
                     Boolean r = getText(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
                 }
-                click(b_add_CollaboratorList_1);
-                click(cpList_edit);
+                click(b_spacingCollaborator_addAdmin_1);
                 click(b_spacingCollaborator_close);
                 break;
             default : //可选
@@ -524,7 +523,39 @@ public class TestInit extends elementFile {
         }
         click(b_collaboratorPosition);
         click(cpList_remove);
-        click(b_spacingCollaborator_close);
+        if(doesWebElementExist(b_spacingCollaborator_close)){
+            click(b_spacingCollaborator_close);
+        }
+
+    }
+
+    /**
+     * 移除管理者，通过所处协作者列表位置
+     *
+     * @param i
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeAdminByPosition(int i) {
+        click(menu_cooperation);
+        WebElement b_collaboratorPosition = null;
+        switch (i){
+            case 1:
+                b_collaboratorPosition = b_adminList_1;
+                break;
+            case 2:
+                b_collaboratorPosition = b_adminList_2;
+                break;
+            case 3:
+                b_collaboratorPosition = b_adminList_3;
+                break;
+        }
+        click(b_collaboratorPosition);
+        click(b_spacingCollaborator_removeAdmin);
+        click(b_spacingCollaborator_removeAdmin_confirm);
+        if(doesWebElementExist(b_spacingCollaborator_close)){
+            click(b_spacingCollaborator_close);
+        }
 
     }
 
@@ -578,6 +609,13 @@ public class TestInit extends elementFile {
                 space_addCollaborator(b_add_CollaboratorList_1);
             } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
                 clickDashboardActivitiesByFile(dashboard_activitiesByFile);
+            }  else if (element.toString().equals(space_listing_1.toString()) || element.toString().equals(space_listing_2.toString()) || element.toString().equals(space_listing_3.toString()) || element.toString().equals(space_listing_4.toString()) || element.toString().equals(space_listing_5.toString()) || element.toString().equals(space_listing_6.toString()) || element.toString().equals(space_listing_7.toString()) || element.toString().equals(space_listing_8.toString()) || element.toString().equals(space_listing_9.toString())) {
+                element.click();
+                Boolean r = doesWebElementExist(b_space_tooltipConfirm);
+                if(r){
+                    click(b_space_tooltipConfirm);
+                    wait.until(ExpectedConditions.invisibilityOf(b_space_tooltipConfirm));
+                }
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();

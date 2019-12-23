@@ -3461,6 +3461,12 @@
 				"note": "协作空间列表9"
 			},
 			{
+				"elementName": "b_space_tooltipConfirm",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tooltip-inner']//button",
+				"note": "协作空间引导，【知道了】按钮"
+			},
+			{
 				"elementName": "space_document",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='none-file']",
@@ -3619,7 +3625,7 @@
 			{
 				"elementName": "space_RightMenu_4_3",
 				"locateUsing": "xpath",
-				"locator": "//ul[@id='share$Menu']/li[4]",
+				"locator": "//ul[@id='share$Menu']/li[3]",
 				"note": "分享设置"
 			},
 			{
@@ -3663,7 +3669,13 @@
               "locateUsing": "xpath",
               "locator": "//div[@class='fixed-context-menu']//span[contains(text(),'从模板新建')]",
               "note": "从模板新建(协作空间)"
-            }
+            },
+			{
+				"elementName": "space_RightMenu_new",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-menu-submenu-title']",
+				"note": "协作空间右键一级菜单，新建"
+			}
 		]
 	},
 	{
@@ -3825,20 +3837,38 @@
 			{
 				"elementName": "b_collaboratorsList_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
+				"locator": "(//div[starts-with(@class,'_collab_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
 				"note": "【新协作面板】协作者列表第一个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_collaboratorsList_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[2]",
+				"locator": "(//div[starts-with(@class,'_collab_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[2]",
 				"note": "【新协作面板】协作者列表第二个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_collaboratorsList_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_dropdown_wrapper_')])[3]",
+				"locator": "(//div[starts-with(@class,'_collab_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[3]",
 				"note": "【新协作面板】协作者列表第三个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
+				"note": "【新协作面板】管理者列表第一个管理者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[2]",
+				"note": "【新协作面板】管理者列表第二个管理者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[3]",
+				"note": "【新协作面板】管理者列表第三个管理者变更权限按钮"
 			},
 			{
 				"elementName": "b_department_2",

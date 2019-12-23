@@ -419,6 +419,9 @@ public class elementFile {
 	/** 协作空间列表9 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
 	public WebElement space_listing_9;
+	/** 协作空间引导，【知道了】按钮 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "b_space_tooltipConfirm")
+	public WebElement b_space_tooltipConfirm;
 	/** 协作空间空白处 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document")
 	public WebElement space_document;
@@ -528,6 +531,9 @@ public class elementFile {
 	/** 从模板新建(协作空间) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_newTemplate")
 	public WebElement space_RightMenu_newTemplate;
+	/** 协作空间右键一级菜单，新建 */
+	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_new")
+	public WebElement space_RightMenu_new;
 
 
 
@@ -1568,6 +1574,15 @@ public class elementFile {
 	/** 【新协作面板】协作者列表第三个协作者变更权限按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_collaboratorsList_3")
 	public WebElement b_collaboratorsList_3;
+	/** 【新协作面板】管理者列表第一个管理者变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_adminList_1")
+	public WebElement b_adminList_1;
+	/** 【新协作面板】管理者列表第二个管理者变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_adminList_2")
+	public WebElement b_adminList_2;
+	/** 【新协作面板】管理者列表第三个管理者变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_adminList_3")
+	public WebElement b_adminList_3;
     /** 【新协作面板】协作者列表【组织】第二个变更权限按钮 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_2")
     public WebElement b_department_2;
