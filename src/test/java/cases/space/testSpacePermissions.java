@@ -385,30 +385,35 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public void testSpacePermission_17() throws InterruptedException {
+    public void testSpacePermission_17() {
         login("testSpace01@qq.com","123123");
         moveToElement(space_listing_1);
         click(b_SpaceSetting1);
-        click(b_SpaceSetting_collaboration);
+//        click(b_SpaceSetting_collaboration);
+//
+////        click(tabs_management);
+//        click(b_spacingCollaborator_addAdmin);
+//        sendKeys(input_add_Collaborator,"testSpace02@qq.com");
+//        click(b_spacingCollaborator_addAdmin_1);
 
-//        click(tabs_management);
-        click(b_spacingCollaborator_addAdmin);
-        sendKeys(input_add_Collaborator,"testSpace02@qq.com");
-        click(b_spacingCollaborator_addAdmin_1);
-
+        addAdminByEmail("testSpace02@qq.com", 1);
         String msg = getText(toast_addCollaborator);
         assertEquals(msg ,"ApexLegends 的权限已设置为管理者");
 
-        click(b_collaborator_Back);
-        Thread.sleep(500);
-        click(b_collaborator_Back);
+//        click(b_collaborator_Back);
+//        Thread.sleep(500);
+//        click(b_collaborator_Back);
 
-        click(b_collaboratorsList_2);
-        click(b_spacingCollaborator_removeAdmin);
-        click(b_spacingCollaborator_removeAdmin_confirm);
-//        click(tabs_collaborator);
-        click(b_collaboratorsList_1);
-        click(cpList_remove);
+//        click(b_adminList_2);
+//        click(b_spacingCollaborator_removeAdmin);
+//        click(b_spacingCollaborator_removeAdmin_confirm);
+////        click(tabs_collaborator);
+//        click(b_collaboratorsList_1);
+//        click(cpList_remove);
+
+        moveToElement(space_listing_1);
+        click(b_SpaceSetting1);
+        removeAdminByPosition(2);
 
         String msg2 = getText(toast_addCollaborator);
         assertEquals(msg2 ,"ApexLegends 的权限已移除");
