@@ -74,7 +74,7 @@ public class testAddCollaborator extends TestInit {
 //        click(addCollaborator_1_add);
 //        click(b_addCollaborator_ok);
         String userName = getText(list_collaboratorName_1);
-        click(b_collaboratorsList_1);
+        click(addCollaborator_1_add);
         click(cpList_edit);
         click(b_spacingCollaborator_close);
 
@@ -167,7 +167,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-01
      */
-    @Test(enabled = true)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
+    @Test(enabled = false)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
     public void addCollaborator_7() {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
@@ -186,40 +186,6 @@ public class testAddCollaborator extends TestInit {
         assertEquals(toast, "你已退出协作「内部协作者」");
     }
 
-//    /**
-//     * 企业成员之间转让所有权
-//     *
-//     * @author 刘晨
-//     * @Time 2017-12-01
-//     */
-//    @Test(enabled = true)
-//    public void addCollaborator_8() throws InterruptedException {
-//        login("autoTest01@shimo.im", "123123");
-//        click(desktop);
-//
-//        contextClick(desktop1_3_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_1_list);
-//        click(list_addCollaborator_1);
-//        click(list_addCollaborator_changeOwner_1);
-//        click(b_addCollaborator_confirm);
-////        Thread.sleep(500);
-//
-//        logout();
-//        login("autoTest03@shimo.im", "123123");
-//        click(desktop);
-//
-//        contextClick(desktop1_1_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_1_list);
-//        click(list_addCollaborator_1);
-//        click(list_addCollaborator_changeOwner_1);
-//        click(b_addCollaborator_confirm);
-//
-//        Thread.sleep(500);
-//        String email = getText(addCollaborator_1_list_userName);
-//        assertEquals(email, "autoTest01");
-//    }
     /**
      * 桌面文件添加管理者
      *
@@ -265,37 +231,6 @@ public class testAddCollaborator extends TestInit {
 
     }
 
-//    /**
-//     * 非企业成员之间转让所有权
-//     *
-//     * @author 刘晨
-//     * @Time 2017-12-07
-//     */
-//    @Test(enabled = true)
-//    public void addCollaborator_10() throws InterruptedException {
-//        login("autoTest01@shimo.im", "123123");
-//        click(desktop);
-//        contextClick(desktop1_2_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_1_list);
-//        click(list_addCollaborator_1);
-//        click(list_addCollaborator_changeOwner_1);
-//        click(b_addCollaborator_confirm);
-//
-//        logout();
-//        login("autoTest_addCollabor@shimo.im", "123123");
-//        click(desktop);
-//
-//        contextClick(desktop1_1_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_1_list);
-//        click(list_addCollaborator_1);
-//        click(list_addCollaborator_changeOwner_1);
-//        click(b_addCollaborator_confirm);
-//        Thread.sleep(500);
-//        String email = getText(addCollaborator_1_list_userName);
-//        assertEquals(email, "autoTest01");
-//    }
 
     /**
      * 企业文件不能添加外部协作者为管理员
@@ -303,7 +238,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2019-12-10
      */
-    @Test(enabled = true) //todo 需要怡年给置灰按钮添加disable属性值
+    @Test(enabled = true)
     public void addCollaborator_10() {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
@@ -312,9 +247,8 @@ public class testAddCollaborator extends TestInit {
         click(b_spacingCollaborator_addAdmin);
         sendKeys(input_add_Collaborator, "autoTest_addCollabor@shimo.im");
 
-        Boolean r = doesWebElementExist(b_spacingCollaborator_addAdmin_1);
-
-        assertFalse(r);
+        Boolean r = getAttribute(b_spacingCollaborator_addAdmin_1, "data-disabled").equals("true");
+        assertTrue(r);
     }
 
     /**
