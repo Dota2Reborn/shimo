@@ -143,7 +143,6 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         Boolean r1 = getAttribute(menu_move, "aria-disabled").equals("true");
         Boolean r2 = getAttribute(menu_rename, "aria-disabled").equals("true");
-        Boolean r5 = getAttribute(menu_delete, "aria-disabled").equals("true");
 
         moveToElement(menu_share);
         click(menu_share_1);
@@ -151,7 +150,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
         Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
         click(menu_cooperation);
         Boolean r4 = doesWebElementExist(b_spacingCollaborator_addCollaborator);
-        assertTrue(r1 && r2 && r3 && !r4 && r5);
+        assertTrue(r1 && r2 && r3 && !r4);
     }
 
     /**
