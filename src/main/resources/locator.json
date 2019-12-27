@@ -3264,7 +3264,7 @@
             {
               "elementName": "b_newSpace_next",
               "locateUsing": "xpath",
-              "locator": "//button[starts-with(@class,'sm-button m-create-ok')]",
+              "locator": "//button[starts-with(@class,'sm-button m-modal-ok')]",
               "note": "新建协作空间，下一步按钮"
             },
             {
