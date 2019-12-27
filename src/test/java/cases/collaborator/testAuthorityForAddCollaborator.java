@@ -5,8 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class testAuthorityForAddCollaborator extends TestInit {
 
@@ -68,13 +67,13 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1);
         click(menu_cooperation);
 
-        click(b_addCollaborator_2_list);
-        click(can_only_comment_2);
+        click(b_collaboratorsList_1);
+        click(cpList_onlyDiscuss);
 //        Thread.sleep(200);
-        String msg = getText(b_addCollaborator_2_list);
+        String msg = getText(b_collaboratorsList_1);
 
-        click(b_addCollaborator_2_list);
-        click(Can_edit_1);
+        click(b_collaboratorsList_1);
+        click(cpList_edit);
 
         assertEquals(msg, "只能评论");
     }
@@ -91,22 +90,24 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("liuchen@shimo.im", 1);
-        click(Shut_down_sm_modal_close_x);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
+
         int result1 = getCollaboratorSize();//获取协作者数量
-        click(Shut_down_sm_modal_close_x);
+        click(b_spacingCollaborator_close);
+
         contextClick(desktop1_1);
         click(menu_cooperation);
         int result2 = getCollaboratorSize();//获取协作者数量
-        click(Shut_down_sm_modal_close_x);
+        click(b_spacingCollaborator_close);
 
         click(Folder_settings);
-        removeCollaboratorByPosition(3);
+        removeCollaboratorByPosition(1);
 
         assertEquals(result2, result1);
+
     }
 
     /**
@@ -115,16 +116,15 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2018-7-3
      */
-    @Test(enabled = true)
+    @Test(enabled = true)//todo 需要加个添加协作者按钮 disable的判断，需要怡年统一按钮
     public void authorityForAddCollaborator_5() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         contextClick(desktop1_1_folder);
-
         click(menu_cooperation);
-        String t = b_addCollaborator.getAttribute("disabled");
-        assertEquals(t, "true");
+        Boolean r = doesWebElementExist(b_spacingCollaborator_addCollaborator);
+        assertFalse(r);
     }
 
     /**
@@ -141,19 +141,17 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
 
-//        Boolean r1 = getAttribute(menu_rename,"disabled").equals("true");
-//        Boolean r2 = getAttribute(menu_move,"disabled").equals("true");
-        Boolean r1 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-rename ')]")));
-        Boolean r2 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-move ')]")));
+        Boolean r1 = getAttribute(menu_move, "aria-disabled").equals("true");
+        Boolean r2 = getAttribute(menu_rename, "aria-disabled").equals("true");
+        Boolean r5 = getAttribute(menu_delete, "aria-disabled").equals("true");
 
         moveToElement(menu_share);
         click(menu_share_1);
 
         Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
-        wait.until(ExpectedConditions.visibilityOf(menu_cooperation));
         click(menu_cooperation);
-        Boolean r4 = getAttribute(b_addCollaborator, "disabled").equals("true");
-        assertTrue(r1 && r2 && r3 && r4);
+        Boolean r4 = doesWebElementExist(b_spacingCollaborator_addCollaborator);
+        assertTrue(r1 && r2 && r3 && !r4 && r5);
     }
 
     /**
@@ -170,12 +168,10 @@ public class testAuthorityForAddCollaborator extends TestInit {
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
         addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
-        click(button_addCollaborator_close);
 
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
-        click(button_addCollaborator_close);
 
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
@@ -189,7 +185,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
 
         assertTrue(r1 && r2 && r3);
 

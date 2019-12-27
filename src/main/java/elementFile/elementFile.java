@@ -1583,6 +1583,12 @@ public class elementFile {
 	/** 【新协作面板】管理者列表第三个管理者变更权限按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_adminList_3")
 	public WebElement b_adminList_3;
+	/** 【新协作面板】管理者列表第一个管理者名字 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "name_adminList_1")
+	public WebElement name_adminList_1;
+	/** 【新协作面板】管理者列表第二个管理者名字 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "name_adminList_2")
+	public WebElement name_adminList_2;
     /** 【新协作面板】协作者列表【组织】第二个变更权限按钮 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_2")
     public WebElement b_department_2;
@@ -1613,6 +1619,9 @@ public class elementFile {
 	/** 【新协作面板】协作者列表页面-关闭按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_close")
 	public WebElement b_spacingCollaborator_close;
+	/** 【新协作面板】管理员列表页面-【添加协作者】按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_addCollaborator")
+	public WebElement b_spacingCollaborator_addCollaborator;
 	/** 【新协作面板】管理员列表页面-【添加管理员】按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_spacingCollaborator_addAdmin")
 	public WebElement b_spacingCollaborator_addAdmin;
@@ -1634,4 +1643,7 @@ public class elementFile {
 	/** 【新协作面板】协作者企业全员，第一行企业成员的邮箱地址 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_collaboratorEmail_1")
 	public WebElement list_collaboratorEmail_1;
+	/** 【新协作面板】查看上级目录协作者按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_checkParent")
+	public WebElement b_checkParent;
 }

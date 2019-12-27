@@ -814,14 +814,28 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public int getCollaboratorSize() {
-        int result = 0;
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[starts-with(@class,'_dropdown_button_text_')]")));
-            result = driver.findElements(By.xpath("//span[starts-with(@class,'_dropdown_button_text_')]")).size();
-        } catch (NoSuchElementException e) {
-            System.out.println("协作者列表为空");
+        int count_parent = 0;
+        int count_collaborator = 0;
+        int count_admin = 0;
+        int total = 0;
+        Boolean b_parent = doesWebElementExist(b_checkParent);
+        if(b_parent){click(b_checkParent);}
+
+        Boolean parent = doesWebElementExist(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[@class='_row_collab_stdcud']"));
+        Boolean collaborator = doesWebElementExist(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]"));
+        Boolean admin = doesWebElementExist(By.xpath("//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')]"));
+        if (parent){
+            count_parent = driver.findElements(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[@class='_row_collab_stdcud']")).size();
         }
-        return result;
+        if(collaborator){
+            count_collaborator = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]")).size();
+//            if (b_parent){count_collaborator = count_collaborator - 1;}
+        }
+        if(admin){
+            count_admin = driver.findElements(By.xpath("//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')]")).size();
+        }
+        total = count_parent + count_collaborator + count_admin;
+        return total;
     }
 
     /**

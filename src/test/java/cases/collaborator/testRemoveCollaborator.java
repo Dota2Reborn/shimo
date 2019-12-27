@@ -22,11 +22,9 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         addCollaboratorByEmail("remove2@shimo.im", 1);
-        click(button_addCollaborator_close);
 
         contextClick(desktop1_1);
-        removeCollaboratorByPosition(2);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(1);
 
         contextClick(desktop1_1);
         click(menu_cooperation);
@@ -47,11 +45,9 @@ public class testRemoveCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
 
         addCollaboratorByEmail("remove2@shimo.im", 1);
-        click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(1);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
@@ -72,12 +68,14 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("remove2@shimo.im", 1);
-        click(button_addCollaborator_close);
 
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
+
+        contextClick(desktop1_1_folder);
+        click(menu_cooperation);
         int count1 = getCollaboratorSize();
-        click(button_addCollaborator_close);
+        click(b_spacingCollaborator_close);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
@@ -99,14 +97,13 @@ public class testRemoveCollaborator extends TestInit {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(3);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(2);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
         int count = getCollaboratorSize();
-        click(button_addCollaborator_close);
+        click(b_spacingCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("remove10@shimo.im", 1);
@@ -119,7 +116,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_2_folder);
         click(menu_cooperation);
-        String t = getAttribute(b_addCollaborator_3_list_disable,"disabled");
+        String t = getAttribute(b_collaboratorsList_1,"data-disabled");
         assertEquals(t, "true");
     }
 }
