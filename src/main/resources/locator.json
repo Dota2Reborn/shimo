@@ -1486,7 +1486,7 @@
 			{
 				"elementName": "menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-item sm-menu-remove ')]",
+				"locator": "//li//div//span[contains(text(),'删除')]",
 				"note": "删除按钮"
 			},
 			{
