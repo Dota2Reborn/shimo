@@ -1,15 +1,9 @@
 package cases.management;
 
 import base.TestInit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class testCompanyManagement extends TestInit {
 
@@ -34,12 +28,9 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
 
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-
-        sendKeys(input_addCollaborator, "erdan@qq.com");
-        String t = getAttribute(b_addCollaborator_1_add,"disabled");
-        Boolean R1 = t.equals("true");
+        addCollaboratorByEmail("erdan@qq.com", 1);
+        String msg = getText(toast_addCollaborator);
+        assertEquals("根据企业设置，你不能添加外部协作者，请联系企业管理员", msg);
 
         logout();
         login("testEnterprise03@qq.com", "123123");
@@ -48,14 +39,13 @@ public class testCompanyManagement extends TestInit {
 
         contextClick(desktop1_1);
         addCollaboratorByEmail("erdan@qq.com", 1);
+        String m1 = getText(toast_addCollaborator);
 
-        String m1 = getText(toast_msg);
-        Boolean R2 = m1.equals("二蛋 已添加");
+        contextClick(desktop1_1);
+        removeCollaboratorByPosition(1);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+        assertEquals("二蛋 的权限已修改为「可以编辑」", m1);
 
-        assertTrue(R1 && R2);
     }
 
     /**
@@ -79,14 +69,12 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         addCollaboratorByEmail("erdan@qq.com", 1);
+        String m1 = getText(toast_addCollaborator);
 
-        String m1 = getText(toast_msg);
-        Boolean R2 = m1.equals("二蛋 已添加");
+        contextClick(desktop1_1);
+        removeCollaboratorByPosition(1);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-
-        assertTrue(R2);
+        assertEquals("二蛋 的权限已修改为「可以编辑」", m1);
     }
 
     /**
@@ -108,12 +96,11 @@ public class testCompanyManagement extends TestInit {
         login("testEnterprise06@qq.com", "123123");
 
         click(desktop);
-        contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
 
-        sendKeys(input_addCollaborator,"erdan@qq.com");
-        Boolean R1 = getAttribute(b_addCollaborator_1_add,"disabled").equalsIgnoreCase("true");
+        contextClick(desktop1_1);
+        addCollaboratorByEmail("erdan@qq.com", 1);
+        String msg = getText(toast_addCollaborator);
+        assertEquals("根据企业设置，你不能添加外部协作者，请联系企业管理员", msg);
 
         logout();
         login("testEnterprise04@qq.com", "123123");
@@ -121,12 +108,12 @@ public class testCompanyManagement extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         addCollaboratorByEmail("erdan@qq.com", 1);
+        String m1 = getText(toast_addCollaborator);
 
-        String m1 = getText(toast_msg);
-        Boolean R2 = m1.equals("二蛋 已添加");
+        contextClick(desktop1_1);
+        removeCollaboratorByPosition(1);
 
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+        assertEquals("二蛋 的权限已修改为「可以编辑」", m1);
 
         logout();
         login("testEnterprise03@qq.com", "123123");
@@ -135,14 +122,13 @@ public class testCompanyManagement extends TestInit {
 
         contextClick(desktop1_1);
         addCollaboratorByEmail("erdan@qq.com", 1);
+        String m2 = getText(toast_addCollaborator);
 
-        String m2 = getText(toast_msg);
-        Boolean R3 = m2.equals("二蛋 已添加");
+        contextClick(desktop1_1);
+        removeCollaboratorByPosition(1);
 
-        click(b_addCollaborator_3_list);
-        click(list_addCollaborator_4);
+        assertEquals("二蛋 的权限已修改为「可以编辑」", m2);
 
-        assertTrue(R1 && R2 && R3);
     }
 
 }
