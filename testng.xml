@@ -193,5 +193,10 @@
 			<class name="cases.management.testMemberList" />
 		</classes>
 	</test>
+	<test name="test36">
+		<classes>
+			<class name="cases.management.testCompanyManagement" />
+		</classes>
+	</test>
 
 </suite>
