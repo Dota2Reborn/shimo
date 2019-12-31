@@ -188,5 +188,10 @@
 			<class name="cases.loginRegistered.testRegistered_new" />
 		</classes>
 	</test>
+	<test name="test35">
+		<classes>
+			<class name="cases.management.testMemberList" />
+		</classes>
+	</test>
 
 </suite>
