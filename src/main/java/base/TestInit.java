@@ -322,6 +322,7 @@ public class TestInit extends elementFile {
         int r = memberList.indexOf(email);//根据邮箱地址，判断当前成员所处于的位置
         if(r == -1){
             System.out.println(email + "该邮箱用户不存在");
+            System.out.println("当前列表中用户数"  +  i);
             assertTrue(false);
         }
         return r + 1;
