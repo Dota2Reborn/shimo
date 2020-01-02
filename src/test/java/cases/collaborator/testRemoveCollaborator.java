@@ -81,7 +81,8 @@ public class testRemoveCollaborator extends TestInit {
         contextClick(desktop1_1);
         click(menu_cooperation);
         int count2 = getCollaboratorSize();
-        assertTrue(count1 == count2);
+//        assertTrue(count1 == count2);
+        assertEquals(count1,count2);
 
     }
 
@@ -107,7 +108,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("remove10@shimo.im", 1);
-        assertTrue(count == 2);
+        assertEquals(count, 2);
     }
 
     @Test

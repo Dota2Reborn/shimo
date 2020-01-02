@@ -3801,7 +3801,7 @@
 			{
 				"elementName": "b_add_companyCollaboratorList_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='_yeaulcm']//span[starts-with(@class,'_dropdown_button_text_')])[1]",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//span[starts-with(@class,'_dropdown_button_text_')])[1]",
 				"note": "【新协作面板】协作者列表，【企业全员tab】第一个人员添加权限按钮"
 			},
 			{
@@ -3981,7 +3981,7 @@
 			{
 				"elementName": "list_companyCollaboratorName_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='_yeaulcm']//span[starts-with(@class,'_name_text_')])[1]",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//span[starts-with(@class,'_name_text_')])[1]",
 				"note": "【新协作面板】协作者企业全员，第一行企业成员的用户名"
 			},
 			{

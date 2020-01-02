@@ -821,11 +821,11 @@ public class TestInit extends elementFile {
         Boolean b_parent = doesWebElementExist(b_checkParent);
         if(b_parent){click(b_checkParent);}
 
-        Boolean parent = doesWebElementExist(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[@class='_row_collab_stdcud']"));
+        Boolean parent = doesWebElementExist(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[starts-with(@class,'_name_')]"));
         Boolean collaborator = doesWebElementExist(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]"));
         Boolean admin = doesWebElementExist(By.xpath("//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')]"));
         if (parent){
-            count_parent = driver.findElements(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[@class='_row_collab_stdcud']")).size();
+            count_parent = driver.findElements(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[starts-with(@class,'_name_')]")).size();
         }
         if(collaborator){
             count_collaborator = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]")).size();
