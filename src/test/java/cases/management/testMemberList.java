@@ -42,7 +42,7 @@ public class testMemberList extends TestInit {
      * @Time 2019-11-28
      */
     @Test(enabled = true)
-    public void add_exitMember() {
+    public void add_exitMember() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -66,6 +66,7 @@ public class testMemberList extends TestInit {
         click(dashboard_notice_list_1_button);
         click(confirmJoinCompany);
 
+        Thread.sleep(500);
         click(company_setting);
         click(button_exitCompany);
         click(message_ok);

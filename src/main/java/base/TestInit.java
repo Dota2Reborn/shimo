@@ -312,6 +312,7 @@ public class TestInit extends elementFile {
      */
     public int getMemberList(String email) {
         checkPageIsReady();
+        doesWebElementExist(memberList_email_1);
         int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
         List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
         for(int n = 0; n<i; n++){
@@ -359,6 +360,7 @@ public class TestInit extends elementFile {
      */
     public Boolean checkMember(String email) {
         checkPageIsReady();
+        doesWebElementExist(memberList_email_1);
         int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
         List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
         for(int n = 0; n<i; n++){
