@@ -200,12 +200,13 @@ public class testMemberList extends TestInit {
      * @Time 2019-12-2
      */
     @Test(enabled = true)
-    public void memberSearch_admin() {
+    public void memberSearch_admin() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
 
         sendKeys(memberSearch, "常驻管理员");
+        Thread.sleep(200);
         String name = getText(memberList_email_1);
         assertEquals(name, "testEnterprise03@qq.com");
 
@@ -225,12 +226,13 @@ public class testMemberList extends TestInit {
      * @Time 2019-12-2
      */
     @Test(enabled = true)
-    public void memberSearch() {
+    public void memberSearch() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
 
         sendKeys(memberSearch, "常驻成员");
+        Thread.sleep(200);
         String name = getText(memberList_email_2);
         assertEquals(name, "testEnterprise04@qq.com");
 
@@ -250,12 +252,13 @@ public class testMemberList extends TestInit {
      * @Time 2019-12-2
      */
     @Test(enabled = true)
-    public void memberSearch_disable() {
+    public void memberSearch_disable() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
 
         sendKeys(memberSearch, "常驻禁用成员");
+        Thread.sleep(200);
         String name = getText(memberList_email_1);
         assertEquals(name, "testEnterprise07@qq.com");
 
