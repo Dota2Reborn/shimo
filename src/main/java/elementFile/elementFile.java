@@ -616,7 +616,7 @@ public class elementFile {
 	public WebElement invite_member;
 	@SearchWith(pageName = "companyManagement", elementName = "addMember", noteName = "成员管理-添加成员按钮")
 	public WebElement addMember;
-	@SearchWith(pageName = "companyManagement", elementName = "address_cppy", noteName = "企业设置-添加成员-复制链接按钮")
+	@SearchWith(pageName = "companyManagement", elementName = "address_copy", noteName = "企业设置-添加成员-复制链接按钮")
 	public WebElement address_copy;
 	@SearchWith(pageName = "companyManagement", elementName = "message_ok", noteName = "消息确认按钮")
 	public WebElement message_ok;

@@ -1070,7 +1070,7 @@
 				"note": "提示消息"
 			},
 			{
-				"elementName": "address_cppy",
+				"elementName": "address_copy",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='invitation-panel-foot']//button",
 				"note": "企业设置-添加成员-复制链接按钮"
