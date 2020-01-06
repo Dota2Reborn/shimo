@@ -15,7 +15,7 @@ import static org.testng.Assert.*;
 public class testCompanyManagement_1 extends TestInit {
 
     /**
-     * 谁能邀请新成员进企业-所有企业成员
+     * 谁能邀请新成员进企业-所有企业成员//todo
      *
      * @author 刘晨
      * @Time 2017-01-08
@@ -36,8 +36,8 @@ public class testCompanyManagement_1 extends TestInit {
         click(desktop_user_icon_companyManagement);
         click(addMember);
 
-        wait.until(ExpectedConditions.elementToBeClickable(address_cppy));
-        Boolean clickAble = address_cppy.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(address_copy));
+        Boolean clickAble = address_copy.isDisplayed();
 
         assertTrue(clickAble);
     }
