@@ -223,9 +223,6 @@ public class elementFile {
 	/** header上协作者按钮 */
 	@SearchWith(pageName = "doc", elementName = "b_collaborator")
 	public WebElement b_collaborator;
-	/** header上添加协作者邮箱输入框 */
-	@SearchWith(pageName = "doc", elementName = "input_collaborator")
-	public WebElement input_collaborator;
 	/** header上分享按钮 */
 	@SearchWith(pageName = "doc", elementName = "b_share")
 	public WebElement b_share;
@@ -620,7 +617,7 @@ public class elementFile {
 	@SearchWith(pageName = "companyManagement", elementName = "addMember", noteName = "成员管理-添加成员按钮")
 	public WebElement addMember;
 	@SearchWith(pageName = "companyManagement", elementName = "address_cppy", noteName = "企业设置-添加成员-复制链接按钮")
-	public WebElement address_cppy;
+	public WebElement address_copy;
 	@SearchWith(pageName = "companyManagement", elementName = "message_ok", noteName = "消息确认按钮")
 	public WebElement message_ok;
 	@SearchWith(pageName = "companyManagement", elementName = "message_warning", noteName = "提示消息")
@@ -645,12 +642,6 @@ public class elementFile {
 	/** 企业设置-谁能添加外部协作者（设置按钮） */
 	@SearchWith(pageName = "companyManagement", elementName = "button_addCollaborators")
 	public WebElement button_addCollaborators;
-	@SearchWith(pageName = "companyManagement", elementName = "menu_1", noteName = "企业设置 - 更改选项（任一）- 第一个选项")
-	public WebElement addCollaborators_1;
-	@SearchWith(pageName = "companyManagement", elementName = "menu_2", noteName = "企业设置 - 更改选项（任一）- 第二个选项")
-	public WebElement addCollaborators_2;
-	@SearchWith(pageName = "companyManagement", elementName = "menu_3", noteName = "企业设置-谁能添加外部协作者-仅企业创建者和管理员，以及文件所有者")
-	public WebElement addCollaborators_3;
 	@SearchWith(pageName = "companyManagement", elementName = "transferCompany", noteName = "企业设置-移交企业")
 	public WebElement transferCompany;
 	@SearchWith(pageName = "companyManagement", elementName = "transferCompany_button", noteName = "企业设置-移交企业-移交企业确认按钮")
@@ -668,9 +659,11 @@ public class elementFile {
 	/** 企业设置-成员列表-禁用成员的发起交接按钮 */
 	@SearchWith(pageName = "companyManagement", elementName = "b_handover")
 	public WebElement b_handover;
-	@SearchWith(pageName = "companyManagement", elementName = "b_delMember_confirm", noteName = "通讯录-成员列表-移除成员-确认按钮")
+	/** 通讯录-成员列表-移除成员-确认按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_delMember_confirm")
 	public WebElement b_delMember_confirm;
-	@SearchWith(pageName = "companyManagement", elementName = "list_department_1", noteName = "通讯录-组织架构根部门")
+	/** 通讯录-组织架构根部门 */
+	@SearchWith(pageName = "companyManagement", elementName = "list_department_1")
 	public WebElement list_department_1;
 
 
@@ -769,31 +762,9 @@ public class elementFile {
 	 * Registered
 	 * 注册页面相关
 	 */
-	@SearchWith(pageName = "Registered", elementName = "userName", noteName = "昵称")
-	public WebElement userName;
-	@SearchWith(pageName = "Registered", elementName = "userEmail", noteName = "登录邮箱")
-	public WebElement Email;
-	@SearchWith(pageName = "Registered", elementName = "userMobile", noteName = "登录手机号")
-	public WebElement userMobile;
-	@SearchWith(pageName = "Registered", elementName = "userPwd", noteName = "密码")
-	public WebElement Pwd;
-	@SearchWith(pageName = "Registered", elementName = "reUserPwd", noteName = "确认密码")
-	public WebElement rePwd;
-	@SearchWith(pageName = "Registered", elementName = "verifyCode", noteName = "验证码")
+	/** 注册页面-验证码输入框 */
+	@SearchWith(pageName = "Registered", elementName = "verifyCode")
 	public WebElement verifyCode;
-	@SearchWith(pageName = "Registered", elementName = "Next", noteName = "免费注册")
-	public WebElement Next;
-	@SearchWith(pageName = "Registered", elementName = "personalRegister", noteName = "免费注册个人账号")
-	public WebElement personalRegister;
-	@SearchWith(pageName = "Registered", elementName = "emailRegister", noteName = "邮箱注册")
-	public WebElement emailRegister;
-	@SearchWith(pageName = "Registered", elementName = "mobileRegister", noteName = "手机注册")
-	public WebElement mobileRegister;
-	@SearchWith(pageName = "Registered", elementName = "wechatRegister", noteName = "微信注册")
-	public WebElement wechatRegister;
-	@SearchWith(pageName = "Registered", elementName = "b_pass", noteName = "绑定手机/邮箱送高级版，跳过按钮")
-	public WebElement b_pass;
-
 	/** 注册页面-手机号输入框 */
 	@SearchWith(pageName = "Registered", elementName = "input_registered_mobile")
 	public WebElement input_registered_mobile;
@@ -1595,15 +1566,6 @@ public class elementFile {
     /** 【新协作面板】协作者变更toast */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "toast_addCollaborator")
     public WebElement toast_addCollaborator;
-    /** 【新协作面板】协作者列表标签切换-协作者 */
-    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_collaborator")
-    public WebElement tabs_collaborator;
-    /** 【新协作面板】协作者列表标签切换-管理员 */
-    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_management")
-    public WebElement tabs_management;
-    /** 【新协作面板】添加协作者列表标签切换-最近 */
-    @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_soon")
-    public WebElement tabs_soon;
     /** 【新协作面板】协作者列表标签切换-企业全员 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "tabs_companyMember")
     public WebElement tabs_companyMember;

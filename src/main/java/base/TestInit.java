@@ -105,6 +105,10 @@ public class TestInit extends elementFile {
         sendKeys(userPwd, pwd);
         click(login_submit);
 
+        if (driver.getCurrentUrl().startsWith(test_url + "login")) {
+            jumpToURL(test_url + "login");
+        }
+
 //        gooiest();//跳过引导页
 //        Sticker_Face();//付费提示框
 //        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));

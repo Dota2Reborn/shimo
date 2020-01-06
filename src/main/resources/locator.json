@@ -196,76 +196,10 @@
 		"pageName": "Registered",
 		"elements": [
 			{
-				"note": "昵称",
-				"elementName": "userName",
-				"locateUsing": "name",
-				"locator": "nickname"
-			},
-			{
-				"note": "登录邮箱",
-				"elementName": "userEmail",
-				"locateUsing": "name",
-				"locator": "email"
-			},
-			{
-				"note": "登录手机号",
-				"elementName": "userMobile",
-				"locateUsing": "name",
-				"locator": "mobileWithPrefix"
-			},
-			{
-				"note": "密码",
-				"elementName": "userPwd",
-				"locateUsing": "name",
-				"locator": "password"
-			},
-			{
-				"note": "确认密码",
-				"elementName": "reUserPwd",
-				"locateUsing": "name",
-				"locator": "rePassword"
-			},
-			{
-				"note": "验证码",
+				"note": "注册页面-验证码输入框",
 				"elementName": "verifyCode",
 				"locateUsing": "name",
 				"locator": "verifyCode"
-			},
-			{
-				"note": "免费注册",
-				"elementName": "Next",
-				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'免费注册')]"
-			},
-			{
-				"note": "免费注册个人账号",
-				"elementName": "personalRegister",
-				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'免费注册个人帐号')]"
-			},
-			{
-				"note": "邮箱注册",
-				"elementName": "emailRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'邮箱注册')]"
-			},
-			{
-				"note": "手机注册",
-				"elementName": "mobileRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'手机注册')]"
-			},
-			{
-				"note": "微信注册",
-				"elementName": "wechatRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'微信注册')]"
-			},
-			{
-				"note": "绑定手机/邮箱送高级版，跳过按钮",
-				"elementName": "b_pass",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'跳过')]"
 			},
 			{
 				"note": "注册页面-手机号输入框",
@@ -571,25 +505,25 @@
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[1]",
+				"locator": "(//span[@class='rc-tree-title']/div)[2]",
 				"note": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[2]",
+				"locator": "(//span[@class='rc-tree-title']/div)[3]",
 				"note": "移动文件到文件夹，选择列表中第二个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
-				"locator": "//span[@class='rc-tree-title']/div",
+				"locator": "(//span[@class='rc-tree-title']/div)[1]",
 				"note": "移动文件到文件夹，列表切到我的桌面按钮"
 			},
 			{
 				"elementName": "desktop_moveToSpace_space_1",
 				"locateUsing": "xpath",
-				"locator": "(//ul[@class='rc-tree']/li)[2]",
+				"locator": "(//div[@class='rc-tree-list-holder-inner']/div)[2]",
 				"note": "移动文件到协作空间，列表中第一个协作空间"
 			},
 			{
@@ -1043,12 +977,6 @@
 				"locateUsing": "xpath",
 				"locator": "//button[contains(text(),'协作')]",
 				"note": "header上协作者按钮"
-			},
-			{
-				"elementName": "input_collaborator",
-				"locateUsing": "xpath",
-				"locator": "//input[@data-test='collaborator-search-inputbox']",
-				"note": "header上添加协作者邮箱输入框"
 			},
 			{
 				"elementName": "b_share",
@@ -3517,37 +3445,37 @@
 			{
 				"elementName": "space_move_listing1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[1]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[1]",
 				"note": "移动文件列表1"
 			},
 			{
 				"elementName": "space_move_listing2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[2]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[2]",
 				"note": "txt文件预2"
 			},
 			{
 				"elementName": "space_move_listing3",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[3]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[3]",
 				"note": "移动文件列表3"
 			},
 			{
 				"elementName": "space_move_listing4",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[4]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[4]",
 				"note": "移动文件列表4"
 			},
 			{
 				"elementName": "space_move_listing5",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[5]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[5]",
 				"note": "移动文件列表5"
 			},
 			{
 				"elementName": "space_move_listing8",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[8]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[8]",
 				"note": "移动文件列表8"
 			},
 			{
@@ -3893,24 +3821,6 @@
 				"locateUsing": "xpath",
 				"locator": "(//div[@id='toast-container']/div/div)[last()]",
 				"note": "【新协作面板】协作者变更toast"
-			},
-			{
-				"elementName": "tabs_collaborator",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'协作者')]",
-				"note": "【新协作面板】协作者列表标签切换-协作者"
-			},
-			{
-				"elementName": "tabs_management",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'管理员')]",
-				"note": "【新协作面板】协作者列表标签切换-管理员"
-			},
-			{
-				"elementName": "tabs_soon",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'最近')]",
-				"note": "【新协作面板】添加协作者列表标签切换-最近"
 			},
 			{
 				"elementName": "tabs_companyMember",
