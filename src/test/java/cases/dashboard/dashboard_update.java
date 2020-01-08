@@ -226,10 +226,6 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_2_list);
-//        click(list_addCollaborator_4);
-//        click(Shut_down_sm_modal_close_x);
         removeCollaboratorByPosition(1);
 
         logout();
@@ -242,13 +238,7 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        click(addCollaborator_1_add);
-//        click(b_addCollaborator_ok);
-//        click(Shut_down_sm_modal_close_x);
         addCollaboratorByEmail("gengxin13@shimo.im", 1);
-
     }
 
     /**

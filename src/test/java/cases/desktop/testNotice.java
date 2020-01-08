@@ -138,7 +138,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_5() {
+	public void notice_5() throws InterruptedException {
 		login("autoTest14@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -157,6 +157,7 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
+		Thread.sleep(500);
 		Boolean result = doesWebElementExist(doc_discuss_input);
 		assertTrue(result);
 	}

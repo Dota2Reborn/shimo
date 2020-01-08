@@ -7,8 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 //import org.openqa.selenium.WebDriver;
 
@@ -168,7 +167,7 @@ public class testAlertMute extends TestInit {
      * @Time 2018-03-23
      */
     @Test(enabled = true)
-    public void Folder_notifications() {
+    public void Folder_notifications() throws InterruptedException {
 
         login("AlertMute5@shimo.im", "123123");
         click(desktop);
@@ -191,9 +190,9 @@ public class testAlertMute extends TestInit {
         click(menu_mute);
         click(Folder_settings);
         click(menu_mute);
+        Thread.sleep(500);
         Boolean r1 = doesWebElementExist(By.className("mute-icon"));
         assertTrue(r1);
-
     }
 
 
