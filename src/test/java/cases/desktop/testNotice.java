@@ -157,8 +157,7 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(End_Discussion));
-		Boolean result = doc_discuss_input.isDisplayed();
+		Boolean result = doesWebElementExist(doc_discuss_input);
 		assertTrue(result);
 	}
 
