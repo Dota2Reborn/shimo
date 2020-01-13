@@ -21,12 +21,12 @@ public class testMemberList extends TestInit {
         click(b_addMember);
         sendKeys(input_addMember, "testEnterprise01@qq.com");
         click(b_confirm_addMember);
-        click(b_close_addMember);
+//        click(b_close_addMember);
         controlMember("testEnterprise01@qq.com");
         click(b_cancel_invite);
 
         String msg = getText(toast_msg);
-        assertEquals(msg, "操作成功");
+        assertEquals(msg, "成功添加 1 人");
 
         driver.navigate().refresh();
         Boolean r = checkMember("testEnterprise01@qq.com");
@@ -57,7 +57,7 @@ public class testMemberList extends TestInit {
         click(b_addMember);
         sendKeys(input_addMember, "testEnterprise02@qq.com");
         click(b_confirm_addMember);
-        click(b_close_addMember);
+//        click(b_close_addMember);
 
         logout();
         login("testEnterprise02@qq.com", "123123");
