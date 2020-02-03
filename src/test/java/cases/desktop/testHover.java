@@ -17,7 +17,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-09
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -73,7 +73,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-09
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person1() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -91,7 +91,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-09
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person2() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -109,7 +109,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-12
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person3() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -153,7 +153,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-12
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person5() {
 
         login("autoTesthover@shimo.im", "123123");
@@ -173,7 +173,7 @@ public class testHover extends TestInit {
      * @author 陈清杰
      * @Time 2018-01-12
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person6() {
 
         login("logoutTest@shimo.im", "123123");
@@ -188,7 +188,7 @@ public class testHover extends TestInit {
     }
 
     /**
-     * 高级版 hover头像 鼠标 hover 到头像上
+     * 远程办公版 hover头像 鼠标 hover 到头像上
      *
      * @author 陈清杰
      * @Time 2018-01-16
@@ -205,7 +205,7 @@ public class testHover extends TestInit {
         assertEquals(result, "gaoji1");
 
         String result1 = getText(desktop_user_icon_status_L);
-        assertEquals(result1, "高级版");
+        assertEquals(result1, "远程办公版");
 
         String result2 = getText(desktop_user_icon_status_R);
         assertEquals(result2, "续费或升级到企业版");
@@ -217,7 +217,7 @@ public class testHover extends TestInit {
     }
 
     /**
-     * 高级版 hover头像 鼠标 hover 到头像上，点击续费
+     * 远程办公版 hover头像 鼠标 hover 到头像上，点击续费
      *
      * @author 陈清杰
      * @Time 2018-01-16
@@ -241,7 +241,7 @@ public class testHover extends TestInit {
     }
 
     /**
-     * 高级版 hover头像 鼠标 hover 到头像上，点击升级到企业版
+     * 远程办公版 hover头像 鼠标 hover 到头像上，点击升级到企业版
      *
      * @author 陈清杰
      * @Time 2018-01-16
@@ -285,12 +285,12 @@ public class testHover extends TestInit {
     }
 
     /**
-     * 高级版过期，hover到头像上
+     * 远程办公版过期，hover到头像上
      *
      * @author 陈清杰
      * @Time 2018-01-16
      */
-    @Test
+    @Test(enabled = false)
     public void hover_person11() {
 
         login("pijiu@shimo.im", "123123");

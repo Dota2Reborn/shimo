@@ -99,7 +99,7 @@ public class testAlertMute extends TestInit {
         click(dashboard_activitiesByFile);
         Boolean exist1 = doesWebElementExist(dashboard_share_file_1);
         int i = 1;
-        while (exist1 == false && i < 6) {
+        while (!exist1 && i < 6) {
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(dashboard));
             exist1 = doesWebElementExist(dashboard_share_file_1);
@@ -186,13 +186,16 @@ public class testAlertMute extends TestInit {
                 click(menu_mute);
             }
         }
+        Thread.sleep(500);
+        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
+        assertFalse(r1);
         contextClick(desktop1_1);
         click(menu_mute);
         click(Folder_settings);
         click(menu_mute);
         Thread.sleep(500);
-        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
-        assertTrue(r1);
+        Boolean r2 = doesWebElementExist(By.className("mute-icon"));
+        assertTrue(r2);
     }
 
 
