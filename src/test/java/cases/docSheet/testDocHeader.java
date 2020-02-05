@@ -27,7 +27,7 @@ public class testDocHeader extends TestInit {
         Thread.sleep(500);
         driver.findElement(By.xpath("//div[@class='sm-modal-footer']/button[1]")).click();
         String msg = getText(toast_msg);
-        assertEquals(msg, "模板保存成功。在「新建」-「从模板新建」-「我的模板」中查看");
+        assertEquals(msg, "请整理模板库或升级账户");
 
     }
 
