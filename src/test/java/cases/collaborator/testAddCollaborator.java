@@ -74,7 +74,7 @@ public class testAddCollaborator extends TestInit {
 //        click(addCollaborator_1_add);
 //        click(b_addCollaborator_ok);
         String userName = getText(list_collaboratorName_1);
-        click(addCollaborator_1_add);
+        click(b_collaboratorsList_1);
         click(cpList_edit);
         click(b_spacingCollaborator_close);
 

@@ -336,7 +336,8 @@ public class testSpacePermissions  extends TestInit {
         moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_collaboration);
-        Boolean r = doesWebElementExist(b_add_Collaborator);
+//        Boolean r = doesWebElementExist(b_add_Collaborator);
+        Boolean r = getAttribute(b_add_Collaborator, "data-disabled").equals("false");
 
         assertFalse(r);
     }
@@ -353,7 +354,7 @@ public class testSpacePermissions  extends TestInit {
         moveToElement(space_listing_2);
         click(b_SpaceSetting2);
         click(b_SpaceSetting_collaboration);
-        Boolean r = doesWebElementExist(b_add_Collaborator);
+        Boolean r = getAttribute(b_add_Collaborator, "data-disabled").equals("false");
 
         assertFalse(r);
 

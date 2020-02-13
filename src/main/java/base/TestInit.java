@@ -176,18 +176,20 @@ public class TestInit extends elementFile {
      * @author 刘晨
      * @Time 2019-3-21
      */
-    public void Registered_new(String name, String user, String pwd, int type) {
+    public void Registered_new(String mobile_verifyCode, String user, String pwd, int type) {
         jumpToURL(test_url + "registType");
         WebElement tab = driver.findElement(By.xpath("//div[@id='root']/div/div[2]/div/div/div[2]"));
         click(tab);
         if (type == 1) {
-            sendKeys(input_registered_nickname, name);
+//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_mobile, user);
             sendKeys(input_registered_password, pwd);
+            if(user.equals("17610101523")){click(b_verifyCode);}
+            sendKeys(verifyCode, mobile_verifyCode);
             click(button_registered);
         }else if(type == 2){
             click(link_registered_useEmail);
-            sendKeys(input_registered_nickname, name);
+//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_email, user);
             sendKeys(input_registered_password, pwd);
             click(button_registered);
@@ -424,7 +426,7 @@ public class TestInit extends elementFile {
                 click(b_spacingCollaborator_addAdmin);
                 sendKeys(input_add_Collaborator, email);
                 for(int i=0; i < 10; i++){
-                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
                 }
                 click(b_spacingCollaborator_addAdmin_1);
@@ -468,7 +470,7 @@ public class TestInit extends elementFile {
             case 2 ://文件夹内右侧直接打开协作面板
                 sendKeys(input_add_Collaborator, email);
                 for(int i=0; i < 10; i++){
-                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
                 }
                 click(b_add_CollaboratorList_1);
@@ -783,6 +785,22 @@ public class TestInit extends elementFile {
         return msg;
     }
 
+    /**
+     * 获取文本信息
+     *
+     * @author 刘晨
+     * @Time 2018-03-23
+     */
+    public String getTextWithoutWait(WebElement element) {
+        String msg = "";
+        try {
+            msg = element.getText();
+        } catch (NoSuchElementException e) {
+            System.out.println(element + "is missing");
+        }
+        return msg;
+    }
+
     public  void  clickDashboardActivitiesByFile(WebElement element){
 
         Boolean r1 = doesWebElementExist(dashboard_activitiesByMember);
@@ -828,18 +846,18 @@ public class TestInit extends elementFile {
         Boolean b_parent = doesWebElementExist(b_checkParent);
         if(b_parent){click(b_checkParent);}
 
-        Boolean parent = doesWebElementExist(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[starts-with(@class,'_name_')]"));
-        Boolean collaborator = doesWebElementExist(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]"));
-        Boolean admin = doesWebElementExist(By.xpath("//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')]"));
+        Boolean parent = doesWebElementExist(By.xpath("//div[@data-test='row_superior_permission']"));
+        Boolean collaborator = doesWebElementExist(By.xpath("//div[@data-test='row_collab']"));
+        Boolean admin = doesWebElementExist(By.xpath("//div[@data-test='row_admin']"));
         if (parent){
-            count_parent = driver.findElements(By.xpath("//div[starts-with(@class,'_superior_list_')]//div[starts-with(@class,'_name_')]")).size();
+            count_parent = driver.findElements(By.xpath("//div[@data-test='row_superior_permission']")).size();
         }
         if(collaborator){
-            count_collaborator = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]//div[starts-with(@class, '_dropdown_wrapper_')]")).size();
+            count_collaborator = driver.findElements(By.xpath("//div[@data-test='row_collab']")).size();
 //            if (b_parent){count_collaborator = count_collaborator - 1;}
         }
         if(admin){
-            count_admin = driver.findElements(By.xpath("//div[starts-with(@class,'_admin_list_')]//div[starts-with(@class,'_dropdown_wrapper_')]")).size();
+            count_admin = driver.findElements(By.xpath("//div[@data-test='row_admin']")).size();
         }
         total = count_parent + count_collaborator + count_admin;
         return total;
@@ -854,8 +872,8 @@ public class TestInit extends elementFile {
     public int getSpaceCollaboratorSize() {
         int result = 0;
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_')]")));
-            result = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]")).size();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_wrapper_')]")));
+            result = driver.findElements(By.xpath("//div[@data-test='row_collab']")).size();
         } catch (NoSuchElementException e) {
             return 0;
         }

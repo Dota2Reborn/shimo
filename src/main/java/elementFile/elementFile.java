@@ -765,6 +765,9 @@ public class elementFile {
 	/** 注册页面-验证码输入框 */
 	@SearchWith(pageName = "Registered", elementName = "verifyCode")
 	public WebElement verifyCode;
+	/** 注册页面-获取验证码按钮 */
+	@SearchWith(pageName = "Registered", elementName = "b_verifyCode")
+	public WebElement b_verifyCode;
 	/** 注册页面-手机号输入框 */
 	@SearchWith(pageName = "Registered", elementName = "input_registered_mobile")
 	public WebElement input_registered_mobile;
@@ -780,9 +783,18 @@ public class elementFile {
 	/** 注册页面-注册按钮 */
 	@SearchWith(pageName = "Registered", elementName = "button_registered")
 	public WebElement button_registered;
-	/** 注册页面-提示信息 */
-	@SearchWith(pageName = "Registered", elementName = "tips_registered")
-	public WebElement tips_registered;
+	/** 注册页面-密码提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_registered_password")
+	public WebElement tips_registered_password;
+	/** 注册页面-手机号提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_registered_mobile")
+	public WebElement tips_registered_mobile;
+	/** 注册页面-验证码提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_registered_verifyCode")
+	public WebElement tips_registered_verifyCode;
+	/** 注册页面-邮箱提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_registered_email")
+	public WebElement tips_registered_email;
 	/** 注册页面-使用邮箱注册 */
 	@SearchWith(pageName = "Registered", elementName = "link_registered_useEmail")
 	public WebElement link_registered_useEmail;

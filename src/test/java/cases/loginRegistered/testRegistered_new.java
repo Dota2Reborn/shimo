@@ -10,32 +10,58 @@ import static org.testng.Assert.assertTrue;
 
 public class testRegistered_new extends TestInit {
 
+//    /**
+//     * 用户注册特殊情况输入空昵称
+//     *
+//     * @author 刘晨
+//     * @Time 2019-03-21
+//     */
+//    @Test(enabled = false)
+//    public void mobile_Registered_1() {
+////        Registered_new("", "13911658584", "123123", 1);
+////
+////        String msg = getText(tips_registered);
+////        assertEquals("请填写昵称", msg);
+//    }
+
     /**
-     * 用户注册特殊情况输入空昵称
+     * 验证码为空
      *
      * @author 刘晨
      * @Time 2019-03-21
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void mobile_Registered_1() {
         Registered_new("", "13911658584", "123123", 1);
 
-        String msg = getText(tips_registered);
-        assertEquals("请填写昵称", msg);
+        String msg = getText(tips_registered_verifyCode);
+        assertEquals("请填写验证码", msg);
     }
 
+//    /**
+//     * 用户注册特殊情况输入包含特殊字符的用户名
+//     *
+//     * @author 刘晨
+//     * @Time 2019-03-21
+//     */
+//    @Test(enabled = false)
+//    public void mobile_Registered_2() {
+////        Registered_new("��都嗨��、齐静��给你��", "13911658584", "123123", 1);
+////        String msg = getText(tips_registered);
+////        assertEquals("用户名包含不支持的符号，请检查并重新输入", msg);
+//    }
+
     /**
-     * 用户注册特殊情况输入包含特殊字符的用户名
+     * 用户注册输入错误的验证码
      *
      * @author 刘晨
      * @Time 2019-03-21
      */
     @Test(enabled = true)
     public void mobile_Registered_2() {
-
-        Registered_new("��都嗨��、齐静��给你��", "13911658584", "123123", 1);
-        String msg = getText(tips_registered);
-        assertEquals("用户名包含不支持的符号，请检查并重新输入", msg);
+        Registered_new("1234", "13911658584", "123123", 1);
+        String msg = getText(tips_registered_verifyCode);
+        assertEquals("验证码不正确，请重新填写", msg);
     }
 
     /**
@@ -46,8 +72,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void mobile_Registered_3() {
-        Registered_new("ApexLegends", "", "123123", 1);
-        String msg = getText(tips_registered);
+        Registered_new("2222", "", "123123", 1);
+        String msg = getText(tips_registered_mobile);
         assertEquals("请填写手机号", msg);
     }
 
@@ -60,8 +86,8 @@ public class testRegistered_new extends TestInit {
 
     @Test(enabled = true)
     public void mobile_Registered_4() {
-        Registered_new("ApexLegends", "13911658584", "", 1);
-        String msg = getText(tips_registered);
+        Registered_new("2222", "13911658584", "", 1);
+        String msg = getText(tips_registered_password);
         assertEquals("请填写密码", msg);
     }
 
@@ -73,8 +99,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void mobile_Registered_5() {
-        Registered_new("ApexLegends", "13911658584", "123", 1);
-        String msg = getText(tips_registered);
+        Registered_new("2222", "13911658584", "123", 1);
+        String msg = getText(tips_registered_password);
         assertEquals("密码不能小于 6 个字符", msg);
 
     }
@@ -87,8 +113,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void mobile_Registered_6() {
-        Registered_new("ApexLegends", "13911658584", " 123", 1);
-        String msg = getText(tips_registered);
+        Registered_new("2222", "13911658584", " 123", 1);
+        String msg = getText(tips_registered_password);
         assertEquals("密码首尾不能有空格", msg);
     }
 
@@ -100,8 +126,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void mobile_Registered_7() {
-        Registered_new("ApexLegends", "13911658584", "��都嗨��", 1);
-        String msg = getText(tips_registered);
+        Registered_new("2222", "13911658584", "��都嗨��", 1);
+        String msg = getText(tips_registered_password);
         assertEquals("密码包含不支持的特殊符号，请检查并重新输入", msg);
 
     }
@@ -113,12 +139,12 @@ public class testRegistered_new extends TestInit {
      * @author 刘晨
      * @Time 2019-03-21
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void email_Registered_1() {
-        Registered_new("", "13911658584", "123123", 2);
-
-        String msg = getText(tips_registered);
-        assertEquals("请填写昵称", msg);
+//        Registered_new("", "13911658584", "123123", 2);
+//
+//        String msg = getText(tips_registered);
+//        assertEquals("请填写昵称", msg);
     }
 
     /**
@@ -127,12 +153,12 @@ public class testRegistered_new extends TestInit {
      * @author 刘晨
      * @Time 2019-03-21
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void email_Registered_2() {
 
-        Registered_new("��都嗨��、齐静��给你��", "ApexLegendary@shimo.im", "123123", 2);
-        String msg = getText(tips_registered);
-        assertEquals("用户名包含不支持的符号，请检查并重新输入", msg);
+//        Registered_new("��都嗨��、齐静��给你��", "ApexLegendary@shimo.im", "123123", 2);
+//        String msg = getText(tips_registered);
+//        assertEquals("用户名包含不支持的符号，请检查并重新输入", msg);
     }
 
     /**
@@ -143,8 +169,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void email_Registered_3() {
-        Registered_new("ApexLegends", "", "123123", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "", "123123", 2);
+        String msg = getText(tips_registered_email);
         assertEquals("请填写邮箱", msg);
     }
 
@@ -157,8 +183,8 @@ public class testRegistered_new extends TestInit {
 
     @Test(enabled = true)
     public void email_Registered_4() {
-        Registered_new("ApexLegends", "ApexLegendary@shimo.im", "", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "ApexLegendary@shimo.im", "", 2);
+        String msg = getText(tips_registered_password);
         assertEquals("请填写密码", msg);
     }
 
@@ -170,8 +196,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void email_Registered_5() {
-        Registered_new("ApexLegends", "ApexLegendary@shimo.im", "123", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "ApexLegendary@shimo.im", "123", 2);
+        String msg = getText(tips_registered_password);
         assertEquals("密码不能小于 6 个字符", msg);
 
     }
@@ -184,8 +210,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void email_Registered_6() {
-        Registered_new("ApexLegends", "ApexLegendary@shimo.im", " 123", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "ApexLegendary@shimo.im", " 123", 2);
+        String msg = getText(tips_registered_password);
         assertEquals("密码首尾不能有空格", msg);
     }
 
@@ -197,8 +223,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void email_Registered_7() {
-        Registered_new("ApexLegends", "ApexLegendary@shimo.im", "��都嗨��", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "ApexLegendary@shimo.im", "��都嗨��", 2);
+        String msg = getText(tips_registered_password);
         assertEquals("密码包含不支持的特殊符号，请检查并重新输入", msg);
 
     }
@@ -211,8 +237,8 @@ public class testRegistered_new extends TestInit {
      */
     @Test(enabled = true)
     public void email_Registered_8() {
-        Registered_new("ApexLegends", "123", "123123", 2);
-        String msg = getText(tips_registered);
+        Registered_new("", "123", "123123", 2);
+        String msg = getText(tips_registered_email);
         assertEquals("邮箱格式不正确，请重新输入", msg);
 
     }
@@ -226,10 +252,9 @@ public class testRegistered_new extends TestInit {
     @Test
     public void mobile_Registered_success() throws InterruptedException {
         //17610101523
-        Registered_new("测试", "17610101523", "123123", 1);
-        sendKeys(verifyCode, "2222");
-        click(button_registered_confirm);
+        Registered_new("2222", "17610101523", "123123", 1);
 
+        Thread.sleep(8000);
         click(desktop_user_icon);
         click(desktop_user_icon_personSetting);
         click(mobile_setting);
