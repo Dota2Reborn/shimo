@@ -61,7 +61,7 @@ public class testRegistered_new extends TestInit {
     public void mobile_Registered_2() {
         Registered_new("1234", "13911658584", "123123", 1);
         String msg = getText(tips_registered_verifyCode);
-        assertEquals("验证码不正确，请重新填写", msg);
+        assertEquals("验证码已失效", msg);
     }
 
     /**
