@@ -9,6 +9,9 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import static org.testng.Assert.*;
 
@@ -494,16 +497,15 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_word_tab() throws InterruptedException {
+    public void Space_word_tab() {
         login("Space_word@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(800);
-        driver.close();
-        switchToPage(0);
-        String time = doc_title_input.getAttribute("value");
-        assertEquals(time, "这是文档");
+        Set<String> winHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(winHandles);
+        int n = it.size();
+        assertEquals(2, n);
     }
     /**
      * 右键添加协作者
