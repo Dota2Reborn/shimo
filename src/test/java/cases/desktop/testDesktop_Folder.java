@@ -19,7 +19,7 @@ public class testDesktop_Folder extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_show_type() {
 
         login("autoTest_Folder@shimo.im", "123123");
