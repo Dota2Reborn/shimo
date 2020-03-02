@@ -14,7 +14,7 @@ public class testCompanyManagement extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = true)
-    public void addCollaborators_ManagerAndCreator() {
+    public void addCollaborators_ManagerAndCreator() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -55,7 +55,7 @@ public class testCompanyManagement extends TestInit {
      * @Time 2018-03-05
      */
     @Test(enabled = true)
-    public void addCollaborators_all() {
+    public void addCollaborators_all() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -84,7 +84,7 @@ public class testCompanyManagement extends TestInit {
      * @Time 2018-03-06
      */
     @Test(enabled = true)
-    public void addCollaborators_ownerManagerAndCreator() {
+    public void addCollaborators_ownerManagerAndCreator() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);

@@ -80,7 +80,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_3() {
+	public void notice_3() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 
@@ -108,7 +108,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_4() {
+	public void notice_4() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 

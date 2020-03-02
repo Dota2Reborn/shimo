@@ -145,7 +145,7 @@ public class dashboard_used extends TestInit {
      * @author 陈清杰 @Time2018-03-16 账号状态：没有文件
      **/
     @Test
-    public void used7() {
+    public void used7() throws InterruptedException {
         login("zuijin9@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
@@ -192,7 +192,7 @@ public class dashboard_used extends TestInit {
      * @author 陈清杰 @Time2018-03-19 账号状态:没有文件
      **/
     @Test
-    public void used8() {
+    public void used8() throws InterruptedException {
 
         login("zuijin55@shimo.im", "123123");
         click(desktop_new);

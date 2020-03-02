@@ -18,7 +18,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-6-27
      */
     @Test(enabled = false)
-    public void authorityForAddCollaborator_1() {
+    public void authorityForAddCollaborator_1() throws InterruptedException {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
@@ -40,7 +40,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-6-27
      */
     @Test(enabled = false)
-    public void authorityForAddCollaborator_2() {
+    public void authorityForAddCollaborator_2() throws InterruptedException {
         login("0000000@qq.com", "123123");
         click(desktop);
         contextClick(desktop1_1);
@@ -85,7 +85,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_4() {
+    public void authorityForAddCollaborator_4() throws InterruptedException {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -160,7 +160,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_7() {
+    public void authorityForAddCollaborator_7() throws InterruptedException {
         login("AddCollaborator_04_1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);

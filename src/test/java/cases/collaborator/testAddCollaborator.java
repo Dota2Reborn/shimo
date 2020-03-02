@@ -16,7 +16,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-22
      */
     @Test(enabled = false)
-    public void addCollaborator_1() {
+    public void addCollaborator_1() throws InterruptedException {
         login("jcbyh@shimo.im", "123123");
 
         click(desktop);
@@ -40,7 +40,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-21
      */
     @Test(enabled = true)
-    public void addCollaborator_2() {
+    public void addCollaborator_2() throws InterruptedException {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -146,7 +146,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-01
      */
     @Test(enabled = true)
-    public void addCollaborator_6() {
+    public void addCollaborator_6() throws InterruptedException {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -168,7 +168,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-01
      */
     @Test(enabled = false)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
-    public void addCollaborator_7() {
+    public void addCollaborator_7() throws InterruptedException {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
 
@@ -216,7 +216,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-12-07
      */
     @Test(enabled = true)
-    public void addCollaborator_9() {
+    public void addCollaborator_9() throws InterruptedException {
         login("folder_addCollaborat@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);

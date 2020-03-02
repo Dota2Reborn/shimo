@@ -147,7 +147,7 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin9存在一个固定的文件
      */
     @Test
-    public void update7() {
+    public void update7() throws InterruptedException {
         login("gengxin9@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
@@ -212,7 +212,7 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin13有12共享的文件
      */
     @Test
-    public void update9() {
+    public void update9() throws InterruptedException {
         login("gengxin13@shimo.im", "123123");
         click(dashboard_4);
         click(dashboard_update_time);

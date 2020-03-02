@@ -83,7 +83,7 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-19
      */
     @Test(enabled = true)
-    public void dashboard_share() {
+    public void dashboard_share() throws InterruptedException {
         login("autoTest06@shimo.im", "123123");
 
         click(desktop);

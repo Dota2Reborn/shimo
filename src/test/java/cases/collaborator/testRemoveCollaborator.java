@@ -17,7 +17,7 @@ public class testRemoveCollaborator extends TestInit {
      */
 
     @Test
-    public void Remove_1() {
+    public void Remove_1() throws InterruptedException {
         login("remove1@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
@@ -39,7 +39,7 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_2() {
+    public void Remove_2() throws InterruptedException {
         login("remove3@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -63,7 +63,7 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_3() {
+    public void Remove_3() throws InterruptedException {
         login("remove4@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -94,7 +94,7 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_5() {
+    public void Remove_5() throws InterruptedException {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);

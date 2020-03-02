@@ -113,7 +113,7 @@ public class dashboard_own extends TestInit {
      * @Time 2018-03-21
      */
     @Test
-    public void own5() {
+    public void own5() throws InterruptedException {
         login("own6@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
