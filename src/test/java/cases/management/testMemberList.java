@@ -66,7 +66,7 @@ public class testMemberList extends TestInit {
         click(dashboard_notice_list_1_button);
         click(confirmJoinCompany);
 
-        Thread.sleep(500);
+        Thread.sleep(1000);
         click(company_setting);
         click(button_exitCompany);
         click(message_ok);
