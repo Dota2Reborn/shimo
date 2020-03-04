@@ -241,7 +241,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_docx() throws InterruptedException {
+    public void desktop_import_docx() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -250,8 +250,7 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
-        Thread.sleep(2000);
-        click(b_back);
+        click(desktop_newFolder_name_cancel);
 
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);

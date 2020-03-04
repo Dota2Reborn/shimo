@@ -231,8 +231,10 @@ public class dashboard_update extends TestInit {
         logout();
         login("gengxin13@shimo.im", "123123");
         click(dashboard_activitiesByFile);
-        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
-        assertEquals(text2, "没有文件");
+//        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
+//        assertEquals(text2, "没有文件");
+        Boolean r1 = doesWebElementExist(dashboard_update_name);
+        assertFalse(r1);
 
         logout();
         login("gengxin12@shimo.im", "123123");
