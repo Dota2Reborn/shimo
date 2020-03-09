@@ -265,7 +265,7 @@
 				"note": "注册页面-使用邮箱注册",
 				"elementName": "link_registered_useEmail",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='form-wrapper']/div/div/span"
+				"locator": "//div[@class='form-wrapper']/div/div[contains(text(),'使用邮箱注册')]"
 			},
 			{
 				"note": "填写验证码页面-确定按钮",
