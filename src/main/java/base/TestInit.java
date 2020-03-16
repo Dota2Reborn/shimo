@@ -598,12 +598,12 @@ public class TestInit extends elementFile {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(Back_to_Dashboard.toString()) || element.toString().equals(doc_menu_delete_OK.toString())) {
                 // 离开文档表格编辑页
-                checkPageIsReady();
+//                checkPageIsReady();
                 wait.until(ExpectedConditions.elementToBeClickable(element));
-                wait.until(ExpectedConditions
-                        .invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
+//                wait.until(ExpectedConditions
+//                        .invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
                 element.click();
-                driver.switchTo().alert().accept();
+//                driver.switchTo().alert().accept();
             } else if (element.toString().equals(desktop.toString())) {
                 // 点击我的桌面
                 clickDesktop(element);
