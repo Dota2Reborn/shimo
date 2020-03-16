@@ -19,7 +19,6 @@ public class testRecycleBin extends TestInit {
     public void testRecycleBin_1() throws InterruptedException {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
-//        Sort();
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

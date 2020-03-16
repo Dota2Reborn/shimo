@@ -54,6 +54,9 @@ public class baseFunc {
                 option.addArguments("allow-running-insecure-content");
                 option.addArguments("--test-type");
 //				option.addArguments("--headless");
+                option.addArguments("url=data:,");//设置启动浏览器空白页
+                option.addArguments("--hide-scrollbars");//隐藏滚动条
+                option.addArguments("--disable-gpu");//规避浏览器bug
                 driver = new ChromeDriver(option);
             } else if (os.startsWith("Windows") && browser.equals("firefox")) {
                 System.setProperty("webdriver.gecko.driver",
@@ -107,7 +110,7 @@ public class baseFunc {
             } else {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
-//				option.addArguments("--headless");
+//				option.addArguments("--headless");//隐藏浏览器
                 // option.addArguments("--kiosk");
                 option.setCapability("browserName", "chrome");
                 option.setCapability("version", "80");
@@ -116,6 +119,9 @@ public class baseFunc {
                 option.addArguments("start-maximized");  //浏览器最大化
                 option.addArguments("allow-running-insecure-content");
                 option.addArguments("--test-type");
+                option.addArguments("url=data:,");//设置启动浏览器空白页
+                option.addArguments("--hide-scrollbars");//隐藏滚动条
+                option.addArguments("--disable-gpu");//规避浏览器bug
                 URL remoteAddress = new URL(nodeIp + "/wd/hub");
                 driver = new RemoteWebDriver(remoteAddress, option);
             }
