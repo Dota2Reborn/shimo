@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="shimo" parallel="tests" thread-count="3">
+<suite name="shimo" parallel="tests" thread-count="7">
 	<listeners>
 		<listener class-name="testNG.RetryListener"></listener>
 		<listener class-name="testNG.TestListener"></listener>
