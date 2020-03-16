@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="shimo" parallel="tests" thread-count="1">
+<suite name="shimo" parallel="tests" thread-count="3">
 	<listeners>
 		<listener class-name="testNG.RetryListener"></listener>
 		<listener class-name="testNG.TestListener"></listener>
@@ -71,11 +71,11 @@
 			<class name="cases.desktop.testDesktop_new" />
 		</classes>
 	</test>
-	<test name="test13">
-		<classes>
-			<class name="cases.space.testSpacePermissions" />
-		</classes>
-	</test>
+	<!--<test name="test13">-->
+		<!--<classes>-->
+			<!--<class name="cases.space.testSpacePermissions" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test14">
 		<classes>
 			<class name="cases.collaborator.testAuthorityForAddCollaborator" />

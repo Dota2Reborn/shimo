@@ -8,21 +8,9 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+//todo AB test 注册暂时屏蔽
 public class testRegistered_new extends TestInit {
 
-//    /**
-//     * 用户注册特殊情况输入空昵称
-//     *
-//     * @author 刘晨
-//     * @Time 2019-03-21
-//     */
-//    @Test(enabled = false)
-//    public void mobile_Registered_1() {
-////        Registered_new("", "13911658584", "123123", 1);
-////
-////        String msg = getText(tips_registered);
-////        assertEquals("请填写昵称", msg);
-//    }
 
     /**
      * 验证码为空

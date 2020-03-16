@@ -74,20 +74,23 @@ public class SharePage extends TestInit {
      * @Time 2019-7-11
      */
     @Test(enabled = true)
-    public void sharePage_companyOnly_pwd_edit() {
+    public void sharePage_companyOnly_pwd_edit() throws InterruptedException {
         login("pipi@qq.com", "123123");
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
         click(b_share);
         click(share_changePWD);
         String pwd = getAttribute(share_PWD, "value");
 
+//        System.out.println(pwd);
         logout();
 
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
+        Thread.sleep(1000);
         WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div//a"));
         click(button_Confirm);
         login("liuchen@shimo.im","123123");
 
+//        System.out.println(pwd);
         sendKeys(sharePage_inputPwd, pwd);
         click(sharePage_buttonConfirm);
 

@@ -166,7 +166,7 @@ public class testAlertMute extends TestInit {
      * @author 王继程
      * @Time 2018-03-23
      */
-    @Test(enabled = true)
+    @Test(enabled = false)//todo 用例需要优化
     public void Folder_notifications() throws InterruptedException {
 
         login("AlertMute5@shimo.im", "123123");

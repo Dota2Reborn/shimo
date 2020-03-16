@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
+//todo 存在异常数据暂时不跑
 public class testSpacePermissions  extends TestInit {
     /**
      * 空间创建者对于空间的操作  编号72、80、76
