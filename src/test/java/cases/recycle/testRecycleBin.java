@@ -64,8 +64,8 @@ public class testRecycleBin extends TestInit {
         click(menu_Completely_removed);
         click(desktop_newFolder_name_ok);
         Thread.sleep(500);
-        boolean bl = doesWebElementExist(By.className("none-file"));
-        assertEquals(bl, true);
+        String msg = getText(toast_msg);
+        assertEquals(msg, "删除成功");
 
     }
 

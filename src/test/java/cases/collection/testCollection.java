@@ -138,7 +138,7 @@ public class testCollection extends TestInit {
         Sort();
         click(desktop_order);
         click(desktop_orderByFile);
-        driver.navigate().refresh();
+//        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         assertEquals(name1, "第一个创建的");
         click(desktop_order);
