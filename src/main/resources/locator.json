@@ -114,7 +114,7 @@
 			{
 				"elementName": "confirmJoinCompany",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'确认加入')]",
+				"locator": "//button[contains(text(),'了解风险，加入企业')]",
 				"note": "确认加入企业"
 			},
 			{
