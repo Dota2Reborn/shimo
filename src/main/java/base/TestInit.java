@@ -55,7 +55,7 @@ public class TestInit extends elementFile {
 //        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//设置获取页面元素的最大等待时间
+//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);//设置全局等待元素时间
     }
 
     @BeforeMethod

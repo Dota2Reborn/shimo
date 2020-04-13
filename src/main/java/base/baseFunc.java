@@ -116,7 +116,7 @@ public class baseFunc {
                 option.setCapability("version", "80");
                 option.setCapability("plaform", "ANY");
 //                option.addArguments("start-fullscreen");  //全屏
-                option.addArguments("--window-size=1300,850");
+                option.addArguments("--window-size=1300,900");
                 option.addArguments("--disable-popup-blocking");
 
 //                option.addArguments("start-maximized");  //windows浏览器最大化
