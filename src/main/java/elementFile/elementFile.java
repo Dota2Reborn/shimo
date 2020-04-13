@@ -71,7 +71,7 @@ public class elementFile {
 	public WebElement desktop_newFileBoard;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFileForm", noteName = "新建表单")
 	public WebElement desktop_newFileForm;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newtemplate", noteName = "从模板新建")
+	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate", noteName = "从模板新建")
 	public WebElement desktop_newtemplate;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
@@ -1490,8 +1490,14 @@ public class elementFile {
 	public WebElement sheet_template01;
 	@SearchWith(pageName = "Template", elementName = "doc_template", noteName = "文档模板")
 	public WebElement doc_template;
-	@SearchWith(pageName = "Template", elementName = "doc_template01", noteName = "文档模板第一个")
-	public WebElement doc_template01;
+	@SearchWith(pageName = "Template", elementName = "template_1_1", noteName = "模板库第一个种类第一个模板")
+	public WebElement template_1_1;
+	@SearchWith(pageName = "Template", elementName = "template_2_1", noteName = "模板库第二个种类第一个模板")
+	public WebElement template_2_1;
+	@SearchWith(pageName = "Template", elementName = "button_template_confirm", noteName = "【模板库】使用此模板按钮")
+	public WebElement button_template_confirm;
+	@SearchWith(pageName = "Template", elementName = "template_type_2", noteName = "【模板库】模板库模板类型2")
+	public WebElement template_type_2;
 
 	/**
 	 * spaceRightButton

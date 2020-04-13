@@ -335,9 +335,9 @@
 				"note": "新建表单"
 			},
 			{
-				"elementName": "desktop_newtemplate",
+				"elementName": "desktop_newTemplate",
 				"locateUsing": "xpath",
-				"locator": "//span[@data-test='create-file-template']",
+				"locator": "//button[contains(text(),'从模板创建')]",
 				"note": "从模板新建"
 			},
 			{
@@ -349,7 +349,7 @@
 			{
 				"elementName": "desktop_newTemplate",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template ')]",
+				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']//button[contains(text(),'从模板创建')])[1]",
 				"note": "从模板新建"
 			},
 			{
@@ -3671,10 +3671,28 @@
 				"note": "文档模板"
 			},
 			{
-				"elementName": "doc_template01",
+				"elementName": "template_1_1",
 				"locateUsing": "xpath",
-				"locator": "//strong[contains(text(),'项目管理')]",
-				"note": "文档模板第一个"
+				"locator": "//div[@class='sm-tab-content']/div[starts-with(@class,'sm-tab-tab-pane  ')][1]//strong",
+				"note": "模板库第一个种类第一个模板"
+			},
+			{
+				"elementName": "template_2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tab-content']/div[starts-with(@class,'sm-tab-tab-pane  ')][2]//strong",
+				"note": "模板库第二个种类第一个模板"
+			},
+			{
+				"elementName": "button_template_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'使用此模板')]",
+				"note": "【模板库】使用此模板按钮"
+			},
+			{
+				"elementName": "template_type_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class=' sm-tab-container']/div/div[2])[1]",
+				"note": "【模板库】模板库模板类型2"
 			}
 
 		]
@@ -3692,7 +3710,7 @@
 			{
 				"elementName": "space_button_import",
 				"locateUsing": "xpath",
-				"locator": "(//div[@data-test='create-file']//div/button)[2]",
+				"locator": "(//div[@data-test='create-file']//div/button)[3]",
 				"note": "空间右侧上传/导入"
 			},
 			{

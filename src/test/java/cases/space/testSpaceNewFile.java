@@ -72,8 +72,8 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg3,"思维导图");
         String msg4 = getText(desktop_newFolder);
         assertEquals(msg4,"文件夹");
-        String msg5 = getText(desktop_newtemplate);
-        assertEquals(msg5,"从模板新建");
+//        String msg5 = getText(desktop_newtemplate);
+//        assertEquals(msg5,"从模板新建");
     }
 
 

@@ -17,18 +17,18 @@ public class testNewTemplateFile extends TestInit {
      * @Time
      */
     @Test
-    public void space_newTemplate_doc(){
+    public void space_newTemplate_doc() throws InterruptedException {
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
-        click(desktop_new);
-        click(desktop_newtemplate);
-        click(doc_template);
-        click(doc_template01);
+        click(desktop_newTemplate);
+//        click(doc_template);
+        click(template_1_1);
+        click(button_template_confirm);
 
+        Thread.sleep(2000);
         switchToPage(1);
         click(b_back);
-//        click(space_listing_3);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -42,16 +42,18 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test
-    public void space_newTemplate_sheet(){
+    @Test(enabled = false)
+    public void space_newTemplate_sheet() throws InterruptedException {
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
-        click(desktop_new);
+//        click(desktop_new);
         click(desktop_newtemplate);
-        wait.until(ExpectedConditions.elementToBeClickable(sheet_template));
-        click(sheet_template);
-        click(sheet_template01);
+//        wait.until(ExpectedConditions.elementToBeClickable(sheet_template));
+        click(template_type_2);
+        click(template_2_1);
+        click(button_template_confirm);
+        Thread.sleep(2000);
 
         switchToPage(1);
         click(b_back);
@@ -69,7 +71,7 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test
+    @Test(enabled = false)
     public void space_newTemplate_mine(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_3);

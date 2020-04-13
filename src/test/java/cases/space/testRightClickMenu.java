@@ -699,7 +699,7 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_margin2() {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_5);
@@ -707,7 +707,7 @@ public class testRightClickMenu extends TestInit {
         click(space_RightMenu_new);
         click(space_RightMenu_newTemplate);
         click(doc_template);
-        click(doc_template01);
+//        click(doc_template01);
         switchToPage(1);
         click(doc_menu);
         click(doc_menu_delete);
