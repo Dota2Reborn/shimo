@@ -116,7 +116,8 @@ public class baseFunc {
                 option.setCapability("version", "80");
                 option.setCapability("plaform", "ANY");
 //                option.addArguments("start-fullscreen");  //全屏
-                option.addArguments("start-maximized");  //浏览器最大化
+                option.addArguments("--kiosk");  //mac浏览器最大化
+//                option.addArguments("start-maximized");  //windows浏览器最大化
                 option.addArguments("allow-running-insecure-content");
                 option.addArguments("--test-type");
                 option.addArguments("url=data:,");//设置启动浏览器空白页
