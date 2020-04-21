@@ -3413,6 +3413,12 @@
 				"note": "协作空间列表9"
 			},
 			{
+				"elementName": "space_listName_1",
+				"locateUsing": "xpath",
+				"locator": "(//span[starts-with(@class,'main OneLineSpan')])[1]",
+				"note": "协作空间列表1名称"
+			},
+			{
 				"elementName": "b_space_tooltipConfirm",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-tooltip-inner']//button",
@@ -3851,6 +3857,12 @@
 				"locateUsing": "xpath",
 				"locator": "(//div[@data-test='row_admin']//span[@data-test='row_name_text'])[2]",
 				"note": "【新协作面板】管理者列表第二个管理者名字"
+			},
+			{
+				"elementName": "b_department_1",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'_enterprise_')]//div[@data-test='dropdown_button']",
+				"note": "【新协作面板】协作者列表【组织】企业全员"
 			},
 			{
 				"elementName": "b_department_2",

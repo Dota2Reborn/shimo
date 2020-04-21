@@ -416,6 +416,9 @@ public class elementFile {
 	/** 协作空间列表9 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_9")
 	public WebElement space_listing_9;
+	/** 协作空间列表1名称 */
+	@SearchWith(pageName = "Collaborative_space", elementName = "space_listName_1")
+	public WebElement space_listName_1;
 	/** 协作空间引导，【知道了】按钮 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_space_tooltipConfirm")
 	public WebElement b_space_tooltipConfirm;
@@ -1578,6 +1581,9 @@ public class elementFile {
 	/** 【新协作面板】管理者列表第二个管理者名字 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "name_adminList_2")
 	public WebElement name_adminList_2;
+	/** 【新协作面板】协作者列表【组织】企业全员变更权限按钮 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_1")
+	public WebElement b_department_1;
     /** 【新协作面板】协作者列表【组织】第二个变更权限按钮 */
     @SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_department_2")
     public WebElement b_department_2;
