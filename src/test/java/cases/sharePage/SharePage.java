@@ -79,9 +79,9 @@ public class SharePage extends TestInit {
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
         click(b_share);
         click(share_changePWD);
+        Thread.sleep(500);
         String pwd = getAttribute(share_PWD, "value");
 
-//        System.out.println(pwd);
         logout();
 
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");

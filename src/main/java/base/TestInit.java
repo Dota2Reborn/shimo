@@ -110,7 +110,7 @@ public class TestInit extends elementFile {
             jumpToURL(test_url + "login");
         }
 
-        wait.until(ExpectedConditions.elementToBeClickable(desktop));
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop));
         Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
         if(msg){
             click(desktop_newTemplate);
