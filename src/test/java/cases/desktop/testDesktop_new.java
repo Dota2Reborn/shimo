@@ -173,7 +173,7 @@ public class testDesktop_new extends TestInit {
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-        assertEquals(msg, "未命名表单" + time);
+        assertEquals(msg, time);
     }
 
     /**
