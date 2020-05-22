@@ -3957,8 +3957,14 @@
 			{
 				"elementName": "b_checkParent",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='row_parent']//span[contains(text(),'查看')]",
+				"locator": "//span[@data-test='row_parent_button']",
 				"note": "【新协作面板】查看上级目录协作者按钮"
+			},
+			{
+				"elementName": "list_parentPermissions_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_superior_permission'])[1]",
+				"note": "【新协作面板】上级继承权限列表协作者权限"
 			}
 		]
 	}

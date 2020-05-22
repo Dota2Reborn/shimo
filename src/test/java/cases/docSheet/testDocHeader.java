@@ -95,12 +95,12 @@ public class testDocHeader extends TestInit {
      */
     @Test(enabled = false)
     public void doc_createDoc() {
-        login("testDocHeader@shimo.im", "123123");
-
-        click(desktop);
-        click(desktop1_1);
-        click(b_headerCreate);
-        click(b_headerCreateDoc);
+//        login("testDocHeader@shimo.im", "123123");
+//
+//        click(desktop);
+//        click(desktop1_1);
+//        click(b_headerCreate);
+//        click(b_headerCreateDoc);
         //Collection_OK
 
     }

@@ -167,7 +167,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-01
      */
-    @Test(enabled = false)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
+    @Test(enabled = true)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
     public void addCollaborator_7() throws InterruptedException {
         login("autoTest03@shimo.im", "123123");
         click(desktop);

@@ -251,22 +251,22 @@ public class testTextboxEdit extends TestInit {// 编辑文本框
 	 */
 	@Test(enabled = false)
 	public void Text_Editing9() throws InterruptedException {
-		login("textediting@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		Date date = new Date();
-		DateFormat format = new SimpleDateFormat("HHmmss");
-		String time1 = format.format(date);
-		//setClipbordContents(time1);
-		click(page_elements_1);
-		for (int i = 1; i < 7; i++) {
-			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
-		}
-		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
-		Thread.sleep(1000);
-		driver.navigate().refresh();// 刷新页面
-		String time2 = getText(page_elements_1);
-		assertEquals(time1, time2);
+//		login("textediting@shimo.im", "123123");
+//		click(desktop);
+//		click(desktop1_1);
+//		Date date = new Date();
+//		DateFormat format = new SimpleDateFormat("HHmmss");
+//		String time1 = format.format(date);
+//		//setClipbordContents(time1);
+//		click(page_elements_1);
+//		for (int i = 1; i < 7; i++) {
+//			action.sendKeys(Keys.chord(Keys.BACK_SPACE)).build().perform();
+//		}
+//		action.sendKeys(Keys.chord(Keys.CONTROL, "v")).build().perform();
+//		Thread.sleep(1000);
+//		driver.navigate().refresh();// 刷新页面
+//		String time2 = getText(page_elements_1);
+//		assertEquals(time1, time2);
 
 	}
 

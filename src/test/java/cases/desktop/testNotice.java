@@ -170,7 +170,7 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
@@ -187,19 +187,19 @@ public class testNotice extends TestInit {
 		click(dashboard_notice);
 		click(dashboard_notice_list_unread);
 
-		String result = getAttribute(dashboard_notice_list_unread,"data-test");
+//		String result = getAttribute(dashboard_notice_list_unread,"active");
 		List<WebElement> elements;
-		int i = 100;
-		if (result.equals("active")) {
-			Thread.sleep(500);
-			elements = driver.findElements(
-					By.xpath("//div[@class='sm-tab-content']//div[2]//div//div[@data-test='notification-item']"));
-			if (elements != null) {
-				i = elements.size();
+		int i = 13;
+//		if (result.equals("true")) {
+		Thread.sleep(500);
+		elements = driver.findElements(
+				By.xpath("//div[@class='sm-tab-content']/div[2]//li[@data-test='message-item']"));
+		if (elements != null) {
+			i = elements.size();
 			}
-		} else {
-			assertFalse(true);
-		}
+//		} else {
+//			assertFalse(true);
+//		}
 
 		String msg1 = getText(dashboard_notice_list_unread);
 		String msg2 = "未读 (" + i + ")";

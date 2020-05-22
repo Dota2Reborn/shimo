@@ -169,33 +169,33 @@ public class testAlertMute extends TestInit {
     @Test(enabled = false)//todo 用例需要优化
     public void Folder_notifications() throws InterruptedException {
 
-        login("AlertMute5@shimo.im", "123123");
-        click(desktop);
-        Boolean mute_icon = doesWebElementExist(By.className("mute-icon"));
-        if(mute_icon){
-            contextClick(desktop1_1);
-            click(menu_mute);
-            click(desktop1_1_folder);
-            contextClick(desktop1_1);
-            click(menu_mute);
-        }else {
-            click(desktop1_1_folder);
-            mute_icon = doesWebElementExist(By.className("mute-icon"));
-            if(!mute_icon){
-                contextClick(desktop1_1);
-                click(menu_mute);
-            }
-        }
-        Thread.sleep(500);
-        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
-        assertFalse(r1);
-        contextClick(desktop1_1);
-        click(menu_mute);
-        click(Folder_settings);
-        click(menu_mute);
-        Thread.sleep(500);
-        Boolean r2 = doesWebElementExist(By.className("mute-icon"));
-        assertTrue(r2);
+//        login("AlertMute5@shimo.im", "123123");
+//        click(desktop);
+//        Boolean mute_icon = doesWebElementExist(By.className("mute-icon"));
+//        if(mute_icon){
+//            contextClick(desktop1_1);
+//            click(menu_mute);
+//            click(desktop1_1_folder);
+//            contextClick(desktop1_1);
+//            click(menu_mute);
+//        }else {
+//            click(desktop1_1_folder);
+//            mute_icon = doesWebElementExist(By.className("mute-icon"));
+//            if(!mute_icon){
+//                contextClick(desktop1_1);
+//                click(menu_mute);
+//            }
+//        }
+//        Thread.sleep(500);
+//        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
+//        assertFalse(r1);
+//        contextClick(desktop1_1);
+//        click(menu_mute);
+//        click(Folder_settings);
+//        click(menu_mute);
+//        Thread.sleep(500);
+//        Boolean r2 = doesWebElementExist(By.className("mute-icon"));
+//        assertTrue(r2);
     }
 
 

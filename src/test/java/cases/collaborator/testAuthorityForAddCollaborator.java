@@ -19,16 +19,16 @@ public class testAuthorityForAddCollaborator extends TestInit {
      */
     @Test(enabled = false)
     public void authorityForAddCollaborator_1() throws InterruptedException {
-        login("0000000@qq.com", "123123");
-        click(desktop);
-        contextClick(desktop1_1);
-        addCollaboratorByEmail("pipi@qq.com", 1);
-
-        click(b_addCollaborator_2_list);
-        String msg = getText(Can_edit_1);
-        click(list_addCollaborator_4);
-
-        assertEquals(msg, "管理者");
+//        login("0000000@qq.com", "123123");
+//        click(desktop);
+//        contextClick(desktop1_1);
+//        addCollaboratorByEmail("pipi@qq.com", 1);
+//
+//        click(b_addCollaborator_2_list);
+//        String msg = getText(Can_edit_1);
+//        click(list_addCollaborator_4);
+//
+//        assertEquals(msg, "管理者");
     }
 
     /**
@@ -41,16 +41,16 @@ public class testAuthorityForAddCollaborator extends TestInit {
      */
     @Test(enabled = false)
     public void authorityForAddCollaborator_2() throws InterruptedException {
-        login("0000000@qq.com", "123123");
-        click(desktop);
-        contextClick(desktop1_1);
-        addCollaboratorByEmail("panpan@qq.com", 1);
-
-        click(b_addCollaborator_2_list);
-        String msg = getText(Can_edit_1);
-        click(list_addCollaborator_4);
-
-        assertEquals(msg, "管理者");
+//        login("0000000@qq.com", "123123");
+//        click(desktop);
+//        contextClick(desktop1_1);
+//        addCollaboratorByEmail("panpan@qq.com", 1);
+//
+//        click(b_addCollaborator_2_list);
+//        String msg = getText(Can_edit_1);
+//        click(list_addCollaborator_4);
+//
+//        assertEquals(msg, "管理者");
     }
 
     /**

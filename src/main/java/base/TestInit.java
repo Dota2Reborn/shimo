@@ -696,6 +696,40 @@ public class TestInit extends elementFile {
         }
     }
 
+    /**
+     * 修改协作者权限
+     *
+     * @author 刘晨
+     * @Time 2019-4-2
+     * @param permissions read, edit, discuss
+     */
+    public void modifyPermissions(WebElement element, String permissions){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
+
+        switch(permissions){
+            case "edit" ://可编辑
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_edit));
+                cpList_edit.click();
+                break;
+
+            case  "read"://只读
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_onlyRead));
+                cpList_onlyRead.click();
+                break;
+
+            case  "discuss"://只评论
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_onlyDiscuss));
+                cpList_onlyDiscuss.click();
+                break;
+
+            default : //可选
+                System.out.print("参数错误");
+        }
+
+    }
+
+
 
     /**
      * 协作空间添加协作者

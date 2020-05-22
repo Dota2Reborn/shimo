@@ -22,23 +22,23 @@ public class testDesktop_Folder extends TestInit {
     @Test(enabled = false)
     public void desktop_show_type() {
 
-        login("autoTest_Folder@shimo.im", "123123");
-
-        click(desktop);
-        click(desktop_show_type_list);
-
-        Boolean result = false;
-        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
-
-        click(desktop_show_type_grid);
-
-        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
-
-        if (exist1 == true && exist2 == false) {
-            result = true;
-        }
-
-        assertTrue(result);
+//        login("autoTest_Folder@shimo.im", "123123");
+//
+//        click(desktop);
+//        click(desktop_show_type_list);
+//
+//        Boolean result = false;
+//        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
+//
+//        click(desktop_show_type_grid);
+//
+//        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
+//
+//        if (exist1 == true && exist2 == false) {
+//            result = true;
+//        }
+//
+//        assertTrue(result);
 
     }
 

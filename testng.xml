@@ -71,26 +71,27 @@
 			<class name="cases.desktop.testDesktop_new" />
 		</classes>
 	</test>
-	<!--<test name="test13">-->
-		<!--<classes>-->
-			<!--<class name="cases.space.testSpacePermissions" />-->
-		<!--</classes>-->
-	<!--</test>-->
+	<test name="test13">
+		<classes>
+			<class name="cases.space.testSpacePermissions" />
+		</classes>
+	</test>
 	<test name="test14">
 		<classes>
 			<class name="cases.collaborator.testAuthorityForAddCollaborator" />
 		</classes>
 	</test>
-	<!--<test name="test15">-->
-		<!--<classes>-->
-			<!--<class name="cases.collaborator.testModifyPermissions" />-->
-		<!--</classes>-->
-	<!--</test>-->
+	<test name="test15">
+		<classes>
+			<class name="cases.collaborator.testModifyPermissions" />
+		</classes>
+	</test>
 	<test name="test16">
 		<classes>
 			<class name="cases.collaborator.testRemoveCollaborator" />
 		</classes>
 	</test>
+	<!--case作废，新的逻辑中没有转让所有者-->
 	<!--<test name="test17">-->
 		<!--<classes>-->
 			<!--<class name="cases.collaborator.testTransferOwner" />-->
@@ -196,6 +197,11 @@
 	<test name="test36">
 		<classes>
 			<class name="cases.management.testCompanyManagement" />
+		</classes>
+	</test>
+	<test name="test37">
+		<classes>
+			<class name="cases.space.testSpaceList" />
 		</classes>
 	</test>
 

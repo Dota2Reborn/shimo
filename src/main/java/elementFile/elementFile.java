@@ -1632,4 +1632,7 @@ public class elementFile {
 	/** 【新协作面板】查看上级目录协作者按钮 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "b_checkParent")
 	public WebElement b_checkParent;
+	/** 【新协作面板】上级继承权限列表协作者权限 */
+	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_parentPermissions_1")
+	public WebElement list_parentPermissions_1;
 }
