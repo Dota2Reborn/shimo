@@ -3861,13 +3861,13 @@
 			{
 				"elementName": "b_department_1",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_enterprise_')]//div[@data-test='dropdown_button']",
+				"locator": "//div[@data-test='enterprise']//div[@data-test='dropdown_button']",
 				"note": "【新协作面板】协作者列表【组织】企业全员"
 			},
 			{
 				"elementName": "b_department_2",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_department_')]//div[@data-test='dropdown_button']",
+				"locator": "//div[@data-test='department']//div[@data-test='dropdown_button']",
 				"note": "【新协作面板】协作者列表【组织】第二个变更权限按钮"
 			},
 			{
