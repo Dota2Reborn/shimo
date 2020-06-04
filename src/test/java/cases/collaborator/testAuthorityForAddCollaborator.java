@@ -60,7 +60,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-2
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_3() {
+    public void authorityForAddCollaborator_3() throws InterruptedException {
         login("AddCollaborator_01@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
@@ -69,7 +69,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
-//        Thread.sleep(200);
+        Thread.sleep(500);
         String msg = getText(b_collaboratorsList_1);
 
         click(b_collaboratorsList_1);
