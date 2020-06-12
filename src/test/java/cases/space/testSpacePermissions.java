@@ -78,6 +78,7 @@ public class testSpacePermissions  extends TestInit {
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
 
+        Thread.sleep(500);
 
         String msg1 = getText(b_add_CollaboratorList_1);
         assertEquals(msg1 ,"只能评论");
