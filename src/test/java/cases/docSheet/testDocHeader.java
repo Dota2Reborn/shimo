@@ -142,7 +142,7 @@ public class testDocHeader extends TestInit {
         click(b_user_icon);
 
         String result2 = getText(desktop_user_icon_status_L);
-        assertEquals(result2, "远程办公版");
+        assertEquals(result2, "个人高级版");
     }
 
     /**

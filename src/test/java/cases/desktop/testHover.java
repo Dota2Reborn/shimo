@@ -205,7 +205,7 @@ public class testHover extends TestInit {
         assertEquals(result, "gaoji1");
 
         String result1 = getText(desktop_user_icon_status_L);
-        assertEquals(result1, "远程办公版");
+        assertEquals(result1, "个人高级版");
 
         String result2 = getText(desktop_user_icon_status_R);
         assertEquals(result2, "续费或升级到企业版");
