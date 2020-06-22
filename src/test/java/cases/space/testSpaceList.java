@@ -22,6 +22,7 @@ public class testSpaceList extends TestInit {
         click(tabs_organization);
         click(b_department_1);
         click(cpList_edit);
+        click(b_spacingCollaborator_removeAdmin_confirm);
         click(b_spacingCollaborator_close);
         click(b_closeSpace);
 
