@@ -245,8 +245,9 @@ public class testSpacePermissions  extends TestInit {
 
         click(b_add_Collaborator);
         click(tabs_organization);
-        click(b_department_2);
-        click(cpList_edit);
+//        click(b_department_2);
+//        click(cpList_edit);
+        modifyPermissions(b_department_2, "edit");
 
         click(b_spacingCollaborator_removeAdmin_confirm);
         String msg = getText(toast_addCollaborator);
