@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class configurationResource {
     private static final String locatorFile = "resourceFile";
-    private static final String testEnvironment = "local"; //dev , release, local
+    private static final String testEnvironment = "release"; //dev , release, local
     private String test_url;
 
     /**
