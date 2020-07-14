@@ -623,9 +623,9 @@ public class TestInit extends elementFile {
                 list_addCollaborator_4.click();
                 wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
                 list_addCollaborator_4_ok.click();
-            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())){
+            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())|| element.toString().equals(b_department_2.toString())|| element.toString().equals(b_department_1.toString())){
                 //协作空间，添加协作者
-                space_addCollaborator(b_add_CollaboratorList_1);
+                space_addCollaborator(element);
             } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
                 clickDashboardActivitiesByFile(dashboard_activitiesByFile);
             }  else if (element.toString().equals(space_listing_1.toString()) || element.toString().equals(space_listing_2.toString()) || element.toString().equals(space_listing_3.toString()) || element.toString().equals(space_listing_4.toString()) || element.toString().equals(space_listing_5.toString()) || element.toString().equals(space_listing_6.toString()) || element.toString().equals(space_listing_7.toString()) || element.toString().equals(space_listing_8.toString()) || element.toString().equals(space_listing_9.toString())) {
