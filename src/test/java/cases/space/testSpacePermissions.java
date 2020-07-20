@@ -241,7 +241,7 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public  void  testSpacePermission_9() {
+    public  void  testSpacePermission_9() throws InterruptedException {
         login("qq9@qq.qqq","123123");
         moveToElement(space_listing_2);
         click(b_SpaceSetting2);
@@ -249,9 +249,10 @@ public class testSpacePermissions  extends TestInit {
 
         click(b_add_Collaborator);
         click(tabs_organization);
-//        click(b_department_2);
-//        click(cpList_edit);
-        modifyPermissions(b_department_2, "edit");
+        click(b_department_2);
+        click(cpList_edit);
+//        modifyPermissions(b_department_2, "edit");
+
 
         click(b_spacingCollaborator_removeAdmin_confirm);
         String msg = getText(toast_addCollaborator);
@@ -261,6 +262,7 @@ public class testSpacePermissions  extends TestInit {
 //        click(tabs_collaborator);
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
+        Thread.sleep(500);
 
         String msg1 = getText(b_add_CollaboratorList_1);
         assertEquals(msg1 ,"只能评论");
