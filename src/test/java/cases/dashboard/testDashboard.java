@@ -129,12 +129,14 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-18
      */
     @Test(enabled = true)
-    public void dashboard_setting_createCopy() {
+    public void dashboard_setting_createCopy() throws InterruptedException {
         login("autoTest09@shimo.im", "123123");
         click(dashboard_3);
 
         contextClick(dashboard_update_name);
         click(menu_createCopy);
+        Thread.sleep(1000);
+
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
         String fileName = getText(desktop1_1_name);

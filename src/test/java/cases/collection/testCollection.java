@@ -155,7 +155,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-20
      */
     @Test(enabled = true)
-    public void Collection_Sort_3() {
+    public void Collection_Sort_3() throws InterruptedException {
         login("Collection@shimo.im", "123123");
         click(dashboard);
         click(favorites);
@@ -168,6 +168,8 @@ public class testCollection extends TestInit {
         String name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_createCopy);
+
+        Thread.sleep(1000);
 //        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);
