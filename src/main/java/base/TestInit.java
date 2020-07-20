@@ -705,8 +705,8 @@ public class TestInit extends elementFile {
      */
     public void modifyPermissions(WebElement element, String permissions){
         wait.until(ExpectedConditions.elementToBeClickable(element));
-//        element.click();
-        click(element);
+        element.click();
+//        click(element);
 
         switch(permissions){
             case "edit" ://可编辑
