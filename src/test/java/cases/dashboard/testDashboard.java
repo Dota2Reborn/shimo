@@ -135,7 +135,7 @@ public class testDashboard extends TestInit {
 
         contextClick(dashboard_update_name);
         click(menu_createCopy);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
