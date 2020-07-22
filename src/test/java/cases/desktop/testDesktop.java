@@ -157,14 +157,14 @@ public class testDesktop extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_doc_setting_9() throws InterruptedException {
+    public void desktop_doc_setting_9() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_createCopy);
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);

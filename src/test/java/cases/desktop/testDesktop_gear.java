@@ -135,7 +135,7 @@ public class testDesktop_gear extends TestInit {
         moveToElement(desktop1_1);
         click(desktop_setting);
         click(menu_createCopy);
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);

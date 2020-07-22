@@ -169,7 +169,7 @@ public class testCollection extends TestInit {
         contextClick(desktop1_1);
         click(menu_createCopy);
 
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
 //        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);
