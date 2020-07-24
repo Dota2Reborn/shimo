@@ -843,7 +843,7 @@
 			{
 				"elementName": "doc_notice_user",
 				"locateUsing": "xpath",
-				"locator": "(//li[starts-with(@class,'list-item__')])[1]",
+				"locator": "(//div[@class='info-content'])[1]",
 				"note": "@用户，被选列表中内容第一个用户"
 			},
 			{
