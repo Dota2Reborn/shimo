@@ -71,8 +71,6 @@ public class elementFile {
 	public WebElement desktop_newFileBoard;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFileForm", noteName = "新建表单")
 	public WebElement desktop_newFileForm;
-	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate", noteName = "从模板新建")
-	public WebElement desktop_newtemplate;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
 	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
@@ -88,7 +86,7 @@ public class elementFile {
 	/** 个人模板，右键菜单，删除按钮 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_template_delete")
 	public WebElement desktop_template_delete;
-	/** 从模板新建 */
+	/** 模板库 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate")
 	public WebElement desktop_newTemplate;
 

@@ -16,7 +16,8 @@ public class testNewTemplateFile extends TestInit {
      * @author
      * @Time
      */
-    @Test
+    //todo 补充脚本库用例
+    @Test(enabled = false)
     public void space_newTemplate_doc() throws InterruptedException {
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
@@ -48,7 +49,7 @@ public class testNewTemplateFile extends TestInit {
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
 //        click(desktop_new);
-        click(desktop_newtemplate);
+        click(desktop_newTemplate);
 //        wait.until(ExpectedConditions.elementToBeClickable(sheet_template));
         click(template_type_2);
         click(template_2_1);
@@ -77,7 +78,7 @@ public class testNewTemplateFile extends TestInit {
         click(space_listing_3);
         String msg = getText(desktop1_1_name);
         click(desktop_new);
-        click(desktop_newtemplate);
+        click(desktop_newTemplate);
         click(my_template);
         click(my_template02);
 

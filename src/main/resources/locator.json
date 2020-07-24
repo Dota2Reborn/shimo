@@ -337,20 +337,14 @@
 			{
 				"elementName": "desktop_newTemplate",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'从模板创建')]",
-				"note": "从模板新建"
+				"locator": "//button[@data-test='create-from-template-button']",
+				"note": "模板库"
 			},
 			{
 				"elementName": "desktop_newFolder",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-folder']",
 				"note": "新建文件夹"
-			},
-			{
-				"elementName": "desktop_newTemplate",
-				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']//button[contains(text(),'从模板创建')])[1]",
-				"note": "从模板新建"
 			},
 			{
 				"elementName": "desktop_newFolder_name",
