@@ -13,7 +13,7 @@ public class testSpaceList extends TestInit {
      * @Time  2020/4/21
      */
     @Test
-    public void space_listBug_1() {
+    public void space_listBug_1() throws InterruptedException {
         login("amei@qq.com", "123123");
         click(b_newSpace);
         String time = getDate();
@@ -38,6 +38,7 @@ public class testSpaceList extends TestInit {
 
         logout();
         login("panpan@qq.com", "123123");
+        Thread.sleep(5000);
         driver.navigate().refresh();
         spaceName = getText(space_listName_1);
         assertEquals(time, spaceName);
