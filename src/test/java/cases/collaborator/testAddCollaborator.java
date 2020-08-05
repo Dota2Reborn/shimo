@@ -100,13 +100,6 @@ public class testAddCollaborator extends TestInit {
 
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
-//        click(b_addCollaborator);
-//        click(addCollaborator_company_list);
-//        click(addCollaborator_companyList_2_add);
-//        click(b_addCollaborator_ok);
-//
-//        click(b_addCollaborator_2_list);
-//        click(list_addCollaborator_4);
 
         click(b_add_Collaborator);
         click(tabs_companyMember);
