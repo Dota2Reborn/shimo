@@ -6,13 +6,13 @@
 			{
 				"elementName": "dashboard",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'light dashboard')]",
+				"locator": "//a[starts-with(@class,'light dashboard')]/span",
 				"note": "切换到工作台"
 			},
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
-				"locator": "//a[starts-with(@class,'light favorites')]",
+				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/favorites']",
 				"note": "切换到我的收藏"
 			},
 			{
@@ -42,19 +42,19 @@
 			{
 				"elementName": "dashboard_4",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/shared']",
+				"locator": "//a[starts-with(@class,'light inbox ')]/span",
 				"note": "工作台-共享给我的"
 			},
 			{
 				"elementName": "dashboard_activitiesByFile",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/updated']",
+				"locator": "//div[starts-with(@class,'feed-switch ')]/a[@href='/dashboard/updated']",
 				"note": "工作台-工作动态切换为按文件"
 			},
 			{
 				"elementName": "dashboard_activitiesByMember",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/activities']",
+				"locator": "//div[starts-with(@class,'feed-switch ')]/a[@href='/dashboard/activities']",
 				"note": "工作台-工作动态切换为按人员"
 			},
 			{
@@ -66,7 +66,7 @@
 			{
 				"elementName": "dashboard_update_time",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='file-summary']",
+				"locator": "//div[starts-with(@class,'file-summary ')]",
 				"note": "工作台-最近更新-更新时间"
 			},
 			{
@@ -114,7 +114,7 @@
 			{
 				"elementName": "confirmJoinCompany",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'确认加入')]",
+				"locator": "//button[contains(text(),'了解风险，加入企业')]",
 				"note": "确认加入企业"
 			},
 			{
@@ -132,7 +132,7 @@
 			{
 				"elementName": "dashboard_notice_list_1_button",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='notification-item'][1]//div[3]//button",
+				"locator": "(//li[@data-test='message-item']//button)[1]",
 				"note": "桌面通知铃铛-通知列表中第一个-加入企业按钮"
 			},
 			{
@@ -196,76 +196,16 @@
 		"pageName": "Registered",
 		"elements": [
 			{
-				"note": "昵称",
-				"elementName": "userName",
-				"locateUsing": "name",
-				"locator": "nickname"
-			},
-			{
-				"note": "登录邮箱",
-				"elementName": "userEmail",
-				"locateUsing": "name",
-				"locator": "email"
-			},
-			{
-				"note": "登录手机号",
-				"elementName": "userMobile",
-				"locateUsing": "name",
-				"locator": "mobileWithPrefix"
-			},
-			{
-				"note": "密码",
-				"elementName": "userPwd",
-				"locateUsing": "name",
-				"locator": "password"
-			},
-			{
-				"note": "确认密码",
-				"elementName": "reUserPwd",
-				"locateUsing": "name",
-				"locator": "rePassword"
-			},
-			{
-				"note": "验证码",
+				"note": "注册页面-验证码输入框",
 				"elementName": "verifyCode",
 				"locateUsing": "name",
 				"locator": "verifyCode"
 			},
 			{
-				"note": "免费注册",
-				"elementName": "Next",
+				"note": "注册页面-获取短信验证码按钮",
+				"elementName": "b_verifyCode",
 				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'免费注册')]"
-			},
-			{
-				"note": "免费注册个人账号",
-				"elementName": "personalRegister",
-				"locateUsing": "xpath",
-				"locator": "//button[contains(text(),'免费注册个人帐号')]"
-			},
-			{
-				"note": "邮箱注册",
-				"elementName": "emailRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'邮箱注册')]"
-			},
-			{
-				"note": "手机注册",
-				"elementName": "mobileRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'手机注册')]"
-			},
-			{
-				"note": "微信注册",
-				"elementName": "wechatRegister",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'微信注册')]"
-			},
-			{
-				"note": "绑定手机/邮箱送高级版，跳过按钮",
-				"elementName": "b_pass",
-				"locateUsing": "xpath",
-				"locator": "//div[contains(text(),'跳过')]"
+				"locator": "//div[@class='verifyCodeContainer']/button"
 			},
 			{
 				"note": "注册页面-手机号输入框",
@@ -298,16 +238,34 @@
 				"locator": "//div[@class='form-wrapper']/div/button"
 			},
 			{
-				"note": "注册页面-提示信息",
-				"elementName": "tips_registered",
-				"locateUsing": "className",
-				"locator": "tips"
+				"note": "注册页面-密码提示信息",
+				"elementName": "tips_registered_password",
+				"locateUsing": "xpath",
+				"locator": "//div[@type='password']/div[@class='tips']"
+			},
+			{
+				"note": "注册页面-手机号提示信息",
+				"elementName": "tips_registered_mobile",
+				"locateUsing": "xpath",
+				"locator": "//div[@type='mobile']/div[@class='tips']"
+			},
+			{
+				"note": "注册页面-验证码提示信息",
+				"elementName": "tips_registered_verifyCode",
+				"locateUsing": "xpath",
+				"locator": "//div[@type='verifyCode']/div[@class='tips']"
+			},
+			{
+				"note": "注册页面-验证码提示信息",
+				"elementName": "tips_registered_email",
+				"locateUsing": "xpath",
+				"locator": "//div[@type='email']/div[@class='tips']"
 			},
 			{
 				"note": "注册页面-使用邮箱注册",
 				"elementName": "link_registered_useEmail",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='form-wrapper']/div/div/span"
+				"locator": "//div[@class='form-wrapper']/div/div[contains(text(),'使用邮箱注册')]"
 			},
 			{
 				"note": "填写验证码页面-确定按钮",
@@ -315,7 +273,7 @@
 				"locateUsing": "xpath",
 				"locator": "//button[contains(text(),'确 定')]"
 			}
-			
+
 		]
 	},
 	{
@@ -331,7 +289,7 @@
 			{
 				"elementName": "desktop_new",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div/button)[1]",
+				"locator": "(//div[starts-with(@class,'right_panel')]//div[@data-test='create-file']/div)[1]",
 				"note": "新建文件按钮"
 			},
 			{
@@ -343,44 +301,50 @@
 			{
 				"elementName": "desktop_newDoc",
 				"locateUsing": "xpath",
-				"locator": "//ul[starts-with(@class,'sm-menu sm-menu-vertical-left ')]/li[1]",
+				"locator": "//span[@data-test='create-file-doc']",
 				"note": "新建文档"
 			},
 			{
 				"elementName": "desktop_newSheet",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mosheet ')]",
+				"locator": "//span[@data-test='create-file-sheets']",
 				"note": "新建表格"
 			},
 			{
 				"elementName": "desktop_newSlides",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_slide')]",
+				"locator": "//span[@data-test='create-file-slide']",
 				"note": "新建幻灯片"
 			},
 			{
 				"elementName": "desktop_newMindMap",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_mindmap')]",
+				"locator": "//span[@data-test='create-file-mindmap']",
 				"note": "新建思维脑图"
 			},
 			{
-				"elementName": "desktop_newtemplate",
+				"elementName": "desktop_newFileBoard",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template')]",
-				"note": "从模板新建"
+				"locator": "//span[@data-test='create-file-board']",
+				"note": "新建白板"
 			},
 			{
-				"elementName": "desktop_newFolder",
+				"elementName": "desktop_newFileForm",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_folder')]",
-				"note": "新建文件夹"
+				"locator": "//span[@data-test='create-file-form']",
+				"note": "新建表单"
 			},
 			{
 				"elementName": "desktop_newTemplate",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-create_from_template ')]",
-				"note": "从模板新建"
+				"locator": "//button[@data-test='create-from-template-button']",
+				"note": "模板库"
+			},
+			{
+				"elementName": "desktop_newFolder",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-folder']",
+				"note": "新建文件夹"
 			},
 			{
 				"elementName": "desktop_newFolder_name",
@@ -454,7 +418,7 @@
 				"locator": "(//div[@class='file-title']/div)[2]",
 				"note": "列表模式第二个文件"
 			},
-						{
+			{
 				"elementName": "desktop_list_3_file",
 				"locateUsing": "xpath",
 				"locator": "(//div[@class='file-title']/div)[3]",
@@ -545,33 +509,39 @@
 				"note": "表头时间排序"
 			},
 			{
-				"elementName": "desktop_show_type",
+				"elementName": "desktop_show_type_grid",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'view-mode-menu ')]",
-				"note": "列表平铺模式切换"
+				"locator": "//span[starts-with(@class,'btn grid ')]",
+				"note": "桌面平铺模式"
+			},
+			{
+				"elementName": "desktop_show_type_list",
+				"locateUsing": "xpath",
+				"locator": "//span[starts-with(@class,'btn list ')]",
+				"note": "桌面列表模式"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[1]",
+				"locator": "(//span[@class='rc-tree-title']/div)[2]",
 				"note": "移动文件到文件夹，选择列表中第一个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_list_2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree-child-tree rc-tree-child-tree-open']/li[2]",
+				"locator": "(//span[@class='rc-tree-title']/div)[3]",
 				"note": "移动文件到文件夹，选择列表中第二个文件夹"
 			},
 			{
 				"elementName": "desktop_moveFolder_back_button",
 				"locateUsing": "xpath",
-				"locator": "//span[@class='rc-tree-title']/div",
+				"locator": "(//span[@class='rc-tree-title']/div)[1]",
 				"note": "移动文件到文件夹，列表切到我的桌面按钮"
 			},
 			{
 				"elementName": "desktop_moveToSpace_space_1",
 				"locateUsing": "xpath",
-				"locator": "(//ul[@class='rc-tree']/li)[2]",
+				"locator": "(//div[@class='rc-tree-list-holder-inner']/div)[2]",
 				"note": "移动文件到协作空间，列表中第一个协作空间"
 			},
 			{
@@ -592,12 +562,12 @@
 				"locator": "(//div[starts-with(@class,'file-title ')])[1]",
 				"note": "平铺模式第一行第一个文件名称"
 			},
-           {
+			{
 				"elementName": "toast_msg",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='Toastify__toast-body']",
 				"note": "桌面toast提示信息"
-           },
+			},
 			{
 				"elementName": "b_next",
 				"locateUsing": "xpath",
@@ -763,28 +733,28 @@
 			{
 				"elementName": "addCollaborator_1_add",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'test-list-row-wrapper')]//div/span)[1]",
+				"locator": "(//div[starts-with(@class,'_recent_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
 				"note": "最近协作者列表第一个添加按钮"
 			},
 			{
-                "elementName": "addCollaborator_2_add",
-                "locateUsing": "xpath",
-                "locator": "(//div[starts-with(@class,'test-list-row-wrapper')]//div/span)[2]",
-                "note": "最近协作者列表第二个添加按钮"
-             },
-             {
-               "elementName": "addCollaborator_companyList_1_add",
-               "locateUsing": "xpath",
-               "locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[1]//div//div/div",
-               "note": "企业协作者列表第一个添加按钮"
-             },
+				"elementName": "addCollaborator_2_add",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_recent_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[2]",
+				"note": "最近协作者列表第二个添加按钮"
+			},
+			{
+				"elementName": "addCollaborator_companyList_1_add",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
+				"note": "企业协作者列表第一个添加按钮"
+			},
 			{
 				"elementName": "addCollaborator_companyList_2_add",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='sm-tab-content']//div[2]//div//div//div[2]//div//div/div",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//div[starts-with(@class,'_dropdown_wrapper_')])[1]",
 				"note": "企业协作者列表第二个添加按钮"
 			},
-			
+
 			{
 				"elementName": "b_addCollaborator_1_add",
 				"locateUsing": "xpath",
@@ -815,7 +785,7 @@
 				"locator": "sm-modal-close-x",
 				"note": "关闭添加协作窗口"
 			}
-			
+
 		]
 	},
 	{
@@ -825,13 +795,13 @@
 			{
 				"elementName": "b_back",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']/button[1]",
+				"locator": "//button[@data-test='file-header-go-back']",
 				"note": "后退"
 			},
 			{
 				"elementName": "quick_access_point",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"locator": "//button[@data-test='file-header-quick-access-menu']",
 				"note": "收索&快速打开"
 			},
 			{
@@ -873,7 +843,7 @@
 			{
 				"elementName": "doc_notice_user",
 				"locateUsing": "xpath",
-				"locator": "(//li[starts-with(@class,'list-item__')])[1]",
+				"locator": "(//div[@class='info-content'])[1]",
 				"note": "@用户，被选列表中内容第一个用户"
 			},
 			{
@@ -925,6 +895,12 @@
 				"note": "文件夹中上方设置按钮"
 			},
 			{
+				"elementName": "b_folder_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//span[starts-with(@class, 'add-button ')]",
+				"note": "文件夹中,直接右侧添加协作者按钮"
+			},
+			{
 				"elementName": "Exit_share_OK",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='sm-modal-footer']//button",
@@ -933,7 +909,7 @@
 			{
 				"elementName": "Collection_OK",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"locator": "//button[@data-test='file-header-star-button']/*[name()='svg']",
 				"note": "标题栏收藏按钮"
 			},
 			{
@@ -960,71 +936,65 @@
 				"locator": "//li[@data-test='search-result-item'][1]",
 				"note": "header搜索结果，第一个"
 			},
-            {
-              "elementName": "b_headerCreate",
-              "locateUsing": "xpath",
-              "locator": "//button[@data-test='create-file']",
-              "note": "header创建按钮"
-            },
-            {
-                "elementName": "b_headerCreateDoc",
-                "locateUsing": "xpath",
-                "locator": "//span[@data-test='create-file-doc']",
-                "note": "header创建文档按钮"
-            },
-            {
-                "elementName": "b_headerCreateSheet",
-                "locateUsing": "xpath",
-                "locator": "//span[@data-test='create-file-sheets']",
-                "note": "header创建表格按钮"
-            },
-            {
-                "elementName": "b_headerCreateSlide",
-                "locateUsing": "xpath",
-                "locator": "//span[@data-test='create-file-slide']",
-                "note": "header创建幻灯片按钮"
-            },
+			{
+				"elementName": "b_headerCreate",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='create-file']",
+				"note": "header创建按钮"
+			},
+			{
+				"elementName": "b_headerCreateDoc",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-doc']",
+				"note": "header创建文档按钮"
+			},
+			{
+				"elementName": "b_headerCreateSheet",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-sheets']",
+				"note": "header创建表格按钮"
+			},
+			{
+				"elementName": "b_headerCreateSlide",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='create-file-slide']",
+				"note": "header创建幻灯片按钮"
+			},
 			{
 				"elementName": "b_headerCreateTemplate",
 				"locateUsing": "xpath",
 				"locator": "//span[@data-test='create-file-template']",
 				"note": "header模板创建按钮"
 			},
-            {
-              "elementName": "b_user_icon",
-              "locateUsing": "xpath",
-              "locator": "//div[@data-test='page-header-right']/div[2]/div",
-              "note": "header上用户头像icon"
-            },
-            {
-              "elementName": "b_discord",
-              "locateUsing": "xpath",
-              "locator": "//div[@data-test='file-header-custom-wrapper']/button[1]",
-              "note": "header上讨论按钮"
-            },
-            {
-              "elementName": "b_screenShow",
-              "locateUsing": "xpath",
-              "locator": "//div[@data-test='file-header-custom-wrapper']/button[2]",
-              "note": "header上演示按钮"
-            },
-            {
-              "elementName": "b_demoScreenBack",
-              "locateUsing": "className",
-              "locator": "demo-screen-back",
-              "note": "演示页面，退出演示按钮"
-            },
+			{
+				"elementName": "b_user_icon",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='page-header-right']/div[2]/div",
+				"note": "header上用户头像icon"
+			},
+			{
+				"elementName": "b_discord",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='file-header-custom-wrapper']/button[1]",
+				"note": "header上讨论按钮"
+			},
+			{
+				"elementName": "b_screenShow",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='file-header-custom-wrapper']/button[2]",
+				"note": "header上演示按钮"
+			},
+			{
+				"elementName": "b_demoScreenBack",
+				"locateUsing": "className",
+				"locator": "demo-screen-back",
+				"note": "演示页面，退出演示按钮"
+			},
 			{
 				"elementName": "b_collaborator",
 				"locateUsing": "xpath",
 				"locator": "//button[contains(text(),'协作')]",
 				"note": "header上协作者按钮"
-			},
-			{
-				"elementName": "input_collaborator",
-				"locateUsing": "xpath",
-				"locator": "//input[@data-test='collaborator-search-inputbox']",
-				"note": "header上添加协作者邮箱输入框"
 			},
 			{
 				"elementName": "b_share",
@@ -1044,7 +1014,7 @@
 				"locator": "//a[contains(text(),'更换密码')]/preceding-sibling::input",
 				"note": "header分享面板，密码"
 			}
-			
+
 		]
 	},
 	{
@@ -1096,32 +1066,8 @@
 			{
 				"elementName": "invite_member",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[4]//a",
+				"locator": "//div[@data-test='enterprise-invite-member']/div/button",
 				"note": "企业设置-谁能邀请新成员进企业"
-			},
-			{
-				"elementName": "invite_member_3",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[3]",
-				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者"
-			},
-			{
-				"elementName": "invite_member_2",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[2]",
-				"note": "企业设置-谁能邀请新成员进企业-仅企业创建者和管理员"
-			},
-			{
-				"elementName": "invite_member_1",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='modal-content']//div[1]",
-				"note": "企业设置-谁能邀请新成员进企业-所有企业成员"
-			},
-			{
-				"elementName": "invite_member_OK",
-				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']",
-				"note": "企业设置-谁能邀请新成员进企业-保存按钮"
 			},
 			{
 				"elementName": "addMember",
@@ -1142,7 +1088,7 @@
 				"note": "提示消息"
 			},
 			{
-				"elementName": "address_cppy",
+				"elementName": "address_copy",
 				"locateUsing": "xpath",
 				"locator": "//div[@class='invitation-panel-foot']//button",
 				"note": "企业设置-添加成员-复制链接按钮"
@@ -1150,8 +1096,14 @@
 			{
 				"elementName": "setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='settings creator']//div[6]//a",
+				"locator": "//div[@data-test='action-set-admin']",
 				"note": "企业设置-设置管理员"
+			},
+			{
+				"elementName": "b_delMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-remove-member']",
+				"note": "企业设置-移除成员"
 			},
 			{
 				"elementName": "setAdmin_ManagerAndCreator",
@@ -1169,7 +1121,7 @@
 				"elementName": "button_addCollaborators",
 				"locateUsing": "xpath",
 				"locator": "//div[@data-test='enterprise-add-outsider']//button",
-				"note": "企业设置-谁能添加外部协作者（更改按钮）"
+				"note": "企业设置-谁能添加外部协作者（设置按钮）"
 			},
 			{
 				"elementName": "menu_1",
@@ -1210,37 +1162,97 @@
 			{
 				"elementName": "memberSearch",
 				"locateUsing": "xpath",
-				"locator": "//input[@class='search-input standard']",
+				"locator": "//input[@data-test='search-members']",
 				"note": "企业设置-成员列表-搜索"
 			},
 			{
-				"elementName": "xpath_banUser_2",
+				"elementName": "b_setMember",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='shimo-modal-content']//div//div[2]",
-				"note": "企业设置-成员列表-移除成员-禁用"
+				"locator": "//div[@data-test='action-set-member']",
+				"note": "企业设置-成员列表-设置管理员为成员按钮"
 			},
 			{
-				"elementName": "xpath_banUser_ok",
+				"elementName": "b_setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='btn btn-ok']",
-				"note": "企业设置-成员列表-移除成员-禁用-确认"
+				"locator": "//div[@data-test='action-set-admin']",
+				"note": "企业设置-成员列表-设置成员为管理员按钮"
 			},
 			{
-				"elementName": "xpath_userTab_1",
+				"elementName": "b_handover",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[1]",
-				"note": "企业设置-成员列表"
+				"locator": "//div[@data-test='handover']",
+				"note": "企业设置-成员列表-禁用成员的发起交接按钮"
 			},
 			{
-				"elementName": "xpath_userTab_3",
+				"elementName": "b_disableMember",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='member-filter']//a[3]",
-				"note": "企业设置-禁用成员列表"
+				"locator": "//div[@data-test='disable-member']",
+				"note": "企业设置-成员列表-移除成员-禁用成员"
+			},
+			{
+				"elementName": "b_resetMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-reset-member']",
+				"note": "通讯录-禁用成员列表-重新激活成员"
+			},
+			{
+				"elementName": "b_delMember_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='remove-member-confirm']",
+				"note": "通讯录-成员列表-移除成员-确认按钮"
+			},
+			{
+				"elementName": "list_department_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[1]",
+				"note": "通讯录-组织架构根部门"
+			},
+			{
+				"elementName": "list_department_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[2]",
+				"note": "通讯录-组织架构第二行部门"
+			},
+			{
+				"elementName": "list_department_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='name'])[3]",
+				"note": "通讯录-组织架构第三行部门"
+			},
+			{
+				"elementName": "b_setDepartment_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='btn-tool'])[3]",
+				"note": "通讯录-组织架构第三行部门设置菜单按钮"
+			},
+			{
+				"elementName": "b_setting_delDepartment",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-dropdown-menu-item delete-department-item ')]",
+				"note": "通讯录-组织架构部门设置菜单，删除部门按钮"
+			},
+			{
+				"elementName": "b_setting_renameDepartment",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@class,'sm-dropdown-menu-item rename-department-item ')]",
+				"note": "通讯录-组织架构部门设置菜单，修改部门名称按钮"
+			},
+			{
+				"elementName": "input_setting_renameDepartment",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-body']//input",
+				"note": "通讯录-组织架构部门设置菜单，修改部门名称输入框"
+			},
+			{
+				"elementName": "list_disableMember",
+				"locateUsing": "xpath",
+				"locator": "//a[@data-test='members-disabled']",
+				"note": "通讯录-禁用成员列表"
 			},
 			{
 				"elementName": "button_exitCompany",
 				"locateUsing": "xpath",
-				"locator": "//a[@class='action red show']",
+				"locator": "//div[@data-test='enterprise-quit-team']//button",
 				"note": "企业设置-成员退出企业"
 			},
 			{
@@ -1248,6 +1260,90 @@
 				"locateUsing": "className",
 				"locator": "close-invitation-link",
 				"note": "企业设置-打开或者关闭邀请链接"
+			},
+			{
+				"elementName": "b_addDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-sub-department-button']",
+				"note": "通讯录页面，添加子部门按钮"
+			},
+			{
+				"elementName": "b_addMember",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-new-member-button']",
+				"note": "通讯录页面，添加新成员按钮"
+			},
+			{
+				"elementName": "input_addMember",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='batch-input']",
+				"note": "通讯录页面，添加新成员弹框，账号输入框"
+			},
+			{
+				"elementName": "b_confirm_addMember",
+				"locateUsing": "xpath",
+				"locator": "//footer/button",
+				"note": "通讯录页面，添加新成员弹框，确认邀请成员按钮"
+			},
+			{
+				"elementName": "b_close_addMember",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='icon-close modal-close']",
+				"note": "通讯录页面，添加新成员弹框，关闭弹框按钮"
+			},
+			{
+				"elementName": "b_cancel_invite",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='action-cancel-invite']",
+				"note": "通讯录页面，成员列表，取消邀请"
+			},
+			{
+				"elementName": "memberList_email_1",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='email-cell'])[1]",
+				"note": "通讯录页面，成员列表，第一个成员邮箱地址"
+			},
+			{
+				"elementName": "memberList_email_2",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='email-cell'])[2]",
+				"note": "通讯录页面，成员列表，第二个成员邮箱地址"
+			},
+			{
+				"elementName": "b_setDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='set-department-button']",
+				"note": "通讯录页面，设置所在部门按钮"
+			},
+			{
+				"elementName": "b_removeFromDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='remove-from-department-button']",
+				"note": "通讯录页面，部门成员，从部门移除按钮"
+			},
+			{
+				"elementName": "b_addSubDepartment",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='add-sub-department-button']",
+				"note": "通讯录页面，添加子部门按钮"
+			},
+			{
+				"elementName": "input_subDepartmentName",
+				"locateUsing": "xpath",
+				"locator": "//input[@data-test='department-name-input']",
+				"note": "通讯录页面，添加子部门，子部门名称输入框"
+			},
+			{
+				"elementName": "list_setDepartment_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='part']//div[@class='name'])[2]",
+				"note": "通讯录页面，设置所在部门，部门选择页面，第二行的部门"
+			},
+			{
+				"elementName": "list_memberListDepartment_1",
+				"locateUsing": "xpath",
+				"locator": "(//td[@data-test='department-cell'])[1]",
+				"note": "通讯录页面，成员列表中的第一个部门"
 			}
 		]
 	},
@@ -1258,14 +1354,14 @@
 			{
 				"note": "用户名_邮箱",
 				"elementName": "userEmail",
-				"locateUsing": "xpath",
-				"locator": "//input[@name='mobileOrEmail']"
+				"locateUsing": "name",
+				"locator": "mobileOrEmail"
 			},
 			{
 				"note": "密码",
 				"elementName": "userPwd",
-				"locateUsing": "xpath",
-				"locator": "//input[@name='password']"
+				"locateUsing": "name",
+				"locator": "password"
 			},
 			{
 				"note": "登录按钮",
@@ -1306,13 +1402,13 @@
 			{
 				"elementName": "menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'移动')]/..",
+				"locator": "//li[contains(@class,'sm-menu-item sm-menu-move ')]",
 				"note": "移动"
 			},
 			{
 				"elementName": "menu_rename",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'重命名')]/..",
+				"locator": "//li[contains(@class,'sm-menu-item sm-menu-rename ')]",
 				"note": "重命名"
 			},
 			{
@@ -1468,31 +1564,31 @@
 			{
 				"elementName": "ppt_return",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']/button[1]",
+				"locator": "//button[@data-test='file-header-go-back']",
 				"note": "幻灯片内返回"
 			},
 			{
 				"elementName": "ppt_down",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[2]",
+				"locator": "//button[@data-test='file-header-quick-access-menu']",
 				"note": "幻灯片内下箭头"
 			},
 			{
 				"elementName": "ppt_plus_sign",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']/div[1]",
+				"locator": "//button[@data-test='create-file']",
 				"note": "幻灯片中加号"
 			},
 			{
 				"elementName": "ppt_filename",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//input",
+				"locator": "//div[@data-test='file-header-file-title']//input",
 				"note": "幻灯片标题"
 			},
 			{
 				"elementName": "ppt_collect",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-left']//button[3]",
+				"locator": "//button[@data-test='file-header-star-button']",
 				"note": "收藏标签"
 			},
 			{
@@ -1504,31 +1600,31 @@
 			{
 				"elementName": "ppt_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/button[1]",
+				"locator": "//div[@data-test='file-header-custom-wrapper']//button[1]",
 				"note": "播放幻灯片"
 			},
 			{
 				"elementName": "ppt_online_broadcast",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//span[2]//button[1]",
+				"locator": "//div[@data-test='file-header-custom-wrapper']//div[1]",
 				"note": "在线演示"
 			},
 			{
 				"elementName": "ppt_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[2]",
+				"locator": "//div[@data-test='page-header-right']/button[1]",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "ppt_share",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[3]",
+				"locator": "//button[@data-test='file-header-share-button']",
 				"note": "分享"
 			},
 			{
 				"elementName": "ppt_dotdotdot",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']//button[4]",
+				"locator": "//button[@data-test='file-header-file-menu']",
 				"note": "左上角点点点"
 			},
 			{
@@ -3087,36 +3183,42 @@
 		"note": "协作空间",
 		"pageName": "Collaborative_space",
 		"elements": [
-          {
-            "elementName": "Space",
-            "locateUsing": "xpath",
-            "locator": "//span[@class='lable']",
-            "note": "协作空间"
-          },
+			{
+				"elementName": "Space",
+				"locateUsing": "xpath",
+				"locator": "//span[@class='lable']",
+				"note": "协作空间"
+			},
 			{
 				"elementName": "b_newSpace",
 				"locateUsing": "xpath",
-				"locator": "//span[@class='icon sm-add-space']",
-				"note": "新建按钮"
+				"locator": "//span[@class='sm-add-space']",
+				"note": "新建协作空间按钮"
 			},
-            {
-              "elementName": "i_newSpace_inputPaceName",
-              "locateUsing": "xpath",
-              "locator": "//div[starts-with(@class,'sm-input name ')]//input",
-              "note": "新建协作空间，空间名输入框"
-            },
-            {
-              "elementName": "b_newSpace_next",
-              "locateUsing": "xpath",
-              "locator": "//button[starts-with(@class,'sm-button m-create-ok')]",
-              "note": "新建协作空间，下一步按钮"
-            },
-            {
-              "elementName": "b_newSpace_cancel",
-              "locateUsing": "xpath",
-              "locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
-              "note": "新建协作空间，取消按钮"
-            },
+			{
+				"elementName": "b_closeSpace",
+				"locateUsing": "xpath",
+				"locator": "//span[@class='space-close-btn']",
+				"note": "收起协作空间文件列表"
+			},
+			{
+				"elementName": "i_newSpace_inputPaceName",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-input name ')]//input",
+				"note": "新建协作空间，空间名输入框"
+			},
+			{
+				"elementName": "b_newSpace_next",
+				"locateUsing": "xpath",
+				"locator": "//button[starts-with(@class,'sm-button m-modal-ok')]",
+				"note": "新建协作空间，下一步按钮"
+			},
+			{
+				"elementName": "b_newSpace_cancel",
+				"locateUsing": "xpath",
+				"locator": "//button[starts-with(@class,'sm-button m-create-cancel')]",
+				"note": "新建协作空间，取消按钮"
+			},
 			{
 				"elementName": "b_collaborativeSpaceList",
 				"locateUsing": "xpath",
@@ -3152,6 +3254,12 @@
 				"locateUsing": "xpath",
 				"locator": "(//div[@class='list']//span[@class='setting'])[5]",
 				"note": "协作空间列表5hover设置"
+			},
+			{
+				"elementName": "b_SpaceSetting",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='footer-left']",
+				"note": "协作空间设置"
 			},
 			{
 				"elementName": "b_SpaceSetting_collaboration",
@@ -3247,56 +3355,68 @@
 			{
 				"elementName": "space_listing_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[1]",
+				"locator": "(//div[@class='list']//span[2])[1]",
 				"note": "协作空间列表1"
 			},
 			{
 				"elementName": "space_listing_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[2]",
+				"locator": "(//div[@class='list']//span[2])[2]",
 				"note": "协作空间列表2"
 			},
 			{
 				"elementName": "space_listing_3",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[3]",
+				"locator": "(//div[@class='list']//span[2])[3]",
 				"note": "协作空间列表3"
 			},
 			{
 				"elementName": "space_listing_4",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[4]",
+				"locator": "(//div[@class='list']//span[2])[4]",
 				"note": "协作空间列表4"
 			},
 			{
 				"elementName": "space_listing_5",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[5]",
+				"locator": "(//div[@class='list']//span[2])[5]",
 				"note": "协作空间列表5"
 			},
 			{
 				"elementName": "space_listing_6",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[6]",
+				"locator": "(//div[@class='list']//span[2])[6]",
 				"note": "协作空间列表6"
 			},
 			{
 				"elementName": "space_listing_7",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[7]",
+				"locator": "(//div[@class='list']//span[2])[7]",
 				"note": "协作空间列表7"
 			},
 			{
 				"elementName": "space_listing_8",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[8]",
+				"locator": "(//div[@class='list']//span[2])[8]",
 				"note": "协作空间列表8"
 			},
 			{
 				"elementName": "space_listing_9",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='list']//a/span[2])[9]",
+				"locator": "(//div[@class='list']//span[2])[9]",
 				"note": "协作空间列表9"
+			},
+			{
+				"elementName": "space_listName_1",
+				"locateUsing": "xpath",
+				"locator": "(//span[starts-with(@class,'main OneLineSpan')])[1]",
+				"note": "协作空间列表1名称"
+			},
+			{
+				"elementName": "b_space_tooltipConfirm",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tooltip-inner']//button",
+				"note": "协作空间引导，【知道了】按钮"
 			},
 			{
 				"elementName": "space_document",
@@ -3349,37 +3469,37 @@
 			{
 				"elementName": "space_move_listing1",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[1]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[1]",
 				"note": "移动文件列表1"
 			},
 			{
 				"elementName": "space_move_listing2",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[2]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[2]",
 				"note": "txt文件预2"
 			},
 			{
 				"elementName": "space_move_listing3",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[3]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[3]",
 				"note": "移动文件列表3"
 			},
 			{
 				"elementName": "space_move_listing4",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[4]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[4]",
 				"note": "移动文件列表4"
 			},
 			{
 				"elementName": "space_move_listing5",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[5]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[5]",
 				"note": "移动文件列表5"
 			},
 			{
 				"elementName": "space_move_listing8",
 				"locateUsing": "xpath",
-				"locator": "//ul[@class='rc-tree']/li[8]",
+				"locator": "//div[@class='rc-tree-list-holder-inner']/div[8]",
 				"note": "移动文件列表8"
 			},
 			{
@@ -3457,7 +3577,7 @@
 			{
 				"elementName": "space_RightMenu_4_3",
 				"locateUsing": "xpath",
-				"locator": "//ul[@id='share$Menu']/li[4]",
+				"locator": "//ul[@id='share$Menu']/li[3]",
 				"note": "分享设置"
 			},
 			{
@@ -3496,12 +3616,18 @@
 				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'删除')]",
 				"note": "删除(协作空间)"
 			},
-            {
-              "elementName": "space_RightMenu_newTemplate",
-              "locateUsing": "xpath",
-              "locator": "//div[@class='fixed-context-menu']//span[contains(text(),'从模板新建')]",
-              "note": "从模板新建(协作空间)"
-            }
+			{
+				"elementName": "space_RightMenu_newTemplate",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='fixed-context-menu']//span[contains(text(),'从模板新建')]",
+				"note": "从模板新建(协作空间)"
+			},
+			{
+				"elementName": "space_RightMenu_new",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-menu-submenu-title']",
+				"note": "协作空间右键一级菜单，新建"
+			}
 		]
 	},
 	{
@@ -3545,10 +3671,28 @@
 				"note": "文档模板"
 			},
 			{
-				"elementName": "doc_template01",
+				"elementName": "template_1_1",
 				"locateUsing": "xpath",
-				"locator": "//strong[contains(text(),'项目管理')]",
-				"note": "文档模板第一个"
+				"locator": "//div[@class='sm-tab-content']/div[starts-with(@class,'sm-tab-tab-pane  ')][1]//strong",
+				"note": "模板库第一个种类第一个模板"
+			},
+			{
+				"elementName": "template_2_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-tab-content']/div[starts-with(@class,'sm-tab-tab-pane  ')][2]//strong",
+				"note": "模板库第二个种类第一个模板"
+			},
+			{
+				"elementName": "button_template_confirm",
+				"locateUsing": "xpath",
+				"locator": "//button[contains(text(),'使用此模板')]",
+				"note": "【模板库】使用此模板按钮"
+			},
+			{
+				"elementName": "template_type_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class=' sm-tab-container']/div/div[2])[1]",
+				"note": "【模板库】模板库模板类型2"
 			}
 
 		]
@@ -3560,19 +3704,19 @@
 			{
 				"elementName": "space_button_new",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='create-file']/div[1]/button",
+				"locator": "(//div[@data-test='create-file']//div/button)[1]",
 				"note": "空间右侧新建"
 			},
 			{
 				"elementName": "space_button_import",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='create-file']/div[2]/button",
+				"locator": "(//div[@data-test='create-file']//div/button)[3]",
 				"note": "空间右侧上传/导入"
 			},
 			{
 				"elementName": "space_uploadfile",
 				"locateUsing": "xpath",
-				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-upload_file')]",
+				"locator": "//li[starts-with(@class,'sm-menu-item sm-menu-upload_file ')]",
 				"note": "上传文件"
 			},
 			{
@@ -3597,55 +3741,61 @@
 			{
 				"elementName": "b_add_Collaborator",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_collab_button_')]",
+				"locator": "//div[@data-test='collab_button']",
 				"note": "【新协作面板】添加协作权限按钮"
 			},
 			{
 				"elementName": "input_add_Collaborator",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_searchbox_input_wrapper_')]/div",
+				"locator": "//input[@data-test='search_input']",
 				"note": "【新协作面板】添加协作者邮箱/手机号-输入框"
 			},
 			{
 				"elementName": "input_add_Collaborator_1",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_searchbox_input_wrapper_')]/input",
+				"locator": "//input[@data-test='search_input']",
 				"note": "【新协作面板】添加协作者邮箱/手机号-输入框"
 			},
 			{
 				"elementName": "b_add_CollaboratorList_1",
 				"locateUsing": "xpath",
-				"locator": "(//span[starts-with(@class,'_dropdown_button_text_')])[1]",
+				"locator": "(//div[@data-test='dropdown_button'])[1]",
 				"note": "【新协作面板】协作者列表，第一个协作者添加权限按钮"
 			},
 			{
 				"elementName": "b_add_CollaboratorList_2",
 				"locateUsing": "xpath",
-				"locator": "(//span[starts-with(@class,'_dropdown_button_text_')])[2]",
+				"locator": "(//div[@data-test='dropdown_button'])[2]",
 				"note": "【新协作面板】协作者列表，第二个协作者添加权限按钮"
+			},
+			{
+				"elementName": "b_add_companyCollaboratorList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//div[@data-test='dropdown_button'])[1]",
+				"note": "【新协作面板】协作者列表，【企业全员tab】第一个人员添加权限按钮"
 			},
 			{
 				"elementName": "cpList_onlyRead",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'只能阅读')]",
+				"locator": "//div[@data-test='dropdown_list']//div[contains(text(),'只能阅读')]",
 				"note": "【新协作面板】协作者权限，只能阅读"
 			},
 			{
 				"elementName": "cpList_onlyDiscuss",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'只能评论')]",
+				"locator": "//div[@data-test='dropdown_list']//div[contains(text(),'只能评论')]",
 				"note": "【新协作面板】协作者权限，只能评论"
 			},
 			{
 				"elementName": "cpList_edit",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_normal_item_title_')][contains(text(),'可以编辑')]",
+				"locator": "//div[@data-test='dropdown_list']//div[contains(text(),'可以编辑')]",
 				"note": "【新协作面板】协作者权限，可以编辑"
 			},
 			{
 				"elementName": "cpList_remove",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_remove_item_button_')]",
+				"locator": "//div[@data-test='dropdown_list']//div[contains(text(),'移除')]",
 				"note": "【新协作面板】协作者权限，移除已选权限"
 			},
 			{
@@ -3657,19 +3807,61 @@
 			{
 				"elementName": "b_collaboratorsList_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[1]",
+				"locator": "(//div[@data-test='row_collab']//div[@data-test='dropdown_button'])[1]",
 				"note": "【新协作面板】协作者列表第一个协作者变更权限按钮"
 			},
 			{
 				"elementName": "b_collaboratorsList_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_dropdown_button_')])[2]",
+				"locator": "(//div[@data-test='row_collab']//div[@data-test='dropdown_button'])[2]",
 				"note": "【新协作面板】协作者列表第二个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_collaboratorsList_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_collab']//div[@data-test='dropdown_button'])[3]",
+				"note": "【新协作面板】协作者列表第三个协作者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_admin']//div[@data-test='dropdown_button'])[1]",
+				"note": "【新协作面板】管理者列表第一个管理者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_admin']//div[@data-test='dropdown_button'])[2]",
+				"note": "【新协作面板】管理者列表第二个管理者变更权限按钮"
+			},
+			{
+				"elementName": "b_adminList_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_admin']//div[@data-test='dropdown_button'])[3]",
+				"note": "【新协作面板】管理者列表第三个管理者变更权限按钮"
+			},
+			{
+				"elementName": "name_adminList_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_admin']//span[@data-test='row_name_text'])[1]",
+				"note": "【新协作面板】管理者列表第一个管理者名字"
+			},
+			{
+				"elementName": "name_adminList_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_admin']//span[@data-test='row_name_text'])[2]",
+				"note": "【新协作面板】管理者列表第二个管理者名字"
+			},
+			{
+				"elementName": "b_department_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='enterprise']//div[@data-test='dropdown_button']",
+				"note": "【新协作面板】协作者列表【组织】企业全员"
 			},
 			{
 				"elementName": "b_department_2",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_department_tree_row_')])[2]/div/div[2]//span",
+				"locator": "//div[@data-test='department']//div[@data-test='dropdown_button']",
 				"note": "【新协作面板】协作者列表【组织】第二个变更权限按钮"
 			},
 			{
@@ -3679,33 +3871,15 @@
 				"note": "【新协作面板】协作者变更toast"
 			},
 			{
-				"elementName": "tabs_collaborator",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'协作者')]",
-				"note": "【新协作面板】协作者列表标签切换-协作者"
-			},
-			{
-				"elementName": "tabs_management",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'管理员')]",
-				"note": "【新协作面板】协作者列表标签切换-管理员"
-			},
-			{
-				"elementName": "tabs_soon",
-				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'最近')]",
-				"note": "【新协作面板】添加协作者列表标签切换-最近"
-			},
-			{
 				"elementName": "tabs_companyMember",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'企业全员')]",
+				"locator": "//div[@data-test='collab_tab_members']",
 				"note": "【新协作面板】添加协作者列表标签切换-企业全员"
 			},
 			{
 				"elementName": "tabs_organization",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_tabs_')]/div[contains(text(),'组织')]",
+				"locator": "//div[@data-test='collab_tab_departments']",
 				"note": "【新协作面板】添加协作者列表标签切换-组织"
 			},
 			{
@@ -3717,7 +3891,7 @@
 			{
 				"elementName": "b_spacingSetting_confirm",
 				"locateUsing": "xpath",
-				"locator": "//button[starts-with(@class,'sm-button m-config-ok ')]",
+				"locator": "//button[starts-with(@class,'sm-button m-modal-ok ')]",
 				"note": "【新协作面板】协作空间设置页面-确定按钮"
 			},
 			{
@@ -3727,15 +3901,21 @@
 				"note": "【新协作面板】协作者列表页面-关闭按钮"
 			},
 			{
+				"elementName": "b_spacingCollaborator_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='list_head_tail']//span[contains(text(),'添加协作者')]",
+				"note": "【新协作面板】管理员列表页面-【添加协作者】按钮"
+			},
+			{
 				"elementName": "b_spacingCollaborator_addAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[starts-with(@class,'_list_head_tail_')]/span[contains(text(),'添加管理者')]",
+				"locator": "//div[@data-test='list_head_tail']//span[contains(text(),'添加管理者')]",
 				"note": "【新协作面板】管理员列表页面-【添加管理员】按钮"
 			},
 			{
 				"elementName": "b_spacingCollaborator_addAdmin_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[starts-with(@class,'_set_admin_')])[1]",
+				"locator": "(//div[@data-test='set_admin'])[1]",
 				"note": "【新协作面板】管理员列表第一个【设为管理员】按钮"
 			},
 			{
@@ -3749,6 +3929,36 @@
 				"locateUsing": "xpath",
 				"locator": "//div[starts-with(@class,'_confirm_dialog_buttons_ok_')]",
 				"note": "【新协作面板】管理员列表，移除管理员，【确认】按钮"
+			},
+			{
+				"elementName": "list_collaboratorName_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_collab']//span[@data-test='row_name_text'])[1]",
+				"note": "【新协作面板】协作者列表，第一行用户的用户名"
+			},
+			{
+				"elementName": "list_companyCollaboratorName_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'_member_list_')]//span[@data-test='row_name_text'])[1]",
+				"note": "【新协作面板】协作者企业全员，第一行企业成员的用户名"
+			},
+			{
+				"elementName": "list_collaboratorEmail_1",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='description']",
+				"note": "【新协作面板】添加协作者/管理者，搜索结果第一个成员的邮箱地址"
+			},
+			{
+				"elementName": "b_checkParent",
+				"locateUsing": "xpath",
+				"locator": "//span[@data-test='row_parent_button']",
+				"note": "【新协作面板】查看上级目录协作者按钮"
+			},
+			{
+				"elementName": "list_parentPermissions_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='row_superior_permission'])[1]",
+				"note": "【新协作面板】上级继承权限列表协作者权限"
 			}
 		]
 	}
