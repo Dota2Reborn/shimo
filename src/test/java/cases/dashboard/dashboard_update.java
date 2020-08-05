@@ -136,8 +136,8 @@ public class dashboard_update extends TestInit {
         String text1 = getText(dashboard_update_time);
         click(dashboard_update_time);
         click(b_back);
-//        assertEquals(text1, "1 评论刚刚 cc 评论：通过");
-        assertTrue(text1.contains("刚刚 cc 更新"));
+        System.out.println(text1);
+        assertTrue(text1.contains("1 评论刚刚 cc"));
 
     }
 
@@ -147,11 +147,11 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin9存在一个固定的文件
      */
     @Test
-    public void update7() {
+    public void update7() throws InterruptedException {
         login("gengxin9@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-        addCollaboratorByEmail("gengxin10@shimo.im");
+        addCollaboratorByEmail("gengxin10@shimo.im", 1);
 
         logout();
 
@@ -166,9 +166,10 @@ public class dashboard_update extends TestInit {
         String text1 = getText(dashboard_update_name);
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+        removeCollaboratorByPosition(1);
         String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
 
@@ -211,7 +212,7 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：gengxin13有12共享的文件
      */
     @Test
-    public void update9() {
+    public void update9() throws InterruptedException {
         login("gengxin13@shimo.im", "123123");
         click(dashboard_4);
         click(dashboard_update_time);
@@ -225,27 +226,21 @@ public class dashboard_update extends TestInit {
         login("gengxin12@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         contextClick(dashboard_update_name);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-        click(Shut_down_sm_modal_close_x);
+        removeCollaboratorByPosition(1);
 
         logout();
         login("gengxin13@shimo.im", "123123");
         click(dashboard_activitiesByFile);
-        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
-        assertEquals(text2, "没有文件");
+//        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
+//        assertEquals(text2, "没有文件");
+        Boolean r1 = doesWebElementExist(dashboard_update_name);
+        assertFalse(r1);
 
         logout();
         login("gengxin12@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        click(Shut_down_sm_modal_close_x);
-
+        addCollaboratorByEmail("gengxin13@shimo.im", 1);
     }
 
     /**

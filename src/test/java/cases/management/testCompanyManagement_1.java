@@ -15,20 +15,19 @@ import static org.testng.Assert.*;
 public class testCompanyManagement_1 extends TestInit {
 
     /**
-     * 谁能邀请新成员进企业-所有企业成员
+     * 谁能邀请新成员进企业-所有企业成员//todo
      *
      * @author 刘晨
      * @Time 2017-01-08
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void inviteMember_allMember() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_1);
-        click(invite_member_OK);
+        click(menu_1);
 
         logout();
         login("autoTest_company_3@shimo.im", "123123");
@@ -37,8 +36,8 @@ public class testCompanyManagement_1 extends TestInit {
         click(desktop_user_icon_companyManagement);
         click(addMember);
 
-        wait.until(ExpectedConditions.elementToBeClickable(address_cppy));
-        Boolean clickAble = address_cppy.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(address_copy));
+        Boolean clickAble = address_copy.isDisplayed();
 
         assertTrue(clickAble);
     }
@@ -56,8 +55,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_2);
-        click(invite_member_OK);
+        click(menu_2);
 
         logout();
         login("autoTest_company_3@shimo.im", "123123");
@@ -84,8 +82,7 @@ public class testCompanyManagement_1 extends TestInit {
         switchToPage(1);
         click(company_setting);
         click(invite_member);
-        click(invite_member_3);
-        click(invite_member_OK);
+        click(menu_3);
 
         logout();
         login("autoTest_company_2@shimo.im", "123123");

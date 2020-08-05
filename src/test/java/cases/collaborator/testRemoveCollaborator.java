@@ -17,16 +17,14 @@ public class testRemoveCollaborator extends TestInit {
      */
 
     @Test
-    public void Remove_1() {
+    public void Remove_1() throws InterruptedException {
         login("remove1@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("remove2@shimo.im");
-        click(button_addCollaborator_close);
+        addCollaboratorByEmail("remove2@shimo.im", 1);
 
         contextClick(desktop1_1);
-        removeCollaboratorByPosition(2);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(1);
 
         contextClick(desktop1_1);
         click(menu_cooperation);
@@ -41,17 +39,15 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_2() {
+    public void Remove_2() throws InterruptedException {
         login("remove3@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
 
-        addCollaboratorByEmail("remove2@shimo.im");
-        click(button_addCollaborator_close);
+        addCollaboratorByEmail("remove2@shimo.im", 1);
 
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(1);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
@@ -67,23 +63,26 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_3() {
+    public void Remove_3() throws InterruptedException {
         login("remove4@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("remove2@shimo.im");
-        click(button_addCollaborator_close);
+        addCollaboratorByEmail("remove2@shimo.im", 1);
 
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
+
+        contextClick(desktop1_1_folder);
+        click(menu_cooperation);
         int count1 = getCollaboratorSize();
-        click(button_addCollaborator_close);
+        click(b_spacingCollaborator_close);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
         int count2 = getCollaboratorSize();
-        assertTrue(count1 == count2);
+//        assertTrue(count1 == count2);
+        assertEquals(count1,count2);
 
     }
 
@@ -95,22 +94,21 @@ public class testRemoveCollaborator extends TestInit {
      * @Time 2018-07-17
      */
     @Test
-    public void Remove_5() {
+    public void Remove_5() throws InterruptedException {
         login("remove9@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(3);
-        click(button_addCollaborator_close);
+        removeCollaboratorByPosition(2);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
         int count = getCollaboratorSize();
-        click(button_addCollaborator_close);
+        click(b_spacingCollaborator_close);
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("remove10@shimo.im");
-        assertTrue(count == 2);
+        addCollaboratorByEmail("remove10@shimo.im", 1);
+        assertEquals(count, 2);
     }
 
     @Test
@@ -119,7 +117,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_2_folder);
         click(menu_cooperation);
-        String t = getAttribute(b_addCollaborator_3_list_disable,"disabled");
+        String t = getAttribute(b_collaboratorsList_1,"data-disabled");
         assertEquals(t, "true");
     }
 }

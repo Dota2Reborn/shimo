@@ -9,6 +9,9 @@ import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import static org.testng.Assert.*;
 
@@ -68,6 +71,7 @@ public class testRightClickMenu extends TestInit {
         click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
 //        Thread.sleep(1000);
+        click(b_closeSpace);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Completely_removed);
@@ -115,17 +119,20 @@ public class testRightClickMenu extends TestInit {
             Thread.sleep(500);
             click(space_move_listing8);
             click(desktop_moveFolder_button);
+            click(b_closeSpace);
             click(space_listing_8);
             name = getText(space_document_1_1);
             name=name.replace("\n"+" ","");
 
         }else {
+            click(b_closeSpace);
             click(space_listing_8);
             contextClick(space_document_1_1);
             click(space_RightMenu_move);
             Thread.sleep(500);
             click(space_move_listing5);
             click(desktop_moveFolder_button);
+            click(b_closeSpace);
             click(space_listing_5);
             name = getText(space_document_1_1);
             name=name.replace("\n"+" ","");
@@ -148,6 +155,7 @@ public class testRightClickMenu extends TestInit {
         click(desktop_newFolder_name_ok);
 //        Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_document_1_1);
+        click(b_closeSpace);
         click(trash);
         contextClick(space_document_1_1);
         click(menu_Recovery);
@@ -489,16 +497,15 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_word_tab() throws InterruptedException {
+    public void Space_word_tab() {
         login("Space_word@shimo.im", "123123");
         click(space_listing_1);
         contextClick(space_document_1_1);
         click(space_RightMenu_1);
-        Thread.sleep(800);
-        driver.close();
-        switchToPage(0);
-        String time = doc_title_input.getAttribute("value");
-        assertEquals(time, "这是文档");
+        Set<String> winHandles = driver.getWindowHandles();
+        List<String> it = new ArrayList<String>(winHandles);
+        int n = it.size();
+        assertEquals(2, n);
     }
     /**
      * 右键添加协作者
@@ -677,10 +684,12 @@ public class testRightClickMenu extends TestInit {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_4);
         action.moveToElement(desktop_new, -150, 0).contextClick().perform();
+        click(space_RightMenu_new);
         click(space_RightMenu_newDoc);
-        click(doc_menu);
-        click(doc_menu_delete);
-        click(doc_menu_delete_OK);
+        click(message_ok);
+        contextClick(desktop1_1);
+        click(space_RightMenu_delete);
+        click(message_ok);
         assertTrue(true);
     }
     /**
@@ -690,14 +699,15 @@ public class testRightClickMenu extends TestInit {
      * @Time 2018-07-24
      *
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Space_margin2() {
         login("Space_margin@shimo.im", "123123");
         click(space_listing_5);
         action.moveToElement(desktop_new, -150, 0).contextClick().perform();
+        click(space_RightMenu_new);
         click(space_RightMenu_newTemplate);
         click(doc_template);
-        click(doc_template01);
+//        click(doc_template01);
         switchToPage(1);
         click(doc_menu);
         click(doc_menu_delete);

@@ -19,26 +19,26 @@ public class testDesktop_Folder extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_show_type() {
 
-        login("autoTest_Folder@shimo.im", "123123");
-
-        click(desktop);
-        click(desktop_show_type);
-
-        Boolean result = false;
-        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
-
-        click(desktop_show_type);
-
-        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
-
-        if (exist1 == true && exist2 == false) {
-            result = true;
-        }
-
-        assertTrue(result);
+//        login("autoTest_Folder@shimo.im", "123123");
+//
+//        click(desktop);
+//        click(desktop_show_type_list);
+//
+//        Boolean result = false;
+//        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
+//
+//        click(desktop_show_type_grid);
+//
+//        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
+//
+//        if (exist1 == true && exist2 == false) {
+//            result = true;
+//        }
+//
+//        assertTrue(result);
 
     }
 
@@ -113,6 +113,7 @@ public class testDesktop_Folder extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_collection);
 
+        click(dashboard);
         click(favorites);
         String doc_name1 = getText(desktop1_1_folder);
         contextClick(desktop1_1_folder);

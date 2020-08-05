@@ -19,11 +19,14 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void New_Document() {
         login("New_collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
         click(desktop_new);
         click(desktop_newDoc);
         click(Collection_OK);
         click(b_back);
+
+        click(dashboard);
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
@@ -45,11 +48,14 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Create_Table() {
         login("New_collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
         click(desktop_new);
         click(desktop_newSheet);
         click(Collection_OK);
         click(b_back);
+
+        click(dashboard);
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
@@ -73,14 +79,15 @@ public class testCollection extends TestInit {
     public void desktop_show_type() {
 
         login("Collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
         Sort();
-        click(desktop_show_type);
+        click(desktop_show_type_list);
 
         Boolean result = false;
         Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
 
-        click(desktop_show_type);
+        click(desktop_show_type_grid);
 
         Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
 
@@ -101,8 +108,9 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Collection_Sort_1() {
         login("Collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();
         click(desktop_order);
         click(desktop_orderByCreate);
@@ -124,12 +132,13 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Collection_Sort_2() {
         login("Collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();
         click(desktop_order);
         click(desktop_orderByFile);
-        driver.navigate().refresh();
+//        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         assertEquals(name1, "第一个创建的");
         click(desktop_order);
@@ -146,10 +155,11 @@ public class testCollection extends TestInit {
      * @Time 2018-03-20
      */
     @Test(enabled = true)
-    public void Collection_Sort_3() {
+    public void Collection_Sort_3() throws InterruptedException {
         login("Collection@shimo.im", "123123");
+        click(dashboard);
         click(favorites);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type));
+        wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();
         click(desktop_order);
         click(desktop_orderByCreate);
@@ -158,6 +168,8 @@ public class testCollection extends TestInit {
         String name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_createCopy);
+
+//        Thread.sleep(2000);
 //        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);
@@ -178,34 +190,14 @@ public class testCollection extends TestInit {
     // 验证排序是否初始化
     private void Sort() {
         wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-        String msg = getText(desktop_show_type);
-        if (msg.equals("平铺")) {
-            click(desktop_show_type);
-        }
-        msg = getText(desktop_order);
-        if (msg.equals("排序")) {
-            click(desktop_order);
-            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-            Boolean exist = doesWebElementExist(
-                    By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-            click(desktop_orderByDefault);
-            if (exist) {
-                click(desktop_order);
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-                click(desktop_orderByFolderUP);
-            }
-        } else {
-            click(desktop_order);
-            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-            Boolean exist = doesWebElementExist(
-                    By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-            if (exist) {
-                click(desktop_orderByFolderUP);
-            } else {
-                click(desktop_orderByDefault);
-            }
-        }
+        click(desktop_show_type_grid);
+        click(desktop_order);
+        Boolean order1 = doesWebElementExist(By.xpath("(//span[@class='check-mark'])[6]/*[name()='svg']"));
 
+        click(desktop_orderByDefault);
+        if(order1){
+            click(desktop_order);
+            click(desktop_orderByFolderUP);
+        }
     }
-
 }

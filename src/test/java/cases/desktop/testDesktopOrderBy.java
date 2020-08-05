@@ -16,8 +16,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byUpdate() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByUpdate);
 
@@ -40,8 +40,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byCreate() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByCreate);
 
@@ -65,8 +65,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byFileName() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByFile);
 
@@ -91,8 +91,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byOwner() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByOwner);
 
@@ -116,8 +116,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byFolderUP() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByFolderUP);
         click(desktop_order);
@@ -143,8 +143,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byCreate_Reverse() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByCreate);
         click(desktop_orderHeader_3);
@@ -169,8 +169,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byOwner_Reverse() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
         click(desktop_orderByOwner);
         click(desktop_orderHeader_2);
@@ -195,8 +195,8 @@ public class testDesktopOrderBy extends TestInit {
     public void order_setting_byFileName_Reverse() {
         login("autoTest02@shimo.im", "123123");
 
-        click(desktop);
-        click(desktop_show_type);
+        clickDesktopByDefaultOrder(desktop);
+        click(desktop_show_type_list);
         click(desktop_order);
 
         click(desktop_orderByFile);

@@ -301,26 +301,26 @@ public class testPictureUP extends TestInit {
 	 */
 	@Test(enabled = false)
 	 public void Cut_Img() throws InterruptedException, AWTException{
-		login("test_zjj@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		click(ppt_page_5);
-		click(page_elements_1);
-		Dimension beforeCut = page_elements_1.getSize();
-		System.out.println("beforeCut="+beforeCut);
-		WebElement cutButton = driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[2]//div[2]//div[1]//div[1]"));
-		click(cutButton);
-		click(ppt_type);
-		//click(type_pictures_cut);
-		action.click(type_pictures_proportionk).sendKeys(Keys.chord(Keys.CONTROL,"a"))
-		.sendKeys(Keys.NUMPAD1).build().perform();//宽输入1
-		action.click(type_pictures_proportiong).sendKeys(Keys.chord(Keys.CONTROL,"a"))
-		.sendKeys(Keys.NUMPAD3).build().perform();//高输入3
-		action.click(ppt_text).build().perform();
-		Dimension afterCut = page_elements_1.getSize();
-		System.out.println("afterCut="+afterCut);
-		assertTrue(!beforeCut.equals(afterCut));
-		click(ppt_revoke);
+//		login("test_zjj@shimo.im", "123123");
+//		click(desktop);
+//		click(desktop1_1);
+//		click(ppt_page_5);
+//		click(page_elements_1);
+//		Dimension beforeCut = page_elements_1.getSize();
+//		System.out.println("beforeCut="+beforeCut);
+//		WebElement cutButton = driver.findElement(By.xpath("//div[@data-test='viewport']//div[1]//div[2]//div[2]//div[1]//div[1]"));
+//		click(cutButton);
+//		click(ppt_type);
+//		//click(type_pictures_cut);
+//		action.click(type_pictures_proportionk).sendKeys(Keys.chord(Keys.CONTROL,"a"))
+//		.sendKeys(Keys.NUMPAD1).build().perform();//宽输入1
+//		action.click(type_pictures_proportiong).sendKeys(Keys.chord(Keys.CONTROL,"a"))
+//		.sendKeys(Keys.NUMPAD3).build().perform();//高输入3
+//		action.click(ppt_text).build().perform();
+//		Dimension afterCut = page_elements_1.getSize();
+//		System.out.println("afterCut="+afterCut);
+//		assertTrue(!beforeCut.equals(afterCut));
+//		click(ppt_revoke);
 	}
 	
 	

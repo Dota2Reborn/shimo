@@ -20,7 +20,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_1() {
+	public void notice_1() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -37,6 +37,7 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(b_back));
 		String url2 = driver.getCurrentUrl();
 		assertTrue(url1.equalsIgnoreCase(url2));
@@ -80,12 +81,12 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_3() {
+	public void notice_3() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 
 		contextClick(desktop1_1);
-		addCollaboratorByEmail("autoTest12@shimo.im");
+		addCollaboratorByEmail("autoTest12@shimo.im", 1);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -108,16 +109,18 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_4() {
+	public void notice_4() throws InterruptedException {
 		login("autoTest13@shimo.im", "123123");
 		click(desktop);
 
 		contextClick(desktop1_1);
-		addCollaboratorByEmail("autoTest12@shimo.im");
+		addCollaboratorByEmail("autoTest12@shimo.im", 1);
 
-		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
-		click(b_addCollaborator_2_list);
-		click(list_addCollaborator_4);
+//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
+//		click(b_addCollaborator_2_list);
+//		click(list_addCollaborator_4);
+		contextClick(desktop1_1);
+		removeCollaboratorByPosition(1);
 
 		logout();
 		login("autoTest12@shimo.im", "123123");
@@ -136,7 +139,7 @@ public class testNotice extends TestInit {
 	 *
 	 */
 	@Test(enabled = true)
-	public void notice_5() {
+	public void notice_5() throws InterruptedException {
 		login("autoTest14@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
@@ -155,8 +158,8 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
-		wait.until(ExpectedConditions.elementToBeClickable(End_Discussion));
-		Boolean result = doc_discuss_input.isDisplayed();
+		Thread.sleep(500);
+		Boolean result = doesWebElementExist(doc_discuss_input);
 		assertTrue(result);
 	}
 
@@ -167,7 +170,7 @@ public class testNotice extends TestInit {
 	 * @Time 2018-01-12
 	 *
 	 */
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void notice_6() throws InterruptedException {
 		login("autoTest11@shimo.im", "123123");
 		click(desktop);
@@ -184,19 +187,19 @@ public class testNotice extends TestInit {
 		click(dashboard_notice);
 		click(dashboard_notice_list_unread);
 
-		String result = getAttribute(dashboard_notice_list_unread,"data-test");
+//		String result = getAttribute(dashboard_notice_list_unread,"active");
 		List<WebElement> elements;
-		int i = 100;
-		if (result.equals("active")) {
-			Thread.sleep(500);
-			elements = driver.findElements(
-					By.xpath("//div[@class='sm-tab-content']//div[2]//div//div[@data-test='notification-item']"));
-			if (elements != null) {
-				i = elements.size();
+		int i = 13;
+//		if (result.equals("true")) {
+		Thread.sleep(500);
+		elements = driver.findElements(
+				By.xpath("//div[@class='sm-tab-content']/div[2]//li[@data-test='message-item']"));
+		if (elements != null) {
+			i = elements.size();
 			}
-		} else {
-			assertFalse(true);
-		}
+//		} else {
+//			assertFalse(true);
+//		}
 
 		String msg1 = getText(dashboard_notice_list_unread);
 		String msg2 = "未读 (" + i + ")";

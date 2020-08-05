@@ -24,7 +24,7 @@ public class dashboard_shared extends TestInit {
         login("gx1@shimo.im", "123123");
         click(dashboard_3);
         contextClick(dashboard_update_name);
-        addCollaboratorByEmail("gx2@shimo.im");
+        addCollaboratorByEmail("gx2@shimo.im", 1);
         logout();
         login("gx2@shimo.im", "123123");
         click(dashboard_4);
@@ -56,6 +56,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_4);
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "共享");
@@ -65,6 +66,7 @@ public class dashboard_shared extends TestInit {
         click(dashboard_4);
         moveToElement(dashboard_share_file_1);
         click(dashboard_share_file_favorites);
+        click(dashboard);
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);

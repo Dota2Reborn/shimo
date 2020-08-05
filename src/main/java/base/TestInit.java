@@ -55,6 +55,7 @@ public class TestInit extends elementFile {
 //        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 6);
+//        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);//设置全局等待元素时间
     }
 
     @BeforeMethod
@@ -104,6 +105,17 @@ public class TestInit extends elementFile {
         userPwd.clear();
         sendKeys(userPwd, pwd);
         click(login_submit);
+
+        if (driver.getCurrentUrl().startsWith(test_url + "login")) {
+            jumpToURL(test_url + "login");
+        }
+
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop));
+        Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
+        if(msg){
+            click(desktop_newTemplate);
+            click(Sticker_Face_x);
+        }
 
 //        gooiest();//跳过引导页
 //        Sticker_Face();//付费提示框
@@ -164,51 +176,6 @@ public class TestInit extends elementFile {
         click(login_submit);
     }
 
-    /**
-     * 注册
-     *
-     * @param type 1为手机注册 2为邮箱注册 3为手机成功注册
-     * @author 王继程
-     * @Time 2017-11-21
-     */
-    public void Registered(String name, String user, String pwd, int type, String repwd) {
-        if (type == 1) {
-            jumpToURL(test_url + "register");
-            wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
-            click(personalRegister);
-            click(mobileRegister);
-            sendKeys(userName, name);
-            sendKeys(userMobile, user);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            sendKeys(verifyCode, "2222");
-            click(Next);
-        } else if (type == 2) {
-            jumpToURL(test_url + "register");
-            wait.until(ExpectedConditions.elementToBeClickable(personalRegister));
-            click(personalRegister);
-            click(emailRegister);
-            sendKeys(userName, name);
-            sendKeys(Email, user);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            click(Next);
-        }else if (type == 3){
-            jumpToURL(test_url + "register");
-            click(personalRegister);
-            click(mobileRegister);
-            sendKeys(userName, name);
-            sendKeys(userMobile, user);
-            WebElement b_verifyCode = driver.findElement(By.xpath("//div[@class='verifyCodeContainer']/button"));
-            click(b_verifyCode);
-            sendKeys(Pwd, pwd);
-            sendKeys(rePwd, repwd);
-            sendKeys(verifyCode, "2222");
-            click(Next);
-        } else {
-            return;
-        }
-    }
 
     /**
      * 注册
@@ -217,18 +184,20 @@ public class TestInit extends elementFile {
      * @author 刘晨
      * @Time 2019-3-21
      */
-    public void Registered_new(String name, String user, String pwd, int type) {
-        jumpToURL(test_url + "register");
-        WebElement tab = driver.findElement(By.xpath("//div[@class='main']/div[2]/div[1]/div[1]"));
+    public void Registered_new(String mobile_verifyCode, String user, String pwd, int type) {
+        jumpToURL(test_url + "registType");
+        WebElement tab = driver.findElement(By.xpath("//div[starts-with(@class,'StyledRegistButtonBlue')]"));
         click(tab);
         if (type == 1) {
-            sendKeys(input_registered_nickname, name);
+//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_mobile, user);
             sendKeys(input_registered_password, pwd);
+            if(user.equals("17610101523")){click(b_verifyCode);}
+            sendKeys(verifyCode, mobile_verifyCode);
             click(button_registered);
         }else if(type == 2){
             click(link_registered_useEmail);
-            sendKeys(input_registered_nickname, name);
+//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_email, user);
             sendKeys(input_registered_password, pwd);
             click(button_registered);
@@ -291,7 +260,7 @@ public class TestInit extends elementFile {
         }
 
         winHandles = driver.getWindowHandles();
-        it = new ArrayList<String>(winHandles);
+        it = new ArrayList<>(winHandles);
         driver.switchTo().window(it.get(0));
     }
 
@@ -350,6 +319,75 @@ public class TestInit extends elementFile {
     }
 
     /**
+     * 获取通讯录信息，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public int getMemberList(String email) {
+        checkPageIsReady();
+        doesWebElementExist(memberList_email_1);
+        int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
+        List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
+        for(int n = 0; n<i; n++){
+            int m = n + 1;
+            String memberName = getText((By.xpath("(//td[@data-test='email-cell'])"+ "[" + m + "]")));
+            memberList.add(n ,memberName);
+        }
+        int r = memberList.indexOf(email);//根据邮箱地址，判断当前成员所处于的位置
+        if(r == -1){
+            System.out.println(email + "该邮箱用户不存在");
+            System.out.println("当前列表中用户数"  +  i);
+            assertTrue(false);
+        }
+        return r + 1;
+    }
+
+    /**
+     * 选中通讯录中的指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public void selectMember(String email) {
+        int i = getMemberList(email);
+        driver.findElement(By.xpath("(//td[@data-test='select-cell'])"+ "[" + i + "]")).click();
+    }
+
+    /**
+     * 控制通讯录中的指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public void controlMember(String email) {
+        int i = getMemberList(email);
+        driver.findElement(By.xpath("(//div[@data-test='action'])"+ "[" + i + "]")).click();
+
+    }
+
+    /**
+     * 判断通讯录中是否存在指定成员，注：需要通讯录里所有成员都绑定了邮箱；
+     *
+     * @author 刘晨
+     * @Time 2019-11-27
+     */
+    public Boolean checkMember(String email) {
+        checkPageIsReady();
+        doesWebElementExist(memberList_email_1);
+        int i = driver.findElements(By.xpath("//td[@data-test='email-cell']")).size();
+        List<String> memberList = new ArrayList<>(); //获取成员列表中所有成员的邮箱地址；
+        for(int n = 0; n<i; n++){
+            int m = n + 1;
+            String memberName = getText((By.xpath("(//td[@data-test='email-cell'])"+ "[" + m + "]")));
+            memberList.add(n ,memberName);
+        }
+        Boolean r = memberList.contains(email);//判断通讯录中是否存在指定邮箱地址
+        return r;
+    }
+
+
+    /**
      * 判断元素是否存在
      *
      * @author 刘晨
@@ -382,34 +420,103 @@ public class TestInit extends elementFile {
     }
 
     /**
-     * 加协作者，通过邮箱/手机号添
+     * 添加管理者，通过邮箱/手机号添
      *
-     * @param email
+     * @param email 添加管理者邮箱地址
+     * @param n 打开协作面板的入口类型
      * @author 刘晨
      * @Time 2019-07-25
      */
-    public void addCollaboratorByEmail(String email) {
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, email);
-        click(b_addCollaborator_1_add);
-        click(b_addCollaborator_ok);
+    public void addAdminByEmail(String email, int n) {
+        switch(n){
+            case 1 ://桌面菜单添加协作者
+                click(menu_cooperation);//点击菜单上的【协作】按钮
+                click(b_spacingCollaborator_addAdmin);
+                sendKeys(input_add_Collaborator, email);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_spacingCollaborator_addAdmin_1);
+                click(b_spacingCollaborator_close);
+                break;
+            default : //可选
+                //语句
+        }
+    }
+
+    /**
+     * 添加协作者，通过邮箱/手机号添
+     *
+     * @param email 添加协作邮箱地址
+     * @param n 打开协作面板的入口类型
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void addCollaboratorByEmail(String email, int n) throws InterruptedException {
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        sendKeys(input_addCollaborator, email);
+//        click(b_addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+
+        switch(n){
+            case 1 ://桌面菜单添加协作者
+                click(menu_cooperation);//点击菜单上的【协作】按钮
+                click(b_add_Collaborator);
+                sendKeys(input_add_Collaborator, email);
+                Thread.sleep(800);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                click(b_spacingCollaborator_close);
+                break;
+
+
+            case 2 ://文件夹内右侧直接打开协作面板
+                sendKeys(input_add_Collaborator, email);
+                Thread.sleep(800);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                click(b_spacingCollaborator_close);
+                break; //可选
+            //你可以有任意数量的case语句
+            default :
+                //语句
+        }
+
     }
 
 
     /**
-     * 除协作者，通过邮箱/手机号移
+     * 移除协作者，通过邮箱/手机号移除
      *
      * @param email
      * @author 刘晨
      * @Time 2019-07-25
      */
     public void removeCollaboratorByEmail(String email) {
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        sendKeys(input_addCollaborator, email);
+//        click(b_addCollaborator_1_add);
+//        click(list_addCollaborator_4);
         click(menu_cooperation);
-        click(b_addCollaborator);
-        sendKeys(input_addCollaborator, email);
-        click(b_addCollaborator_1_add);
-        click(list_addCollaborator_4);
+        click(b_add_Collaborator);
+        sendKeys(input_add_Collaborator, email);
+        for(int i=0; i < 5; i++){
+            Boolean r = getText(list_collaboratorEmail_1).equals(email);
+            if(r){break;}
+        }
+        click(b_add_CollaboratorList_1);
+        click(cpList_remove);
     }
 
     /**
@@ -424,17 +531,50 @@ public class TestInit extends elementFile {
         WebElement b_collaboratorPosition = null;
         switch (i){
             case 1:
-                b_collaboratorPosition = b_addCollaborator_1_list;
+                b_collaboratorPosition = b_collaboratorsList_1;
                 break;
             case 2:
-                b_collaboratorPosition = b_addCollaborator_2_list;
+                b_collaboratorPosition = b_collaboratorsList_2;
                 break;
             case 3:
-                b_collaboratorPosition = b_addCollaborator_3_list;
+                b_collaboratorPosition = b_collaboratorsList_3;
                 break;
         }
         click(b_collaboratorPosition);
-        click(list_addCollaborator_4);
+        click(cpList_remove);
+        if(doesWebElementExist(b_spacingCollaborator_close)){
+            click(b_spacingCollaborator_close);
+        }
+
+    }
+
+    /**
+     * 移除管理者，通过所处协作者列表位置
+     *
+     * @param i
+     * @author 刘晨
+     * @Time 2019-07-25
+     */
+    public void removeAdminByPosition(int i) {
+        click(menu_cooperation);
+        WebElement b_collaboratorPosition = null;
+        switch (i){
+            case 1:
+                b_collaboratorPosition = b_adminList_1;
+                break;
+            case 2:
+                b_collaboratorPosition = b_adminList_2;
+                break;
+            case 3:
+                b_collaboratorPosition = b_adminList_3;
+                break;
+        }
+        click(b_collaboratorPosition);
+        click(b_spacingCollaborator_removeAdmin);
+        click(b_spacingCollaborator_removeAdmin_confirm);
+        if(doesWebElementExist(b_spacingCollaborator_close)){
+            click(b_spacingCollaborator_close);
+        }
 
     }
 
@@ -466,8 +606,8 @@ public class TestInit extends elementFile {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(Back_to_Dashboard.toString()) || element.toString().equals(doc_menu_delete_OK.toString())) {
                 // 离开文档表格编辑页
-                wait.until(ExpectedConditions.elementToBeClickable(element));
                 checkPageIsReady();
+                wait.until(ExpectedConditions.elementToBeClickable(element));
                 wait.until(ExpectedConditions
                         .invisibilityOfElementWithText(By.xpath("//span[@id='save-status']//span[2]"), "正在保存..."));
                 element.click();
@@ -483,11 +623,24 @@ public class TestInit extends elementFile {
                 list_addCollaborator_4.click();
                 wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
                 list_addCollaborator_4_ok.click();
-            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())){
+            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())|| element.toString().equals(b_department_2.toString())|| element.toString().equals(b_department_1.toString())){
                 //协作空间，添加协作者
-                space_addCollaborator(b_add_CollaboratorList_1);
+                space_addCollaborator(element);
             } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
                 clickDashboardActivitiesByFile(dashboard_activitiesByFile);
+            }  else if (element.toString().equals(menu_createCopy.toString())) {
+                //todo
+                wait.until(ExpectedConditions.elementToBeClickable(menu_createCopy));
+                menu_createCopy.click();
+                wait.until(ExpectedConditions.elementToBeClickable(toast_msg));
+
+            }  else if (element.toString().equals(space_listing_1.toString()) || element.toString().equals(space_listing_2.toString()) || element.toString().equals(space_listing_3.toString()) || element.toString().equals(space_listing_4.toString()) || element.toString().equals(space_listing_5.toString()) || element.toString().equals(space_listing_6.toString()) || element.toString().equals(space_listing_7.toString()) || element.toString().equals(space_listing_8.toString()) || element.toString().equals(space_listing_9.toString())) {
+                element.click();
+                Boolean r = doesWebElementExist(b_space_tooltipConfirm);
+                if(r){
+                    click(b_space_tooltipConfirm);
+                    wait.until(ExpectedConditions.invisibilityOf(b_space_tooltipConfirm));
+                }
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
@@ -549,6 +702,41 @@ public class TestInit extends elementFile {
         }
     }
 
+    /**
+     * 修改协作者权限
+     *
+     * @author 刘晨
+     * @Time 2019-4-2
+     * @param permissions read, edit, discuss
+     */
+    public void modifyPermissions(WebElement element, String permissions){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
+//        click(element);
+
+        switch(permissions){
+            case "edit" ://可编辑
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_edit));
+                cpList_edit.click();
+                break;
+
+            case  "read"://只读
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_onlyRead));
+                cpList_onlyRead.click();
+                break;
+
+            case  "discuss"://只评论
+                wait.until(ExpectedConditions.elementToBeClickable(cpList_onlyDiscuss));
+                cpList_onlyDiscuss.click();
+                break;
+
+            default : //可选
+                System.out.print("参数错误");
+        }
+
+    }
+
+
 
     /**
      * 协作空间添加协作者
@@ -577,32 +765,45 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public void clickDesktop(WebElement element) {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+
+            Boolean fileCheck = doesWebElementExist(desktop1_1);
+            if(fileCheck){
+                Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
+                if(checkFileName){
+                    contextClick(desktop1_1);
+                    click(menu_delete);
+                    click(desktop_newFolder_name_ok);
+                }
+            }
+            checkPageIsReady();
+//        }
+
+    }
+
+    /**
+     * 点击切换到我的桌面
+     *
+     * @author 刘晨
+     * @Time 2017-11-21
+     */
+    public void clickDesktopByDefaultOrder(WebElement element) {
         String msg = "";
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
-            msg = getText(desktop_order);
-            if (msg.equals("更新时间")) {
+            click(desktop_order);
+            Boolean order1 = doesWebElementExist(By.xpath("(//span[@class='check-mark'])[6]/*[name()='svg']"));
+
+            click(desktop_orderByDefault);
+            if(order1){
                 click(desktop_order);
                 click(desktop_orderByFolderUP);
-                click(desktop_order);
-                click(desktop_orderByDefault);
             }
-//            click(desktop_order);
-//            Boolean order_folder = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class,'sm-dropdown-menu-item ')][6]/span/*[name()='svg']")));
-//            if (order_folder){
-//                click(desktop_orderByFolderUP);
-//                click(desktop_order);
-//                click(desktop_orderByDefault);
-//            }else{
-//                click(desktop_orderByDefault);
-//            }
 
         } finally {
-            msg = getText(desktop_show_type);
-            if (msg.equals("平铺")) {
-                click(desktop_show_type);
-            }
+            click(desktop_show_type_grid);
 
             Boolean fileCheck = doesWebElementExist(desktop1_1);
             if(fileCheck){
@@ -628,6 +829,22 @@ public class TestInit extends elementFile {
         String msg = "";
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
+            msg = element.getText();
+        } catch (NoSuchElementException e) {
+            System.out.println(element + "is missing");
+        }
+        return msg;
+    }
+
+    /**
+     * 获取文本信息
+     *
+     * @author 刘晨
+     * @Time 2018-03-23
+     */
+    public String getTextWithoutWait(WebElement element) {
+        String msg = "";
+        try {
             msg = element.getText();
         } catch (NoSuchElementException e) {
             System.out.println(element + "is missing");
@@ -673,14 +890,28 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public int getCollaboratorSize() {
-        int result = 0;
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")));
-            result = driver.findElements(By.xpath("//div[starts-with(@class,'test-list-row-wrapper ')]")).size();
-        } catch (NoSuchElementException e) {
-            System.out.println("协作者列表为空");
+        int count_parent = 0;
+        int count_collaborator = 0;
+        int count_admin = 0;
+        int total = 0;
+        Boolean b_parent = doesWebElementExist(b_checkParent);
+        if(b_parent){click(b_checkParent);}
+
+        Boolean parent = doesWebElementExist(By.xpath("//div[@data-test='row_superior_permission']"));
+        Boolean collaborator = doesWebElementExist(By.xpath("//div[@data-test='row_collab']"));
+        Boolean admin = doesWebElementExist(By.xpath("//div[@data-test='row_admin']"));
+        if (parent){
+            count_parent = driver.findElements(By.xpath("//div[@data-test='row_superior_permission']")).size();
         }
-        return result;
+        if(collaborator){
+            count_collaborator = driver.findElements(By.xpath("//div[@data-test='row_collab']")).size();
+//            if (b_parent){count_collaborator = count_collaborator - 1;}
+        }
+        if(admin){
+            count_admin = driver.findElements(By.xpath("//div[@data-test='row_admin']")).size();
+        }
+        total = count_parent + count_collaborator + count_admin;
+        return total;
     }
 
     /**
@@ -692,8 +923,8 @@ public class TestInit extends elementFile {
     public int getSpaceCollaboratorSize() {
         int result = 0;
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_')]")));
-            result = driver.findElements(By.xpath("//div[starts-with(@class,'_row_collab_')]")).size();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_wrapper_')]")));
+            result = driver.findElements(By.xpath("//div[@data-test='row_collab']")).size();
         } catch (NoSuchElementException e) {
             return 0;
         }

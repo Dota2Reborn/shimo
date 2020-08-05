@@ -7,8 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 //import org.openqa.selenium.WebDriver;
 
@@ -100,7 +99,7 @@ public class testAlertMute extends TestInit {
         click(dashboard_activitiesByFile);
         Boolean exist1 = doesWebElementExist(dashboard_share_file_1);
         int i = 1;
-        while (exist1 == false && i < 6) {
+        while (!exist1 && i < 6) {
             driver.navigate().refresh();
             wait.until(ExpectedConditions.elementToBeClickable(dashboard));
             exist1 = doesWebElementExist(dashboard_share_file_1);
@@ -167,46 +166,36 @@ public class testAlertMute extends TestInit {
      * @author 王继程
      * @Time 2018-03-23
      */
-    @Test(enabled = true)
-    public void Folder_notifications() {
-        login("AlertMute5@shimo.im", "123123");
-        click(desktop);
-        click(desktop1_1);
-        contextClick(desktop1_1);
-        click(menu_mute);
-        driver.navigate().refresh();
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        Boolean exist1 = doesWebElementExist(By.className("mute-icon"));
-        int i = 0;
+    @Test(enabled = false)//todo 用例需要优化
+    public void Folder_notifications() throws InterruptedException {
 
-        if (exist1 == true) {
-            click(Folder_settings);
-            click(menu_mute);
-            driver.navigate().refresh();
-            wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.className("mute-icon"));
-            i = 1;
-            assertFalse(exist2);
-
-        } else {
-            click(Folder_settings);
-            click(menu_mute);
-            driver.navigate().refresh();
-            wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-            Boolean exist2 = doesWebElementExist(By.className("mute-icon"));
-            i = 2;
-            assertTrue(exist2);
-        }
-        contextClick(desktop1_1);
-        click(menu_mute);
-        driver.navigate().refresh();
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        exist1 = doesWebElementExist(By.className("mute-icon"));
-        if (i == 1) {
-            assertTrue(exist1);
-        } else if (i == 2) {
-            assertFalse(exist1);
-        }
+//        login("AlertMute5@shimo.im", "123123");
+//        click(desktop);
+//        Boolean mute_icon = doesWebElementExist(By.className("mute-icon"));
+//        if(mute_icon){
+//            contextClick(desktop1_1);
+//            click(menu_mute);
+//            click(desktop1_1_folder);
+//            contextClick(desktop1_1);
+//            click(menu_mute);
+//        }else {
+//            click(desktop1_1_folder);
+//            mute_icon = doesWebElementExist(By.className("mute-icon"));
+//            if(!mute_icon){
+//                contextClick(desktop1_1);
+//                click(menu_mute);
+//            }
+//        }
+//        Thread.sleep(500);
+//        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
+//        assertFalse(r1);
+//        contextClick(desktop1_1);
+//        click(menu_mute);
+//        click(Folder_settings);
+//        click(menu_mute);
+//        Thread.sleep(500);
+//        Boolean r2 = doesWebElementExist(By.className("mute-icon"));
+//        assertTrue(r2);
     }
 
 

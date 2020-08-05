@@ -26,6 +26,7 @@ public class testDashboard extends TestInit {
         logout();
         login("autoTest05@shimo.im", "123123");
         driver.navigate().refresh();
+        click(dashboard_1);
         click(dashboard_activitiesByFile);
         String msg = getText(dashboard_update_time);
         assertEquals(msg, "刚刚 autoTest... 更新");
@@ -82,12 +83,12 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-19
      */
     @Test(enabled = true)
-    public void dashboard_share() {
+    public void dashboard_share() throws InterruptedException {
         login("autoTest06@shimo.im", "123123");
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("autoTest07@shimo.im");
+        addCollaboratorByEmail("autoTest07@shimo.im", 1);
 
         logout();
         login("autoTest07@shimo.im", "123123");
@@ -128,12 +129,14 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-18
      */
     @Test(enabled = true)
-    public void dashboard_setting_createCopy() {
+    public void dashboard_setting_createCopy() throws InterruptedException {
         login("autoTest09@shimo.im", "123123");
         click(dashboard_3);
 
         contextClick(dashboard_update_name);
         click(menu_createCopy);
+//        Thread.sleep(2000);
+
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
         String fileName = getText(desktop1_1_name);

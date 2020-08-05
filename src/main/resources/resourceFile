@@ -12,6 +12,11 @@
         "testEnvironment": "dev",
         "testURL": "https://shimodev.com/__lizard__/config.html?action=merge&features=lizard-service-bootstrap%3Afeature-beta-shimo2.0-develop%3Blizard-service-desktop%3Afeature-beta-shimo2.0-develop&redirect=https%3A%2F%2Fshimodev.com%2Flogin&lizard-view-enabled=1",
         "note": "仅修改 testURL"
+      },
+      {
+        "testEnvironment": "local",
+        "testURL": "http://47.93.62.130/",
+        "note": "仅修改 testURL"
       }
     ]
   }
