@@ -31,7 +31,7 @@ public class testSpaceNewFile extends TestInit {
 
 
     /**
-     *基础版查看空间右侧button展示
+     *远程办公版查看空间右侧button展示
      * @author  范金叶
      * @Time  2019-01-15
      */
@@ -46,7 +46,7 @@ public class testSpaceNewFile extends TestInit {
 //        System.out.print(msg1);
         assertEquals(msg,"TestTeason");
         String msg2 = getText(space_button_import);
-        assertEquals(msg2,"导入");
+        assertEquals(msg2,"上传");
         String msg3 = getText(space_button_new);
         assertEquals(msg3,"新建");
     }
@@ -72,8 +72,8 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg3,"思维导图");
         String msg4 = getText(desktop_newFolder);
         assertEquals(msg4,"文件夹");
-        String msg5 = getText(desktop_newtemplate);
-        assertEquals(msg5,"从模板新建");
+//        String msg5 = getText(desktop_newtemplate);
+//        assertEquals(msg5,"从模板新建");
     }
 
 

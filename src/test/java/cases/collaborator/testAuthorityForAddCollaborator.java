@@ -5,8 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class testAuthorityForAddCollaborator extends TestInit {
 
@@ -19,17 +18,17 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-6-27
      */
     @Test(enabled = false)
-    public void authorityForAddCollaborator_1() {
-        login("0000000@qq.com", "123123");
-        click(desktop);
-        contextClick(desktop1_1);
-        addCollaboratorByEmail("pipi@qq.com");
-
-        click(b_addCollaborator_2_list);
-        String msg = getText(Can_edit_1);
-        click(list_addCollaborator_4);
-
-        assertEquals(msg, "管理者");
+    public void authorityForAddCollaborator_1() throws InterruptedException {
+//        login("0000000@qq.com", "123123");
+//        click(desktop);
+//        contextClick(desktop1_1);
+//        addCollaboratorByEmail("pipi@qq.com", 1);
+//
+//        click(b_addCollaborator_2_list);
+//        String msg = getText(Can_edit_1);
+//        click(list_addCollaborator_4);
+//
+//        assertEquals(msg, "管理者");
     }
 
     /**
@@ -41,17 +40,17 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-6-27
      */
     @Test(enabled = false)
-    public void authorityForAddCollaborator_2() {
-        login("0000000@qq.com", "123123");
-        click(desktop);
-        contextClick(desktop1_1);
-        addCollaboratorByEmail("panpan@qq.com");
-
-        click(b_addCollaborator_2_list);
-        String msg = getText(Can_edit_1);
-        click(list_addCollaborator_4);
-
-        assertEquals(msg, "管理者");
+    public void authorityForAddCollaborator_2() throws InterruptedException {
+//        login("0000000@qq.com", "123123");
+//        click(desktop);
+//        contextClick(desktop1_1);
+//        addCollaboratorByEmail("panpan@qq.com", 1);
+//
+//        click(b_addCollaborator_2_list);
+//        String msg = getText(Can_edit_1);
+//        click(list_addCollaborator_4);
+//
+//        assertEquals(msg, "管理者");
     }
 
     /**
@@ -61,20 +60,20 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-2
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_3() {
+    public void authorityForAddCollaborator_3() throws InterruptedException {
         login("AddCollaborator_01@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_cooperation);
 
-        click(b_addCollaborator_2_list);
-        click(can_only_comment_2);
-//        Thread.sleep(200);
-        String msg = getText(b_addCollaborator_2_list);
+        click(b_collaboratorsList_1);
+        click(cpList_onlyDiscuss);
+        Thread.sleep(500);
+        String msg = getText(b_collaboratorsList_1);
 
-        click(b_addCollaborator_2_list);
-        click(Can_edit_1);
+        click(b_collaboratorsList_1);
+        click(cpList_edit);
 
         assertEquals(msg, "只能评论");
     }
@@ -86,27 +85,29 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_4() {
+    public void authorityForAddCollaborator_4() throws InterruptedException {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("liuchen@shimo.im");
-        click(Shut_down_sm_modal_close_x);
+        addCollaboratorByEmail("liuchen@shimo.im", 1);
 
         click(desktop1_1_folder);
         contextClick(desktop1_1_folder);
         click(menu_cooperation);
+
         int result1 = getCollaboratorSize();//获取协作者数量
-        click(Shut_down_sm_modal_close_x);
+        click(b_spacingCollaborator_close);
+
         contextClick(desktop1_1);
         click(menu_cooperation);
         int result2 = getCollaboratorSize();//获取协作者数量
-        click(Shut_down_sm_modal_close_x);
+        click(b_spacingCollaborator_close);
 
         click(Folder_settings);
-        removeCollaboratorByPosition(3);
+        removeCollaboratorByPosition(1);
 
         assertEquals(result2, result1);
+
     }
 
     /**
@@ -115,16 +116,15 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2018-7-3
      */
-    @Test(enabled = true)
+    @Test(enabled = true)//todo 需要加个添加协作者按钮 disable的判断，需要怡年统一按钮
     public void authorityForAddCollaborator_5() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         contextClick(desktop1_1_folder);
-
         click(menu_cooperation);
-        String t = b_addCollaborator.getAttribute("disabled");
-        assertEquals(t, "true");
+        Boolean r = doesWebElementExist(b_spacingCollaborator_addCollaborator);
+        assertFalse(r);
     }
 
     /**
@@ -141,19 +141,16 @@ public class testAuthorityForAddCollaborator extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
 
-//        Boolean r1 = getAttribute(menu_rename,"disabled").equals("true");
-//        Boolean r2 = getAttribute(menu_move,"disabled").equals("true");
-        Boolean r1 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-rename ')]")));
-        Boolean r2 = doesWebElementExist(driver.findElement(By.xpath("//li[starts-with(@class, 'sm-menu-item-disabled sm-menu-item sm-menu-move ')]")));
+        Boolean r1 = getAttribute(menu_move, "aria-disabled").equals("true");
+        Boolean r2 = getAttribute(menu_rename, "aria-disabled").equals("true");
 
         moveToElement(menu_share);
         click(menu_share_1);
 
         Boolean r3 = getText(toast_msg).equals("根据企业设置，你没有权限修改公开链接，请联系文件所有者或企业管理员");
-        wait.until(ExpectedConditions.visibilityOf(menu_cooperation));
         click(menu_cooperation);
-        Boolean r4 = getAttribute(b_addCollaborator, "disabled").equals("true");
-        assertTrue(r1 && r2 && r3 && r4);
+        Boolean r4 = doesWebElementExist(b_spacingCollaborator_addCollaborator);
+        assertTrue(r1 && r2 && r3 && !r4);
     }
 
     /**
@@ -163,19 +160,17 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @Time 2018-7-3
      */
     @Test(enabled = true)
-    public void authorityForAddCollaborator_7() {
+    public void authorityForAddCollaborator_7() throws InterruptedException {
         login("AddCollaborator_04_1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1_folder);
         String file_name = getText(desktop1_1_name);
         contextClick(desktop1_1);
-        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
-        click(button_addCollaborator_close);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im");
-        click(button_addCollaborator_close);
+        addCollaboratorByEmail("AddCollaborator_04_2@shimo.im", 1);
 
         logout();
         login("AddCollaborator_04_2@shimo.im", "123123");
@@ -189,7 +184,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1_folder);
-        removeCollaboratorByPosition(2);
+        removeCollaboratorByPosition(1);
 
         assertTrue(r1 && r2 && r3);
 

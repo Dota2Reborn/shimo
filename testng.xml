@@ -12,14 +12,11 @@
 	<test name="test1">
 		<classes>
 			<class name="cases.dashboard.dashboard_own" />
-			<class name="cases.dashboard.dashboard_shared" />
-			<class name="cases.recycle.testRecycleBin" />
 		</classes>
 	</test>
 	<test name="test2">
 		<classes>
 			<class name="cases.dashboard.testDashboard" />
-			<class name="cases.desktop.testNotice" />
 		</classes>
 	</test>
 	<test name="test3">
@@ -29,27 +26,22 @@
 	</test>
 	<test name="test4">
 		<classes>
-			<class name="cases.space.testRightClickMenu" />
-			<class name="cases.sharePage.SharePage" />
+			<class name="cases.dashboard.dashboard_shared" />
 		</classes>
 	</test>
 	<test name="test5">
 		<classes>
-			<class name="cases.desktop.testHover" />
-			<class name="cases.desktop.testAlertMute" />
 			<class name="cases.desktop.testDesktopOrderBy" />
 		</classes>
 	</test>
 	<test name="test6">
 		<classes>
 			<class name="cases.dashboard.dashboard_update" />
-			<class name="cases.desktop.testSearch" />
 		</classes>
 	</test>
 	<test name="test7">
 		<classes>
 			<class name="cases.collaborator.testAddCollaborator" />
-			<class name="cases.collaborator.testPermission" />
 		</classes>
 	</test>
 	<test name="test8">
@@ -61,8 +53,7 @@
 	<test name="test9">
 		<classes>
 			<class name="cases.collection.testCollection" />
-			<class name="cases.loginRegistered.login_error" />
-			<class name="cases.loginRegistered.testRegistered_new" />
+
 		</classes>
 	</test>
 	<test name="test10">
@@ -100,21 +91,22 @@
 			<class name="cases.collaborator.testRemoveCollaborator" />
 		</classes>
 	</test>
-	<test name="test17">
-		<classes>
-			<class name="cases.collaborator.testTransferOwner" />
-		</classes>
-	</test>
+	<!--case作废，新的逻辑中没有转让所有者-->
+	<!--<test name="test17">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testTransferOwner" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test18">
 		<classes>
 			<class name="cases.collaborator.testAuthorityForMoveFile" />
 		</classes>
 	</test>
-	<test name="test19">
-		<classes>
-			<class name="cases.collaborator.testCollaboratorUI" />
-		</classes>
-	</test>
+	<!--<test name="test19">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testCollaboratorUI" />-->
+		<!--</classes>-->
+	<!--</test>-->
 	<test name="test20">
 		<classes>
 			<class name="cases.profile.testProfile" />
@@ -140,4 +132,77 @@
 			<class name="cases.space.testSpaceNewFile" />
 		</classes>
 	</test>
+	<!--<test name="test25">-->
+		<!--<classes>-->
+			<!--<class name="cases.collaborator.testPermission" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<test name="test26">
+		<classes>
+			<class name="cases.desktop.testSearch" />
+
+		</classes>
+	</test>
+	<test name="test27">
+		<classes>
+			<class name="cases.desktop.testHover" />
+
+		</classes>
+	</test>
+	<test name="test28">
+		<classes>
+			<class name="cases.desktop.testAlertMute" />
+
+		</classes>
+	</test>
+	<test name="test29">
+		<classes>
+			<class name="cases.recycle.testRecycleBin" />
+
+		</classes>
+	</test>
+	<test name="test30">
+		<classes>
+			<class name="cases.space.testRightClickMenu" />
+
+		</classes>
+	</test>
+	<test name="test31">
+		<classes>
+			<class name="cases.sharePage.SharePage" />
+
+		</classes>
+	</test>
+	<test name="test32">
+		<classes>
+			<class name="cases.desktop.testNotice" />
+		</classes>
+	</test>
+	<test name="test33">
+		<classes>
+			<class name="cases.loginRegistered.login_error" />
+
+		</classes>
+	</test>
+	<!--<test name="test34">-->
+		<!--<classes>-->
+			<!--<class name="cases.loginRegistered.testRegistered_new" />-->
+		<!--</classes>-->
+	<!--</test>-->
+	<test name="test35">
+		<classes>
+			<class name="cases.management.testMemberList" />
+		</classes>
+	</test>
+	<test name="test36">
+		<classes>
+			<class name="cases.management.testCompanyManagement" />
+		</classes>
+	</test>
+	<test name="test37">
+		<classes>
+			<class name="cases.space.testSpaceList" />
+		</classes>
+	</test>
+
 </suite>

@@ -24,6 +24,7 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
+        click(dashboard);
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "最近使用");
@@ -33,6 +34,7 @@ public class dashboard_used extends TestInit {
         moveToElement(dashboard_update_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
+        click(dashboard);
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);
@@ -143,7 +145,7 @@ public class dashboard_used extends TestInit {
      * @author 陈清杰 @Time2018-03-16 账号状态：没有文件
      **/
     @Test
-    public void used7() {
+    public void used7() throws InterruptedException {
         login("zuijin9@shimo.im", "123123");
         click(desktop_new);
         click(desktop_newDoc);
@@ -153,11 +155,12 @@ public class dashboard_used extends TestInit {
         click(dashboard_2);
 
         contextClick(dashboard_update_name);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        click(button_addCollaborator_close);
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+//        click(button_addCollaborator_close);
+        addCollaboratorByEmail("zuijin8@shimo.im", 1);
 
         logout();
         login("zuijin8@shimo.im", "123123");
@@ -165,6 +168,7 @@ public class dashboard_used extends TestInit {
         click(dashboard_4);
         click(dashboard_update_name);
         click(b_back);
+        click(dashboard);
         click(dashboard_2);
 
         contextClick(dashboard_update_name);
@@ -188,7 +192,7 @@ public class dashboard_used extends TestInit {
      * @author 陈清杰 @Time2018-03-19 账号状态:没有文件
      **/
     @Test
-    public void used8() {
+    public void used8() throws InterruptedException {
 
         login("zuijin55@shimo.im", "123123");
         click(desktop_new);
@@ -198,11 +202,12 @@ public class dashboard_used extends TestInit {
         click(b_back);
         click(dashboard_2);
         contextClick(dashboard_update_name);
-        click(menu_cooperation);
-        click(b_addCollaborator);
-        click(addCollaborator_1_add);
-        click(b_addCollaborator_ok);
-        click(button_addCollaborator_close);
+//        click(menu_cooperation);
+//        click(b_addCollaborator);
+//        click(addCollaborator_1_add);
+//        click(b_addCollaborator_ok);
+//        click(button_addCollaborator_close);
+        addCollaboratorByEmail("zuijin77@shimo.im", 1);
 
         logout();
         login("zuijin77@shimo.im", "123123");
@@ -214,10 +219,11 @@ public class dashboard_used extends TestInit {
         login("zuijin55@shimo.im", "123123");
         click(dashboard_2);
         contextClick(dashboard_update_file);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
-        click(Shut_down_sm_modal_close_x);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
+//        click(Shut_down_sm_modal_close_x);
+        removeCollaboratorByPosition(1);
         contextClick(dashboard_update_file);
         click(menu_delete);
         click(desktop_newFolder_name_ok);

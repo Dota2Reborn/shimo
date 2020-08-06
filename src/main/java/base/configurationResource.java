@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class configurationResource {
     private static final String locatorFile = "resourceFile";
-    private static final String testEnvironment = "release"; //dev , release
+    private static final String testEnvironment = "release"; //dev , release, local
     private String test_url;
 
     /**
@@ -25,6 +25,8 @@ public class configurationResource {
             test_url = "https://release.shimodev.com/";
         } else if (testEnvironment.equals("dev")) {
             test_url = "https://shimodev.com/";
+        } else if(testEnvironment.equals("local")){
+            test_url = getUrlWithCookie();
         }
         return test_url;
     }

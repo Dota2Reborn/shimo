@@ -158,18 +158,19 @@ public class testSheetHeader extends TestInit {
 
             click(desktop);
             click(desktop1_1);
-            Thread.sleep(1000);
-            click(driver.findElement(By.xpath("//div[@data-test='page-header-right']/button[3]")));
-            sendKeys(input_collaborator, "test0910@qq.com");
-            click(b_addCollaborator_1_add);
-            click(b_addCollaborator_ok);
+            click(b_collaborator);
+            sendKeys(input_add_Collaborator, "test0910@qq.com");
+            Thread.sleep(500);
+            click(b_add_CollaboratorList_1);
+            click(cpList_edit);
 
-            wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
-            click(b_addCollaborator_2_list);
-            click(list_addCollaborator_4);
+            driver.navigate().refresh();
+            click(b_collaborator);
+            click(b_collaboratorsList_1);
+            click(cpList_remove);
 
-            int count = getCollaboratorSize();
-            assertTrue(count == 1);
+            int r1 = getCollaboratorSize();
+            assertEquals(r1, 1);
         }
 
         /**

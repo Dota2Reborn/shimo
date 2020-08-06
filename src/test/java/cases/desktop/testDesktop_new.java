@@ -2,8 +2,8 @@ package cases.desktop;
 
 import base.TestInit;
 import elementFile.ByGenerator;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -23,19 +23,102 @@ public class testDesktop_new extends TestInit {
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
-        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newDoc);
+
+        String time = getDate();
+        sendKeys(doc_title_input, time);
+
         click(b_back);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-        driver.navigate().refresh();
-        String msg1 = getText(desktop1_1_name);
+        assertEquals(msg, time);
 
-        assertEquals(msg, msg1);
+    }
 
+    /**
+     * 新建幻灯片
+     *
+     * @author 刘晨
+     * @Time 2019-11-21
+     */
+    @Test
+    public void desktop_newSlide() {
+        login("autoTest_new@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop_new);
+        click(desktop_newSlides);
+
+        String time = getDate();
+        sendKeys(ppt_filename, time);
+
+        click(b_back);
+        String msg = getText(desktop1_1_name);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+        assertEquals(time, msg);
+
+    }
+
+    /**
+     * 新建脑图
+     *
+     * @author 刘晨
+     * @Time 2019-11-21
+     */
+    @Test
+    public void desktop_newMindMap() {
+        //desktop_newMindMap
+        login("autoTest_new@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop_new);
+        click(desktop_newMindMap);
+
+        String time = getDate();
+        sendKeys(ppt_filename, time);
+
+        click(b_back);
+        String msg = getText(desktop1_1_name);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+        assertEquals(time, msg);
+    }
+
+    /**
+     * 新建白板
+     *
+     * @author 刘晨
+     * @Time 2019-11-21
+     */
+    @Test
+    public void desktop_newFileBoard() {
+        //desktop_newMindMap
+        login("autoTest_new@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop_new);
+        click(desktop_newFileBoard);
+
+        String time = getDate();
+        sendKeys(ppt_filename, time);
+        action.sendKeys(Keys.ENTER).build().perform();
+
+        driver.navigate().back();
+        String msg = getText(desktop1_1_name);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+        assertEquals(time, msg);
     }
 
     /**
@@ -49,19 +132,48 @@ public class testDesktop_new extends TestInit {
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
-        wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
-        String msg = getText(desktop1_1_name);
         click(desktop_new);
         click(desktop_newSheet);
+
+        String time = getDate();
+        click(ppt_filename);
+        sendKeys(ppt_filename, time);
+
         click(b_back);
+        String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 
-        driver.navigate().refresh();
-        String msg1 = getText(desktop1_1_name);
+        assertEquals(msg, time);
+    }
 
-        assertEquals(msg, msg1);
+    /**
+     * 新建表单
+     *
+     * @author 刘晨
+     * @Time 2017-11-20
+     */
+    @Test
+    public void desktop_newFileForm() {
+        login("autoTest_new@shimo.im", "123123");
+
+        click(desktop);
+        click(desktop_new);
+        click(desktop_newFileForm);
+
+        String time = getDate();
+        click(ppt_filename);
+        sendKeys(ppt_filename, time);
+        action.sendKeys(Keys.ENTER).build().perform();
+
+        click(b_back);
+        String msg = getText(desktop1_1_name);
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
+
+        assertEquals(msg, time);
     }
 
     /**
@@ -100,7 +212,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void desktop_import_doc() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
@@ -128,7 +240,7 @@ public class testDesktop_new extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void desktop_import_docx() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
@@ -138,9 +250,9 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
-        Thread.sleep(2000);
-        click(b_back);
+        click(desktop_newFolder_name_cancel);
 
+        Thread.sleep(2000);
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_delete);
@@ -183,7 +295,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_md() {
+    public void desktop_import_md() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -193,6 +305,7 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
+        Thread.sleep(500);
         click(b_back);
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);

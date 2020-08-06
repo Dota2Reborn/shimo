@@ -272,16 +272,16 @@ public class testShapeArrow extends TestInit {
 	 */
 	@Test(enabled = false)
 	 public void arrow_styles() throws InterruptedException{
-		login("test_zjj@shimo.im", "123123");
-		click(desktop);
-		click(desktop1_1);
-		Thread.sleep(5000);
-		WebElement setTop = driver.findElement(By.xpath("//div[@class='container-section flex-align-center']//button[3]"));
-		click(setTop);
-		action.moveByOffset(0, 100).clickAndHold().moveByOffset(100, 100).click().build().perform();
-		String stroke = setTop.getCssValue("stroke");//形状边框线颜色
-		String strokeWidth = setTop.getCssValue("stroke-width"); //形状边框线宽度
-		System.out.println("stroke="+stroke + " ===== " +"strokeWidth="+ strokeWidth);
+//		login("test_zjj@shimo.im", "123123");
+//		click(desktop);
+//		click(desktop1_1);
+//		Thread.sleep(5000);
+//		WebElement setTop = driver.findElement(By.xpath("//div[@class='container-section flex-align-center']//button[3]"));
+//		click(setTop);
+//		action.moveByOffset(0, 100).clickAndHold().moveByOffset(100, 100).click().build().perform();
+//		String stroke = setTop.getCssValue("stroke");//形状边框线颜色
+//		String strokeWidth = setTop.getCssValue("stroke-width"); //形状边框线宽度
+//		System.out.println("stroke="+stroke + " ===== " +"strokeWidth="+ strokeWidth);
 	}
 	
 

@@ -19,7 +19,6 @@ public class testRecycleBin extends TestInit {
     public void testRecycleBin_1() throws InterruptedException {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
-        Sort();
         contextClick(desktop1_1);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -30,7 +29,7 @@ public class testRecycleBin extends TestInit {
         assertEquals(name, "删除恢复测试");
         contextClick(desktop1_1);
         click(menu_Recovery);
-        click(desktop);
+        desktop.click();
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));
         String name1 = getText(desktop1_1_name);
         assertEquals(name1, "删除恢复测试");
@@ -47,7 +46,7 @@ public class testRecycleBin extends TestInit {
         login("Completely@shimo.im", "123123");
 
         click(desktop);
-        Sort();
+//        Sort();
         click(desktop_new);
         click(desktop_newDoc);
 //        wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
@@ -65,40 +64,40 @@ public class testRecycleBin extends TestInit {
         click(menu_Completely_removed);
         click(desktop_newFolder_name_ok);
         Thread.sleep(500);
-        boolean bl = doesWebElementExist(By.className("none-file"));
-        assertEquals(bl, true);
+        String msg = getText(toast_msg);
+        assertEquals(msg, "删除成功");
 
     }
 
     //排序初始化
     //验证排序是否初始化
-    public void Sort() {
-        wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-        String msg = desktop_show_type.getText();
-        if (msg.equals("平铺")) {
-            desktop_show_type.click();
-        }
-        msg = desktop_order.getText();
-        if (msg.equals("排序")) {
-            desktop_order.click();
-            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-            desktop_orderByDefault.click();
-            if (exist == true) {
-                desktop_order.click();
-                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-                desktop_orderByFolderUP.click();
-            }
-        } else {
-            desktop_order.click();
-            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-            if (exist == true) {
-                desktop_orderByFolderUP.click();
-            } else {
-                desktop_orderByDefault.click();
-            }
-        }
-
-    }
+//    public void Sort() {
+//        wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
+//        String msg = desktop_show_type.getText();
+//        if (msg.equals("平铺")) {
+//            desktop_show_type.click();
+//        }
+//        msg = desktop_order.getText();
+//        if (msg.equals("排序")) {
+//            desktop_order.click();
+//            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
+//            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+//            desktop_orderByDefault.click();
+//            if (exist == true) {
+//                desktop_order.click();
+//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+//                desktop_orderByFolderUP.click();
+//            }
+//        } else {
+//            desktop_order.click();
+//            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
+//            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
+//            if (exist == true) {
+//                desktop_orderByFolderUP.click();
+//            } else {
+//                desktop_orderByDefault.click();
+//            }
+//        }
+//
+//    }
 }

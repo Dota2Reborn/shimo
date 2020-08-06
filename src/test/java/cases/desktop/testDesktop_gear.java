@@ -41,7 +41,7 @@ public class testDesktop_gear extends TestInit {
      * @Time 2018-03-19
      */
     @Test
-    public void desktop_doc_shortcut() {
+    public void desktop_doc_shortcut() throws InterruptedException {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
 
@@ -57,7 +57,7 @@ public class testDesktop_gear extends TestInit {
 
         click(menu_shortcut);
 
-        driver.navigate().refresh();
+        Thread.sleep(1000);
         String msg = getText(desktop_shortcut_1);
         String doc_name = getText(desktop1_1_name);
 
@@ -88,6 +88,7 @@ public class testDesktop_gear extends TestInit {
         click(desktop_setting);
         click(menu_collection);
 
+        click(dashboard);
         click(favorites);
         String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
@@ -127,13 +128,14 @@ public class testDesktop_gear extends TestInit {
      * @Time 2018-03-19
      */
     @Test
-    public void desktop_doc_createCopy() {
+    public void desktop_doc_createCopy() throws InterruptedException {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
         String msg = getText(desktop1_1_name);
         moveToElement(desktop1_1);
         click(desktop_setting);
         click(menu_createCopy);
+//        Thread.sleep(2000);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);

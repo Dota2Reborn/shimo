@@ -52,9 +52,10 @@ public class SharePage extends TestInit {
      * @Time 2019-7-11
      */
     @Test(enabled = true)
-    public void sharePage_companyOnly_read() {
+    public void sharePage_companyOnly_read() throws InterruptedException {
         jumpToURL("https://release.shimodev.com/docs/T1XIgAok6eQ02WUJ/");
 
+        Thread.sleep(1000);
         WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div//a"));
         click(button_Confirm);
 
@@ -73,20 +74,23 @@ public class SharePage extends TestInit {
      * @Time 2019-7-11
      */
     @Test(enabled = true)
-    public void sharePage_companyOnly_pwd_edit() {
+    public void sharePage_companyOnly_pwd_edit() throws InterruptedException {
         login("pipi@qq.com", "123123");
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
         click(b_share);
         click(share_changePWD);
+        Thread.sleep(500);
         String pwd = getAttribute(share_PWD, "value");
 
         logout();
 
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
+        Thread.sleep(1000);
         WebElement button_Confirm =  driver.findElement(By.xpath("//div[@id='root']/div//a"));
         click(button_Confirm);
         login("liuchen@shimo.im","123123");
 
+//        System.out.println(pwd);
         sendKeys(sharePage_inputPwd, pwd);
         click(sharePage_buttonConfirm);
 
