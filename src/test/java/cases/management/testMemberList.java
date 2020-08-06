@@ -233,7 +233,7 @@ public class testMemberList extends TestInit {
 
         sendKeys(memberSearch, "常驻成员");
         Thread.sleep(200);
-        String name = getText(memberList_email_2);
+        String name = getText(memberList_email_1);
         assertEquals(name, "testEnterprise04@qq.com");
 
         controlMember("testEnterprise04@qq.com");
