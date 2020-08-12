@@ -123,7 +123,7 @@ public class login_error extends TestInit {
 
         String toast = "";
         toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
-        assertEquals(toast, "密码错误，请重新输入");
+        assertEquals(toast, "用户名或密码错误");
     }
 
 	/*
