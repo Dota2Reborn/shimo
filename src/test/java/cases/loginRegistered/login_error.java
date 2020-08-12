@@ -119,7 +119,7 @@ public class login_error extends TestInit {
 
 
         login_error("chenqingjie@shimo.im", "8294854");
-        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "密码错误，请重新输入"));
+        wait.until(ExpectedConditions.textToBe(By.xpath("//div[@class='tips']"), "用户名或密码错误"));
 
         String toast = "";
         toast = driver.findElement(By.xpath("//div[@class='tips']")).getText();
