@@ -845,7 +845,7 @@ public class TestInit extends elementFile {
      * @Time 2020-08-13
      */
     public void delFile(WebElement element) {
-        contextClick(desktop1_1);
+        contextClick(element);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
     }
