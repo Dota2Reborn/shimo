@@ -144,9 +144,10 @@ public class dashboard_own extends TestInit {
                 a = true;
             }
         }
-        contextClick(dashboard_update_time);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_time);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_time);
         assertTrue(a);
 
     }

@@ -30,9 +30,10 @@ public class testNewTemplateFile extends TestInit {
         Thread.sleep(2000);
         switchToPage(1);
         click(b_back);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
@@ -59,9 +60,10 @@ public class testNewTemplateFile extends TestInit {
         switchToPage(1);
         click(b_back);
 //        click(space_listing_3);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
@@ -85,9 +87,10 @@ public class testNewTemplateFile extends TestInit {
         switchToPage(1);
         click(b_back);
 //        click(space_listing_3);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         String msg1 = getText(desktop1_1_name);
         assertEquals(msg, msg1);
     }
@@ -111,8 +114,9 @@ public class testNewTemplateFile extends TestInit {
         click(desktop_moveToSpace_confirm);
         assertEquals("1 个文件已移动至 测试协作空间", getText(toast_msg));
         click(space_listing_1);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
     }
 }

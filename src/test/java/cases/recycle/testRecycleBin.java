@@ -19,9 +19,10 @@ public class testRecycleBin extends TestInit {
     public void testRecycleBin_1() throws InterruptedException {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         Thread.sleep(1000);
         click(trash);
         wait.until(ExpectedConditions.elementToBeClickable(desktop1_1));

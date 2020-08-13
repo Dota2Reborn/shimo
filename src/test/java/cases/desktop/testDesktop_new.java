@@ -31,9 +31,10 @@ public class testDesktop_new extends TestInit {
 
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, time);
 
@@ -58,9 +59,10 @@ public class testDesktop_new extends TestInit {
 
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(time, msg);
 
@@ -86,9 +88,10 @@ public class testDesktop_new extends TestInit {
 
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(time, msg);
     }
@@ -114,9 +117,10 @@ public class testDesktop_new extends TestInit {
 
         driver.navigate().back();
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(time, msg);
     }
@@ -141,9 +145,10 @@ public class testDesktop_new extends TestInit {
 
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, time);
     }
@@ -169,9 +174,10 @@ public class testDesktop_new extends TestInit {
 
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, time);
     }
@@ -197,9 +203,10 @@ public class testDesktop_new extends TestInit {
         sendKeys(desktop_newFolder_name, time);
         click(desktop_newFolder_name_ok);
         click(desktop);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);
 
@@ -226,9 +233,10 @@ public class testDesktop_new extends TestInit {
         click(b_back);
 
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, "test_doc");
 
@@ -254,9 +262,10 @@ public class testDesktop_new extends TestInit {
 
         Thread.sleep(2000);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, "test_docx");
 
@@ -280,9 +289,10 @@ public class testDesktop_new extends TestInit {
 
         click(desktop_newFolder_name_cancel);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, "test_sheet");
 
@@ -308,9 +318,10 @@ public class testDesktop_new extends TestInit {
         Thread.sleep(500);
         click(b_back);
         String msg = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg, "test");
 

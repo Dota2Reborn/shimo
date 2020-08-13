@@ -124,9 +124,10 @@ public class dashboard_used extends TestInit {
         click(b_back);
         click(dashboard_2);
 
-        contextClick(dashboard_update_file);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_file);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_file);
 
         Boolean f = doesWebElementExist(dashboard_update_file);
         Boolean result;
@@ -171,9 +172,10 @@ public class dashboard_used extends TestInit {
         click(dashboard);
         click(dashboard_2);
 
-        contextClick(dashboard_update_name);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_name);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_name);
 
         Boolean f = doesWebElementExist(dashboard_update_file);
         Boolean result;
@@ -224,9 +226,10 @@ public class dashboard_used extends TestInit {
 //        click(list_addCollaborator_4);
 //        click(Shut_down_sm_modal_close_x);
         removeCollaboratorByPosition(1);
-        contextClick(dashboard_update_file);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_file);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_file);
         logout();
 
         login("zuijin77@shimo.im", "123123");

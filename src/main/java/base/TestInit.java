@@ -275,19 +275,19 @@ public class TestInit extends elementFile {
 
     }
 
-    /**
-     * 删除桌面第一个文件
-     *
-     * @author 刘晨
-     * @Time 2017-11-20
-     */
-    public void deleteFile() {
-        click(desktop);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
-
-    }
+//    /**
+//     * 删除桌面第一个文件
+//     *
+//     * @author 刘晨
+//     * @Time 2017-11-20
+//     */
+//    public void deleteFile() {
+//        click(desktop);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+//
+//    }
 
     /**
      * 获取当前时间
@@ -772,9 +772,10 @@ public class TestInit extends elementFile {
             if(fileCheck){
                 Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
                 if(checkFileName){
-                    contextClick(desktop1_1);
-                    click(menu_delete);
-                    click(desktop_newFolder_name_ok);
+//                    contextClick(desktop1_1);
+//                    click(menu_delete);
+//                    click(desktop_newFolder_name_ok);
+                    delFile(desktop1_1);
                 }
             }
             checkPageIsReady();
@@ -809,9 +810,10 @@ public class TestInit extends elementFile {
             if(fileCheck){
                 Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
                 if(checkFileName){
-                    contextClick(desktop1_1);
-                    click(menu_delete);
-                    click(desktop_newFolder_name_ok);
+//                    contextClick(desktop1_1);
+//                    click(menu_delete);
+//                    click(desktop_newFolder_name_ok);
+                    delFile(desktop1_1);
                 }
             }
             checkPageIsReady();
@@ -834,6 +836,18 @@ public class TestInit extends elementFile {
             System.out.println(element + "is missing");
         }
         return msg;
+    }
+
+    /**
+     * 删除文件
+     *
+     * @author 刘晨
+     * @Time 2020-08-13
+     */
+    public void delFile(WebElement element) {
+        contextClick(desktop1_1);
+        click(menu_delete);
+        click(desktop_newFolder_name_ok);
     }
 
     /**

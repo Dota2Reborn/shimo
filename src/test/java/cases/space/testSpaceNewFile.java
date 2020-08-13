@@ -109,9 +109,10 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newDoc);
         click(b_back);
-        contextClick(space_document_1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(space_document_1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(space_document_1_1);
         driver.navigate().refresh();
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
@@ -131,9 +132,10 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newSheet);
         click(b_back);
-        contextClick(space_document_1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(space_document_1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
@@ -152,9 +154,10 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newSlides);
         click(b_back);
-        contextClick(space_document_1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(space_document_1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
@@ -173,9 +176,10 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newMindMap);
         click(b_back);
-        contextClick(space_document_1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(space_document_1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
@@ -197,9 +201,10 @@ public class testSpaceNewFile extends TestInit {
         sendKeys(desktop_newFolder_name, time);
         click(desktop_newFolder_name_ok);
         driver.navigate().back();
-        contextClick(space_document_1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(space_document_1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }

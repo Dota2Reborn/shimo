@@ -19,9 +19,10 @@ public class testDesktop_remove extends TestInit {
 		
 		click(desktop);
 		String msg = getText(desktop1_1_name);
-		contextClick(desktop1_1);
-		click(menu_delete);
-		click(Exit_share_OK);
+//		contextClick(desktop1_1);
+//		click(menu_delete);
+//		click(Exit_share_OK);
+		delFile(desktop1_1);
 		
 		click(trash);
 		String msg1 = getText(desktop1_1_name);
@@ -50,9 +51,10 @@ public class testDesktop_remove extends TestInit {
 		click(desktop);
 		String msg1 = getText(desktop1_1_name);
 		
-		contextClick(desktop1_1);
-		click(menu_delete);
-		click(Exit_share_OK);
+//		contextClick(desktop1_1);
+//		click(menu_delete);
+//		click(Exit_share_OK);
+		delFile(desktop1_1);
 		
 		assertEquals(msg, msg1);
 	}
@@ -70,9 +72,10 @@ public class testDesktop_remove extends TestInit {
 		
 		click(desktop);
 		String msg = getText(desktop1_1_folder);
-		contextClick(desktop1_1_folder);
-		click(menu_delete);
-		click(Exit_share_OK);
+//		contextClick(desktop1_1_folder);
+//		click(menu_delete);
+//		click(Exit_share_OK);
+		delFile(desktop1_1_folder);
 		
 		click(trash);
 		String msg1 = getText(desktop1_1_folder);
@@ -96,9 +99,10 @@ public class testDesktop_remove extends TestInit {
 		click(desktop);
 		click(desktop1_1_folder);
 		String msg = getText(desktop1_1_name);
-		contextClick(desktop1_1);
-		click(menu_delete);
-		click(Exit_share_OK);
+//		contextClick(desktop1_1);
+//		click(menu_delete);
+//		click(Exit_share_OK);
+		delFile(desktop1_1);
 		
 		click(trash);
 		contextClick(desktop1_1);

@@ -31,10 +31,11 @@ public class testCollection extends TestInit {
         Sort();
         String name = getText(desktop1_1_name);
         // contextClick(desktop1_1);
-        moveToElement(desktop1_1);
-        click(desktop_setting);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        moveToElement(desktop1_1);
+//        click(desktop_setting);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 //        Thread.sleep(500);
         assertEquals(name, "无标题");
     }
@@ -60,10 +61,11 @@ public class testCollection extends TestInit {
         Sort();
         String name = getText(desktop1_1_name);
         // contextClick(desktop1_1);
-        moveToElement(desktop1_1);
-        click(desktop_setting);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        moveToElement(desktop1_1);
+//        click(desktop_setting);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 //        Thread.sleep(500);
         assertEquals(name, "无标题");
 
@@ -177,9 +179,10 @@ public class testCollection extends TestInit {
         driver.navigate().refresh();
         String name = getText(desktop1_1_name);
         if (name1 != name) {
-            contextClick(desktop1_1);
-            click(menu_delete);
-            click(desktop_newFolder_name_ok);
+//            contextClick(desktop1_1);
+//            click(menu_delete);
+//            click(desktop_newFolder_name_ok);
+            delFile(desktop1_1);
 
         }
 

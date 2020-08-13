@@ -135,7 +135,7 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_8() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
-        click(desktop1_1_folder);
+//        click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_rename);
 
@@ -168,9 +168,10 @@ public class testDesktop extends TestInit {
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
         assertEquals(msg1, "副本 " + msg);
     }

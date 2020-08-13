@@ -42,9 +42,10 @@ public class testAuthorityForMoveFile extends TestInit {
 
         click(b_spacingCollaborator_close);
 
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         assertTrue(r1 && r2 && r3 && r4);
 
     }
@@ -102,9 +103,10 @@ public class testAuthorityForMoveFile extends TestInit {
 
         click(b_spacingCollaborator_close);
 
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         assertTrue(r1 && r2 && r3 && r4);
 
     }

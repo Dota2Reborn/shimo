@@ -38,9 +38,10 @@ public class dashboard_shared extends TestInit {
         boolean e = doesWebElementExist(menu_Point_Menu);
         assertTrue(b && c && text && text1 && d && e);
         Thread.sleep(200);
-        contextClick(dashboard_update_name);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_name);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_name);
     }
 
     /**

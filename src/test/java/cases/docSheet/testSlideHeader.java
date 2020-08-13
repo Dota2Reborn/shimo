@@ -248,9 +248,10 @@ public class testSlideHeader extends TestInit {
         click(doc_menu_delete);
         click(doc_menu_delete_OK);
 
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
 
     }
 

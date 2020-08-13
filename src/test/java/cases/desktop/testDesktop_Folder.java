@@ -155,10 +155,10 @@ public class testDesktop_Folder extends TestInit {
         driver.navigate().refresh();
         String msg = getText(desktop1_1_name);
 
-        contextClick(desktop1_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
-
+//        contextClick(desktop1_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(desktop1_1);
         assertEquals(msg, "删除文件夹");
     }
 

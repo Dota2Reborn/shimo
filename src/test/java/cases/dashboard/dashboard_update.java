@@ -59,9 +59,10 @@ public class dashboard_update extends TestInit {
 
         click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
-        contextClick(dashboard_share_file_1);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_share_file_1);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_share_file_1);
         assertEquals(text1, "刚刚 我 更新");
 
     }
@@ -191,9 +192,10 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_edit, "la");
         click(b_back);
         click(dashboard_activitiesByFile);
-        contextClick(dashboard_update_file);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_file);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_file);
 
         Boolean f = doesWebElementExist(dashboard_update_file);
         Boolean result;
@@ -278,9 +280,10 @@ public class dashboard_update extends TestInit {
         assertFalse(result);
         assertTrue(text1);
 
-        contextClick(dashboard_update_name);
-        click(menu_delete);
-        click(desktop_newFolder_name_ok);
+//        contextClick(dashboard_update_name);
+//        click(menu_delete);
+//        click(desktop_newFolder_name_ok);
+        delFile(dashboard_update_name);
 
     }
 
