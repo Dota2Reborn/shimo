@@ -16,18 +16,24 @@ public class testPermission extends TestInit {
      * @Time 2018-03-06
      */
     @Test(enabled = true)
-    public void Add_to1() {
+    public void Add_to1() throws InterruptedException {
         login("testing_1@test.im", "123123");
         click(desktop);
         // 右键第一个文件
         contextClick(desktop1_1_folder);
+
+        addCollaboratorByEmail("testing_6@test.im",1);
+//        click(menu_cooperation);
+//
+//        sendKeys(input_addCollaborator, "testing_6@test.im");
+//        click(b_addCollaborator_1_add);
+
+        contextClick(desktop1_1_folder);
         click(menu_cooperation);
+        modifyPermissions(b_add_CollaboratorList_1,"discuss");
 
-        sendKeys(input_addCollaborator, "testing_6@test.im");
-        click(b_addCollaborator_1_add);
-
-        Modify(2, 2);
-        click(Shut_down_sm_modal_close_x);
+//        Modify(2, 2);
+//        click(Shut_down_sm_modal_close_x);
         logout();
         login("testing_6@test.im", "123123");
         click(desktop);
@@ -41,9 +47,11 @@ public class testPermission extends TestInit {
         click(Back_to_Desktop);
 
         contextClick(desktop1_1_folder);
-        click(menu_cooperation);
-        click(b_addCollaborator_2_list);
-        click(list_addCollaborator_4);
+
+        removeCollaboratorByPosition(1);
+//        click(menu_cooperation);
+//        click(b_addCollaborator_2_list);
+//        click(list_addCollaborator_4);
 //        click(menu_delete);
 //        click(Exit_share_OK);
     }

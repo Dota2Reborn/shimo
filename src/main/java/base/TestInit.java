@@ -515,7 +515,9 @@ public class TestInit extends elementFile {
             Boolean r = getText(list_collaboratorEmail_1).equals(email);
             if(r){break;}
         }
-        click(b_add_CollaboratorList_1);
+//        click(b_add_CollaboratorList_1);
+        wait.until(ExpectedConditions.elementToBeClickable(b_add_CollaboratorList_1));
+        b_add_CollaboratorList_1.click();
         click(cpList_remove);
     }
 
@@ -543,7 +545,7 @@ public class TestInit extends elementFile {
         click(b_collaboratorPosition);
         click(cpList_remove);
         if(doesWebElementExist(b_spacingCollaborator_close)){
-            click(b_spacingCollaborator_close);
+            b_spacingCollaborator_close.click();
         }
 
     }
@@ -1052,6 +1054,27 @@ public class TestInit extends elementFile {
             return;
         }
     }
+
+    /**
+     * Selenium wait //Todo
+     *
+     * @author 刘晨
+     * @Time 2020-08-19
+     */
+    public WebElement expWaitForElement(By locator, int timeout) {
+        WebElement element = null;
+        try {
+            System.out.println(timeout + "秒之后出现");
+            WebDriverWait wait = new WebDriverWait(driver, timeout);
+            element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            System.out.println("元素出现了");
+        } catch (Exception e) {
+            System.out.println("元素不存在");
+            e.printStackTrace();
+        }
+        return element;
+    }
+
 
     /**
      * UI像素比对截图

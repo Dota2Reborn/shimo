@@ -99,7 +99,7 @@ public class testSpacePermissions  extends TestInit {
      *
      */
     @Test
-    public  void  testSpacePermission_3() {
+    public  void  testSpacePermission_3() throws InterruptedException {
         login("qq0@qq.qqqq","123123");
         moveToElement(space_listing_5);
         click(b_SpaceSetting5);
@@ -120,6 +120,7 @@ public class testSpacePermissions  extends TestInit {
         click(b_collaboratorsList_1);
         click(cpList_onlyDiscuss);
 
+        Thread.sleep(500);
         String msg1 = getText(b_add_CollaboratorList_1);
         assertEquals(msg1 ,"只能评论");
 
