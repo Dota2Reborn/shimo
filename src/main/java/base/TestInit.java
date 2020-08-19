@@ -629,10 +629,10 @@ public class TestInit extends elementFile {
             } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
                 clickDashboardActivitiesByFile(dashboard_activitiesByFile);
             }  else if (element.toString().equals(menu_createCopy.toString())) {
-                //todo
+
                 wait.until(ExpectedConditions.elementToBeClickable(menu_createCopy));
                 menu_createCopy.click();
-                wait.until(ExpectedConditions.elementToBeClickable(toast_msg));
+                wait.until(ExpectedConditions.visibilityOf(toast_msg));
 
             }  else if (element.toString().equals(space_listing_1.toString()) || element.toString().equals(space_listing_2.toString()) || element.toString().equals(space_listing_3.toString()) || element.toString().equals(space_listing_4.toString()) || element.toString().equals(space_listing_5.toString()) || element.toString().equals(space_listing_6.toString()) || element.toString().equals(space_listing_7.toString()) || element.toString().equals(space_listing_8.toString()) || element.toString().equals(space_listing_9.toString())) {
                 element.click();
