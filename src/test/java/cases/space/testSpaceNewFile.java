@@ -191,7 +191,7 @@ public class testSpaceNewFile extends TestInit {
      * @Time  2019-01-15
      */
     @Test(enabled = true)
-    public void space_newFolder(){
+    public void space_newFolder() throws InterruptedException {
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
         String msg = getText(space_document_1_1);
@@ -200,10 +200,9 @@ public class testSpaceNewFile extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name, time);
         click(desktop_newFolder_name_ok);
+
+        Thread.sleep(1000);
         driver.navigate().back();
-//        contextClick(space_document_1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
