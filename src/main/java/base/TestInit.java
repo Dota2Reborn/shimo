@@ -37,6 +37,7 @@ public class TestInit extends elementFile {
     @BeforeClass
     public void firstMethod(String browser, String nodeIp, String local, String testURL) throws MalformedURLException {
 
+        System.out.println(testURL);
         test_url = baseURL.getUrl();
         driver = init.initData(this, browser, nodeIp, local);
         action = new Actions(driver);

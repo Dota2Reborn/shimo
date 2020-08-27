@@ -261,6 +261,7 @@ public class testDesktop_new extends TestInit {
 //        click(desktop_newFolder_name_cancel);
 
         Thread.sleep(2000);
+        click(b_back);
         String msg = getText(desktop1_1_name);
 //        contextClick(desktop1_1);
 //        click(menu_delete);
