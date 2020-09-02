@@ -232,7 +232,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2019-12-10
      */
     @Test(enabled = true)
-    public void addCollaborator_10() {
+    public void addCollaborator_10() throws InterruptedException {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_2_folder);
@@ -240,6 +240,7 @@ public class testAddCollaborator extends TestInit {
         click(b_spacingCollaborator_addAdmin);
         sendKeys(input_add_Collaborator, "autoTest_addCollabor@shimo.im");
 
+        Thread.sleep(1000);
         Boolean r = getAttribute(b_spacingCollaborator_addAdmin_1, "data-disabled").equals("true");
         assertTrue(r);
     }
