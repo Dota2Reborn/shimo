@@ -434,7 +434,7 @@ public class TestInit extends elementFile {
                 click(b_spacingCollaborator_addAdmin);
                 sendKeys(input_add_Collaborator, email);
                 for(int i=0; i < 10; i++){
-                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
+                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
                 }
                 click(b_spacingCollaborator_addAdmin_1);
