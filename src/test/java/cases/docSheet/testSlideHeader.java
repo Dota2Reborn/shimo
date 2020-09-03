@@ -44,7 +44,7 @@ public class testSlideHeader extends TestInit {
         click(desktop1_1);
         click(quick_access_point);
         click(Back_to_Desktop);
-        Boolean r1 = driver.getCurrentUrl().equals(getURL() + "desktop");
+        Boolean r1 = driver.getCurrentUrl().startsWith(getURL() + "desktop");
         assertTrue(r1);
     }
 
