@@ -679,7 +679,7 @@ public class TestInit extends elementFile {
         } catch (NoAlertPresentException e) {
             // 正常情况
         } catch(StaleElementReferenceException e){
-            System.out.println("element is not attached to the page document");
+            System.out.println("element is not attached to the page document;["+element+"]");
         }catch (JavascriptException e) {
             String msg = driver.switchTo().alert().getText();
             System.out.println("Unhandled Alert :" + msg);
@@ -854,7 +854,7 @@ public class TestInit extends elementFile {
             } catch (NoSuchElementException e) {
                 System.out.println(element + "is missing");
             } catch (StaleElementReferenceException e){
-                System.out.println("element is not attached to the page document");
+                System.out.println("element is not attached to the page document;["+element+"]");
             }
             num++;
         }
@@ -890,7 +890,7 @@ public class TestInit extends elementFile {
             } catch (NoSuchElementException e) {
                 System.out.println(element + "is missing");
             } catch (StaleElementReferenceException e){
-                System.out.println("element is not attached to the page document");
+                System.out.println("element is not attached to the page document;["+element+"]");
             }
             num++;
         }
