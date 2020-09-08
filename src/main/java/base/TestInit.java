@@ -410,13 +410,19 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public void contextClick(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            action.contextClick(element).perform();
-        } catch (NoSuchElementException e) {
-            System.out.println(element + "is missing");
-        }
+        int num = 0;
+        while (num < 2){
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                action.contextClick(element).perform();
+                break;
+            } catch (NoSuchElementException e) {
+                System.out.println(element + "is missing");
+            } catch (StaleElementReferenceException e){
 
+            }
+            num++;
+        }
     }
 
     /**
@@ -434,7 +440,7 @@ public class TestInit extends elementFile {
                 click(b_spacingCollaborator_addAdmin);
                 sendKeys(input_add_Collaborator, email);
                 for(int i=0; i < 10; i++){
-                    Boolean r = getText(list_collaboratorEmail_1).equals(email);
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
                 }
                 click(b_spacingCollaborator_addAdmin_1);
@@ -604,6 +610,9 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public void click(WebElement element) {
+        int num = 0;
+        while(num<5) {
+        num++;
         try {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(Back_to_Dashboard.toString()) || element.toString().equals(doc_menu_delete_OK.toString())) {
@@ -666,10 +675,12 @@ public class TestInit extends elementFile {
         } catch (TimeoutException e) {
             // 超时
             System.out.println("time out ->" + element);
-            assertTrue(false);
+//            assertTrue(false);
         } catch (NoAlertPresentException e) {
             // 正常情况
-        } catch (JavascriptException e) {
+        } catch(StaleElementReferenceException e){
+            System.out.println("element is not attached to the page document");
+        }catch (JavascriptException e) {
             String msg = driver.switchTo().alert().getText();
             System.out.println("Unhandled Alert :" + msg);
             System.out.println("javascript Error:" + e.getMessage());
@@ -681,6 +692,8 @@ public class TestInit extends elementFile {
                 e.printStackTrace();
             }
             checkPageIsReady();
+            break;
+        }
         }
     }
 
@@ -830,12 +843,20 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public String getText(WebElement element) {
+
         String msg = "";
-        try {
-            wait.until(ExpectedConditions.visibilityOf(element));
-            msg = element.getText();
-        } catch (NoSuchElementException e) {
-            System.out.println(element + "is missing");
+        int num = 0;
+        while(num<10){
+            try {
+                wait.until(ExpectedConditions.visibilityOf(element));
+                msg = element.getText();
+                break;
+            } catch (NoSuchElementException e) {
+                System.out.println(element + "is missing");
+            } catch (StaleElementReferenceException e){
+                System.out.println("element is not attached to the page document");
+            }
+            num++;
         }
         return msg;
     }
@@ -847,6 +868,7 @@ public class TestInit extends elementFile {
      * @Time 2020-08-13
      */
     public void delFile(WebElement element) {
+
         contextClick(element);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
@@ -860,10 +882,17 @@ public class TestInit extends elementFile {
      */
     public String getTextWithoutWait(WebElement element) {
         String msg = "";
-        try {
-            msg = element.getText();
-        } catch (NoSuchElementException e) {
-            System.out.println(element + "is missing");
+        int num = 0;
+        while(num<10){
+            try {
+                msg = element.getText();
+                break;
+            } catch (NoSuchElementException e) {
+                System.out.println(element + "is missing");
+            } catch (StaleElementReferenceException e){
+                System.out.println("element is not attached to the page document");
+            }
+            num++;
         }
         return msg;
     }
