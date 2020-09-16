@@ -611,7 +611,7 @@ public class TestInit extends elementFile {
      */
     public void click(WebElement element) {
         int num = 0;
-        while(num<5) {
+        while(num<3) {
         num++;
         try {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
@@ -846,7 +846,7 @@ public class TestInit extends elementFile {
 
         String msg = "";
         int num = 0;
-        while(num<10){
+        while(num<5){
             try {
                 wait.until(ExpectedConditions.visibilityOf(element));
                 msg = element.getText();
