@@ -1,6 +1,7 @@
 package cases.desktop;
 
 import base.TestInit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,25 @@ import static org.testng.Assert.assertTrue;
 
 public class testDesktop extends TestInit {
 
+
+//    public void checkData(){
+//
+//        int fileNum = driver.findElements(By.xpath("//a[@class='tile-item file-item']")).size();
+//        System.out.println(fileNum);
+//
+//        int folderNum = driver.findElements(By.xpath("//a[@class='tile-item file-item folder']")).size();
+//        System.out.println(fileNum);
+//
+//        if(fileNum != 1){
+//            for(int i = 1; i<fileNum; i++){
+//                System.out.println("<+1>");
+//                delFile(driver.findElement(By.xpath("//a[@class='tile-item file-item']")));
+//            }
+//        }
+//
+//
+//    }
+
     /**
      * 右键文档-在新标签页中打开
      *
@@ -24,6 +44,9 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_1() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
+
+//        checkData();
+
         contextClick(desktop1_1);
         click(menu_newPage);
 
