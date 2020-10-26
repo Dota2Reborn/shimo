@@ -394,7 +394,7 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public boolean doesWebElementExist(WebElement element) {
-        wait = new WebDriverWait(driver, 1);
+        WebDriverWait wait = new WebDriverWait(driver, 1);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
@@ -410,19 +410,19 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public void contextClick(WebElement element) {
-        int num = 0;
-        while (num < 2){
+//        int num = 0;
+//        while (num < 2){
             try {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 action.contextClick(element).perform();
-                break;
+//                break;
             } catch (NoSuchElementException e) {
                 System.out.println(element + "is missing");
             } catch (StaleElementReferenceException e){
 
             }
-            num++;
-        }
+//            num++;
+//        }
     }
 
     /**
@@ -610,9 +610,9 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public void click(WebElement element) {
-        int num = 0;
-        while(num<3) {
-        num++;
+//        int num = 0;
+//        while(num<3) {
+//        num++;
         try {
             if (element.toString().equals(b_back.toString())  || element.toString().equals(Back_to_Desktop.toString())
                     || element.toString().equals(Back_to_Dashboard.toString()) || element.toString().equals(doc_menu_delete_OK.toString())) {
@@ -692,9 +692,9 @@ public class TestInit extends elementFile {
                 e.printStackTrace();
             }
             checkPageIsReady();
-            break;
+//            break;
         }
-        }
+//        }
     }
 
     /**
