@@ -110,6 +110,8 @@ public class TestInit extends elementFile {
             jumpToURL(test_url + "login");
         }
 
+        agreement();
+
 //        wait.until(ExpectedConditions.elementToBeClickable(desktop));
 //        Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
 //        if(msg){
@@ -120,6 +122,13 @@ public class TestInit extends elementFile {
 //        gooiest();//跳过引导页
 //        Sticker_Face();//付费提示框
 //        wait.until(ExpectedConditions.elementToBeClickable(desktop_new));
+    }
+
+    private void agreement(){
+        Boolean r = doesWebElementExist(By.xpath("//div[@id='agreements-button-ok']"));
+        if(r){
+            driver.findElement(By.xpath("//div[@id='agreements-button-ok']")).click();
+        }
     }
 
     /**
