@@ -113,7 +113,12 @@ public class baseFunc {
                 option.setCapability("plaform", "ANY");
                 URL remoteAddress = new URL(nodeIp + "/wd/hub");
                 driver = new RemoteWebDriver(remoteAddress, option);
-            } else {
+            } else if(browser.equals("mobile")){
+                ChromeOptions option = new ChromeOptions();
+                option.addArguments("--user-agent=iPhone 6");
+                driver = new ChromeDriver(option);
+
+            }else {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
 //				option.addArguments("--headless");//隐藏浏览器
