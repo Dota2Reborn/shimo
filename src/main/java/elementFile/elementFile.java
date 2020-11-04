@@ -1633,4 +1633,96 @@ public class elementFile {
 	/** 【新协作面板】上级继承权限列表协作者权限 */
 	@SearchWith(pageName = "spaceCollaboratorUI", elementName = "list_parentPermissions_1")
 	public WebElement list_parentPermissions_1;
+
+
+	/** 移动端_桌面文件_第一个 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_file_1")
+	public WebElement mobile_file_1;
+	/** 移动端_桌面文件_第二个 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_file_2")
+	public WebElement mobile_file_2;
+	/** 移动端_新建按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_create")
+	public WebElement mobile_B_create;
+	/** 移动端_新建新文档 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_createDoc")
+	public WebElement mobile_B_createDoc;
+	/** 移动端_新建表格 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_createSheet")
+	public WebElement mobile_B_createSheet;
+	/** 移动端_新建表单 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_createForm")
+	public WebElement mobile_B_createForm;
+	/** 移动端_文件重命名输入框 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_I_fileReName")
+	public WebElement mobile_I_fileReName;
+	/** 移动端_二次确认窗口_确定按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_confirm")
+	public WebElement mobile_B_confirm;
+	/** 移动端_文件菜单(...) */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting")
+	public WebElement mobile_B_setting;
+	/** 移动端_文件菜单_删除按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_del")
+	public WebElement mobile_B_setting_del;
+	/** 移动端_文件菜单_添加协作者按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_addCollaborator")
+	public WebElement mobile_B_setting_addCollaborator;
+	/** 移动端_文件菜单_重命名按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_rename")
+	public WebElement mobile_B_setting_rename;
+	/** 移动端_文件菜单_收藏按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_collection")
+	public WebElement mobile_B_setting_collection;
+	/** 移动端_文件菜单_分享_私有 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_share_1")
+	public WebElement mobile_B_setting_share_1;
+	/** 移动端_文件菜单_分享_公开只读 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_share_2")
+	public WebElement mobile_B_setting_share_2;
+	/** 移动端_文件菜单_分享_公开可写 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_share_3")
+	public WebElement mobile_B_setting_share_3;
+	/** 移动端_header_分享_私有 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_share_1")
+	public WebElement mobile_header_share_1;
+	/** 移动端_header_分享_公开只读 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_share_2")
+	public WebElement mobile_header_share_2;
+	/** 移动端_header_分享_公开可写 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_share_3")
+	public WebElement mobile_header_share_3;
+	/** 移动端_文件菜单_删除_确认删除按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_B_setting_del_confirm")
+	public WebElement mobile_B_setting_del_confirm;
+	/** 移动端_文件header_返回按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_back")
+	public WebElement mobile_header_back;
+	/** 移动端_文件header_分享按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_share")
+	public WebElement mobile_header_share;
+	/** 移动端_文件header_菜单(....) */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting")
+	public WebElement mobile_header_setting;
+	/** 移动端_文件header_菜单_协作按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_collaborator")
+	public WebElement mobile_header_setting_collaborator;
+	/** 移动端_文件header_菜单_收藏按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_collection")
+	public WebElement mobile_header_setting_collection;
+	/** 移动端_文件header_菜单_创建副本按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_createCopy")
+	public WebElement mobile_header_setting_createCopy;
+	/** 移动端_文件header_菜单_用app编辑按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_toApp")
+	public WebElement mobile_header_setting_toApp;
+	/** 移动端_文件header_协作_添加协作者按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_collaborator_addCollaborator")
+	public WebElement mobile_header_collaborator_addCollaborator;
+	/** 移动端_文件header_协作_添加管理者按钮 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_collaborator_addAdmin")
+	public WebElement mobile_header_collaborator_addAdmin;
+	/** 移动端_toast */
+	@SearchWith(pageName = "mobile", elementName = "mobile_toast")
+	public WebElement mobile_toast;
 }

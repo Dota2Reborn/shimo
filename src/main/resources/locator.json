@@ -3961,5 +3961,162 @@
 				"note": "【新协作面板】上级继承权限列表协作者权限"
 			}
 		]
+	},
+	{
+		"note": "移动端H5",
+		"pageName": "mobile",
+		"elements": [
+			{
+				"note": "移动端_桌面文件_第一个",
+				"elementName": "mobile_file_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'sm-mobile-list-item-content')])[1]"
+			},{
+				"note": "移动端_桌面文件_第二个",
+				"elementName": "mobile_file_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[starts-with(@class,'sm-mobile-list-item-content')])[2]"
+			},{
+				"note": "移动端_新建按钮",
+				"elementName": "mobile_B_create",
+				"locateUsing": "xpath",
+				"locator": "//*[name()='svg']//*[@id='new']"
+			},{
+				"note": "移动端_新建新文档",
+				"elementName": "mobile_B_createDoc",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'新建文档')]"
+			},{
+				"note": "移动端_新建表格",
+				"elementName": "mobile_B_createSheet",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'新建表格')]"
+			},{
+				"note": "移动端_新建表单",
+				"elementName": "mobile_B_createForm",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'新建表单')]"
+			},{
+				"note": "移动端_文件重命名输入框",
+				"elementName": "mobile_I_fileReName",
+				"locateUsing": "xpath",
+				"locator": "//form/input"
+			},{
+				"note": "移动端_二次确认窗口_确定按钮",
+				"elementName": "mobile_B_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'确定')]"
+			},{
+				"note": "移动端_文件菜单(...)",
+				"elementName": "mobile_B_setting",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-mobile-list-item-extra')]//*[name()='svg']"
+			},{
+				"note": "移动端_文件菜单_删除按钮",
+				"elementName": "mobile_B_setting_del",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'StyledActionBottom')]/div[contains(text(),'删除')]"
+			},{
+				"note": "移动端_文件菜单_添加协作者按钮",
+				"elementName": "mobile_B_setting_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'StyledActionBottom')]/div[contains(text(),'添加协作者')]"
+			},{
+				"note": "移动端_文件菜单_重命名按钮",
+				"elementName": "mobile_B_setting_rename",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'StyledActionBottom')]/div[contains(text(),'重命名')]"
+			},{
+				"note": "移动端_文件菜单_收藏按钮",
+				"elementName": "mobile_B_setting_collection",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'StyledActionBottom')]/div[contains(text(),'收藏')]"
+			},{
+				"note": "移动端_文件菜单_分享_私有",
+				"elementName": "mobile_B_setting_share_1",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-mobile-radio-group')]/label[1]"
+			},{
+				"note": "移动端_文件菜单_分享_公开只读",
+				"elementName": "mobile_B_setting_share_2",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-mobile-radio-group')]/label[2]"
+			},{
+				"note": "移动端_文件菜单_分享_公开可写",
+				"elementName": "mobile_B_setting_share_3",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'sm-mobile-radio-group')]/label[3]"
+			},{
+				"note": "移动端_header_分享_私有",
+				"elementName": "mobile_header_share_1",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='type-item'])[1]"
+			},{
+				"note": "移动端_header_分享_公开只读",
+				"elementName": "mobile_header_share_2",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='type-item'])[2]"
+			},{
+				"note": "移动端_header_分享_公开可写",
+				"elementName": "mobile_header_share_3",
+				"locateUsing": "xpath",
+				"locator": "(//div[@class='type-item'])[3]"
+			},{
+				"note": "移动端_文件菜单_删除_确认删除按钮",
+				"elementName": "mobile_B_setting_del_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[contains(text(),'确认删除')]"
+			},{
+				"note": "移动端_文件header_返回按钮",
+				"elementName": "mobile_header_back",
+				"locateUsing": "xpath",
+				"locator": "(//div/*[name()='svg'])[1]"
+			},{
+				"note": "移动端_文件header_分享按钮",
+				"elementName": "mobile_header_share",
+				"locateUsing": "xpath",
+				"locator": "(//span[@class='star-bar']//*[name()='svg'])[1]"
+			},{
+				"note": "移动端_文件header_菜单(....)",
+				"elementName": "mobile_header_setting",
+				"locateUsing": "xpath",
+				"locator": "(//span[@class='star-bar']//*[name()='svg'])[2]"
+			},{
+				"note": "移动端_文件header_菜单_协作按钮",
+				"elementName": "mobile_header_setting_collaborator",
+				"locateUsing": "xpath",
+				"locator": "//ul/li//span[contains(text(),'协作')]"
+			},{
+				"note": "移动端_文件header_菜单_收藏按钮",
+				"elementName": "mobile_header_setting_collection",
+				"locateUsing": "xpath",
+				"locator": "//ul/li//span[contains(text(),'收藏')]"
+			},{
+				"note": "移动端_文件header_菜单_创建副本按钮",
+				"elementName": "mobile_header_setting_createCopy",
+				"locateUsing": "xpath",
+				"locator": "//ul/li//span[contains(text(),'创建副本')]"
+			},{
+				"note": "移动端_文件header_菜单_用app编辑按钮",
+				"elementName": "mobile_header_setting_toApp",
+				"locateUsing": "xpath",
+				"locator": "//ul/li//span[contains(text(),'用 App 编辑')]"
+			},{
+				"note": "移动端_文件header_协作_添加协作者按钮",
+				"elementName": "mobile_header_collaborator_addCollaborator",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='list_head_tail'])[1]"
+			},{
+				"note": "移动端_文件header_协作_添加管理者按钮",
+				"elementName": "mobile_header_collaborator_addAdmin",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='list_head_tail'])[2]"
+			},{
+				"note": "移动端_toast",
+				"elementName": "mobile_toast",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@class,'StyledContent')]"
+			}
+		]
 	}
 ]

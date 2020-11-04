@@ -74,7 +74,13 @@ public class baseFunc {
                 option.setLogLevel(FirefoxDriverLogLevel.ERROR);
                 option.setBinary("D:\\软件\\Mozilla Firefox\\firefox.exe");
                 driver = new FirefoxDriver(option);
-            } else {
+            } else if(os.startsWith("Windows") && browser.equals("mobile")){
+                System.setProperty("webdriver.chrome.driver", new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriver.exe").getFile()).getPath());
+
+                ChromeOptions option = new ChromeOptions();
+                option.addArguments("--user-agent=iPhone 6");
+                driver = new ChromeDriver(option);
+            }else {
                 System.setProperty("webdriver.chrome.driver",
                         new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriverMac").getFile()).getPath());
                 ChromeOptions option = new ChromeOptions();

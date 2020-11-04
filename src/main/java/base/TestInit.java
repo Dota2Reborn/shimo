@@ -502,7 +502,16 @@ public class TestInit extends elementFile {
                 click(cpList_edit);
                 click(b_spacingCollaborator_close);
                 break; //可选
-            //你可以有任意数量的case语句
+            case 3 ://mobile添加协作
+                sendKeys(input_add_Collaborator, email);
+                Thread.sleep(800);
+                for(int i=0; i < 10; i++){
+                    Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
+                    if(r){break;}
+                }
+                click(b_add_CollaboratorList_1);
+                click(cpList_edit);
+                break; //可选
             default :
                 //语句
         }
