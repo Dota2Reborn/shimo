@@ -115,6 +115,10 @@ public class baseFunc {
                 driver = new RemoteWebDriver(remoteAddress, option);
             } else if(browser.equals("mobile")){
                 ChromeOptions option = new ChromeOptions();
+                option.setCapability("browserName", "chrome");
+                option.setCapability("version", "80");
+                option.setCapability("plaform", "ANY");
+                option.addArguments("--disable-gpu");//规避浏览器bug
                 option.addArguments("--user-agent=iPhone 6");
                 driver = new ChromeDriver(option);
 
