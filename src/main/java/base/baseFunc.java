@@ -120,7 +120,8 @@ public class baseFunc {
                 option.setCapability("plaform", "ANY");
                 option.addArguments("--disable-gpu");//规避浏览器bug
                 option.addArguments("--user-agent=iPhone 6");
-                driver = new ChromeDriver(option);
+                URL remoteAddress = new URL(nodeIp + "/wd/hub");
+                driver = new RemoteWebDriver(remoteAddress, option);
 
             }else {
                 ChromeOptions option = new ChromeOptions();
