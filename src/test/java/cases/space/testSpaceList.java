@@ -49,6 +49,6 @@ public class testSpaceList extends TestInit {
         moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
-        click(ppt_delete_sure);
+        click(message_ok);
     }
 }

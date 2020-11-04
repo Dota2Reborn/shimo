@@ -95,7 +95,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".mp4";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -231,7 +231,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".mp3";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -412,7 +412,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".docx";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -435,7 +435,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".xlsx";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -459,7 +459,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".pptx";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -483,7 +483,7 @@ public class testRightClickMenu extends TestInit {
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
         time = time+".txt";
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -519,8 +519,6 @@ public class testRightClickMenu extends TestInit {
         login("Space_word@shimo.im", "123123");
         click(space_listing_2);
         contextClick(space_document_1_1);
-//        Thread.sleep(800);
-//        action.clickAndHold(space_RightMenu_collaborator).perform();
         click(b_SpaceSetting_collaboration);
         Thread.sleep(500);
         Boolean element1 = doesWebElementExist(input_add_Collaborator);
@@ -608,7 +606,7 @@ public class testRightClickMenu extends TestInit {
 //        Thread.sleep(500);
         String time = getDate();
         sendKeys(desktop_newFolder_name,time);
-        click(ppt_delete_sure);
+        click(message_ok);
         String name = getText(space_document_1_1);
         name=name.replace("\n"+" ","");
         assertEquals(name,time);
@@ -630,8 +628,8 @@ public class testRightClickMenu extends TestInit {
         Thread.sleep(800);
         driver.close();
         switchToPage(0);
-//        click(ppt_filename);
-        String time = ppt_filename.getAttribute("value");
+//        click(doc_title_input);
+        String time = doc_title_input.getAttribute("value");
         assertEquals(time, "这是表格");
     }
     /**
@@ -650,7 +648,7 @@ public class testRightClickMenu extends TestInit {
         Thread.sleep(800);
         driver.close();
         switchToPage(0);
-        String time = ppt_filename.getAttribute("value");
+        String time = doc_title_input.getAttribute("value");
         assertEquals(time, "这是ppt");
     }
     /**

@@ -195,7 +195,7 @@ public class TestInit extends elementFile {
      */
     public void Registered_new(String mobile_verifyCode, String user, String pwd, int type) {
         jumpToURL(test_url + "registType");
-        WebElement tab = driver.findElement(By.xpath("//div[starts-with(@class,'StyledRegistButtonBlue')]"));
+        WebElement tab = driver.findElement(By.xpath("//div[contains(text(),'立即注册个人版')]"));
         click(tab);
         if (type == 1) {
 //            sendKeys(input_registered_nickname, name);

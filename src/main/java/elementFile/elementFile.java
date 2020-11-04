@@ -80,12 +80,7 @@ public class elementFile {
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name_cancel", noteName = "文件夹命名取消")
 	public WebElement desktop_newFolder_name_cancel;
 
-	/** 模板新建-个人模板第一个 */
-	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate_1")
-	public WebElement desktop_newTemplate_1;
-	/** 个人模板，右键菜单，删除按钮 */
-	@SearchWith(pageName = "desktop", elementName = "desktop_template_delete")
-	public WebElement desktop_template_delete;
+
 	/** 模板库 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate")
 	public WebElement desktop_newTemplate;
@@ -142,8 +137,6 @@ public class elementFile {
 	public WebElement b_back;
 	@SearchWith(pageName = "doc", elementName = "doc_title_input", noteName = "文档标题编辑")
 	public WebElement doc_title_input;
-	@SearchWith(pageName = "doc", elementName = "doc_saveStatus", noteName = "文档/表格提示同步完成状态")
-	public WebElement doc_saveStatus;
 	/** 文档header上标题 */
 	@SearchWith(pageName = "doc", elementName = "doc_header_title")
 	public WebElement doc_header_title;
@@ -163,8 +156,6 @@ public class elementFile {
 	public WebElement doc_menu_delete;
 	@SearchWith(pageName = "doc", elementName = "doc_menu_delete_OK", noteName = "文档编辑页面中右上角 点点点-删除文档-确定按钮")
 	public WebElement doc_menu_delete_OK;
-	@SearchWith(pageName = "doc", elementName = "doc_discuss", noteName = "文档编辑页面中评论按钮")
-	public WebElement doc_discuss;
 	@SearchWith(pageName = "doc", elementName = "doc_discuss_input", noteName = "文档编辑页面中评论输入框")
 	public WebElement doc_discuss_input;
 	@SearchWith(pageName = "doc", elementName = "doc_discuss_input_ok", noteName = "文档编辑页面中评论输入框-确定按钮")
@@ -197,15 +188,6 @@ public class elementFile {
 	/** header创建文档按钮 */
 	@SearchWith(pageName = "doc", elementName = "b_headerCreateDoc")
 	public WebElement b_headerCreateDoc;
-    /** header创建表格按钮 */
-    @SearchWith(pageName = "doc", elementName = "b_headerCreateSheet")
-    public WebElement b_headerCreateSheet;
-	/** header创建幻灯片按钮 */
-	@SearchWith(pageName = "doc", elementName = "b_headerCreateSlide")
-	public WebElement b_headerCreateSlide;
-	/** header模板创建按钮 */
-	@SearchWith(pageName = "doc", elementName = "b_headerCreateTemplate")
-	public WebElement b_headerCreateTemplate;
 	/** header上用户头像icon */
 	@SearchWith(pageName = "doc", elementName = "b_user_icon")
 	public WebElement b_user_icon;
@@ -348,45 +330,9 @@ public class elementFile {
 	/** 协作空间hover设置--「设置」 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting")
 	public WebElement b_SpaceSetting_setting;
-	/** 协作空间hover设置「协作者」--添加协作者 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_add")
-	public WebElement b_SpaceSetting_collaboration_add;
-	/** 协作空间hover设置「协作者」--查看协作者 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_view")
-	public WebElement b_SpaceSetting_collaboration_view;
-	/** 协作空间hover设置「协作者」-添加协作者--部门tab */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_department")
-	public WebElement b_SpaceSetting_collaboration_department;
-	/** 协作空间hover设置「协作者」--添加协作者--部门第二级第一个button */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_collaboration_department2_1")
-	public WebElement b_SpaceSetting_collaboration_department2_1;
-	/** 协作空间hover设置--设置」--修改空间名 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangeName")
-	public WebElement b_SpaceSetting_setting_ChangeName;
-	/** 协作空间hover设置--设置」--修改空间名--输入框 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_InputName")
-	public WebElement b_SpaceSetting_setting_InputName;
-    /** 协作空间hover设置--设置」--当前全员权限 */
-    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_now")
-    public WebElement b_SpaceSetting_setting_ChangePermission_now;
-    /** 协作空间hover设置--设置」--修改全员权限（笔） */
-    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission")
-    public WebElement b_SpaceSetting_setting_ChangePermission;
-    /** 协作空间hover设置--设置」--修改全员权限--可编辑 */
-    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_edit")
-    public WebElement b_SpaceSetting_setting_ChangePermission_edit;
-    /** 协作空间hover设置--设置」--修改全员权限--只评论 */
-    @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ChangePermission_comment")
-    public WebElement b_SpaceSetting_setting_ChangePermission_comment;
-	/** 协作空间hover设置--设置」--确定button */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_setting_ok")
-	public WebElement b_SpaceSetting_setting_ok;
     /** 协作空间设置--删除 */
     @SearchWith(pageName = "Collaborative_space", elementName = "b_SpaceSetting_delete")
     public WebElement b_SpaceSetting_delete;
-	/** 回收站协作空间--齿轮--彻底删除 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "b_trash_space_delete")
-	public WebElement b_trash_space_delete;
 	/** 协作空间列表1 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_listing_1")
 	public WebElement space_listing_1;
@@ -420,9 +366,6 @@ public class elementFile {
 	/** 协作空间引导，【知道了】按钮 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "b_space_tooltipConfirm")
 	public WebElement b_space_tooltipConfirm;
-	/** 协作空间空白处 */
-	@SearchWith(pageName = "Collaborative_space", elementName = "space_document")
-	public WebElement space_document;
 	/** 协作空间第一行第一个文件 */
 	@SearchWith(pageName = "Collaborative_space", elementName = "space_document_1_1")
 	public WebElement space_document_1_1;
@@ -477,7 +420,6 @@ public class elementFile {
 	 * spaceRightClickMenu
 	 * 协作空间右键菜单
 	 */
-
 	/** 预览(云文件)&上传文件(桌面)&在新标签页打开(文件)&移动||创建副本(多选) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_1")
 	public WebElement space_RightMenu_1;
@@ -487,15 +429,6 @@ public class elementFile {
 	/** 复制链接(协作空间右键菜单) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_copyLink")
 	public WebElement space_RightMenu_copyLink;
-	/** 协作(协作空间右键菜单) */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_collaborator")
-	public WebElement space_RightMenu_collaborator;
-	/** 添加协作者 */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_1")
-	public WebElement space_RightMenu_3_1;
-	/** 查看协作者 */
-	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_3_2")
-	public WebElement space_RightMenu_3_2;
 	/** 移动(文件夹)&分享(文件) */
 	@SearchWith(pageName = "spaceRightClickMenu", elementName = "space_RightMenu_4")
 	public WebElement space_RightMenu_4;
@@ -539,46 +472,16 @@ public class elementFile {
 	 * addCollaborator
 	 * 协作者相关
 	 */
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_close", noteName = "关闭添加协作者弹框")
-	public WebElement button_addCollaborator_close;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list", noteName = "协作者列表第一个协作者权限下拉框")
 	public WebElement b_addCollaborator_1_list;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list", noteName = "协作者列表第二个协作者权限下拉框")
 	public WebElement b_addCollaborator_2_list;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list", noteName = "协作者列表第三个协作者权限下拉框")
 	public WebElement b_addCollaborator_3_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list_disable", noteName = "协作者列表第三个协作者权限下拉框是否可以点击")
-	public WebElement b_addCollaborator_3_list_disable;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list_disable", noteName = "协作者列表第一个协作者权限下拉框是否可以点击")
-	public WebElement b_addCollaborator_1_list_disable;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_1", noteName = "协作者权限列表--转让所有权")
-	public WebElement list_addCollaborator_1;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
 	public WebElement list_addCollaborator_4;
 	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4_ok", noteName = "协作者权限列表--移除--确认移除")
 	public WebElement list_addCollaborator_4_ok;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_total", noteName = "协作者人数")
-	public WebElement addCollaborator_total;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_add", noteName = "最近协作者列表第一个添加按钮")
-	public WebElement addCollaborator_1_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_add", noteName = "最近协作者列表第二个添加按钮")
-	public WebElement addCollaborator_2_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_companyList_1_add", noteName = "企业协作者列表第一个添加按钮")
-	public WebElement addCollaborator_companyList_1_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_companyList_2_add", noteName = "企业协作者列表第二个添加按钮")
-	public WebElement addCollaborator_companyList_2_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_company_list", noteName = "协作者页面切换到企业成员列表")
-	public WebElement addCollaborator_company_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_back", noteName = "从协作者列表返回按钮")
-	public WebElement b_addCollaborator_back;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_confirm", noteName = "协作者移除或者降低自己权限时提示弹窗的确定按钮")
-	public WebElement b_addCollaborator_confirm;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_changeOwner_1", noteName = "协作者权限列表--转让所有权列表--选择第一个用户为转让对象按钮")
-	public WebElement list_addCollaborator_changeOwner_1;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_1_list_userName", noteName = "协作者列表第一个协作者用户名")
-	public WebElement addCollaborator_1_list_userName;
-	@SearchWith(pageName = "addCollaborator", elementName = "addCollaborator_2_list_userName", noteName = "协作者列表第二个协作者用户名")
-	public WebElement addCollaborator_2_list_userName;
 	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_1_list_emailOrMobile", noteName = "协作者列表第一个协作者邮箱")
 	public WebElement collaborator_1_list_emailOrMobile;
 	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_2_list_emailOrMobile", noteName = "协作者列表第二个协作者邮箱")
@@ -591,9 +494,6 @@ public class elementFile {
 	public WebElement input_addCollaborator;
 	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add", noteName = "搜索显示被添加协作者列表第一个添加按钮")
 	public WebElement b_addCollaborator_1_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_ok", noteName = "确认添加协作者按钮")
-	// 王继程3/12
-	public WebElement b_addCollaborator_ok;
 	@SearchWith(pageName = "addCollaborator", elementName = "Can_edit_1", noteName = "可以编辑")
 	public WebElement Can_edit_1;
 	@SearchWith(pageName = "addCollaborator", elementName = "can_only_comment_2", noteName = "只能评论")
@@ -690,8 +590,6 @@ public class elementFile {
 	public WebElement list_disableMember;
 	@SearchWith(pageName = "companyManagement", elementName = "button_exitCompany", noteName = "企业设置-成员退出企业")
 	public WebElement button_exitCompany;
-	@SearchWith(pageName = "companyManagement", elementName = "addmember_copyLink_open", noteName = "企业设置-打开或者关闭邀请链接")
-	public WebElement addmember_copyLink_open;
 
 
 	/** 通讯录页面，添加新成员按钮 */
@@ -718,9 +616,6 @@ public class elementFile {
 	/** 通讯录页面，成员列表，第一个成员邮箱地址 */
 	@SearchWith(pageName = "companyManagement", elementName = "memberList_email_1")
 	public WebElement memberList_email_1;
-	/** 通讯录页面，成员列表，第二个成员邮箱地址 */
-	@SearchWith(pageName = "companyManagement", elementName = "memberList_email_2")
-	public WebElement memberList_email_2;
 	/** 通讯录页面，设置所在部门按钮 */
 	@SearchWith(pageName = "companyManagement", elementName = "b_setDepartment")
 	public WebElement b_setDepartment;
@@ -775,9 +670,6 @@ public class elementFile {
 	/** 注册页面-邮箱输入框 */
 	@SearchWith(pageName = "Registered", elementName = "input_registered_email")
 	public WebElement input_registered_email;
-	/** 注册页面-昵称输入框 */
-	@SearchWith(pageName = "Registered", elementName = "input_registered_nickname")
-	public WebElement input_registered_nickname;
 	/** 注册页面-密码输入框 */
 	@SearchWith(pageName = "Registered", elementName = "input_registered_password")
 	public WebElement input_registered_password;
@@ -799,9 +691,6 @@ public class elementFile {
 	/** 注册页面-使用邮箱注册 */
 	@SearchWith(pageName = "Registered", elementName = "link_registered_useEmail")
 	public WebElement link_registered_useEmail;
-	/** 填写验证码页面-确定按钮 */
-	@SearchWith(pageName = "Registered", elementName = "button_registered_confirm")
-	public WebElement button_registered_confirm;
 
 
 
@@ -869,12 +758,8 @@ public class elementFile {
 	public WebElement file_menu_shortcut;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_collection", noteName = "添加收藏")
 	public WebElement file_menu_collection;
-	@SearchWith(pageName = "file_menu", elementName = "file_menu_list", noteName = "查看目录")
-	public WebElement file_menu_list;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_move", noteName = "移动")
 	public WebElement file_menu_move;
-	@SearchWith(pageName = "file_menu", elementName = "file_menu_history", noteName = "查看历史")
-	public WebElement file_menu_history;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_createCopy", noteName = "创建副本")
 	public WebElement file_menu_createCopy;
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_delete", noteName = "删除")
@@ -889,590 +774,10 @@ public class elementFile {
 	/** 分享链接打开页面，输入密码,确定按钮 */
 	@SearchWith(pageName = "file_menu", elementName = "sharePage_buttonConfirm")
 	public WebElement sharePage_buttonConfirm;
-	@SearchWith(pageName = "file_menu", elementName = "file_menu_help", noteName = "帮助")
-	public WebElement file_menu_help;
 	/** header上保存模板 */
 	@SearchWith(pageName = "file_menu", elementName = "file_menu_template")
 	public WebElement file_menu_template;
 
-
-	/**
-	 * ppt
-	 * PPT_header
-	 */
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_return", noteName = "幻灯片内返回")
-	public WebElement ppt_return;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_down", noteName = "幻灯片内下箭头")
-	public WebElement ppt_down;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_plus_sign", noteName = "幻灯片中加号")
-	public WebElement ppt_plus_sign;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_filename", noteName = "幻灯片标题")
-	public WebElement ppt_filename;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_collect", noteName = "收藏标签")
-	public WebElement ppt_collect;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_comment", noteName = "幻灯片讨论")
-	public WebElement ppt_comment;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_broadcast", noteName = "播放幻灯片")
-	public WebElement ppt_broadcast;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_online_broadcast", noteName = "在线演示")
-	public WebElement ppt_online_broadcast;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_cooperation", noteName = "添加协作者")
-	public WebElement ppt_cooperation;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_share", noteName = "分享")
-	public WebElement ppt_share;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_dotdotdot", noteName = "左上角点点点")
-	public WebElement ppt_dotdotdot;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_shortcut", noteName = "快捷方式设置")
-	public WebElement ppt_shortcut;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_news", noteName = "消息设置")
-	public WebElement ppt_news;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_collection", noteName = "收藏&取消收藏")
-	public WebElement ppt_collection;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_move", noteName = "移动")
-	public WebElement ppt_move;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_now_copy", noteName = "创建副本")
-	public WebElement ppt_now_copy;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_export", noteName = "导出")
-	public WebElement ppt_export;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_template", noteName = "保存模板")
-	public WebElement ppt_template;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_view_history", noteName = "查看历史")
-	public WebElement ppt_view_history;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_Information", noteName = "幻灯片信息")
-	public WebElement ppt_Information;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_Shortcut", noteName = "幻灯片快捷键")
-	public WebElement ppt_Shortcut;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete", noteName = "删除幻灯片")
-	public WebElement ppt_delete;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_sure", noteName = "确认删除")
-	public WebElement ppt_delete_sure;
-	@SearchWith(pageName = "PPT_header", elementName = "ppt_delete_cancel", noteName = "取消删除")
-	public WebElement ppt_delete_cancel;
-
-
-	/**
-	 * 顶部工具栏
-	 * ppt_top
-	 */
-	@SearchWith(pageName = "ppt_top", elementName = "add_page", noteName = "添加页面")
-	public WebElement add_page;
-	@SearchWith(pageName = "ppt_top", elementName = "down_arrow", noteName = "下箭头")
-	public WebElement down_arrow;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_revoke", noteName = "撤销")
-	public WebElement ppt_revoke;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_redo", noteName = "重做")
-	public WebElement ppt_redo;
-	@SearchWith(pageName = "ppt_top", elementName = "add_text", noteName = "添加文本")
-	public WebElement add_text;
-	@SearchWith(pageName = "ppt_top", elementName = "add_diagram", noteName = "添加图片")
-	public WebElement add_diagram;
-	@SearchWith(pageName = "ppt_top", elementName = "add_line", noteName = "添加直线")
-	public WebElement add_line;
-	@SearchWith(pageName = "ppt_top", elementName = "add_arrows", noteName = "添加箭头")
-	public WebElement add_arrows;
-	@SearchWith(pageName = "ppt_top", elementName = "add_Rectangle", noteName = "添加矩形")
-	public WebElement add_Rectangle;
-	@SearchWith(pageName = "ppt_top", elementName = "add_circular", noteName = "添加圆形")
-	public WebElement add_circular;
-	@SearchWith(pageName = "ppt_top", elementName = "narrow_trying", noteName = "减小视图")
-	public WebElement narrow_trying;
-	@SearchWith(pageName = "ppt_top", elementName = "enlarge_trying", noteName = "放大视图")
-	public WebElement enlarge_trying;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_zoom", noteName = "缩放视图")
-	public WebElement ppt_zoom;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_type", noteName = "样式&备注&组合排列")
-	public WebElement ppt_type;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_animation", noteName = "页面样式&文本&排列&切换动画")
-	public WebElement ppt_animation;
-	@SearchWith(pageName = "ppt_top", elementName = "ppt_arrange", noteName = "文本排列")
-	public WebElement ppt_arrange;
-
-	/**
-	 * 左边栏
-	 * ppt_left
-	 */
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_1", noteName = "左边栏第一个页面")
-	public WebElement ppt_page_1;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_2", noteName = "左边栏第二个页面")
-	public WebElement ppt_page_2;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_3", noteName = "左边栏第三个页面")
-	public WebElement ppt_page_3;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_4", noteName = "左边栏第四个页面")
-	public WebElement ppt_page_4;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_5", noteName = "左边栏第五个页面")
-	public WebElement ppt_page_5;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_6", noteName = "左边栏第六个页面")
-	public WebElement ppt_page_6;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_7", noteName = "左边栏第七个页面")
-	public WebElement ppt_page_7;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_8", noteName = "左边栏第八个页面")
-	public WebElement ppt_page_8;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_9", noteName = "左边栏第九个页面")
-	public WebElement ppt_page_9;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_10", noteName = "左边栏第十个页面")
-	public WebElement ppt_page_10;
-	@SearchWith(pageName = "ppt_left", elementName = "ppt_page_11", noteName = "左边栏第十一个页面")
-	public WebElement ppt_page_11;
-	/**
-	 * 页面
-	 * ppt_page
-	 */
-	@SearchWith(pageName = "ppt_page", elementName = "ppt_text", noteName = "幻灯片页面")
-	public WebElement ppt_text;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1", noteName = "幻灯片页面第一个元素")
-	public WebElement page_elements_1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2", noteName = "幻灯片页面第二个元素")
-	public WebElement page_elements_2;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_3", noteName = "幻灯片页面第三个元素")
-	public WebElement page_elements_3;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_4", noteName = "幻灯片页面第四个元素")
-	public WebElement page_elements_4;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5", noteName = "幻灯片页面第五个元素")
-	public WebElement page_elements_5;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_6", noteName = "幻灯片页面第六个元素")
-	public WebElement page_elements_6;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_1", noteName = "选中文件后像素点-形状文本右中-图片右上")
-	public WebElement smslide_frame_anchor_1;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_2", noteName = "选中文件后像素点-形状文本左中-图片右下")
-	public WebElement smslide_frame_anchor_2;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_3", noteName = "选中文件后像素点-形状文本上中-图片左下")
-	public WebElement smslide_frame_anchor_3;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_4", noteName = "选中文件后像素点-形状文本下中-图片左上")
-	public WebElement smslide_frame_anchor_4;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_5", noteName = "选中文件后像素点-形状右上")
-	public WebElement smslide_frame_anchor_5;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_6", noteName = "选中文件后像素点-形状右下")
-	public WebElement smslide_frame_anchor_6;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_7", noteName = "选中文件后像素点-形状左下")
-	public WebElement smslide_frame_anchor_7;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_frame_anchor_8", noteName = "选中文件后像素点-形状左上")
-	public WebElement smslide_frame_anchor_8;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_1", noteName = "有序列表第1行是否存在")
-	public WebElement smslide_ordered_1;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_2", noteName = "有序列表第2行是否存在")
-	public WebElement smslide_ordered_2;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_ordered_3", noteName = "有序列表第3行是否存在")
-	public WebElement smslide_ordered_3;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_1", noteName = "无序列表第1行是否存在")
-	public WebElement smslide_unordered_1;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_2", noteName = "无序列表第2行是否存在")
-	public WebElement smslide_unordered_2;
-	@SearchWith(pageName = "ppt_page", elementName = "smslide_unordered_3", noteName = "无序列表第3行是否存在")
-	public WebElement smslide_unordered_3;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_1_1", noteName = "图片占位符1上传图片按钮")
-	public WebElement page_elements_1_1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_2_1", noteName = "图片占位符2上传图片按钮")
-	public WebElement page_elements_2_1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_3_1", noteName = "图片占位符3上传图片按钮")
-	public WebElement page_elements_3_1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_4_1", noteName = "图片占位符4上传图片按钮")
-	public WebElement page_elements_4_1;
-	@SearchWith(pageName = "ppt_page", elementName = "page_elements_5_1", noteName = "图片占位符5上传图片按钮")
-	public WebElement page_elements_5_1;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_trim", noteName = "剪裁按钮")
-	public WebElement picture_trim;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_replacement", noteName = "替换图片&重置按钮")
-	public WebElement picture_replacement;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune1", noteName = "图片剪裁左上角")
-	public WebElement picture_prune1;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune2", noteName = "图片剪裁右上角")
-	public WebElement picture_prune2;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune3", noteName = "图片剪裁右下角")
-	public WebElement picture_prune3;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune4", noteName = "图片剪裁左下角")
-	public WebElement picture_prune4;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune5", noteName = "图片剪裁上边")
-	public WebElement picture_prune5;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune6", noteName = "图片剪裁右边")
-	public WebElement picture_prune6;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune7", noteName = "图片剪裁下边")
-	public WebElement picture_prune7;
-	@SearchWith(pageName = "ppt_page", elementName = "picture_prune8", noteName = "图片剪裁左边")
-	public WebElement picture_prune8;
-
-	/**
-	 * ppt选中页面右边栏
-	 * PPT_page_rightBar
-	 */
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_Bright", noteName = "备注高亮颜色")
-	public WebElement Note_Bright;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_Bright_arrow", noteName = "备注高亮颜色下箭头")
-	public WebElement Note_Bright_arrow;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_bold", noteName = "备注文本粗体")
-	public WebElement Note_bold;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_italic", noteName = "备注文本斜体")
-	public WebElement Note_italic;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_underscores", noteName = "备注文本下划线")
-	public WebElement Note_underscores;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_lines", noteName = "备注文本中划线")
-	public WebElement Note_lines;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_orderly", noteName = "备注文本中有序列表")
-	public WebElement Note_orderly;
-    @SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_disorder", noteName = "备注文本中无序列表")
-    public WebElement Note_disorder;
-    @SearchWith(pageName = "PPT_page_rightBar", elementName = "Note_content", noteName = "备注内容")
-    public WebElement Note_content;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_style", noteName = "背景填充")
-	public WebElement page_style;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_colour", noteName = "颜色选择")
-	public WebElement page_colour;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "image_size", noteName = "图片尺寸")
-	public WebElement image_size;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "image_chosen", noteName = "图片选择")
-	public WebElement image_chosen;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play1", noteName = "瞬间切换")
-	public WebElement page_Movie_Play1;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play2", noteName = "渐隐渐现")
-	public WebElement page_Movie_Play2;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play3", noteName = "左右推移")
-	public WebElement page_Movie_Play3;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play4", noteName = "上下推移")
-	public WebElement page_Movie_Play4;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play5", noteName = "左右翻页")
-	public WebElement page_Movie_Play5;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "page_Movie_Play6", noteName = "上下翻页")
-	public WebElement page_Movie_Play6;
-	@SearchWith(pageName = "PPT_page_rightBar", elementName = "style_all_applications", noteName = "应用至全部")
-	public WebElement style_all_applications;
-
-
-	/**
-	 * ppt选中文本框右边栏
-	 * PPT_textbox_rightBar
-	 */
-
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "type_text_template1", noteName = "大标题1")
-	public WebElement type_text_template1;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "type_text_template2", noteName = "小标题1")
-	public WebElement type_text_template2;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "type_text_template3", noteName = "正文1")
-	public WebElement type_text_template3;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_ttf", noteName = "字体")
-	public WebElement ppt_right_ttf;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_inputsize", noteName = "字号输入")
-	public WebElement ppt_right_inputsize;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_size", noteName = "字号")
-	public WebElement ppt_right_size;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_color", noteName = "字体颜色")
-	public WebElement ppt_right_color;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_colora", noteName = "字体颜色下箭头")
-	public WebElement ppt_right_colora;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_laid", noteName = "高亮")
-	public WebElement ppt_right_laid;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_laida", noteName = "高亮下箭头")
-	public WebElement ppt_right_laida;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_end", noteName = "背景色")
-	public WebElement ppt_right_end;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_enda", noteName = "背景色下箭头")
-	public WebElement ppt_right_enda;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_thickness", noteName = "加粗")
-	public WebElement ppt_right_thickness;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_italic", noteName = "斜体")
-	public WebElement ppt_right_italic;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_underline", noteName = "下划线")
-	public WebElement ppt_right_underline;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_of", noteName = "中划线")
-	public WebElement ppt_right_of;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_top", noteName = "顶部对齐")
-	public WebElement ppt_right_top;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_middle", noteName = "垂直中部对齐")
-	public WebElement ppt_right_middle;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_bottom", noteName = "底部对齐")
-	public WebElement ppt_right_bottom;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_L", noteName = "左对齐")
-	public WebElement ppt_right_L;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_center", noteName = "水平中对齐")
-	public WebElement ppt_right_center;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_R", noteName = "右对齐")
-	public WebElement ppt_right_R;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_ends", noteName = "两端对齐")
-	public WebElement ppt_right_ends;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_order", noteName = "有序列表")
-	public WebElement ppt_right_order;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_disorder", noteName = "无序列表")
-	public WebElement ppt_right_disorder;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_row1", noteName = "行间距输入")
-	public WebElement ppt_right_row1;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_row2", noteName = "行间距下三角")
-	public WebElement ppt_right_row2;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_front1", noteName = "段前间距输入")
-	public WebElement ppt_right_front1;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_front2", noteName = "段前间距上箭头")
-	public WebElement ppt_right_front2;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_front3", noteName = "段前间距下箭头")
-	public WebElement ppt_right_front3;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_rear1", noteName = "段后间距输入")
-	public WebElement ppt_right_rear1;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_rear2", noteName = "段后间距上箭头")
-	public WebElement ppt_right_rear2;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_rear3", noteName = "段后间距下箭头")
-	public WebElement ppt_right_rear3;
-	@SearchWith(pageName = "PPT_textbox_rightBar", elementName = "ppt_right_adaptive", noteName = "文本框自适应")
-	public WebElement ppt_right_adaptive;
-
-
-	/**
-	 * ppt选中图片右边栏
-	 * PPT_rightBar_images
-	 */
-
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_cut", noteName = "剪裁图片")
-	public WebElement type_pictures_cut;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportion", noteName = "图片剪裁比例")
-	public WebElement type_pictures_proportion;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportionk", noteName = "输入图片宽")
-	public WebElement type_pictures_proportionk;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_proportiong", noteName = "输入图片高")
-	public WebElement type_pictures_proportiong;
-	@SearchWith(pageName = "PPT_rightBar_images", elementName = "type_pictures_replace", noteName = "替换图片")
-	public WebElement type_pictures_replace;
-
-
-	/**
-	 * PPT_幻灯片选中形状右边栏
-	 * PPT_rightBar_shape
-	 */
-
-
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template1", noteName = "形状样式模板1")
-	public WebElement type_shapes_template1;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template2", noteName = "形状样式模板2")
-	public WebElement type_shapes_template2;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_template3", noteName = "形状样式模板3")
-	public WebElement type_shapes_template3;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_fill", noteName = "形状填充")
-	public WebElement type_shapes_fill;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "type_shapes_fillcolor", noteName = "形状填充颜色")
-	public WebElement type_shapes_fillcolor;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "line_Endarrow_left", noteName = "左端点箭头")
-	public WebElement line_Endarrow_left;
-	@SearchWith(pageName = "PPT_rightBar_shape", elementName = "line_Endarrow_right", noteName = "右端点箭头")
-	public WebElement line_Endarrow_right;
-
-
-	/**
-	 * ppt通用右边栏
-	 * PPT_rightBar_general
-	 */
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style", noteName = "边框样式")
-	public WebElement border_style;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_lines", noteName = "边框线样式")
-	public WebElement border_style_lines;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_color", noteName = "边框线颜色")
-	public WebElement border_style_color;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_width", noteName = "边框线粗细输入")
-	public WebElement border_style_width;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_widths", noteName = "边框线粗细上箭头")
-	public WebElement border_style_widths;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "border_style_widthx", noteName = "边框线粗细下箭头")
-	public WebElement border_style_widthx;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparency_button", noteName = "透明度无级调节钮(文本框图片形状)")
-	public WebElement transparency_button;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparency", noteName = "透明度输入(文本框图片形状)")
-	public WebElement transparency;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparencys", noteName = "透明度上箭头(文本框图片形状)")
-	public WebElement transparencys;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "transparencyx", noteName = "透明度下箭头(文本框图片形状)")
-	public WebElement transparencyx;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_setTop", noteName = "元素置顶")
-	public WebElement element_setTop;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_setThe", noteName = "元素置底")
-	public WebElement element_setThe;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_moveUp", noteName = "元素上移一层")
-	public WebElement element_moveUp;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_moveDown", noteName = "元素下移一层")
-	public WebElement element_moveDown;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal", noteName = "水平对齐")
-	public WebElement element_horizontal;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically", noteName = "垂直对齐")
-	public WebElement element_vertically;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_combined", noteName = "组合")
-	public WebElement element_combined;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_lift_combined", noteName = "取消组合")
-	public WebElement element_lift_combined;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvalue", noteName = "X位置输入")
-	public WebElement element_horizontal_xvalue;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvalues", noteName = "X位置上箭头")
-	public WebElement element_horizontal_xvalues;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_horizontal_xvaluex", noteName = "X位置下箭头")
-	public WebElement element_horizontal_xvaluex;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvalue", noteName = "Y位置输入")
-	public WebElement element_vertically_xvalue;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvalues", noteName = "Y位置上箭头")
-	public WebElement element_vertically_xvalues;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_vertically_xvaluex", noteName = "Y位置下箭头")
-	public WebElement element_vertically_xvaluex;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_value", noteName = "输入宽度")
-	public WebElement element_wide_value;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_values", noteName = "宽度上箭头微调")
-	public WebElement element_wide_values;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_wide_valuex", noteName = "宽度下箭头微调")
-	public WebElement element_wide_valuex;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "lock_aspect_ratio", noteName = "锁定宽高比")
-	public WebElement lock_aspect_ratio;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "输入高度")
-	public WebElement element_high_value;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "高度上箭头微调")
-	public WebElement element_high_values;
-	@SearchWith(pageName = "PPT_rightBar_general", elementName = "element_high_value", noteName = "高度下箭头微调")
-	public WebElement element_high_valuex;
-
-
-	/**
-	 * 幻灯片中右键菜单与列表
-	 * ppt_tabulation
-	 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "view_25", noteName = "顶部视图百分比下拉列表_25%")
-	public WebElement view_25;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "view_100", noteName = "顶部视图百分比下拉列表_100%")
-	public WebElement view_100;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "view_400", noteName = "顶部视图百分比下拉列表_400%")
-	public WebElement view_400;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "view_adaptive", noteName = "顶部视图百分比下拉列表_自适应")
-	public WebElement view_adaptive;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "cutting", noteName = "剪切")
-	public WebElement cutting;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "replication", noteName = "复制")
-	public WebElement replication;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "pasting", noteName = "粘贴")
-	public WebElement pasting;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "replication_pasting", noteName = "复制并粘贴")
-	public WebElement replication_pasting;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "right_key_new", noteName = "新建幻灯片")
-	public WebElement right_key_new;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "delete_page", noteName = "删除幻灯片")
-	public WebElement delete_page;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_left", noteName = "水平左对齐")
-	public WebElement elements_left;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_centre_line", noteName = "水平剧中对齐")
-	public WebElement elements_centre_line;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_sright", noteName = "水平右对齐")
-	public WebElement element_sright;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_top", noteName = "垂直顶部对齐")
-	public WebElement elements_top;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_centre_vertical", noteName = "垂直居中对齐")
-	public WebElement elements_centre_vertical;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "elements_bottom", noteName = "垂直底部对齐")
-	public WebElement elements_bottom;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_No_Fill", noteName = "幻灯片页面与形状背景填充_无填充")
-	public WebElement page_No_Fill;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_SolidColor_Fill", noteName = "幻灯片页面与形状背景填充_纯色填充")
-	public WebElement page_SolidColor_Fill;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "page_picture_Fill", noteName = "幻灯片页面背景填充_图片填充")
-	public WebElement page_picture_Fill;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "background_raw", noteName = "幻灯片背景图片填充_原始大小")
-	public WebElement background_raw;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "background_stretch", noteName = "幻灯片背景图片填充_拉伸")
-	public WebElement background_stretch;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "background_splices", noteName = "幻灯片背景图片填充_拼贴")
-	public WebElement background_splices;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "background_populate", noteName = "幻灯片背景图片填充_缩放以填充")
-	public WebElement background_populate;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "background_suitable", noteName = "幻灯片背景图片填充_缩放以适合")
-	public WebElement background_suitable;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_no_border", noteName = "幻灯片页面元素边框_无边框")
-	public WebElement element_no_border;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_lines_border", noteName = "幻灯片页面元素边框_线条边框")
-	public WebElement element_lines_border;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles1", noteName = "细线条样式")
-	public WebElement lines_styles1;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles2", noteName = "粗线条样式")
-	public WebElement lines_styles2;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles3", noteName = "特粗线条样式")
-	public WebElement lines_styles3;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles4", noteName = "细虚线条样式")
-	public WebElement lines_styles4;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "lines_styles5", noteName = "粗虚线条样式")
-	public WebElement lines_styles5;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent1", noteName = "图片剪裁比例1:1")
-	public WebElement Trim_per_cent1;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent2", noteName = "图片剪裁比例2:3")
-	public WebElement Trim_per_cent2;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent3", noteName = "图片剪裁比例4:3")
-	public WebElement Trim_per_cent3;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "Trim_per_cent4", noteName = "图片剪裁比例16:9")
-	public WebElement Trim_per_cent4;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts1", noteName = "默认字体")
-	public WebElement text_Fonts1;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts2", noteName = "宋体")
-	public WebElement text_Fonts2;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts3", noteName = "黑体")
-	public WebElement text_Fonts3;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts4", noteName = "微软雅黑")
-	public WebElement text_Fonts4;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_Fonts5", noteName = "仿宋")
-	public WebElement text_Fonts5;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size1", noteName = "12px与行间距1")
-	public WebElement text_size1;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size2", noteName = "14px与行间距1.15")
-	public WebElement text_size2;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size3", noteName = "18px与行间距2")
-	public WebElement text_size3;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size4", noteName = "32px")
-	public WebElement text_size4;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "text_size5", noteName = "40px")
-	public WebElement text_size5;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_off", noteName = "X掉在线演示弹窗")
-	public WebElement onlineshown_off;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_Tip", noteName = "勾选弹窗提示")
-	public WebElement onlineshown_Tip;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_go", noteName = "继续")
-	public WebElement onlineshown_go;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_lift1", noteName = "取消")
-	public WebElement onlineshown_lift1;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_copy", noteName = "复制链接")
-	public WebElement onlineshown_copy;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_Play", noteName = "现在播放")
-	public WebElement onlineshown_Play;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_later", noteName = "稍后播放")
-	public WebElement onlineshown_later;
-	@SearchWith(pageName = "ppt_tabulation", elementName = "onlineshown_close", noteName = "结束演示")
-	public WebElement onlineshown_close;
-	/** 剪切 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1")
-	public WebElement element_ContextMenu_1;
-	/** 剪切 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_2")
-	public WebElement element_ContextMenu_2;
-	/** 剪切 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_3")
-	public WebElement element_ContextMenu_3;
-	/** 剪裁图片&层级 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_5")
-	public WebElement element_ContextMenu_5;
-	/** 替换图片&水平对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_6")
-	public WebElement element_ContextMenu_6;
-	/** 重置图片&垂直对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_7")
-	public WebElement element_ContextMenu_7;
-	/** 保存图片&分布 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_8")
-	public WebElement element_ContextMenu_8;
-	/** 组合&层级 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_10")
-	public WebElement element_ContextMenu_10;
-	/** 取消组合&水平对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_11")
-	public WebElement element_ContextMenu_11;
-	/** 垂直对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_12")
-	public WebElement element_ContextMenu_12;
-	/** 分布 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_13")
-	public WebElement element_ContextMenu_13;
-	/** 至于顶层&左对齐&上对齐&横向对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_1")
-	public WebElement element_ContextMenu_1_1;
-	/** 上移一层&居中对齐&横向分布 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_2")
-	public WebElement element_ContextMenu_1_2;
-	/** 下移一层&右对齐&下对齐 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_3")
-	public WebElement element_ContextMenu_1_3;
-	/** 置于底层 */
-	@SearchWith(pageName = "ppt_tabulation", elementName = "element_ContextMenu_1_4")
-	public WebElement element_ContextMenu_1_4;
 
 	/**
 	 * Template
@@ -1483,12 +788,6 @@ public class elementFile {
 	public WebElement my_template;
 	@SearchWith(pageName = "Template", elementName = "my_template02", noteName = "我的模板第二个")
 	public WebElement my_template02;
-	@SearchWith(pageName = "Template", elementName = "my_template01", noteName = "我的模板第一个")
-	public WebElement my_template01;
-	@SearchWith(pageName = "Template", elementName = "sheet_template", noteName = "表格模板")
-	public WebElement sheet_template;
-	@SearchWith(pageName = "Template", elementName = "sheet_template01", noteName = "表格模板第一个")
-	public WebElement sheet_template01;
 	@SearchWith(pageName = "Template", elementName = "doc_template", noteName = "文档模板")
 	public WebElement doc_template;
 	@SearchWith(pageName = "Template", elementName = "template_1_1", noteName = "模板库第一个种类第一个模板")
@@ -1509,12 +808,10 @@ public class elementFile {
 	public WebElement space_button_new;
 	@SearchWith(pageName = "spaceRightButton", elementName = "space_button_import", noteName = "空间右侧上传/导入")
 	public WebElement space_button_import;
-	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadfile", noteName = "上传文件")
-	public WebElement space_uploadfile;
-	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadfolder", noteName = "上传文件夹")
-	public WebElement space_uploadfolder;
-	@SearchWith(pageName = "spaceRightButton", elementName = "space_list_import", noteName = "协作空间下拉列表导入")
-	public WebElement space_list_import;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadFile", noteName = "上传文件")
+	public WebElement space_uploadFile;
+	@SearchWith(pageName = "spaceRightButton", elementName = "space_uploadFolder", noteName = "上传文件夹")
+	public WebElement space_uploadFolder;
 
 
 	/**

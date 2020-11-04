@@ -55,7 +55,7 @@ public class testDesktop_new extends TestInit {
         click(desktop_newSlides);
 
         String time = getDate();
-        sendKeys(ppt_filename, time);
+        sendKeys(doc_title_input, time);
 
         click(b_back);
         String msg = getText(desktop1_1_name);
@@ -84,7 +84,7 @@ public class testDesktop_new extends TestInit {
         click(desktop_newMindMap);
 
         String time = getDate();
-        sendKeys(ppt_filename, time);
+        sendKeys(doc_title_input, time);
 
         click(b_back);
         String msg = getText(desktop1_1_name);
@@ -112,7 +112,7 @@ public class testDesktop_new extends TestInit {
         click(desktop_newFileBoard);
 
         String time = getDate();
-        sendKeys(ppt_filename, time);
+        sendKeys(doc_title_input, time);
         action.sendKeys(Keys.ENTER).build().perform();
 
         driver.navigate().back();
@@ -140,8 +140,8 @@ public class testDesktop_new extends TestInit {
         click(desktop_newSheet);
 
         String time = getDate();
-        click(ppt_filename);
-        sendKeys(ppt_filename, time);
+        click(doc_title_input);
+        sendKeys(doc_title_input, time);
 
         click(b_back);
         String msg = getText(desktop1_1_name);
@@ -168,8 +168,8 @@ public class testDesktop_new extends TestInit {
         click(desktop_newFileForm);
 
         String time = getDate();
-        click(ppt_filename);
-        sendKeys(ppt_filename, time);
+        click(doc_title_input);
+        sendKeys(doc_title_input, time);
         action.sendKeys(Keys.ENTER).build().perform();
 
         click(b_back);

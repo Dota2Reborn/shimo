@@ -143,7 +143,7 @@ public class testSlideHeader extends TestInit {
         click(file_menu_shortcut);
         String msg = getText(toast_msg);
 
-        String title = ppt_filename.getAttribute("value");
+        String title = doc_title_input.getAttribute("value");
         if(b_Msg.equals("添加到快速访问")){
             assertEquals(msg, "「"+ title +"」已添加到快速访问");
         }else {
@@ -168,7 +168,7 @@ public class testSlideHeader extends TestInit {
         String b_Msg = getText(file_menu_mute);
         click(file_menu_mute);
         String msg = getText(toast_msg);
-        String title = ppt_filename.getAttribute("value");
+        String title = doc_title_input.getAttribute("value");
         if(b_Msg.equals("接收消息提醒")){
             assertEquals(msg, "「"+ title + "」已设置为接收消息提醒");
         }else {
@@ -193,7 +193,7 @@ public class testSlideHeader extends TestInit {
         String b_Msg = getText(file_menu_collection);
         click(file_menu_collection);
         String msg = getText(toast_msg);
-        String title = ppt_filename.getAttribute("value");
+        String title = doc_title_input.getAttribute("value");
         if(b_Msg.equals("收藏")){
             assertEquals(msg, "「"+ title + "」已收藏");
         }else {

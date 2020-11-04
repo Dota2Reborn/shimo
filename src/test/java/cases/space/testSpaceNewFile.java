@@ -87,9 +87,9 @@ public class testSpaceNewFile extends TestInit {
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_1);
         click(space_button_import);
-        String msg = getText(space_uploadfile);
+        String msg = getText(space_uploadFile);
         assertEquals(msg,"上传文件");
-        String msg1 = getText(space_uploadfolder);
+        String msg1 = getText(space_uploadFolder);
         assertEquals(msg1,"上传文件夹");
 //        String msg6 = getText(space_list_import);
 //        assertEquals(msg6,"导入");

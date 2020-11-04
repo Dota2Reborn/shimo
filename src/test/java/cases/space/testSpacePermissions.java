@@ -180,7 +180,7 @@ public class testSpacePermissions  extends TestInit {
         moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
-        click(ppt_delete_sure);//删除确认弹窗中"确认删除"button
+        click(message_ok);//删除确认弹窗中"确认删除"button
 
         click(trash);
         String msg = getText(desktop1_1);
@@ -323,7 +323,7 @@ public class testSpacePermissions  extends TestInit {
         moveToElement(space_listing_1);
         click(b_SpaceSetting1);
         click(b_SpaceSetting_delete);
-        click(ppt_delete_sure);//删除确认弹窗中"确认删除"button
+        click(message_ok);//删除确认弹窗中"确认删除"button
         Thread.sleep(500);
 
         logout();

@@ -46,7 +46,6 @@
 	</test>
 	<test name="test8">
 		<classes>
-			<!--<class name="cases.docSheet.testSheetHeader" />-->
 			<class name="cases.docSheet.testSlideHeader" />
 		</classes>
 	</test>
