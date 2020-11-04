@@ -1716,6 +1716,9 @@ public class elementFile {
 	/** 移动端_文件header_菜单_用app编辑按钮 */
 	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_toApp")
 	public WebElement mobile_header_setting_toApp;
+	/** 移动端_文件header_菜单_重命名 */
+	@SearchWith(pageName = "mobile", elementName = "mobile_header_setting_rename")
+	public WebElement mobile_header_setting_rename;
 	/** 移动端_文件header_协作_添加协作者按钮 */
 	@SearchWith(pageName = "mobile", elementName = "mobile_header_collaborator_addCollaborator")
 	public WebElement mobile_header_collaborator_addCollaborator;

@@ -168,7 +168,7 @@ public class mobileTest extends TestInit {
         Boolean r3 = doesWebElementExist(mobile_header_setting_collaborator);
         Boolean r4 = doesWebElementExist(mobile_header_setting_collection);
         Boolean r5 = doesWebElementExist(mobile_header_setting_createCopy);
-        Boolean r6 = doesWebElementExist(mobile_header_setting_toApp);
+        Boolean r6 = doesWebElementExist(mobile_header_setting_rename);
 
         assertTrue(r1 && r2 && r3 && r4 && r5 && r6);
     }

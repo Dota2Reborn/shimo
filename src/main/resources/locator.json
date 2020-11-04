@@ -4102,6 +4102,11 @@
 				"locateUsing": "xpath",
 				"locator": "//ul/li//span[contains(text(),'用 App 编辑')]"
 			},{
+				"note": "移动端_文件header_菜单_重命名",
+				"elementName": "mobile_header_setting_rename",
+				"locateUsing": "xpath",
+				"locator": "//ul/li//span[contains(text(),'重命名')]"
+			},{
 				"note": "移动端_文件header_协作_添加协作者按钮",
 				"elementName": "mobile_header_collaborator_addCollaborator",
 				"locateUsing": "xpath",
