@@ -14,7 +14,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-11-22
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void addCollaborator_1() throws InterruptedException {
         login("jcbyh@shimo.im", "123123");
 
