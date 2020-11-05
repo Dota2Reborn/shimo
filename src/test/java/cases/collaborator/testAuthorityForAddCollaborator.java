@@ -116,7 +116,7 @@ public class testAuthorityForAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2018-7-3
      */
-    @Test(enabled = true)//todo 需要加个添加协作者按钮 disable的判断，需要怡年统一按钮
+    @Test(enabled = true)
     public void authorityForAddCollaborator_5() {
         login("AddCollaborator_02@shimo.im", "123123");
         click(desktop);

@@ -15,7 +15,8 @@ import static org.testng.Assert.*;
 public class testCompanyManagement_1 extends TestInit {
 
     /**
-     * 谁能邀请新成员进企业-所有企业成员//todo
+     * 谁能邀请新成员进企业-所有企业成员
+     * //todo 需要维护
      *
      * @author 刘晨
      * @Time 2017-01-08
