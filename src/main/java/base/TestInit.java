@@ -284,19 +284,6 @@ public class TestInit extends elementFile {
 
     }
 
-//    /**
-//     * 删除桌面第一个文件
-//     *
-//     * @author 刘晨
-//     * @Time 2017-11-20
-//     */
-//    public void deleteFile() {
-//        click(desktop);
-//        contextClick(desktop1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
-//
-//    }
 
     /**
      * 获取当前时间
@@ -469,11 +456,6 @@ public class TestInit extends elementFile {
      * @Time 2019-07-25
      */
     public void addCollaboratorByEmail(String email, int n) throws InterruptedException {
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        sendKeys(input_addCollaborator, email);
-//        click(b_addCollaborator_1_add);
-//        click(b_addCollaborator_ok);
 
         switch(n){
             case 1 ://桌面菜单添加协作者
@@ -527,11 +509,6 @@ public class TestInit extends elementFile {
      * @Time 2019-07-25
      */
     public void removeCollaboratorByEmail(String email) {
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        sendKeys(input_addCollaborator, email);
-//        click(b_addCollaborator_1_add);
-//        click(list_addCollaborator_4);
         click(menu_cooperation);
         click(b_add_Collaborator);
         sendKeys(input_add_Collaborator, email);
@@ -805,9 +782,6 @@ public class TestInit extends elementFile {
             if(fileCheck){
                 Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
                 if(checkFileName){
-//                    contextClick(desktop1_1);
-//                    click(menu_delete);
-//                    click(desktop_newFolder_name_ok);
                     delFile(desktop1_1);
                 }
             }
@@ -843,9 +817,6 @@ public class TestInit extends elementFile {
             if(fileCheck){
                 Boolean checkFileName = getText(desktop1_1).endsWith("_tmp");
                 if(checkFileName){
-//                    contextClick(desktop1_1);
-//                    click(menu_delete);
-//                    click(desktop_newFolder_name_ok);
                     delFile(desktop1_1);
                 }
             }
