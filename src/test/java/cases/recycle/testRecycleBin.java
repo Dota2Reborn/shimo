@@ -19,9 +19,6 @@ public class testRecycleBin extends TestInit {
     public void testRecycleBin_1() throws InterruptedException {
         login("RecycleBin@shimo.im", "123123");
         click(desktop);
-//        contextClick(desktop1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
         Thread.sleep(1000);
         click(trash);
@@ -47,10 +44,8 @@ public class testRecycleBin extends TestInit {
         login("Completely@shimo.im", "123123");
 
         click(desktop);
-//        Sort();
         click(desktop_new);
         click(desktop_newDoc);
-//        wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         sendKeys(doc_edit,"文档内输入内容，可进入回收站" + Keys.ENTER);
         //点点点
         click(doc_menu);
@@ -70,35 +65,4 @@ public class testRecycleBin extends TestInit {
 
     }
 
-    //排序初始化
-    //验证排序是否初始化
-//    public void Sort() {
-//        wait.until(ExpectedConditions.elementToBeClickable(desktop_order));
-//        String msg = desktop_show_type.getText();
-//        if (msg.equals("平铺")) {
-//            desktop_show_type.click();
-//        }
-//        msg = desktop_order.getText();
-//        if (msg.equals("排序")) {
-//            desktop_order.click();
-//            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByDefault));
-//            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-//            desktop_orderByDefault.click();
-//            if (exist == true) {
-//                desktop_order.click();
-//                wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-//                desktop_orderByFolderUP.click();
-//            }
-//        } else {
-//            desktop_order.click();
-//            wait.until(ExpectedConditions.elementToBeClickable(desktop_orderByFolderUP));
-//            Boolean exist = doesWebElementExist(By.xpath("//span[@data-test='change-table-sort-folder-priority']/following-sibling::span[1]"));
-//            if (exist == true) {
-//                desktop_orderByFolderUP.click();
-//            } else {
-//                desktop_orderByDefault.click();
-//            }
-//        }
-//
-//    }
 }

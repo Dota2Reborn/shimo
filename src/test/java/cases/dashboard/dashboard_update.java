@@ -45,7 +45,7 @@ public class dashboard_update extends TestInit {
     /**
      * 最近更新 所有者编辑内容更新
      *
-     * @author 陈清杰 @Time2018-03-26 账号状态：有一个固定文件
+     * @author 陈清杰 @Time2018-03-26
      */
     @Test
     public void update3() {
@@ -59,9 +59,6 @@ public class dashboard_update extends TestInit {
 
         click(dashboard_activitiesByFile);
         String text1 = getText(dashboard_update_time);
-//        contextClick(dashboard_share_file_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(dashboard_share_file_1);
         assertEquals(text1, "刚刚 我 更新");
 

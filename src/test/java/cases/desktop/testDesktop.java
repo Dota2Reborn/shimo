@@ -14,25 +14,6 @@ import static org.testng.Assert.assertTrue;
 
 public class testDesktop extends TestInit {
 
-
-//    public void checkData(){
-//
-//        int fileNum = driver.findElements(By.xpath("//a[@class='tile-item file-item']")).size();
-//        System.out.println(fileNum);
-//
-//        int folderNum = driver.findElements(By.xpath("//a[@class='tile-item file-item folder']")).size();
-//        System.out.println(fileNum);
-//
-//        if(fileNum != 1){
-//            for(int i = 1; i<fileNum; i++){
-//                System.out.println("<+1>");
-//                delFile(driver.findElement(By.xpath("//a[@class='tile-item file-item']")));
-//            }
-//        }
-//
-//
-//    }
-
     /**
      * 右键文档-在新标签页中打开
      *
@@ -44,8 +25,6 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_1() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
-
-//        checkData();
 
         contextClick(desktop1_1);
         click(menu_newPage);
@@ -76,7 +55,6 @@ public class testDesktop extends TestInit {
 
         click(menu_shortcut);
 
-//        driver.navigate().refresh();
         String msg = getText(desktop_shortcut_1);
         String doc_name = getText(desktop1_1_name);
 
@@ -157,7 +135,6 @@ public class testDesktop extends TestInit {
     public void desktop_doc_setting_8() {
         login("autoTest@shimo.im", "123123");
         click(desktop);
-//        click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_rename);
 
@@ -186,13 +163,9 @@ public class testDesktop extends TestInit {
         String msg = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_createCopy);
-//        Thread.sleep(2000);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);
-//        contextClick(desktop1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
 
         assertEquals(msg1, "副本 " + msg);
