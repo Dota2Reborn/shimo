@@ -693,7 +693,7 @@ public class TestInit extends elementFile {
         } catch (TimeoutException e) {
             // 超时
             System.out.println("time out ->" + element);
-//            assertTrue(false);
+            assertTrue(false);
         } catch (NoAlertPresentException e) {
             // 正常情况
         } catch(StaleElementReferenceException e){
