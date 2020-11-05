@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -198,7 +197,6 @@ public class TestInit extends elementFile {
         WebElement tab = driver.findElement(By.xpath("//div[contains(text(),'立即注册个人版')]"));
         click(tab);
         if (type == 1) {
-//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_mobile, user);
             sendKeys(input_registered_password, pwd);
             if(user.equals("17610101523")){click(b_verifyCode);}
@@ -206,7 +204,6 @@ public class TestInit extends elementFile {
             click(button_registered);
         }else if(type == 2){
             click(link_registered_useEmail);
-//            sendKeys(input_registered_nickname, name);
             sendKeys(input_registered_email, user);
             sendKeys(input_registered_password, pwd);
             click(button_registered);
@@ -227,7 +224,6 @@ public class TestInit extends elementFile {
             driver.manage().deleteCookieNamed("userId");
             driver.manage().deleteCookieNamed("shimo_dev_sid");
             jumpToURL(test_url + "login");
-//            driver.navigate().to(test_url + "logout");
             driver.switchTo().alert().accept();
             action.sendKeys(Keys.ESCAPE);
         } catch (UnhandledAlertException e) {
@@ -279,8 +275,8 @@ public class TestInit extends elementFile {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    public void printLog(String classname, String userID) {
-        System.out.println(classname + "[" + userID + "]");
+    public void printLog(String className, String userID) {
+        System.out.println(className + "[" + userID + "]");
 
     }
 
@@ -516,7 +512,6 @@ public class TestInit extends elementFile {
             Boolean r = getText(list_collaboratorEmail_1).equals(email);
             if(r){break;}
         }
-//        click(b_add_CollaboratorList_1);
         wait.until(ExpectedConditions.elementToBeClickable(b_add_CollaboratorList_1));
         b_add_CollaboratorList_1.click();
         click(cpList_remove);
@@ -722,7 +717,6 @@ public class TestInit extends elementFile {
     public void modifyPermissions(WebElement element, String permissions){
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-//        click(element);
 
         switch(permissions){
             case "edit" ://可编辑
@@ -786,8 +780,6 @@ public class TestInit extends elementFile {
                 }
             }
             checkPageIsReady();
-//        }
-
     }
 
     /**
@@ -1074,7 +1066,7 @@ public class TestInit extends elementFile {
     }
 
     /**
-     * Selenium wait //Todo
+     * Selenium wait
      *
      * @author 刘晨
      * @Time 2020-08-19
@@ -1110,25 +1102,5 @@ public class TestInit extends elementFile {
         ScreenShot st = new ScreenShot(driver);
         st.takeScreenshot(className);
     }
-    
-    /**
-	 * 元素透明度和X，Y坐标
-	 * 
-	 * @author 张家晶
-	 * @Time 2018-10-09
-	 * ele1 输入框，ele2上箭头， ele3下箭头
-	 */
-	public void opacityAndCoord(WebElement ele1, WebElement ele2, WebElement ele3) {
-		if(ele1.isDisplayed() && ele2.isDisplayed() && ele3.isDisplayed()) {
-			action.click(ele1).sendKeys(Keys.chord(Keys.CONTROL, "a"))
-			.sendKeys(Keys.NUMPAD7).sendKeys(Keys.NUMPAD0).build().perform();
-			for (int i = 1; i < 11; i++) {//上箭头
-				click(ele2);
-			}
-			for (int j = 1; j < 6; j++) {//下箭头
-				click(ele3);
-			}
-		}
-	}
 
 }
