@@ -26,7 +26,7 @@ public class testSlideHeader extends TestInit {
         sendKeys(input_headerSearch,"新建测试文件");
         click(searchList_1);
         switchToPage(1);
-        Boolean r1 = driver.getCurrentUrl().contains(getURL() + "slides/0cOVFbr0NesLTc0w");
+        Boolean r1 = driver.getCurrentUrl().contains(getURL() + "slides/dW3yPvhWGvVrGp9K");
         assertTrue(r1);
     }
 

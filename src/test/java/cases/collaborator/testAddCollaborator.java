@@ -2,7 +2,6 @@ package cases.collaborator;
 
 import base.TestInit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -21,12 +20,6 @@ public class testAddCollaborator extends TestInit {
 
         click(desktop);
         contextClick(desktop1_1);
-//        click(menu_cooperation);
-
-//        wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator_2_list));
-//        Boolean exist = b_addCollaborator.isEnabled();
-//
-//        assertFalse(exist);
         addCollaboratorByEmail("panpan@qq.com", 1);
         String msg = getText(toast_addCollaborator);
         assertEquals("升级到高级版或企业版，获得无限制协作（现在上限是 15）", msg);
@@ -45,9 +38,6 @@ public class testAddCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("11@cc.ccc", 1);
-
-//        click(b_addCollaborator_2_list);
-//        click(list_addCollaborator_4);
 
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(1);
@@ -71,15 +61,11 @@ public class testAddCollaborator extends TestInit {
 
         click(menu_cooperation);
         click(b_add_Collaborator);
-//        click(addCollaborator_1_add);
-//        click(b_addCollaborator_ok);
         String userName = getText(list_collaboratorName_1);
         click(b_collaboratorsList_1);
         click(cpList_edit);
         click(b_spacingCollaborator_close);
 
-//        click(b_addCollaborator_2_list);
-//        click(list_addCollaborator_4);
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(1);
 
@@ -115,22 +101,6 @@ public class testAddCollaborator extends TestInit {
         assertEquals(userName + " 的权限已移除", msg);
     }
 
-//    /**
-//     * 点击协作者列表中添加协作者之后，不点击确定，点击返回，协作者不会被添加
-//     *
-//     * @author 刘晨
-//     * @Time 2017-11-29
-//     */
-//    @Test(enabled = true)
-//    public void addCollaborator_5() {
-//        login("autoTest01@shimo.im", "123123");
-//        click(desktop);
-//        contextClick(desktop1_1_folder);
-//        click(menu_cooperation);
-//        click(b_addCollaborator);
-//        click(addCollaborator_1_add);
-//        click(b_addCollaborator_back);
-//    }
 
     /**
      * 协作者在协作者列表中移除自己
