@@ -54,7 +54,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-29
      */
     @Test(enabled = true)
-    public void addCollaborator_3() {
+    public void addCollaborator_3() throws InterruptedException {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1_folder);
@@ -80,7 +80,7 @@ public class testAddCollaborator extends TestInit {
      * @Time 2017-11-29
      */
     @Test(enabled = true)
-    public void addCollaborator_4() {
+    public void addCollaborator_4() throws InterruptedException {
         login("autoTest01@shimo.im", "123123");
         click(desktop);
 

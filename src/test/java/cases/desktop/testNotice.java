@@ -116,9 +116,6 @@ public class testNotice extends TestInit {
 		contextClick(desktop1_1);
 		addCollaboratorByEmail("autoTest12@shimo.im", 1);
 
-//		wait.until(ExpectedConditions.elementToBeClickable(b_addCollaborator));
-//		click(b_addCollaborator_2_list);
-//		click(list_addCollaborator_4);
 		contextClick(desktop1_1);
 		removeCollaboratorByPosition(1);
 

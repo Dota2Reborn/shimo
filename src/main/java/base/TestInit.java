@@ -524,7 +524,7 @@ public class TestInit extends elementFile {
      * @author 刘晨
      * @Time 2019-07-25
      */
-    public void removeCollaboratorByPosition(int i) {
+    public void removeCollaboratorByPosition(int i) throws InterruptedException {
         click(menu_cooperation);
         WebElement b_collaboratorPosition = null;
         switch (i){
@@ -540,9 +540,10 @@ public class TestInit extends elementFile {
         }
         click(b_collaboratorPosition);
         click(cpList_remove);
-//        if(doesWebElementExist(b_spacingCollaborator_close)){
-//            b_spacingCollaborator_close.click();
-//        }
+        Thread.sleep(1000);
+        if(doesWebElementExist(b_spacingCollaborator_close)){
+            b_spacingCollaborator_close.click();
+        }
 
     }
 
