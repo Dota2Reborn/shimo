@@ -19,33 +19,30 @@ public class testDesktop_Folder extends TestInit {
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void desktop_show_type() {
 
-//        login("autoTest_Folder@shimo.im", "123123");
-//
-//        click(desktop);
-//        click(desktop_show_type_list);
-//
-//        Boolean result = false;
-//        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
-//
-//        click(desktop_show_type_grid);
-//
-//        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
-//
-//        if (exist1 == true && exist2 == false) {
-//            result = true;
-//        }
-//
-//        assertTrue(result);
+        login("desktop_show_type@shimo.im", "123123");
+        click(desktop);
+        click(desktop_show_type_list);
+
+        Boolean result = false;
+        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
+
+        click(desktop_show_type_grid);
+
+        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
+
+        if (exist1 == true && exist2 == false) {
+            result = true;
+        }
+        assertTrue(result);
 
     }
 
     /**
      * 右键文件夹-在新标签页打开
      *
-     * @throws InterruptedException
      * @author 刘晨
      * @Time 2017-11-20
      */
@@ -155,9 +152,6 @@ public class testDesktop_Folder extends TestInit {
         driver.navigate().refresh();
         String msg = getText(desktop1_1_name);
 
-//        contextClick(desktop1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
         assertEquals(msg, "删除文件夹");
     }

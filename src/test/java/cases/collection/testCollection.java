@@ -30,13 +30,7 @@ public class testCollection extends TestInit {
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
-        // contextClick(desktop1_1);
-//        moveToElement(desktop1_1);
-//        click(desktop_setting);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
-//        Thread.sleep(500);
         assertEquals(name, "无标题");
     }
 
@@ -60,13 +54,7 @@ public class testCollection extends TestInit {
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
-        // contextClick(desktop1_1);
-//        moveToElement(desktop1_1);
-//        click(desktop_setting);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
-//        Thread.sleep(500);
         assertEquals(name, "无标题");
 
     }
@@ -96,7 +84,6 @@ public class testCollection extends TestInit {
         if (exist1 == true && exist2 == false) {
             result = true;
         }
-        // driver.manage().deleteAllCookies();
         assertTrue(result);
 
     }
@@ -140,7 +127,6 @@ public class testCollection extends TestInit {
         Sort();
         click(desktop_order);
         click(desktop_orderByFile);
-//        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         assertEquals(name1, "第一个创建的");
         click(desktop_order);
@@ -157,7 +143,7 @@ public class testCollection extends TestInit {
      * @Time 2018-03-20
      */
     @Test(enabled = true)
-    public void Collection_Sort_3() throws InterruptedException {
+    public void Collection_Sort_3() {
         login("Collection@shimo.im", "123123");
         click(dashboard);
         click(favorites);
@@ -165,25 +151,17 @@ public class testCollection extends TestInit {
         Sort();
         click(desktop_order);
         click(desktop_orderByCreate);
-        // 刷新
-//        driver.navigate().refresh();
         String name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
         click(menu_createCopy);
 
-//        Thread.sleep(2000);
-//        driver.navigate().refresh();
         contextClick(desktop1_1);
         click(menu_moveToFolder);
 
         driver.navigate().refresh();
         String name = getText(desktop1_1_name);
         if (name1 != name) {
-//            contextClick(desktop1_1);
-//            click(menu_delete);
-//            click(desktop_newFolder_name_ok);
             delFile(desktop1_1);
-
         }
 
         String msg = "副本" + " " + "第四个创建的";
