@@ -110,8 +110,8 @@ public class testCompanyManagement_1 extends TestInit {
         click(button_companyName);
         wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
-        input_companyName.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        input_companyName.sendKeys(Keys.DELETE);
+        sendKeys(input_companyName, Keys.chord(Keys.CONTROL, "a"));
+        sendKeys(input_companyName,Keys.chord(Keys.DELETE));
         sendKeys(input_companyName,time);
         click(message_ok);
 

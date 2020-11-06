@@ -148,6 +148,7 @@ public class testSpacePermissions  extends TestInit {
 
         click(spacingSetting_spaceName);
         sendKeys(spacingSetting_spaceName,Keys.chord(Keys.CONTROL, "a"));
+        sendKeys(spacingSetting_spaceName,Keys.chord(Keys.DELETE));
 
         String time = getDate();
         sendKeys(spacingSetting_spaceName,time);
