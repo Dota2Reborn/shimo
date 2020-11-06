@@ -81,7 +81,6 @@ public class testRemoveCollaborator extends TestInit {
         contextClick(desktop1_1);
         click(menu_cooperation);
         int count2 = getCollaboratorSize();
-//        assertTrue(count1 == count2);
         assertEquals(count1,count2);
 
     }
