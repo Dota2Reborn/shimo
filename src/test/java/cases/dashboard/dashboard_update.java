@@ -164,9 +164,6 @@ public class dashboard_update extends TestInit {
         String text1 = getText(dashboard_update_name);
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
-//        click(menu_cooperation);
-//        click(b_addCollaborator_2_list);
-//        click(list_addCollaborator_4);
         removeCollaboratorByPosition(1);
         String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
         assertEquals(text2, "没有文件");
@@ -189,9 +186,6 @@ public class dashboard_update extends TestInit {
         sendKeys(doc_edit, "la");
         click(b_back);
         click(dashboard_activitiesByFile);
-//        contextClick(dashboard_update_file);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(dashboard_update_file);
 
         Boolean f = doesWebElementExist(dashboard_update_file);
@@ -277,9 +271,6 @@ public class dashboard_update extends TestInit {
         assertFalse(result);
         assertTrue(text1);
 
-//        contextClick(dashboard_update_name);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(dashboard_update_name);
 
     }

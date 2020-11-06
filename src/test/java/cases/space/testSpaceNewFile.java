@@ -1,7 +1,6 @@
 package cases.space;
 
 import base.TestInit;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
@@ -19,9 +18,6 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_1);
         String msg = getText(space_title);
         String msg1 = getText(space_listing_1);
-//        msg1 = (String) msg1.subSequence(0,3);
-//        System.out.print(msg);
-//        System.out.print(msg1);
         assertEquals(msg,"www");
         String msg2 = getText(space_button_import);
         assertEquals(msg2,"上传");
@@ -41,9 +37,6 @@ public class testSpaceNewFile extends TestInit {
         click(space_listing_1);
         String msg = getText(space_title);
         String msg1 = getText(space_listing_1);
-//        msg1 = (String) msg1.subSequence(0,10);
-//        System.out.print(msg);
-//        System.out.print(msg1);
         assertEquals(msg,"TestTeason");
         String msg2 = getText(space_button_import);
         assertEquals(msg2,"上传");
@@ -72,8 +65,6 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg3,"思维导图");
         String msg4 = getText(desktop_newFolder);
         assertEquals(msg4,"文件夹");
-//        String msg5 = getText(desktop_newtemplate);
-//        assertEquals(msg5,"从模板新建");
     }
 
 
@@ -91,8 +82,6 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg,"上传文件");
         String msg1 = getText(space_uploadFolder);
         assertEquals(msg1,"上传文件夹");
-//        String msg6 = getText(space_list_import);
-//        assertEquals(msg6,"导入");
     }
 
 
@@ -110,9 +99,6 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_newDoc);
         Thread.sleep(1000);
         click(b_back);
-//        contextClick(space_document_1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(space_document_1_1);
         driver.navigate().refresh();
         String msg1 = getText(space_document_1_1);
@@ -133,9 +119,6 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newSheet);
         click(b_back);
-//        contextClick(space_document_1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
@@ -155,9 +138,6 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newSlides);
         click(b_back);
-//        contextClick(space_document_1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
@@ -177,9 +157,6 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_new);
         click(desktop_newMindMap);
         click(b_back);
-//        contextClick(space_document_1_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(space_document_1_1);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);

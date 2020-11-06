@@ -69,9 +69,6 @@ public class testDashboard extends TestInit {
         click(b_back);
         click(dashboard_3);
         String msg = getText(dashboard_update_name);
-//        contextClick(dashboard_update_name);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(dashboard_update_name);
 
         assertEquals(msg, time);
@@ -95,9 +92,6 @@ public class testDashboard extends TestInit {
         login("autoTest07@shimo.im", "123123");
 
         click(dashboard_4);
-//        contextClick(dashboard_share_file_1);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(dashboard_share_file_1);
 
         Boolean r = doesWebElementExist(desktop_none_file);
@@ -131,22 +125,17 @@ public class testDashboard extends TestInit {
      * @Time 2017-12-18
      */
     @Test(enabled = true)
-    public void dashboard_setting_createCopy() throws InterruptedException {
+    public void dashboard_setting_createCopy() {
         login("autoTest09@shimo.im", "123123");
         click(dashboard_3);
 
         contextClick(dashboard_update_name);
         click(menu_createCopy);
-//        Thread.sleep(2000);
 
         contextClick(dashboard_update_name);
         click(menu_moveToFolder);
         String fileName = getText(desktop1_1_name);
 
-//        moveToElement(desktop1_1);
-//        click(desktop_setting);
-//        click(menu_delete);
-//        click(desktop_newFolder_name_ok);
         delFile(desktop1_1);
 
         assertEquals(fileName, "副本 创建副本");
