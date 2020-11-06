@@ -57,7 +57,6 @@ public class testMemberList extends TestInit {
         click(b_addMember);
         sendKeys(input_addMember, "testEnterprise02@qq.com");
         click(b_confirm_addMember);
-//        click(b_close_addMember);
 
         logout();
         login("testEnterprise02@qq.com", "123123");

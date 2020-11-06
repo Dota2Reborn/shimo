@@ -183,7 +183,7 @@ public class testCompanyManagement_1 extends TestInit {
      * @Time 2018-03-06
      */
     @Test(enabled = true)
-    public void transferCompany() throws InterruptedException {
+    public void transferCompany() {
         login("autoTest_company_1@shimo.im", "123123");
         click(company_Management);
         switchToPage(1);

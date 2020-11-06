@@ -540,9 +540,9 @@ public class TestInit extends elementFile {
         }
         click(b_collaboratorPosition);
         click(cpList_remove);
-        if(doesWebElementExist(b_spacingCollaborator_close)){
-            b_spacingCollaborator_close.click();
-        }
+//        if(doesWebElementExist(b_spacingCollaborator_close)){
+//            b_spacingCollaborator_close.click();
+//        }
 
     }
 

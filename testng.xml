@@ -130,11 +130,11 @@
 			<class name="cases.space.testSpaceNewFile" />
 		</classes>
 	</test>
-	<!--<test name="test25">-->
-		<!--<classes>-->
-			<!--<class name="cases.collaborator.testPermission" />-->
-		<!--</classes>-->
-	<!--</test>-->
+	<test name="test25">
+		<classes>
+			<class name="cases.collaborator.testPermission" />
+		</classes>
+	</test>
 	<test name="test26">
 		<classes>
 			<class name="cases.desktop.testSearch" />
