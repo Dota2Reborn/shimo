@@ -945,7 +945,7 @@
 			{
 				"elementName": "setAdmin",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='action-set-admin']",
+				"locator": "//div[@data-test='enterprise-set-admin']//button",
 				"note": "企业设置-设置管理员"
 			},
 			{
@@ -1181,6 +1181,12 @@
 				"locateUsing": "xpath",
 				"locator": "(//td[@data-test='department-cell'])[1]",
 				"note": "通讯录页面，成员列表中的第一个部门"
+			},
+			{
+				"elementName": "b_transferCompany_confirm",
+				"locateUsing": "xpath",
+				"locator": "//div[@class='sm-modal-footer']//button",
+				"note": "企业设置，移交企业，确认按钮"
 			}
 		]
 	},

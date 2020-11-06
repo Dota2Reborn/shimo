@@ -634,6 +634,9 @@ public class elementFile {
 	/** 通讯录页面，添加子部门，子部门名称输入框 */
 	@SearchWith(pageName = "companyManagement", elementName = "input_subDepartmentName")
 	public WebElement input_subDepartmentName;
+	/** 企业设置，移交企业，确认按钮 */
+	@SearchWith(pageName = "companyManagement", elementName = "b_transferCompany_confirm")
+	public WebElement b_transferCompany_confirm;
 
 
 	/**  ----------------------------------------------------------------------------------------------------------------------  */

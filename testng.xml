@@ -90,12 +90,11 @@
 			<class name="cases.collaborator.testRemoveCollaborator" />
 		</classes>
 	</test>
-	<!--case作废，新的逻辑中没有转让所有者-->
-	<!--<test name="test17">-->
-		<!--<classes>-->
-			<!--<class name="cases.collaborator.testTransferOwner" />-->
-		<!--</classes>-->
-	<!--</test>-->
+	<test name="test17">
+		<classes>
+			<class name="cases.management.testCompanyManagement_1" />
+		</classes>
+	</test>
 	<test name="test18">
 		<classes>
 			<class name="cases.collaborator.testAuthorityForMoveFile" />
