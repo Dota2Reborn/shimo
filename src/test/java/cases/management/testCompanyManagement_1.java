@@ -5,6 +5,7 @@ import com.google.common.base.Preconditions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -110,8 +111,12 @@ public class testCompanyManagement_1 extends TestInit {
         click(button_companyName);
         wait.until(ExpectedConditions.elementToBeClickable(message_ok));
 
-        sendKeys(input_companyName, Keys.chord(Keys.CONTROL, "a"));
-        sendKeys(input_companyName,Keys.chord(Keys.DELETE));
+//        sendKeys(input_companyName, Keys.chord(Keys.CONTROL, "a"));
+//        sendKeys(input_companyName,Keys.chord(Keys.DELETE));
+
+        Actions action = new Actions(driver);
+        action.doubleClick(input_companyName).perform();
+
         sendKeys(input_companyName,time);
         click(message_ok);
 

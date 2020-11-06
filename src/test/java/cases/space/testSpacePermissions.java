@@ -2,6 +2,8 @@ package cases.space;
 
 import base.TestInit;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 
@@ -146,9 +148,11 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting1);
         click(b_SpaceSetting_setting);
 
-        click(spacingSetting_spaceName);
-        sendKeys(spacingSetting_spaceName,Keys.chord(Keys.CONTROL, "a"));
-        sendKeys(spacingSetting_spaceName,Keys.chord(Keys.DELETE));
+//        click(spacingSetting_spaceName);
+        Actions action = new Actions(driver);
+        action.doubleClick(spacingSetting_spaceName).perform();
+//        sendKeys(spacingSetting_spaceName,Keys.chord(Keys.CONTROL, "a"));
+//        sendKeys(spacingSetting_spaceName,Keys.chord(Keys.DELETE));
 
         String time = getDate();
         sendKeys(spacingSetting_spaceName,time);
