@@ -51,4 +51,16 @@ public class testSpaceList extends TestInit {
         click(b_SpaceSetting_delete);
         click(message_ok);
     }
+
+
+    /**
+     * 管理者删除协作空间，再恢复，其他管理者/协作者查看协作空间，协作空间显示为【我的桌面】
+     * @author  Liu Chen
+     * @Time  2020/11/12
+     */
+    @Test
+    public void space_listBug_2() throws InterruptedException {
+
+
+    }
 }

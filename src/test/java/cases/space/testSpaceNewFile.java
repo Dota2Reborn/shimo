@@ -59,8 +59,8 @@ public class testSpaceNewFile extends TestInit {
         assertEquals(msg,"文档");
         String msg1 = getText(desktop_newSheet);
         assertEquals(msg1,"表格");
-        String msg2 = getText(desktop_newSlides);
-        assertEquals(msg2,"幻灯片");
+//        String msg2 = getText(desktop_newSlides);
+//        assertEquals(msg2,"幻灯片");
         String msg3 = getText(desktop_newMindMap);
         assertEquals(msg3,"思维导图");
         String msg4 = getText(desktop_newFolder);
@@ -130,7 +130,7 @@ public class testSpaceNewFile extends TestInit {
      * @author  范金叶
      * @Time  2019-01-15
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void space_newPPT(){
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
