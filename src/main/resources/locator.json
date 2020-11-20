@@ -818,7 +818,7 @@
 			{
 				"elementName": "b_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='page-header-right']/div[2]/div",
+				"locator": "//div[@data-test='account-icon']",
 				"note": "header上用户头像icon"
 			},
 			{
