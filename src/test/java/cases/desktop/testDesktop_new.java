@@ -197,7 +197,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_doc() throws InterruptedException {
+    public void desktop_import_doc() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -206,8 +206,8 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         desktop_import.sendKeys(url);
 
-        Thread.sleep(2000);
-        click(b_back);
+        click(desktop_newFolder_name_cancel);
+        driver.navigate().refresh();
 
         String msg = getText(desktop1_1_name);
         delFile(desktop1_1);
@@ -223,7 +223,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_docx() throws InterruptedException {
+    public void desktop_import_docx() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -231,9 +231,9 @@ public class testDesktop_new extends TestInit {
         String url = new File(ByGenerator.class.getClassLoader().getResource("file/test_docx.docx").getFile()).getPath();
         System.out.println(url);
         uploadButton.sendKeys(url);
+        click(desktop_newFolder_name_cancel);
+        driver.navigate().refresh();
 
-        Thread.sleep(2000);
-        click(b_back);
         String msg = getText(desktop1_1_name);
         delFile(desktop1_1);
 
@@ -258,6 +258,7 @@ public class testDesktop_new extends TestInit {
         uploadButton.sendKeys(url);
 
         click(desktop_newFolder_name_cancel);
+        driver.navigate().refresh();
         String msg = getText(desktop1_1_name);
         delFile(desktop1_1);
 
@@ -272,7 +273,7 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test(enabled = true)
-    public void desktop_import_md() throws InterruptedException {
+    public void desktop_import_md() {
         login("autoTest_new@shimo.im", "123123");
         click(desktop);
 
@@ -282,8 +283,8 @@ public class testDesktop_new extends TestInit {
         System.out.println(url);
         uploadButton.sendKeys(url);
 
-        Thread.sleep(500);
-        click(b_back);
+        click(desktop_newFolder_name_cancel);
+        driver.navigate().refresh();
         String msg = getText(desktop1_1_name);
         delFile(desktop1_1);
 
