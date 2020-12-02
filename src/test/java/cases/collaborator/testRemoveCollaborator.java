@@ -107,7 +107,7 @@ public class testRemoveCollaborator extends TestInit {
         click(desktop);
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("remove10@shimo.im", 1);
-        assertEquals(count, 2);
+        assertEquals(count, 3);
     }
 
     @Test
