@@ -147,13 +147,13 @@ public class testRightClickMenu extends TestInit {
      *
      */
     @Test(enabled = true)
-    public void Space_video_delete() {
+    public void Space_video_delete() throws InterruptedException {
         login("Space_video@shimo.im", "123123");
         click(space_listing_7);
         contextClick(space_document_1_1);
         click(space_RightMenu_delete);
         click(desktop_newFolder_name_ok);
-//        Thread.sleep(1000);
+        Thread.sleep(1000);
         Boolean element1 = doesWebElementExist(space_document_1_1);
         click(b_closeSpace);
         click(trash);
