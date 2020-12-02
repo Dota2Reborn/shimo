@@ -197,7 +197,7 @@ public class testDocHeader extends TestInit {
 //        sendKeys(input_collaborator, "test0910@qq.com");
 //        click(b_addCollaborator_1_add);
 //        click(b_addCollaborator_ok);
-        sendKeys(input_add_Collaborator, "test0910@qq.com");
+        sendKeys(input_add_Collaborator, "liuchen@shimo.im");
         Thread.sleep(500);
         click(b_add_CollaboratorList_1);
         click(cpList_edit);
