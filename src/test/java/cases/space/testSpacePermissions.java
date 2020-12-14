@@ -67,7 +67,7 @@ public class testSpacePermissions  extends TestInit {
         click(b_SpaceSetting_collaboration);
 
         sendKeys(input_add_Collaborator,"qq4@qq.qqq");
-        Thread.sleep(500);
+        Thread.sleep(20000);
 
         click(b_add_CollaboratorList_1);
         click(cpList_edit);
