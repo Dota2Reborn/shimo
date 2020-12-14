@@ -459,6 +459,16 @@ public class TestInit extends elementFile {
                 click(b_add_Collaborator);
                 sendKeys(input_add_Collaborator, email);
                 Thread.sleep(800);
+
+                int count = driver.findElements(By.xpath("//div[@data-test='description']")).size();
+                System.out.println("当前协作面板搜索结果："+count);
+
+                for(int i=0;i<count;i++){
+                    int j = i+1;
+                    String list_email = getText(driver.findElement(By.xpath("(//div[@data-test='description'])"+"["+j+"]")));
+                    System.out.println(j+":"+list_email);
+                }
+
                 for(int i=0; i < 10; i++){
                     Boolean r = getText(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
