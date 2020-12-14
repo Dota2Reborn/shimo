@@ -458,7 +458,7 @@ public class TestInit extends elementFile {
                 click(menu_cooperation);//点击菜单上的【协作】按钮
                 click(b_add_Collaborator);
                 sendKeys(input_add_Collaborator, email);
-                Thread.sleep(800);
+                Thread.sleep(2000);
                 for(int i=0; i < 10; i++){
                     Boolean r = getText(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
@@ -471,7 +471,7 @@ public class TestInit extends elementFile {
 
             case 2 ://文件夹内右侧直接打开协作面板
                 sendKeys(input_add_Collaborator, email);
-                Thread.sleep(800);
+                Thread.sleep(2000);
                 for(int i=0; i < 10; i++){
                     Boolean r = getTextWithoutWait(list_collaboratorEmail_1).equals(email);
                     if(r){break;}
