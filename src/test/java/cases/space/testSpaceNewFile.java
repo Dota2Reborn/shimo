@@ -154,7 +154,7 @@ public class testSpaceNewFile extends TestInit {
      * @Time  2019-01-15
      */
     @Test(enabled = true)
-    public void space_newMMP(){
+    public void space_newMMP() throws InterruptedException {
         login("spacebuild001@shimo.im", "123123");
         click(space_listing_2);
         String msg = getText(space_document_1_1);
@@ -162,6 +162,7 @@ public class testSpaceNewFile extends TestInit {
         click(desktop_newMindMap);
         click(b_back);
         delFile(space_document_1_1);
+        Thread.sleep(500);
         String msg1 = getText(space_document_1_1);
         assertEquals(msg, msg1);
     }
