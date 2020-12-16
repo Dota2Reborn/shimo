@@ -104,7 +104,14 @@ public class testDesktop extends TestInit {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
-        String msg = getText(desktop1_1_name);
+        click(desktop_new);
+        click(desktop_newDoc);
+
+        String time = getDate();
+        sendKeys(doc_title_input, time);
+
+        click(b_back);
+
         contextClick(desktop1_1);
         click(menu_move);
         click(desktop_moveFolder_back_button);
@@ -122,7 +129,7 @@ public class testDesktop extends TestInit {
         click(desktop);
         String msg1 = getText(desktop1_1_name);
 
-        assertEquals(msg, msg1);
+        assertEquals(time, msg1);
     }
 
     /**
