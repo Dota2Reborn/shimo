@@ -903,7 +903,7 @@
 			{
 				"elementName": "text_companyName",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='enterprise-name']//span",
+				"locator": "//div[@data-test='enterprise-name']//div[starts-with(@class,'StyleRowItemDescription')]",
 				"note": "企业设置-企业名称"
 			},
 			{
