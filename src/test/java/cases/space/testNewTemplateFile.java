@@ -9,76 +9,68 @@ public class testNewTemplateFile extends TestInit {
 
     /**
      * 空间  新建文档模板
-     * @author
-     * @Time
+     *
+     * @author 刘晨
+     * @Time 2020-12-17
      */
-    //todo 补充脚本库用例
-    @Test(enabled = false)
-    public void space_newTemplate_doc() throws InterruptedException {
+    @Test(enabled = true)
+    public void space_newTemplate_doc() {
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1_name);
         click(desktop_newTemplate);
-        click(template_1_1);
-        click(button_template_confirm);
-
-        Thread.sleep(2000);
         switchToPage(1);
-        click(b_back);
-        delFile(desktop1_1);
-        String msg1 = getText(desktop1_1_name);
-        assertEquals(msg, msg1);
+        click(templates_tab_doc);
+        click(templates_template_1);
+        click(templates_create_button);
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
     }
 
 
     /**
      * 空间  新建表格模板
-     * @author
-     * @Time
+     *
+     * @author 刘晨
+     * @Time 2020-12-17
      */
-    @Test(enabled = false)
-    public void space_newTemplate_sheet() throws InterruptedException {
+    @Test(enabled = true)
+    public void space_newTemplate_sheet() {
         login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1_name);
         click(desktop_newTemplate);
-        click(template_type_2);
-        click(template_2_1);
-        click(button_template_confirm);
-        Thread.sleep(2000);
-
         switchToPage(1);
-        click(b_back);
-        delFile(desktop1_1);
-        String msg1 = getText(desktop1_1_name);
-        assertEquals(msg, msg1);
+        click(templates_tab_sheet);
+        click(templates_template_1);
+        click(templates_create_button);
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
     }
 
 
     /**
      * 空间  我的模板
-     * @author
-     * @Time
+     *
+     * @author 刘晨
+     * @Time 2020-12-17
      */
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void space_newTemplate_mine(){
-        login("spacebuild001@shimo.im", "123123");
+        login("spacebuild@shimo.im", "123123");
         click(space_listing_3);
-        String msg = getText(desktop1_1_name);
-        click(desktop_new);
         click(desktop_newTemplate);
-        click(my_template);
-        click(my_template02);
-
         switchToPage(1);
-        click(b_back);
-        delFile(desktop1_1);
-        String msg1 = getText(desktop1_1_name);
-        assertEquals(msg, msg1);
+        click(templates_tab_mine);
+        click(templates_mineTemplate_1);
+        click(doc_menu);
+        click(doc_menu_delete);
+        click(doc_menu_delete_OK);
     }
 
     /**
      * 桌面文件移动到协作空间
+     *
      * @author
      * @Time
      */
@@ -98,4 +90,45 @@ public class testNewTemplateFile extends TestInit {
         click(space_listing_1);
         delFile(desktop1_1);
     }
+
+    /**
+     * 模板库删除个人模板
+     *
+     * @author 刘晨
+     * @Time 2020-12-17
+     */
+    @Test(enabled = true)
+    public void del_template(){
+        login("testDocHeader@shimo.im", "123123");
+        click(desktop_newTemplate);
+        switchToPage(1);
+        click(templates_tab_mine);
+        contextClick(templates_mineTemplate_1);
+        click(templates_delete_button);
+        click(desktop_newFolder_name_ok);
+        String msg = getText(toast_msg);
+        assertEquals("删除成功",msg);
+    }
+
+    /**
+     * 模板库，模板重命名
+     *
+     * @author 刘晨
+     * @Time 2020-12-17
+     */
+    @Test(enabled = true)
+    public void rename_template() {
+        login("testDocHeader@shimo.im", "123123");
+        click(desktop_newTemplate);
+        switchToPage(1);
+        click(templates_tab_mine);
+        contextClick(templates_mineTemplate_1);
+        click(templates_rename_button);
+        sendKeys(desktop_newFolder_name, getDate());
+        click(desktop_newFolder_name_ok);
+        String msg = getText(toast_msg);
+        assertEquals("修改成功",msg);
+
+    }
+
 }

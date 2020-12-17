@@ -1028,4 +1028,32 @@ public class elementFile {
 	/** 移动端_toast */
 	@SearchWith(pageName = "mobile", elementName = "mobile_toast")
 	public WebElement mobile_toast;
+
+	/** 模板库_全部模板tab */
+	@SearchWith(pageName = "templates", elementName = "templates_tab_all")
+	public WebElement templates_tab_all;
+	/** 模板库_文档模板tab */
+	@SearchWith(pageName = "templates", elementName = "templates_tab_doc")
+	public WebElement templates_tab_doc;
+	/** 模板库_表格模板tab */
+	@SearchWith(pageName = "templates", elementName = "templates_tab_sheet")
+	public WebElement templates_tab_sheet;
+	/** 模板库_个人模板tab */
+	@SearchWith(pageName = "templates", elementName = "templates_tab_mine")
+	public WebElement templates_tab_mine;
+	/** 模板库_模板_1 */
+	@SearchWith(pageName = "templates", elementName = "templates_template_1")
+	public WebElement templates_template_1;
+	/** 模板库_我的模板_1 */
+	@SearchWith(pageName = "templates", elementName = "templates_mineTemplate_1")
+	public WebElement templates_mineTemplate_1;
+	/** 模板库_使用此模板按钮 */
+	@SearchWith(pageName = "templates", elementName = "templates_create_button")
+	public WebElement templates_create_button;
+	/** 模板库_模板重命名 */
+	@SearchWith(pageName = "templates", elementName = "templates_rename_button")
+	public WebElement templates_rename_button;
+	/** 模板库_模板删除 */
+	@SearchWith(pageName = "templates", elementName = "templates_delete_button")
+	public WebElement templates_delete_button;
 }

@@ -2247,5 +2247,58 @@
 				"locator": "//div[starts-with(@class,'StyledContent')]"
 			}
 		]
+	},
+	{
+	"note": "模板库",
+	"pageName": "templates",
+	"elements": [
+			{
+				"note": "模板库_全部模板tab",
+				"elementName": "templates_tab_all",
+				"locateUsing": "xpath",
+				"locator": "//li[@data-test='file-type-selector-button-all']"
+			},
+			{
+				"note": "模板库_文档模板tab",
+				"elementName": "templates_tab_doc",
+				"locateUsing": "xpath",
+				"locator": "//li[@data-test='file-type-selector-button-doc']"
+			},{
+				"note": "模板库_表格模板tab",
+				"elementName": "templates_tab_sheet",
+				"locateUsing": "xpath",
+				"locator": "//li[@data-test='file-type-selector-button-sheet']"
+			},{
+				"note": "模板库_个人模板tab",
+				"elementName": "templates_tab_mine",
+				"locateUsing": "xpath",
+				"locator": "//a[@data-test='templates-nav-button-mine']"
+			},{
+				"note": "模板库_模板_1",
+				"elementName": "templates_template_1",
+				"locateUsing": "xpath",
+				"locator": "//div[starts-with(@data-test,'public-template-category')]//a"
+			},{
+				"note": "模板库_我的模板_1",
+				"elementName": "templates_mineTemplate_1",
+				"locateUsing": "xpath",
+				"locator": "//li[starts-with(@data-test,'custom-template')]"
+			},{
+				"note": "模板库_使用此模板按钮",
+				"elementName": "templates_create_button",
+				"locateUsing": "xpath",
+				"locator": "//button[@data-test='template-content-create-button']"
+			},{
+				"note": "模板库_模板重命名",
+				"elementName": "templates_rename_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='custom-template-option-rename']"
+			},{
+				"note": "模板库_模板删除",
+				"elementName": "templates_delete_button",
+				"locateUsing": "xpath",
+				"locator": "//div[@data-test='custom-template-option-delete']"
+			}
+		]
 	}
 ]
