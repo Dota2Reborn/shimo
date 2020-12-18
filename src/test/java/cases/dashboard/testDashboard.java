@@ -16,7 +16,7 @@ public class testDashboard extends TestInit {
      * @author 刘晨
      * @Time 2017-12-18
      */
-    @Test(enabled = false)//todo  当前个人基础不会触发企业用户文件，工作动态的变更，等待产品确认
+    @Test(enabled = true)
     public void dashboard_update() {
         login("autoTest06@shimo.im", "123123");
         click(desktop);
