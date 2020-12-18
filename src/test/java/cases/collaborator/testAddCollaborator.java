@@ -130,7 +130,7 @@ public class testAddCollaborator extends TestInit {
      * @author 刘晨
      * @Time 2017-12-01
      */
-    @Test(enabled = false)//todo 退出协作操作需要怡年优化  jira：LIZARDCOW-2095
+    @Test(enabled = true)
     public void addCollaborator_7() throws InterruptedException {
         login("autoTest03@shimo.im", "123123");
         click(desktop);
@@ -138,15 +138,11 @@ public class testAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
         addCollaboratorByEmail("autoTest04@shimo.im", 1);
 
-        logout();
-        login("autoTest04@shimo.im", "123123");
-
-        click(desktop);
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(1);
 
-        String toast = getText(toast_msg);
-        assertEquals(toast, "你已退出协作「内部协作者」");
+        String toast = getText(toast_addCollaborator);
+        assertEquals(toast, "autoTest04 的权限已移除");
     }
 
     /**

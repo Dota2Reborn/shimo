@@ -510,13 +510,17 @@ public class TestInit extends elementFile {
         click(menu_cooperation);
         click(b_add_Collaborator);
         sendKeys(input_add_Collaborator, email);
-        for(int i=0; i < 5; i++){
-            Boolean r = getText(list_collaboratorEmail_1).equals(email);
-            if(r){break;}
-        }
+//        for(int i=0; i < 5; i++){
+//            Boolean r = getText(list_collaboratorEmail_1).equals(email);
+//            if(r){break;}
+//        }
+//        wait.until(ExpectedConditions.textToBePresentInElementValue(list_collaboratorEmail_1,email));
+//        wait.until(ExpectedConditions.elementToBeClickable(b_add_CollaboratorList_1));
+
         wait.until(ExpectedConditions.elementToBeClickable(b_add_CollaboratorList_1));
         b_add_CollaboratorList_1.click();
-        click(cpList_remove);
+        wait.until(ExpectedConditions.elementToBeClickable(cpList_remove));
+        cpList_remove.click();
     }
 
     /**
