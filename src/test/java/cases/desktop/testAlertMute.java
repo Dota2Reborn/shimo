@@ -157,46 +157,4 @@ public class testAlertMute extends TestInit {
             assertTrue(exist2);
         }
     }
-
-    /**
-     * 消息通知，文件夹相关
-     * <p>
-     * 文件夹是打扰的，文件夹内文件是免打扰的，改成打扰的，再该文件夹免打扰，看文件夹内文件消息验证，文件夹改成打扰的，文件夹内文件免打扰
-     *
-     * @author 王继程
-     * @Time 2018-03-23
-     */
-    @Test(enabled = false)//todo 用例需要优化
-    public void Folder_notifications() throws InterruptedException {
-
-//        login("AlertMute5@shimo.im", "123123");
-//        click(desktop);
-//        Boolean mute_icon = doesWebElementExist(By.className("mute-icon"));
-//        if(mute_icon){
-//            contextClick(desktop1_1);
-//            click(menu_mute);
-//            click(desktop1_1_folder);
-//            contextClick(desktop1_1);
-//            click(menu_mute);
-//        }else {
-//            click(desktop1_1_folder);
-//            mute_icon = doesWebElementExist(By.className("mute-icon"));
-//            if(!mute_icon){
-//                contextClick(desktop1_1);
-//                click(menu_mute);
-//            }
-//        }
-//        Thread.sleep(500);
-//        Boolean r1 = doesWebElementExist(By.className("mute-icon"));
-//        assertFalse(r1);
-//        contextClick(desktop1_1);
-//        click(menu_mute);
-//        click(Folder_settings);
-//        click(menu_mute);
-//        Thread.sleep(500);
-//        Boolean r2 = doesWebElementExist(By.className("mute-icon"));
-//        assertTrue(r2);
-    }
-
-
 }
