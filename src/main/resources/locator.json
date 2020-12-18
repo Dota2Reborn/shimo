@@ -205,7 +205,7 @@
 				"note": "注册页面-获取短信验证码按钮",
 				"elementName": "b_verifyCode",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='verifyCodeContainer']/button"
+				"locator": "//button[@data-test='button-query-v-code']"
 			},
 			{
 				"note": "注册页面-手机号输入框",
@@ -229,7 +229,7 @@
 				"note": "注册页面-注册按钮",
 				"elementName": "button_registered",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='form-wrapper']/div/button"
+				"locator": "//button[@data-test='submit']"
 			},
 			{
 				"note": "注册页面-密码提示信息",
@@ -252,14 +252,26 @@
 			{
 				"note": "注册页面-验证码提示信息",
 				"elementName": "tips_registered_email",
-				"locateUsing": "xpath",
-				"locator": "//div[@type='email']/div[@class='tips']"
+				"locateUsing": "className",
+				"locator": "error-msg"
 			},
 			{
 				"note": "注册页面-使用邮箱注册",
 				"elementName": "link_registered_useEmail",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='form-wrapper']/div/div[contains(text(),'使用邮箱注册')]"
+				"locator": "//span[@data-test='change-regist-type-btn']"
+			},
+			{
+				"note": "注册页面-同意相关服务条款CheckBox",
+				"elementName": "checkbox_agreement",
+				"locateUsing": "className",
+				"locator": "agreement-checkbox"
+			},
+			{
+				"note": "注册页面-相关服务条款提示信息",
+				"elementName": "tips_checkbox_agreement",
+				"locateUsing": "className",
+				"locator": "agreement-error"
 			}
 
 		]

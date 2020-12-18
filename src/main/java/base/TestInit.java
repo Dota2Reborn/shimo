@@ -200,7 +200,8 @@ public class TestInit extends elementFile {
             sendKeys(input_registered_mobile, user);
             sendKeys(input_registered_password, pwd);
             if(user.equals("17610101523")){click(b_verifyCode);}
-            sendKeys(verifyCode, mobile_verifyCode);
+            if(!user.isEmpty()){sendKeys(verifyCode, mobile_verifyCode);}
+            click(checkbox_agreement);
             click(button_registered);
         }else if(type == 2){
             click(link_registered_useEmail);
@@ -973,7 +974,7 @@ public class TestInit extends elementFile {
             wait.until(ExpectedConditions.visibilityOf(input_add_Collaborator_1));
             input_add_Collaborator_1.sendKeys(msg);
         }else{
-            wait.until(ExpectedConditions.visibilityOf(element));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
             element.sendKeys(msg);
         }
     }

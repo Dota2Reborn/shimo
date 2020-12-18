@@ -694,6 +694,12 @@ public class elementFile {
 	/** 注册页面-使用邮箱注册 */
 	@SearchWith(pageName = "Registered", elementName = "link_registered_useEmail")
 	public WebElement link_registered_useEmail;
+	/** 注册页面-同意相关服务条款CheckBox */
+	@SearchWith(pageName = "Registered", elementName = "checkbox_agreement")
+	public WebElement checkbox_agreement;
+	/** 注册页面-相关服务条款提示信息 */
+	@SearchWith(pageName = "Registered", elementName = "tips_checkbox_agreement")
+	public WebElement tips_checkbox_agreement;
 
 
 
