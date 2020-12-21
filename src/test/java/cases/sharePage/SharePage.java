@@ -80,11 +80,6 @@ public class SharePage extends TestInit {
         login("pipi@qq.com", "123123");
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
 
-        Thread.sleep(2000);
-        WebElement b_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
-        Boolean exit = doesWebElementExist(b_close);
-        if(exit){click(b_close);}
-
         click(b_share);
         click(share_changePWD);
         Thread.sleep(500);

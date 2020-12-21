@@ -649,7 +649,14 @@ public class TestInit extends elementFile {
                     click(b_space_tooltipConfirm);
                     wait.until(ExpectedConditions.invisibilityOf(b_space_tooltipConfirm));
                 }
-            } else {
+            }  else if(element.toString().equals(doc_menu.toString()) || element.toString().equals(b_collaborator.toString())|| element.toString().equals(b_share.toString())){
+                WebElement b_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
+                Boolean exit = doesWebElementExist(b_close);
+                if(exit){click(b_close);}
+
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                element.click();
+            }else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
             }
