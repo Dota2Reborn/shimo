@@ -650,9 +650,9 @@ public class TestInit extends elementFile {
                     wait.until(ExpectedConditions.invisibilityOf(b_space_tooltipConfirm));
                 }
             }  else if(element.toString().equals(doc_menu.toString()) || element.toString().equals(b_collaborator.toString())|| element.toString().equals(b_share.toString())){
-                WebElement b_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
-                Boolean exit = doesWebElementExist(b_close);
-                if(exit){click(b_close);}
+//                WebElement b_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
+                Boolean exit = doesWebElementExist(By.xpath("//button[starts-with(@class,'close__')]"));
+                if(exit){driver.findElement(By.xpath("//button[starts-with(@class,'close__')]")).click();}
 
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
