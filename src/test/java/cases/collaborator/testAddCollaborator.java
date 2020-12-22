@@ -219,7 +219,7 @@ public class testAddCollaborator extends TestInit {
      */
     @Test(enabled = true)
     public void addCollaborator_fail() {
-        login("autoTest10@shimo.im", "123123");
+        login("Atest132@shimo.im", "123123");
         click(desktop);
         click(desktop_new);
 
