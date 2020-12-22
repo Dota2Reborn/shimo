@@ -22,7 +22,7 @@ public class testAlertMute extends TestInit {
      * @Time 2018-03-23
      */
     @Test(enabled = true)
-    public void Notify_Open() {
+    public void Notify_Open() throws InterruptedException {
         login("AlertMute@shimo.im", "123123");
         click(dashboard_2);
         click(menu_Point_Menu);
@@ -31,6 +31,10 @@ public class testAlertMute extends TestInit {
         login("AlertMute1@shimo.im", "123123");
         click(desktop);
         click(desktop1_1);
+
+        Thread.sleep(1000);
+        doc_ui_close();
+
         wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         doc_edit.clear();
         sendKeys(doc_edit, "lala");
