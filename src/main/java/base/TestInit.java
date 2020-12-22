@@ -649,14 +649,7 @@ public class TestInit extends elementFile {
                     click(b_space_tooltipConfirm);
                     wait.until(ExpectedConditions.invisibilityOf(b_space_tooltipConfirm));
                 }
-            }  else if(element.toString().equals(doc_menu.toString()) || element.toString().equals(b_collaborator.toString())|| element.toString().equals(b_share.toString())){
-//                WebElement b_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
-                Boolean exit = doesWebElementExist(By.xpath("//button[starts-with(@class,'close__')]"));
-                if(exit){driver.findElement(By.xpath("//button[starts-with(@class,'close__')]")).click();}
-
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-                element.click();
-            }else {
+            }  else {
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
             }
@@ -752,6 +745,20 @@ public class TestInit extends elementFile {
                 System.out.print("参数错误");
         }
 
+    }
+
+    /**
+     * 关闭文档中新功能提示UI
+     *
+     * @author 刘晨
+     * @Time 2020-12-22
+     */
+    public void doc_ui_close(){
+        doesWebElementExist(b_back);
+        Boolean exit = doesWebElementExist(By.xpath("//button[starts-with(@class,'close__')]"));
+        WebElement b_ui_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
+        Boolean exit1 = b_ui_close.isDisplayed();
+        if(exit && exit1){click(b_ui_close);}
     }
 
 

@@ -194,6 +194,8 @@ public class testDocHeader extends TestInit {
 
         click(desktop);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(b_collaborator);
 //        sendKeys(input_collaborator, "test0910@qq.com");
 //        click(b_addCollaborator_1_add);
@@ -222,11 +224,14 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_shortcut() {
+    public void doc_shortcut() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         String b_Msg = getText(file_menu_shortcut);
         click(file_menu_shortcut);
@@ -248,11 +253,14 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_messageMute() {
+    public void doc_messageMute() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         String b_Msg = getText(file_menu_mute);
         click(file_menu_mute);
@@ -273,11 +281,13 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_collection() {
+    public void doc_collection() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         String b_Msg = getText(file_menu_collection);
         click(file_menu_collection);
@@ -298,11 +308,13 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_move() {
+    public void doc_move() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         click(file_menu_move);
         click(desktop_moveFolder_back_button);
@@ -320,7 +332,7 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_create() {
+    public void doc_create() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
@@ -328,6 +340,8 @@ public class testDocHeader extends TestInit {
         click(desktop1_1_folder);
         click(desktop_new);
         click(desktop_newDoc);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         click(file_menu_createCopy);
         String msg = getText(toast_msg);
@@ -348,11 +362,13 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-26
      */
     @Test(enabled = true)
-    public void doc_saveVersion() {
+    public void doc_saveVersion() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         click(file_menu_version);
         String msg = getText(toast_msg);
@@ -366,11 +382,13 @@ public class testDocHeader extends TestInit {
      * @Time 2018-03-19
      */
     @Test(enabled = true)
-    public void doc_msg() {
+    public void doc_msg() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_menu);
         click(file_menu_msg);
 
