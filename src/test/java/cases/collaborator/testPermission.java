@@ -31,6 +31,9 @@ public class testPermission extends TestInit {
         click(desktop);
         click(desktop1_1_folder);
         click(desktop1_1);
+        Thread.sleep(1000);
+        doc_ui_close();
+
         click(doc_edit);
         click(ql_comment_Comments);
         String M = getAttribute(doc_discuss_input,"contenteditable");

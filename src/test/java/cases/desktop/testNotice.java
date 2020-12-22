@@ -140,6 +140,9 @@ public class testNotice extends TestInit {
 		login("autoTest14@shimo.im", "123123");
 		click(desktop);
 		click(desktop1_1);
+		Thread.sleep(1000);
+		doc_ui_close();
+
 		wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
 		doc_edit.clear();
 		sendKeys(doc_edit, "lala");
@@ -155,7 +158,8 @@ public class testNotice extends TestInit {
 		click(dashboard_notice_list_1);
 
 		switchToPage(1);
-		Thread.sleep(500);
+		Thread.sleep(1000);
+		doc_ui_close();
 		Boolean result = doesWebElementExist(doc_discuss_input);
 		assertTrue(result);
 	}

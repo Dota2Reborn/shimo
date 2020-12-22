@@ -91,10 +91,13 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-26 账号状态：有一个固定文件
      */
     @Test
-    public void update5() {
+    public void update5() throws InterruptedException {
         login("gengxin6@shimo.im", "123123");
         click(dashboard_activitiesByFile);
         click(dashboard_update_time);
+        Thread.sleep(1000);
+        doc_ui_close();
+
         click(doc_edit);
         doc_edit.clear();
         sendKeys(doc_edit,"身体健康");
@@ -115,10 +118,13 @@ public class dashboard_update extends TestInit {
      * @author 陈清杰 @Time2018-03-27 账号状态：两个账号有一个固定文件
      */
     @Test
-    public void update6() {
+    public void update6() throws InterruptedException {
         login("gengxin7@shimo.im", "123123");
         click(desktop);
         click(desktop1_1);
+
+        Thread.sleep(1000);
+        doc_ui_close();
         click(doc_edit);
         doc_edit.clear();
         sendKeys(doc_edit, "哈哈哈哈哈哈哈哈哈哈哈哈哈哈");

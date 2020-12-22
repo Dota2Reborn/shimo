@@ -80,6 +80,9 @@ public class SharePage extends TestInit {
         login("pipi@qq.com", "123123");
         jumpToURL("https://release.shimodev.com/docs/8tJwCFbJ7vgUNqFA/");
 
+        Thread.sleep(1000);
+        doc_ui_close();
+
         click(b_share);
         click(share_changePWD);
         Thread.sleep(500);
