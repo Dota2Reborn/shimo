@@ -132,6 +132,7 @@ public class testMemberList extends TestInit {
         selectMember("testEnterprise04@qq.com");
         click(b_removeFromDepartment);
         click(message_ok);
+        Thread.sleep(500);
 
         Boolean r = checkMember("testEnterprise04@qq.com");
         assertFalse(r);
