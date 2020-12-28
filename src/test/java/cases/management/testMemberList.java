@@ -115,7 +115,7 @@ public class testMemberList extends TestInit {
      * @Time 2019-12-2
      */
     @Test(enabled = true)
-    public void setDepartment() {
+    public void setDepartment() throws InterruptedException {
         login("testEnterprise@qq.com", "123123");
         click(company_Management);
         switchToPage(1);
@@ -128,6 +128,7 @@ public class testMemberList extends TestInit {
         assertEquals(msg, "添加成功");
 
         click(list_memberListDepartment_1);
+        Thread.sleep(500);
         selectMember("testEnterprise04@qq.com");
         click(b_removeFromDepartment);
         click(message_ok);
