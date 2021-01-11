@@ -171,8 +171,12 @@ public class dashboard_update extends TestInit {
         assertEquals(text1, "突然想起你");
         click(menu_Point_Menu);
         removeCollaboratorByPosition(1);
-        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
-        assertEquals(text2, "没有文件");
+
+
+        Boolean r = doesWebElementExist(desktop_none_file);
+        assertTrue(r);
+//        String text2 = getText(driver.findElement(By.xpath("//div[@class='none-file']//span")));
+//        assertEquals(text2, "没有文件");
 
 
     }

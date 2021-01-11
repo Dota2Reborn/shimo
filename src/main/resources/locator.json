@@ -577,7 +577,7 @@
 			{
 				"elementName": "desktop_none_file",
 				"locateUsing": "xpath",
-				"locator": "//div[@class='none-file']",
+				"locator": "//div[@data-test='sm-blankbar-text']",
 				"note": "桌面/我的收藏/回收站为空标识"
 			}
 		]

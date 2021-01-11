@@ -387,7 +387,7 @@ public class TestInit extends elementFile {
      * @Time 2017-11-21
      */
     public boolean doesWebElementExist(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, 1);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return element.isDisplayed();
