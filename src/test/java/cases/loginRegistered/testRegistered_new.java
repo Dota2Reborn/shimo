@@ -254,8 +254,8 @@ public class testRegistered_new extends TestInit {
     @Test(enabled = true)
     public void email_Registered_10() {
         Registered_new("", "ApexLegendary@shimo.im", "Ll123123", 2);
-        String msg = getText(tips_checkbox_agreement);
-        assertEquals("请先同意相关服务条款", msg);
+        String msg = getText(driver.findElement(By.xpath("//div[@class='sm-modal-body']")));
+        assertEquals("请先同意 服务条款，隐私保护政策，用户行为规范。", msg);
 
     }
 
