@@ -8,7 +8,7 @@ import java.util.TreeMap;
 import static org.testng.Assert.assertEquals;
 
 public class testSpaceNewFile extends TestInit {
-
+    //todo  需要后端修复企业不能续费的情况   spacebuild001@shimo.im
 
     /**
      *高级版/企业版查看空间右侧button展示

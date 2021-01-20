@@ -125,11 +125,11 @@
 			<class name="cases.space.testNewTemplateFile" />
 		</classes>
 	</test>
-	<test name="test24">
-		<classes>
-			<class name="cases.space.testSpaceNewFile" />
-		</classes>
-	</test>
+<!--	<test name="test24">-->
+<!--		<classes>-->
+<!--			<class name="cases.space.testSpaceNewFile" />-->
+<!--		</classes>-->
+<!--	</test>-->
 	<test name="test25">
 		<classes>
 			<class name="cases.collaborator.testPermission" />
