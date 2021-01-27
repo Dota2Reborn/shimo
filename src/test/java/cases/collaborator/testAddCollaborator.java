@@ -206,7 +206,7 @@ public class testAddCollaborator extends TestInit {
         click(b_spacingCollaborator_addAdmin);
         sendKeys(input_add_Collaborator, "autoTest_addCollabor@shimo.im");
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Boolean r = getAttribute(b_spacingCollaborator_addAdmin_1, "data-disabled").equals("true");
         assertTrue(r);
     }
