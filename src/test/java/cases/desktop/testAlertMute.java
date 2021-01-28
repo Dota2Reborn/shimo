@@ -21,7 +21,7 @@ public class testAlertMute extends TestInit {
      * @author 王继程
      * @Time 2018-03-23
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Notify_Open() throws InterruptedException {
         login("AlertMute@shimo.im", "123123");
         click(dashboard_2);
@@ -125,7 +125,7 @@ public class testAlertMute extends TestInit {
      * @author 王继程
      * @Time 2018-03-23
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Collaboration_notifications() {
         login("AlertMute3@shimo.im", "123123");
         click(dashboard_2);
