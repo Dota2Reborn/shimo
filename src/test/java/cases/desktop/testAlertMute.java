@@ -81,7 +81,7 @@ public class testAlertMute extends TestInit {
      * @author 王继程
      * @Time 2018-03-23
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void Notification_shutdown() {
         login("AlertMute2@shimo.im", "123123");
         click(dashboard_1);
