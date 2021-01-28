@@ -186,6 +186,10 @@ public class testAuthorityForAddCollaborator extends TestInit {
         contextClick(desktop1_1_folder);
         removeCollaboratorByPosition(1);
 
+        click(desktop);
+        contextClick(desktop1_1);
+        removeCollaboratorByPosition(1);
+
         assertTrue(r1 && r2 && r3);
 
     }
