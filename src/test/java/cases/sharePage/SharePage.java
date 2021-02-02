@@ -38,7 +38,7 @@ public class SharePage extends TestInit {
     @Test(enabled = true)
     public void sharePage_pwd_edit() {
         jumpToURL("https://release.shimodev.com/docs/mFf4ATQxe94dzXxt/");
-        sendKeys(sharePage_inputPwd, "waxp");
+        sendKeys(sharePage_inputPwd, "puax");
         click(sharePage_buttonConfirm);
 
         String title = getAttribute(doc_title_input,"value");
