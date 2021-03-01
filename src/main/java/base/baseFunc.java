@@ -53,7 +53,7 @@ public class baseFunc {
                 option.addArguments("start-maximized");
                 option.addArguments("allow-running-insecure-content");
                 option.addArguments("--test-type");
-//				option.addArguments("--headless");
+//				option.addArguments("--headless");//不打开浏览器
                 option.addArguments("url=data:,");//设置启动浏览器空白页
                 option.addArguments("--hide-scrollbars");//隐藏滚动条
                 option.addArguments("--disable-gpu");//规避浏览器bug
@@ -126,7 +126,7 @@ public class baseFunc {
             }else {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
-//				option.addArguments("--headless");//隐藏浏览器
+				option.addArguments("--headless");//隐藏浏览器
                 // option.addArguments("--kiosk");
                 option.setCapability("browserName", "chrome");
                 option.setCapability("version", "80");
