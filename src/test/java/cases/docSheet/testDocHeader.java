@@ -77,13 +77,14 @@ public class testDocHeader extends TestInit {
      * @Time 2018-12-20
      */
     @Test(enabled = true)
-    public void doc_backToDashboard() {
+    public void doc_backToDashboard() throws InterruptedException {
         login("testDocHeader@shimo.im", "123123");
 
         click(desktop);
         click(desktop1_1);
         click(quick_access_point);
         click(Back_to_Dashboard);
+        Thread.sleep(1000);
         Boolean r1 = driver.getCurrentUrl().startsWith(getURL() + "dashboard/");
         assertTrue(r1);
     }
