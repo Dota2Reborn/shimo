@@ -728,10 +728,14 @@ public class elementFile {
 	 */
 	@SearchWith(pageName = "menu", elementName = "menu_newPage", noteName = "新标签页中打开")
 	public WebElement menu_newPage;
-	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快捷方式")
+	@SearchWith(pageName = "menu", elementName = "menu_shortcut", noteName = "添加到快速访问")
 	public WebElement menu_shortcut;
+	@SearchWith(pageName = "menu", elementName = "menu_shortcut_cancel", noteName = "从快速访问移除")
+	public WebElement menu_shortcut_cancel;
 	@SearchWith(pageName = "menu", elementName = "menu_collection", noteName = "收藏")
 	public WebElement menu_collection;
+	@SearchWith(pageName = "menu", elementName = "menu_collection_cancel", noteName = "取消收藏")
+	public WebElement menu_collection_cancel;
 	@SearchWith(pageName = "menu", elementName = "menu_cooperation", noteName = "添加协作者")
 	public WebElement menu_cooperation;
 	@SearchWith(pageName = "menu", elementName = "menu_move", noteName = "移动")
@@ -748,6 +752,8 @@ public class elementFile {
 	public WebElement menu_delete;
 	@SearchWith(pageName = "menu", elementName = "menu_mute", noteName = "消息免打扰")
 	public WebElement menu_mute;
+	@SearchWith(pageName = "menu", elementName = "menu_mute_cancel", noteName = "取消消息免打扰")
+	public WebElement menu_mute_cancel;
 	@SearchWith(pageName = "menu", elementName = "menu_moveToFolder", noteName = "定位到所在文件夹")
 	public WebElement menu_moveToFolder;
 	@SearchWith(pageName = "menu", elementName = "menu_Recovery", noteName = "恢复文件")

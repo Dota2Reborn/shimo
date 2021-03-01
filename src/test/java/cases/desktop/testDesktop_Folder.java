@@ -73,9 +73,9 @@ public class testDesktop_Folder extends TestInit {
 
         contextClick(desktop1_1_folder);
 
-        Boolean r1 = getText(menu_shortcut).equals("从快速访问移除");
+        Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
         if(r1){
-            click(menu_shortcut);
+            click(menu_shortcut_cancel);
             contextClick(desktop1_1);
         }
 
@@ -84,11 +84,11 @@ public class testDesktop_Folder extends TestInit {
         String doc_name = getText(desktop1_1_folder);
 
         contextClick(desktop1_1_folder);
-        click(menu_shortcut);
+        click(menu_shortcut_cancel);
 
         if (!doc_name.equals(msg)) {
             contextClick(desktop1_1);
-            click(menu_shortcut);
+            click(menu_shortcut_cancel);
         }
 
         assertTrue(doc_name.equals(msg));
@@ -195,7 +195,14 @@ public class testDesktop_Folder extends TestInit {
 
         moveToElement(desktop1_1);
         click(desktop_setting);
-        click(menu_mute);
+
+        Boolean r = doesWebElementExist(menu_mute);
+        if(r){
+            click(menu_mute);
+        }else {
+            click(menu_mute_cancel);
+        }
+
 
         Boolean r1 = getText(toast_msg).contains("已设置为消息免打扰");
         Boolean r2 = getText(toast_msg).contains("已设置为接收消息提醒");

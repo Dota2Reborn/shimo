@@ -111,6 +111,7 @@ public class TestInit extends elementFile {
 
         agreement();
 
+
 //        wait.until(ExpectedConditions.elementToBeClickable(desktop));
 //        Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
 //        if(msg){
@@ -755,8 +756,13 @@ public class TestInit extends elementFile {
      */
     public void doc_ui_close(){
         doesWebElementExist(b_back);
-        Boolean exit = doesWebElementExist(By.xpath("//button[starts-with(@class,'close__')]"));
-        WebElement b_ui_close = driver.findElement(By.xpath("//button[starts-with(@class,'close__')]"));
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Boolean exit = doesWebElementExist(By.xpath("//button[contains(@class,'close__')]"));
+        WebElement b_ui_close = driver.findElement(By.xpath("//button[contains(@class,'close__')]"));
         Boolean exit1 = b_ui_close.isDisplayed();
         if(exit && exit1){click(b_ui_close);}
     }
@@ -870,8 +876,12 @@ public class TestInit extends elementFile {
      * @Time 2020-08-13
      */
     public void delFile(WebElement element) {
-
         contextClick(element);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         click(menu_delete);
         click(desktop_newFolder_name_ok);
     }
@@ -944,6 +954,12 @@ public class TestInit extends elementFile {
         Boolean b_parent = doesWebElementExist(b_checkParent);
         if(b_parent){click(b_checkParent);}
 
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         Boolean parent = doesWebElementExist(By.xpath("//div[@data-test='row_superior_permission']"));
         Boolean collaborator = doesWebElementExist(By.xpath("//div[@data-test='row_collab']"));
         Boolean admin = doesWebElementExist(By.xpath("//div[@data-test='row_admin']"));
@@ -970,7 +986,7 @@ public class TestInit extends elementFile {
     public int getSpaceCollaboratorSize() {
         int result = 0;
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'_scroll_list_wrapper_')]")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'_scroll_list_wrapper_')]")));
             result = driver.findElements(By.xpath("//div[@data-test='row_collab']")).size();
         } catch (NoSuchElementException e) {
             return 0;
