@@ -539,11 +539,11 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
 //        Thread.sleep(500);
 //        action.clickAndHold(space_RightMenu_4).perform();
-        click(space_RightMenu_4);
-        click(space_RightMenu_4_1);
+        click(menu_share);
+        click(menu_share_1);
         String toast1 = getText(toast_msg);
         Thread.sleep(300);
-        click(space_RightMenu_4_1);
+        click(menu_share_1);
         assertEquals(toast1,"已开启公开分享");
 
 
@@ -562,8 +562,8 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
 //        Thread.sleep(800);
 //        action.clickAndHold(space_RightMenu_4).perform();
-        click(space_RightMenu_4);
-        click(space_RightMenu_4_2);
+        click(menu_share);
+        click(menu_share_2);
         String text = setClipboardContents();
         String[] tmp = text.split("/");
         assertEquals(tmp[4], "6rwH3wKv6TGx3qyR");
@@ -583,8 +583,8 @@ public class testRightClickMenu extends TestInit {
         contextClick(space_document_1_1);
 //        Thread.sleep(500);
 //        action.clickAndHold(space_RightMenu_4).perform();
-        click(space_RightMenu_4);
-        click(space_RightMenu_4_3);
+        click(menu_share);
+        click(menu_share_3);
         Thread.sleep(500);
         Boolean element1 = doesWebElementExist(space_cooperation_Popup);
         assertTrue(element1);

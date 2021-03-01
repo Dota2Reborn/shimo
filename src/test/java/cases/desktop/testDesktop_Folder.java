@@ -76,7 +76,7 @@ public class testDesktop_Folder extends TestInit {
         Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
         if(r1){
             click(menu_shortcut_cancel);
-            contextClick(desktop1_1);
+            contextClick(desktop1_1_folder);
         }
 
         click(menu_shortcut);

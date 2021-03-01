@@ -48,9 +48,9 @@ public class testDesktop_gear extends TestInit {
         moveToElement(desktop1_1);
         click(desktop_setting);
 
-        Boolean r1 = getText(menu_shortcut).equals("从快速访问移除");
+        Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
         if(r1){
-            click(menu_shortcut);
+            click(menu_shortcut_cancel);
             moveToElement(desktop1_1);
             click(desktop_setting);
         }
@@ -62,11 +62,11 @@ public class testDesktop_gear extends TestInit {
         String doc_name = getText(desktop1_1_name);
 
         contextClick(desktop1_1);
-        click(menu_shortcut);
+        click(menu_shortcut_cancel);
 
         if (!doc_name.equals(msg)) {
             contextClick(desktop1_1);
-            click(menu_shortcut);
+            click(menu_shortcut_cancel);
         }
 
         assertTrue(doc_name.equals(msg));

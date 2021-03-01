@@ -2,6 +2,7 @@ package cases.desktop;
 
 import base.TestInit;
 import elementFile.ByGenerator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -143,12 +144,20 @@ public class testDesktop_new extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_newFileForm() {
+    public void desktop_newFileForm() throws InterruptedException {
         login("autoTest_new@shimo.im", "123123");
 
         click(desktop);
         click(desktop_new);
         click(desktop_newFileForm);
+
+        Thread.sleep(1000);
+
+        Boolean exit = doesWebElementExist(By.xpath("//div[contains(@class,'CloseIcon')]"));
+        WebElement b_ui_close = driver.findElement(By.xpath("//div[contains(@class,'CloseIcon')]"));
+        Boolean exit1 = b_ui_close.isDisplayed();
+        if(exit && exit1){click(b_ui_close);}
+
 
         String time = getDate();
         click(doc_title_input);

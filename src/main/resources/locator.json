@@ -60,7 +60,7 @@
 			{
 				"elementName": "dashboard_update_file",
 				"locateUsing": "xpath",
-				"locator": "(//a[contains(@class,'card-itemcontains])[1]",
+				"locator": "(//a[contains(@class,'card-item')])[1]",
 				"note": "工作台-最近更新-文件"
 			},
 			{
@@ -1295,6 +1295,18 @@
 				"locateUsing": "xpath",
 				"locator": "//li[contains(@class,'sm-menu-share_public')]",
 				"note": "分享-公开分享"
+			},
+			{
+				"elementName": "menu_share_2",
+				"locateUsing": "xpath",
+				"locator": "//span[contains(@class,'sm-clipboard-text')]",
+				"note": "分享-复制分享链接"
+			},
+			{
+				"elementName": "menu_share_3",
+				"locateUsing": "xpath",
+				"locator": "//li[contains(@class,'sm-menu-share_setting')]",
+				"note": "分享-分享设置"
 			},
 			{
 				"elementName": "menu_delete",

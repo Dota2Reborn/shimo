@@ -111,8 +111,10 @@ public class TestInit extends elementFile {
 
         agreement();
 
+        //判断是否跳转到桌面
+        Boolean url_now = driver.getCurrentUrl().contains("/dashboard");
+        if(url_now){wait.until(ExpectedConditions.elementToBeClickable(desktop));}
 
-//        wait.until(ExpectedConditions.elementToBeClickable(desktop));
 //        Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
 //        if(msg){
 //            click(desktop_newTemplate);

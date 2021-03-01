@@ -160,7 +160,7 @@ public class testSpacePermissions  extends TestInit {
         sendKeys(spacingSetting_spaceName,time);
         click(b_spacingSetting_confirm);
 
-        String msg = getText(space_listing_1);
+        String msg = getText(space_listing_1).trim();
         assertEquals(msg, time);
     }
 
