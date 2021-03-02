@@ -103,7 +103,7 @@ public class testDocHeader extends TestInit {
 //        click(desktop1_1);
 //        click(b_headerCreate);
 //        click(b_headerCreateDoc);
-        //Collection_OK
+//        Collection_OK
 
     }
 
