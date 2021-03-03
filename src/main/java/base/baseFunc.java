@@ -126,7 +126,7 @@ public class baseFunc {
             }else {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("disable-infobars");
-				option.addArguments("--headless");//隐藏浏览器
+//				option.addArguments("--headless");//隐藏浏览器
                 // option.addArguments("--kiosk");
                 option.setCapability("browserName", "chrome");
                 option.setCapability("version", "80");
