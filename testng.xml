@@ -100,11 +100,11 @@
 			<class name="cases.collaborator.testAuthorityForMoveFile" />
 		</classes>
 	</test>
-	<!--<test name="test19">-->
-		<!--<classes>-->
-			<!--<class name="cases.collaborator.testCollaboratorUI" />-->
-		<!--</classes>-->
-	<!--</test>-->
+	<test name="test19">
+		<classes>
+			<class name="cases.docSheet.testSheetHeader" />
+		</classes>
+	</test>
 	<test name="test20">
 		<classes>
 			<class name="cases.profile.testProfile" />
