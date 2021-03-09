@@ -47,22 +47,23 @@ public class testDesktop extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
 
-        Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
-        if(r1){
-            click(menu_shortcut_cancel);
+//        Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
+        String menu_text = getText(menu_shortcut);
+        if(menu_text.equals("从快速访问移除")){
+            click(menu_shortcut);
             contextClick(desktop1_1);
         }
 
         click(menu_shortcut);
 
         String msg = getText(desktop_shortcut_1);
-        String doc_name = getText(desktop1_1_name);
+        String doc_name = getText(desktop1_1);
 
         contextClick(desktop1_1);
-        click(menu_shortcut_cancel);
+        click(menu_shortcut);
         if (!doc_name.equals(msg)) {
             contextClick(desktop1_1);
-            click(menu_shortcut_cancel);
+            click(menu_shortcut);
         }
 
         assertTrue(doc_name.equals(msg));
@@ -80,22 +81,22 @@ public class testDesktop extends TestInit {
         login("autoTest@shimo.im", "123123");
         click(desktop);
 
-        String doc_name = getText(desktop1_1_name);
+        String doc_name = getText(desktop1_1);
         contextClick(desktop1_1);
 
-        Boolean r1 = doesWebElementExist(menu_collection_cancel);
-        if(r1){
-            click(menu_shortcut_cancel);
+//        Boolean r1 = doesWebElementExist(menu_collection_cancel);
+        String menu_text = getText(menu_shortcut);
+        if(menu_text.equals("从我的收藏移除")){
+            click(menu_collection);
             contextClick(desktop1_1);
         }
 
         click(menu_collection);
 
-        click(dashboard);
         click(favorites);
-        String doc_name1 = getText(desktop1_1_name);
-        contextClick(desktop1_1);
-        click(menu_collection_cancel);
+        String doc_name1 = getText(favorites1_1);
+        contextClick(favorites1_1);
+        click(menu_collection);
 
         assertEquals(doc_name, doc_name1);
     }

@@ -12,7 +12,7 @@
 			{
 				"elementName": "favorites",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='category-list-wrapper']//a[@href='/dashboard/favorites']",
+				"locator": "//*[@id='root']/section/div/aside/div/nav/ol[1]/li[3]",
 				"note": "切换到我的收藏"
 			},
 			{
@@ -283,7 +283,7 @@
 			{
 				"elementName": "desktop",
 				"locateUsing": "xpath",
-				"locator": "//div[@id='layout-left-panel']//a[contains(text(),'我的桌面')]",
+				"locator": "//*[@id='root']/section/div/aside/div/nav/div[2]/ol[1]/li[1]/a/span[2]",
 				"note": "切换到我的桌面"
 			},
 			{
@@ -367,7 +367,7 @@
 			{
 				"elementName": "desktop1_1",
 				"locateUsing": "xpath",
-				"locator": "(//a[contains(@class,'tile-item file-item')]/div[2]/div)[1]",
+				"locator": "//*[@id='root']/section/div/main/div[2]/div[1]/div/div/div[2]/div[2]/ul/div/div",
 				"note": "平铺模式第一行第一个文件"
 			},
 			{
@@ -419,9 +419,15 @@
 				"note": "hover文件的齿轮"
 			},
 			{
+				"elementName": "favorites1_1",
+				"locateUsing": "xpath",
+				"locator": "//*[@id='root']/section/div/main/div[3]/div[2]/div/div[2]/ul/div[1]",
+				"note": "我的收藏平铺模式第一个文件"
+			},
+			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
-				"locator": "(//div[@class='file-drag-wrapper'])[1]",
+				"locator": "//section/div/aside/div/nav/div[2]/ol[2]/div/li/span/span[2]",
 				"note": "桌面快捷方式第一个"
 			},
 			{
@@ -1233,13 +1239,13 @@
 			{
 				"elementName": "menu_newPage",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-open_in_new_tab')]",
+				"locator": "/html/body/div[7]/ul/li[3]",
 				"note": "新标签页中打开"
 			},
 			{
 				"elementName": "menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-add_shortcut')]",
+				"locator": "/html/body/div[7]/ul/li[5]",
 				"note": "添加到快速访问"
 			},
 			{
@@ -1251,7 +1257,7 @@
 			{
 				"elementName": "menu_collection",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-star')]",
+				"locator": "/html/body/div[8]/ul/li[6]",
 				"note": "添加收藏"
 			},
 			{

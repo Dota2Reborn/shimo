@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import testNG.TestListener;
 
+import javax.xml.bind.Element;
 import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -112,8 +113,18 @@ public class TestInit extends elementFile {
         agreement();
 
         //判断是否跳转到桌面
-        Boolean url_now = driver.getCurrentUrl().contains("/dashboard");
-        if(url_now){wait.until(ExpectedConditions.elementToBeClickable(desktop));}
+        Boolean url_now1 = driver.getCurrentUrl().contains("/space");
+        Boolean url_now2 = driver.getCurrentUrl().contains("/dashboard");
+
+        if(url_now1||url_now2){
+            Boolean r = doesWebElementExist(By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div/div/button"));
+            if(r){
+                driver.findElement(By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div/div/button")).click();
+                driver.findElement(By.xpath("/html/body/div[7]/div/div[2]/div/div[2]/div/div/div[4]/button")).click();
+            }
+            wait.until(ExpectedConditions.elementToBeClickable(desktop));
+
+        }
 
 //        Boolean msg = doesWebElementExist(By.xpath("//div[@class='sm-tooltip-inner']"));
 //        if(msg){
