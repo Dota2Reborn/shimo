@@ -2286,7 +2286,7 @@
 				"note": "移动端_toast",
 				"elementName": "mobile_toast",
 				"locateUsing": "xpath",
-				"locator": "//div[contains(@class,'StyledContent')]"
+				"locator": "//div[contains(@class,'StyledToast')]//div[contains(@class,'StyledContent')]"
 			}
 		]
 	},

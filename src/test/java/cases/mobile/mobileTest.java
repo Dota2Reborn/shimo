@@ -92,9 +92,10 @@ public class mobileTest extends TestInit {
         new Actions(driver).click(mobile_B_createForm).build().perform();
 
         mobile_I_fileReName.clear();
-        sendKeys(mobile_I_fileReName,"新建表单");
+        sendKeys(mobile_I_fileReName,"表单");
         click(mobile_B_confirm);
         Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[contains(@class,'CloseIcon')]")).click();
         click(mobile_header_back);
 //        driver.navigate().back();
 
