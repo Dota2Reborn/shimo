@@ -45,7 +45,7 @@ public class uiDashboard extends TestInit {
 	@Test
 	public void pic_dashboard_3() throws InterruptedException {
 		login("UITest@shimo.im", "123123");
-		click(dashboard_3);
+//		click(dashboard_3);
 		Thread.sleep(500);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;

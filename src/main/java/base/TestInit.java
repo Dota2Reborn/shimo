@@ -637,20 +637,20 @@ public class TestInit extends elementFile {
             } else if (element.toString().equals(desktop.toString())) {
                 // 点击我的桌面
                 clickDesktop(element);
-            } else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
-                // 点击添加协作者
-                addCollaborator(element);
-            } else if (element.toString().equals(list_addCollaborator_4.toString())) {
-                wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-                list_addCollaborator_4.click();
-                wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
-                list_addCollaborator_4_ok.click();
-            } else if(element.toString().equals(b_add_CollaboratorList_1.toString())|| element.toString().equals(b_department_2.toString())|| element.toString().equals(b_department_1.toString())){
+            }
+//            else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
+//                // 点击添加协作者
+//                addCollaborator(element);
+//            } else if (element.toString().equals(list_addCollaborator_4.toString())) {
+//                wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+//                list_addCollaborator_4.click();
+//                wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4_ok));
+//                list_addCollaborator_4_ok.click();
+//            }
+            else if(element.toString().equals(b_add_CollaboratorList_1.toString())|| element.toString().equals(b_department_2.toString())|| element.toString().equals(b_department_1.toString())){
                 //协作空间，添加协作者
                 space_addCollaborator(element);
-            } else if (element.toString().equals(dashboard_activitiesByFile.toString())) {
-                clickDashboardActivitiesByFile(dashboard_activitiesByFile);
-            }  else if (element.toString().equals(menu_createCopy.toString())) {
+            } else if (element.toString().equals(menu_createCopy.toString())) {
 
                 wait.until(ExpectedConditions.elementToBeClickable(menu_createCopy));
                 menu_createCopy.click();
@@ -714,19 +714,19 @@ public class TestInit extends elementFile {
      * @author 刘晨
      * @Time 2017-11-21
      */
-    public void addCollaborator(WebElement element) {
-        String msg = getText(element);
-        if (msg.equals("添加") || msg.equals("邀请")) {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-        } else {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            element.click();
-            wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
-            click(list_addCollaborator_4);
-            assertTrue(false);
-        }
-    }
+//    public void addCollaborator(WebElement element) {
+//        String msg = getText(element);
+//        if (msg.equals("添加") || msg.equals("邀请")) {
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+//            element.click();
+//        } else {
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+//            element.click();
+//            wait.until(ExpectedConditions.elementToBeClickable(list_addCollaborator_4));
+//            click(list_addCollaborator_4);
+//            assertTrue(false);
+//        }
+//    }
 
     /**
      * 修改协作者权限
@@ -922,19 +922,6 @@ public class TestInit extends elementFile {
         return msg;
     }
 
-    public  void  clickDashboardActivitiesByFile(WebElement element){
-
-        Boolean r1 = doesWebElementExist(dashboard_activitiesByMember);
-        if(r1){
-            wait.until(ExpectedConditions.visibilityOf(dashboard_activitiesByMember));
-            dashboard_activitiesByMember.click();
-            wait.until(ExpectedConditions.visibilityOf(element));
-            element.click();
-        }else{
-            return;
-        }
-
-    }
 
     /**
      * 获取文本信息

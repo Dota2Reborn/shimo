@@ -22,8 +22,8 @@ public class dashboard_shared extends TestInit {
     @Test
     public void shared1() throws InterruptedException {
         login("gx1@shimo.im", "123123");
-        click(dashboard_3);
-        contextClick(dashboard_update_name);
+        click(desktop);
+        contextClick(desktop1_1);
         addCollaboratorByEmail("gx2@shimo.im", 1);
         logout();
         login("gx2@shimo.im", "123123");
@@ -31,17 +31,17 @@ public class dashboard_shared extends TestInit {
         wait.until(ExpectedConditions.elementToBeClickable(menu_Point_Menu));
         boolean b = driver.findElement(By.className("file-icon")).isDisplayed();//卡片图标
         boolean c = driver.findElement(By.className("avatar")).isDisplayed();//卡片图标
-        boolean text = getText(dashboard_update_name).equals("无标题");
-        boolean text1 = getText(dashboard_update_time).equals("刚刚 共享 共享");
-        moveToElement(dashboard_update_name);
+        boolean text = getText(used_share_file_name).equals("无标题");
+        boolean text1 = getText(used_share_file_time).equals("刚刚 共享 共享");
+        moveToElement(used_share_file_name);
         boolean d = doesWebElementExist(dashboard_share_file_favorites);
         boolean e = doesWebElementExist(menu_Point_Menu);
         assertTrue(b && c && text && text1 && d && e);
         Thread.sleep(200);
-//        contextClick(dashboard_update_name);
+//        contextClick(used_share_file_name);
 //        click(menu_delete);
 //        click(desktop_newFolder_name_ok);
-        delFile(dashboard_update_name);
+        delFile(used_share_file_name);
     }
 
     /**
@@ -55,19 +55,19 @@ public class dashboard_shared extends TestInit {
     public void shared2() {
         login("gx4@shimo.im", "123123");
         click(dashboard_4);
-        moveToElement(dashboard_share_file_1);
+        moveToElement(used_share_file_1);
         click(dashboard_share_file_favorites);
-        click(dashboard);
+
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "共享");
 
 
-        click(dashboard);
+
         click(dashboard_4);
-        moveToElement(dashboard_share_file_1);
+        moveToElement(used_share_file_1);
         click(dashboard_share_file_favorites);
-        click(dashboard);
+
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);

@@ -29,11 +29,11 @@
 			<class name="cases.dashboard.dashboard_shared" />
 		</classes>
 	</test>
-	<test name="test5">
-		<classes>
-			<class name="cases.desktop.testDesktopOrderBy" />
-		</classes>
-	</test>
+<!--	<test name="test5">-->
+<!--		<classes>-->
+<!--			<class name="cases.desktop.testDesktopOrderBy" />-->
+<!--		</classes>-->
+<!--	</test>-->
 	<test name="test6">
 		<classes>
 			<class name="cases.dashboard.dashboard_update" />

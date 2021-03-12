@@ -25,7 +25,7 @@ public class testDesktop_gear extends TestInit {
         click(desktop);
 
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_newPage);
 
         Set<String> windowsHandles = driver.getWindowHandles();
@@ -46,13 +46,13 @@ public class testDesktop_gear extends TestInit {
         click(desktop);
 
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
 
         Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
         if(r1){
             click(menu_shortcut_cancel);
             moveToElement(desktop1_1);
-            click(desktop_setting);
+            click(desktop1_1_set);
         }
 
         click(menu_shortcut);
@@ -85,10 +85,10 @@ public class testDesktop_gear extends TestInit {
         click(desktop);
         String doc_name = getText(desktop1_1_name);
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_collection);
 
-        click(dashboard);
+
         click(favorites);
         String doc_name1 = getText(desktop1_1_name);
         contextClick(desktop1_1);
@@ -108,7 +108,7 @@ public class testDesktop_gear extends TestInit {
         login("autoTest_gear@shimo.im", "123123");
         click(desktop);
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_rename);
 
         String time = getDate();
@@ -133,14 +133,14 @@ public class testDesktop_gear extends TestInit {
         click(desktop);
         String msg = getText(desktop1_1_name);
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_createCopy);
 
         driver.navigate().refresh();
         String msg1 = getText(desktop1_1_name);
 
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_delete);
         click(desktop_newFolder_name_ok);
 

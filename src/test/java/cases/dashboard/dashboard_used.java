@@ -21,20 +21,20 @@ public class dashboard_used extends TestInit {
 
         login("zuijin7@shimo.im", "123123");
         click(dashboard_2);
-        moveToElement(dashboard_update_name);
+        moveToElement(used_share_file_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
-        click(dashboard);
+
         click(favorites);
         String text = getText(desktop1_1_name);
         assertEquals(text, "最近使用");
 
-        click(dashboard);
+
         click(dashboard_2);
-        moveToElement(dashboard_update_name);
+        moveToElement(used_share_file_name);
         click(dashboard_share_file_favorites);
         Thread.sleep(200);
-        click(dashboard);
+
         click(favorites);
         Boolean r = doesWebElementExist(desktop_none_file);
         assertTrue(r);
@@ -96,15 +96,15 @@ public class dashboard_used extends TestInit {
 
         login("zuijin5@shimo.im", "123123");
         click(dashboard_2);
-        click(dashboard_share_file_2);
+        click(used_share_file_2);
         click(b_back);
         click(dashboard_2);
-        String text = getText(dashboard_update_name);
+        String text = getText(used_share_file_name);
 
-        click(dashboard_share_file_2);
+        click(used_share_file_2);
         click(b_back);
         click(dashboard_2);
-        String text1 = getText(dashboard_update_name);
+        String text1 = getText(used_share_file_name);
         assertFalse(text.equals(text1));
 
     }
@@ -124,12 +124,12 @@ public class dashboard_used extends TestInit {
         click(b_back);
         click(dashboard_2);
 
-        delFile(dashboard_update_file);
+        delFile(used_share_file_1);
 
-        Boolean f = doesWebElementExist(dashboard_update_file);
+        Boolean f = doesWebElementExist(used_share_file_1);
         Boolean result;
         if (f.equals(true)) {
-            result = getText(dashboard_update_file).equals(time);
+            result = getText(used_share_file_1).equals(time);
         } else {
             result = false;
         }
@@ -152,24 +152,24 @@ public class dashboard_used extends TestInit {
         click(b_back);
         click(dashboard_2);
 
-        contextClick(dashboard_update_name);
+        contextClick(used_share_file_name);
         addCollaboratorByEmail("zuijin8@shimo.im", 1);
 
         logout();
         login("zuijin8@shimo.im", "123123");
 
         click(dashboard_4);
-        click(dashboard_update_name);
+        click(used_share_file_name);
         click(b_back);
-        click(dashboard);
+
         click(dashboard_2);
 
-        delFile(dashboard_update_name);
+        delFile(used_share_file_name);
 
-        Boolean f = doesWebElementExist(dashboard_update_file);
+        Boolean f = doesWebElementExist(used_share_file_1);
         Boolean result;
         if (f.equals(true)) {
-            result = getText(dashboard_update_file).equals(time);
+            result = getText(used_share_file_1).equals(time);
         } else {
             result = false;
         }
@@ -192,29 +192,29 @@ public class dashboard_used extends TestInit {
         sendKeys(doc_title_input, time);
         click(b_back);
         click(dashboard_2);
-        contextClick(dashboard_update_name);
+        contextClick(used_share_file_name);
         addCollaboratorByEmail("zuijin77@shimo.im", 1);
 
         logout();
         login("zuijin77@shimo.im", "123123");
         click(dashboard_4);
-        click(dashboard_update_name);
+        click(used_share_file_name);
         click(b_back);
         logout();
 
         login("zuijin55@shimo.im", "123123");
         click(dashboard_2);
-        contextClick(dashboard_update_file);
+        contextClick(used_share_file_1);
         removeCollaboratorByPosition(1);
-        delFile(dashboard_update_file);
+        delFile(used_share_file_1);
         logout();
 
         login("zuijin77@shimo.im", "123123");
         click(dashboard_2);
-        Boolean f = doesWebElementExist(dashboard_update_file);
+        Boolean f = doesWebElementExist(used_share_file_1);
         Boolean result;
         if (f.equals(true)) {
-            result = getText(dashboard_update_file).equals(time);
+            result = getText(used_share_file_1).equals(time);
         } else {
             result = false;
         }

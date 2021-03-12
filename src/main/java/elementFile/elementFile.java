@@ -73,7 +73,7 @@ public class elementFile {
 	public WebElement desktop_newFileForm;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder", noteName = "新建文件夹")
 	public WebElement desktop_newFolder;
-	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "导入")
+	@SearchWith(pageName = "desktop", elementName = "desktop_import", noteName = "上传/导入")
 	public WebElement desktop_import;
 	@SearchWith(pageName = "desktop", elementName = "desktop_newFolder_name", noteName = "文件夹命名")
 	public WebElement desktop_newFolder_name;
@@ -85,18 +85,16 @@ public class elementFile {
 	@SearchWith(pageName = "desktop", elementName = "desktop_newTemplate")
 	public WebElement desktop_newTemplate;
 
-	@SearchWith(pageName = "desktop", elementName = "desktop_set", noteName = "hover文件的齿轮")
-	public WebElement desktop_setting;
+	@SearchWith(pageName = "desktop", elementName = "desktop1_1_set", noteName = "hover第一个文件的点点点菜单")
+	public WebElement desktop1_1_set;
 	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_1", noteName = "桌面快捷方式第一个")
 	public WebElement desktop_shortcut_1;
-	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Increase", noteName = "新增桌面快捷方式区域")
-	public WebElement desktop_shortcut_Increase;
-	@SearchWith(pageName = "desktop", elementName = "desktop_shortcut_Tips", noteName = "新增快捷方式区域提示")
-	public WebElement desktop_shortcut_Tips;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_button", noteName = "移动到测试文件夹")
 	public WebElement desktop_moveFolder_button;
-	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_back_button", noteName = "移动文件到文件夹，列表切到我的桌面按钮")
-	public WebElement desktop_moveFolder_back_button;
+	@SearchWith(pageName = "desktop", elementName = "button_moveBoard_desktop", noteName = "移动文件面板，切到我的桌面按钮")
+	public WebElement button_moveBoard_desktop;
+	@SearchWith(pageName = "desktop", elementName = "button_moveBoard_space", noteName = "移动文件面板，切到团队空间按钮")
+	public WebElement button_moveBoard_space;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_1", noteName = "移动文件到文件夹，选择列表中第一个文件夹")
 	public WebElement desktop_moveFolder_list_1;
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2", noteName = "移动文件到文件夹，选择列表中第二个文件夹")
@@ -219,35 +217,21 @@ public class elementFile {
 	 * dashboard
 	 * 工作台
 	 */
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_time", noteName = "工作台-最近更新-更新时间")
-	public WebElement dashboard_update_time;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_file", noteName = "工作台-共享给我的-文件")
-	public WebElement dashboard_update_file;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_update_name", noteName = "工作台-最近更新-文件名")
-	public WebElement dashboard_update_name;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_1", noteName = "工作台第一行第一个文件")
-	public WebElement dashboard_share_file_1;
+	@SearchWith(pageName = "dashboard", elementName = "used_share_file_time", noteName = "最近使用和共享给我-文件1-状态")
+	public WebElement used_share_file_time;
+	@SearchWith(pageName = "dashboard", elementName = "used_share_file_1", noteName = "最近使用和共享给我-文件1")
+	public WebElement used_share_file_1;
+	@SearchWith(pageName = "dashboard", elementName = "used_share_file_name", noteName = "最近使用和共享给我-文件1-文件名")
+	public WebElement used_share_file_name;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_favorites", noteName = "工作台第一行第一个文件收藏按钮")
 	public WebElement dashboard_share_file_favorites;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_share_file_2", noteName = "工作台第一行第二个文件")
-	public WebElement dashboard_share_file_2;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_1", noteName = "工作台-最近更新")
-	public WebElement dashboard_1;
+	@SearchWith(pageName = "dashboard", elementName = "used_share_file_2", noteName = "最近使用和共享给我-文件-2")
+	public WebElement used_share_file_2;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_2", noteName = "工作台-最近使用")
 	public WebElement dashboard_2;
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_3", noteName = "工作台-我创建的")
-	public WebElement dashboard_3;
 	@SearchWith(pageName = "dashboard", elementName = "dashboard_4", noteName = "工作台-共享给我的")
 	public WebElement dashboard_4;
-	/** 工作台-工作动态切换为按文件 */
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_activitiesByFile")
-	public WebElement dashboard_activitiesByFile;
-	/** 工作台-工作动态切换为按成员 */
-	@SearchWith(pageName = "dashboard", elementName = "dashboard_activitiesByMember")
-	public WebElement dashboard_activitiesByMember;
 
-	@SearchWith(pageName = "dashboard", elementName = "dashboard", noteName = "切换到工作台")
-	public WebElement dashboard;
 	@SearchWith(pageName = "dashboard", elementName = "favorites", noteName = "切换到我的收藏")
 	public WebElement favorites;
 	@SearchWith(pageName = "dashboard", elementName = "trash", noteName = "切换到回收站")
@@ -471,40 +455,40 @@ public class elementFile {
 
 
 
-	/**
-	 * addCollaborator
-	 * 协作者相关
-	 */
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list", noteName = "协作者列表第一个协作者权限下拉框")
-	public WebElement b_addCollaborator_1_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list", noteName = "协作者列表第二个协作者权限下拉框")
-	public WebElement b_addCollaborator_2_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list", noteName = "协作者列表第三个协作者权限下拉框")
-	public WebElement b_addCollaborator_3_list;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
-	public WebElement list_addCollaborator_4;
-	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4_ok", noteName = "协作者权限列表--移除--确认移除")
-	public WebElement list_addCollaborator_4_ok;
-	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_1_list_emailOrMobile", noteName = "协作者列表第一个协作者邮箱")
-	public WebElement collaborator_1_list_emailOrMobile;
-	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_2_list_emailOrMobile", noteName = "协作者列表第二个协作者邮箱")
-	public WebElement collaborator_2_list_emailOrMobile;
-	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
-	public WebElement collaborator_3_list_emailOrMobile;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
-	public WebElement b_addCollaborator;
-	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator", noteName = "添加协作者邮箱输入框")
-	public WebElement input_addCollaborator;
-	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add", noteName = "搜索显示被添加协作者列表第一个添加按钮")
-	public WebElement b_addCollaborator_1_add;
-	@SearchWith(pageName = "addCollaborator", elementName = "Can_edit_1", noteName = "可以编辑")
-	public WebElement Can_edit_1;
-	@SearchWith(pageName = "addCollaborator", elementName = "can_only_comment_2", noteName = "只能评论")
-	public WebElement can_only_comment_2;
-	@SearchWith(pageName = "addCollaborator", elementName = "can_only_read_3", noteName = "只能阅读")
-	public WebElement can_only_read_3;
-	@SearchWith(pageName = "addCollaborator", elementName = "Shut_down_sm_modal_close_x", noteName = "关闭添加协作窗口")
-	public WebElement Shut_down_sm_modal_close_x;
+//	/**
+//	 * addCollaborator
+//	 * 协作者相关
+//	 */
+//	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_list", noteName = "协作者列表第一个协作者权限下拉框")
+//	public WebElement b_addCollaborator_1_list;
+//	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_2_list", noteName = "协作者列表第二个协作者权限下拉框")
+//	public WebElement b_addCollaborator_2_list;
+//	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_3_list", noteName = "协作者列表第三个协作者权限下拉框")
+//	public WebElement b_addCollaborator_3_list;
+//	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4", noteName = "协作者权限列表--移除")
+//	public WebElement list_addCollaborator_4;
+//	@SearchWith(pageName = "addCollaborator", elementName = "list_addCollaborator_4_ok", noteName = "协作者权限列表--移除--确认移除")
+//	public WebElement list_addCollaborator_4_ok;
+//	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_1_list_emailOrMobile", noteName = "协作者列表第一个协作者邮箱")
+//	public WebElement collaborator_1_list_emailOrMobile;
+//	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_2_list_emailOrMobile", noteName = "协作者列表第二个协作者邮箱")
+//	public WebElement collaborator_2_list_emailOrMobile;
+//	@SearchWith(pageName = "addCollaborator", elementName = "collaborator_3_list_emailOrMobile", noteName = "协作者列表第三个协作者邮箱")
+//	public WebElement collaborator_3_list_emailOrMobile;
+//	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator", noteName = "添加协作者按钮")
+//	public WebElement b_addCollaborator;
+//	@SearchWith(pageName = "addCollaborator", elementName = "input_addCollaborator", noteName = "添加协作者邮箱输入框")
+//	public WebElement input_addCollaborator;
+//	@SearchWith(pageName = "addCollaborator", elementName = "b_addCollaborator_1_add", noteName = "搜索显示被添加协作者列表第一个添加按钮")
+//	public WebElement b_addCollaborator_1_add;
+//	@SearchWith(pageName = "addCollaborator", elementName = "Can_edit_1", noteName = "可以编辑")
+//	public WebElement Can_edit_1;
+//	@SearchWith(pageName = "addCollaborator", elementName = "can_only_comment_2", noteName = "只能评论")
+//	public WebElement can_only_comment_2;
+//	@SearchWith(pageName = "addCollaborator", elementName = "can_only_read_3", noteName = "只能阅读")
+//	public WebElement can_only_read_3;
+//	@SearchWith(pageName = "addCollaborator", elementName = "Shut_down_sm_modal_close_x", noteName = "关闭添加协作窗口")
+//	public WebElement Shut_down_sm_modal_close_x;
 
 	/**
 	 * companyManagement

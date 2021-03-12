@@ -122,7 +122,7 @@ public class testDesktop extends TestInit {
 
         contextClick(desktop1_1);
         click(menu_move);
-        click(desktop_moveFolder_back_button);
+        click(button_moveBoard_desktop);
         click(desktop_moveFolder_list_1);
         click(desktop_moveFolder_button);
 
@@ -130,7 +130,7 @@ public class testDesktop extends TestInit {
         click(desktop1_1_folder);
         contextClick(desktop1_1);
         click(menu_move);
-        click(desktop_moveFolder_back_button);
+        click(button_moveBoard_desktop);
         click(desktop_moveFolder_button);
 
         driver.navigate().refresh();

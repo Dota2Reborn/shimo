@@ -110,7 +110,7 @@ public class testDesktop_Folder extends TestInit {
         contextClick(desktop1_1_folder);
         click(menu_collection);
 
-        click(dashboard);
+
         click(favorites);
         String doc_name1 = getText(desktop1_1_folder);
         contextClick(desktop1_1_folder);
@@ -139,7 +139,7 @@ public class testDesktop_Folder extends TestInit {
         click(desktop);
         contextClick(desktop1_1);
         click(menu_move);
-        click(desktop_moveFolder_back_button);
+        click(button_moveBoard_desktop);
         click(desktop_moveFolder_list_2);
         Thread.sleep(500);
         click(desktop_moveFolder_button);
@@ -168,7 +168,7 @@ public class testDesktop_Folder extends TestInit {
         click(desktop);
 
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
         click(menu_rename);
 
         String time = getDate();
@@ -194,7 +194,7 @@ public class testDesktop_Folder extends TestInit {
         click(desktop);
 
         moveToElement(desktop1_1);
-        click(desktop_setting);
+        click(desktop1_1_set);
 
         Boolean r = doesWebElementExist(menu_mute);
         if(r){

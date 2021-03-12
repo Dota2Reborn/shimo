@@ -265,7 +265,7 @@ public class testSheetHeader extends TestInit {
 
             click(doc_menu);
             click(file_menu_move);
-            click(desktop_moveFolder_back_button);
+            click(button_moveBoard_desktop);
             click(desktop_moveFolder_button);
 
             String msg = getText(toast_msg);

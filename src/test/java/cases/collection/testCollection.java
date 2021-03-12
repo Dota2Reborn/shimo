@@ -19,14 +19,14 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void New_Document() {
         login("New_collection@shimo.im", "123123");
-        click(dashboard);
+//
         click(favorites);
         click(desktop_new);
         click(desktop_newDoc);
         click(Collection_OK);
         click(b_back);
 
-        click(dashboard);
+//
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
@@ -43,14 +43,14 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Create_Table() {
         login("New_collection@shimo.im", "123123");
-        click(dashboard);
+//
         click(favorites);
         click(desktop_new);
         click(desktop_newSheet);
         click(Collection_OK);
         click(b_back);
 
-        click(dashboard);
+//
         click(favorites);
         Sort();
         String name = getText(desktop1_1_name);
@@ -69,7 +69,7 @@ public class testCollection extends TestInit {
     public void desktop_show_type() {
 
         login("Collection@shimo.im", "123123");
-        click(dashboard);
+//
         click(favorites);
         Sort();
         click(desktop_show_type_list);
@@ -97,7 +97,7 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Collection_Sort_1() {
         login("Collection@shimo.im", "123123");
-        click(dashboard);
+//
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();
@@ -121,7 +121,7 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Collection_Sort_2() {
         login("Collection@shimo.im", "123123");
-        click(dashboard);
+
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();
@@ -145,7 +145,7 @@ public class testCollection extends TestInit {
     @Test(enabled = true)
     public void Collection_Sort_3() {
         login("Collection@shimo.im", "123123");
-        click(dashboard);
+
         click(favorites);
         wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
         Sort();

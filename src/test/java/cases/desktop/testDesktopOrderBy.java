@@ -12,7 +12,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-28
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byUpdate() {
         login("autoTest02@shimo.im", "123123");
 
@@ -36,7 +36,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-28
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byCreate() {
         login("autoTest02@shimo.im", "123123");
 
@@ -61,7 +61,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-28
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byFileName() {
         login("autoTest02@shimo.im", "123123");
 
@@ -87,7 +87,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-28
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byOwner() {
         login("autoTest02@shimo.im", "123123");
 
@@ -112,7 +112,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-21
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byFolderUP() {
         login("autoTest02@shimo.im", "123123");
 
@@ -139,7 +139,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2018-03-19
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byCreate_Reverse() {
         login("autoTest02@shimo.im", "123123");
 
@@ -165,7 +165,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2018-03-19
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byOwner_Reverse() {
         login("autoTest02@shimo.im", "123123");
 
@@ -191,7 +191,7 @@ public class testDesktopOrderBy extends TestInit {
      * @author 刘晨
      * @Time 2017-11-28
      */
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void order_setting_byFileName_Reverse() {
         login("autoTest02@shimo.im", "123123");
 

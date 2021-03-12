@@ -84,29 +84,29 @@ public class testAlertMute extends TestInit {
     @Test(enabled = false)
     public void Notification_shutdown() {
         login("AlertMute2@shimo.im", "123123");
-        click(dashboard_1);
-        click(dashboard_activitiesByFile);
+//        click(dashboard_1);
+//        click(dashboard_activitiesByFile);
         click(menu_Point_Menu);
         click(menu_mute);//关闭消息通知
         driver.navigate().refresh();
-        Boolean exist = doesWebElementExist(dashboard_share_file_1);
+        Boolean exist = doesWebElementExist(used_share_file_1);
         assertFalse(exist);
         click(dashboard_2);
         click(menu_Point_Menu);
         click(menu_mute);//开启消息通知
-        click(dashboard_share_file_1);
+        click(used_share_file_1);
         wait.until(ExpectedConditions.elementToBeClickable(doc_edit));
         doc_edit.sendKeys(Keys.CONTROL, 'a' + "编辑文档并保存" + Keys.ENTER);
         click(quick_access_point);
         click(Back_to_Dashboard);
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-        click(dashboard_activitiesByFile);
-        Boolean exist1 = doesWebElementExist(dashboard_share_file_1);
+//        wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+//        click(dashboard_activitiesByFile);
+        Boolean exist1 = doesWebElementExist(used_share_file_1);
         int i = 1;
         while (!exist1 && i < 6) {
             driver.navigate().refresh();
-            wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-            exist1 = doesWebElementExist(dashboard_share_file_1);
+//            wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+            exist1 = doesWebElementExist(used_share_file_1);
             if(exist1){break;}else {i++;}
 
         }
@@ -140,13 +140,13 @@ public class testAlertMute extends TestInit {
         click(b_back);
         logout();
         login("AlertMute3@shimo.im", "123123");
-        wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-        Boolean exist2 = doesWebElementExist(dashboard_share_file_1);
+//        wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+        Boolean exist2 = doesWebElementExist(used_share_file_1);
         int i = 1;
         while (exist2 == false && i < 6) {
             driver.navigate().refresh();
-            wait.until(ExpectedConditions.elementToBeClickable(dashboard));
-            exist2 = doesWebElementExist(dashboard_share_file_1);
+//            wait.until(ExpectedConditions.elementToBeClickable(dashboard));
+            exist2 = doesWebElementExist(used_share_file_1);
             i++;
         }
         if (exist2 == true) {
