@@ -819,6 +819,7 @@ public class TestInit extends elementFile {
                     delFile(desktop1_1);
                 }
             }
+            desktop_show_type_grid.click();
             checkPageIsReady();
     }
 
