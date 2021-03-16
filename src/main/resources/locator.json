@@ -1106,7 +1106,7 @@
 			{
 				"elementName": "menu_shortcut",
 				"locateUsing": "xpath",
-				"locator": "/html/body/div[7]/ul/li[5]",
+				"locator": "//li[@data-test='sm-menu-add_shortcut']",
 				"note": "添加到快速访问"
 			},
 			{
@@ -1118,7 +1118,7 @@
 			{
 				"elementName": "menu_collection",
 				"locateUsing": "xpath",
-				"locator": "/html/body/div[8]/ul/li[6]",
+				"locator": "//li[@data-test='sm-menu-star']",
 				"note": "添加收藏"
 			},
 			{
@@ -1130,31 +1130,31 @@
 			{
 				"elementName": "menu_cooperation",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-collaborator')]",
+				"locator": "//li[@data-test='sm-menu-collaborator']",
 				"note": "添加协作者"
 			},
 			{
 				"elementName": "menu_move",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-move')]",
+				"locator": "//li[@data-test='sm-menu-move']",
 				"note": "移动"
 			},
 			{
 				"elementName": "menu_rename",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-rename')]",
+				"locator": "//li[@data-test='sm-menu-rename']",
 				"note": "重命名"
 			},
 			{
 				"elementName": "menu_createCopy",
 				"locateUsing": "xpath",
-				"locator": "//li[contains(@class,'sm-menu-copy')]",
+				"locator": "//li[@data-test='sm-menu-copy']",
 				"note": "创建副本"
 			},
 			{
 				"elementName": "menu_share",
 				"locateUsing": "xpath",
-				"locator": "//span[@class='menu-title-span']/span[contains(text(),'分享')]",
+				"locator": "//li[@data-test='sm-menu-submenu-title']",
 				"note": "分享"
 			},
 			{
@@ -1178,7 +1178,7 @@
 			{
 				"elementName": "menu_delete",
 				"locateUsing": "xpath",
-				"locator": "//li//div//span[contains(text(),'删除')]",
+				"locator": "//li[@data-test='sm-menu-remove']",
 				"note": "删除按钮"
 			},
 			{
