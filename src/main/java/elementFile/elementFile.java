@@ -100,9 +100,12 @@ public class elementFile {
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveFolder_list_2", noteName = "移动文件到文件夹，选择列表中第二个文件夹")
 	public WebElement desktop_moveFolder_list_2;
 
-	/** 我的收藏平铺模式第一个文件夹 */
+	/** 我的收藏平铺模式第一个文件 */
 	@SearchWith(pageName = "desktop", elementName = "favorites1_1")
 	public WebElement favorites1_1;
+	/** 我的收藏平铺模式第一个文件夹 */
+	@SearchWith(pageName = "desktop", elementName = "favorites1_1_folder")
+	public WebElement favorites1_1_folder;
 
 	/** 移动文件到协作空间，列表中第一个协作空间 */
 	@SearchWith(pageName = "desktop", elementName = "desktop_moveToSpace_space_1")

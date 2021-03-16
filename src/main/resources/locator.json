@@ -389,6 +389,12 @@
 				"note": "我的收藏平铺模式第一个文件"
 			},
 			{
+				"elementName": "favorites1_1_folder",
+				"locateUsing": "xpath",
+				"locator": "(//div[@data-test='file-item folder'])[1]",
+				"note": "我的收藏平铺模式第一个文件"
+			},
+			{
 				"elementName": "desktop_shortcut_1",
 				"locateUsing": "xpath",
 				"locator": "(//li[@data-test='file-name-wrapper'])[1]",

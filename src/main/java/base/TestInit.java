@@ -417,19 +417,39 @@ public class TestInit extends elementFile {
      * @Time 2018-03-23
      */
     public void contextClick(WebElement element) {
-//        int num = 0;
-//        while (num < 2){
-            try {
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-                action.contextClick(element).perform();
-//                break;
-            } catch (NoSuchElementException e) {
-                System.out.println(element + "is missing");
-            } catch (StaleElementReferenceException e){
+        if (element.toString().equals(desktop1_1.toString())) {
+            wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
+            desktop_show_type_grid.click();
+        }
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            action.contextClick(element).perform();
+        } catch (NoSuchElementException e) {
+            System.out.println(element + "is missing");
+        } catch (StaleElementReferenceException e){
 
-            }
-//            num++;
-//        }
+        }
+    }
+
+    /**
+     * 双击
+     *
+     * @author 刘晨
+     * @Time 2021-03-16
+     */
+    public void doubleClick(WebElement element) {
+        if (element.toString().equals(desktop1_1.toString())) {
+            wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
+            desktop_show_type_grid.click();
+        }
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            action.doubleClick(element).perform();
+        } catch (NoSuchElementException e) {
+            System.out.println(element + "is missing");
+        } catch (StaleElementReferenceException e){
+
+        }
     }
 
     /**
@@ -637,6 +657,12 @@ public class TestInit extends elementFile {
             } else if (element.toString().equals(desktop.toString())) {
                 // 点击我的桌面
                 clickDesktop(element);
+            } else if (element.toString().equals(favorites.toString())) {
+                // 点击我的收藏
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                element.click();
+                wait.until(ExpectedConditions.elementToBeClickable(desktop_show_type_grid));
+                desktop_show_type_grid.click();
             }
 //            else if (element.toString().equals(b_addCollaborator_1_add.toString())) {
 //                // 点击添加协作者
@@ -897,7 +923,7 @@ public class TestInit extends elementFile {
             e.printStackTrace();
         }
         click(menu_delete);
-        click(desktop_newFolder_name_ok);
+        click(message_ok);
     }
 
     /**

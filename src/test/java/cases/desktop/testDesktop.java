@@ -16,23 +16,24 @@ public class testDesktop extends TestInit {
 
     /**
      * 右键文档-在新标签页中打开
+     * 石墨2.5中取消右键菜单新标签打开
      *
      * @throws InterruptedException
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_doc_setting_1() {
-        login("autoTest@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1);
-        click(menu_newPage);
-
-        Set<String> winHandles = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandles);
-        int n = it.size();
-        assertEquals(2, n);
+//        login("autoTest@shimo.im", "123123");
+//        click(desktop);
+//
+//        contextClick(desktop1_1);
+//        click(menu_newPage);
+//
+//        Set<String> winHandles = driver.getWindowHandles();
+//        List<String> it = new ArrayList<String>(winHandles);
+//        int n = it.size();
+//        assertEquals(2, n);
     }
 
     /**
@@ -85,7 +86,7 @@ public class testDesktop extends TestInit {
         contextClick(desktop1_1);
 
 //        Boolean r1 = doesWebElementExist(menu_collection_cancel);
-        String menu_text = getText(menu_shortcut);
+        String menu_text = getText(menu_collection);
         if(menu_text.equals("从我的收藏移除")){
             click(menu_collection);
             contextClick(desktop1_1);
@@ -119,24 +120,20 @@ public class testDesktop extends TestInit {
         sendKeys(doc_title_input, time);
 
         click(b_back);
+        click(desktop);
 
         contextClick(desktop1_1);
         click(menu_move);
         click(button_moveBoard_desktop);
         click(desktop_moveFolder_list_1);
         click(desktop_moveFolder_button);
+        click(desktop_moveToSpace_confirm);
 
-        driver.navigate().refresh();
-        click(desktop1_1_folder);
+        doubleClick(desktop1_1_folder);
         contextClick(desktop1_1);
-        click(menu_move);
-        click(button_moveBoard_desktop);
-        click(desktop_moveFolder_button);
-
-        driver.navigate().refresh();
-        click(desktop);
         String msg1 = getText(desktop1_1_name);
-
+        click(menu_delete);
+        click(message_ok);
         assertEquals(time, msg1);
     }
 
@@ -147,7 +144,7 @@ public class testDesktop extends TestInit {
      * @Time 2017-11-20
      */
     @Test
-    public void desktop_doc_setting_8() {
+    public void desktop_doc_setting_8() throws InterruptedException {
         login("autoTest@shimo.im", "123123");
         click(desktop);
         contextClick(desktop1_1);
@@ -156,11 +153,9 @@ public class testDesktop extends TestInit {
         String time = getDate();
 
         sendKeys(desktop_newFolder_name, time);
-        click(desktop_newFolder_name_ok);
-
-        driver.navigate().refresh();
+        click(message_ok);
+        Thread.sleep(500);
         String msg = getText(desktop1_1_name);
-
         assertEquals(msg, time);
     }
 
@@ -180,6 +175,7 @@ public class testDesktop extends TestInit {
         click(menu_createCopy);
 
         driver.navigate().refresh();
+        click(desktop);
         String msg1 = getText(desktop1_1_name);
         delFile(desktop1_1);
 

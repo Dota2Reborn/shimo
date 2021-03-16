@@ -27,13 +27,13 @@ public class testDesktop_Folder extends TestInit {
         click(desktop_show_type_list);
 
         Boolean result = false;
-        Boolean exist1 = doesWebElementExist(desktop_orderHeader_1);
+        Boolean exist1 = doesWebElementExist(desktop_list_1_file);
 
         click(desktop_show_type_grid);
 
-        Boolean exist2 = doesWebElementExist(desktop_orderHeader_1);
+        Boolean exist2 = doesWebElementExist(desktop1_1);
 
-        if (exist1 == true && exist2 == false) {
+        if (exist1 == true && exist2 == true) {
             result = true;
         }
         assertTrue(result);
@@ -42,22 +42,22 @@ public class testDesktop_Folder extends TestInit {
 
     /**
      * 右键文件夹-在新标签页打开
-     *
+     * 石墨2.5取消了新标签打开功能
      * @author 刘晨
      * @Time 2017-11-20
      */
-    @Test
+    @Test(enabled = false)
     public void desktop_folder_setting_1() {
-        login("autoTest_Folder@shimo.im", "123123");
-        click(desktop);
-
-        contextClick(desktop1_1_folder);
-        click(menu_newPage);
-
-        Set<String> winHandels = driver.getWindowHandles();
-        List<String> it = new ArrayList<String>(winHandels);
-        int n = it.size();
-        assertEquals(2, n);
+//        login("autoTest_Folder@shimo.im", "123123");
+//        click(desktop);
+//
+//        contextClick(desktop1_1_folder);
+//        click(menu_newPage);
+//
+//        Set<String> winHandels = driver.getWindowHandles();
+//        List<String> it = new ArrayList<String>(winHandels);
+//        int n = it.size();
+//        assertEquals(2, n);
     }
 
     /**
@@ -73,22 +73,22 @@ public class testDesktop_Folder extends TestInit {
 
         contextClick(desktop1_1_folder);
 
-        Boolean r1 = doesWebElementExist(menu_shortcut_cancel);
-        if(r1){
-            click(menu_shortcut_cancel);
+        String menu_text = getText(menu_shortcut);
+        if(menu_text.equals("从快速访问移除")){
+            click(menu_shortcut);
             contextClick(desktop1_1_folder);
         }
 
         click(menu_shortcut);
+
         String msg = getText(desktop_shortcut_1);
         String doc_name = getText(desktop1_1_folder);
 
         contextClick(desktop1_1_folder);
-        click(menu_shortcut_cancel);
-
+        click(menu_shortcut);
         if (!doc_name.equals(msg)) {
-            contextClick(desktop1_1);
-            click(menu_shortcut_cancel);
+            contextClick(desktop1_1_folder);
+            click(menu_shortcut);
         }
 
         assertTrue(doc_name.equals(msg));
@@ -108,13 +108,19 @@ public class testDesktop_Folder extends TestInit {
 
         String doc_name = getText(desktop1_1_folder);
         contextClick(desktop1_1_folder);
+
+        String menu_text = getText(menu_collection);
+        if(menu_text.equals("从我的收藏移除")){
+            click(menu_collection);
+            contextClick(desktop1_1_folder);
+        }
+
         click(menu_collection);
 
-
         click(favorites);
-        String doc_name1 = getText(desktop1_1_folder);
-        contextClick(desktop1_1_folder);
-        click(space_RightMenu_collection);
+        String doc_name1 = getText(favorites1_1_folder);
+        contextClick(favorites1_1_folder);
+        click(menu_collection);
 
         assertEquals(doc_name, doc_name1);
     }
@@ -129,6 +135,7 @@ public class testDesktop_Folder extends TestInit {
     @Test
     public void desktop_folder_setting() throws InterruptedException {
 
+        //todo
         login("autoTest_Folder@shimo.im", "123123");
 
         click(desktop);
@@ -137,7 +144,7 @@ public class testDesktop_Folder extends TestInit {
         sendKeys(desktop_newFolder_name, "FFFFF");
         click(desktop_newFolder_name_ok);
         click(desktop);
-        contextClick(desktop1_1);
+        contextClick(desktop1_1_folder);
         click(menu_move);
         click(button_moveBoard_desktop);
         click(desktop_moveFolder_list_2);

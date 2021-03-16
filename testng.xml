@@ -147,12 +147,6 @@
 
 		</classes>
 	</test>
-	<test name="test28">
-		<classes>
-			<class name="cases.desktop.testAlertMute" />
-
-		</classes>
-	</test>
 	<test name="test29">
 		<classes>
 			<class name="cases.recycle.testRecycleBin" />
