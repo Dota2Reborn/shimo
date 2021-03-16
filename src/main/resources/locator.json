@@ -126,7 +126,7 @@
 			{
 				"elementName": "desktop_user_icon",
 				"locateUsing": "xpath",
-				"locator": "//div[@data-test='account-icon']/img",
+				"locator": "//header/div[3]",
 				"note": "桌面-右上角头像"
 			},
 			{
