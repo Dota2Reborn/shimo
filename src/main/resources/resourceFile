@@ -5,7 +5,7 @@
     "elements": [
       {
         "testEnvironment": "release",
-        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=&redirect=%2Flogin&lizard-view-enabled=&default-branch=release-2020-08-04%2Cpro&override=1",
+        "testURL": "https://release.shimodev.com/__lizard__/config.html?action=merge&features=&redirect=%2Flogin&lizard-view-enabled=&default-branch=release-2021-03-09%2Cpro&override=1",
         "note": "仅修改 testURL"
       },
       {
