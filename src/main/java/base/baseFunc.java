@@ -122,11 +122,16 @@ public class baseFunc {
                 driver = new RemoteWebDriver(remoteAddress, option);
             } else if(browser.equals("mobile")){
                 ChromeOptions option = new ChromeOptions();
-                option.setCapability("browserName", "chrome");
-                option.setCapability("version", "80");
-                option.setCapability("plaform", "ANY");
+//                option.setCapability("browserName", "chrome");
+////                option.setCapability("version", "80");
+////                option.setCapability("plaform", "ANY");
                 option.addArguments("--disable-gpu");//规避浏览器bug
-                option.addArguments("--user-agent=iPhone 6");
+////                option.addArguments("--user-agent=iPhone 6");
+                option.addArguments("--no-sandbox");
+                option.addArguments("--disable-dev-shm-usage");
+                Map<String, String> mobileEmulationMap = new HashMap<>();
+                mobileEmulationMap.put("deviceName", "Galaxy S5");
+                option.setExperimentalOption("mobileEmulation", mobileEmulationMap);
                 URL remoteAddress = new URL(nodeIp + "/wd/hub");
                 driver = new RemoteWebDriver(remoteAddress, option);
 
