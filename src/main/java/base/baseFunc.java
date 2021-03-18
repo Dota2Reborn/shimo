@@ -23,6 +23,8 @@ import org.openqa.selenium.support.pagefactory.FieldDecorator;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class baseFunc {
     public WebDriver driver;
@@ -78,7 +80,12 @@ public class baseFunc {
                 System.setProperty("webdriver.chrome.driver", new File(ByGenerator.class.getClassLoader().getResource("driver/chromedriver.exe").getFile()).getPath());
 
                 ChromeOptions option = new ChromeOptions();
-                option.addArguments("--user-agent=iPhone 6");
+//                option.addArguments("--user-agent=iPhone 6");
+                option.addArguments("--no-sandbox");
+                option.addArguments("--disable-dev-shm-usage");
+                Map<String, String> mobileEmulationMap = new HashMap<>();
+                mobileEmulationMap.put("deviceName", "Galaxy S5");
+                option.setExperimentalOption("mobileEmulation", mobileEmulationMap);
                 driver = new ChromeDriver(option);
             }else {
                 System.setProperty("webdriver.chrome.driver",
